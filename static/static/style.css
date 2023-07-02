@@ -1,0 +1,415 @@
+:root {
+    --primary: #47a1d7;
+    --grey: #666;
+}
+
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #fff;
+    font-family: Inter, serif;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.6em;
+    font-size: 22px;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+    a:hover {
+        color: #000;
+    }
+    code {
+        display: inline-block;
+        background: #f4f4f4;
+        color: #000;
+        padding: 3px 5px;
+        font-size: 0.9em;
+    }
+    pre code {
+        display: block;
+    }
+    .post .highlight {
+        background: #f4f4f4;
+        padding: 5px;
+    }
+    .post img {
+        border-radius: 5px;
+    }
+
+    .content a {
+        word-break: break-word;
+        text-decoration: underline;
+        text-decoration-color: var(--primary);
+        text-decoration-thickness: 2px;
+    }
+        .content a:hover {
+            text-decoration-color: #000;
+        }
+
+html,button,input,select,textarea {
+    color: #333;
+}
+
+::-moz-selection {
+    background: #000;
+    text-shadow: none;
+    color: #fff;
+}
+
+::selection {
+    background: #000;
+    text-shadow: none;
+    color: #fff;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+a img {
+    border:none;
+}
+
+figure {
+    margin: 30px 0 30px 0;
+    display: block;
+    text-align: center;
+}
+figure figcaption {
+    font-size: .775em;
+    line-height: .775em;
+    color: var(--grey);
+    margin: 0;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+blockquote {
+    background: #f6f6f6;
+    font-style: italic;
+    border-left: 5px solid;
+    border-color: #000;
+    padding: 5px 15px;
+}
+
+blockquote cite {
+    font-size: 70%;
+    opacity: .8;
+}
+
+blockquote em {
+    font-weight: 600;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Ramaraja", Inter, sans-serif;
+    font-weight: 600;
+    line-height: 1.3em;
+    margin: 45px 0 20px 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: .9rem;
+}
+
+.half {
+    max-width: 60%;
+}
+.align-center {
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.float-right {
+    float: right;
+}
+    figure.float-right {
+        margin: 0 15px 0 15px;
+    }
+
+.text-small {
+    font-size: .875em;
+}
+
+ul {
+    padding-left: 15px;
+}
+
+ul.flat {
+    margin: 0;
+    padding: 0;
+}
+
+ul.flat li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 0;
+}
+
+.prevent-collapse {
+    min-height: .1rem
+}
+
+.highlight pre {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 20px;
+    background-color: transparent !important;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1100px;
+    min-width: 320px;
+}
+
+.header {
+    background: #222;
+    padding: 40px 0;
+    margin-bottom: 80px;
+}
+    .home header {
+        margin-bottom: 120px;
+    }
+
+    .header .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .header .logo, .header nav {
+        flex-grow: 1;
+    }
+    .header .logo .tagline {
+        color: #ddd;
+        margin: 5px 0 0 0;
+    }
+    .header .photo {
+        border-radius: 100%;
+        max-width: 74px;
+        float: left;
+        margin: -4px 30px 0 0;
+    }
+    .header nav {
+        text-align: right;
+        line-height: 1em;
+        font-size: 1.2rem;
+    }
+    .header nav a {
+        display: inline-block;
+        margin-left: 30px;
+        color: #fff;
+    }
+    .header nav .feed img {
+        width: 16px;
+        height: auto;
+    }
+
+.home .content figure {
+    float: right;
+    margin: 0 0 15px 15px;
+}
+    .home .content figure img {
+        border-radius: 100%;
+        max-width: 300px;
+    }
+
+.header .site-description nav {
+    margin: 0;
+    padding: 0;
+    border: none;
+    min-width: 50px;
+    margin-left: 15px;
+}
+
+.header .site-description nav ul svg {
+    max-height: 15px;
+}
+
+.section .section-header {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--grey);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.posts {
+    font-size: .9em;
+    line-height: 1.6em;
+    margin: 60px 0 30px 0;
+    padding: 0;
+}
+    .posts .post {
+        display: flex;
+        padding: 30px 0;
+        border-bottom: 1px solid #eee;
+    }
+        .posts .post:hover {
+            background: #fafafa;
+        }
+    .posts .date {
+        flex: 10%;
+        color: var(--grey);
+    }
+    .posts .body {
+        flex: 70%;
+    }
+    .posts .title {
+        margin: 0;
+    }
+        .posts .title a {
+            text-decoration: none;
+        }
+    .posts .domain {
+        color: var(--grey);
+        font-size: 0.875em;
+    }
+    .posts .desc {
+        margin-top: 10px;
+    }
+    .post-header {
+        margin-bottom: 30px;
+    }
+    .post-header .date {
+        margin: 0;
+        color: var(--grey);
+    }
+        .post-header .title {
+            margin: 0;
+        }
+
+.footer {
+    text-align: center;
+    color: var(--grey);
+    margin: 60px 0 30px 0;
+    font-size: 1rem;
+}
+    .footer a {
+        color: var(--grey);
+    }
+    .footer a:hover {
+        color: var(--primary);
+    }
+
+.tag-cloud {
+    margin-top: 20px;
+}
+
+.tag-cloud a {
+    margin-right: 15px;
+}
+
+.tags a {
+    display: inline-block;
+    background: #eee;
+    border-radius: 3px;
+    padding: 5px 15px;
+    text-decoration: none;
+    margin: 0 10px 0 0;
+}
+
+.pagination {
+    padding: 0;
+    text-align: center;
+}
+
+.pagination li {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0 10px;
+}
+    .pagination li:first-child,
+    .pagination li:last-child {
+        display: none;
+    }
+
+.pagination .page-prev {
+    margin-right: 20px;
+    padding-right: 20px;
+}
+
+.pagination .page-item.page-prev {
+    text-align: left;
+}
+
+.pagination .page-item.page-next {
+    text-align: right;
+}
+
+
+@media (max-width: 1200px) {
+    .container {
+        margin: 0 20px;
+    }
+}
+@media (max-width: 800px) {
+    .home .content figure {
+        float: none;
+    }
+    .header nav {
+        display: block;
+        text-align: left;
+        margin-top: 30px;
+    }
+    .header nav a {
+        margin: 0 15px 0 0;
+    }
+    .header {
+        display: block;
+    }
+}
