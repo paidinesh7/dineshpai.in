@@ -28,3 +28,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages  # deploying branch
           cname: dineshpai.in
+          user_name: 'paidinesh7'
+          user_email: 'dinesh.pai@zerodha.com'
