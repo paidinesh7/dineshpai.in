@@ -20,12 +20,13 @@ Yet we have again slipped up. here is the why,
 You can go back and read through all of the historical analyst reports pumping up startup investing in India. The commonality is the first page is plastered with the same old data on economic indicators - GDP, inflation, and per capita income increase. The macro experts have led the warcry for the army of VCs setting up shops in India since the 1990s. But what has dumbfounded me is how often we have heard the slogan ‘India being the next China’. Sounds familiar? Of course, it does. Because we’ve been hearing it for the past couple of years, very prominently. Just like we did in the 1980s, the late 1990s, and around 2007. Never gets old, and this narrative sells. But a deeper look past the headlines has been quite the contrary. It hasn't really played out as well as everyone predicted or, should I say, hoped.
 
 While you cannot really blame foreign investors for being speculative about the Indian market, several Indian investors have decided they would want to participate too. Pay to play. The search for elusive Unicorns (yep, multiple) begins. But while you could fool some of the people some of the time, it would never be possible to fool all the people all the time. They were all found out. Or, in a few years’ time, they can all say we were too early - if that sounds better.   
-Economic cycles are a long-term phenomenon, taking longer than 50 years to turn around economic fortunes. And who better to explain this than Ray Dalio.  
+Economic cycles are a long-term phenomenon, taking longer than 50 years to turn around economic fortunes. And who better to explain this than [Ray Dalio](https://www.youtube.com/watch?v=PHe0bXAIuk0).  
 
 Over the past few decades, everyone has been hoping India can fast forward progress and growth to somehow match up to our northern neighbour. The hope is kept alive and fueled by media and analysts looking at cherry-picked data points. Clickbaity articles do the trick, everyone goes away thinking a revolution is at hand. But they ignore the noticeable differences. This is why we gave it a shot to compare and share the merits of this argument. 
 
 So here we go - India and China do have a comparable population of 1.4 billion people. But unfortunately, the similarities end there. The stark difference in social demographics in the image below speaks for itself, 
 
+![Blog 1](https://github.com/paidinesh7/dineshpai.in/assets/79692173/1becdb33-f49b-4e39-afea-61e0300db3ac)
 
 India is the 5th largest economy in the world, where local consumption forms the cornerstone of our growth in GDP. We are geopolitically a critical partner to various economies and have earned that over a period of time. And the journey to where we are today has been anything but easy. But the stark difference in the consumer class numbers between India and China is daunting. 
 
@@ -33,10 +34,11 @@ China has been a powerhouse for manufacturing and infrastructure, whereas India 
 
 Let’s also look at funding availability between both countries for VC investing. And this is where you will see the deep divide between the two countries. China, obviously, has had a head start. But the sheer scale of funding availability in China, compared to India, is why most articles you are reading focus on the growth % of capital than the actual dollar value of funding available. Despite funding value doubling between Q1 of 2021 and 2022, India’s total funding was still a staggering 3 billion USD lower compared to China. 
 
-
+![Blog 2](https://github.com/paidinesh7/dineshpai.in/assets/79692173/4dea6aa8-46d3-40b7-89d2-43d5a4c3215a)
   
 And here are the annual numbers on the total dollar value of funding between both countries and the difference in scale, 
 
+![Blog 3](https://github.com/paidinesh7/dineshpai.in/assets/79692173/819050a4-7643-40be-865f-8ae6a905dfe0)
 
 While these differences are clear, what are VCs aiming for? Well, if you look back at all the other periods of exuberance in VC funding, the same sequence of events plays out. It starts with the hope that India has emerged to replace China. Investors then play along and double down and go berserk with funding. Because investors are in an arms race, they rage and try to outbid anyone else investing in the company they feel will make it past the initial valley of death. So investment rounds in startups become more frequent, and valuations inch ever higher. And then, when the music starts slowing down, they will find someone else to hold the bag. While foreign investors woo local startups, homegrown VCs take it upon themselves to perpetuate the rally of private markets. They all buy in and feel can time the exit to avoid corrections. 
 
@@ -60,10 +62,12 @@ And what we are seeing today with a rejigging of valuations, down rounds, and go
 Expecting India to replicate China as a market will be a long and arduous journey. Not impossible, of course, and with all the advancements in India over the past few years - think of UPI, GST, Aadhaar and other accomplishments, we are in better shape today than ever in our history to have a go at becoming the next China. But the comparison to China is not fair today. And the funding that follows the comparison is based on opinions rather than actual data. 
 
 Limited Partners(LP) or investors of the VC funds who bought the story, though are slowly but surely finding this out, again. Yet, they will buy this same story once more as the new cycle begins in a few year's time. Blame our collective short memories. And yet again, investors will walk away scot-free. While the startups are left to fend for themselves. 
-Public market bubbles
+
+## Public market bubbles
+
 While the pandemic raged in India throughout 2020 and 2021, the public markets almost ignored all that was happening around us. We hit new all-time highs! Yep!
 
-
+![Blog 4](https://github.com/paidinesh7/dineshpai.in/assets/79692173/46b5698d-6f76-4f67-92a5-0640785b1010)
 
 Historically, whenever public markets rally, VC funding follows - pick 2000, 2007 or 2020, all these periods exhibit the same behaviour. Through a public markets rally, investor sentiment improves, risk tolerance improves and expectations for returns inch higher. The safer government bonds and bank deposits dont cut it anymore - everyone’s looking for multiples. They all try to find alternative asset classes to cash in and queue up to get exposure to VC/PE and other speculative vehicles. This phase can be defined as greed. Here is why this directly affects startups and VCs. 
 A rallying public market is the perfect opportunity to take private companies public at sky-high valuations. An IPO, they call it. Essentially, VCs decide that they have had enough and would like to now hand over the company to other investors. All while spending the past year or so dosing startups with steroids in the form of frequent capital infusion rounds and glorious valuations. The ask is just to grow as fast as possible and as quickly as possible. 
@@ -88,7 +92,7 @@ Unless you are living under a rock, you have certainly heard of Tiger Global, on
 
 Having gotten a taste of China and then the US, Tiger started a frenzy of investing in India around 2015. And guess what happened in 2016 - yep, the hyperlocal startup market bust. Excesses. Funding rounds, funding value and valuations kept soaring. Tiger accounted for 15% of funding in India between 2014 and 2016. Seemed like they had enough of the Indian market after 2016, with very few deals up until 2019. And they left, and in a blink of an eye, they were back.
 
-
+![Blog 5](https://github.com/paidinesh7/dineshpai.in/assets/79692173/3e4e2a56-d5bb-4e24-b3b9-7b4376401923)
 
 Between 2020 and 2021, Tiger dusted off the playbook and got to work. They supercharged the round sizes. Offered sky-high valuations. Priced everyone out of the markets. And as investors tried to compete, TIger upped the stakes and went at it harder. 
 
