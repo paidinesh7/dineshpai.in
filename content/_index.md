@@ -2,7 +2,7 @@
 type: "page"
 ---
 
-# 
+# Investor - Fintech and Climate
 
 ![](static/images/dinesh.jpg ".")
 
