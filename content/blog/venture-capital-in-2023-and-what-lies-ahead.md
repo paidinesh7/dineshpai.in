@@ -1,5 +1,5 @@
 ---
-date: '2020-12-13'
+date: '2023-7-10'
 title: "Venture Capital: 2023 and beyond"
 tags: [vc, startups]
 author: dinesh
