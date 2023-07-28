@@ -5,7 +5,7 @@ paginate = 20
 
 [params]
 subtitle = "Field notes on investments and capital markets"
-thumbnail = "thumb.png"
+thumbnail = "Blog.jpg"
 
 [taxonomies]
    tag = "tags"
