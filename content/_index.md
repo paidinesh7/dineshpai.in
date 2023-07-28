@@ -12,4 +12,4 @@ From 2010 until 2020 was about learning everything in finance and investments. I
 
 A lot of finance is just history repeating itself, and since I read a bunch of blogs and listen to a bunch of podcasts weekly, I felt summarizing some of the content and sharing my thoughts with everyone here would help me learn more and improve. 
 
-Check out [my blog](/blog) and [Substack](https://dineshpai.substack.com/).
+Check out [my blog](/blog), [Twitter](https://twitter.com/dineshpaii) and [LinkedIN](https://www.linkedin.com/in/paidinesh1/).
