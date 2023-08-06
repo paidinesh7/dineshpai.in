@@ -222,7 +222,7 @@ A lot of the credit perhaps goes to - *drumroll*, India Stack,
 
 The rapid growth of fintech can also be attributed to favourable macroeconomic and demographic factors, including rising middle class with higher disposable incomes to buy, borrow, save and invest more; increasing mobile access and digital adoption; abundant financial services and technology talent in the country; availability of equity and debt capital; and above all, government initiatives and regulatory efforts to create a conducive environment.
 
-Here are a couple of subcategories I wanted to list out, 
+Here are a couple of subcategories I wanted to list out in terms of market sizes, 
 
 ### Payments data
 * Volume of UPI transactions increased 200x from January 2017 (4.5 Mn) to January 2023 (10 Bn), and the Value increased 600x during the same period
@@ -231,7 +231,7 @@ Here are a couple of subcategories I wanted to list out,
 * A pan-India digital payments survey (covering 90,000 respondents) revealed that 42% of respondents have used digital payments
 
 ### Capital markets
-Here is an excerpt from a [blog](https://zerodha.com/z-connect/rainmatter/beyond-misleading-trading-turnover-numbers-the-actual-size-of-indian-capital-markets) by Nithin, CEO and Founder, Zerodha, the blog also explains the revenue pool at play for brokers, and that has not really changed much since 2021 and is relevant even today. 
+Here is an excerpt from a [blog](https://zerodha.com/z-connect/rainmatter/beyond-misleading-trading-turnover-numbers-the-actual-size-of-indian-capital-markets) by Nithin, CEO and Founder, Zerodha, the blog also explains the revenue pool at play for brokers, and that has not changed much since 2021 and is relevant even today. 
 
 >***Size of Indian capital markets – Retail***
 >
@@ -242,20 +242,22 @@ Here is an excerpt from a [blog](https://zerodha.com/z-connect/rainmatter/beyond
 >*Zerodha today is the largest retail brokerage in India by all measures of trading activity. Extrapolating our active client data, we believe that the current size of retail in India (unique customers) is:*
 >
 >*Yearly active: 1.2 crores to 1.3 crores*
+>
 >*Monthly active: 70lks to 80lks*
+>
 >*Daily active: 30lks to 40lks*
 
 ## What are some of the takeaways
 
 * Across metrics, India has room to grow. If we are to truly become a country with higher GDP, we will need to deepen our government spending, debt markets, and all the other critical sources of capital formation. 
 * The key to unlocking the next wave of growth in India is to enable domestic capital to support domestic businesses. We must reduce our dependence on imports, which will only happen if we invest in infrastructure and capacity building today. 
-* Female labour participation rates have steadily declined — from 26% in 2005 to roughly 20% in 2019. Less than 7% of the urban women population has independent financial income. We must improve this over the next few years to walk the talk with holistic economic development. 
+* Female labour participation rates have steadily declined — from 26% in 2005 to roughly 20% in 2019. Less than 7% of the urban women population has independent financial income. Over the next few years, we must improve this to walk the talk with holistic economic development. 
 * India’s GDP is around 3 trillion USD today compared to the United States, with 26 trillion USD, and China, with 18 trillion USD. 
 * The GDP per capita is also nuanced. Even though we see the $2000 per capita GDP on average - if we remove the top 30-40 million of our population, the GDP per capita dips to $700. 
 * India’s GDP is growing at 5-6% annually. Compare it with the United States, which has 2% annual growth, and China, which has 5-6% growth. And here lies the difference. Even though the growth rate for the US is 2%, the addition to GDP annually is around 0.5 billion, whereas India is adding only 0.2 billion every year. And China is adding around 1 billion in GDP gross value. 
 * India certainly needs to increase the taxpaying base, and one of the lowest-hanging fruits is to enable higher participation of women in the workforce. 
 * Global debt markets are three times bigger than global equity markets. Something that gets lost in all the noise around equity market performance. This is also why there has been a lot of noise around the interest rate hikes in the last couple of years, given how much of an impact it has on household savings and investments. 
 * Govt spending, debt markets, equity markets, banking assets, and insurance - these sectors need to grow significantly for India to do well socially and economically. 
-* Even though India is 5th largest economy in the world, the financial industry size is nowhere close to some of the other countries, and that needs to change to help some of the lower rungs of society.
-* While the growth rate compared to lower base rates seems great, the next few years need significantly improved efforts to reach the hinterlands with financial services and focus on overall growth rather than the concentrated growth we see today. Even though this is more of a global phenomenon (concentrated wealth creation), the key to avoiding conflicts in the future will be to ensure we enable prosperity to a larger section of our population quickly. 
-* Selfishly adding this last point - the VC industry is about risk capital. And India seems to be at an inflexion point where it can use as many risk-takers in terms of capital as we can gather. And the VC industry must look at data closely and put capital to use where we can benefit the most as a country. The Sand Hill Road romanticism is probably less important at this time. There are bigger problems to solve for. 
+* Even though India is 5th largest economy in the world, the financial industry size is nowhere close to some other countries, and that needs to change to help some of the lower rungs of society.
+* While the growth rate compared to lower base rates seems great, the next few years need significantly improved efforts to reach the hinterlands with financial services and focus on overall growth rather than the concentrated growth we see today. Even though this is more of a global phenomenon (concentrated wealth creation), the key to avoiding future conflicts will be ensuring we enable prosperity to a larger section of our population quickly. 
+* VC/Pe risk capital will also be important as India unlocks growth. India is at an inflexion point where the potential or the market along with demographics makes it easier to start up a business. Along with founders, we will also need risk capital. But India needs significantly different approach to what worked on Sand Hill Road - the silicon valley playbook replication might not work.
