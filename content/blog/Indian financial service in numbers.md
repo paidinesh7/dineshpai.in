@@ -123,13 +123,13 @@ This is why debt markets form an essential part of a country’s economy - they 
 
 Here is what the global debt market looks like. The US again leads the way with 31 trillion dollars of the debt market. India is at 1.3 trillion dollars.
 
-**Rankings**
+### Rankings
 
 ![2Blog8](https://github.com/paidinesh7/dineshpai.in/assets/79692173/c7921140-b9c8-4211-b23b-aac7b75e6091)
 
 ![2Blog9](https://github.com/paidinesh7/dineshpai.in/assets/79692173/a47f04d4-3a3c-4238-8b7d-8f13470a2ede)
 
-**Debt market snapshot across countries**
+### Debt market snapshot across countries###
 
 ![Fix2](https://github.com/paidinesh7/dineshpai.in/assets/79692173/30a655c9-4be1-48f9-b3ca-ccb2ccdd9857)
 
