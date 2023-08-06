@@ -210,9 +210,9 @@ But Indian capital markets also have a long way to go if it has to impact the ec
 
 Given I also spend a lot of time looking at the fintech market specifically, I wanted to share a bit about the Fintech market size given all the frenzy.   
 
-* Indian FinTech industry’s market size was $ 50 Bn in 2021 and is estimated at ~$ 150 Bn by 2025. India has around 7,500 fintech startups. From 2014 to mid-2022, the sector received more than $30 billion in funding. India's digital lending market was worth $ 270 bn in 2022 and is expected to reach $ 350 bn by 2023.
+* Indian FinTech industry’s market size was $ 50 Bn in 2021, estimated at ~$ 150 Bn by 2025. India has around 7,500 fintech startups. From 2014 to mid-2022, the sector received more than $30 billion in funding. India's digital lending market was worth $ 270 bn in 2022 and is expected to reach $ 350 bn by 2023.
 
-* India is the 2nd largest Insurtech market in Asia-Pacific and is expected to grow by ~15X to reach $ 88.4 Bn by 2030; India is poised to emerge as one of the fastest growing insurance markets in the world
+* India is the 2nd largest Insurtech market in Asia-Pacific and is expected to grow by ~15X to reach $ 88.4 Bn by 2030; India is poised to emerge as one of the fastest-growing insurance markets in the world
 
 * The Indian WealthTech market is expected to grow to $ 237 Bn by 2030 on the back of a growing base of retail investors
 
@@ -220,7 +220,7 @@ A lot of the credit perhaps goes to - *drumroll*, India Stack,
 
 ![2Blog17](https://github.com/paidinesh7/dineshpai.in/assets/79692173/8d7ad3da-46bf-458f-b00d-f0f064396b32)
 
-The rapid growth of fintech can also be attributed to favourable macroeconomic and demographic factors, including rising middle class with higher disposable incomes to buy, borrow, save and invest more; increasing mobile access and digital adoption; abundant financial services and technology talent in the country; availability of equity and debt capital; and above all, government initiatives and regulatory efforts to create a conducive environment.
+The rapid growth of fintech can also be attributed to favourable macroeconomic and demographic factors, including a rising middle class with higher disposable incomes to buy, borrow, save and invest more; increasing mobile access and digital adoption; abundant financial services and technology talent in the country; availability of equity and debt capital; and above all, government initiatives and regulatory efforts to create a conducive environment.
 
 Here are a couple of subcategories I wanted to list out in terms of market sizes, 
 
@@ -260,4 +260,4 @@ Here is an excerpt from a [blog](https://zerodha.com/z-connect/rainmatter/beyond
 * Govt spending, debt markets, equity markets, banking assets, and insurance - these sectors need to grow significantly for India to do well socially and economically. 
 * Even though India is 5th largest economy in the world, the financial industry size is nowhere close to some other countries, and that needs to change to help some of the lower rungs of society.
 * While the growth rate compared to lower base rates seems great, the next few years need significantly improved efforts to reach the hinterlands with financial services and focus on overall growth rather than the concentrated growth we see today. Even though this is more of a global phenomenon (concentrated wealth creation), the key to avoiding future conflicts will be ensuring we enable prosperity to a larger section of our population quickly. 
-* VC/Pe risk capital will also be important as India unlocks growth. India is at an inflexion point where the potential or the market along with demographics makes it easier to start up a business. Along with founders, we will also need risk capital. But India needs significantly different approach to what worked on Sand Hill Road - the silicon valley playbook replication might not work.
+* VC/PE risk capital will also be important as India unlocks growth. India is at an inflexion point where the potential or the market, along with demographics, makes it easier to start up a business. Along with founders, we will also need risk capital. But India needs a significantly different approach to what worked on Sand Hill Road - the silicon valley playbook replication might not work.
