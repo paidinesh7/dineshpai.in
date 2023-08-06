@@ -54,11 +54,12 @@ To simplify, Financial capital formation at a country level - we can think of it
 
 This happens when individuals, businesses, or governments save a portion of their income and deposit it in banks or invest it in financial markets; these funds become available for lending or investing in productive activities or in buying assets that we mentioned earlier.
 
-Now that we have context into why capital formation is important and how it is supported let’s look at the market sizes of institutions and vehicles supporting it. 
+Now that we have context into why capital formation is important and how it is supported let’s look at the market sizes of financial services supporting it. 
 
 ## Benchmarking the Indian financial services market
 
-### GDP and macro data
+**1. GDP and macro data**
+
 We know how GDP is calculated. And since that is common across economies, it gives us a fair idea of different countries' spending power and resilience. Seems only fair to start here. 
 
 Let’s start with the GDP of India compared to other countries. And something that sticks out immediately when we look at GDP data for the top 10 largest countries is the GDP per capita difference between India and other countries. Even though India is the 5th largest country GDP-wise, the GDP per capita has a long way to go before it can be compared with other countries on the list. 
@@ -104,7 +105,8 @@ Just before I started penning this piece down, I re-listened to this talk by Mr 
 
 [![Watch the video](![Video](https://github.com/paidinesh7/dineshpai.in/assets/79692173/77c1ee45-812d-41bb-8446-0c9347f43562))](https://www.youtube.com/watch?v=kGBME-g6bfQ&t=5562s)
 
-## Government spending
+**2. Government spending**
+
 Government spending helps stimulate demand for services and products, improves the distribution of social programs and services, and increases infrastructure development among other benefits. Again going back to capital formation. India today spends around 15% of GDP.
 
 Benchmark this to US and China, at 45% and 15%, respectively. 
@@ -115,7 +117,7 @@ But increasing government spending comes with its own set of challenges. This is
 
 But with a balanced approach and gradual increase in government spending, we can create better infrastructure and social programs and strengthen the fabric of our economic industry with as few shocks as possible.  
 
-## Debt market
+**3. Debt market**
 
 For Government to spend towards capital expenditure, there are a few avenues for collecting revenue or funds. Firstly, the Direct and indirect taxes. Secondly, the debt market, where governments can sell bonds to raise funds. Apart from just the government, even corporations can sell bonds to raise capital for expenditure. 
 
@@ -133,7 +135,8 @@ Here is what the global debt market looks like. The US again leads the way with 
 
 ![Fix2](https://github.com/paidinesh7/dineshpai.in/assets/79692173/30a655c9-4be1-48f9-b3ca-ccb2ccdd9857)
 
-## Banking
+**4. Banking**
+
 There are several reasons why banks are important for an economy - financial inclusion, credit availability, and savings mobilization are some of the notable reasons.
 
 * The Indian banking system consists of 12 public sector banks, 22 private sector banks, 46 foreign banks, 56 regional rural banks, 1485 urban cooperative banks and 96,000 rural cooperative banks, and cooperative credit institutions. 
@@ -156,7 +159,8 @@ Here is where India ranks with banking assets,
 
 ![2Blog11](https://github.com/paidinesh7/dineshpai.in/assets/79692173/a98979d9-eec4-4658-9959-5dc4a893b1af)
 
-## Insurance
+**5. Insurance**
+
 There is a long way to go for India’s Insurance industry - the current penetration of insurance is around 4% as per the Economic Survey 2022-2023 (the significant drop from 5% around 2010 is an aftereffect of the market crash of 2008 and [regulations around ULIPs](https://economictimes.indiatimes.com/wealth/insure/what-the-new-regulation-means-for-existing-and-prospective-customer-of-ulips/articleshow/6108415.cms?from=mdr)
 
 Here is the depth of Indian insurance market, 
@@ -182,7 +186,7 @@ A small snapshot of the entire Indian insurance industry -
 
 There is a case to be made for higher insurance penetration in India. But again, the lack of avenues to get educated on the right insurance policy to purchase makes it challenging to understand if a higher market penetration would translate into benefits for retail clients. The following 10 years will be great to see if we can grow the insurance market and if there is potential for Indian markets to utilize digital channels or if India will assert itself as a market where partner and offline networks will be essential and inseparable from insurance purchase decisions. 
 
-## Stock markets
+**6. Stock markets**
 
 Equity markets directly create opportunities for capital formation. I dont think I need to explain a lot about equity markets. 
 
