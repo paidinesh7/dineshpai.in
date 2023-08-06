@@ -73,6 +73,7 @@ Let’s start with the GDP of India compared to other countries. And something t
 We can all try to predict what will happen with consumption and other sectors in India, and all of us will agree that there is growth waiting to happen - but the question is when. With middle-income groups seeing an average growth of 5-7%, we will see more consumers in the market today, better employability, and resilient spending powers, which bodes well for us. But there is still a long way to go. Check out the income groups below, 
 
 ![2Blog3](https://github.com/paidinesh7/dineshpai.in/assets/79692173/13c9ee88-b9ee-4e8e-8d69-afa908dedce9)
+
 [Source](https://economictimes.indiatimes.com/news/economy/indicators/how-the-middle-class-will-play-the-hero-in-indias-rise-as-world-power/articleshow/101608682.cms)
 
 While looking for a few examples of recent surveys on the economy, I found this one by Wasatch. Here is an excerpt, 
@@ -95,13 +96,13 @@ Check out the GDP contribution and employment % across sectors. 50% of India’s
 
 ![2Blog5](https://github.com/paidinesh7/dineshpai.in/assets/79692173/72964016-ac2e-451b-9942-6daed4eecb08)
 
-![2Blog6](https://github.com/paidinesh7/dineshpai.in/assets/79692173/91b26ff3-0298-4bed-9e2b-e1926ac041ff)
+![Fix](https://github.com/paidinesh7/dineshpai.in/assets/79692173/01c28ee4-a0ba-4418-a007-f10f8bce8ced)
 
 Even though we have come a long way with how farmers are supported and local livelihoods are safeguarded with policies, we need to do more. If we need to grow our GDP over the next decade, we will need to invest in agricultural technology and infrastructure, promote crop diversification, improve market access for farmers, provide financial and social support to rural communities, and encourage agri-business. And finally, as we have more upskilling and education across the population, balancing the transition of labour from agriculture to other sectors while ensuring rural livelihoods and food security is a critical challenge for India's long-term economic development. 
 
 Just before I started penning this piece down, I re-listened to this talk by Mr Maran. This is a must-listen for anyone curious about Indian markets. 
 
-[![Watch the video](https://img.youtube.com/vi/kGBME-g6bfQ&t=5562s/default.jpg)](https://www.youtube.com/watch?v=kGBME-g6bfQ&t=5562s)
+[![Watch the video](![Video](https://github.com/paidinesh7/dineshpai.in/assets/79692173/77c1ee45-812d-41bb-8446-0c9347f43562))](https://www.youtube.com/watch?v=kGBME-g6bfQ&t=5562s)
 
 ## Government spending
 Government spending helps stimulate demand for services and products, improves the distribution of social programs and services, and increases infrastructure development among other benefits. Again going back to capital formation. India today spends around 15% of GDP.
@@ -126,7 +127,7 @@ Here is what the global debt market looks like. The US again leads the way with 
 
 ![2Blog9](https://github.com/paidinesh7/dineshpai.in/assets/79692173/a47f04d4-3a3c-4238-8b7d-8f13470a2ede)
 
-![2Blog`0png](https://github.com/paidinesh7/dineshpai.in/assets/79692173/d82616c5-f93b-47e1-98bd-e5a2f12b022f)
+![Fix2](https://github.com/paidinesh7/dineshpai.in/assets/79692173/30a655c9-4be1-48f9-b3ca-ccb2ccdd9857)
 
 ## Banking
 There are several reasons why banks are important for an economy - financial inclusion, credit availability, and savings mobilization are some of the notable reasons.
