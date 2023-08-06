@@ -68,6 +68,10 @@ Let’s start with the GDP of India compared to other countries. And something t
 
 60% of India’s GDP is driven by local consumption of goods and services. And here is an excellent snapshot of the GDP breakup from a report by Blume Venture, 
 
+<div align="center">
+    <img src="/2Blog2.jpg">
+</div>
+
 ![2Blog2](https://github.com/paidinesh7/dineshpai.in/assets/79692173/22214b43-2be7-4e8d-918f-aef416935787)
 [Source](https://blume.vc/reports/indus-valley-annual-report-2023)
 
