@@ -3,7 +3,7 @@ date: '2023-08-06'
 title: "Indian financial services in numbers"
 tags: [Economy, Financial services, Data]
 author: dinesh
-description: Indian financial services in numbers
+description: A summary of the financial services markets in India compared to global markets. 
 ---
 
 It is 2011, and Cricket World Cup had come home after a long time. Every conversation in the trains, buses, chai shops and hotels was about cricket and if this was the year to end the wait of 28 years. After all, it was a perfect opportunity to send off one of the best the game had seen - Sachin Ramesh Tendulkar. 
