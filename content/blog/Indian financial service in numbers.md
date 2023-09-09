@@ -16,7 +16,7 @@ Of course, as history would have it, India won the Cricket World Cup that year, 
 
 *“Dhoni finishes off in style. A magnificent strike into the crowd! India lift the World Cup after 28 years!”*
 
-![Blog Dhoni](https://github.com/paidinesh7/dineshpai.in/assets/79692173/881d8516-1752-48cc-9cf5-f6f694d7262d#center)
+![2023-09-09_18-23](https://github.com/paidinesh7/dineshpai.in/assets/79692173/7569054c-e919-4c1a-83e9-a2cff6994962#center)
 
 I cannot comprehend how 12 years have flown by since that moment, And the World Cup is coming home again in October of this year. Could this be our year again? Time will tell. But there is again palpable tension already. 
 
@@ -69,7 +69,7 @@ Let’s start with the GDP and go from there. India has grown from a GDP of Rs 5
 
 But the GDP per capita difference between India and other countries sticks out immediately when we look at GDP data for the top 10 largest countries. And while we map out all the other financial sectors, the context of our GDP per capita will be helpful. 
 
-![2Blog1](https://github.com/paidinesh7/dineshpai.in/assets/79692173/eb9181b9-2ed7-43f9-9f25-158666d3b134#center)
+![2023-09-09_18-23_1](https://github.com/paidinesh7/dineshpai.in/assets/79692173/7a45d516-1051-40c0-9111-e129f04c82ce#center)
 
 60% of India’s GDP is driven by local consumption of goods and services. Here is an excellent snapshot of the GDP breakup from a report by Blume Ventures, 
 
@@ -143,7 +143,7 @@ Benchmark this to the US and China, at 45% and 15%, respectively.
 
 While the government must balance several sectors' capital requirements, we must look at some sectors more closely. Namely education and healthcare. While these sectors do get allocation, there is probably more that needs to be done.
 
-![aHz6v-government-spending-india](https://github.com/paidinesh7/dineshpai.in/assets/79692173/9aa5e672-e3ee-4304-939e-3ac6ed15d2cc#center)
+![2023-09-09_18-24](https://github.com/paidinesh7/dineshpai.in/assets/79692173/85e1c70d-318f-4dde-a54d-009e7bc4054a#center)
 
 The Covid pandemic made it clear how much room there is for improvement in our public healthcare systems. We will end this decade with our population aged 60+ hovering around 190 million, which will more than double by 2050. And while some developed countries have taken 80-100 years with a doubling of population aged 60+, India will take just 20-25 years. A large section of our population also struggles to attain education for several reasons. And how can we leave out the risks posed by climate change and disruption of livelihoods? 
 
@@ -209,7 +209,7 @@ Here is the depth of the Indian insurance market,
 
 ![2Blog12](https://github.com/paidinesh7/dineshpai.in/assets/79692173/21c3e22a-ce67-4ca7-bf84-22003e10ee9b#center)
 
-![2Blog13](https://github.com/paidinesh7/dineshpai.in/assets/79692173/a935c6e1-6e61-4ee4-8ea2-e1deb01b22ee#center)
+![2023-09-09_18-24_1](https://github.com/paidinesh7/dineshpai.in/assets/79692173/702ca6f7-a1f2-4987-87d8-d0f7d38057b5#center)
 
 >*The penetration of the Indian insurance industry is less than 5% of the GDP. IRDAI data shows that India’s insurance penetration was 4.2% of the GDP in 2021-22. In terms of penetration, India is far behind the global average of 7% of the GDP.
 In terms of penetration, India is ranked 20 in FY 2021-22. Countries like Taiwan, South Africa, the USA and the UK report higher penetration of 14.8%, 12.2%, 11.7% and 11.1% respectively.*
@@ -276,7 +276,7 @@ Here are a couple of subcategories I wanted to list out in terms of market sizes
 * Digital Payments increased by 76% in transactions and 91% in value (2022)
 * A pan-India digital payments survey (covering 90,000 respondents) revealed that 42% of respondents have used digital payments
 
-![Untitled](https://github.com/paidinesh7/dineshpai.in/assets/79692173/a6a1c06f-1dc1-4133-b088-60bc8b05e7b2#center)
+![2023-09-09_18-24_2](https://github.com/paidinesh7/dineshpai.in/assets/79692173/c8d8a017-badd-4a19-9fd7-d6efbb54d402#center)
 
 ### Capital markets
 Here is an excerpt from a [blog](https://zerodha.com/z-connect/rainmatter/beyond-misleading-trading-turnover-numbers-the-actual-size-of-indian-capital-markets) by Nithin, CEO and Founder, Zerodha, the blog also explains the revenue pool at play for brokers, and that has not changed much since 2021 and is relevant even today. 
