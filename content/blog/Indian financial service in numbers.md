@@ -96,20 +96,20 @@ While looking for a few examples of recent surveys on the economy, I found this 
 
 But there are challenges and things we can improve upon. 
 
-* While there are other structural issues with GDP, one thing that sticks out is how dismal India's female labor participation is. Nithin explained this in the post [here](https://twitter.com/Nithin0dha/status/1695301585767698446). The post summarises the cause for the state of how low the participation is today. And I think this is maybe the next big project for all of us to focus on. There can be several solutions to this problem, but the fact that we are all aware of the problem itself I think will go a long way. 
+* While there are other structural issues with GDP, one thing that sticks out is how dismal India's female labor participation is. Nithin explained this in the post [here](https://twitter.com/Nithin0dha/status/1695301585767698446). The post summarises the cause for the state of how low the participation is today. And I think this is maybe the next big project for all of us to focus on. There can be several solutions to this problem, but the fact that we are all aware of the problem itself I think, will go a long way. 
 
-Here is the female labor force participation trend for India - 20%. While some of the developed nations are at 50%. 
+Here is the female labor force participation trend for India - 25%. While some of the developed nations are at 50%. 
 
 ![Blog22222](https://github.com/paidinesh7/dineshpai.in/assets/79692173/e55f46fd-41c4-4ff0-aa75-259fc8ced007#center)
 
-* Since we are speaking of increasing GDP and income growth rates, we must also quote the numbers that dont look too great. Let's start with income tax collections in India. Unless you have not spent time listening to economic commentary - it would be no surprise that very few Indians pay any tax. The number of ITRs filed is insignificant, despite an uptick; what matters is the number of total taxpayers. That is at a dismal 1.9% of the population. The answer to this problem is maybe a utopian world. 
+* Since we are speaking of increasing GDP and income growth rates, we must also quote the numbers that dont look too great. Let's start with income tax collections in India. Unless you have not spent time listening to economic commentary - it would be no surprise that very few Indians pay any tax. The number of ITRs filed is insignificant despite an uptick; what matters is the number of total taxpayers. That is at a dismal 1.9% of the population. The answer to this problem is maybe a utopian world. 
  
 ![2Blog4](https://github.com/paidinesh7/dineshpai.in/assets/79692173/af8bdb9e-612b-4590-b30e-12003cd104ba#center)
 [Source](https://twitter.com/deepakabbot/status/1684065266379165697/photo/1)
 
 * Let us also check the GDP contribution from different sectors and the employment % of those specific sectors. This will give us a fair idea of what sectors of our economy are contributing to the economy and if a commensurate number of jobs are created in that sector. Data shows that 50% of India’s workforce today is concentrated in Agriculture, but it contributes just 17-20% of the GDP. In contrast, Services with 30% of the workforce constitute 50% of GDP. This is quite a problem, and has troubled policymakers for a couple of decades at least.
 
-The first image is representing the % of workforce, and the second image represents the GDP contribution. 
+The first image represents the % of the workforce involved across sectors, and the second image represents the GDP contribution of sectors to Indian GDP. 
 
 ![2Blog5](https://github.com/paidinesh7/dineshpai.in/assets/79692173/72964016-ac2e-451b-9942-6daed4eecb08#center)
 
@@ -275,6 +275,8 @@ Here are a couple of subcategories I wanted to list out in terms of market sizes
 * Daily transactions on the UPI platform can touch 1 Bn by 2025
 * Digital Payments increased by 76% in transactions and 91% in value (2022)
 * A pan-India digital payments survey (covering 90,000 respondents) revealed that 42% of respondents have used digital payments
+
+![Untitled](https://github.com/paidinesh7/dineshpai.in/assets/79692173/a6a1c06f-1dc1-4133-b088-60bc8b05e7b2#center)
 
 ### Capital markets
 Here is an excerpt from a [blog](https://zerodha.com/z-connect/rainmatter/beyond-misleading-trading-turnover-numbers-the-actual-size-of-indian-capital-markets) by Nithin, CEO and Founder, Zerodha, the blog also explains the revenue pool at play for brokers, and that has not changed much since 2021 and is relevant even today. 
