@@ -33,7 +33,7 @@ I am reminiscing about the past decade because last month, while at a speaking e
 
 ## Capital Formation, what’s that?
 
-Even though times have changed over the past decade, not much has changed in how we measure an economy. 
+Even though times have changed over the past decade, not much has changed in how we measure an economy. Gross Capital Formation – the total quantum of new capital investments in the economy – is at 31 percent of GDP in FY23. US is around 20-25% and China is at around 35-40% (both in GDP terms).
 
 Check out the excerpt from the budget speech by the Finance Minister of India earlier this year, 
 
@@ -66,7 +66,9 @@ Now that we have context into why capital formation is important and why we need
 
 **1. GDP and macro data**
 
-Let’s start with the GDP and go from there. Something that sticks out immediately when we look at GDP data for the top 10 largest countries is the GDP per capita difference between India and other countries. Even though India is the 5th largest country GDP-wise, the GDP per capita has a long way to go before it can be compared with other countries on the list. And while we map out all the other financial sectors, I think the context of our GDP per capita will be helpful. 
+Let’s start with the GDP and go from there. India has grown from a GDP of Rs 5.3 lakh-crore in 1991 to Rs 273 lakh-crore in 2023. Between 2014 and 2023, GDP grew from Rs 113 lakh-crore to Rs 273 lakh-crore, an addition of Rs 159 lakh-crore.
+
+But something that sticks out immediately when we look at GDP data for the top 10 largest countries is the GDP per capita difference between India and other countries. Even though India is the 5th largest country GDP-wise, the GDP per capita has a long way to go before it can be compared with other countries on the list. And while we map out all the other financial sectors, I think the context of our GDP per capita will be helpful. 
 
 ![2Blog1](https://github.com/paidinesh7/dineshpai.in/assets/79692173/eb9181b9-2ed7-43f9-9f25-158666d3b134)
 
@@ -168,13 +170,15 @@ Here is what the global debt market looks like. The US again leads the way with 
 
 **4. Banking**
 
-There are several reasons why banks are important for an economy - financial inclusion, credit availability, and savings mobilization are some of the notable reasons.
+There are several reasons why banks are essential for an economy - financial inclusion, credit availability, and savings mobilization are some of the notable reasons.
 
 * The Indian banking system consists of 12 public sector banks, 22 private sector banks, 46 foreign banks, 56 regional rural banks, 1485 urban cooperative banks and 96,000 rural cooperative banks, and cooperative credit institutions. 
 
 * In 2001, the total outstanding loans of Indian banks stood at ₹5.1 trillion, or 23.9% of the country’s GDP of the time. By September 2022, the figure had grown to ₹130.4 trillion, or 50.3% of GDP.
 
-* Meanwhile, the total bank deposits have jumped from ₹9.6 trillion, or 45% of GDP, as of end-March 2001, to ₹175.4 trillion, or 67.6% of the GDP. 
+* Meanwhile, the total bank deposits have jumped from ₹9.6 trillion, or 45% of GDP, as of end-March 2001, to ₹175.4 trillion, or 67.6% of the GDP.
+
+* Post the NPA crisis over the past decade, robust recapitalisation of PSU banks, introducing the bankruptcy code, and RBI's regulatory oversight has helped banks become resilient again across the board. For the full financial year 2022-23, public sector banks made profits of over Rs 1 lakh crore.
 
 While the growth appears to be sharp, the interesting thing is that the size of Indian banking has stagnated for over a decade. The lending of banks has remained around 50-53% of the GDP since March 2009 (with 2020-21 being an exception due to covid-19), and deposits have remained between 67-70% of GDP.
 
@@ -238,6 +242,8 @@ Here are a few illustrations for how retail participation in the equity markets 
 ![2023-09-09_14-22](https://github.com/paidinesh7/dineshpai.in/assets/79692173/91396b13-7d35-4fe2-9832-019c487e7613)
 
 ![2023-09-09_14-22_1](https://github.com/paidinesh7/dineshpai.in/assets/79692173/7cd274a5-ae34-448e-8f9f-507a2cb2e25d)
+
+![2023-09-09_15-18](https://github.com/paidinesh7/dineshpai.in/assets/79692173/caba02ed-9419-4b95-abf8-1d1e7141e582)
 
 **India’s market capitalization is at 300 lakh crore - way back in September 2003, it was just Rs 10 lakh crore.**
 
