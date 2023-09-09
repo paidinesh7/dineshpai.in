@@ -295,11 +295,11 @@ Here is an excerpt from a [blog](https://zerodha.com/z-connect/rainmatter/beyond
 
 ## What are some of the takeaways
 
-* The next wave of growth in the Indian economy might not be just from AI or Superconductors, but from improving the existing agricultural ecosystems that can add several magnitudes of value to GDP.
+* The next wave of growth in the Indian economy might not be just from AI or Superconductors but from improving the existing agricultural ecosystems that can add several magnitudes of value to GDP.
 
-* Female labour participation rates have steadily declined — from 26% in 2005 to roughly 20% in 2019 due to perhaps the reasons mentioned here. Less than 7% of the urban women population has independent financial income. We must improve this over the next few years to walk the talk with holistic economic development. 
+* Female labour participation rates have steadily declined — from 30% in 2000 to roughly 25% in 2023. Less than 7% of the urban women population has independent financial income. We must focus on improving this over the next few years to walk the talk with holistic economic development. 
 
-* The GDP per capita is also nuanced. Even though we see the $2000 per capita GDP on average - if we remove the top 30-40 million of our population, the GDP per capita dips to $700. 
+* The GDP per capita is also nuanced. Even though we see the $2000 per capita GDP on average - if we remove the top 30-40 million of our population based on income, the GDP per capita dips to $700. 
 
 * India’s GDP is growing at 5-6% annually. Compare it with the United States, which has 2% annual growth, and China, which has 5-6% growth. And here lies the difference. Even though the growth rate for the US is 2%, the addition to GDP annually is around 0.5 billion, whereas India is adding only 0.2 billion every year. And China is adding around 1 billion in GDP gross value. 
 
@@ -307,13 +307,11 @@ Here is an excerpt from a [blog](https://zerodha.com/z-connect/rainmatter/beyond
 
 * Banks can play a part in localizing our economy by making capital available to entrepreneurs - setting precedence for the next few decades. 
 
-* Even though India is 5th largest economy in the world, the financial industry size is nowhere close to some of the other countries. As we move higher up the table, we must focus on capital formation and how various financial sectors can add value holistically. 
+* Even though India is 5th largest economy in the world, the financial industry size is nowhere close to some of the other countries. As we move higher up the table, we must focus on capital formation and how various financial sectors can add value holistically. And maybe this is another opportunity for the future. 
 
-* While the growth rate compared to lower base rates seems great, the next few years need significantly improved efforts to reach the hinterlands with financial services and focus on overall growth rather than the concentrated growth we see today. The key to avoiding conflicts in the future will be to ensure we enable prosperity to a larger section of our population quickly. 
+* While the growth rate compared to lower base rates seems great, the next few years need significantly improved efforts to reach the hinterlands with financial services and focus on overall growth rather than the concentrated growth we see today. The key to avoiding future conflicts will be ensuring we enable prosperity to a larger section of our population quickly. 
 
-* The VC industry and risk capital have a role to play. And India seems to be at an inflexion point where it can use as many risk-takers in terms of capital as we can gather. The VC industry must look at boring sectors for investment and stop the fascination with Sand Hill Road. There are clearly bigger problems to solve for. I explained this in my [previous blog](https://dineshpai.in/blog/venture-capital-in-2023-and-what-lies-ahead/).
-
-* As India digitizes, we need better cybersecurity measures that safeguard common investors and people, and not just focus on high-value transactions. The volume of transactions is a better metric to focus on. 
+* The VC industry and risk capital have a role to play. And India is at an inflexion point where it can use as many risk-takers in terms of capital as we can gather. The VC industry must look at boring sectors for investment and stop the fascination with Sand Hill Road. There are more significant problems to solve for. I explained this in my [previous blog](https://dineshpai.in/blog/venture-capital-in-2023-and-what-lies-ahead/).
 
 While this blog is probably more of a factsheet than anything else, I think it added lots of context in terms of financial services in India and how we stack up against other countries. Hope this is useful for you too. 
 
