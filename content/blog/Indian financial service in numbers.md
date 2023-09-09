@@ -65,19 +65,13 @@ Now that we have context into why capital formation is important and why we need
 
 **1. GDP and macro data**
 
-Let’s start with the GDP and go from there. India has grown from a GDP of Rs 5.3 lakh-crore in 1991 to Rs 273 lakh-crore in 2023. Between 2014 and 2023, GDP grew from Rs 113 lakh-crore to Rs 273 lakh-crore, an addition of Rs 159 lakh-crore.
+Let’s start with the GDP and go from there. India has grown from a GDP of Rs 5.3 lakh crore in 1991 to Rs 273 lakh crore in 2023. Between 2014 and 2023, GDP grew from Rs 113 lakh crore to Rs 273 lakh crore, an addition of Rs 159 lakh crore.
 
-But something that sticks out immediately when we look at GDP data for the top 10 largest countries is the GDP per capita difference between India and other countries. Even though India is the 5th largest country GDP-wise, the GDP per capita has a long way to go before it can be compared with other countries on the list. And while we map out all the other financial sectors, I think the context of our GDP per capita will be helpful. 
+But the GDP per capita difference between India and other countries sticks out immediately when we look at GDP data for the top 10 largest countries. And while we map out all the other financial sectors, the context of our GDP per capita will be helpful. 
 
 ![2Blog1](https://github.com/paidinesh7/dineshpai.in/assets/79692173/eb9181b9-2ed7-43f9-9f25-158666d3b134#center)
 
-While there are other structural issues with GDP, one thing that sticks out is how dismal India's female labor participation is. Nithin explained this in the post [here](https://twitter.com/Nithin0dha/status/1695301585767698446). The post siummarizes the cause for the state of how low the participation is today. And I think this is maybe the next big project for all of us to focus on. There can be several solutions to this problem, but the fact that we are all aware of the problem itself I think will go a long way. 
-
-![Blog22222](https://github.com/paidinesh7/dineshpai.in/assets/79692173/e55f46fd-41c4-4ff0-aa75-259fc8ced007#center)
-
-![2023-09-09_14-10](https://github.com/paidinesh7/dineshpai.in/assets/79692173/df2b6207-5ae2-4dff-9191-f694fa9f81a0#center)
-
-60% of India’s GDP is driven by local consumption of goods and services. And here is an excellent snapshot of the GDP breakup from a report by Blume Venture, 
+60% of India’s GDP is driven by local consumption of goods and services. Here is an excellent snapshot of the GDP breakup from a report by Blume Ventures, 
 
 <div align="center">
     <img src="/2Blog2.jpg">
@@ -102,12 +96,20 @@ While looking for a few examples of recent surveys on the economy, I found this 
 
 But there are challenges and things we can improve upon. 
 
-Since we are speaking of increasing GDP and income growth rates, we must also quote the numbers that dont look too great. Let's start with income tax collections in India. Unless you have not spent time listening to economic commentary - it would be no surprise that very few Indians pay any tax. The number of ITRs filed is insignificant, despite an uptick; what matters is the number of total taxpayers. That is at a dismal 1.9% of the population. The answer to this problem is maybe a utopian world. 
+* While there are other structural issues with GDP, one thing that sticks out is how dismal India's female labor participation is. Nithin explained this in the post [here](https://twitter.com/Nithin0dha/status/1695301585767698446). The post summarises the cause for the state of how low the participation is today. And I think this is maybe the next big project for all of us to focus on. There can be several solutions to this problem, but the fact that we are all aware of the problem itself I think will go a long way. 
+
+Here is the female labor force participation trend for India - 20%. While some of the developed nations are at 50%. 
+
+![Blog22222](https://github.com/paidinesh7/dineshpai.in/assets/79692173/e55f46fd-41c4-4ff0-aa75-259fc8ced007#center)
+
+* Since we are speaking of increasing GDP and income growth rates, we must also quote the numbers that dont look too great. Let's start with income tax collections in India. Unless you have not spent time listening to economic commentary - it would be no surprise that very few Indians pay any tax. The number of ITRs filed is insignificant, despite an uptick; what matters is the number of total taxpayers. That is at a dismal 1.9% of the population. The answer to this problem is maybe a utopian world. 
  
 ![2Blog4](https://github.com/paidinesh7/dineshpai.in/assets/79692173/af8bdb9e-612b-4590-b30e-12003cd104ba#center)
 [Source](https://twitter.com/deepakabbot/status/1684065266379165697/photo/1)
 
-Secondly, let us check the GDP contribution from different sectors and the employment % of those specific sectors. This will give us a fair idea of what sectors of our economy are contributing to the economy and if a commensurate number of jobs are created in that sector. Data shows that 50% of India’s workforce today is concentrated in Agriculture, but it contributes just 17-20% of the GDP. In contrast, Services with 30% of the workforce constitute 50% of GDP. This is quite a problem, and has troubled policymakers for a couple of decades at least. 
+* Let us also check the GDP contribution from different sectors and the employment % of those specific sectors. This will give us a fair idea of what sectors of our economy are contributing to the economy and if a commensurate number of jobs are created in that sector. Data shows that 50% of India’s workforce today is concentrated in Agriculture, but it contributes just 17-20% of the GDP. In contrast, Services with 30% of the workforce constitute 50% of GDP. This is quite a problem, and has troubled policymakers for a couple of decades at least.
+
+The first image is representing the % of workforce, and the second image represents the GDP contribution. 
 
 ![2Blog5](https://github.com/paidinesh7/dineshpai.in/assets/79692173/72964016-ac2e-451b-9942-6daed4eecb08#center)
 
@@ -228,23 +230,25 @@ There is a case to be made for higher insurance penetration in India. But again,
 
 **6. Stock markets**
 
-Equity markets directly create opportunities for capital formation. I dont think I need to explain a lot about equity markets. 
+Over the past few years, the stock market has been in the news for adding several new retail participants. Today around 4% of India’s population participates in the equity markets. This number is of course significantly higher in other developed countries like China and the US. In a span of four years, number of demat accounts in India has grown 2.5 times from 4.1 crore in 2019-20 to 10 crore in 2022-23. Record numbers of SIPs are being registered. Monthly flow into the mutual fund industry has reached all-time high of ₹15,245 crore in July 2023. AUM of the Indian mutual fund industry has increased more than four-fold from ten lakh crore in May 2014 to a significant ₹46.37 lakh crores in July 2023.
 
-Over the past few years, the stock market has been in the news for adding several new retail participants. Today around 4% of India’s population participates in the equity markets. This number is of course significantly higher in other developed countries like China and the US. 
-
-Unsurprisingly, for decades Indian households have been risk-averse and continue to be so. There is more demand for bank fixed deposits and gold perhaps than for ownership of business. But with a new generation of wealth earners coming through, who are probably not privy to the difficult times of the past, we could see behaviour shifting. Interesting times ahead.
+Unsurprisingly, for decades Indian households have been risk-averse and continue to be so. There was more demand for bank fixed deposits and gold perhaps than for ownership of business. But with a new generation of wealth earners coming through, who are probably not privy to the difficult times of the past, we see behaviour shifting. Interesting times ahead.
 
 Here are a few illustrations of how retail participation in the equity markets has trended. 
 
+Retain investor participation has obviously inched up.
 ![2Blog15](https://github.com/paidinesh7/dineshpai.in/assets/79692173/3e1a89c1-d14c-476e-89e8-7e66f1fbd47d#center)
 
+Yearwise breakup of increase in retail investors. 
 ![2023-09-09_14-22](https://github.com/paidinesh7/dineshpai.in/assets/79692173/91396b13-7d35-4fe2-9832-019c487e7613#center)
 
+Retail trading activity across equity/cash market and derivatives. 
 ![2023-09-09_14-22_1](https://github.com/paidinesh7/dineshpai.in/assets/79692173/7cd274a5-ae34-448e-8f9f-507a2cb2e25d#center)
 
+Mutual Fund scheme and AUM. 
 ![2023-09-09_15-18](https://github.com/paidinesh7/dineshpai.in/assets/79692173/caba02ed-9419-4b95-abf8-1d1e7141e582#center)
 
-**India’s market capitalization is at 300 lakh crore - way back in September 2003, it was just Rs 10 lakh crore.**
+*India’s market capitalization is at 300 lakh crore - way back in September 2003, it was just Rs 10 lakh crore.*
 
 ![2Blog16](https://github.com/paidinesh7/dineshpai.in/assets/79692173/b2b5598a-b349-4860-af6d-66bd6c9ce18e#center)
 
