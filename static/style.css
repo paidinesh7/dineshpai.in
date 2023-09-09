@@ -13,10 +13,10 @@ html, body {
 body {
     background: #fff;
     font-family: Inter, serif;
-    font-weight: 400;
+    font-weight: 300;
     color: #333;
     line-height: 1.6em;
-    font-size: 22px;
+    font-size: 16px;
 }
 
 a {
