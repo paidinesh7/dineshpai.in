@@ -1,5 +1,5 @@
 ---
-date: '2023-08-06'
+date: '2023-09-09'
 title: "Indian financial services in numbers"
 tags: [Economy, Financial services, Data]
 author: dinesh
@@ -7,23 +7,33 @@ description: A summary of the financial services markets in India compared to gl
 draft: true
 ---
 
-It is 2011, and Cricket World Cup had come home after a long time. Every conversation in the trains, buses, chai shops and hotels was about cricket and if this was the year to end the wait of 28 years. After all, it was a perfect opportunity to send off one of the best the game had seen - Sachin Ramesh Tendulkar. 
+It is 2011, and the Cricket World Cup has come to India after a long time. Every conversation in the trains, buses, chai shops and hotels at the time was all about cricket. The even more prominent question was if this was the year we ended the wait of 28 years to win the World Cup again. After all, it was a perfect opportunity to send off one of the best the game had seen - Sachin Ramesh Tendulkar, who was undoubtedly retiring after the tournament ended.
 
-Here is us watching a group stage match in the hostel I stayed at back then. This was India playing Pakistan - for that one day, the alleyways and canteens were deserted. Everyone was glued to the TV. 
+Here is me, along with my collegemates, watching the group stage match. This was, of course, India playing Pakistan - for that one day, the alleyways and canteens of the college were deserted. Everyone was glued to the TV. Palpable tension everywhere.
 
 ![2Blog](https://github.com/paidinesh7/dineshpai.in/assets/79692173/03a28f12-8bf4-4abb-9e33-2cbf4a8a2ab1)
 
-India won the Cricket World Cup that year, and who can forget the iconic lines by Ravi Shastri, 
+Of course, as history would have it, India won the Cricket World Cup that year, and who can forget the iconic lines by Ravi Shastri, 
 
 *“Dhoni finishes off in style. A magnificent strike into the crowd! India lift the World Cup after 28 years!”*
 
-I cannot comprehend how 12 years have flown by since that moment, And the World Cup is coming home again in October later this year. Could this be our year again? Time will tell. 
+![Blog Dhoni](https://github.com/paidinesh7/dineshpai.in/assets/79692173/881d8516-1752-48cc-9cf5-f6f694d7262d)
 
-2011 also coincided with when I was introduced to capital markets. How ironic that studying in an Engineering college would introduce me to finance. I had met friends who were trading and investing at the time. Even though small sums of money, what they did seemed fascinating. They were discussing companies and technology and whatnot. Having been swayed by fancy jargon, I started helping them pick stocks to invest in. Seemed much more exciting compared to learning programming and information systems. Three years to that day, I found myself interviewing for DE Shaw, India - a hedge fund based out of Hyderabad. I just got lucky that I had the opportunity to work for a firm supporting trading offices worldwide. And one of the first things I did once I joined my first job in 2014 was to revise and check the market size for all the financial sectors in India compared to other countries. I felt at the time it was probably the bedrock on which everything else could be learned. 
+I cannot comprehend how 12 years have flown by since that moment, And the World Cup is coming home again in October of this year. Could this be our year again? Time will tell. But there is again palpable tension already. 
 
-Fast forward to today, I have the opportunity to track the markets closely as part of Zerodha. But last week I was at a talk and failed to memorise some numbers on the economy. This is why I decided to write down my thoughts on the market sizes of various financial service sectors. 
+2011 also coincided with when I was introduced to capital markets and the fascinating world of Finance. How ironic that an Engineering college is where I would first start learning the basics of finance. At the time, I had friends who were trading and investing. Even though small sums of money were at stake, what they did seemed fascinating. Every day, we discussed how companies worked, how they operated, and the people leading these companies. I eventually started helping my friends with research to pick businesses where we could buy a handful of shares—it seemed exciting compared to learning programming and information systems. 
+
+By 2014, it all made sense. Despite an engineering degree, I ended up joining a hedge fund right out of college. I clearly remember how the first thing I did at my first job was to revise and check the market size for all the financial sectors in India and compare it to other countries, specifically the US, China, Japan and so on. I wanted to know the numbers inside out.  
+
+Fast forward to today - I still work in financial services, and at Zerodha, I have a front-row seat to all that happens in the capital markets industry. The only thing that has changed since 2011 is perhaps how much more there is to learn.
+
+I am reminiscing about the past decade because last month, while at a speaking event, I failed to memorise a few data points on the economy. And it may be time to redo the market size exercise again. I am writing down my thoughts on the economy to document everything I find out. In 2014, the focus was just on the economic side - purely numbers. But I am better placed today to add context and nuances to those numbers. So, here we go. 
+
+*Disclaimer - This blog might not be exhaustive, and I could certainly be wrong on several counts.*
 
 ## Capital Formation, what’s that?
+
+Even though times have changed over the past decade, not much has changed in how we measure an economy. 
 
 Check out the excerpt from the budget speech by the Finance Minister of India earlier this year, 
 
@@ -31,41 +41,40 @@ Check out the excerpt from the budget speech by the Finance Minister of India ea
 >
 >*44. Capital investment outlay is being increased steeply for the third year in a row by 33 per cent to Rs 10 lakh crore, which would be 3.3 per cent of GDP. This will be almost three times the outlay in 2019-20.*
 >
->*45. This substantial increase in recent years is central to the government’s efforts to enhance growth potential and job creation, crowd- in private investments, and provide a cushion against global headwinds.*
+>*45. This substantial increase in recent years is central to the government’s efforts to enhance growth potential and job creation, crowd-in private investments, and provide a cushion against global headwinds.*
 >
 >***Effective Capital Expenditure***
 >
->*46. The direct capital investment by the Centre is complemented by the provision made for creation of capital assets through Grants-in-Aid to States. The ‘Effective Capital Expenditure’ of the Centre is budgeted at Rs 13.7 lakh crore, which will be 4.5 per cent of GDP.*
+>*46. The direct capital investment by the Centre is complemented by the provision made for the creation of capital assets through Grants-in-Aid to States. The ‘Effective Capital Expenditure’ of the Centre is budgeted at Rs 13.7 lakh crore, which will be 4.5 per cent of GDP.*
 >
 >*[Source](https://www.indiabudget.gov.in/doc/budget_speech.pdf)*
 
-Governments worldwide clearly understand how vital capital expenditure is for the betterment of a nation. 
+And if one were to Google the phrase `economic development`, every news article and blog would talk about building more stuff. This is how I figured that the jargon for `building new stuff` is Capital Formation. 
+Capital formation, in simple terms, is using resources like money and time to develop physical and financial assets. For example, think of roads, manufacturing facilities, equipment, vehicles and financial assets like stocks, bonds, and other securities. The expenditure used towards capital formation is called capital expenditure - which most economists and other financial markets commentators refer to. We will focus on financial capital formation throughout this piece, and I will refer to it as capital formation.
 
-Capital formation, in simple terms, is all about using resources like money and time to develop physical and financial assets. For example, think of roads, manufacturing facilities, equipment, vehicles and financial assets like stocks, bonds, and other securities. And the expenditure used towards capital formation is called capital expenditure - which most economists and other financial markets commentators refer to. We will focus on financial capital formation throughout this piece, and I will pen a separate blog on the infrastructure sometime later in the year. 
+To grasp how financial capital formation is helpful for the modern economy, think of a village in any part of India - for the village to grow and develop, we need schools, hospitals, and commercial centres. All these will help the quality of life and provide avenues for livelihoods. And as more people educate themselves, they do better than the others who dont, and the cycle continues. This is all great. But since the village is inherently not prosperous and does not have money to spend, we need help in the form of capital, say debt, which can then be used to build all the critical infrastructure. But there is another option; maybe the local entrepreneurs could raise equity capital - money in return for a share of a company’s cash flow. Equity capital can then be used for business operations, which could create jobs and economic value for the village. In this example - Equity and debt represent financial capital formation. Even though simplified, this applies to a country perfectly. And there is nothing more to this fancy word of capital formation. 
 
-Needless to say, financial capital formation is critical for any economy. Think of a village in any part of India - for the village to grow and develop, there must be infrastructure improvements. Think schools, hospitals, markets and shops/commercial centres. Since the village is inherently not capital rich, there will need to be some form of capital available for the community to build all the things needed for growth. This capital will only be available if enough financial capital is formed, like debt and investments. With more infrastructure comes better living standard in various ways that we know. Even though simplified, this applies to a country as well. For us to grow and develop, we need capital to spend, which is why any government globally focuses on the maturity and stability of the financial industry. 
+In a developing country like ours, one of the most critical aspects of the economy is for governments and financial institutions to ideally enable businesses and industries to expand meaningfully, innovate, be sustainable and improve productivity. And the enabler for all of this is available capital. Consequently, as businesses grow, there are more jobs, technological advancement, and hopefully less dependence on external supply chains. One thing feeds the other, and we eventually have a thriving country with lesser income inequality among the population, better healthcare, better education, a better way of living and, indeed, a better view of the challenges ahead. 
 
-Specifically for a developing country like ours, one of the most critical aspects of the economy is for governments and financial institutions to enable businesses and industries to expand, innovate, and improve productivity. When businesses innovate and grow, more jobs are created, and ideally also results in knowledge transfer from better economies, which can increase processes' efficiency, outputs, and financial health. Overall efficiency also increases the economy's competitiveness, leading to increased GDP and incomes and a higher standard of living. We will get to these finer details later. 
+Can we today look at growth in isolation, though? Certainly not. Even though we think of capital as the silver bullet to development, there is more to it. Our default thought process of equating more capital to higher and unrestricted growth needs to be tweaked a little. While we think of growth, we must also focus on challenges that are prevalent today. 
 
-This is something we at [Zerodha](https://zerodha.com/) and [Rainmatter](https://rainmatter.com/) keep spending time thinking about. Through Rainmatter (Zerodha’s investment arm), where we invest in startups helping people do better with money, help solve climate change or help make healthier choices, we think of investments as our bit towards helping the country with capital formation. We have constantly spoken about how there is a need for domestic capital availability for businesses to break the cycle of poverty and underdevelopment. We are convinced that with the efforts of the Government in education, healthcare, and infrastructure, we can have a non-linear impact on our societies in the long run. 
+Think of climate change, mass migration to cities and under-development of rural and semi-urban regions of the country. If you were to ask seasoned economists and experts, they would share a few more challenges hidden underneath the headlines we all come across. 
 
-Enough with the buzzwords of productivity, output and economic development. So all of the improvements economically in a country directly correlate to resources (capital and other ancillary resources) available. Capital is available in various forms in India - equity, debt, or other complex structures. But debt and equity constitute a significant portion of the financial capital available. 
-
-To simplify, Financial capital formation at a country level - we can think of it as an investment of savings by households or government or businesses into various institutions like mutual funds and banks, to be repurposed for other purposes like lending and equity investments. This is the lifeblood of an economy. 
-
-This happens when individuals, businesses, or governments save a portion of their income and deposit it in banks or invest it in financial markets; these funds become available for lending or investing in productive activities or in buying assets that we mentioned earlier.
-
-Now that we have context into why capital formation is important and how it is supported let’s look at the market sizes of financial services supporting it. 
-
+Now that we have context into why capital formation is important and why we need to relook at the challenges being solved through capital, we can go into the market sizes of institutions and vehicles supporting it. 
+ 
 ## Benchmarking the Indian financial services market
 
 **1. GDP and macro data**
 
-We know how GDP is calculated. And since that is common across economies, it gives us a fair idea of different countries' spending power and resilience. Seems only fair to start here. 
-
-Let’s start with the GDP of India compared to other countries. And something that sticks out immediately when we look at GDP data for the top 10 largest countries is the GDP per capita difference between India and other countries. Even though India is the 5th largest country GDP-wise, the GDP per capita has a long way to go before it can be compared with other countries on the list. 
+Let’s start with the GDP and go from there. Something that sticks out immediately when we look at GDP data for the top 10 largest countries is the GDP per capita difference between India and other countries. Even though India is the 5th largest country GDP-wise, the GDP per capita has a long way to go before it can be compared with other countries on the list. And while we map out all the other financial sectors, I think the context of our GDP per capita will be helpful. 
 
 ![2Blog1](https://github.com/paidinesh7/dineshpai.in/assets/79692173/eb9181b9-2ed7-43f9-9f25-158666d3b134)
+
+While there are other structural issues with GDP, one thing that sticks out is how dismal India's female labor participation is. Nithin explained this in the post [here](https://twitter.com/Nithin0dha/status/1695301585767698446). The post siummarizes the cause for the state of how low the participation is today. And I think this is maybe the next big project for all of us to focus on. There can be several solutions to this problem, but the fact that we are all aware of the problem itself I think will go a long way. 
+
+![Blog22222](https://github.com/paidinesh7/dineshpai.in/assets/79692173/e55f46fd-41c4-4ff0-aa75-259fc8ced007)
+
+![2023-09-09_14-10](https://github.com/paidinesh7/dineshpai.in/assets/79692173/df2b6207-5ae2-4dff-9191-f694fa9f81a0)
 
 60% of India’s GDP is driven by local consumption of goods and services. And here is an excellent snapshot of the GDP breakup from a report by Blume Venture, 
 
@@ -92,21 +101,32 @@ While looking for a few examples of recent surveys on the economy, I found this 
 
 But there are challenges and things we can improve upon. 
 
-Along with GDP and income, we must also look at tax collections. It is no surprise how few Indians pay any taxes - given the income distribution among the top 1% of the population. And here is the data on the number of taxpayers for FY 22-23 
+Since we are speaking of increasing GDP and income growth rates, we must also quote the numbers that dont look too great. Let's start with income tax collections in India. Unless you have not spent time listening to economic commentary - it would be no surprise that very few Indians pay any tax. The number of ITRs filed is insignificant, despite an uptick; what matters is the number of total taxpayers. That is at a dismal 1.9% of the population. The answer to this problem is maybe a utopian world. 
+ 
 ![2Blog4](https://github.com/paidinesh7/dineshpai.in/assets/79692173/af8bdb9e-612b-4590-b30e-12003cd104ba)
 [Source](https://twitter.com/deepakabbot/status/1684065266379165697/photo/1)
 
-So it does not matter the number of ITRs filed; what matters is the number of total taxpayers. India must find ways to increase its tax base over the next few years. Higher tax income can be used for more capital formation for the country. This will generate benefits that will percolate all sections of society. 
-
-Check out the GDP contribution and employment % across sectors. 50% of India’s workforce today is concentrated in Agriculture but it contributes just 17-20% of the GDP. In contrast, Services with 30% of the workforce constitute 50% of GDP. 
+Secondly, let us check the GDP contribution from different sectors and the employment % of those specific sectors. This will give us a fair idea of what sectors of our economy are contributing to the economy and if a commensurate number of jobs are created in that sector. Data shows that 50% of India’s workforce today is concentrated in Agriculture, but it contributes just 17-20% of the GDP. In contrast, Services with 30% of the workforce constitute 50% of GDP. This is quite a problem, and has troubled policymakers for a couple of decades at least. 
 
 ![2Blog5](https://github.com/paidinesh7/dineshpai.in/assets/79692173/72964016-ac2e-451b-9942-6daed4eecb08)
 
 ![Fix](https://github.com/paidinesh7/dineshpai.in/assets/79692173/01c28ee4-a0ba-4418-a007-f10f8bce8ced)
 
-Even though we have come a long way with how farmers are supported and local livelihoods are safeguarded with policies, we need to do more. If we need to grow our GDP over the next decade, we will need to invest in agricultural technology and infrastructure, promote crop diversification, improve market access for farmers, provide financial and social support to rural communities, and encourage agri-business. And finally, as we have more upskilling and education across the population, balancing the transition of labour from agriculture to other sectors while ensuring rural livelihoods and food security is a critical challenge for India's long-term economic development. 
+What we see in the statistics is anything but comforting. Before we even touch upon why, agriculture, which forms a large part of our workforce only contributes to a quarter of our economy, it must be stated that the age-old *one size fits all* solutions won't cut it anymore. While it is easier to talk about how we need investments and infrastructure for the agri sector to do better, our focus should be on small and marginal farmers and how we can help them do better.  
 
-Just before I started penning this piece down, I re-listened to this talk by Mr Maran. This is a must-listen for anyone curious about Indian markets. 
+The questions we need to solve are right in front of us. However, the solutions may not be as obvious.   
+
+I personally believe that a large chunk of our efforts must be first spent on evaluating current systems and identifying the pain points. And these pain points must not only be broad themes but also spell out the ground-level realities. If one were to do some research on the hurdles for agriculture, the answers would always be some versions of the following - poverty, access to credit, markets, equipment and other easier inferences. But from all that I have learned over the past few months and while doing some research for this blog, there are granular issues that culminate into those broad issues we have heard of.
+
+A better start would be to start asking tough questions like - how can we build awareness about soil health deterioration due to excessive use of fertilisers, what are some of the alternatives to fertilisers and pesticides in use, how can we get more farmers to adopt regenerative farming practices, what more needs to be done to help farmers who are willing to shift to better agricultural practices and how can we help in this transitional period, how can we help farmers adapt to risks from climate change. And these problem statements are just scratching the surface. And a lot of the answers to these questions also will be different for each region we consider and must be adapted for local circumstances. Sounds quite simple to write about, but this in itself will require a massive mobilisation of resources to identify, document and analyse the current state of challenges. 
+
+Actions, not policy recommendations, will be the difference as we go further into this decade. Over the next few years, if we can improve livelihoods for the current workforce engaged in agriculture, it will be a game-changer. We would also encourage more Indians to consider agriculture as a viable means for an occupation and in turn, avoid mass migration to cities in the hunt for unskilled jobs. And this will add so much more value to the economy. 
+
+You must be wondering why *innovation and technology* has not found a mention in the list of solutions, well that is because of how overrated it is. Better tools, machinery, and technology can only be short-term steroids that may hide the symptoms and at some point will make no marginal difference to agricultural outputs. Why so? Well, if we degrade the soil beyond a point, irrespective of how you sow, reap and irrigate the lands, it will be of no help. There are several experts out there on this topic, and I feel they would be better placed to suggest better ideas. But I feel this is a good starting point for anyone starting to think of this sector. 
+
+And sure, once we solve some of the simpler impediments, we can then pay attention to building improved market access for farmers, financial and social support focused on to rural communities through low-interest rate debt, and also make it easier to start and run an agri-business. And given how food security is a critical challenge for India's long-term economic development. Now is the time to take stock of what has gone wrong and fix it. 
+
+I intend to end this section on an optimistic note, This talk by Mr Maran is quite nice. This is a must-listen for anyone curious about Indian markets and our economy in general. In a nutshell, Mr. Maran points out everything going right for us in the economy.
 
 [![Watch the video](![Video](https://github.com/paidinesh7/dineshpai.in/assets/79692173/77c1ee45-812d-41bb-8446-0c9347f43562))](https://www.youtube.com/watch?v=kGBME-g6bfQ&t=5562s)
 
@@ -114,9 +134,17 @@ Just before I started penning this piece down, I re-listened to this talk by Mr 
 
 Government spending helps stimulate demand for services and products, improves the distribution of social programs and services, and increases infrastructure development among other benefits. Again going back to capital formation. India today spends around 15% of GDP.
 
-Benchmark this to US and China, at 45% and 15%, respectively. 
+Benchmark this to the US and China, at 45% and 15%, respectively. 
 
 ![2Blog7](https://github.com/paidinesh7/dineshpai.in/assets/79692173/1e18d7d6-6f49-4017-ad51-a600c244e8aa)
+
+While the government has to balance the capital requirements of several sectors, we must look at some sectors more closely. Namely education and healthcare. While these sectors do get allocation, there is probably more that needs to be done.
+
+![aHz6v-government-spending-india](https://github.com/paidinesh7/dineshpai.in/assets/79692173/9aa5e672-e3ee-4304-939e-3ac6ed15d2cc)
+
+The Covid pandemic made it clear how much room there is for improvement in our public healthcare systems. We will end this decade with our population aged 60+ hovering around 190 million, which will more than double by 2050. And while some of the developed countries have taken 80-100 years with a doubling of population aged 60+, India will take just 20-25 years. A large section of our population also is struggling to attain education for several reasons. And how can we leave out the risks posed by climate change and disruption of livelihoods. 
+
+And while we match in percentage terms the spending with US, the scale of spending are miles apart. With the population we have, the government spending, specifically directed towards pain points that are long term is the need of the hour.  
 
 But increasing government spending comes with its own set of challenges. This is why any increase in government spending needs to be well thought out. Increased spending without commensurate revenue can lead to increased deficits, creating upward pressure on interest rates and crowding out private borrowing. There can be misallocation of resources, inflation like what we saw in the US for the past few years. 
 
@@ -126,17 +154,15 @@ But with a balanced approach and gradual increase in government spending, we can
 
 For Government to spend towards capital expenditure, there are a few avenues for collecting revenue or funds. Firstly, the Direct and indirect taxes. Secondly, the debt market, where governments can sell bonds to raise funds. Apart from just the government, even corporations can sell bonds to raise capital for expenditure. 
 
-This is why debt markets form an essential part of a country’s economy - they supercharge the economy as we described in the example of a growing village earlier. A mature and deep debt markets mean easier access to capital, and lower interest costs, which will help us grow further by building better infrastructure and market linkages. 
+This is why debt markets form an essential part of a country’s economy. A mature and deep debt markets mean easier access to capital, and lower interest costs, which will help us grow further by building better infrastructure and market linkages. 
 
 Here is what the global debt market looks like. The US again leads the way with 31 trillion dollars of the debt market. India is at 1.3 trillion dollars.
-
-### Rankings
 
 ![2Blog8](https://github.com/paidinesh7/dineshpai.in/assets/79692173/c7921140-b9c8-4211-b23b-aac7b75e6091)
 
 ![2Blog9](https://github.com/paidinesh7/dineshpai.in/assets/79692173/a47f04d4-3a3c-4238-8b7d-8f13470a2ede)
 
-### Debt market snapshot across countries###
+**Debt market snapshot across countries**
 
 ![Fix2](https://github.com/paidinesh7/dineshpai.in/assets/79692173/30a655c9-4be1-48f9-b3ca-ccb2ccdd9857)
 
@@ -159,6 +185,12 @@ While the growth appears to be sharp, the interesting thing is that the size of 
 >*As the numbers reveal, the banks are in a very healthy state in terms of the book and the capital base. Growth rates will mimic the GDP growth, with about 20% higher numbers, so about 10-12% will be part of the course.
 >Deposit growth will be fairly adequate to meet credit growth. I think double-digit growth is good growth.
 Here are a few more graphs/data on the Indian banking size. And as you can see in the table representing banking assets and countries with higher assets - India is a fraction of some of the leading countries. Higher bank assets ideally should translate to financial inclusion, better access to credit, better cost of credit, better capital formation, and better overall growth of incomes, but we will need the policy to route all the banking penetration to the hinterlands in India. Over the next 5-10 years, India needs to scale up its penetration of banking and also increase the credit facilities available for individuals and businesses.*
+
+But on the flip side you can see in the table representing banking assets and countries with higher banking assets - India is a fraction of some of the leading countries. Over the next 5-10 years, India needs to scale up its penetration of banking and also improve the credit underwriting process. A large section of individuals, entrepreneurs and businesses (MSME’s) in India are left out of the credit system for lack of data and precedence. And this needs fixing. 
+
+From my limited experience, I have noticed how enterprising rural India is, and there are no VCs to back these entrepreneurs. India banks must step in here. We need push from policymakers to help enable this small change. Not only will this mean supporting some of the local entrepreneurs but also will mean a thriving local economy where these businesses get built. This also helps us derisk the concentration of businesses in metro cities in the long run. 
+
+Whichever way you see it, you will conclude that the roles of banks are only going to get more prominent in India. And I hope that we move on from traditional banking habits and usher in banking practices that reflect the true nature of our economy today. 
 
 Here is where India ranks with banking assets, 
 
@@ -183,7 +215,7 @@ One of the issues with deepening the insurance market in India is the education 
 
 Here is my colleague Bhuvan explaining the role of Insurance in a no-frills [financial planning post](https://zerodha.com/z-connect/coin/coin-newsletter/coin-newsletter-3-starting-troubles)
 
-Even though Insurance does not directly does not add to capital formation, the insurance companies themselves directly contribute to investments in the economy. Insurance companies with all the float (premiums collected) must find investment opportunities to make up for the liabilities. And hence a higher penetration of insurance would mean more capital coming towards capital markets to support some of the businesses that can not only impact jobs but also create more opportunities for economic prosperity. 
+Even though Insurance does not directly does not add to capital formation, the insurance companies themselves directly contribute to investments in the economy. Insurance companies with all the float (premiums collected), will need to find investment opportunities to make up for the liabilities. And hence a higher penetration of insurance would mean more capital coming towards capital markets to support some of the businesses that can not only impact jobs but also create more opportunities for economic prosperity. And here as well, there must be some pressure on the fund managers within the insurance companies to look at holistically looking at investment opportunities with the context of challenges we are facing today. 
 
 A small snapshot of the entire Indian insurance industry - 
 
@@ -197,19 +229,23 @@ Equity markets directly create opportunities for capital formation. I dont think
 
 Over the past few years, the stock market has been in the news for adding several new retail participants. Today around 4% of India’s population participates in the equity markets. This number is of course significantly higher in other developed countries like China and US. 
 
-Unsurprisingly, for decades Indian households have been risk-averse and continue to be so. There is more demand for bank fixed deposits and gold perhaps than for ownership of business. But with a new generation of wealth earners coming through, who are probably not privy to the difficult times of the past, we see behaviour shifting. 
+Unsurprisingly, for decades Indian households have been risk-averse and continue to be so. There is more demand for bank fixed deposits and gold perhaps than for ownership of business. But with a new generation of wealth earners coming through, who are probably not privy to the difficult times of the past, we could see behaviour shifting. Interesting times ahead.
+
+Here are a few illustrations for how retail participation in the equity markets have trended. 
 
 ![2Blog15](https://github.com/paidinesh7/dineshpai.in/assets/79692173/3e1a89c1-d14c-476e-89e8-7e66f1fbd47d)
 
-India’s market capitalization is at 300 lakh crore - way back in September 2003, it was just Rs 10 lakh crore.
+![2023-09-09_14-22](https://github.com/paidinesh7/dineshpai.in/assets/79692173/91396b13-7d35-4fe2-9832-019c487e7613)
+
+![2023-09-09_14-22_1](https://github.com/paidinesh7/dineshpai.in/assets/79692173/7cd274a5-ae34-448e-8f9f-507a2cb2e25d)
+
+**India’s market capitalization is at 300 lakh crore - way back in September 2003, it was just Rs 10 lakh crore.**
 
 ![2Blog16](https://github.com/paidinesh7/dineshpai.in/assets/79692173/b2b5598a-b349-4860-af6d-66bd6c9ce18e)
 
-But Indian capital markets also have a long way to go if it has to impact the economic upheaval we are all hoping for.
-
 ## Fintech consumer markets
 
-Given I also spend a lot of time looking at the fintech market specifically, I wanted to share a bit about the Fintech market size given all the frenzy.   
+Given I also spend a lot of time looking at the fintech market specifically, I wanted to share a bit about the Fintech market size given all the frenzy.While some of these numbers are estimates at best, it is still worth noting the scale that is at play.
 
 * Indian FinTech industry’s market size was $ 50 Bn in 2021, estimated at ~$ 150 Bn by 2025. India has around 7,500 fintech startups. From 2014 to mid-2022, the sector received more than $30 billion in funding. India's digital lending market was worth $ 270 bn in 2022 and is expected to reach $ 350 bn by 2023.
 
@@ -250,15 +286,27 @@ Here is an excerpt from a [blog](https://zerodha.com/z-connect/rainmatter/beyond
 
 ## What are some of the takeaways
 
-* Across metrics, India has room to grow. If we are to truly become a country with higher GDP, we will need to deepen our government spending, debt markets, and all the other critical sources of capital formation. 
-* The key to unlocking the next wave of growth in India is to enable domestic capital to support domestic businesses. We must reduce our dependence on imports, which will only happen if we invest in infrastructure and capacity building today. 
-* Female labour participation rates have steadily declined — from 26% in 2005 to roughly 20% in 2019. Less than 7% of the urban women population has independent financial income. Over the next few years, we must improve this to walk the talk with holistic economic development. 
-* India’s GDP is around 3 trillion USD today compared to the United States, with 26 trillion USD, and China, with 18 trillion USD. 
+* Next wave of growth in the Indian economy might not be just from AI or Superconductors, but from improving the existing agricultural ecosystems that can add several magnitudes of value to GDP.
+
+* Female labour participation rates have steadily declined — from 26% in 2005 to roughly 20% in 2019 due to perhaps the reasons mentioned here. Less than 7% of the urban women population has independent financial income. We must improve this over the next few years to walk the talk with holistic economic development. 
+
 * The GDP per capita is also nuanced. Even though we see the $2000 per capita GDP on average - if we remove the top 30-40 million of our population, the GDP per capita dips to $700. 
+
 * India’s GDP is growing at 5-6% annually. Compare it with the United States, which has 2% annual growth, and China, which has 5-6% growth. And here lies the difference. Even though the growth rate for the US is 2%, the addition to GDP annually is around 0.5 billion, whereas India is adding only 0.2 billion every year. And China is adding around 1 billion in GDP gross value. 
-* India certainly needs to increase the taxpaying base, and one of the lowest-hanging fruits is to enable higher participation of women in the workforce. 
-* Global debt markets are three times bigger than global equity markets. Something that gets lost in all the noise around equity market performance. This is also why there has been a lot of noise around the interest rate hikes in the last couple of years, given how much of an impact it has on household savings and investments. 
-* Govt spending, debt markets, equity markets, banking assets, and insurance - these sectors need to grow significantly for India to do well socially and economically. 
-* Even though India is 5th largest economy in the world, the financial industry size is nowhere close to some other countries, and that needs to change to help some of the lower rungs of society.
-* While the growth rate compared to lower base rates seems great, the next few years need significantly improved efforts to reach the hinterlands with financial services and focus on overall growth rather than the concentrated growth we see today. Even though this is more of a global phenomenon (concentrated wealth creation), the key to avoiding future conflicts will be ensuring we enable prosperity to a larger section of our population quickly. 
-* VC/PE risk capital will also be important as India unlocks growth. India is at an inflexion point where the potential or the market, along with demographics, makes it easier to start up a business. Along with founders, we will also need risk capital. But India needs a significantly different approach to what worked on Sand Hill Road - the silicon valley playbook replication might not work, as I explained in my [previous blog](https://dineshpai.in/blog/venture-capital-in-2023-and-what-lies-ahead/).
+
+* Global debt markets are three times bigger than global equity markets. 
+
+* Banks can play a part in localizing our economy by making capital available to entrepreneurs - setting precedence for the next few decades. 
+
+* Even though India is 5th largest economy in the world, the financial industry size is nowhere close to some of the other countries. As we move higher up the table, we must focus on capital formation and how various financial sectors can add value holistically. 
+
+* While the growth rate compared to lower base rates seems great, the next few years need significantly improved efforts to reach the hinterlands with financial services and focus on overall growth rather than the concentrated growth we see today. The key to avoiding conflicts in the future will be to ensure we enable prosperity to a larger section of our population quickly. 
+
+* VC industry and risk capital have a role to play. And India seems to be at an inflexion point where it can use as many risk-takers in terms of capital as we can gather. And the VC industry must look at boring sectors for investment and stop the fascination with Sand Hill Road. There are clearly bigger problems to solve for. I explained this in my [previous blog](https://dineshpai.in/blog/venture-capital-in-2023-and-what-lies-ahead/).
+
+
+* As India digitizes, we need better cybersecurity measures that safeguard common investors and people, and not just focus on high value transactions. The volume of transactions is a better metric to focus on. 
+
+While this blog is probably more of a factsheet than anything else, I think personally it added lots of context in terms of financial services in India and how we stack up against other countries. Hope this is useful for you too. 
+
+Do share any thoughts and comments. And if any of the numbers are wrong, do let me know on [LinkedIn](https://www.linkedin.com/in/paidinesh1/) or [Twitter](https://twitter.com/dineshpaii). 
