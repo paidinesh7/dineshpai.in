@@ -129,7 +129,7 @@ And sure, once we solve some of the simpler impediments, we can then pay attenti
 
 I intend to end this section on an optimistic note, This talk by Mr Maran is quite nice. This is a must-listen for anyone curious about Indian markets and our economy in general. In a nutshell, Mr. Maran points out everything going right for us in the economy.
 
-{{< youtube kGBME-g6bfQ&t=5562s >}}
+{{< youtube id="kGBME-g6bfQ" >}}
 
 **2. Government spending**
 
