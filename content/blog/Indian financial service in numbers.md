@@ -10,13 +10,13 @@ It is 2011, and the Cricket World Cup has come to India after a long time. Every
 
 Here is me, along with my collegemates, watching the group stage match. This was, of course, India playing Pakistan - for that one day, the alleyways and canteens of the college were deserted. Everyone was glued to the TV. Palpable tension everywhere.
 
-![2Blog](https://github.com/paidinesh7/dineshpai.in/assets/79692173/03a28f12-8bf4-4abb-9e33-2cbf4a8a2ab1)
+![2Blog](https://github.com/paidinesh7/dineshpai.in/assets/79692173/03a28f12-8bf4-4abb-9e33-2cbf4a8a2ab1#center)
 
 Of course, as history would have it, India won the Cricket World Cup that year, and who can forget the iconic lines by Ravi Shastri, 
 
 *“Dhoni finishes off in style. A magnificent strike into the crowd! India lift the World Cup after 28 years!”*
 
-![Blog Dhoni](https://github.com/paidinesh7/dineshpai.in/assets/79692173/881d8516-1752-48cc-9cf5-f6f694d7262d)
+![Blog Dhoni](https://github.com/paidinesh7/dineshpai.in/assets/79692173/881d8516-1752-48cc-9cf5-f6f694d7262d#center)
 
 I cannot comprehend how 12 years have flown by since that moment, And the World Cup is coming home again in October of this year. Could this be our year again? Time will tell. But there is again palpable tension already. 
 
@@ -129,7 +129,7 @@ And sure, once we solve some of the simpler impediments, we can then pay attenti
 
 I intend to end this section on an optimistic note, This talk by Mr Maran is quite nice. This is a must-listen for anyone curious about Indian markets and our economy in general. In a nutshell, Mr. Maran points out everything going right for us in the economy.
 
-[![Watch the video](![Video](https://github.com/paidinesh7/dineshpai.in/assets/79692173/77c1ee45-812d-41bb-8446-0c9347f43562))](https://www.youtube.com/watch?v=kGBME-g6bfQ&t=5562s)
+{{< youtube kGBME-g6bfQ&t=5562s >}}
 
 **2. Government spending**
 
