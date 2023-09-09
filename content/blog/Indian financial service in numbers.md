@@ -69,13 +69,13 @@ Let’s start with the GDP and go from there. India has grown from a GDP of Rs 5
 
 But something that sticks out immediately when we look at GDP data for the top 10 largest countries is the GDP per capita difference between India and other countries. Even though India is the 5th largest country GDP-wise, the GDP per capita has a long way to go before it can be compared with other countries on the list. And while we map out all the other financial sectors, I think the context of our GDP per capita will be helpful. 
 
-![2Blog1](https://github.com/paidinesh7/dineshpai.in/assets/79692173/eb9181b9-2ed7-43f9-9f25-158666d3b134)
+![2Blog1](https://github.com/paidinesh7/dineshpai.in/assets/79692173/eb9181b9-2ed7-43f9-9f25-158666d3b134#center)
 
 While there are other structural issues with GDP, one thing that sticks out is how dismal India's female labor participation is. Nithin explained this in the post [here](https://twitter.com/Nithin0dha/status/1695301585767698446). The post siummarizes the cause for the state of how low the participation is today. And I think this is maybe the next big project for all of us to focus on. There can be several solutions to this problem, but the fact that we are all aware of the problem itself I think will go a long way. 
 
-![Blog22222](https://github.com/paidinesh7/dineshpai.in/assets/79692173/e55f46fd-41c4-4ff0-aa75-259fc8ced007)
+![Blog22222](https://github.com/paidinesh7/dineshpai.in/assets/79692173/e55f46fd-41c4-4ff0-aa75-259fc8ced007#center)
 
-![2023-09-09_14-10](https://github.com/paidinesh7/dineshpai.in/assets/79692173/df2b6207-5ae2-4dff-9191-f694fa9f81a0)
+![2023-09-09_14-10](https://github.com/paidinesh7/dineshpai.in/assets/79692173/df2b6207-5ae2-4dff-9191-f694fa9f81a0#center)
 
 60% of India’s GDP is driven by local consumption of goods and services. And here is an excellent snapshot of the GDP breakup from a report by Blume Venture, 
 
@@ -83,12 +83,12 @@ While there are other structural issues with GDP, one thing that sticks out is h
     <img src="/2Blog2.jpg">
 </div>
 
-![2Blog2](https://github.com/paidinesh7/dineshpai.in/assets/79692173/22214b43-2be7-4e8d-918f-aef416935787)
+![2Blog2](https://github.com/paidinesh7/dineshpai.in/assets/79692173/22214b43-2be7-4e8d-918f-aef416935787#center)
 [Source](https://blume.vc/reports/indus-valley-annual-report-2023)
 
 We can all try to predict what will happen with consumption and other sectors in India, and all of us will agree that there is growth waiting to happen - but the question is when. With middle-income groups seeing an average growth of 5-7%, we will see more consumers in the market today, better employability, and resilient spending powers, which bodes well for us. But there is still a long way to go. Check out the income groups below, 
 
-![2Blog3](https://github.com/paidinesh7/dineshpai.in/assets/79692173/13c9ee88-b9ee-4e8e-8d69-afa908dedce9)
+![2Blog3](https://github.com/paidinesh7/dineshpai.in/assets/79692173/13c9ee88-b9ee-4e8e-8d69-afa908dedce9#center)
 
 [Source](https://economictimes.indiatimes.com/news/economy/indicators/how-the-middle-class-will-play-the-hero-in-indias-rise-as-world-power/articleshow/101608682.cms)
 
@@ -104,14 +104,14 @@ But there are challenges and things we can improve upon.
 
 Since we are speaking of increasing GDP and income growth rates, we must also quote the numbers that dont look too great. Let's start with income tax collections in India. Unless you have not spent time listening to economic commentary - it would be no surprise that very few Indians pay any tax. The number of ITRs filed is insignificant, despite an uptick; what matters is the number of total taxpayers. That is at a dismal 1.9% of the population. The answer to this problem is maybe a utopian world. 
  
-![2Blog4](https://github.com/paidinesh7/dineshpai.in/assets/79692173/af8bdb9e-612b-4590-b30e-12003cd104ba)
+![2Blog4](https://github.com/paidinesh7/dineshpai.in/assets/79692173/af8bdb9e-612b-4590-b30e-12003cd104ba#center)
 [Source](https://twitter.com/deepakabbot/status/1684065266379165697/photo/1)
 
 Secondly, let us check the GDP contribution from different sectors and the employment % of those specific sectors. This will give us a fair idea of what sectors of our economy are contributing to the economy and if a commensurate number of jobs are created in that sector. Data shows that 50% of India’s workforce today is concentrated in Agriculture, but it contributes just 17-20% of the GDP. In contrast, Services with 30% of the workforce constitute 50% of GDP. This is quite a problem, and has troubled policymakers for a couple of decades at least. 
 
-![2Blog5](https://github.com/paidinesh7/dineshpai.in/assets/79692173/72964016-ac2e-451b-9942-6daed4eecb08)
+![2Blog5](https://github.com/paidinesh7/dineshpai.in/assets/79692173/72964016-ac2e-451b-9942-6daed4eecb08#center)
 
-![Fix](https://github.com/paidinesh7/dineshpai.in/assets/79692173/01c28ee4-a0ba-4418-a007-f10f8bce8ced)
+![Fix](https://github.com/paidinesh7/dineshpai.in/assets/79692173/01c28ee4-a0ba-4418-a007-f10f8bce8ced#center)
 
 What we see in the statistics is anything but comforting. Before we even touch upon why, agriculture, which forms a large part of our workforce only contributes to a quarter of our economy, it must be stated that the age-old *one size fits all* solutions won't cut it anymore. While it is easier to talk about how we need investments and infrastructure for the agri sector to do better, our focus should be on small and marginal farmers and how we can help them do better.  
 
@@ -133,39 +133,39 @@ I intend to end this section on an optimistic note, This talk by Mr Maran is qui
 
 **2. Government spending**
 
-Government spending helps stimulate demand for services and products, improves the distribution of social programs and services, and increases infrastructure development among other benefits. Again going back to capital formation. India today spends around 15% of GDP.
+Government spending helps stimulate demand for services and products, improves the distribution of social programs and services, and increases infrastructure development, among other benefits. Again, going back to capital formation. Indian government contributes 15% of GDP towards spending.
 
 Benchmark this to the US and China, at 45% and 15%, respectively. 
 
-![2Blog7](https://github.com/paidinesh7/dineshpai.in/assets/79692173/1e18d7d6-6f49-4017-ad51-a600c244e8aa)
+![2Blog7](https://github.com/paidinesh7/dineshpai.in/assets/79692173/1e18d7d6-6f49-4017-ad51-a600c244e8aa#center)
 
-While the government has to balance the capital requirements of several sectors, we must look at some sectors more closely. Namely education and healthcare. While these sectors do get allocation, there is probably more that needs to be done.
+While the government must balance several sectors' capital requirements, we must look at some sectors more closely. Namely education and healthcare. While these sectors do get allocation, there is probably more that needs to be done.
 
-![aHz6v-government-spending-india](https://github.com/paidinesh7/dineshpai.in/assets/79692173/9aa5e672-e3ee-4304-939e-3ac6ed15d2cc)
+![aHz6v-government-spending-india](https://github.com/paidinesh7/dineshpai.in/assets/79692173/9aa5e672-e3ee-4304-939e-3ac6ed15d2cc#center)
 
-The Covid pandemic made it clear how much room there is for improvement in our public healthcare systems. We will end this decade with our population aged 60+ hovering around 190 million, which will more than double by 2050. And while some of the developed countries have taken 80-100 years with a doubling of population aged 60+, India will take just 20-25 years. A large section of our population also is struggling to attain education for several reasons. And how can we leave out the risks posed by climate change and disruption of livelihoods. 
+The Covid pandemic made it clear how much room there is for improvement in our public healthcare systems. We will end this decade with our population aged 60+ hovering around 190 million, which will more than double by 2050. And while some developed countries have taken 80-100 years with a doubling of population aged 60+, India will take just 20-25 years. A large section of our population also struggles to attain education for several reasons. And how can we leave out the risks posed by climate change and disruption of livelihoods? 
 
-And while we match in percentage terms the spending with US, the scale of spending are miles apart. With the population we have, the government spending, specifically directed towards pain points that are long term is the need of the hour.  
+And while we match in percentage terms the spending with the US, the scale of spending is miles apart. With the population we have, government spending, specifically directed towards pain points that are long-term, is the need of the hour.  
 
-But increasing government spending comes with its own set of challenges. This is why any increase in government spending needs to be well thought out. Increased spending without commensurate revenue can lead to increased deficits, creating upward pressure on interest rates and crowding out private borrowing. There can be misallocation of resources, inflation like what we saw in the US for the past few years. 
+But increasing government spending comes with its own set of challenges. This is why any increase in government spending needs to be well thought out. Increased spending without commensurate revenue can lead to increased deficits, creating upward pressure on interest rates and crowding out private borrowing. There can be misallocation of resources leading to inflation, like what we saw in the US for the past few years. 
 
 But with a balanced approach and gradual increase in government spending, we can create better infrastructure and social programs and strengthen the fabric of our economic industry with as few shocks as possible.  
 
 **3. Debt market**
 
-For Government to spend towards capital expenditure, there are a few avenues for collecting revenue or funds. Firstly, the Direct and indirect taxes. Secondly, the debt market, where governments can sell bonds to raise funds. Apart from just the government, even corporations can sell bonds to raise capital for expenditure. 
+For the Government to spend towards capital expenditure, there are a few avenues for collecting revenue or funds. Firstly, the Direct and indirect taxes. Secondly, the debt market, where governments can sell bonds to raise funds. Apart from just the government, even corporations can sell bonds to raise capital for expenditure. 
 
-This is why debt markets form an essential part of a country’s economy. A mature and deep debt markets mean easier access to capital, and lower interest costs, which will help us grow further by building better infrastructure and market linkages. 
+This is why debt markets form an essential part of a country’s economy. A mature and deep debt market means more accessible capital and lower interest costs, which will help us grow further by building better infrastructure and market linkages. 
 
 Here is what the global debt market looks like. The US again leads the way with 31 trillion dollars of the debt market. India is at 1.3 trillion dollars.
 
-![2Blog8](https://github.com/paidinesh7/dineshpai.in/assets/79692173/c7921140-b9c8-4211-b23b-aac7b75e6091)
+![2Blog8](https://github.com/paidinesh7/dineshpai.in/assets/79692173/c7921140-b9c8-4211-b23b-aac7b75e6091#center)
 
-![2Blog9](https://github.com/paidinesh7/dineshpai.in/assets/79692173/a47f04d4-3a3c-4238-8b7d-8f13470a2ede)
+![2Blog9](https://github.com/paidinesh7/dineshpai.in/assets/79692173/a47f04d4-3a3c-4238-8b7d-8f13470a2ede#center)
 
 **Debt market snapshot across countries**
 
-![Fix2](https://github.com/paidinesh7/dineshpai.in/assets/79692173/30a655c9-4be1-48f9-b3ca-ccb2ccdd9857)
+![Fix2](https://github.com/paidinesh7/dineshpai.in/assets/79692173/30a655c9-4be1-48f9-b3ca-ccb2ccdd9857#center)
 
 **4. Banking**
 
@@ -173,13 +173,13 @@ There are several reasons why banks are essential for an economy - financial inc
 
 * The Indian banking system consists of 12 public sector banks, 22 private sector banks, 46 foreign banks, 56 regional rural banks, 1485 urban cooperative banks and 96,000 rural cooperative banks, and cooperative credit institutions. 
 
-* In 2001, the total outstanding loans of Indian banks stood at ₹5.1 trillion, or 23.9% of the country’s GDP of the time. By September 2022, the figure had grown to ₹130.4 trillion, or 50.3% of GDP.
+* In 2001, the total outstanding loans of Indian banks stood at ₹5.1 trillion, or 23.9% of the country’s GDP. By September 2022, the figure had grown to ₹130.4 trillion, or 50.3% of GDP.
 
-* Meanwhile, the total bank deposits have jumped from ₹9.6 trillion, or 45% of GDP, as of end-March 2001, to ₹175.4 trillion, or 67.6% of the GDP.
+* Meanwhile, the total bank deposits have jumped from ₹9.6 trillion, or 45% of GDP, as of March 2001, to ₹175.4 trillion, or 67.6% of the GDP.
 
-* Post the NPA crisis over the past decade, robust recapitalisation of PSU banks, introducing the bankruptcy code, and RBI's regulatory oversight has helped banks become resilient again across the board. For the full financial year 2022-23, public sector banks made profits of over Rs 1 lakh crore.
+* Post the NPA crisis over the past decade, robust recapitalisation of PSU banks, the introduction of the bankruptcy code, and RBI's regulatory oversight have helped banks become resilient again across the board. For the full financial year 2022-23, public sector banks made profits of over Rs 1 lakh crore.
 
-While the growth appears to be sharp, the interesting thing is that the size of Indian banking has stagnated for over a decade. The lending of banks has remained around 50-53% of the GDP since March 2009 (with 2020-21 being an exception due to covid-19), and deposits have remained between 67-70% of GDP.
+While the growth appears to be sharp, the interesting thing is that the size of Indian banking has stagnated for over a decade. The lending of banks has remained around 50-53% of the GDP since March 2009 (with 2020-21 being an exception due to COVID-19), and deposits have remained between 67-70% of GDP.
 
 >*In the words of Mr KV Kamath,* 
 >
@@ -187,42 +187,42 @@ While the growth appears to be sharp, the interesting thing is that the size of 
 >
 >*As the numbers reveal, the banks are in a very healthy state in terms of the book and the capital base. Growth rates will mimic the GDP growth, with about 20% higher numbers, so about 10-12% will be part of the course.
 >Deposit growth will be fairly adequate to meet credit growth. I think double-digit growth is good growth.
-Here are a few more graphs/data on the Indian banking size. And as you can see in the table representing banking assets and countries with higher assets - India is a fraction of some of the leading countries. Higher bank assets ideally should translate to financial inclusion, better access to credit, better cost of credit, better capital formation, and better overall growth of incomes, but we will need the policy to route all the banking penetration to the hinterlands in India. Over the next 5-10 years, India needs to scale up its penetration of banking and also increase the credit facilities available for individuals and businesses.*
+Here are a few more graphs/data on the Indian banking size. As you can see in the table representing banking assets and countries with higher assets - India is a fraction of some of the leading countries. Higher bank assets ideally should translate to financial inclusion, better access to credit, better cost of credit, better capital formation, and better overall growth of incomes, but we will need the policy to route all the banking penetration to the hinterlands in India. Over the next 5-10 years, India needs to scale up its penetration of banking and also increase the credit facilities available for individuals and businesses.*
 
-But on the flip side you can see in the table representing banking assets and countries with higher banking assets - India is a fraction of some of the leading countries. Over the next 5-10 years, India needs to scale up its penetration of banking and also improve the credit underwriting process. A large section of individuals, entrepreneurs and businesses (MSME’s) in India are left out of the credit system for lack of data and precedence. And this needs fixing. 
+But on the flip side, you can see in the table representing banking assets and countries with higher banking assets - India is a fraction of some of the leading countries. Over the next 5-10 years, India needs to scale up its penetration of banking and also improve the credit underwriting process. A large section of individuals, entrepreneurs and businesses (MSMEs) in India are left out of the credit system for lack of data and precedence. And this needs fixing. 
 
-From my limited experience, I have noticed how enterprising rural India is, and there are no VCs to back these entrepreneurs. India banks must step in here. We need push from policymakers to help enable this small change. Not only will this mean supporting some of the local entrepreneurs but also will mean a thriving local economy where these businesses get built. This also helps us derisk the concentration of businesses in metro cities in the long run. 
+From my limited experience, I have noticed how enterprising rural India is, and there are no VCs to back these entrepreneurs. India banks must step in here. We need a push from policymakers to help enable this small change. Not only will this mean supporting some of the local entrepreneurs but will also mean a thriving local economy where these businesses get built. This also helps us derisk the concentration of businesses in metro cities in the long run. 
 
 Whichever way you see it, you will conclude that the roles of banks are only going to get more prominent in India. And I hope that we move on from traditional banking habits and usher in banking practices that reflect the true nature of our economy today. 
 
 Here is where India ranks with banking assets, 
 
-![2Blog11](https://github.com/paidinesh7/dineshpai.in/assets/79692173/a98979d9-eec4-4658-9959-5dc4a893b1af)
+![2Blog11](https://github.com/paidinesh7/dineshpai.in/assets/79692173/a98979d9-eec4-4658-9959-5dc4a893b1af#center)
 
 **5. Insurance**
 
 There is a long way to go for India’s Insurance industry - the current penetration of insurance is around 4% as per the Economic Survey 2022-2023 (the significant drop from 5% around 2010 is an aftereffect of the market crash of 2008 and [regulations around ULIPs](https://economictimes.indiatimes.com/wealth/insure/what-the-new-regulation-means-for-existing-and-prospective-customer-of-ulips/articleshow/6108415.cms?from=mdr)
 
-Here is the depth of Indian insurance market, 
+Here is the depth of the Indian insurance market, 
 
-![2Blog12](https://github.com/paidinesh7/dineshpai.in/assets/79692173/21c3e22a-ce67-4ca7-bf84-22003e10ee9b)
+![2Blog12](https://github.com/paidinesh7/dineshpai.in/assets/79692173/21c3e22a-ce67-4ca7-bf84-22003e10ee9b#center)
 
-![2Blog13](https://github.com/paidinesh7/dineshpai.in/assets/79692173/a935c6e1-6e61-4ee4-8ea2-e1deb01b22ee)
+![2Blog13](https://github.com/paidinesh7/dineshpai.in/assets/79692173/a935c6e1-6e61-4ee4-8ea2-e1deb01b22ee#center)
 
->*The penetration of Indian insurance industry is less than 5% of the GDP. IRDAI data shows that India’s insurance penetration was 4.2% of the GDP in 2021-22. In terms of penetration, India is far behind the global average of 7% of the GDP.
-In terms of penetration, India is ranked 20 in FY 2021-22. Countries like Taiwan, South Africa, the USA and UK report higher penetration of 14.8%, 12.2%, 11.7% and 11.1% respectively.*
+>*The penetration of the Indian insurance industry is less than 5% of the GDP. IRDAI data shows that India’s insurance penetration was 4.2% of the GDP in 2021-22. In terms of penetration, India is far behind the global average of 7% of the GDP.
+In terms of penetration, India is ranked 20 in FY 2021-22. Countries like Taiwan, South Africa, the USA and the UK report higher penetration of 14.8%, 12.2%, 11.7% and 11.1% respectively.*
 >
 >*[Source](https://cafemutual.com/news/insurance/28335-insurance-penetration-is-just-42-much-less-than-the-global-average-of-7)*
 
-One of the issues with deepening the insurance market in India is the education and awareness around it. A large chunk of India’s population is one health or life event away from considerable financial and social health damage. And Insurance industry can play a role in bringing more Indians to plan for the future and safeguard their financial well-being. 
+One of the issues with deepening the insurance market in India is the education and awareness around it. A large chunk of India’s population is one health or life event away from considerable financial and social health damage. The insurance industry can play a role in bringing more Indians to plan for the future and safeguard their financial well-being. 
 
 Here is my colleague Bhuvan explaining the role of Insurance in a no-frills [financial planning post](https://zerodha.com/z-connect/coin/coin-newsletter/coin-newsletter-3-starting-troubles)
 
-Even though Insurance does not directly does not add to capital formation, the insurance companies themselves directly contribute to investments in the economy. Insurance companies with all the float (premiums collected), will need to find investment opportunities to make up for the liabilities. And hence a higher penetration of insurance would mean more capital coming towards capital markets to support some of the businesses that can not only impact jobs but also create more opportunities for economic prosperity. And here as well, there must be some pressure on the fund managers within the insurance companies to look at holistically looking at investment opportunities with the context of challenges we are facing today. 
+Insurance companies also participate directly in the capital formation and the economy. Am sure you have all heard of investments by LIC in equities for example. Insurance companies with all the float (premiums collected), will need to find investment opportunities to make up for the liabilities they are bound to have. Hence a higher penetration of insurance would mean more capital coming towards capital markets to support some of the businesses that can not only impact jobs but also create more opportunities for economic prosperity. And here as well, there must be some pressure on the fund managers within the insurance companies to look at investment opportunities keeping in mind the context of the challenges we are facing today. 
 
 A small snapshot of the entire Indian insurance industry - 
 
-![2Blog14](https://github.com/paidinesh7/dineshpai.in/assets/79692173/f3e43393-71eb-4858-89d5-6dd954646f24)
+![2Blog14](https://github.com/paidinesh7/dineshpai.in/assets/79692173/f3e43393-71eb-4858-89d5-6dd954646f24#center)
 
 There is a case to be made for higher insurance penetration in India. But again, the lack of avenues to get educated on the right insurance policy to purchase makes it challenging to understand if a higher market penetration would translate into benefits for retail clients. The following 10 years will be great to see if we can grow the insurance market and if there is potential for Indian markets to utilize digital channels or if India will assert itself as a market where partner and offline networks will be essential and inseparable from insurance purchase decisions. 
 
@@ -230,29 +230,29 @@ There is a case to be made for higher insurance penetration in India. But again,
 
 Equity markets directly create opportunities for capital formation. I dont think I need to explain a lot about equity markets. 
 
-Over the past few years, the stock market has been in the news for adding several new retail participants. Today around 4% of India’s population participates in the equity markets. This number is of course significantly higher in other developed countries like China and US. 
+Over the past few years, the stock market has been in the news for adding several new retail participants. Today around 4% of India’s population participates in the equity markets. This number is of course significantly higher in other developed countries like China and the US. 
 
 Unsurprisingly, for decades Indian households have been risk-averse and continue to be so. There is more demand for bank fixed deposits and gold perhaps than for ownership of business. But with a new generation of wealth earners coming through, who are probably not privy to the difficult times of the past, we could see behaviour shifting. Interesting times ahead.
 
-Here are a few illustrations for how retail participation in the equity markets have trended. 
+Here are a few illustrations of how retail participation in the equity markets has trended. 
 
-![2Blog15](https://github.com/paidinesh7/dineshpai.in/assets/79692173/3e1a89c1-d14c-476e-89e8-7e66f1fbd47d)
+![2Blog15](https://github.com/paidinesh7/dineshpai.in/assets/79692173/3e1a89c1-d14c-476e-89e8-7e66f1fbd47d#center)
 
-![2023-09-09_14-22](https://github.com/paidinesh7/dineshpai.in/assets/79692173/91396b13-7d35-4fe2-9832-019c487e7613)
+![2023-09-09_14-22](https://github.com/paidinesh7/dineshpai.in/assets/79692173/91396b13-7d35-4fe2-9832-019c487e7613#center)
 
-![2023-09-09_14-22_1](https://github.com/paidinesh7/dineshpai.in/assets/79692173/7cd274a5-ae34-448e-8f9f-507a2cb2e25d)
+![2023-09-09_14-22_1](https://github.com/paidinesh7/dineshpai.in/assets/79692173/7cd274a5-ae34-448e-8f9f-507a2cb2e25d#center)
 
-![2023-09-09_15-18](https://github.com/paidinesh7/dineshpai.in/assets/79692173/caba02ed-9419-4b95-abf8-1d1e7141e582)
+![2023-09-09_15-18](https://github.com/paidinesh7/dineshpai.in/assets/79692173/caba02ed-9419-4b95-abf8-1d1e7141e582#center)
 
 **India’s market capitalization is at 300 lakh crore - way back in September 2003, it was just Rs 10 lakh crore.**
 
-![2Blog16](https://github.com/paidinesh7/dineshpai.in/assets/79692173/b2b5598a-b349-4860-af6d-66bd6c9ce18e)
+![2Blog16](https://github.com/paidinesh7/dineshpai.in/assets/79692173/b2b5598a-b349-4860-af6d-66bd6c9ce18e#center)
 
 ## Fintech consumer markets
 
-Given I also spend a lot of time looking at the fintech market specifically, I wanted to share a bit about the Fintech market size given all the frenzy.While some of these numbers are estimates at best, it is still worth noting the scale that is at play.
+Given I also spend a lot of time looking at the fintech market specifically, I wanted to share a bit about the Fintech market size given all the frenzy. While some of these numbers are estimates at best, it is still worth noting the scale that is at play.
 
-* Indian FinTech industry’s market size was $ 50 Bn in 2021, estimated at ~$ 150 Bn by 2025. India has around 7,500 fintech startups. From 2014 to mid-2022, the sector received more than $30 billion in funding. India's digital lending market was worth $ 270 bn in 2022 and is expected to reach $ 350 bn by 2023.
+* The Indian FinTech industry’s market size was $ 50 Bn in 2021, estimated at ~$ 150 Bn by 2025. India has around 7,500 fintech startups. From 2014 to mid-2022, the sector received more than $30 billion in funding. India's digital lending market was worth $ 270 bn in 2022 and is expected to reach $ 350 bn by 2023.
 
 * India is the 2nd largest Insurtech market in Asia-Pacific and is expected to grow by ~15X to reach $ 88.4 Bn by 2030; India is poised to emerge as one of the fastest-growing insurance markets in the world
 
@@ -260,7 +260,7 @@ Given I also spend a lot of time looking at the fintech market specifically, I w
 
 A lot of the credit perhaps goes to - *drumroll*, India Stack, 
 
-![2Blog17](https://github.com/paidinesh7/dineshpai.in/assets/79692173/8d7ad3da-46bf-458f-b00d-f0f064396b32)
+![2Blog17](https://github.com/paidinesh7/dineshpai.in/assets/79692173/8d7ad3da-46bf-458f-b00d-f0f064396b32#center)
 
 The rapid growth of fintech can also be attributed to favourable macroeconomic and demographic factors, including a rising middle class with higher disposable incomes to buy, borrow, save and invest more; increasing mobile access and digital adoption; abundant financial services and technology talent in the country; availability of equity and debt capital; and above all, government initiatives and regulatory efforts to create a conducive environment.
 
@@ -277,7 +277,7 @@ Here is an excerpt from a [blog](https://zerodha.com/z-connect/rainmatter/beyond
 
 >***Size of Indian capital markets – Retail***
 >
->*As of Jan 2021, CDSL has 2.89 crores, and NSDL has 2.08 crores demat accounts. That is a total of around five crore non-unique demat accounts. For example, I personally have over a dozen demat accounts opened in the last 20 years; most of them now inactive.*
+>*As of Jan 2021, CDSL has 2.89 crores, and NSDL has 2.08 crores demat accounts. That is a total of around five crore non-unique demat accounts. For example, I personally have over a dozen demat accounts opened in the last 20 years; most of them are now inactive.*
 >
 >*A better way to track the size of the market is by looking at the NSE’s active client data. As of Jan 2021, according to NSE, around 1.6 crores or 16 million customers had traded once a year last year (last 12 months). This again is not a unique count, so if a customer had traded with two brokers, it would show up twice. By the way, this number has almost doubled from two years ago thanks to markets performing well in this period.*
 >
@@ -291,7 +291,7 @@ Here is an excerpt from a [blog](https://zerodha.com/z-connect/rainmatter/beyond
 
 ## What are some of the takeaways
 
-* Next wave of growth in the Indian economy might not be just from AI or Superconductors, but from improving the existing agricultural ecosystems that can add several magnitudes of value to GDP.
+* The next wave of growth in the Indian economy might not be just from AI or Superconductors, but from improving the existing agricultural ecosystems that can add several magnitudes of value to GDP.
 
 * Female labour participation rates have steadily declined — from 26% in 2005 to roughly 20% in 2019 due to perhaps the reasons mentioned here. Less than 7% of the urban women population has independent financial income. We must improve this over the next few years to walk the talk with holistic economic development. 
 
@@ -307,11 +307,10 @@ Here is an excerpt from a [blog](https://zerodha.com/z-connect/rainmatter/beyond
 
 * While the growth rate compared to lower base rates seems great, the next few years need significantly improved efforts to reach the hinterlands with financial services and focus on overall growth rather than the concentrated growth we see today. The key to avoiding conflicts in the future will be to ensure we enable prosperity to a larger section of our population quickly. 
 
-* VC industry and risk capital have a role to play. And India seems to be at an inflexion point where it can use as many risk-takers in terms of capital as we can gather. And the VC industry must look at boring sectors for investment and stop the fascination with Sand Hill Road. There are clearly bigger problems to solve for. I explained this in my [previous blog](https://dineshpai.in/blog/venture-capital-in-2023-and-what-lies-ahead/).
+* The VC industry and risk capital have a role to play. And India seems to be at an inflexion point where it can use as many risk-takers in terms of capital as we can gather. The VC industry must look at boring sectors for investment and stop the fascination with Sand Hill Road. There are clearly bigger problems to solve for. I explained this in my [previous blog](https://dineshpai.in/blog/venture-capital-in-2023-and-what-lies-ahead/).
 
+* As India digitizes, we need better cybersecurity measures that safeguard common investors and people, and not just focus on high-value transactions. The volume of transactions is a better metric to focus on. 
 
-* As India digitizes, we need better cybersecurity measures that safeguard common investors and people, and not just focus on high value transactions. The volume of transactions is a better metric to focus on. 
-
-While this blog is probably more of a factsheet than anything else, I think personally it added lots of context in terms of financial services in India and how we stack up against other countries. Hope this is useful for you too. 
+While this blog is probably more of a factsheet than anything else, I think it added lots of context in terms of financial services in India and how we stack up against other countries. Hope this is useful for you too. 
 
 Do share any thoughts and comments. And if any of the numbers are wrong, do let me know on [LinkedIn](https://www.linkedin.com/in/paidinesh1/) or [Twitter](https://twitter.com/dineshpaii). 
