@@ -165,9 +165,9 @@ Here is what the global debt market looks like. The US again leads the way with 
 
 ![2Blog9](https://github.com/paidinesh7/dineshpai.in/assets/79692173/a47f04d4-3a3c-4238-8b7d-8f13470a2ede#center)
 
-**Debt market snapshot across countries**
+Debt market snapshot across countries
 
-![Fix2](https://github.com/paidinesh7/dineshpai.in/assets/79692173/30a655c9-4be1-48f9-b3ca-ccb2ccdd9857#center)
+![2023-09-09_18-24_1](https://github.com/paidinesh7/dineshpai.in/assets/79692173/702ca6f7-a1f2-4987-87d8-d0f7d38057b5#center)
 
 **4. Banking**
 
@@ -209,7 +209,6 @@ Here is the depth of the Indian insurance market,
 
 ![2Blog12](https://github.com/paidinesh7/dineshpai.in/assets/79692173/21c3e22a-ce67-4ca7-bf84-22003e10ee9b#center)
 
-![2023-09-09_18-24_1](https://github.com/paidinesh7/dineshpai.in/assets/79692173/702ca6f7-a1f2-4987-87d8-d0f7d38057b5#center)
 
 >*The penetration of the Indian insurance industry is less than 5% of the GDP. IRDAI data shows that India’s insurance penetration was 4.2% of the GDP in 2021-22. In terms of penetration, India is far behind the global average of 7% of the GDP.
 In terms of penetration, India is ranked 20 in FY 2021-22. Countries like Taiwan, South Africa, the USA and the UK report higher penetration of 14.8%, 12.2%, 11.7% and 11.1% respectively.*
