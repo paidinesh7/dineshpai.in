@@ -4,7 +4,10 @@ title: "Indian financial services in numbers"
 tags: [Economy, Financial services, Data]
 author: dinesh
 description: A summary of the financial services markets in India compared to global markets. 
+draft: true
 ---
+
+Before I get to the meat of this piece, some nostalgia around Cricket, given it is India playing Pakistan in the Asia Cup match today. 
 
 It is 2011, and the Cricket World Cup has come to India after a long time. Every conversation in the trains, buses, chai shops and hotels at the time was all about cricket. The even more prominent question was if this was the year we ended the wait of 28 years to win the World Cup again. After all, it was a perfect opportunity to send off one of the best the game had seen - Sachin Ramesh Tendulkar, who was undoubtedly retiring after the tournament ended.
 
