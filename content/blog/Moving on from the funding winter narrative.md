@@ -45,7 +45,7 @@ Also, check out this excerpt,
 
 >Over the past few days, two venture capitalists have expressed their worries about the current state of the US startup community. In essence, both are saying that startups are burning through too much cash and that the overall risk currently taken in Silicon Valley is excessive. It’s not the first time people have warned about a new tech bubble. The period of prudence that followed the financial crisis of 2009 is officially over. 
 
-While this excerpt is from an [article in 2014[(https://www.statista.com/chart/2732/venture-capital-investments-in-the-us/), it could also describe what happened last year. The point being - what’s happening today is not new. This has happened before; as I said, it will happen again. But could we all resist the urge not to play along next time? Time will tell. And if I was to guess, I dont think we can help ourselves. 
+While this excerpt is from an [article in 2014](https://www.statista.com/chart/2732/venture-capital-investments-in-the-us/), it could also describe what happened last year. The point being - what’s happening today is not new. This has happened before; as I said, it will happen again. But could we all resist the urge not to play along next time? Time will tell. And if I was to guess, I dont think we can help ourselves. 
 
 So why are we talking of the end of the world? And with that, here are my thoughts on navigating the next few years. 
 
