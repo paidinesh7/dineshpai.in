@@ -49,7 +49,7 @@ While this excerpt is from an [article in 2014[(https://www.statista.com/chart/2
 
 So why are we talking of the end of the world? And with that, here are my thoughts on navigating the next few years. 
 
-**Why are we here?
+**Why are we here?**
 
 In its truest form, venture capital was meant to be risk capital for high-growth businesses. This, by definition, also means not all businesses are venture-fundable and dont necessarily need to be. But all of this went out of the window the past two years. Every potential venture company raised money at unexplainable valuations. Be it a function of capital available or a function of our greed, it doesn't matter. The result was always going to be pain. 
 
@@ -82,7 +82,7 @@ While I am all for venture investing, all parties throwing all caution to the wi
 
 While writing this piece, one thing escapes me, though - just how the boards of these startups let this happen. It is unexplainable. Until I heard Mr. Damodaran speak at an event recently about corporate governance, he said, and I quote, “In the dictionary, grief comes only a few pages after greed”. It could not have been aptly summarised. [Here is an article](https://excellenceenablers.com/wp-content/uploads/2022/01/From-Greed-to-Grief_Final.pdf) from him on why responsibility and accountability are critical for any company - yes, at any stage, right from infancy. So, let's speak about corporate governance, shall we?
 
-**Corporate governance
+**Corporate governance**
 
 When I think of corporate governance, I think of Infosys—the poster organisation for top-notch leadership and management in India. While the startup ecosystem keeps talking up Infosys, very few have imbibed the values that made Infosys what it is today. For Infosys, what was corporate governance all about? 
 
@@ -105,7 +105,7 @@ While the boards should have spent a significant chunk of their time discussing 
 
 Now that we are here, what happens now? 
 
-**What now? 
+**What now?** 
 
 Now that I have described the problem in some detail, let’s look at the way forward for the ecosystem.
 
@@ -133,7 +133,7 @@ So, teams must certainly need to plan for the struggle phase of entrepreneurship
 
 7. Hopefully, VC teams look beyond metro cities and support founders solving for sectors like climate and health, which need immediate attention. The metro startups are building for a fraction of our population - 100-200 million at best. What about the rest of the billion+ folks in various parts of India? We need more teams working to serve this larger section that has not been paid attention to. This will not only allow for larger surface areas for investment but will also diversify the portfolio. But in the bigger picture scheme of things - this will help the country also do well economically. 
 
-**Conclusion
+**Conclusion**
 
 Even though this entire piece is about how we have collectively failed as an ecosystem, there are some positive shoots nonetheless. 
 
