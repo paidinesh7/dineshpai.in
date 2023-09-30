@@ -1,4 +1,4 @@
-a---
+---
 date: '2023-10-01'
 title: "Moving on from the funding winter narrative"
 tags: [vc, startups]
