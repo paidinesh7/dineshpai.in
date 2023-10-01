@@ -102,29 +102,29 @@ Now that we are here, what happens now?
 
 Now that I have described the problem in detail let’s look at the way forward for the ecosystem.
 
-*1. Good businesses will never really face funding winters. Yep, you read that right. While I haven't built a business myself, this is me speaking from my experience watching and listening to some of the founders I get a chance to interact with at Rainmatter. 
+1. Good businesses will never really face funding winters. Yep, you read that right. While I haven't built a business myself, I speak from my experience watching and listening to some of the founders I get to interact with at [Rainmatter](https://rainmatter.com/). 
 
 We must never judge the success of a startup based on its ability to raise venture rounds. Instead, we must applaud startups solving a real problem, having a passionate team to stick through the difficult times, having good governance structures, having a plan for good unit economics, and demonstrating a path to running the business without VC dollars, to name a few. This alone will help several founders reimagine how they want to build businesses. And will have access to something that was taken away - Freedom to run the business how they would like to. After all, the founders and the founding teams are the soul of any startup. 
  
-*2. Founding teams must remind themselves that equity is precious, and parting ways with it must need some real convincing. Even if it is a VC fund that has delivered several successful companies, it is always prudent to be careful when anyone offers equity capital. 
+2. Founding teams must remind themselves that equity is precious, and parting ways with it must need some real convincing. Even if it is a VC fund that has delivered several successful companies, it is always prudent to be careful when anyone offers equity capital. 
 
-While it is pretty easy for an investor to draw up a fundraising plan, more founders should question if they need to raise the money. This is because once the money is in the bank, the clock starts ticking for the investor. If you are not utilizing the money, questions will be asked, and startups may eventually be nudged as well to do things they dont want to or didn't mean to—quite a situation to be in for a brief lack of concentration. 
+While it is easy for an investor to draw up a fundraising plan, more founders should question whether they need to raise the money. This is because once the money is in the bank, the clock starts ticking for the investor. If you are not utilizing the money, questions will be asked, and startups may eventually be nudged as well to do things they dont want to or didn't mean to—quite a situation to be in for a brief lack of concentration. 
 
 And my view on this is an extension of the saying, more money only brings more problems. Unless, of course, the business plans to spend the money on growing the business sustainably. And, marketing/promotions and other discretionary spending might not qualify as prudent spending. I hope founders will spend time thinking long and hard going forward if they need more money from investors.
 
-*3. There are no free lunches or free refreshes for a startup - as a founder, if you are building a startup, remember that there are no extra takes for the business and no course corrections possible in most cases if things go from bad to worse. This means at every step, care must be taken to consider long-term implications before charting the course. 
+3. There are no free lunches or free refreshes for a startup - as a founder, if you are building a startup, remember that there are no extra takes for the business and no course corrections possible in most cases if things go from bad to worse. This means at every step, care must be taken to consider long-term implications before charting the course. 
 
-*4. We will now return to the times when a company reaching the Series B and C stage of VC funding exhibits characteristics of mature organisations. All the euphoria of the past few years helped startups remain private longer, and that meant it was okay not to have essential guardrails in place by the time the company raises more than 3-4 rounds of funding. All of that rightly will now come to an end. Companies will be expected to consider how they can mature faster and grow sustainably. This is undoubtedly a positive and must be the norm for years.
+4. We will now return to the times when a company reaching the Series B and C stage of VC funding exhibits characteristics of mature organisations. All the euphoria of the past few years helped startups remain private longer, and that meant it was okay not to have essential guardrails in place by the time the company raises more than 3-4 rounds of funding. All of that rightly will now come to an end. Companies will be expected to consider how they can mature faster and grow sustainably. This is undoubtedly a positive and must be the norm for years.
 
-*5. Continue to solve for uniqueness and something that you are passionate about. Because when things go wrong, the only thing that will keep startups from giving up will be the team's purpose and passion. 
+5. Continue solving for uniqueness and something you are passionate about. Because when things go wrong, the only thing that will keep startups from giving up will be the team's purpose and passion. 
 
 >Every worthwhile accomplishment has its stages of drudgery and triumph: a beginning, a struggle and a victory. — Mahatma Gandhi.
 
 So, teams must certainly plan for the struggle phase of entrepreneurship. The journey is never going to be easy and only gets more difficult with time. 
 
-*6. Never think of growth at all costs - for founders and investors alike. Period.
+6. Never think of growth at all costs - for founders and investors alike. Period.
 
-*7. Hopefully, VC teams look beyond metro cities and support founders from smaller towns in India. There must be more time given to teams solving for sectors like climate and health, which need immediate attention. The metro startups are building for a fraction of our population - 100-200 million at best. What about the rest of the billion+ folks in various parts of India? We need more teams working to help a large section of India's population facing real challenges. And in the bigger picture scheme of things - this will help the country also do well economically. That is the end goal anyway, right? 
+7. Hopefully, VC teams look beyond metro cities and support founders from smaller towns in India. More time must be given to teams solving for sectors like climate and health, which need immediate attention. The metro startups are building for a fraction of our population - 100-200 million at best. What about the rest of the billion+ folks in various parts of India? We need more teams working to help a large section of India's population facing real challenges. And in the bigger picture scheme of things - this will help the country also do well economically. That is the end goal anyway, right? 
 
 **Conclusion**
 
