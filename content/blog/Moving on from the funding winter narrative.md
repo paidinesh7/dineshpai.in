@@ -22,6 +22,8 @@ Here is the interest set by RBI in India, which tracks the Fed rate hikes,
 
 Okay, getting back to the VC troubles I spoke about at Headstart. So now that VC funding in India has dropped from $35 bil in 2021 to $10-12 bil (projected) for 2023, it is quite natural for everyone to speak about the major concerns of lack of funding, primarily referencing the ZIRP phenomenon. That is quite a neat trick, and probably an attempt at brushing all the other challenges under the rug. And boy, have challenges festered over the past couple of years. 
 
+![Blog3](https://github.com/paidinesh7/dineshpai.in/assets/79692173/f1dcf957-2f86-4d16-a546-4b04d6629734)
+
 For some context, VC funding that found its way onto Indian startup balance sheets between 2021 and 2022, just two years, was almost $65 bil! And the amount of VC funding between 2012 and 2021? Nearly $50 bil. You see the problem - a classic bubble ripe for the harvest. The bubble burst sometime in mid-2022 but also exposed the underlying malaise that had festered for quite some time. 
 
 So, the question must be asked, though, how did it all come to this? We certainly dont have anyone else to blame but ourselves—a collective failure to apply common sense when we most needed it. 
