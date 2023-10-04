@@ -5,6 +5,7 @@ tags: [Cricket, World Cup, Indian Cricket team]
 author: dinesh
 description: What does the 2023 World Cup hold in store for us? 
 ---
+
 The last time the Cricket World Cup came to India was in 2011 - the first year of my engineering degree. Those memories are still vivid, and they all came rushing back a few weeks ago during a meeting attended by several IIT alumni. While they were reminiscing about their college days, my mind kept drifting back to how the CWC was one of the highlights of my college life. Here's an image of us watching a group stage match:
 
 ![2023-10-05_01-47](https://github.com/paidinesh7/dineshpai.in/assets/79692173/95da3ca8-c930-4539-b465-4dbd5ad717b5)
@@ -13,9 +14,9 @@ Ah, simpler times.
 
 For Indian cricket fans, one World Cup that left us scarred was the one in 2003. A dream run to the Final with a dream team - Tendulkar, Sehwag, Dravid, Ganguly, Yuvraj, Kaif, Javagal Srinath, and others. It was the stuff of dreams, indeed. However, the defeat to the Australians in the Final overshadowed the euphoria of beating our western neighbours. It wasn't even close. The Australians took Indian bowlers to the cleaners and scored 359 runs. At that time, anything above 280 was an amazing score. This was way before modern cricket came into being, where scores above 300 are the norm, as we've seen in recent years.
 
-And the 2007 World Cup needs no explanation—a disappointing group-stage exit. In fact, I don't remember much about 2007.
+And the 2007 World Cup needs no explanation—a disappointing group-stage exit. In fact, I don't remember much about 2007. 
 
-That's why the 2011 World Cup was even more special. The disappointment of the past decade had culminated in what felt like the perfect alignment of stars for India to end the 28-year wait. Matches being played at home, a special team once again - Dhoni's men, they called it, and certainly the last World Cup for Sachin Tendulkar. Could India send off one of the game's most loyal servants with the one thing his heart desired most? It was not out of the question.
+That's why the 2011 World Cup was even more special. The disappointment of the past decade had culminated in what felt like the perfect alignment of stars for India to end the 28-year wait for a world cup. Matches being played at home, a special team once again - Dhoni's men, they called it, and certainly the last World Cup for Sachin Tendulkar. Could India send off one of the game's most loyal servants with the one thing his heart desired most? It was not out of the question.
 
 While the team sailed through the group stages and the eliminators, the Final game was something else. Time seemed to stand still in the country for about 10 hours. The early dismissals of Sachin and Sehwag within the first 7 overs meant an uphill task chasing down Sri Lanka's 274 runs. But then came a few Indians who made history. Gambhir, Kohli, Yuvraj, and Dhoni - all of them got us across the line. It is inexplicable how much the country celebrated that night. It was a long wait that had finally ended. India was indeed sending off one of her favourite sons. It was just meant to be.
 
