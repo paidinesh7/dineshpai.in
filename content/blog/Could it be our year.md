@@ -1,6 +1,6 @@
 ---
 date: '2023-10-05'
-title: "Could it be our year?"
+title: "Could it be our year"
 tags: [Cricket, World Cup, Indian Cricket team]
 author: dinesh
 description: What does the 2023 World Cup hold in store for us? 
