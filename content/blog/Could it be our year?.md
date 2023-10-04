@@ -5,10 +5,9 @@ tags: [Cricket, World Cup, Indian Cricket team]
 author: dinesh
 description: What does the 2023 World Cup hold in store for us? 
 ---
+The last time the Cricket World Cup came to India was in 2011 - the first year of my engineering degree. Those memories are still vivid, and they all came rushing back a few weeks ago during a meeting attended by several IIT alumni. While they were reminiscing about their college days, my mind kept drifting back to how the CWC was one of the highlights of my college life. Here's an image of us watching a group stage match:
 
-The last time the Cricket World Cup (CWC) came to India was in 2011 - the first year of my engineering degree. Those memories are still vivid, and they all came rushing back a few weeks ago during a meeting attended by several IIT alumni. While they were reminiscing about their college days, my mind kept drifting back to how the CWC was one of the highlights of my college life. Here's an image of us watching a group stage match:
-
-
+![2023-10-05_01-47](https://github.com/paidinesh7/dineshpai.in/assets/79692173/95da3ca8-c930-4539-b465-4dbd5ad717b5)
 
 Ah, simpler times.
 
@@ -22,7 +21,9 @@ While the team sailed through the group stages and the eliminators, the Final ga
 
 And who can forget the iconic lines:
 
-"Dhoni, finishes it off in style, India lifts the World Cup after 28 years." - Ravi Shashtri.
+>"Dhoni, finishes it off in style, India lifts the World Cup after 28 years." - Ravi Shashtri.
+
+![2023-10-05_01-47_1](https://github.com/paidinesh7/dineshpai.in/assets/79692173/dac27514-ed5b-4685-b561-09bcbaf458fa)
 
 While the memories of 2011 are still etched as if it were yesterday, time has flown by. A couple of World Cups have gone by without any cause for celebration. But the country gearing up for something big this time. Well, the World Cup has come home again.
 
@@ -32,8 +33,8 @@ Remember the time Kohli burst onto the scene? The centuries in Australia and Eng
 
 The country is yet again gearing up to bid farewell to two of the most prolific captains the game has ever seen. It's quite personal for everyone.
 
-As the World Cup starts today, 1.4 billion people wait with bated breath to reach the finals again. The tension is palpable, yet again, a sense of expectation is taking over. If there's one certain thing, it's that, the stadiums where India will play will probably be the loudest we have ever heard.
+As the World Cup starts today, 1.4 billion people wait with bated breath to reach the finals again. The tension is palpable, yet a sense of expectation is again taking over. If there's one certain thing, it's that, the stadiums where India will play will probably be the loudest we have ever heard.
 
-Cricket is more than just a game for Indians. Over the next month and a half, the country will eat, sleep, drink, walk, and talk cricket. It seems like, yet again, the stars have aligned for the team.
+Cricket is more than just a game for Indians. Over the next month and a half, the country will eat, sleep, drink, walk, and talk cricket. It just feels like, yet again, the stars have aligned for the team.
 
 Fingers crossed. 🙂
