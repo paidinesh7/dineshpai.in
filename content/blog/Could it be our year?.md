@@ -5,6 +5,7 @@ tags: [Cricket, World Cup, Indian Cricket team]
 author: dinesh
 description: What does the 2023 World Cup hold in store for us? 
 ---
+
 The last time the Cricket World Cup came to India was in 2011 - the first year of my engineering degree. Those memories are still vivid, and they all came rushing back a few weeks ago during a meeting attended by several IIT alumni. While they were reminiscing about their college days, my mind kept drifting back to how the CWC was one of the highlights of my college life. Here's an image of us watching a group stage match:
 
 ![2023-10-05_01-47](https://github.com/paidinesh7/dineshpai.in/assets/79692173/95da3ca8-c930-4539-b465-4dbd5ad717b5)
