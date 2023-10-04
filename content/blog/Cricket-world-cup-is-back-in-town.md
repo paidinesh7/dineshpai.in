@@ -38,4 +38,4 @@ As the World Cup starts today, 1.4 billion people wait with bated breath to reac
 
 Cricket is more than just a game for Indians. Over the next month and a half, the country will eat, sleep, drink, walk, and talk cricket. It just feels like, yet again, the stars have aligned for the team.
 
-Fingers crossed.
+Fingers crossed. :)
