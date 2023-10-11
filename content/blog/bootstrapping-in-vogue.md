@@ -1,5 +1,5 @@
 ---
-date: '2023-10-12'
+date: '2023-10-11'
 title: "Bootstrapping in vogue"
 tags: [VC, startups]
 author: dinesh
