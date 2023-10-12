@@ -8,6 +8,8 @@ description: Musings on bootstrapping
 
 India, with the third largest startup ecosystem in the world, has been one of the hotbeds of startup activity over the past few years. We have nearly a [million registered startups](https://www.investindia.gov.in/indian-unicorn-landscape), increasing 200x since 2016, adding around [9 Lakh direct job opportunities since 2017](https://www.indiabudget.gov.in/economicsurvey/doc/echapter.pdf). The past two years, 2021 and 2022, have attracted almost [60 billion USD in venture capital funding. Compare that with the 8-year period between 2012 and 2020, when just 50 billion USD](https://www.bain.com/globalassets/noindex/2023/bain_digest_india_venture_capital_report_2023.pdf) was invested in Indian startups. The acceleration of funding over the past two years was unprecedented. While it seemed throughout that the funding taps would never run out, it has simmered down quite a bit. Indian startups have raised around 8 billion USD of capital in the 9 months this year, [60% less than in 2022](https://yourstory.com/2023/10/vc-funding-declines-59-9-months-2023), when startups raised around 20 billion USD. And if you compare this number with 2021, the drop in funding seems even more severe. Given these circumstances, it is natural that ‘funding winter’ is written about often, and more startups are considering the idea of bootstrapping.
 
+![2023-10-12_14-21](https://github.com/paidinesh7/dineshpai.in/assets/79692173/65f96ac8-8803-4ba5-9e75-cf4737355b99)
+
 ## Bootstrapping our way out of the funding winter and the advantages
 
 Bootstrapping is defined as building a startup without any or with minimal external funding. Founders often bring in their own capital or use revenues generated to scale operations as they go along. 
