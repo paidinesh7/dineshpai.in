@@ -8,7 +8,7 @@ description: Musings on the cricket world cup
 
 The last time the Cricket World Cup came to India was in 2011 - the first year of my engineering degree. Those memories are still vivid, and they all came rushing back a few weeks ago during a meeting attended by several IIT alumni. While they were reminiscing about their college days, my mind kept drifting back to how the CWC was one of the highlights of my college life. Here's an image of us watching a group stage match:
 
-![2023-10-05_01-47](https://github.com/paidinesh7/dineshpai.in/assets/79692173/1ca4a6e0-e060-4137-9ac4-e6d1e6570d95)
+![2023-10-05_01-47](https://github.com/paidinesh7/dineshpai.in/assets/79692173/1ca4a6e0-e060-4137-9ac4-e6d1e6570d95#center)
 
 Ah, simpler times.
 
@@ -24,7 +24,7 @@ And who can forget the iconic lines:
 
 >"Dhoni, finishes it off in style, India lifts the World Cup after 28 years." - Ravi Shashtri.
 
-![2023-10-05_01-47_1](https://github.com/paidinesh7/dineshpai.in/assets/79692173/95820c24-b716-4518-be14-1f19646b76ba)
+![2023-10-05_01-47_1](https://github.com/paidinesh7/dineshpai.in/assets/79692173/95820c24-b716-4518-be14-1f19646b76ba#center)
 
 While the memories of 2011 are still etched as if it were yesterday, time has flown by. A couple of World Cups have gone by without any cause for celebration. But the country gearing up for something big this time. Well, the World Cup has come home again.
 
