@@ -1,3 +1,11 @@
+---
+date: '2023-12-21'
+title: "Lessons, learnings and gratitude - 2023"
+tags: [personal]
+author: dinesh
+description: Musings on 2023 - the year gone by
+---
+
 Back in January of this year, I had promised to write as much as possible this year. Naturally, I clasped at every opportunity to write and share my thoughts on almost everything - personal and professional. And while we are wrapping up this year, it’s only fitting that I end the year with a blog. 
 
 In this piece, I share most of the things I have learned and picked up this year. I strongly believe that I am a better person today - personally and professionally - compared to 12 months ago. I think that is all that matters. I am content.
