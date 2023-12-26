@@ -6,7 +6,7 @@ author: dinesh
 description: Musings on the VC funding environment and what lies ahead
 ---
 
-For the past few months in India, VC investors have started speaking of profitability. Makes no sense, though. The entire VC model is built on VCs subsidising early losses so that the company can eventually capture a significant market share and be sustainable financially. Why is this happening now and not for all this while? 
+For the past few months in India, VC investors have started speaking of profitability. Makes no sense, though. The entire VC model is built on VCs subsidising early losses so that the company can eventually capture a significant market share and be sustainable financially. Why are we speaking of this now and now for all this while? We have had two years of crazy valuations and funding rounds, yet we are only being made privy to this elixir of business building now. I have some thoughts around this.    
 
 But before that, check out this transcript of a recent [interview](https://aletteraday.substack.com/p/letter-137-reece-duca-and-bob-casey) with Reece Duca, Founder and Managing Partner of the Investment Group of Santa Barbara (IGSB), a private investment company. His outlook on investing is simple, straightforward and non-ambiguous. 
 
@@ -17,19 +17,21 @@ I also think that, from an investing standpoint, things that were ignored for th
 But I think the biggest thing is, the companies that have exceptional models are going to be the ones that are going to be throwing off a lot of free cash flow. And investors are going to pay for it.
 Again, the same sentiments and outlook on business - if you make money, we will give you more to scale operations. And if you are not making money now and still need capital, you better have a plan to make money. 
 
-This is familiar, though. It is a basic investing principle that applies to all businesses out there - public and private. Yet, for the past couple of years, many businesses without a clear path to sustainable operations found investors willing to pump in money at insane valuations. We know why. 
+This is familiar, though. It is a basic investing principle that applies to all businesses out there - public and private. Yet, for the past couple of years, many companies without a clear path to sustainable operations found investors willing to pump in money at insane valuations. We know why, specifically from an Indian context - but works for global VC market too. 
 
-The near-zero interest rates in the US throughout the best part of the past decade. Slight misunderstanding of the markets in India. To name a few.   
+1. The exuberance of the public markets meant that private markets also picked up, and more fund managers, investors and founders got down to making use of this opportunity.
+2. The near-zero interest rates in the US throughout the best part of the past decade meant more risk capital was available and hence VCs found investors willing to partake in risky investing behavior more readily.
+3. Slight misunderstanding of the market size and revenue potential.    
 
 >Sidebar - I love the memos from Howard Marks. Especially [this one](https://www.oaktreecapital.com/insights/memo/sea-change), which explains the transition of the US economy and financials markets through his Sea Change Memo, and since most of Indian VC funding relies on the US, it is important to understand the historical context of the US markets too before we speak about some of the issues we see today.
 
-The past few years of FOMO and growth at all costs look like things of the past. The mutation of this is visible everywhere. 
+All of these factors mean that FOMO and growth at all costs took the front seat but look like things of the past where we stand today. 
 
-Could VCs have done things differently? 
+Could VCs have done things differently all this while? 
 
 ## Futile pursuit of sectors and hunting of the unicorns
 
-Let’s examine a few examples of how the funding exuberance killed the market for years. 
+Let’s examine a few examples of how the funding exuberance killed the market for years for a few sectors. 
 
 Check out [this](https://themorningcontext.com/internet/the-many-lessons-from-failed-indian-kirana-tech-startups) article from Morning Context on the digitisation of Kirana stores in India and how mountains of capital invested in the space have little to show. Startups in this space are either on the verge of shutting down or are actively scaling down operations. The need for tools and solutions offered by Kirana Tech has evaded everyone and seems elusive. 
 
@@ -56,19 +58,19 @@ Most startups stuck in the rut are shutting down, and those that aren't are usin
 
 As Buffett said, "When the tide recedes, you will find whoever is swimming naked. True to the aphorism, we have seen massive corporate governance scandals.
 
-So, even though VC capital amounts looked amazing on graphs and reports, a few layers underneath, things were not pretty. 
+So, even though VC capital amounts looked amazing on graphs and reports, a few layers underneath, things were not pretty. But as more risk capital looked for opportunities in an already saturated market, investors pumped capital into sectors that were never going to make it - not that they knew this when they invested. Still, it did become apparent after a while. The lack of opportunities plus the pressure to return capital + returns to investors of the VC fund meant this was always going to happen in some form or another. 
 
-## Cashflows, Cashflows and Cashflows
+## The unmissable Power Law
 
-Many public investors focus on cashflows - heck, even Warren Buffett spends 30-45 mins speaking about Berkshire cashflows during the annual investor conference. So in some sense, it is the holy grail of investing. But sadly, it has fallen out of favour with private market investors at both early and growth stages. A few years ago, it was a best practice that while a company reached Series B, it was fit and proper to do an IPO and have structures in place that might help run it like a listed company. But times have changed, and for a few years now, startups have been in the burning money phase for longer - not only because of the money flowing to the private markets space but also because of the tolerance of investors to ride the “potential” growth wave. 
-
-Not having cashflows is a feature of startups. The model of private investments is different to public investments anyway. Growth and market potential take prominence over profitability and sustainability in operational profitability, with the implicit assumption that the business becomes profitable and sustainable in the long run as revenues grow. Manifesting the scale of economies. This means that VCs subsidise businesses while they profit and gain a market monopoly. 
-
-So if you have a boring business growing 2-3X revenues every year with meagre profitability vs a 20x revenue growth business with no profitability, VCs/PE will choose businesses with 20x growth in revenue. The expectation is that as income grows, there is potential to capture market share and maybe earn profits eventually, but the focus is to ascribe higher valuations within the next few years while the revenue keeps growing and sell the investment to the next person (or fund) wanting to take a bet on the business. For example, VCs who invest in Series A at X valuation will eventually sell to VCs in a further round at 4X valuation. These new investors might again resell the company at a higher valuation to other investors or take the company IPO. The idea is to ride the wave of growth while valuations go north and benefit from it. This is still the idea with public investments, but the screening factor for investing also lies in profitability and operational efficiency. This is why VC/PE investments are different. Sajith Pai explains the valuations in the VC/PE space [here](https://sajithpai.medium.com/exhaust-fumes-or-understanding-startup-valuations-610897d7bcf8). 
+Many public investors focus on cashflows - heck, even Warren Buffett spends 30-45 mins speaking about Berkshire cashflows during the annual investor conference. So, in some sense, it is the holy grail of investing. But sadly, it has fallen out of favour with private market investors at both early and growth stages. But yeah, not having free cash flows is a feature of startups. The model of private investments is different to public investments anyway. Growth and market potential take prominence over profitability and sustainability in operational profitability, with the implicit assumption that the business becomes profitable and sustainable in the long run as revenues grow. Manifesting the scale of economies. This means that VCs subsidise businesses while they profit and gain a market monopoly.  
 
 While this works occasionally for private market investors, it does not work most times - cue [Power Law](https://medium.com/leadership-prevails/understanding-the-vc-power-law-why-fund-size-matters-in-venture-capital-returns-b3dcc2681509). 
 
 >At its core, the VC power law dictates that a handful of investments typically drive the bulk of returns. A few successful investments can recoup the losses of many unsuccessful ones. This isn’t restricted by sector or geography; it’s universal. 
+
+This also means that without free cash flows, companies take longer to mature and become real structured businesses. Always at the want of investor capital. But if I was to take you all a few years back, it was a best practice that while a company reached Series B (around 10-15 million USD raised), it was fit and proper to do an IPO and have structures in place like a listed company. But times have certainly changed since 2020, as startups have been in the burning money phase for longer - not only because of the money flowing to the private markets space but also because of the tolerance of investors to ride the “potential” growth wave. 
+
+So if you have a boring business growing 2-3X revenues every year with meagre profitability vs a 20x revenue growth business with no profitability, VCs/PE will choose businesses with 20x growth in revenue. The expectation is that as income grows, there is potential to capture market share and maybe earn profits eventually, but the focus is to ascribe higher valuations within the next few years while the revenue keeps growing and sell the investment to the next person (or fund) wanting to take a bet on the business. For example, VCs who invest in Series A at X valuation will eventually sell to VCs in a further round at 4X valuation. These new investors might again resell the company at a higher valuation to other investors or take the company IPO. The idea is to ride the wave of growth while valuations go north and benefit from it. This is still the idea with public investments, but the screening factor for investing also lies in profitability and operational efficiency. This is why VC/PE investments are different. Sajith Pai explains the valuations in the VC/PE space [here](https://sajithpai.medium.com/exhaust-fumes-or-understanding-startup-valuations-610897d7bcf8). 
 
 But what about 2021 and 2022? The startup world was flush with cash, founders were coming up with ideas every day, and VCs were doing 1-2 deals daily, but then the music stopped. And this would not have been an issue had startups focused on free cashflows from the get-go. 
 
