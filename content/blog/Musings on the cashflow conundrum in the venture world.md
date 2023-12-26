@@ -1,9 +1,9 @@
 ---
 date: '2023-12-18'
-title: "Musings on the cashflow conundrum in the venture world"
+title: "Musings on the venture world for 2024"
 tags: [vc, startups]
 author: dinesh
-description: Musings on the cashflow conundrum in the venture world
+description: Musings on the VC funding environment and what lies ahead
 ---
 
 For the past few months in India, VC investors have started speaking of profitability. Makes no sense, though. The entire VC model is built on VCs subsidising early losses so that the company can eventually capture a significant market share and be sustainable financially. Why is this happening now and not for all this while? 
