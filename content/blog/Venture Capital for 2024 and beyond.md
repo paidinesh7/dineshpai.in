@@ -91,18 +91,18 @@ Even Aa Zerodha and Rainmatter, the focus has always been to bring as many peopl
 
 Given this context, I think three critical levers would help India empower. Most of them will sound familiar - but listing them down nonetheless. And these are the sectors that will undergo massive disruption over the next few years. It could be through tech, business models and other avenues, but there will be disruption nonetheless. 
 
-- <b>Education</b> - while there has always been a focus on jobs and incomes, focus on education will define the next decade for Indians. And education, skilling, and empowerment through knowledge will translate to employment opportunities that would otherwise be elusive. The government and private sector must join hands to progress on this front. 
+- **Education** - while there has always been a focus on jobs and incomes, focus on education will define the next decade for Indians. And education, skilling, and empowerment through knowledge will translate to employment opportunities that would otherwise be elusive. The government and private sector must join hands to progress on this front. 
 
   Actionable items could be integrating soft skills early on in schools, awareness about opportunities available, and practical education on life skills such as personal finance early on, which will have compounding effects in the long run.   Some of these basic skills that were not part of the curriculum can make a massive dent in developing the next generation of the workforce and enabling equal access to opportunities with employment. The awareness of various sectors will also help students and budding professionals to choose from various career choices beyond medical and engineering degrees. 
 
-- <b>Healthcare</b> - needless to say, healthcare is one of the most expensive cost centres for Indians, currently earning less than Rs 2,00,000 in India. One event and life savings can be wiped off. While there have been govt schemes like Ayushman Bharat, which support the needy, more needs to be done by the private sector to enable Indians to have easier and equitable access to healthcare. 
+- **Healthcare** - needless to say, healthcare is one of the most expensive cost centres for Indians, currently earning less than Rs 2,00,000 in India. One event and life savings can be wiped off. While there have been govt schemes like Ayushman Bharat, which support the needy, more needs to be done by the private sector to enable Indians to have easier and equitable access to healthcare. 
 
   We will need more businesses that specifically improve access to affordable healthcare. Health insurance awareness, telemedicine, and community health initiatives can ensure that Indians are safeguarded in several ways. We can start by increasing the penetration of Insurance (life and health) from a dismal 3% to atleast 8-10% of the population over the next 4-5 years.
   
-- <b>Financial services</b> - are crucial for the population of a developing country like India for several reasons. They provide access to essential tools for economic participation, such as banking, credit, and insurance. Financial services enable individuals to save, invest, and accumulate wealth, fostering economic stability and growth. Financial services play a pivotal role in promoting economic development, reducing inequality, and improving the population's overall well-being. 
+- **Financial services** - are crucial for the population of a developing country like India for several reasons. They provide access to essential tools for economic participation, such as banking, credit, and insurance. Financial services enable individuals to save, invest, and accumulate wealth, fostering economic stability and growth. Financial services play a pivotal role in promoting economic development, reducing inequality, and improving the population's overall well-being. 
 While India today boasts a spectacular identity infrastructure in Adhaar and around 80-85% banking penetration, more must be done. A massive section of the population does not have equitable access to credit due to a lack of accessible data on credit history; there is a lack of awareness of insurance, as we pointed out earlier. All of these give entrepreneurs opportunities to build solutions promoting financial inclusion. 
 
-- <b>Entrepreneurship</b> - all of the above seem like potential candidates for government programs and schemes, but they are certainly not. If we are to make headway as a country, we need the private sector to come forward and solve some of these deep-rooted problems. India is such a vast country that there will always be a need for the private sector to augment all governmental efforts. Call it the multiplier effect, where small contributions compound over time as more people join in with efforts, so we will need as many hands to contribute as possible. 
+- **Entrepreneurship** - all of the above seem like potential candidates for government programs and schemes, but they are certainly not. If we are to make headway as a country, we need the private sector to come forward and solve some of these deep-rooted problems. India is such a vast country that there will always be a need for the private sector to augment all governmental efforts. Call it the multiplier effect, where small contributions compound over time as more people join in with efforts, so we will need as many hands to contribute as possible. 
 
   In that regard, we will need policies and infrastructure to back entrepreneurs willing to take risks and work on problems that will have long-lasting impacts on the communities around them. Thankfully, given all that has happened in the country over the past few years, entrepreneurship is a natural career choice today. Across several towns and villages in India, building a business is no longer looked down upon. And this needs to evolve and grow into a revolution. We will need to see more localised solutions for problems that could never be spotted otherwise. We will need Indians to help India at this crucial juncture.
   
@@ -126,7 +126,7 @@ We have around 1.4 billion people of this country on Adhaar. We have 80-85% bank
 
 ![2024-01-22_18-24](https://github.com/paidinesh7/dineshpai.in/assets/79692173/a48175c3-0eff-480f-8188-92e0a1b82d56#center)
 
-No one is waiting for the Government or others to change their lives for them. A lot of Indians are already working hard and making real progress. And that is a testament to the thought process of the next billion - <b>and their aspirations</b>. 
+No one is waiting for the Government or others to change their lives for them. A lot of Indians are already working hard and making real progress. And that is a testament to the thought process of the next billion - ***and their aspirations***. 
 
 However, there are significant challenges on the way to empower all Indians. Some structural and some intentional. But beyond the veil of numbers and statistics, our people need us to think about what can help them achieve financial independence, which can then help them achieve all of their aspirations. 
 
@@ -179,4 +179,4 @@ While we speak about jobs that have been created, we need to do more in terms of
 
 I am exceedingly bullish and optimistic of India. Not just because of emotions but because, 
 
-<b>“No power on earth can stop an idea whose time has come”</b>
+***“No power on earth can stop an idea whose time has come”***
