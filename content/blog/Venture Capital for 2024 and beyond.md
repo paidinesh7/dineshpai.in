@@ -126,7 +126,7 @@ We have around 1.4 billion people of this country on Adhaar. We have 80-85% bank
 
 ![2024-01-22_18-24](https://github.com/paidinesh7/dineshpai.in/assets/79692173/a48175c3-0eff-480f-8188-92e0a1b82d56#center)
 
-No one is waiting for the Government or others to change their lives for them. A lot of Indians are already working hard and making real progress. And that is a testament to the thought process of the next billion - <b><i>and their aspirations</i></b>. 
+No one is waiting for the Government or others to change their lives for them. A lot of Indians are already working hard and making real progress. And that is a testament to the thought process of the next billion - <b>and their aspirations</b>. 
 
 However, there are significant challenges on the way to empower all Indians. Some structural and some intentional. But beyond the veil of numbers and statistics, our people need us to think about what can help them achieve financial independence, which can then help them achieve all of their aspirations. 
 
@@ -179,4 +179,4 @@ While we speak about jobs that have been created, we need to do more in terms of
 
 I am exceedingly bullish and optimistic of India. Not just because of emotions but because, 
 
-<b><i>“No power on earth can stop an idea whose time has come”</i></b>
+<b>“No power on earth can stop an idea whose time has come”</b>
