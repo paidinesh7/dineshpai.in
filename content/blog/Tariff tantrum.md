@@ -30,7 +30,7 @@ From Noah Smith’s recent article](https://www.noahpinion.blog/p/what-can-india
 
 The examples are telling,
 
-China has treated energy self-reliance as a central pillar for over 25 years—first improving efficiency, then shifting to green energy, and now emphasising indigenous production. Today, renewables supply nearly 38% of China’s electricity, up from less than 20% in 2000. Many bets worked, some, like real estate, failed spectacularly.
+China has treated energy self-reliance as a central pillar for over 25 years, first improving efficiency, then shifting to green energy, and now emphasising indigenous production. Today, renewables supply nearly 38% of China’s electricity, up from less than 20% in 2000. Many bets worked, some, like real estate, failed spectacularly.
 
 The US seeded its tech dominance in the 1950s—1970s through massive public investment in defence and space, creating foundational technologies like semiconductors and the Internet.
 
@@ -50,4 +50,4 @@ If we treat this period as a historic opportunity to reimagine our future, our p
 
 - Whole-of-Nation Buy-In. Leadership matters, but so does collective alignment.
 
-History shows that when constrained, people and nations innovate. This moment is our chance to evolve—on our own terms. The new generation of Indians will face this challenge head-on. The era of meekness is over. Patience and politeness must not be mistaken for weakness.
+History shows that when constrained, people and nations innovate. This moment is our chance to evolve, on our own terms. The new generation of Indians will face this challenge head-on. The era of meekness is over. Patience and politeness must not be mistaken for weakness.
