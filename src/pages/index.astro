@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import UdupiSlideshow from '../components/UdupiSlideshow';
+import UdupiFlipDeck from '../components/UdupiFlipDeck';
 
 const posts = await getCollection('blog');
 const latestPosts = posts
@@ -35,7 +35,14 @@ const formatDate = (date: Date) => {
         
         <div class="prose prose-stone dark:prose-invert font-serif text-stone-700 dark:text-stone-300 leading-relaxed text-base sm:text-lg space-y-4">
           <p>
-            I grew up on the banks of River Seetha in <UdupiSlideshow client:load />. Having watched everyone in the family build small businesses, I had decided early in life that I would always want to find my way towards capital markets. Once I graduated from engineering in 2014, I joined D.E Shaw India, a hedge fund. I was amazed at how much more there was to learn; so went and got my MBA in 2019 from the cleanest city on earth, Calgary, Canada.
+            I grew up on the banks of River Seetha in <span class="relative inline-block group/udupi">
+              <span class="font-bold text-stone-900 dark:text-stone-50 border-b-2 border-brand-light/30 dark:border-brand-dark/30 hover:text-brand-light dark:hover:text-brand-dark transition-colors duration-200">Udupi</span>
+              <!-- Curved hand-drawn dotted SVG arrow pointing to the flip deck on the right -->
+              <svg class="hidden md:block absolute -top-4 -right-[136px] w-32 h-14 pointer-events-none text-brand-light dark:text-brand-dark opacity-80 group-hover/udupi:translate-x-1.5 transition-transform duration-300" fill="none" viewBox="0 0 128 56">
+                <path d="M12 42 C 32 10, 72 10, 100 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4 4"/>
+                <path d="M92 16 L 102 24 L 92 30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>. Having watched everyone in the family build small businesses, I had decided early in life that I would always want to find my way towards capital markets. Once I graduated from engineering in 2014, I joined D.E Shaw India, a hedge fund. I was amazed at how much more there was to learn; so went and got my MBA in 2019 from the cleanest city on earth, Calgary, Canada.
           </p>
           <p>
             From 2010 until 2020 was about learning everything in finance and investments. In the process, I was bitten by Venture Capital and how VC investing could potentially build the next notable technology or product. When I left for Canada in August 2017, I knew I would return to India to work for an Indian company. And it all came together in 2020 when I met the fantastic team at Zerodha. I had followed Zerodha for 6 years, and it was serendipitous and lucky that I met the Zerodha team for an opportunity to join them in their mission to help people do better with their money. 
@@ -49,14 +56,20 @@ const formatDate = (date: Date) => {
         </div>
       </div>
 
-      <!-- Profile Photo -->
-      <div class="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 shrink-0 relative group">
-        <div class="absolute inset-0 rounded-2xl bg-stone-200 dark:bg-stone-800 rotate-3 group-hover:rotate-6 transition-transform duration-300 ease-out"></div>
-        <img 
-          src="/static/images/dinesh_new.jpg" 
-          alt="Dinesh Pai" 
-          class="absolute inset-0 w-full h-full object-cover rounded-2xl border border-stone-200 dark:border-stone-800 -rotate-3 group-hover:rotate-0 transition-transform duration-300 ease-out shadow-lg"
-        />
+      <!-- Right Column: Interactive Card Stacks -->
+      <div class="flex flex-col gap-10 sm:gap-14 shrink-0 items-center justify-center">
+        <!-- Udupi Polaroid Flip Deck -->
+        <UdupiFlipDeck client:load />
+
+        <!-- Profile Photo -->
+        <div class="w-32 h-32 sm:w-40 sm:h-40 shrink-0 relative group">
+          <div class="absolute inset-0 rounded-2xl bg-stone-200 dark:bg-stone-800 rotate-3 group-hover:rotate-6 transition-transform duration-300 ease-out"></div>
+          <img 
+            src="/static/images/dinesh_new.jpg" 
+            alt="Dinesh Pai" 
+            class="absolute inset-0 w-full h-full object-cover rounded-2xl border border-stone-200 dark:border-stone-800 -rotate-3 group-hover:rotate-0 transition-transform duration-300 ease-out shadow-lg"
+          />
+        </div>
       </div>
 
     </div>

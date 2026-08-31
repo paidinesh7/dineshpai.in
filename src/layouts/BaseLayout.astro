@@ -53,12 +53,12 @@ const pageTitle = title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
       document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
     </script>
   </head>
-  <body class="bg-[#fbfaf7] dark:bg-[#141414] text-stone-800 dark:text-stone-200 min-h-screen flex flex-col font-sans transition-colors duration-300 antialiased selection:bg-brand-light/10 dark:selection:bg-brand-dark/20">
+  <body class="bg-[#ecf1ee] dark:bg-[#0c120e] text-stone-800 dark:text-stone-200 min-h-screen flex flex-col font-sans transition-colors duration-300 antialiased selection:bg-brand-light/10 dark:selection:bg-brand-dark/20">
     
     {showProgress && <ReadingProgressBar client:load />}
 
     <!-- Sticky Header / Masthead -->
-    <header class="border-b border-stone-200/60 dark:border-stone-800/60 bg-[#fbfaf7]/85 dark:bg-[#141414]/85 backdrop-blur-md sticky top-0 z-40 transition-colors duration-300">
+    <header class="border-b border-stone-200/60 dark:border-stone-800/60 bg-[#ecf1ee]/85 dark:bg-[#0c120e]/85 backdrop-blur-md sticky top-0 z-40 transition-colors duration-300">
       <div class="max-w-4xl mx-auto px-6 py-4 flex flex-row items-center justify-between gap-4">
         
         <!-- Logo & Title -->
@@ -103,7 +103,7 @@ const pageTitle = title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-stone-200/60 dark:border-stone-800/60 bg-stone-50 dark:bg-stone-950/40 py-8 transition-colors duration-300">
+    <footer class="border-t border-stone-200/60 dark:border-stone-800/60 bg-[#ecf1ee]/45 dark:bg-[#0c120e]/45 py-8 transition-colors duration-300">
       <div class="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 dark:text-stone-500">
         <div>
           Dinesh Pai &copy; 2023 - 2026. Built with Astro, React & Tailwind CSS.
