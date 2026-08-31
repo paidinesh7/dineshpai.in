@@ -34,8 +34,8 @@ const formatYear = (date: Date) => {
             <span class="year">{formatYear(post.data.date)}</span>
           </div>
           <div class="body">
-            <h3 class="title">
-              <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+            <h3 class="title" style="font-weight: 700;">
+              <a href={`/blog/${post.slug}`} class="text-brand-light dark:text-brand-dark hover:underline font-bold" style="text-decoration: none;">{post.data.title}</a>
             </h3>
             {post.data.description && (
               <div class="description">

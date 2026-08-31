@@ -25,7 +25,7 @@ const formatDatePrecise = (date: Date) => {
 <BaseLayout title={post.data.title} description={post.data.description} showProgress={true}>
   <div class="post single animate-fade-in">
     <div class="post-header">
-      <h1 class="title">{post.data.title}</h1>
+      <h1 class="title text-brand-light dark:text-brand-dark font-bold">{post.data.title}</h1>
       <div class="date">{formatDatePrecise(post.data.date)}</div>
     </div>
     
