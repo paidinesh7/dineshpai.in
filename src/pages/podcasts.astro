@@ -8,6 +8,7 @@ const dineshPodcasts = [
     speakers: "Nithin Kamath (Co-founder, Zerodha) & Dinesh Pai",
     description: "An essential conversation with Nithin Kamath on how Zerodha built its moats over three distinct phases: low-cost referral pricing, technology-led, and ultimately credibility & brand trust. Nithin details his primary role as a risk manager, capital allocation frameworks, and the personal routines that sustain him.",
     link: "https://www.youtube.com/watch?v=eZdrpChV0C4&t=38s",
+    youtubeId: "eZdrpChV0C4",
     tags: ["Risk Management", "Business Moats", "Capital Allocation"]
   },
   {
@@ -16,6 +17,7 @@ const dineshPodcasts = [
     speakers: "Sajith Pai (Blume Ventures) & Dinesh Pai (Rainmatter)",
     description: "A deep dive breaking down Product-Market Fit (PMF) into Product-to-Problem Fit (PPF) and Motion-to-Market Fit (MMF). We discuss the GRUE (Growth, Retention, Unit Economics) framework and why common metrics like the Sean Ellis test can sometimes mislead founders.",
     link: "https://www.youtube.com/watch?v=-TqOl7NjB7o",
+    youtubeId: "-TqOl7NjB7o",
     tags: ["Product-Market Fit", "Metrics", "Frameworks"]
   },
   {
@@ -24,6 +26,7 @@ const dineshPodcasts = [
     speakers: "Kushal Bhagia (All In Capital) & Dinesh Pai (Rainmatter)",
     description: "Demystifying the initial meeting between founders and investors. We explore the 'Why You?' test, the value of 'earned insights' from operating in a market, and common early-stage red flags like unbalanced equity splits.",
     link: "https://www.youtube.com/watch?v=dhuHgsGevks&t=96s",
+    youtubeId: "dhuHgsGevks",
     tags: ["First Meeting", "Pitching", "Equity Splits"]
   },
   {
@@ -32,6 +35,7 @@ const dineshPodcasts = [
     speakers: "Dinesh Pai (Rainmatter) & Portfolio Founders",
     description: "Navigating the hardest hurdle in early-stage startups: talent acquisition. We discuss why early team crises often build resilience, how to align incentives, and how to build a shared sense of mission that outlasts monetary compensation.",
     link: "https://www.youtube.com/watch?v=0fxTjJ9jVpg&t=14s",
+    youtubeId: "0fxTjJ9jVpg",
     tags: ["Hiring", "Company Culture", "Early Stage"]
   },
   {
@@ -40,6 +44,7 @@ const dineshPodcasts = [
     speakers: "Ashish Goel (Co-founder, Urban Ladder) & Dinesh Pai",
     description: "An in-depth guide to finding and aligning with a co-founder. We detail the strategic hustle of value alignment, identifying complementary 'spiky' skill sets, and why a structured 3-month trial period is vital before formalizing partnerships.",
     link: "https://www.youtube.com/watch?v=ORPVZgc2ScM",
+    youtubeId: "ORPVZgc2ScM",
     tags: ["Co-founders", "Partnerships", "Team Building"]
   },
   {
@@ -48,74 +53,119 @@ const dineshPodcasts = [
     speakers: "Aditya Shukla & Aditya Muralidhar (Partners, Bain & Company India) & Dinesh Pai",
     description: "A comprehensive breakdown of Bain's annual Indian VC report. We discuss changing LP sentiment toward India, the rise of domestic family offices, and emerging sector tailwinds defining the next decade.",
     link: "https://www.youtube.com/watch?v=TbsWx16UFhM&t=4950s",
+    youtubeId: "TbsWx16UFhM",
     tags: ["Capital Markets", "LP Sentiment", "Venture Report"]
   }
 ];
 ---
 
 <BaseLayout title="Podcasts & Video Discussions">
-  <div class="max-w-3xl mx-auto space-y-12 sm:space-y-16 animate-fade-in">
+  <div class="max-w-4xl mx-auto space-y-12 sm:space-y-16 animate-fade-in">
     <!-- Header -->
-    <div class="space-y-3 border-b border-stone-200/60 dark:border-stone-800/60 pb-6">
+    <div class="space-y-4 border-b border-stone-200/60 dark:border-stone-800/60 pb-8">
       <span class="text-xs font-bold uppercase tracking-widest text-stone-400 dark:text-stone-500 font-sans">
         Video Series
       </span>
-      <h1 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100">
-        Podcasts & Video Discussions
-      </h1>
-      <p class="text-stone-600 dark:text-stone-400 text-sm max-w-lg font-serif italic">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <h1 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100 flex items-center gap-3">
+          Podcasts & Video Discussions
+        </h1>
+        
+        <!-- Interactive Playful Icon / Wave -->
+        <div class="flex items-end gap-1 h-6 px-3 py-1 bg-stone-100 dark:bg-stone-900 rounded-full w-fit">
+          <span class="w-[3px] h-3 bg-brand-light dark:bg-brand-dark rounded-full animate-wave-slow"></span>
+          <span class="w-[3px] h-5 bg-brand-light dark:bg-brand-dark rounded-full animate-wave-fast"></span>
+          <span class="w-[3px] h-4 bg-brand-light dark:bg-brand-dark rounded-full animate-wave-medium"></span>
+          <span class="w-[3px] h-2 bg-brand-light dark:bg-brand-dark rounded-full animate-wave-slow"></span>
+          <span class="w-[3px] text-[10px] font-sans font-bold text-stone-400 dark:text-stone-500 ml-2 uppercase tracking-wider">Active</span>
+        </div>
+      </div>
+      <p class="text-stone-600 dark:text-stone-400 text-sm max-w-2xl font-serif italic leading-relaxed">
         A collection of deep dives and conversations about building startups, evaluating Product-Market Fit, hiring early teams, and dissecting venture capital in India.
       </p>
     </div>
 
     <!-- Podcast Curation Grid -->
-    <div class="space-y-8">
+    <div class="space-y-10">
       <p class="font-serif text-stone-700 dark:text-stone-300 text-base sm:text-lg leading-relaxed">
         I regularly sit down with investors, founders, and industry experts on <strong class="text-brand-light dark:text-brand-dark">How VCs Think</strong>, <strong class="text-brand-light dark:text-brand-dark">The Startup Blueprint</strong>, and <strong class="text-brand-light dark:text-brand-dark">Subtext</strong> to discuss the practical frameworks behind building and scaling companies in India:
       </p>
 
       <div class="space-y-8">
         {dineshPodcasts.map((podcast) => (
-          <div class="flex flex-col border border-stone-200/60 dark:border-stone-800/60 bg-white dark:bg-stone-950/40 rounded-xl p-6 hover:border-brand-light dark:hover:border-brand-dark transition-all duration-300 shadow-sm group">
-            <div class="space-y-3 flex-grow">
-              <div class="flex flex-wrap items-center justify-between gap-2">
-                <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-stone-400 dark:text-stone-500 bg-stone-50 dark:bg-stone-900 px-2 py-0.5 rounded">
-                  {podcast.series}
-                </span>
-                <span class="text-xs font-sans text-stone-400 dark:text-stone-500 font-medium">
-                  {podcast.speakers}
-                </span>
+          <div class="flex flex-col md:flex-row gap-6 border border-stone-200/60 dark:border-stone-800/60 bg-white dark:bg-stone-950/40 rounded-2xl p-5 sm:p-6 hover:border-brand-light dark:hover:border-brand-dark hover:shadow-md transition-all duration-300 group">
+            
+            <!-- Real YouTube Video Thumbnail -->
+            <div class="w-full md:w-56 shrink-0 aspect-video rounded-xl overflow-hidden relative group/thumb shadow-sm border border-stone-200/40 dark:border-stone-800/40 bg-stone-100 dark:bg-stone-900">
+              <img 
+                src={`https://img.youtube.com/vi/${podcast.youtubeId}/mqdefault.jpg`} 
+                alt={podcast.title} 
+                class="w-full h-full object-cover group-hover/thumb:scale-105 transition-transform duration-300 ease-out"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-stone-950/25 group-hover/thumb:bg-stone-950/10 transition-colors duration-300 flex items-center justify-center">
+                <!-- Red YouTube styled play button -->
+                <div class="h-10 w-14 bg-red-600 group-hover/thumb:bg-red-500 rounded-xl flex items-center justify-center shadow-lg transition-all transform group-hover/thumb:scale-110 duration-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-white ml-0.5">
+                    <path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clip-rule="evenodd" />
+                  </svg>
+                </div>
               </div>
-              
-              <h3 class="font-serif text-lg sm:text-xl font-bold text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors duration-200">
-                <a href={podcast.link} target="_blank" rel="noopener noreferrer">
-                  {podcast.title}
-                </a>
-              </h3>
-              
-              <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-400 font-sans leading-relaxed">
-                {podcast.description}
-              </p>
+              <a href={podcast.link} target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-10" aria-label={`Watch ${podcast.title}`} />
             </div>
 
-            <!-- Tags & Link -->
-            <div class="flex items-center justify-between mt-6 pt-4 border-t border-stone-100 dark:border-stone-900/60">
-              <div class="flex flex-wrap gap-1.5">
-                {podcast.tags.map((tag) => (
-                  <span class="text-[9px] font-sans font-bold uppercase tracking-wider bg-stone-100 dark:bg-stone-900/60 text-stone-500 dark:text-stone-400 px-2.5 py-0.5 rounded">
-                    {tag}
+            <!-- Content Area -->
+            <div class="flex-grow flex flex-col justify-between space-y-4">
+              <div class="space-y-2.5">
+                <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-sans">
+                  <span class="font-bold uppercase tracking-widest text-brand-light dark:text-brand-dark bg-brand-light/5 dark:bg-brand-dark/10 px-2.5 py-0.5 rounded-md">
+                    {podcast.series}
                   </span>
-                ))}
+                  <span class="text-stone-400 dark:text-stone-500 font-semibold italic">
+                    {podcast.speakers}
+                  </span>
+                </div>
+                
+                <h3 class="font-serif text-lg sm:text-xl font-bold text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors duration-200">
+                  <a href={podcast.link} target="_blank" rel="noopener noreferrer">
+                    {podcast.title}
+                  </a>
+                </h3>
+                
+                <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-400 font-sans leading-relaxed">
+                  {podcast.description}
+                </p>
               </div>
-              <a 
-                href={podcast.link} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="inline-flex items-center gap-1.5 text-xs font-sans font-semibold text-brand-light dark:text-brand-dark hover:underline underline-offset-4"
-              >
-                Watch on YouTube &rarr;
-              </a>
+
+              <!-- Tags & Link -->
+              <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-stone-100 dark:border-stone-900/40">
+                <div class="flex flex-wrap gap-1.5">
+                  {podcast.tags.map((tag) => (
+                    <span class="text-[9px] font-sans font-bold uppercase tracking-wider bg-stone-100 dark:bg-stone-900/60 text-stone-500 dark:text-stone-400 px-2.5 py-0.5 rounded">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                
+                <!-- Custom Animated Wave on Card Hover -->
+                <div class="flex items-center gap-3">
+                  <div class="flex items-end gap-0.5 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span class="w-[2px] h-2 bg-brand-light dark:bg-brand-dark rounded-full animate-wave-slow"></span>
+                    <span class="w-[2px] h-3 bg-brand-light dark:bg-brand-dark rounded-full animate-wave-fast"></span>
+                    <span class="w-[2px] h-1.5 bg-brand-light dark:bg-brand-dark rounded-full animate-wave-medium"></span>
+                  </div>
+                  <a 
+                    href={podcast.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="inline-flex items-center gap-1 text-xs font-sans font-semibold text-brand-light dark:text-brand-dark hover:underline underline-offset-4"
+                  >
+                    Watch Now &rarr;
+                  </a>
+                </div>
+              </div>
             </div>
+
           </div>
         ))}
       </div>
@@ -124,6 +174,7 @@ const dineshPodcasts = [
 </BaseLayout>
 
 <style>
+  /* Custom playful animations */
   .animate-fade-in {
     animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
@@ -137,5 +188,28 @@ const dineshPodcasts = [
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  /* Audio Wave Keyframes */
+  @keyframes waveGrow {
+    0%, 100% {
+      transform: scaleY(0.4);
+    }
+    50% {
+      transform: scaleY(1.2);
+    }
+  }
+
+  .animate-wave-slow {
+    transform-origin: bottom;
+    animation: waveGrow 1.2s ease-in-out infinite;
+  }
+  .animate-wave-medium {
+    transform-origin: bottom;
+    animation: waveGrow 0.8s ease-in-out infinite;
+  }
+  .animate-wave-fast {
+    transform-origin: bottom;
+    animation: waveGrow 0.5s ease-in-out infinite;
   }
 </style>
