@@ -14,3 +14,7 @@ yarn-error.log*
 
 # temporary photos
 Photos/
+
+# temporary articles HTML backups
+Articles/
+parse_article.py
