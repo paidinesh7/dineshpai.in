@@ -1,0 +1,112 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TableOfContents from '../../components/TableOfContents';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content, headings } = await post.render();
+
+const formatDate = (date: Date) => {
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+};
+---
+
+<BaseLayout title={post.data.title} description={post.data.description} showProgress={true}>
+  <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 items-start relative">
+    
+    <!-- Blog Post Content -->
+    <article class="lg:col-span-3 space-y-8 animate-fade-in">
+      
+      <!-- Metadata Header -->
+      <div class="space-y-4 border-b border-stone-200/60 dark:border-stone-800/60 pb-8">
+        <div class="flex flex-wrap items-center gap-3 text-xs font-sans font-medium text-stone-400 dark:text-stone-500">
+          <time datetime={post.data.date.toISOString()}>
+            {formatDate(post.data.date)}
+          </time>
+          {post.data.author && (
+            <>
+              <span class="text-stone-300 dark:text-stone-700">&bull;</span>
+              <span>By {post.data.author}</span>
+            </>
+          )}
+        </div>
+        
+        <h1 class="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-stone-900 dark:text-stone-50 leading-tight">
+          {post.data.title}
+        </h1>
+        
+        {post.data.description && (
+          <p class="font-serif italic text-stone-500 dark:text-stone-400 text-base sm:text-lg leading-relaxed">
+            {post.data.description}
+          </p>
+        )}
+      </div>
+
+      <!-- Markdown Rendered Content -->
+      <div class="prose prose-stone dark:prose-invert max-w-none 
+                  prose-headings:font-serif prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-stone-900 dark:prose-headings:text-stone-100
+                  prose-h2:text-xl prose-h2:sm:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:border-b prose-h2:border-stone-200/40 dark:prose-h2:border-stone-800/40 prose-h2:pb-2
+                  prose-h3:text-lg prose-h3:sm:text-xl prose-h3:mt-8 prose-h3:mb-3
+                  prose-p:font-serif prose-p:text-base prose-p:sm:text-lg prose-p:leading-relaxed prose-p:text-stone-700 dark:prose-p:text-stone-300 prose-p:mb-6
+                  prose-a:text-brand-light dark:prose-a:text-brand-dark prose-a:underline prose-a:underline-offset-4 prose-a:decoration-stone-200 dark:prose-a:decoration-stone-800 hover:prose-a:text-stone-950 dark:hover:prose-a:text-stone-50 transition-colors
+                  prose-blockquote:border-l-4 prose-blockquote:border-brand-light dark:prose-blockquote:border-brand-dark prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-stone-600 dark:prose-blockquote:text-stone-400 prose-blockquote:font-serif
+                  prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6 prose-li:font-serif prose-li:text-stone-700 dark:prose-li:text-stone-300 prose-li:mb-2
+                  prose-img:rounded-xl prose-img:border prose-img:border-stone-200 dark:prose-img:border-stone-800 prose-img:shadow-sm prose-img:mx-auto">
+        <Content />
+      </div>
+
+      <!-- Post Footer / Tags -->
+      {post.data.tags && post.data.tags.length > 0 && (
+        <div class="border-t border-stone-200/60 dark:border-stone-800/60 pt-8 mt-12 flex flex-wrap gap-2">
+          {post.data.tags.map((tag) => (
+            <span class="text-xs font-sans font-semibold uppercase tracking-wider bg-stone-100 dark:bg-stone-900/60 text-stone-500 dark:text-stone-400 px-3 py-1 rounded-full">
+              #{tag}
+            </span>
+          ))}
+        </div>
+      )}
+      
+      <!-- Back Button -->
+      <div class="pt-8">
+        <a href="/blog" class="inline-flex items-center gap-2 text-sm font-sans font-semibold text-brand-light dark:text-brand-dark hover:text-stone-900 dark:hover:text-stone-100 transition-colors">
+          &larr; Back to all archives
+        </a>
+      </div>
+    </article>
+
+    <!-- Table of Contents Sidebar -->
+    <aside class="hidden lg:block lg:col-span-1 lg:sticky lg:top-28 lg:max-h-[calc(100vh-10rem)] overflow-y-auto pl-4 border-l border-stone-200/60 dark:border-stone-800/60">
+      <TableOfContents headings={headings} client:load />
+    </aside>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .animate-fade-in {
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

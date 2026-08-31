@@ -1,0 +1,120 @@
+---
+import ThemeToggle from '../components/ThemeToggle';
+import ReadingProgressBar from '../components/ReadingProgressBar';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  showProgress?: boolean;
+}
+
+const {
+  title = "Dinesh Pai's blog",
+  description = "Field notes on investments and capital markets",
+  showProgress = false,
+} = Astro.props;
+
+const siteTitle = "Dinesh Pai's blog";
+const pageTitle = title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/static/images/favicon.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet" />
+
+    <!-- Theme Initialization Script (Avoids flashing light theme) -->
+    <script is:inline>
+      const getThemePreference = () => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      };
+      const isDark = getThemePreference() === 'dark';
+      document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
+    </script>
+  </head>
+  <body class="bg-[#fbfaf7] dark:bg-[#141414] text-stone-800 dark:text-stone-200 min-h-screen flex flex-col font-sans transition-colors duration-300 antialiased selection:bg-brand-light/10 dark:selection:bg-brand-dark/20">
+    
+    {showProgress && <ReadingProgressBar client:load />}
+
+    <!-- Sticky Header / Masthead -->
+    <header class="border-b border-stone-200/60 dark:border-stone-800/60 bg-[#fbfaf7]/85 dark:bg-[#141414]/85 backdrop-blur-md sticky top-0 z-40 transition-colors duration-300">
+      <div class="max-w-4xl mx-auto px-6 py-4 flex flex-row items-center justify-between gap-4">
+        
+        <!-- Logo & Title -->
+        <a href="/" class="group flex items-center gap-3">
+          <img src="/static/images/logo.svg" alt="Dinesh Pai" class="h-8 w-8 transition-transform group-hover:rotate-6 dark:invert" />
+          <div class="flex flex-col">
+            <span class="font-serif text-lg sm:text-xl font-bold tracking-tight text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors duration-200">
+              Dinesh Pai's blog
+            </span>
+            <span class="text-[10px] text-stone-500 dark:text-stone-400 font-sans tracking-wide hidden sm:inline uppercase font-medium">
+              Field notes on investments & capital markets
+            </span>
+          </div>
+        </a>
+
+        <!-- Navigation -->
+        <nav class="flex items-center gap-4 sm:gap-6 text-sm font-medium text-stone-600 dark:text-stone-400">
+          <a href="/" class="hover:text-stone-900 dark:hover:text-stone-100 transition-colors">Home</a>
+          <a href="/blog" class="hover:text-stone-900 dark:hover:text-stone-100 transition-colors">Blog</a>
+          <a href="/static/images/favicon.png" class="hover:text-stone-900 dark:hover:text-stone-100 transition-colors hidden xs:inline">About</a>
+          
+          <div class="h-4 w-px bg-stone-200 dark:bg-stone-800 hidden xs:block"></div>
+          
+          <!-- RSS Icon -->
+          <a href="/index.xml" title="Subscribe to RSS Feed" class="hover:text-stone-900 dark:hover:text-stone-100 transition-colors p-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rss h-4.5 w-4.5 text-brand-light dark:text-brand-dark">
+              <path d="M4 11a9 9 0 0 1 9 9" />
+              <path d="M4 4a16 16 0 0 1 16 16" />
+              <circle cx="5" cy="19" r="1" />
+            </svg>
+          </a>
+
+          <!-- Theme Toggle Button -->
+          <ThemeToggle client:load />
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-4xl mx-auto w-full px-6 py-8 sm:py-12">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-stone-200/60 dark:border-stone-800/60 bg-stone-50 dark:bg-stone-950/40 py-8 transition-colors duration-300">
+      <div class="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 dark:text-stone-500">
+        <div>
+          Dinesh Pai &copy; 2023 - 2026. Built with Astro, React & Tailwind CSS.
+        </div>
+        <div class="flex gap-4">
+          <a href="https://twitter.com/dineshpaii" target="_blank" rel="noopener noreferrer" class="hover:text-brand-light dark:hover:text-brand-dark transition-colors">Twitter</a>
+          <a href="https://www.linkedin.com/in/paidinesh1/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-light dark:hover:text-brand-dark transition-colors">LinkedIn</a>
+          <a href="/index.xml" class="hover:text-brand-light dark:hover:text-brand-dark transition-colors">RSS Feed</a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

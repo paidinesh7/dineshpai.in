@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const recommendedPodcasts = [
+  {
+    title: "Capital Allocators",
+    host: "Ted Seides",
+    description: "Deep dive interviews with leading professional investors, detailing their backgrounds, investment philosophies, and capital allocation processes.",
+    link: "https://www.capitalallocators.com/",
+    tags: ["Investing", "Asset Management"]
+  },
+  {
+    title: "Acquired",
+    host: "Ben Gilbert & David Rosenthal",
+    description: "The playbooks of the greatest companies ever built, exploring how they scaled, succeeded, or struggled in extreme detail.",
+    link: "https://www.acquired.fm/",
+    tags: ["Business History", "Strategy"]
+  },
+  {
+    title: "Infinite Loops",
+    host: "Jim O'Shaughnessy",
+    description: "A wide-ranging exploration of investing, complex systems, technology, and philosophy with experts across various fields.",
+    link: "https://www.infiniteloops.com/",
+    tags: ["Philosophy", "Complex Systems"]
+  },
+  {
+    title: "The Meb Faber Show",
+    host: "Meb Faber",
+    description: "Focuses on global real estate, quantitative investing, and long-term wealth building with leading experts in active money management.",
+    link: "https://mebfaber.com/podcast/",
+    tags: ["Quantitative Finance", "Investing"]
+  }
+];
+---
+
+<BaseLayout title="Podcasts">
+  <div class="max-w-3xl mx-auto space-y-12 sm:space-y-16 animate-fade-in">
+    <!-- Header -->
+    <div class="space-y-3 border-b border-stone-200/60 dark:border-stone-800/60 pb-6">
+      <span class="text-xs font-bold uppercase tracking-widest text-stone-400 dark:text-stone-500 font-sans">
+        Curation
+      </span>
+      <h1 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100">
+        Recommended Podcasts & Audio
+      </h1>
+      <p class="text-stone-600 dark:text-stone-400 text-sm max-w-lg font-serif italic">
+        "Since I read a bunch of blogs and listen to a bunch of podcasts weekly, I felt summarizing some of the content and sharing my thoughts with everyone here would help me learn."
+      </p>
+    </div>
+
+    <!-- Podcast Curation Grid -->
+    <div class="space-y-8">
+      <p class="font-serif text-stone-700 dark:text-stone-300 text-base sm:text-lg leading-relaxed">
+        Audio is one of the richest mediums for learning. Here are some of the podcasts I listen to regularly that have shaped my view on investments, capital markets, and business strategy:
+      </p>
+
+      <div class="grid gap-6 sm:grid-cols-2">
+        {recommendedPodcasts.map((podcast) => (
+          <div class="flex flex-col border border-stone-200/60 dark:border-stone-800/60 bg-white dark:bg-stone-950/40 rounded-xl p-5 hover:border-brand-light dark:hover:border-brand-dark transition-all duration-300 shadow-sm group">
+            <div class="space-y-2 flex-grow">
+              <div class="flex items-baseline justify-between">
+                <h3 class="font-serif text-lg font-bold text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors">
+                  <a href={podcast.link} target="_blank" rel="noopener noreferrer">
+                    {podcast.title}
+                  </a>
+                </h3>
+              </div>
+              <p class="text-xs font-sans text-stone-400 dark:text-stone-500">
+                Hosted by {podcast.host}
+              </p>
+              <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-400 font-sans leading-relaxed line-clamp-4">
+                {podcast.description}
+              </p>
+            </div>
+
+            <!-- Tags & Link -->
+            <div class="flex items-center justify-between mt-6 pt-4 border-t border-stone-100 dark:border-stone-900/60">
+              <div class="flex gap-1.5">
+                {podcast.tags.map((tag) => (
+                  <span class="text-[9px] font-sans font-semibold uppercase tracking-wider bg-stone-100 dark:bg-stone-900/60 text-stone-500 dark:text-stone-400 px-2 py-0.5 rounded">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <a 
+                href={podcast.link} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="text-xs font-sans font-semibold text-brand-light dark:text-brand-dark hover:underline underline-offset-4"
+              >
+                Listen &rarr;
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .animate-fade-in {
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
