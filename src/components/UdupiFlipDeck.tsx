@@ -35,7 +35,7 @@ export default function UdupiFlipDeck() {
       {/* Card Stack Container */}
       <div 
         onClick={flipCard}
-        className="relative w-40 h-40 sm:w-44 sm:h-44 cursor-pointer group"
+        className="relative w-48 h-48 sm:w-52 sm:h-52 cursor-pointer group"
       >
         {deck.map((imgIndex, depth) => {
           const isTop = depth === 0;
@@ -52,7 +52,7 @@ export default function UdupiFlipDeck() {
               key={imgIndex}
               className={`absolute inset-0 w-full h-full bg-stone-50 dark:bg-stone-900 p-2.5 rounded-2xl border border-stone-200/60 dark:border-stone-800/60 shadow-md transition-all duration-300 ease-out ${
                 isTop && isFlipping 
-                  ? 'translate-x-28 rotate-12 opacity-0 scale-95 z-40' 
+                  ? 'translate-x-36 rotate-12 opacity-0 scale-95 z-40' 
                   : isTop 
                   ? 'z-30 group-hover:scale-[1.03] group-hover:-rotate-2' 
                   : `z-${20 - depth} ${rotation} ${translation} scale-[0.97]`
