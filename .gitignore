@@ -11,3 +11,6 @@ yarn-error.log*
 
 # Astro tools
 .astro/
+
+# temporary photos
+Photos/
