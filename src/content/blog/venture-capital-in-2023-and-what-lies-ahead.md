@@ -34,7 +34,7 @@ China has been a powerhouse for manufacturing and infrastructure, whereas India 
 
 Let’s also look at funding availability between both countries for VC investing. And this is where you will see the deep divide between the two countries. China, obviously, has had a head start. But the sheer scale of funding availability in China, compared to India, is why most articles you are reading focus on the growth % of capital than the actual dollar value of funding available. Despite funding value doubling between Q1 of 2021 and 2022, India’s total funding was still a staggering 3 billion USD lower compared to China. 
 
-![Blog 2](https://github.com/paidinesh7/dineshpai.in/assets/79692173/4dea6aa8-46d3-40b7-89d2-43d5a4c3215a)
+![Blog 2](/static/images/Blog 2.jpeg)
   
 And here are the annual numbers on the total dollar value of funding between both countries and the difference in scale, 
 
