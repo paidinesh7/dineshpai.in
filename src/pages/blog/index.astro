@@ -5,109 +5,46 @@ import { getCollection } from 'astro:content';
 const posts = await getCollection('blog');
 const sortedPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
-// Group posts by year
-const postsByYear: Record<number, typeof sortedPosts> = {};
-sortedPosts.forEach((post) => {
-  const year = post.data.date.getFullYear();
-  if (!postsByYear[year]) {
-    postsByYear[year] = [];
-  }
-  postsByYear[year].push(post);
-});
+const formatDay = (date: Date) => {
+  // Returns: "Mon, 02" (e.g. "Wed, 11")
+  const weekday = date.toLocaleDateString('en-US', { weekday: 'short' });
+  const day = date.toLocaleDateString('en-US', { day: '2-digit' });
+  return `${weekday}, ${day}`;
+};
 
-const years = Object.keys(postsByYear).map(Number).sort((a, b) => b - a);
-
-const formatDate = (date: Date) => {
-  return date.toLocaleDateString('en-US', {
-    month: 'short',
-    day: 'numeric',
-  });
+const formatYear = (date: Date) => {
+  // Returns: "Jan 2006" (e.g. "Oct 2023")
+  const month = date.toLocaleDateString('en-US', { month: 'short' });
+  const year = date.getFullYear();
+  return `${month} ${year}`;
 };
 ---
 
 <BaseLayout title="Blog Archive">
-  <div class="max-w-3xl mx-auto space-y-12 sm:space-y-16 animate-fade-in">
-    <!-- Header -->
-    <div class="space-y-3 border-b border-stone-200/60 dark:border-stone-800/60 pb-6">
-      <span class="text-xs font-bold uppercase tracking-widest text-stone-400 dark:text-stone-500 font-sans">
-        Archive
-      </span>
-      <h1 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100">
-        Field Notes & Investment Musings
-      </h1>
-      <p class="text-stone-600 dark:text-stone-400 text-sm max-w-lg font-serif italic">
-        A collection of summaries, retrospectives, and observations on Indian capital markets, venture capital, and climate finance.
-      </p>
-    </div>
+  <section class="page">
+    <h3 class="title" style="font-size: 2rem; font-family: Ramaraja, Georgia, serif; font-weight: 600; margin-bottom: 20px;">
+      Blog
+    </h3>
 
-    <!-- Chronological listing grouped by year -->
-    <div class="space-y-12 sm:space-y-16">
-      {years.map((year) => (
-        <section class="grid grid-cols-1 md:grid-cols-[100px_1fr] gap-6 md:gap-8 items-start">
-          <!-- Year Indicator -->
-          <div class="md:sticky md:top-24">
-            <h2 class="font-serif text-3xl font-extrabold text-stone-300 dark:text-stone-800 tracking-tight md:text-right">
-              {year}
-            </h2>
+    <div class="posts">
+      {sortedPosts.map((post) => (
+        <div class="post">
+          <div class="date">
+            <span class="day">{formatDay(post.data.date)}</span>
+            <span class="year">{formatYear(post.data.date)}</span>
           </div>
-
-          <!-- List of posts for the year -->
-          <div class="space-y-8">
-            {postsByYear[year].map((post) => (
-              <article class="group relative flex flex-col space-y-2 pb-6 border-b border-stone-100 dark:border-stone-900 last:border-0 last:pb-0">
-                <div class="flex items-baseline justify-between gap-4">
-                  <!-- Post Title -->
-                  <h3 class="font-serif text-lg sm:text-xl font-bold text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors duration-200">
-                    <a href={`/blog/${post.slug}`} class="focus:outline-none">
-                      {post.data.title}
-                    </a>
-                  </h3>
-                  
-                  <!-- Post Date (Just Month/Day) -->
-                  <time class="shrink-0 text-xs font-sans font-medium text-stone-400 dark:text-stone-500">
-                    {formatDate(post.data.date)}
-                  </time>
-                </div>
-
-                <!-- Optional description -->
-                {post.data.description && (
-                  <p class="font-sans text-stone-600 dark:text-stone-400 text-sm leading-relaxed line-clamp-2">
-                    {post.data.description}
-                  </p>
-                )}
-
-                <!-- Tags -->
-                {post.data.tags && post.data.tags.length > 0 && (
-                  <div class="flex flex-wrap gap-1.5 pt-1">
-                    {post.data.tags.map((tag) => (
-                      <span class="text-[9px] font-sans font-bold uppercase tracking-wider bg-stone-100 dark:bg-stone-900/60 text-stone-500 dark:text-stone-400 px-2 py-0.5 rounded">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </article>
-            ))}
+          <div class="body">
+            <h3 class="title">
+              <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+            </h3>
+            {post.data.description && (
+              <div class="description">
+                {post.data.description}
+              </div>
+            )}
           </div>
-        </section>
+        </div>
       ))}
     </div>
-  </div>
+  </section>
 </BaseLayout>
-
-<style>
-  .animate-fade-in {
-    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(12px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-</style>
