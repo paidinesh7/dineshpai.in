@@ -61,6 +61,97 @@ const formatDate = (date: Date) => {
     </div>
   </section>
 
+  <!-- Featured Insights & Projects -->
+  <section class="border-t border-stone-200/80 dark:border-stone-800/80 pt-12 mb-16 sm:mb-24 animate-fade-in-delayed">
+    <div class="space-y-1 mb-8">
+      <span class="text-xs font-bold uppercase tracking-widest text-stone-400 dark:text-stone-500 font-sans">
+        Curation
+      </span>
+      <h2 class="font-serif text-2xl font-bold text-stone-900 dark:text-stone-100">
+        Featured Ideas & Projects
+      </h2>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      
+      <!-- Viral X Post Card (Trust-Based Portfolio) -->
+      <div class="flex flex-col border border-stone-200/60 dark:border-stone-800/60 bg-white dark:bg-stone-950/40 rounded-xl p-6 hover:border-brand-light dark:hover:border-brand-dark transition-all duration-300 shadow-sm relative group">
+        <div class="flex items-center gap-2 mb-4">
+          <!-- Small Twitter/X Logo SVG -->
+          <svg class="h-4 w-4 text-stone-400 dark:text-stone-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M18.244 2.25h3.308l-7.227 7.75 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.285L1.254 2.25h6.854l4.665 6.148 5.475-6.148zm-1.16 17.52h1.833L7.084 4.126H5.117L17.084 19.77z"/>
+          </svg>
+          <span class="text-[10px] font-sans font-bold uppercase tracking-wider text-stone-400 dark:text-stone-500">
+            Investment Philosophy
+          </span>
+          <span class="absolute top-4 right-4 bg-brand-light/10 dark:bg-brand-dark/15 text-brand-light dark:text-brand-dark text-[9px] font-sans font-semibold uppercase px-2 py-0.5 rounded">
+            Top Thread
+          </span>
+        </div>
+
+        <div class="space-y-3 flex-grow">
+          <h3 class="font-serif text-lg font-bold text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors duration-200">
+            <a href="https://x.com/dineshpaii/status/1731518386407002598" target="_blank" rel="noopener noreferrer">
+              Trust-Based Portfolio Monitoring
+            </a>
+          </h3>
+          <p class="font-sans text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+            "We manage nearly ₹1,500 Cr across 140+ startups at Rainmatter. People ask how we track everything. The truth is simpler: we don't have dashboards or monthly MIS reports. We just trust the founders we back."
+          </p>
+        </div>
+
+        <div class="pt-4 border-t border-stone-100 dark:border-stone-900/60 mt-6 flex items-center justify-between">
+          <span class="text-xs font-sans text-stone-400 dark:text-stone-500 font-medium group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors">
+            Read on X/Twitter &rarr;
+          </span>
+        </div>
+      </div>
+
+      <!-- Tech Projects Card -->
+      <div class="flex flex-col border border-stone-200/60 dark:border-stone-800/60 bg-white dark:bg-stone-950/40 rounded-xl p-6 hover:border-brand-light dark:hover:border-brand-dark transition-all duration-300 shadow-sm relative group">
+        <div class="flex items-center gap-2 mb-4">
+          <!-- GitHub Logo SVG -->
+          <svg class="h-4 w-4 text-stone-400 dark:text-stone-500" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.59 1.087 3.222.83.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+          </svg>
+          <span class="text-[10px] font-sans font-bold uppercase tracking-wider text-stone-400 dark:text-stone-500">
+            Founder Toolkits
+          </span>
+          <span class="absolute top-4 right-4 bg-stone-100 dark:bg-stone-900 text-stone-500 dark:text-stone-400 text-[9px] font-sans font-semibold uppercase px-2 py-0.5 rounded">
+            Open Source
+          </span>
+        </div>
+
+        <div class="space-y-4 flex-grow">
+          <!-- onepager -->
+          <div class="space-y-1">
+            <h4 class="font-serif text-base font-bold text-stone-950 dark:text-stone-50 hover:text-brand-light dark:hover:text-brand-dark transition-colors duration-200">
+              <a href="https://github.com/paidinesh7/onepager" target="_blank" rel="noopener noreferrer">
+                onepager ↗
+              </a>
+            </h4>
+            <p class="text-xs text-stone-600 dark:text-stone-400 font-sans leading-relaxed">
+              An AI-powered financial analyzer that generates quick briefs (Altman Z-Score, Piotroski F-Score, DuPont Analysis) from statements in under 2 minutes.
+            </p>
+          </div>
+
+          <!-- LegalOS -->
+          <div class="space-y-1">
+            <h4 class="font-serif text-base font-bold text-stone-950 dark:text-stone-50 hover:text-brand-light dark:hover:text-brand-dark transition-colors duration-200">
+              <a href="https://github.com/paidinesh7/LegalOS" target="_blank" rel="noopener noreferrer">
+                LegalOS ↗
+              </a>
+            </h4>
+            <p class="text-xs text-stone-600 dark:text-stone-400 font-sans leading-relaxed">
+              An AI legal document analyzer designed specifically for Indian startup founders navigating fundraising agreements like SHAs and SPAs.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- Latest Field Notes Section -->
   <section class="border-t border-stone-200/80 dark:border-stone-800/80 pt-12 animate-fade-in-delayed">
     <div class="flex items-baseline justify-between mb-8">
