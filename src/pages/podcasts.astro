@@ -1,83 +1,100 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const recommendedPodcasts = [
+const dineshPodcasts = [
   {
-    title: "Capital Allocators",
-    host: "Ted Seides",
-    description: "Deep dive interviews with leading professional investors, detailing their backgrounds, investment philosophies, and capital allocation processes.",
-    link: "https://www.capitalallocators.com/",
-    tags: ["Investing", "Asset Management"]
+    title: "How VCs Measure Product-Market Fit",
+    series: "How VCs Think — Episode 7",
+    speakers: "Sajith Pai (Blume Ventures) & Dinesh Pai (Rainmatter)",
+    description: "A deep dive breaking down Product-Market Fit (PMF) into Product-to-Problem Fit (PPF) and Motion-to-Market Fit (MMF). We discuss the GRUE (Growth, Retention, Unit Economics) framework and why common metrics like the Sean Ellis test can sometimes mislead founders.",
+    link: "https://www.youtube.com/watch?v=-TqOl7NjB7o",
+    tags: ["Product-Market Fit", "Metrics", "Frameworks"]
   },
   {
-    title: "Acquired",
-    host: "Ben Gilbert & David Rosenthal",
-    description: "The playbooks of the greatest companies ever built, exploring how they scaled, succeeded, or struggled in extreme detail.",
-    link: "https://www.acquired.fm/",
-    tags: ["Business History", "Strategy"]
+    title: "What VCs Look For in the First Meeting",
+    series: "How VCs Think — Episode 1",
+    speakers: "Kushal Bhagia (All In Capital) & Dinesh Pai (Rainmatter)",
+    description: "Demystifying the initial meeting between founders and investors. We explore the 'Why You?' test, the value of 'earned insights' from operating in a market, and common early-stage red flags like unbalanced equity splits.",
+    link: "https://www.youtube.com/watch?v=dhuHgsGevks&t=96s",
+    tags: ["First Meeting", "Pitching", "Equity Splits"]
   },
   {
-    title: "Infinite Loops",
-    host: "Jim O'Shaughnessy",
-    description: "A wide-ranging exploration of investing, complex systems, technology, and philosophy with experts across various fields.",
-    link: "https://www.infiniteloops.com/",
-    tags: ["Philosophy", "Complex Systems"]
+    title: "How to Hire and Retain Early Employees",
+    series: "How VCs Think — Episode 4",
+    speakers: "Dinesh Pai (Rainmatter) & Portfolio Founders",
+    description: "Navigating the hardest hurdle in early-stage startups: talent acquisition. We discuss why early team crises often build resilience, how to align incentives, and how to build a shared sense of mission that outlasts monetary compensation.",
+    link: "https://www.youtube.com/watch?v=0fxTjJ9jVpg&t=14s",
+    tags: ["Hiring", "Company Culture", "Early Stage"]
   },
   {
-    title: "The Meb Faber Show",
-    host: "Meb Faber",
-    description: "Focuses on global real estate, quantitative investing, and long-term wealth building with leading experts in active money management.",
-    link: "https://mebfaber.com/podcast/",
-    tags: ["Quantitative Finance", "Investing"]
+    title: "How to Find a Co-founder",
+    series: "The Startup Blueprint — Episode 1",
+    speakers: "Ashish Goel (Co-founder, Urban Ladder) & Dinesh Pai",
+    description: "An in-depth guide to finding and aligning with a co-founder. We detail the strategic hustle of value alignment, identifying complementary 'spiky' skill sets, and why a structured 3-month trial period is vital before formalizing partnerships.",
+    link: "https://www.youtube.com/watch?v=ORPVZgc2ScM",
+    tags: ["Co-founders", "Partnerships", "Team Building"]
+  },
+  {
+    title: "Decoding Bain's India Venture Capital Report",
+    series: "Subtext by Zerodha",
+    speakers: "Aditya Shukla & Aditya Muralidhar (Partners, Bain & Company India) & Dinesh Pai",
+    description: "A comprehensive breakdown of Bain's annual Indian VC report. We discuss changing LP sentiment toward India, the rise of domestic family offices, and emerging sector tailwinds defining the next decade.",
+    link: "https://www.youtube.com/watch?v=TbsWx16UFhM&t=4950s",
+    tags: ["Capital Markets", "LP Sentiment", "Venture Report"]
   }
 ];
 ---
 
-<BaseLayout title="Podcasts">
+<BaseLayout title="Podcasts & Video Discussions">
   <div class="max-w-3xl mx-auto space-y-12 sm:space-y-16 animate-fade-in">
     <!-- Header -->
     <div class="space-y-3 border-b border-stone-200/60 dark:border-stone-800/60 pb-6">
       <span class="text-xs font-bold uppercase tracking-widest text-stone-400 dark:text-stone-500 font-sans">
-        Curation
+        Video Series
       </span>
       <h1 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100">
-        Recommended Podcasts & Audio
+        Podcasts & Video Discussions
       </h1>
       <p class="text-stone-600 dark:text-stone-400 text-sm max-w-lg font-serif italic">
-        "Since I read a bunch of blogs and listen to a bunch of podcasts weekly, I felt summarizing some of the content and sharing my thoughts with everyone here would help me learn."
+        A collection of deep dives and conversations about building startups, evaluating Product-Market Fit, hiring early teams, and dissecting venture capital in India.
       </p>
     </div>
 
     <!-- Podcast Curation Grid -->
     <div class="space-y-8">
       <p class="font-serif text-stone-700 dark:text-stone-300 text-base sm:text-lg leading-relaxed">
-        Audio is one of the richest mediums for learning. Here are some of the podcasts I listen to regularly that have shaped my view on investments, capital markets, and business strategy:
+        I regularly sit down with investors, founders, and industry experts on <strong class="text-brand-light dark:text-brand-dark">How VCs Think</strong>, <strong class="text-brand-light dark:text-brand-dark">The Startup Blueprint</strong>, and <strong class="text-brand-light dark:text-brand-dark">Subtext</strong> to discuss the practical frameworks behind building and scaling companies in India:
       </p>
 
-      <div class="grid gap-6 sm:grid-cols-2">
-        {recommendedPodcasts.map((podcast) => (
-          <div class="flex flex-col border border-stone-200/60 dark:border-stone-800/60 bg-white dark:bg-stone-950/40 rounded-xl p-5 hover:border-brand-light dark:hover:border-brand-dark transition-all duration-300 shadow-sm group">
-            <div class="space-y-2 flex-grow">
-              <div class="flex items-baseline justify-between">
-                <h3 class="font-serif text-lg font-bold text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors">
-                  <a href={podcast.link} target="_blank" rel="noopener noreferrer">
-                    {podcast.title}
-                  </a>
-                </h3>
+      <div class="space-y-8">
+        {dineshPodcasts.map((podcast) => (
+          <div class="flex flex-col border border-stone-200/60 dark:border-stone-800/60 bg-white dark:bg-stone-950/40 rounded-xl p-6 hover:border-brand-light dark:hover:border-brand-dark transition-all duration-300 shadow-sm group">
+            <div class="space-y-3 flex-grow">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-stone-400 dark:text-stone-500 bg-stone-50 dark:bg-stone-900 px-2 py-0.5 rounded">
+                  {podcast.series}
+                </span>
+                <span class="text-xs font-sans text-stone-400 dark:text-stone-500 font-medium">
+                  {podcast.speakers}
+                </span>
               </div>
-              <p class="text-xs font-sans text-stone-400 dark:text-stone-500">
-                Hosted by {podcast.host}
-              </p>
-              <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-400 font-sans leading-relaxed line-clamp-4">
+              
+              <h3 class="font-serif text-lg sm:text-xl font-bold text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors duration-200">
+                <a href={podcast.link} target="_blank" rel="noopener noreferrer">
+                  {podcast.title}
+                </a>
+              </h3>
+              
+              <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-400 font-sans leading-relaxed">
                 {podcast.description}
               </p>
             </div>
 
             <!-- Tags & Link -->
             <div class="flex items-center justify-between mt-6 pt-4 border-t border-stone-100 dark:border-stone-900/60">
-              <div class="flex gap-1.5">
+              <div class="flex flex-wrap gap-1.5">
                 {podcast.tags.map((tag) => (
-                  <span class="text-[9px] font-sans font-semibold uppercase tracking-wider bg-stone-100 dark:bg-stone-900/60 text-stone-500 dark:text-stone-400 px-2 py-0.5 rounded">
+                  <span class="text-[9px] font-sans font-bold uppercase tracking-wider bg-stone-100 dark:bg-stone-900/60 text-stone-500 dark:text-stone-400 px-2.5 py-0.5 rounded">
                     {tag}
                   </span>
                 ))}
@@ -86,9 +103,9 @@ const recommendedPodcasts = [
                 href={podcast.link} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                class="text-xs font-sans font-semibold text-brand-light dark:text-brand-dark hover:underline underline-offset-4"
+                class="inline-flex items-center gap-1.5 text-xs font-sans font-semibold text-brand-light dark:text-brand-dark hover:underline underline-offset-4"
               >
-                Listen &rarr;
+                Watch on YouTube &rarr;
               </a>
             </div>
           </div>
