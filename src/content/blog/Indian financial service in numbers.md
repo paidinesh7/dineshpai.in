@@ -13,7 +13,7 @@ It is 2011, and the Cricket World Cup has come to India after a long time. Every
 
 Here is me, along with my collegemates, watching the group stage match. This was, of course, India playing Pakistan - for that one day, the alleyways and canteens of the college were deserted. Everyone was glued to the TV. Palpable tension everywhere.
 
-![2Blog](/2Blog.png)
+![2Blog](https://github.com/paidinesh7/dineshpai.in/assets/79692173/03a28f12-8bf4-4abb-9e33-2cbf4a8a2ab1#center)
 
 Of course, as history would have it, India won the Cricket World Cup that year, and who can forget the iconic lines by Ravi Shastri, 
 
@@ -85,7 +85,7 @@ But the GDP per capita difference between India and other countries sticks out i
 
 We can all try to predict what will happen with consumption and other sectors in India, and all of us will agree that there is growth waiting to happen - but the question is when. With middle-income groups seeing an average growth of 5-7%, we will see more consumers in the market today, better employability, and resilient spending powers, which bodes well for us. But there is still a long way to go. Check out the income groups below, 
 
-![2Blog3](/2Blog3.png)
+![2Blog3](https://github.com/paidinesh7/dineshpai.in/assets/79692173/13c9ee88-b9ee-4e8e-8d69-afa908dedce9#center)
 
 [Source](https://economictimes.indiatimes.com/news/economy/indicators/how-the-middle-class-will-play-the-hero-in-indias-rise-as-world-power/articleshow/101608682.cms)
 
@@ -107,16 +107,16 @@ Here is the female labor force participation trend for India - 25%. While some o
 
 * Since we are speaking of increasing GDP and income growth rates, we must also quote the numbers that dont look too great. Let's start with income tax collections in India. Unless you have not spent time listening to economic commentary - it would be no surprise that very few Indians pay any tax. The number of ITRs filed is insignificant despite an uptick; what matters is the number of total taxpayers. That is at a dismal 1.9% of the population. The answer to this problem is maybe a utopian world. 
  
-![2Blog4](/2Blog4.jpg)
+![2Blog4](https://github.com/paidinesh7/dineshpai.in/assets/79692173/af8bdb9e-612b-4590-b30e-12003cd104ba#center)
 [Source](https://twitter.com/deepakabbot/status/1684065266379165697/photo/1)
 
 * Let us also check the GDP contribution from different sectors and the employment % of those specific sectors. This will give us a fair idea of what sectors of our economy are contributing to the economy and if a commensurate number of jobs are created in that sector. Data shows that 50% of India’s workforce today is concentrated in Agriculture, but it contributes just 17-20% of the GDP. In contrast, Services with 30% of the workforce constitute 50% of GDP. This is quite a problem, and has troubled policymakers for a couple of decades at least.
 
 The first image represents the % of the workforce involved across sectors, and the second image represents the GDP contribution of sectors to Indian GDP. 
 
-![2Blog5](/2Blog5.png)
+![2Blog5](https://github.com/paidinesh7/dineshpai.in/assets/79692173/72964016-ac2e-451b-9942-6daed4eecb08#center)
 
-![Fix](/Fix.png)
+![Fix](https://github.com/paidinesh7/dineshpai.in/assets/79692173/01c28ee4-a0ba-4418-a007-f10f8bce8ced#center)
 
 What we see in the statistics is anything but comforting. Before we even touch upon why, agriculture, which forms a large part of our workforce only contributes to a quarter of our economy, it must be stated that the age-old *one size fits all* solutions won't cut it anymore. While it is easier to talk about how we need investments and infrastructure for the agri sector to do better, our focus should be on small and marginal farmers and how we can help them do better.  
 
@@ -142,7 +142,7 @@ Government spending helps stimulate demand for services and products, improves t
 
 Benchmark this to the US and China, at 45% and 15%, respectively. 
 
-![2Blog7](/2Blog7.png)
+![2Blog7](https://github.com/paidinesh7/dineshpai.in/assets/79692173/1e18d7d6-6f49-4017-ad51-a600c244e8aa#center)
 
 While the government must balance several sectors' capital requirements, we must look at some sectors more closely. Namely education and healthcare. While these sectors do get allocation, there is probably more that needs to be done.
 
@@ -164,9 +164,9 @@ This is why debt markets form an essential part of a country’s economy. A matu
 
 Here is what the global debt market looks like. The US again leads the way with 31 trillion dollars of the debt market. India is at 1.3 trillion dollars.
 
-![2Blog8](/2Blog8.png)
+![2Blog8](https://github.com/paidinesh7/dineshpai.in/assets/79692173/c7921140-b9c8-4211-b23b-aac7b75e6091#center)
 
-![2Blog9](/2Blog9.png)
+![2Blog9](https://github.com/paidinesh7/dineshpai.in/assets/79692173/a47f04d4-3a3c-4238-8b7d-8f13470a2ede#center)
 
 Debt market snapshot across countries
 
@@ -210,7 +210,7 @@ There is a long way to go for India’s Insurance industry - the current penetra
 
 Here is the depth of the Indian insurance market, 
 
-![2Blog12](/2Blog12.png)
+![2Blog12](https://github.com/paidinesh7/dineshpai.in/assets/79692173/21c3e22a-ce67-4ca7-bf84-22003e10ee9b#center)
 
 
 >*The penetration of the Indian insurance industry is less than 5% of the GDP. IRDAI data shows that India’s insurance penetration was 4.2% of the GDP in 2021-22. In terms of penetration, India is far behind the global average of 7% of the GDP.
@@ -226,7 +226,7 @@ Insurance companies also participate directly in the capital formation and the e
 
 A small snapshot of the entire Indian insurance industry - 
 
-![2Blog14](/2Blog14.png)
+![2Blog14](https://github.com/paidinesh7/dineshpai.in/assets/79692173/f3e43393-71eb-4858-89d5-6dd954646f24#center)
 
 There is a case to be made for higher insurance penetration in India. But again, the lack of avenues to get educated on the right insurance policy to purchase makes it challenging to understand if a higher market penetration would translate into benefits for retail clients. The following 10 years will be great to see if we can grow the insurance market and if there is potential for Indian markets to utilize digital channels or if India will assert itself as a market where partner and offline networks will be essential and inseparable from insurance purchase decisions. 
 
@@ -239,7 +239,7 @@ Unsurprisingly, for decades Indian households have been risk-averse and continue
 Here are a few illustrations of how retail participation in the equity markets has trended. 
 
 Retain investor participation has obviously inched up.
-![2Blog15](/2Blog15.png)
+![2Blog15](https://github.com/paidinesh7/dineshpai.in/assets/79692173/3e1a89c1-d14c-476e-89e8-7e66f1fbd47d#center)
 
 Yearwise breakup of increase in retail investors. 
 ![2023-09-09_14-22](https://github.com/paidinesh7/dineshpai.in/assets/79692173/91396b13-7d35-4fe2-9832-019c487e7613#center)
@@ -252,7 +252,7 @@ Mutual Fund scheme and AUM.
 
 *India’s market capitalization is at 300 lakh crore - way back in September 2003, it was just Rs 10 lakh crore.*
 
-![2Blog16](/2Blog16.png)
+![2Blog16](https://github.com/paidinesh7/dineshpai.in/assets/79692173/b2b5598a-b349-4860-af6d-66bd6c9ce18e#center)
 
 ## Fintech consumer markets
 
@@ -266,7 +266,7 @@ Given I also spend a lot of time looking at the fintech market specifically, I w
 
 A lot of the credit perhaps goes to - *drumroll*, India Stack, 
 
-![2Blog17](/2Blog17.png)
+![2Blog17](https://github.com/paidinesh7/dineshpai.in/assets/79692173/8d7ad3da-46bf-458f-b00d-f0f064396b32#center)
 
 The rapid growth of fintech can also be attributed to favourable macroeconomic and demographic factors, including a rising middle class with higher disposable incomes to buy, borrow, save and invest more; increasing mobile access and digital adoption; abundant financial services and technology talent in the country; availability of equity and debt capital; and above all, government initiatives and regulatory efforts to create a conducive environment.
 
