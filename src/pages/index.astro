@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import UdupiFlipDeck from '../components/UdupiFlipDeck';
 import HomeTabs from '../components/HomeTabs';
-import { dailySnippets } from '../data/snippets';
+import { weeklySignals } from '../data/weeklySignals';
 
 const posts = await getCollection('blog');
 const latestPosts = posts
@@ -66,8 +66,97 @@ const formatDate = (date: Date) => {
     <!-- 01 / NOTES & IDEAS TAB -->
     <div slot="notesContent" class="space-y-16 sm:space-y-24 animate-fade-in">
       
-      <!-- Featured Insights & Projects -->
+      <!-- Weekly Signal Curation Section -->
       <section class="animate-fade-in">
+        <div class="space-y-1 mb-8">
+          <span class="text-xs font-bold uppercase tracking-widest text-stone-400 dark:text-stone-500 font-mono">
+            Weekly Signal
+          </span>
+          <h2 class="font-mono text-xl sm:text-2xl font-bold text-stone-900 dark:text-stone-100 uppercase ink-bleed">
+            [ The Weekly Signal ]
+          </h2>
+          <p class="font-serif italic text-stone-500 dark:text-stone-400 text-xs sm:text-sm">
+            Every week, I share exactly 3 highly-curated links (articles, frameworks, or podcasts) with a 2-sentence "why it matters" takeaway for Indian founders and investors.
+          </p>
+        </div>
+
+        <div class="space-y-12">
+          {weeklySignals.map((signal, index) => (
+            <div class={`border-2 border-dashed border-stone-200/40 dark:border-stone-800/40 rounded-2xl p-6 sm:p-8 bg-white/40 dark:bg-stone-950/10 shadow-sm relative ${index === 0 ? 'border-brand-light/35 dark:border-brand-dark/35 ring-4 ring-brand-light/5 dark:ring-brand-dark/5' : ''}`}>
+              
+              {/* Latest Issue Badge */}
+              {index === 0 && (
+                <span class="absolute -top-3 left-6 bg-brand-light dark:bg-brand-dark text-stone-50 dark:text-stone-950 text-[10px] font-mono font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-sm font-sans">
+                  Latest Issue
+                </span>
+              )}
+
+              {/* Issue Header */}
+              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-dashed border-stone-200/60 dark:border-stone-800/60 pb-4 mb-6">
+                <h3 class="font-mono text-lg font-bold text-stone-950 dark:text-stone-50">
+                  {signal.week}
+                </h3>
+                {signal.description && (
+                  <p class="font-serif text-xs text-stone-500 dark:text-stone-400 italic max-w-md sm:text-right">
+                    {signal.description}
+                  </p>
+                )}
+              </div>
+
+              {/* Curation List */}
+              <div class="space-y-6">
+                {signal.items.map((item, itemIdx) => (
+                  <div class="flex flex-col gap-2 pb-6 last:pb-0 border-b last:border-b-0 border-stone-100/60 dark:border-stone-900/60">
+                    <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs">
+                      {/* Number Badge */}
+                      <span class="font-mono font-bold text-brand-light dark:text-brand-dark bg-brand-light/10 dark:bg-brand-dark/15 w-5 h-5 rounded-full flex items-center justify-center text-[10px]">
+                        0{itemIdx + 1}
+                      </span>
+                      
+                      {/* Category Badge */}
+                      <span class="font-mono font-bold uppercase tracking-wide text-[9px] bg-stone-100 dark:bg-stone-900 text-stone-500 dark:text-stone-400 px-2 py-0.5 rounded">
+                        {item.category}
+                      </span>
+
+                      <span class="text-stone-300 dark:text-stone-700 font-mono">&bull;</span>
+                      
+                      {/* Source */}
+                      <span class="font-mono text-stone-400 dark:text-stone-500 text-[10px]">
+                        {item.source}
+                      </span>
+                    </div>
+
+                    {/* Title & Link */}
+                    <h4 class="font-mono text-base font-bold text-stone-900 dark:text-stone-100 hover:text-brand-light dark:hover:text-brand-dark transition-colors duration-200">
+                      <a href={item.url} target="_blank" rel="noopener noreferrer" class="highlighter-hover inline-flex items-center gap-1.5 group/link">
+                        {item.title}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="h-3.5 w-3.5 text-stone-400 dark:text-stone-500 group-hover/link:text-brand-light dark:group-hover/link:text-brand-dark transition-colors transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform">
+                          <line x1="7" y1="17" x2="17" y2="7"></line>
+                          <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                      </a>
+                    </h4>
+
+                    {/* Takeaway Box */}
+                    <div class="bg-stone-50/60 dark:bg-stone-900/10 border-l-2 border-brand-light/30 dark:border-brand-dark/30 pl-4 py-2 mt-1">
+                      <p class="font-serif text-xs text-stone-500 dark:text-stone-400 uppercase tracking-widest font-bold mb-1">
+                        Why this matters:
+                      </p>
+                      <p class="font-serif text-sm text-stone-700 dark:text-stone-300 leading-relaxed italic">
+                        {item.takeaway}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Featured Insights & Projects -->
+      <section class="border-t-2 border-dashed border-stone-200/40 dark:border-stone-800/40 pt-12 animate-fade-in-delayed">
         <div class="space-y-1 mb-8">
           <span class="text-xs font-bold uppercase tracking-widest text-stone-400 dark:text-stone-500 font-mono">
             Curation
@@ -154,57 +243,6 @@ const formatDate = (date: Date) => {
             </div>
           </div>
 
-        </div>
-      </section>
-
-      <!-- Daily Log / Snippets Stream -->
-      <section class="border-t-2 border-dashed border-stone-200/40 dark:border-stone-800/40 pt-12 animate-fade-in-delayed">
-        <div class="space-y-1 mb-8">
-          <span class="text-xs font-bold uppercase tracking-widest text-stone-400 dark:text-stone-500 font-mono">
-            Daily Log
-          </span>
-          <h2 class="font-mono text-xl sm:text-2xl font-bold text-stone-900 dark:text-stone-100 uppercase ink-bleed">
-            [ Snippets & Micro-Notes ]
-          </h2>
-          <p class="font-serif italic text-stone-500 dark:text-stone-400 text-xs sm:text-sm">
-            Quick, informal thoughts, quotes, and observations on things I read or come across.
-          </p>
-        </div>
-
-        <div class="relative pl-6 border-l border-dashed border-brand-light/30 dark:border-brand-dark/30 space-y-8">
-          {dailySnippets.map((snippet) => (
-            <div class="relative group/snippet">
-              <!-- Chronological dot indicator -->
-              <span class="absolute -left-[30px] top-1.5 w-2.5 h-2.5 rounded-full bg-brand-light dark:bg-brand-dark group-hover/snippet:scale-125 transition-transform shadow-sm shadow-brand-light/45"></span>
-              
-              <div class="space-y-2">
-                <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono">
-                  <span class="font-bold text-stone-400 dark:text-stone-500">{snippet.date}</span>
-                  <span class="text-stone-300 dark:text-stone-700">&bull;</span>
-                  <span class="font-bold text-brand-light dark:text-brand-dark uppercase tracking-wide text-[10px] bg-brand-light/5 dark:bg-brand-dark/5 px-2 py-0.5 rounded">
-                    {snippet.category}
-                  </span>
-                </div>
-                
-                <p class="font-serif text-sm sm:text-base text-stone-700 dark:text-stone-300 leading-relaxed max-w-2xl">
-                  {snippet.content}
-                </p>
-
-                {snippet.link && (
-                  <div class="pt-1">
-                    <a 
-                      href={snippet.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      class="inline-flex items-center gap-1 text-[11px] font-mono font-bold text-crimson-light dark:text-crimson-dark highlighter-hover"
-                    >
-                      {snippet.linkText || "Link"} &rarr;
-                    </a>
-                  </div>
-                )}
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 
