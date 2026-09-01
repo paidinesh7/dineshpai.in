@@ -42,7 +42,7 @@ const pageTitle = title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet" />
 
     <!-- Theme Initialization Script (Avoids flashing light theme) -->
     <script is:inline>
@@ -64,15 +64,15 @@ const pageTitle = title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
     <header class="border-b border-stone-200/60 dark:border-stone-800/60 bg-[#ecf1ee]/85 dark:bg-[#0c120e]/85 backdrop-blur-md sticky top-0 z-40 transition-colors duration-300">
       <div class="max-w-4xl mx-auto px-6 py-4 flex flex-row items-center justify-between gap-4">
         
-        <!-- Logo & Title -->
+        <!-- Logo & Title (Bespoke Typewriter Masthead) -->
         <a href="/" class="group flex items-center gap-3">
           <img src="/static/images/logo.svg" alt="Dinesh Pai" class="h-8 w-8 transition-transform group-hover:rotate-6 dark:invert" />
           <div class="flex flex-col">
-            <span class="font-serif text-lg sm:text-xl font-bold tracking-tight text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors duration-200">
-              Dinesh Pai's blog
+            <span class="font-mono text-base sm:text-lg font-bold tracking-tight text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors duration-200">
+              [ dinesh_pai:notes ]
             </span>
-            <span class="text-[10px] text-stone-500 dark:text-stone-400 font-sans tracking-wide hidden sm:inline uppercase font-medium">
-              Business and investments @ Zerodha | Field notes on capital markets
+            <span class="text-[9px] text-stone-500 dark:text-stone-400 font-mono tracking-wide hidden sm:inline uppercase font-bold">
+              Business & investments @ Zerodha
             </span>
           </div>
         </a>
@@ -114,6 +114,7 @@ const pageTitle = title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
         <div class="flex gap-4">
           <a href="https://twitter.com/dineshpaii" target="_blank" rel="noopener noreferrer" class="hover:text-brand-light dark:hover:text-brand-dark transition-colors">Twitter</a>
           <a href="https://www.linkedin.com/in/paidinesh1/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-light dark:hover:text-brand-dark transition-colors">LinkedIn</a>
+          <a href="/llms.txt" class="hover:text-brand-light dark:hover:text-brand-dark transition-colors">llms.txt</a>
           <a href="/index.xml" class="hover:text-brand-light dark:hover:text-brand-dark transition-colors">RSS Feed</a>
         </div>
       </div>

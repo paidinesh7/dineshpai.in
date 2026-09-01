@@ -22,8 +22,8 @@ const formatYear = (date: Date) => {
 
 <BaseLayout title="Blog Archive">
   <section class="page">
-    <h3 class="title" style="font-size: 2rem; font-family: Ramaraja, Georgia, serif; font-weight: 600; margin-bottom: 20px;">
-      Blog
+    <h3 class="title font-mono font-bold" style="font-size: 2rem; margin-bottom: 24px;">
+      [ dinesh_pai:archive ]
     </h3>
 
     <div class="posts">
@@ -34,8 +34,8 @@ const formatYear = (date: Date) => {
             <span class="year">{formatYear(post.data.date)}</span>
           </div>
           <div class="body">
-            <h3 class="title" style="font-weight: 700;">
-              <a href={`/blog/${post.slug}`} class="text-brand-light dark:text-brand-dark hover:underline font-bold" style="text-decoration: none;">{post.data.title}</a>
+            <h3 class="title">
+              <a href={`/blog/${post.slug}`} class="text-brand-light dark:text-brand-dark hover:underline">{post.data.title}</a>
             </h3>
             {post.data.description && (
               <div class="description">
@@ -48,3 +48,42 @@ const formatYear = (date: Date) => {
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  /* Custom Typewriter Overrides for Pixel-Perfect spacing and brand colors */
+  .posts .post {
+    border-bottom: 1px dashed rgba(44, 74, 62, 0.18) !important;
+    padding: 24px 0 !important;
+  }
+  .posts .post .body .title a {
+    color: #2c4a3e !important;
+    font-weight: 700 !important;
+    font-family: 'Courier Prime', 'Courier New', Courier, monospace !important;
+    font-size: 1.15rem !important;
+    text-decoration: none !important;
+  }
+  :global(.dark) .posts .post .body .title a {
+    color: #629e7a !important;
+  }
+  .posts .post .body .title a:hover {
+    text-decoration: underline !important;
+  }
+  .posts .post .body .description {
+    font-family: 'Courier Prime', 'Courier New', Courier, monospace !important;
+    font-size: 0.85rem !important;
+    color: #555 !important;
+    margin-top: 8px !important;
+    line-height: 1.5em !important;
+  }
+  :global(.dark) .posts .post .body .description {
+    color: #aaa !important;
+  }
+  .posts .post .date {
+    font-family: 'Courier Prime', 'Courier New', Courier, monospace !important;
+    font-size: 0.8rem !important;
+    color: #777 !important;
+  }
+  :global(.dark) .posts .post .date {
+    color: #888 !important;
+  }
+</style>
