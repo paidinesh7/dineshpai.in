@@ -1,6 +1,7 @@
 ---
 import ThemeToggle from '../components/ThemeToggle';
 import ReadingProgressBar from '../components/ReadingProgressBar';
+import MarketBackground from '../components/MarketBackground.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -58,6 +59,8 @@ const pageTitle = title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
   </head>
   <body class="bg-[#ecf1ee] dark:bg-[#0c120e] text-stone-800 dark:text-stone-200 min-h-screen flex flex-col font-serif transition-colors duration-300 antialiased selection:bg-brand-light/10 dark:selection:bg-brand-dark/20">
     
+    <MarketBackground />
+
     {showProgress && <ReadingProgressBar client:load />}
 
     <!-- Sticky Header / Masthead -->

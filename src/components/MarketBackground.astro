@@ -1,0 +1,84 @@
+---
+---
+
+<div class="fixed inset-0 pointer-events-none overflow-hidden select-none z-[-1] bg-transparent">
+  
+  <!-- Market Cycles / Sine Waves -->
+  <!-- Wave 1: Long-term Debt Cycle (slow, large, dotted trendline) -->
+  <div class="absolute w-[200%] h-64 bottom-0 left-0 opacity-[0.04] dark:opacity-[0.02] text-brand-light dark:text-brand-dark animate-wave-long">
+    <svg class="w-full h-full" fill="none" viewBox="0 0 1440 200" preserveAspectRatio="none">
+      <path d="M0,120 C240,180 480,40 720,120 C960,180 1200,40 1440,120 C1680,180 1920,40 2160,120 C2400,180 2640,40 2880,120" stroke="currentColor" stroke-width="2" stroke-dasharray="6 6" />
+      <path d="M0,120 C240,180 480,40 720,120 C960,180 1200,40 1440,120 C1680,180 1920,40 2160,120 C2400,180 2640,40 2880,120 L2880,200 L0,200 Z" fill="currentColor" opacity="0.05" />
+    </svg>
+  </div>
+
+  <!-- Wave 2: Short-term Market Fluctuations (faster, sharper, solid line) -->
+  <div class="absolute w-[200%] h-48 bottom-12 left-[-50%] opacity-[0.03] dark:opacity-[0.015] text-crimson-light dark:text-crimson-dark animate-wave-short">
+    <svg class="w-full h-full" fill="none" viewBox="0 0 1440 200" preserveAspectRatio="none">
+      <path d="M0,90 C180,30 360,150 540,90 C720,30 900,150 1080,90 C1260,30 1440,150 1620,90 C1800,30 1980,150 2160,90 C2340,30 2520,150 2700,90 C2880,30 3060,150 3240,90" stroke="currentColor" stroke-width="1.5" />
+    </svg>
+  </div>
+
+  <!-- Ambient Capital Pools (Slowly floating bids/asks blur) -->
+  <!-- Pool 1: Expansion / Bid flow (Warm green) -->
+  <div class="absolute top-[25%] left-[10%] w-64 h-64 rounded-full bg-brand-light/10 dark:bg-brand-dark/5 blur-3xl animate-float-capital opacity-50 dark:opacity-30"></div>
+  
+  <!-- Pool 2: Contraction / Ask flow (Crimson) -->
+  <div class="absolute bottom-[35%] right-[5%] w-80 h-80 rounded-full bg-crimson-light/8 dark:bg-crimson-dark/4 blur-3xl animate-float-capital-delayed opacity-50 dark:opacity-30"></div>
+
+</div>
+
+<style>
+  /* Fluid CSS Animations for Market Background */
+  @keyframes floatCapital {
+    0%, 100% {
+      transform: translateY(0) translateX(0) scale(1);
+    }
+    50% {
+      transform: translateY(-40px) translateX(25px) scale(1.1);
+    }
+  }
+
+  @keyframes floatCapitalDelayed {
+    0%, 100% {
+      transform: translateY(0) translateX(0) scale(1.05);
+    }
+    50% {
+      transform: translateY(35px) translateX(-30px) scale(0.95);
+    }
+  }
+
+  @keyframes waveLongMove {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes waveShortMove {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(50%);
+    }
+  }
+
+  .animate-float-capital {
+    animation: floatCapital 22s ease-in-out infinite;
+  }
+
+  .animate-float-capital-delayed {
+    animation: floatCapitalDelayed 28s ease-in-out infinite;
+  }
+
+  .animate-wave-long {
+    animation: waveLongMove 80s linear infinite;
+  }
+
+  .animate-wave-short {
+    animation: waveShortMove 50s linear infinite;
+  }
+</style>
