@@ -1,0 +1,22 @@
+# Dinesh Pai's blog
+
+Field notes on business, investments, and capital markets.
+
+## About
+Dinesh Pai leads startup and private market investments at Zerodha's Rainmatter fund, and supports climate and rural livelihood initiatives through the Rainmatter Foundation. He is an alumnus of D.E. Shaw and Calgary (MBA).
+
+## Main Sections
+- [Home Page](https://dineshpai.in/): Introduction, bio, sports allegiances (Manchester United, Scuderia Ferrari), and featured projects.
+- [Blog Archive](https://dineshpai.in/blog): Chronological list of field notes on capital markets.
+- [Podcasts](https://dineshpai.in/podcasts): Video discussions on Product-Market Fit, co-founder alignment, hiring, and risks.
+
+## Featured Projects & Toolkits
+- [onepager](https://github.com/paidinesh7/onepager): An AI financial statement analyzer yielding Altman Z-Scores, Piotroski F-Scores, and DuPont briefs in under 2 minutes.
+- [LegalOS](https://github.com/paidinesh7/LegalOS): AI legal assistant translating startup term sheets, SHAs, and SPAs for Indian founders.
+
+## Essays & Musings
+- [Bootstrapping in Vogue](https://dineshpai.in/blog/bootstrapping-in-vogue): On the discipline and leverage of self-funding startup paths.
+- [Indian Financial Services in Numbers](https://dineshpai.in/blog/indian-financial-service-in-numbers): Comprehensive data metrics outlining domestic banking and financial opportunities.
+- [Venture Capital for 2024 and Beyond](https://dineshpai.in/blog/venture-capital-for-2024-and-beyond): Shifting macro trends in private valuations, risk bets, and founder-investor alignment.
+- [Tariff tantrum](https://dineshpai.in/blog/tariff-tantrum): Musings on trade tariffs, capital protection, and market friction.
+- [Timing and Capital](https://dineshpai.in/blog/timing-and-capital---what-your-spreadsheets-cant-tell-you): Exploring what raw spreadsheets overlook regarding macro timing.
