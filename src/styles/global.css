@@ -12,9 +12,91 @@
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-stone-200 dark:bg-stone-800 rounded-full;
+    @apply bg-stone-300 dark:bg-stone-800 rounded-full;
   }
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-stone-300 dark:bg-stone-700;
+    @apply bg-stone-400 dark:bg-stone-700;
+  }
+
+  body {
+    background-color: #f5f2eb;
+    background-image: 
+      /* Subtle Architectural Graph Paper Grid (Ledger Lines) */
+      linear-gradient(to right, rgba(44, 74, 62, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(44, 74, 62, 0.04) 1px, transparent 1px);
+    background-size: 20px 20px;
+    position: relative;
+  }
+
+  /* Paper texture noise overlay */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 9999;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  :global(.dark) body {
+    background-color: #0f1310;
+    background-image: 
+      linear-gradient(to right, rgba(98, 158, 122, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(98, 158, 122, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+
+@layer utilities {
+  /* Vintage Ink-Bleed stamped effect for headings */
+  .ink-bleed {
+    text-shadow: 0.3px 0.3px 0.4px rgba(28, 28, 28, 0.4), -0.2px -0.2px 0.3px rgba(28, 28, 28, 0.3);
+    letter-spacing: -0.02em;
+    opacity: 0.96;
+  }
+
+  :global(.dark) .ink-bleed {
+    text-shadow: 0.3px 0.3px 0.4px rgba(227, 225, 218, 0.3), -0.2px -0.2px 0.3px rgba(227, 225, 218, 0.2);
+  }
+
+  /* Interactive Yellow Highlighter Marker Hover Effect */
+  .highlighter-hover {
+    background-image: linear-gradient(120deg, rgba(254, 240, 138, 0) 0%, rgba(254, 240, 138, 0) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in, background-image 0.25s ease-in;
+  }
+
+  .highlighter-hover:hover {
+    background-size: 100% 0.88em;
+    background-image: linear-gradient(120deg, rgba(254, 240, 138, 0.6) 0%, rgba(254, 240, 138, 0.65) 100%);
+    color: #1c1c1c !important;
+  }
+
+  :global(.dark) .highlighter-hover:hover {
+    background-image: linear-gradient(120deg, rgba(139, 30, 30, 0.35) 0%, rgba(139, 30, 30, 0.4) 100%);
+    color: #e3e1da !important;
+  }
+
+  /* Physical sharp off-axis shadow */
+  .analog-shadow {
+    box-shadow: 6px 6px 0px 0px rgba(28, 28, 28, 0.85);
+  }
+
+  :global(.dark) .analog-shadow {
+    box-shadow: 6px 6px 0px 0px rgba(98, 158, 122, 0.3);
+  }
+  
+  .analog-shadow-small {
+    box-shadow: 3px 3px 0px 0px rgba(28, 28, 28, 0.9);
+  }
+
+  :global(.dark) .analog-shadow-small {
+    box-shadow: 3px 3px 0px 0px rgba(98, 158, 122, 0.4);
   }
 }
