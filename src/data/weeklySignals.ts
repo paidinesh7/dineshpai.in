@@ -17,7 +17,7 @@ export const weeklySignals: WeeklySignal[] = [
   {
     id: "2",
     week: "Week of August 31, 2026",
-    description: "Observations on trust as a moat in fintech, Howard Marks on contrarianism, and the structural shift of Indian family offices.",
+    description: "Observations on trust as a moat in fintech, navigating advance taxes in India, and the structural shift of Indian family offices.",
     items: [
       {
         title: "The Moat of Brand Credibility in Indian Finance",
@@ -27,11 +27,11 @@ export const weeklySignals: WeeklySignal[] = [
         takeaway: "In financial services, trust isn't built through software features, which are easily commoditized, but through reputation, extreme cost leadership, and surviving down-cycles. For Indian fintechs, regulatory compliance and transparency must be treated as strategic moats rather than cost centers."
       },
       {
-        title: "True Contrarianism Requires Being Lonely and Right",
-        source: "Howard Marks (Oaktree Memo)",
-        url: "https://www.oaktreecapital.com/insights/memos",
-        category: "Investment Strategy",
-        takeaway: "Howard Marks reminds us that you cannot outperform by doing the same things as everyone else. The hardest part of venture or capital markets isn't being different—it's having the conviction to stay different when the crowd thinks you are completely wrong."
+        title: "Navigating Advance Taxes in India: Why and How to Pay",
+        source: "Income Tax Department of India Guide",
+        url: "https://www.incometax.gov.in/",
+        category: "Personal Finance & Taxes",
+        takeaway: "If your tax liability exceeds ₹10,000 after TDS, you must pay advance tax in 4 quarterly installments (June 15, Sept 15, Dec 15, Mar 15) to avoid 1% per month penalty interest under Sections 234B/234C. Tip: Always download your updated AIS/TIS form on the e-filing portal to capture non-salary capital gains or interest income early, and aim to clear the 45% cumulative threshold by the September 15 deadline."
       },
       {
         title: "The Rise of Direct Investments by Indian Family Offices",
