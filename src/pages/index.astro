@@ -246,57 +246,6 @@ const formatDate = (date: Date) => {
         </div>
       </section>
 
-      <!-- Latest Field Notes Section -->
-      <section class="border-t-2 border-dashed border-stone-200/40 dark:border-stone-800/40 pt-12 animate-fade-in-delayed">
-        <div class="flex items-baseline justify-between mb-8">
-          <h2 class="font-mono text-xl sm:text-2xl font-bold text-stone-900 dark:text-stone-100 uppercase ink-bleed">
-            [ Latest Field Notes ]
-          </h2>
-          <a href="/blog" class="font-mono text-xs font-bold uppercase tracking-wider text-brand-light dark:text-brand-dark hover:text-stone-900 dark:hover:text-stone-100 transition-colors">
-            Read All Archives &rarr;
-          </a>
-        </div>
-
-        <!-- Newspaper grid of posts -->
-        <div class="grid gap-8 md:grid-cols-3">
-          {latestPosts.map((post) => (
-            <article class="flex flex-col h-full border-b md:border-b-0 md:border-r last:border-r-0 border-stone-200/40 dark:border-stone-800/40 pb-6 md:pb-0 md:pr-6 last:pr-0 group">
-              <div class="space-y-3 flex-grow">
-                <!-- Post Date -->
-                <time class="text-xs font-mono text-stone-400 dark:text-stone-500 font-bold">
-                  {formatDate(post.data.date)}
-                </time>
-
-                <!-- Post Title -->
-                <h3 class="font-serif text-base sm:text-lg font-bold leading-snug text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors duration-200">
-                  <a href={`/blog/${post.slug}`}>
-                    {post.data.title}
-                  </a>
-                </h3>
-
-                <!-- Post Description -->
-                {post.data.description && (
-                  <p class="font-serif text-stone-600 dark:text-stone-400 text-xs line-clamp-3 leading-relaxed">
-                    {post.data.description}
-                  </p>
-                )}
-              </div>
-
-              <!-- Tags -->
-              {post.data.tags && post.data.tags.length > 0 && (
-                <div class="flex flex-wrap gap-1.5 mt-4">
-                  {post.data.tags.map((tag) => (
-                    <span class="text-[9px] font-mono font-bold uppercase tracking-wider bg-stone-100/60 dark:bg-stone-900/60 text-stone-500 dark:text-stone-400 px-2 py-0.5 rounded">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              )}
-            </article>
-          ))}
-        </div>
-      </section>
-
       <!-- CTA/Newsletter Box -->
       <section class="bg-stone-100/30 dark:bg-stone-900/10 rounded-2xl border-2 border-dashed border-stone-200/60 dark:border-stone-800/60 p-6 sm:p-8 mt-16 sm:mt-24 text-center space-y-4 shadow-sm">
         <h3 class="font-mono text-lg font-bold text-stone-900 dark:text-stone-100 uppercase ink-bleed">
