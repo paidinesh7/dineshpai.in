@@ -82,8 +82,8 @@ const formatDate = (date: Date) => {
 
         <div class="space-y-12">
           {weeklySignals.map((signal, index) => (
-            <div class={`border-2 border-dashed border-stone-200/40 dark:border-stone-800/40 rounded-2xl p-6 sm:p-8 bg-white/40 dark:bg-stone-950/10 shadow-sm relative ${index === 0 ? 'border-brand-light/35 dark:border-brand-dark/35 ring-4 ring-brand-light/5 dark:ring-brand-dark/5' : ''}`}>
-              
+            <div class={`border-2 border-dashed border-stone-200/60 dark:border-stone-800/60 rounded-2xl p-5 sm:p-8 bg-white/40 dark:bg-stone-950/10 shadow-sm relative ${index === 0 ? 'border-brand-light/35 dark:border-brand-dark/35 ring-4 ring-brand-light/5 dark:ring-brand-dark/5' : ''}`}>
+
               {/* Latest Issue Badge */}
               {index === 0 && (
                 <span class="absolute -top-3 left-6 bg-brand-light dark:bg-brand-dark text-stone-50 dark:text-stone-950 text-[10px] font-mono font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-sm font-sans">
@@ -169,7 +169,7 @@ const formatDate = (date: Date) => {
         <div class="grid gap-6 md:grid-cols-2">
           
           <!-- Viral X Post Card (Storytelling) -->
-          <div class="flex flex-col border border-dashed border-brand-light/30 dark:border-brand-dark/30 bg-stone-50/40 dark:bg-stone-900/15 rounded-2xl p-6 hover:border-brand-light dark:hover:border-brand-dark transition-all duration-300 relative group shadow-sm">
+          <div class="flex flex-col border border-dashed border-brand-light/30 dark:border-brand-dark/30 bg-stone-50/40 dark:bg-stone-900/15 rounded-2xl p-5 sm:p-6 hover:border-brand-light dark:hover:border-brand-dark transition-all duration-300 relative group shadow-sm">
             <div class="flex items-center gap-2 mb-4">
               <!-- Small Twitter/X Logo SVG -->
               <svg class="h-4 w-4 text-stone-400 dark:text-stone-500" fill="currentColor" viewBox="0 0 24 24">
@@ -202,7 +202,7 @@ const formatDate = (date: Date) => {
           </div>
 
           <!-- Tech Projects Card -->
-          <div class="flex flex-col border border-dashed border-brand-light/30 dark:border-brand-dark/30 bg-stone-50/40 dark:bg-stone-900/15 rounded-2xl p-6 hover:border-brand-light dark:hover:border-brand-dark transition-all duration-300 relative group shadow-sm">
+          <div class="flex flex-col border border-dashed border-brand-light/30 dark:border-brand-dark/30 bg-stone-50/40 dark:bg-stone-900/15 rounded-2xl p-5 sm:p-6 hover:border-brand-light dark:hover:border-brand-dark transition-all duration-300 relative group shadow-sm">
             <div class="flex items-center gap-2 mb-4">
               <!-- GitHub Logo SVG -->
               <svg class="h-4 w-4 text-stone-400 dark:text-stone-500" fill="currentColor" viewBox="0 0 24 24">

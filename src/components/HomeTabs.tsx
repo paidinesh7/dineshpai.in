@@ -11,26 +11,26 @@ export default function HomeTabs({ aboutContent, notesContent }: HomeTabsProps) 
   return (
     <div className="w-full">
       {/* Tab Switcher */}
-      <div className="flex gap-4 border-b-2 border-dashed border-stone-200/40 dark:border-stone-800/40 pb-4 mb-10 font-mono text-xs sm:text-sm uppercase tracking-wider select-none">
+      <div className="flex gap-2 sm:gap-4 border-b-2 border-dashed border-stone-200/40 dark:border-stone-800/40 pb-4 mb-10 font-mono text-[10px] xs:text-xs sm:text-sm uppercase tracking-wider select-none">
         <button
           onClick={() => setActiveTab('notes')}
-          className={`cursor-pointer px-3.5 py-1.5 rounded-lg transition-all duration-300 font-bold focus:outline-none ${
+          className={`cursor-pointer px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-lg transition-all duration-300 font-bold focus:outline-none ${
             activeTab === 'notes'
               ? 'bg-brand-light text-stone-50 dark:bg-brand-dark dark:text-stone-950 shadow-sm'
               : 'text-stone-400 dark:text-stone-500 hover:text-stone-900 dark:hover:text-stone-100'
           }`}
         >
-          [ 01 / notes_and_ideas ]
+          [ 01 / notes<span className="hidden sm:inline">_and_ideas</span> ]
         </button>
         <button
           onClick={() => setActiveTab('about')}
-          className={`cursor-pointer px-3.5 py-1.5 rounded-lg transition-all duration-300 font-bold focus:outline-none ${
+          className={`cursor-pointer px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-lg transition-all duration-300 font-bold focus:outline-none ${
             activeTab === 'about'
               ? 'bg-brand-light text-stone-50 dark:bg-brand-dark dark:text-stone-950 shadow-sm'
               : 'text-stone-400 dark:text-stone-500 hover:text-stone-900 dark:hover:text-stone-100'
           }`}
         >
-          [ 02 / about_me ]
+          [ 02 / about<span className="hidden sm:inline">_me</span> ]
         </button>
       </div>
 
