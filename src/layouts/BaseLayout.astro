@@ -108,9 +108,9 @@ const pageTitle = title === "Home" ? siteTitle : `${title} | ${siteTitle}`;
     
     {showProgress && <ReadingProgressBar client:load />}
 
-    <!-- Minimal Header / Navigation -->
+    <!-- Minimal Header / Navigation (Aligned to max-w-3xl to match the body grid exactly) -->
     <header class="border-b border-stone-200/40 dark:border-stone-800/40 py-6 mb-8 transition-colors duration-300 bg-[#ecf1ee]/85 dark:bg-[#0c120e]/85 backdrop-blur-md sticky top-0 z-40">
-      <div class="max-w-4xl mx-auto px-6 flex flex-row items-center justify-between gap-4">
+      <div class="max-w-3xl mx-auto px-6 flex flex-row items-center justify-between gap-4">
         <a href="/" class="flex flex-col gap-0.5 group">
           <span class="font-serif text-2xl sm:text-3xl font-black tracking-tight text-stone-900 dark:text-stone-100 hover:text-brand-light dark:hover:text-brand-dark transition-colors duration-200">
             Dinesh Pai
@@ -120,7 +120,7 @@ const pageTitle = title === "Home" ? siteTitle : `${title} | ${siteTitle}`;
           </span>
         </a>
         <div class="flex items-center gap-6">
-          <a href="/portfolio" class="font-mono text-xs font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:underline">
+          <a href="/portfolio" class="font-mono text-sm font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:underline">
             Investments
           </a>
           <a href="/index.xml" title="Subscribe to RSS Feed" class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors p-1">
@@ -136,13 +136,13 @@ const pageTitle = title === "Home" ? siteTitle : `${title} | ${siteTitle}`;
     </header>
 
     <!-- Main Content -->
-    <main class="flex-grow max-w-4xl mx-auto w-full px-6 py-8 sm:py-12 relative z-10">
+    <main class="flex-grow max-w-3xl mx-auto w-full px-6 py-8 sm:py-12 relative z-10">
       <slot />
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (Aligned to max-w-3xl to match the body grid exactly) -->
     <footer class="border-t border-stone-200/40 dark:border-stone-800/40 py-8 transition-colors duration-300">
-      <div class="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 dark:text-stone-500 font-sans">
+      <div class="max-w-3xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 dark:text-stone-500 font-sans">
         <div>
           Dinesh Pai &copy; 2023 - 2026. Built with Astro & Tailwind CSS.
         </div>
