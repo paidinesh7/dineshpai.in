@@ -61,15 +61,14 @@ const dineshPodcasts = [
 ];
 ---
 
-<BaseLayout title="Home" description="Dinesh Pai works at Zerodha, and manages their private investments at Rainmatter.">
-  
-  <!-- SINGLE-COLUMN LAYOUT: RESTORED TO ORIGINAL CLEAN MAX-W-3RD WIDTH -->
+<BaseLayout>
   <div class="max-w-3xl mx-auto space-y-16 py-6 font-serif">
     
     <!-- BIO SECTION -->
     <section class="flex flex-col-reverse md:flex-row gap-8 items-start">
       <div class="flex-grow space-y-4">
-        <div class="text-stone-800 dark:text-stone-200 leading-relaxed text-base sm:text-lg space-y-4">
+        <!-- Content text size reduced from text-base sm:text-lg to text-sm sm:text-base for classic editorial hierarchy -->
+        <div class="text-stone-800 dark:text-stone-200 leading-relaxed text-sm sm:text-base space-y-4">
           <p>
             I grew up on the banks of River Seetha in <span class="font-bold text-stone-950 dark:text-stone-50">Udupi</span>. Having watched everyone in the family build small businesses, I had decided early in life that I would always want to find my way towards capital markets. Once I graduated from engineering in 2014, I joined D.E Shaw India, a hedge fund. I was amazed at how much more there was to learn; so went and got my MBA in 2019 from the cleanest city on earth, Calgary, Canada.
           </p>
@@ -79,7 +78,7 @@ const dineshPodcasts = [
           <p>
             I currently work at <a href="https://zerodha.com/" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Zerodha</a>, where I help with investments in private markets through <a href="https://rainmatter.com/" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Rainmatter</a>. I am also passionate about projects that can safeguard livelihoods most at risk via the <a href="https://rainmatter.org/" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Rainmatter Foundation</a>.
           </p>
-          <p class="text-stone-600 dark:text-stone-400 italic text-base border-l-2 border-dashed border-stone-200 dark:border-stone-800 pl-4 mt-6">
+          <p class="text-stone-600 dark:text-stone-400 italic text-sm sm:text-base border-l-2 border-dashed border-stone-200 dark:border-stone-800 pl-4 mt-6">
             I believe the crux of business lies in simplicity, extreme cost-discipline, and doing right by your customers and employees.
           </p>
         </div>
@@ -97,10 +96,12 @@ const dineshPodcasts = [
 
     <!-- HOW I INVEST SECTION -->
     <section class="space-y-4">
-      <h2 class="font-mono text-lg font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
+      <!-- Title size increased from text-lg to text-xl sm:text-2xl for clear visual hierarchy -->
+      <h2 class="font-mono text-xl sm:text-2xl font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
         How I Invest
       </h2>
-      <div class="text-stone-800 dark:text-stone-200 leading-relaxed text-base sm:text-lg space-y-4">
+      <!-- Content text size reduced from text-base sm:text-lg to text-sm sm:text-base -->
+      <div class="text-stone-800 dark:text-stone-200 leading-relaxed text-sm sm:text-base space-y-4">
         <p>
           I help Zerodha manage private market investments through <a href="https://rainmatter.com/" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Rainmatter</a>.
         </p>
@@ -126,7 +127,8 @@ const dineshPodcasts = [
 
     <!-- ESSAYS / WRITING SECTION -->
     <section class="space-y-4">
-      <h2 class="font-mono text-lg font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
+      <!-- Title size increased from text-lg to text-xl sm:text-2xl -->
+      <h2 class="font-mono text-xl sm:text-2xl font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
         Essays & Writing
       </h2>
       <ul class="space-y-3">
@@ -153,7 +155,8 @@ const dineshPodcasts = [
     <!-- THE WEEKLY SIGNAL SECTION -->
     <section class="space-y-4">
       <div class="border-b border-stone-200 dark:border-stone-800 pb-1.5 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-        <h2 class="font-mono text-lg font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100">
+        <!-- Title size increased from text-lg to text-xl sm:text-2xl -->
+        <h2 class="font-mono text-xl sm:text-2xl font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100">
           The Weekly Signal
         </h2>
         <span class="text-xs text-stone-400 dark:text-stone-500 font-mono">
@@ -242,7 +245,8 @@ const dineshPodcasts = [
 
     <!-- PODCASTS SECTION -->
     <section class="space-y-4">
-      <h2 class="font-mono text-lg font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
+      <!-- Title size increased from text-lg to text-xl sm:text-2xl -->
+      <h2 class="font-mono text-xl sm:text-2xl font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
         Podcasts & Video Discussions
       </h2>
       <ul class="space-y-6">
@@ -267,7 +271,8 @@ const dineshPodcasts = [
 
     <!-- PROJECTS SECTION -->
     <section class="space-y-4">
-      <h2 class="font-mono text-lg font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
+      <!-- Title size increased from text-lg to text-xl sm:text-2xl -->
+      <h2 class="font-mono text-xl sm:text-2xl font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
         Featured Toolkits & Projects
       </h2>
       <ul class="space-y-4">
