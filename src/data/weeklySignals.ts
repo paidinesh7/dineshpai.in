@@ -15,6 +15,33 @@ export interface WeeklySignal {
 
 export const weeklySignals: WeeklySignal[] = [
   {
+    id: "week-37-2026",
+    week: "Week of September 19, 2026",
+    items: [
+      {
+        title: "after this post you will be sizing bets in your head",
+        source: "Moontower Meta",
+        url: "https://moontower.substack.com/p/after-this-post-you-will-be-sizing",
+        category: "Risk Management",
+        takeaway: "Option trader Kris Abdelmessih's masterclass on position sizing using the Kelly Criterion, balancing compounding and survival under uncertainty, and why over-betting is the ultimate cause of allocator failure."
+      },
+      {
+        title: "Nubank America & The AWS of Money",
+        source: "fintechbrainfood.com",
+        url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash",
+        category: "Fintech",
+        takeaway: "Deconstructs Nubank's massive U.S. neobanking debut using Lead Bank as a sponsor shortcut, and how their stablecoin-powered 'Nu Global' remittance engine bridges retail banking with on-chain rails."
+      },
+      {
+        title: "Kenyans Did Homework for Years. Then A.I. Arrived.",
+        source: "New York Times",
+        url: "https://www.nytimes.com/2026/09/05/technology/kenya-college-essays-ai.html",
+        category: "Digital Livelihoods",
+        takeaway: "A sobering case study of how generative AI completely decimated a thriving 40,000-person essay-writing gig economy in Nairobi, warning us of the extreme fragility of transactional digital labor."
+      }
+    ]
+  },
+  {
     id: "week-36-2026",
     week: "Week of September 12, 2026",
     items: [
