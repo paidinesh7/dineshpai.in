@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const portfolio = {
+  Fintech: [
+    { name: "Assetplus", desc: "Digital mutual fund distribution platform for advisors." },
+    { name: "Capitalmind", desc: "Quantitative investment management & research platform." },
+    { name: "Indiadatahub", desc: "Comprehensive Indian macroeconomic & corporate data engine." },
+    { name: "M2P", desc: "Embedded API financial infrastructure & card issuance." },
+    { name: "Mprofit", desc: "Multi-asset portfolio management & accounting software." },
+    { name: "Financialist", desc: "Simplifying wealth advisory and financial planning." }
+  ],
+  Climate: [
+    { name: "Akshayakalpa", desc: "Certified organic dairy farming & sustainable agriculture." },
+    { name: "Green Worms", desc: "Waste management & circular economy waste-to-resource loops." },
+    { name: "Krop AI", desc: "AI-powered precision farming & crop yield analytics." },
+    { name: "Matchlog", desc: "Optimizing container logistics & empty container repositioning." },
+    { name: "Naxatra Labs", desc: "Developing gearless high-torque electric motors." },
+    { name: "Neufin", desc: "SaaS platform aggregating climate finance & carbon offset capital." },
+    { name: "Ossus Bio", desc: "Generating clean green bio-hydrogen from industrial wastewater." },
+    { name: "Solarsquare", desc: "Residential rooftop solar installation & financing." },
+    { name: "Two Brothers Organic Farms", desc: "Regenerative, soil-first organic farming & consumer brand." },
+    { name: "Voltseal", desc: "Advanced cell-level thermal runaway barriers for EVs." },
+    { name: "Zerocircle", desc: "Seaweed-based biodegradable packaging alternative to plastic." }
+  ],
+  Health: [
+    { name: "Adsys", desc: "Diagnostic devices & medical imaging technology." },
+    { name: "Arboreal", desc: "Stevia-based natural sugar-reduction solutions." },
+    { name: "Blackfrog", desc: "Portable medical-grade active cooling for vaccine logistics." },
+    { name: "Emoha", desc: "Connected 360-degree senior citizen care ecosystem." },
+    { name: "Sukino", desc: "Out-of-hospital post-operative rehabilitative care." },
+    { name: "SuperYou", desc: "Accessible active-wear designed for diverse bodies." },
+    { name: "The Whole Truth", desc: "100% clean-label food & clean snacking brand." }
+  ],
+  Other: [
+    { name: "Galaxeye", desc: "Multi-sensor imaging satellite constellations (SAR + Optical)." },
+    { name: "Karban", desc: "Design-first home air purification & smart climate hardware." },
+    { name: "Spacefields", desc: "Custom solid-fuel rocket propulsion systems." }
+  ]
+};
+---
+
+<BaseLayout title="My Investments" description="A simple, clean index of early-stage startups and teams Dinesh Pai has led investments for at Rainmatter.">
+  <div class="max-w-3xl mx-auto space-y-16 py-6 font-serif">
+    
+    <!-- BACK TO HOME LINK -->
+    <div class="font-mono text-xs uppercase tracking-wider">
+      <a href="/" class="text-stone-500 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1">
+        &larr; Back to Home
+      </a>
+    </div>
+
+    <!-- TITLE -->
+    <header class="space-y-4">
+      <h1 class="text-3xl sm:text-4xl font-black tracking-tight text-stone-900 dark:text-stone-100">
+        My Led Investments
+      </h1>
+      <p class="font-serif italic text-stone-500 dark:text-stone-400 text-sm sm:text-base border-l-2 border-stone-200 dark:border-stone-800 pl-4">
+        A simple, minimalist ledger of the companies, teams, and builders I have had the privilege to lead investments for at Rainmatter.
+      </p>
+    </header>
+
+    <!-- PORTFOLIO CATEGORIES -->
+    <div class="space-y-16">
+      {Object.entries(portfolio).map(([category, companies]) => (
+        <section class="space-y-6">
+          <h2 class="font-mono text-xs font-bold uppercase tracking-widest text-stone-500 dark:text-stone-400 border-b border-stone-200 dark:border-stone-800 pb-1.5 flex justify-between">
+            <span>{category}</span>
+            <span class="text-[10px] text-stone-400 dark:text-stone-500 font-normal">{companies.length} companies</span>
+          </h2>
+          
+          <!-- PORTFOLIO GRID -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {companies.map((company) => (
+              <div class="group p-5 rounded-lg bg-stone-100/50 dark:bg-stone-900/30 border border-stone-200/40 dark:border-stone-800/40 hover:border-brand-light dark:hover:border-brand-dark transition-all duration-300 flex flex-col justify-between">
+                <div class="space-y-1.5">
+                  <h3 class="font-serif text-lg font-black text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors duration-200">
+                    {company.name}
+                  </h3>
+                  <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed font-serif">
+                    {company.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+
+    <!-- FOOTER DIVIDER -->
+    <div class="border-t border-stone-200 dark:border-stone-800 pt-6 font-mono text-xs uppercase tracking-wider">
+      <a href="/" class="text-stone-500 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark hover:underline">
+        &larr; Back to Home
+      </a>
+    </div>
+
+  </div>
+</BaseLayout>
