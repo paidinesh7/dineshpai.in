@@ -1,0 +1,176 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { goodReads } from '../data/goodReads';
+
+// Extract all unique tags
+const allTags = Array.from(new Set(goodReads.flatMap(item => item.tags))).sort();
+---
+
+<BaseLayout title="Curated Reads" description="Dinesh Pai's curated library of timeless books, essays, and frameworks on strategy, finance, and capital cycles.">
+  <div class="max-w-3xl mx-auto space-y-12 py-6 font-serif">
+    
+    <!-- BACK TO HOME LINK -->
+    <div class="font-mono text-xs uppercase tracking-wider">
+      <a href="/" class="text-stone-500 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1">
+        &larr; Back to Home
+      </a>
+    </div>
+
+    <!-- TITLE -->
+    <header class="space-y-4">
+      <h1 class="text-3xl sm:text-4xl font-black tracking-tight text-stone-900 dark:text-stone-100">
+        My Curated Reads & Library
+      </h1>
+      <p class="font-serif italic text-stone-500 dark:text-stone-400 text-sm sm:text-base border-l-2 border-stone-200 dark:border-stone-800 pl-4">
+        A personal, searchable registry of 20 books and essays that have fundamentally shaped my perspective on business, investments, and human behavior.
+      </p>
+    </header>
+
+    <!-- SEARCH & FILTER INTERFACE -->
+    <div class="space-y-4 bg-stone-100 dark:bg-stone-900/40 p-5 rounded-lg border border-stone-200/40 dark:border-stone-800/40">
+      <div class="space-y-1.5">
+        <label for="search-input" class="font-mono text-[10px] font-bold uppercase tracking-wider text-stone-400 dark:text-stone-500 block">
+          Search Library
+        </label>
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="Search by title, author, or summary..." 
+          class="w-full px-3.5 py-2 rounded border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 font-serif text-sm focus:outline-none focus:border-brand-light dark:focus:border-brand-dark transition-colors duration-200"
+        />
+      </div>
+
+      <!-- TAG CLOUD -->
+      <div class="space-y-2">
+        <span class="font-mono text-[10px] font-bold uppercase tracking-wider text-stone-400 dark:text-stone-500 block">
+          Filter by Tag
+        </span>
+        <div class="flex flex-wrap gap-2">
+          <button class="tag-btn font-mono text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-brand-light/10 dark:bg-brand-dark/20 text-brand-light dark:text-brand-dark hover:bg-brand-light/20 dark:hover:bg-brand-dark/30 transition-colors" data-tag="all">
+            All
+          </button>
+          {allTags.map((tag) => (
+            <button class="tag-btn font-mono text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-stone-200/60 dark:bg-stone-800/60 text-stone-600 dark:text-stone-400 hover:bg-stone-300 dark:hover:bg-stone-700 transition-colors" data-tag={tag}>
+              #{tag}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- LIBRARY LIST -->
+    <div id="reads-list" class="space-y-10">
+      {goodReads.map((read) => (
+        <section class="read-card space-y-4 pb-8 border-b border-dashed border-stone-200 dark:border-stone-800 last:border-0 last:pb-0" data-tags={read.tags.join(',')} data-search={`${read.title} ${read.author} ${read.summary}`.toLowerCase()}>
+          
+          <!-- METADATA -->
+          <div class="space-y-1">
+            <div class="flex flex-wrap items-center gap-x-2 text-[10px] font-mono font-bold text-stone-400 dark:text-stone-500 uppercase tracking-wide">
+              <span>{read.category}</span>
+              <span>&bull;</span>
+              <span>{read.author}</span>
+            </div>
+            
+            <h2 class="text-xl font-bold text-stone-900 dark:text-stone-100">
+              {read.url ? (
+                <a href={read.url} target="_blank" rel="noopener noreferrer" class="hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1 group">
+                  {read.title}
+                  <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+                </a>
+              ) : (
+                read.title
+              )}
+            </h2>
+          </div>
+
+          <!-- SUMMARY -->
+          <p class="text-stone-800 dark:text-stone-200 leading-relaxed text-sm sm:text-base font-serif">
+            {read.summary}
+          </p>
+
+          <!-- TAKEAWAYS -->
+          <div class="space-y-2 bg-stone-100/50 dark:bg-stone-900/30 p-4 rounded border border-stone-200/20 dark:border-stone-800/20 pl-5 border-l-2 border-l-brand-light dark:border-l-brand-dark">
+            <h3 class="font-mono text-[10px] font-bold uppercase tracking-widest text-stone-400 dark:text-stone-500 mb-1">
+              Key Lessons / Takeaways:
+            </h3>
+            <ul class="space-y-2 list-disc pl-4 text-xs sm:text-sm text-stone-700 dark:text-stone-300 font-serif leading-relaxed">
+              {read.takeaways.map((takeaway) => (
+                <li>{takeaway}</li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- TAGS -->
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            {read.tags.map((tag) => (
+              <span class="font-mono text-[9px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-stone-200/40 dark:bg-stone-800/40 text-stone-500 dark:text-stone-400">
+                #{tag}
+              </span>
+            ))}
+          </div>
+
+        </section>
+      ))}
+    </div>
+
+    <!-- FOOTER DIVIDER -->
+    <div class="border-t border-stone-200 dark:border-stone-800 pt-6 font-mono text-xs uppercase tracking-wider">
+      <a href="/" class="text-stone-500 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark hover:underline">
+        &larr; Back to Home
+      </a>
+    </div>
+
+  </div>
+</BaseLayout>
+
+<script>
+  const searchInput = document.getElementById('search-input') as HTMLInputElement;
+  const tagButtons = document.querySelectorAll('.tag-btn');
+  const readCards = document.querySelectorAll('.read-card');
+  
+  let currentTag = 'all';
+  let searchQuery = '';
+
+  const filterLibrary = () => {
+    readCards.forEach((card) => {
+      const cardTags = (card.getAttribute('data-tags') || '').split(',');
+      const searchContent = card.getAttribute('data-search') || '';
+      
+      const matchesTag = currentTag === 'all' || cardTags.includes(currentTag);
+      const matchesSearch = searchContent.includes(searchQuery.toLowerCase());
+      
+      if (matchesTag && matchesSearch) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  };
+
+  // Search Input Listener
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = (e.target as HTMLInputElement).value;
+      filterLibrary();
+    });
+  }
+
+  // Tag Button Listener
+  tagButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const selectedTag = btn.getAttribute('data-tag') || 'all';
+      currentTag = selectedTag;
+      
+      // Update UI classes
+      tagButtons.forEach((b) => {
+        b.classList.remove('bg-brand-light/10', 'dark:bg-brand-dark/20', 'text-brand-light', 'dark:text-brand-dark');
+        b.classList.add('bg-stone-200/60', 'dark:bg-stone-800/60', 'text-stone-600', 'dark:text-stone-400');
+      });
+      
+      btn.classList.remove('bg-stone-200/60', 'dark:bg-stone-800/60', 'text-stone-600', 'dark:text-stone-400');
+      btn.classList.add('bg-brand-light/10', 'dark:bg-brand-dark/20', 'text-brand-light', 'dark:text-brand-dark');
+      
+      filterLibrary();
+    });
+  });
+</script>

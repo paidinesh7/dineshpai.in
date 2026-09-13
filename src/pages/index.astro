@@ -6,295 +6,250 @@ import { weeklySignals } from '../data/weeklySignals';
 const posts = await getCollection('blog');
 const sortedPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
-// Render newest signals first
-const sortedSignals = weeklySignals.sort((a, b) => {
-  return b.id.localeCompare(a.id);
-});
-
-const dineshPodcasts = [
-  {
-    title: "Nithin Kamath's Guide to How Startups Think of Risks & Moats",
-    series: "The Startup Blueprint — Special Episode",
-    speakers: "Nithin Kamath (Co-founder, Zerodha) & Dinesh Pai",
-    description: "An essential conversation with Nithin Kamath on how Zerodha built its moats over three distinct phases: low-cost referral pricing, technology-led, and ultimately credibility & brand trust. Nithin details his primary role as a risk manager, capital allocation frameworks, and the personal routines that sustain him.",
-    link: "https://www.youtube.com/watch?v=eZdrpChV0C4&t=38s",
-    tags: ["Risk Management", "Business Moats", "Capital Allocation"]
-  },
-  {
-    title: "How VCs Measure Product-Market Fit",
-    series: "How VCs Think — Episode 7",
-    speakers: "Sajith Pai (Blume Ventures) & Dinesh Pai (Rainmatter)",
-    description: "A deep dive breaking down Product-Market Fit (PMF) into Product-to-Problem Fit (PPF) and Motion-to-Market Fit (MMF). We discuss the GRUE (Growth, Retention, Unit Economics) framework and why common metrics like the Sean Ellis test can sometimes mislead founders.",
-    link: "https://www.youtube.com/watch?v=-TqOl7NjB7o",
-    tags: ["Product-Market Fit", "Metrics", "Frameworks"]
-  },
-  {
-    title: "What VCs Look For in the First Meeting",
-    series: "How VCs Think — Episode 1",
-    speakers: "Kushal Bhagia (All In Capital) & Dinesh Pai (Rainmatter)",
-    description: "Demystifying the initial meeting between founders and investors. We explore the 'Why You?' test, the value of 'earned insights' from operating in a market, and common early-stage red flags like unbalanced equity splits.",
-    link: "https://www.youtube.com/watch?v=dhuHgsGevks&t=96s",
-    tags: ["First Meeting", "Pitching", "Equity Splits"]
-  },
-  {
-    title: "How to Hire and Retain Early Employees",
-    series: "How VCs Think — Episode 4",
-    speakers: "Dinesh Pai (Rainmatter) & Portfolio Founders",
-    description: "Navigating the hardest hurdle in early-stage startups: talent acquisition. We discuss why early team crises often build resilience, how to align incentives, and how to build a shared sense of mission that outlasts monetary compensation.",
-    link: "https://www.youtube.com/watch?v=0fxTjJ9jVpg&t=14s",
-    tags: ["Hiring", "Company Culture", "Early Stage"]
-  },
-  {
-    title: "How to Find a Co-founder",
-    series: "The Startup Blueprint — Episode 1",
-    speakers: "Ashish Goel (Co-founder, Urban Ladder) & Dinesh Pai",
-    description: "An in-depth guide to finding and aligning with a co-founder. We detail the strategic hustle of value alignment, identifying complementary 'spiky' skill sets, and why a structured 3-month trial period is vital before formalizing partnerships.",
-    link: "https://www.youtube.com/watch?v=ORPVZgc2ScM",
-    tags: ["Co-founders", "Partnerships", "Team Building"]
-  },
-  {
-    title: "Decoding Bain's India Venture Capital Report",
-    series: "Subtext by Zerodha",
-    speakers: "Aditya Shukla & Aditya Muralidhar (Partners, Bain & Company India) & Dinesh Pai",
-    description: "A comprehensive breakdown of Bain's annual Indian VC report. We discuss changing LP sentiment toward India, the rise of domestic family offices, and emerging sector tailwinds defining the next decade.",
-    link: "https://www.youtube.com/watch?v=TbsWx16UFhM&t=4950s",
-    tags: ["Capital Markets", "LP Sentiment", "Venture Report"]
-  }
-];
+// Sort signals chronologically
+const sortedSignals = weeklySignals.sort((a, b) => b.id.localeCompare(a.id));
 ---
 
-<BaseLayout>
-  <div class="max-w-3xl mx-auto space-y-16 py-6 font-serif">
+<BaseLayout title="Home" description="Field notes on business, investments, and capital markets.">
+  <!-- TWO-COLUMN GRID ON DESKTOP -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 sm:gap-16 py-6 font-serif">
     
-    <!-- BIO SECTION -->
-    <section class="flex flex-col-reverse md:flex-row gap-8 md:gap-12 items-start">
-      <div class="flex-grow space-y-4">
+    <!-- LEFT MAIN COLUMN (Col Span 2) -->
+    <div class="lg:col-span-2 space-y-16">
+      
+      <!-- BIO SECTION -->
+      <section class="flex flex-col-reverse md:flex-row gap-8 items-start">
+        <div class="flex-grow space-y-4">
+          <div class="text-stone-800 dark:text-stone-200 leading-relaxed text-base sm:text-lg space-y-4">
+            <p>
+              I grew up on the banks of River Seetha in <span class="font-bold text-stone-950 dark:text-stone-50">Udupi</span>. Having watched everyone in the family build small businesses, I had decided early in life that I would always want to find my way towards capital markets. Once I graduated from engineering in 2014, I joined D.E Shaw India, a hedge fund. I was amazed at how much more there was to learn; so went and got my MBA in 2019 from the cleanest city on earth, Calgary, Canada.
+            </p>
+            <p>
+              From 2010 until 2020 was about learning everything in finance and investments. In the process, I was bitten by Venture Capital and how VC investing could potentially build the next notable technology or product. When I left for Canada in August 2017, I knew I would return to India to work for an Indian company. And it all came together in 2020 when I met the fantastic team at Zerodha. I had followed Zerodha for 6 years, and it was serendipitous and lucky that I met the Zerodha team for an opportunity to join them in their mission to help people do better with their money. 
+            </p>
+            <p>
+              I currently work at <a href="https://zerodha.com/" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Zerodha</a>, where I help with investments in private markets through <a href="https://rainmatter.com/" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Rainmatter</a>. I am also passionate about projects that can safeguard livelihoods most at risk via the <a href="https://rainmatter.org/" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Rainmatter Foundation</a>.
+            </p>
+            <p class="text-stone-600 dark:text-stone-400 italic text-base border-l-2 border-dashed border-stone-200 dark:border-stone-800 pl-4 mt-6">
+              A lot of finance is just history repeating itself, and since I read a bunch of blogs and listen to a bunch of podcasts weekly, I felt summarizing some of the content and sharing my thoughts with everyone here would help me learn more and improve.
+            </p>
+          </div>
+        </div>
+
+        <!-- Simple Profile Photo -->
+        <div class="w-32 h-32 sm:w-40 sm:h-40 shrink-0 relative bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-lg overflow-hidden shadow-sm self-center md:self-start">
+          <img 
+            src="/static/images/dinesh_new.jpg" 
+            alt="Dinesh Pai" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </section>
+
+      <!-- HOW I INVEST SECTION -->
+      <section class="space-y-4">
+        <h2 class="font-mono text-lg font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
+          How I Invest
+        </h2>
         <div class="text-stone-800 dark:text-stone-200 leading-relaxed text-base sm:text-lg space-y-4">
           <p>
-            I grew up on the banks of River Seetha in <span class="font-bold text-stone-950 dark:text-stone-50">Udupi</span>. Having watched everyone in the family build small businesses, I had decided early in life that I would always want to find my way towards capital markets. Once I graduated from engineering in 2014, I joined D.E Shaw India, a hedge fund. I was amazed at how much more there was to learn; so went and got my MBA in 2019 from the cleanest city on earth, Calgary, Canada.
+            I help Zerodha manage private market investments through <a href="https://rainmatter.com/" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Rainmatter</a>.
           </p>
           <p>
-            From 2010 until 2020 was about learning everything in finance and investments. In the process, I was bitten by Venture Capital and how VC investing could potentially build the next notable technology or product. When I left for Canada in August 2017, I knew I would return to India to work for an Indian company. And it all came together in 2020 when I met the fantastic team at Zerodha. I had followed Zerodha for 6 years, and it was serendipitous and lucky that I met the Zerodha team for an opportunity to join them in their mission to help people do better with their money. 
+            We operate differently from traditional venture capital. We use our own money and don't have outside investors. This means we have no pressure to force quick sales or show artificial returns. We can partner with founders who want to build sustainable businesses for the next 20 or 30 years.
           </p>
           <p>
-            I currently work at <a href="https://zerodha.com/" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Zerodha</a>, where I help with investments in private markets through <a href="https://rainmatter.com/" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Rainmatter</a>. I am also passionate about projects that can safeguard livelihoods most at risk via the <a href="https://rainmatter.org/" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Rainmatter Foundation</a>.
+            When looking at companies, I keep it very simple. I look for two kinds of businesses:
           </p>
-          <p class="text-stone-600 dark:text-stone-400 italic text-base border-l-2 border-dashed border-stone-200 dark:border-stone-800 pl-4 mt-6">
-            A lot of finance is just history repeating itself, and since I read a bunch of blogs and listen to a bunch of podcasts weekly, I felt summarizing some of the content and sharing my thoughts with everyone here would help me learn more and improve.
+          <ul class="space-y-3 pl-5 list-disc mt-2">
+            <li>
+              <strong class="text-stone-950 dark:text-stone-50">Simple, understandable businesses:</strong> Where the numbers, the product, and the customer demand make immediate, practical sense.
+            </li>
+            <li>
+              <strong class="text-stone-950 dark:text-stone-50">Unique, hard-to-build businesses:</strong> Where a team is building something so complex and critical—like local country-level infrastructure—that it takes years to show results. Even if the numbers look unrealistic today, we support them because what they are building is rare and vital.
+            </li>
+          </ul>
+          <p class="pt-2">
+            Across both, we look for <strong>simplicity, extreme cost-discipline, and founders who do right by their customers and employees.</strong> If you are building with these values, let's talk.
           </p>
         </div>
-      </div>
+      </section>
 
-      <!-- Simple Profile Photo -->
-      <div class="w-32 h-32 sm:w-40 sm:h-40 shrink-0 relative bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-lg overflow-hidden shadow-sm self-center md:self-start">
-        <img 
-          src="/static/images/dinesh_new.jpg" 
-          alt="Dinesh Pai" 
-          class="w-full h-full object-cover"
-        />
-      </div>
-    </section>
-
-    <!-- HOW I INVEST SECTION -->
-    <section class="space-y-4">
-      <h2 class="font-mono text-lg font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
-        How I Invest
-      </h2>
-      <div class="text-stone-800 dark:text-stone-200 leading-relaxed text-base sm:text-lg space-y-4 font-serif">
-        <p>
-          I help Zerodha manage private market investments through <a href="https://rainmatter.com/" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Rainmatter</a>.
-        </p>
-        <p>
-          We operate differently from traditional venture capital. We use our own money and don't have outside investors. This means we have no pressure to force quick sales or show artificial returns. We can partner with founders who want to build sustainable businesses for the next 20 or 30 years.
-        </p>
-        <p>
-          When looking at companies, I keep it very simple. I look for two kinds of businesses:
-        </p>
-        <ul class="space-y-3 pl-5 list-disc mt-2">
-          <li>
-            <strong class="text-stone-950 dark:text-stone-50">Simple, understandable businesses:</strong> Where the numbers, the product, and the customer demand make immediate, practical sense.
-          </li>
-          <li>
-            <strong class="text-stone-950 dark:text-stone-50">Unique, hard-to-build businesses:</strong> Where a team is building something so complex and critical—like local country-level infrastructure—that it takes years to show results. Even if the numbers look unrealistic today, we support them because what they are building is rare and vital.
-          </li>
-        </ul>
-        <p class="pt-2">
-          Across both, we look for <strong>simplicity, extreme cost-discipline, and founders who do right by their customers and employees.</strong> If you are building with these values, let's talk.
-        </p>
-      </div>
-    </section>
-
-    <!-- ESSAYS / WRITING SECTION -->
-    <section class="space-y-4">
-      <h2 class="font-mono text-lg font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
-        Essays & Writing
-      </h2>
-      <ul class="space-y-3">
-        {sortedPosts.map((post) => (
-          <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4">
-            <span class="text-stone-400 dark:text-stone-500 font-mono text-xs sm:text-sm shrink-0 w-28">
-              {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}
-            </span>
-            <div class="flex-grow">
-              <a href={`/blog/${post.slug}`} class="text-stone-900 dark:text-stone-100 font-bold hover:text-brand-light dark:hover:text-brand-dark hover:underline">
-                {post.data.title}
-              </a>
-              {post.data.description && (
-                <p class="text-stone-500 dark:text-stone-400 text-xs sm:text-sm mt-0.5 max-w-2xl font-serif">
-                  {post.data.description}
-                </p>
-              )}
-            </div>
-          </li>
-        ))}
-      </ul>
-    </section>
-
-    <!-- THE WEEKLY SIGNAL SECTION -->
-    <section class="space-y-4">
-      <div class="border-b border-stone-200 dark:border-stone-800 pb-1.5 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-        <h2 class="font-mono text-lg font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100">
-          The Weekly Signal
+      <!-- ESSAYS / WRITING SECTION -->
+      <section class="space-y-4">
+        <h2 class="font-mono text-lg font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
+          Essays & Writing
         </h2>
-        <span class="text-xs text-stone-400 dark:text-stone-500 font-mono">
-          3 links &bull; Why they matter
-        </span>
-      </div>
-      <p class="font-serif italic text-stone-500 dark:text-stone-400 text-xs sm:text-sm leading-relaxed">
-        Every week, I share exactly 3 highly-curated links (articles, frameworks, or podcasts) with a 2-sentence "why it matters" takeaway for Indian founders and investors.
-      </p>
-
-      {sortedSignals.length > 0 && (
-        <div class="space-y-6 mt-4">
-          <!-- LATEST SIGNAL -->
-          <div class="space-y-2">
-            <h3 class="font-mono text-sm font-bold text-stone-900 dark:text-stone-100 bg-stone-100 dark:bg-stone-900 px-2.5 py-1 rounded inline-block">
-              {sortedSignals[0].week}
-            </h3>
-            <ul class="space-y-4 pl-4 border-l-2 border-stone-200 dark:border-stone-800 mt-2">
-              {sortedSignals[0].items.map((item) => (
-                <li class="space-y-1.5">
-                  <div class="flex flex-wrap items-center gap-x-2 text-[10px] font-mono font-bold text-stone-400 dark:text-stone-500 uppercase tracking-wide">
-                    <span>{item.category}</span>
-                    <span>&bull;</span>
-                    <span>{item.source}</span>
-                  </div>
-                  <div>
-                    <a href={item.url} target="_blank" rel="noopener noreferrer" class="font-serif font-bold text-stone-900 dark:text-stone-100 hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1 group">
-                      {item.title}
-                      <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
-                    </a>
-                  </div>
-                  <p class="font-serif text-xs sm:text-sm text-stone-600 dark:text-stone-400 italic pl-3 border-l border-stone-200 dark:border-stone-800">
-                    <strong class="text-[10px] font-mono font-bold uppercase tracking-wider block text-stone-400 dark:text-stone-500 mb-0.5">Why this matters:</strong>
-                    {item.takeaway}
+        <ul class="space-y-3">
+          {sortedPosts.map((post) => (
+            <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4">
+              <span class="text-stone-400 dark:text-stone-500 font-mono text-xs sm:text-sm shrink-0 w-28">
+                {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}
+              </span>
+              <div class="flex-grow">
+                <a href={`/blog/${post.slug}`} class="text-stone-900 dark:text-stone-100 font-bold hover:text-brand-light dark:hover:text-brand-dark hover:underline">
+                  {post.data.title}
+                </a>
+                {post.data.description && (
+                  <p class="text-stone-500 dark:text-stone-400 text-xs sm:text-sm mt-0.5 max-w-2xl font-serif">
+                    {post.data.description}
                   </p>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <!-- PAST SIGNALS TOGGLE -->
-          {sortedSignals.length > 1 && (
-            <div class="pt-4">
-              <button 
-                id="toggle-past-signals" 
-                class="font-mono text-xs font-bold text-stone-500 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1 cursor-pointer bg-none border-none p-0"
-              >
-                <span>&darr; Show Past Weekly Signals</span>
-              </button>
-              
-              <div id="past-signals-container" class="hidden space-y-6 mt-6 pt-4 border-t border-dashed border-stone-200 dark:border-stone-800">
-                {sortedSignals.slice(1).map((signal) => (
-                  <div class="space-y-2">
-                    <h3 class="font-mono text-sm font-bold text-stone-500 dark:text-stone-400 bg-stone-50 dark:bg-stone-950 px-2.5 py-1 rounded inline-block">
-                      {signal.week}
-                    </h3>
-                    <ul class="space-y-4 pl-4 border-l-2 border-stone-100 dark:border-stone-900 mt-2">
-                      {signal.items.map((item) => (
-                        <li class="space-y-1.5">
-                          <div class="flex flex-wrap items-center gap-x-2 text-[10px] font-mono font-bold text-stone-400 dark:text-stone-500 uppercase tracking-wide">
-                            <span>{item.category}</span>
-                            <span>&bull;</span>
-                            <span>{item.source}</span>
-                          </div>
-                          <div>
-                            <a href={item.url} target="_blank" rel="noopener noreferrer" class="font-serif font-bold text-stone-900 dark:text-stone-100 hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1 group">
-                              {item.title}
-                              <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
-                            </a>
-                          </div>
-                          <p class="font-serif text-xs sm:text-sm text-stone-600 dark:text-stone-400 italic pl-3 border-l border-stone-200 dark:border-stone-800">
-                            <strong class="text-[10px] font-mono font-bold uppercase tracking-wider block text-stone-400 dark:text-stone-500 mb-0.5">Why this matters:</strong>
-                            {item.takeaway}
-                          </p>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+                )}
               </div>
-            </div>
-          )}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <!-- THE WEEKLY SIGNAL SECTION -->
+      <section class="space-y-4">
+        <div class="border-b border-stone-200 dark:border-stone-800 pb-1.5 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+          <h2 class="font-mono text-lg font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100">
+            The Weekly Signal
+          </h2>
+          <span class="text-xs text-stone-400 dark:text-stone-500 font-mono">
+            3 links &bull; Why they matter
+          </span>
         </div>
-      )}
-    </section>
+        <p class="font-serif italic text-stone-500 dark:text-stone-400 text-xs sm:text-sm leading-relaxed">
+          Every week, I share exactly 3 highly-curated links (articles, frameworks, or podcasts) with a 2-sentence \"why it matters\" takeaway for Indian founders and investors.
+        </p>
 
-    <!-- PODCASTS SECTION -->
-    <section class="space-y-4">
-      <h2 class="font-mono text-lg font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
-        Podcasts & Video Discussions
-      </h2>
-      <ul class="space-y-6">
-        {dineshPodcasts.map((podcast) => (
-          <li class="space-y-1">
-            <div class="text-[10px] font-mono font-bold text-stone-400 dark:text-stone-500 uppercase tracking-wider">
-              {podcast.series} &bull; {podcast.speakers}
+        {sortedSignals.length > 0 && (
+          <div class="space-y-6 mt-4">
+            <!-- LATEST SIGNAL -->
+            <div class="space-y-2">
+              <h3 class="font-mono text-sm font-bold text-stone-900 dark:text-stone-100 bg-stone-100 dark:bg-stone-900 px-2.5 py-1 rounded inline-block">
+                {sortedSignals[0].week}
+              </h3>
+              <ul class="space-y-4 pl-4 border-l-2 border-stone-200 dark:border-stone-800 mt-2">
+                {sortedSignals[0].items.map((item) => (
+                  <li class="space-y-1.5">
+                    <div class="flex flex-wrap items-center gap-x-2 text-[10px] font-mono font-bold text-stone-400 dark:text-stone-500 uppercase tracking-wide">
+                      <span>{item.category}</span>
+                      <span>&bull;</span>
+                      <span>{item.source}</span>
+                    </div>
+                    <div>
+                      <a href={item.url} target="_blank" rel="noopener noreferrer" class="font-serif font-bold text-stone-900 dark:text-stone-100 hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1 group">
+                        {item.title}
+                        <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+                      </a>
+                    </div>
+                    <p class="font-serif text-xs sm:text-sm text-stone-600 dark:text-stone-400 italic pl-3 border-l border-stone-200 dark:border-stone-800">
+                      <strong class="text-[10px] font-mono font-bold uppercase tracking-wider block text-stone-400 dark:text-stone-500 mb-0.5">Why this matters:</strong>
+                      {item.takeaway}
+                    </p>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <h3 class="text-base font-bold text-stone-900 dark:text-stone-100">
-              <a href={podcast.link} target="_blank" rel="noopener noreferrer" class="hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1 group">
-                {podcast.title}
-                <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
-              </a>
-            </h3>
-            <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed font-serif">
-              {podcast.description}
-            </p>
-          </li>
-        ))}
-      </ul>
-    </section>
 
-    <!-- PROJECTS SECTION -->
-    <section class="space-y-4">
-      <h2 class="font-mono text-lg font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
-        Featured Toolkits & Projects
-      </h2>
-      <ul class="space-y-4">
-        <li class="space-y-1">
-          <h3 class="text-base font-bold text-stone-900 dark:text-stone-100">
-            <a href="https://github.com/paidinesh7/onepager" target="_blank" rel="noopener noreferrer" class="hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1 group">
-              onepager
-              <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
-            </a>
-          </h3>
-          <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed font-serif">
-            An AI-powered financial analyzer that generates quick briefs (Altman Z-Score, Piotroski F-Score, DuPont Analysis) from statements in under 2 minutes.
-          </p>
-        </li>
-        <li class="space-y-1">
-          <h3 class="text-base font-bold text-stone-900 dark:text-stone-100">
-            <a href="https://github.com/paidinesh7/LegalOS" target="_blank" rel="noopener noreferrer" class="hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1 group">
-              LegalOS
-              <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
-            </a>
-          </h3>
-          <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed font-serif">
-            An AI legal document analyzer designed specifically for Indian startup founders navigating fundraising agreements like SHAs and SPAs.
-          </p>
-        </li>
-      </ul>
-    </section>
+            <!-- PAST SIGNALS TOGGLE -->
+            {sortedSignals.length > 1 && (
+              <div class="pt-4">
+                <button 
+                  id="toggle-past-signals" 
+                  class="font-mono text-xs font-bold text-stone-500 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1 cursor-pointer bg-none border-none p-0"
+                >
+                  <span>&darr; Show Past Weekly Signals</span>
+                </button>
+                
+                <div id="past-signals-container" class="hidden space-y-6 mt-6 pt-4 border-t border-dashed border-stone-200 dark:border-stone-800">
+                  {sortedSignals.slice(1).map((signal) => (
+                    <div class="space-y-2">
+                      <h3 class="font-mono text-sm font-bold text-stone-500 dark:text-stone-400 bg-stone-50 dark:bg-stone-950 px-2.5 py-1 rounded inline-block">
+                        {signal.week}
+                      </h3>
+                      <ul class="space-y-4 pl-4 border-l-2 border-stone-100 dark:border-stone-900 mt-2">
+                        {signal.items.map((item) => (
+                          <li class="space-y-1.5">
+                            <div class="flex flex-wrap items-center gap-x-2 text-[10px] font-mono font-bold text-stone-400 dark:text-stone-500 uppercase tracking-wide">
+                              <span>{item.category}</span>
+                              <span>&bull;</span>
+                              <span>{item.source}</span>
+                            </div>
+                            <div>
+                              <a href={item.url} target="_blank" rel="noopener noreferrer" class="font-serif font-bold text-stone-900 dark:text-stone-100 hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1 group">
+                                {item.title}
+                                <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+                              </a>
+                            </div>
+                            <p class="font-serif text-xs sm:text-sm text-stone-600 dark:text-stone-400 italic pl-3 border-l border-stone-200 dark:border-stone-800">
+                              <strong class="text-[10px] font-mono font-bold uppercase tracking-wider block text-stone-400 dark:text-stone-500 mb-0.5">Why this matters:</strong>
+                              {item.takeaway}
+                            </p>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+      </section>
+
+    </div>
+
+    <!-- RIGHT SIDEBAR COLUMN (Col Span 1) -->
+    <div class="lg:col-span-1 space-y-12 border-t lg:border-t-0 lg:border-l lg:pl-10 border-stone-200/60 dark:border-stone-800/60 pt-12 lg:pt-0">
+      
+      <!-- NAVIGATION SIDEBAR PANEL -->
+      <section class="space-y-5">
+        <h2 class="font-mono text-xs font-bold uppercase tracking-widest text-stone-500 dark:text-stone-400">
+          Navigation
+        </h2>
+        <nav class="flex flex-col gap-5">
+          
+          <!-- HOW I WORK LINK -->
+          <a href="/how-i-work" class="group block space-y-1">
+            <span class="font-serif font-bold text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark group-hover:underline inline-flex items-center gap-1">
+              How I Work (README)
+              <span class="text-stone-400 group-hover:translate-x-0.5 transition-transform text-xs">&rarr;</span>
+            </span>
+            <p class="text-stone-500 dark:text-stone-400 text-xs leading-relaxed font-serif">
+              My personal handbook on managing complexity, async defaults, and decision-making structures.
+            </p>
+          </a>
+
+          <!-- GOOD READS LINK -->
+          <a href="/good-reads" class="group block space-y-1">
+            <span class="font-serif font-bold text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark group-hover:underline inline-flex items-center gap-1">
+              My Curated Reads
+              <span class="text-stone-400 group-hover:translate-x-0.5 transition-transform text-xs">&rarr;</span>
+            </span>
+            <p class="text-stone-500 dark:text-stone-400 text-xs leading-relaxed font-serif">
+              A searchable, tagged library of 20 books and essays on strategy, capital allocation, and finance.
+            </p>
+          </a>
+
+          <!-- NOTES FROM SOCIALS LINK -->
+          <a href="/notes" class="group block space-y-1">
+            <span class="font-serif font-bold text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark group-hover:underline inline-flex items-center gap-1">
+              Notes from my Socials
+              <span class="text-stone-400 group-hover:translate-x-0.5 transition-transform text-xs">&rarr;</span>
+            </span>
+            <p class="text-stone-500 dark:text-stone-400 text-xs leading-relaxed font-serif">
+              Curated, high-signal business threads and market observations on dredging, hardware economics, and F1.
+            </p>
+          </a>
+
+        </nav>
+      </section>
+
+      <!-- FEATURING CARD -->
+      <section class="bg-stone-100/60 dark:bg-stone-900/40 p-5 rounded-lg border border-stone-200/40 dark:border-stone-800/40 space-y-3">
+        <h3 class="font-mono text-[10px] font-bold uppercase tracking-widest text-stone-400 dark:text-stone-500">
+          Philosophy
+        </h3>
+        <p class="font-serif italic text-xs leading-relaxed text-stone-600 dark:text-stone-400">
+          "Ideas are cheap and easy to have, but implementation is everything. The crux of business lies in efficiency, counter-positioning, and durable moats."
+        </p>
+      </section>
+
+    </div>
 
   </div>
 </BaseLayout>
