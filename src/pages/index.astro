@@ -1,296 +1,222 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import UdupiFlipDeck from '../components/UdupiFlipDeck';
-import HomeTabs from '../components/HomeTabs';
 import { weeklySignals } from '../data/weeklySignals';
 
 const posts = await getCollection('blog');
-const latestPosts = posts
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0, 3);
+const sortedPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
-const formatDate = (date: Date) => {
-  return date.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-  });
-};
+const dineshPodcasts = [
+  {
+    title: "Nithin Kamath's Guide to How Startups Think of Risks & Moats",
+    series: "The Startup Blueprint — Special Episode",
+    speakers: "Nithin Kamath (Co-founder, Zerodha) & Dinesh Pai",
+    description: "An essential conversation with Nithin Kamath on how Zerodha built its moats over three distinct phases: low-cost referral pricing, technology-led, and ultimately credibility & brand trust. Nithin details his primary role as a risk manager, capital allocation frameworks, and the personal routines that sustain him.",
+    link: "https://www.youtube.com/watch?v=eZdrpChV0C4&t=38s",
+    tags: ["Risk Management", "Business Moats", "Capital Allocation"]
+  },
+  {
+    title: "How VCs Measure Product-Market Fit",
+    series: "How VCs Think — Episode 7",
+    speakers: "Sajith Pai (Blume Ventures) & Dinesh Pai (Rainmatter)",
+    description: "A deep dive breaking down Product-Market Fit (PMF) into Product-to-Problem Fit (PPF) and Motion-to-Market Fit (MMF). We discuss the GRUE (Growth, Retention, Unit Economics) framework and why common metrics like the Sean Ellis test can sometimes mislead founders.",
+    link: "https://www.youtube.com/watch?v=-TqOl7NjB7o",
+    tags: ["Product-Market Fit", "Metrics", "Frameworks"]
+  },
+  {
+    title: "What VCs Look For in the First Meeting",
+    series: "How VCs Think — Episode 1",
+    speakers: "Kushal Bhagia (All In Capital) & Dinesh Pai (Rainmatter)",
+    description: "Demystifying the initial meeting between founders and investors. We explore the 'Why You?' test, the value of 'earned insights' from operating in a market, and common early-stage red flags like unbalanced equity splits.",
+    link: "https://www.youtube.com/watch?v=dhuHgsGevks&t=96s",
+    tags: ["First Meeting", "Pitching", "Equity Splits"]
+  },
+  {
+    title: "How to Hire and Retain Early Employees",
+    series: "How VCs Think — Episode 4",
+    speakers: "Dinesh Pai (Rainmatter) & Portfolio Founders",
+    description: "Navigating the hardest hurdle in early-stage startups: talent acquisition. We discuss why early team crises often build resilience, how to align incentives, and how to build a shared sense of mission that outlasts monetary compensation.",
+    link: "https://www.youtube.com/watch?v=0fxTjJ9jVpg&t=14s",
+    tags: ["Hiring", "Company Culture", "Early Stage"]
+  },
+  {
+    title: "How to Find a Co-founder",
+    series: "The Startup Blueprint — Episode 1",
+    speakers: "Ashish Goel (Co-founder, Urban Ladder) & Dinesh Pai",
+    description: "An in-depth guide to finding and aligning with a co-founder. We detail the strategic hustle of value alignment, identifying complementary 'spiky' skill sets, and why a structured 3-month trial period is vital before formalizing partnerships.",
+    link: "https://www.youtube.com/watch?v=ORPVZgc2ScM",
+    tags: ["Co-founders", "Partnerships", "Team Building"]
+  },
+  {
+    title: "Decoding Bain's India Venture Capital Report",
+    series: "Subtext by Zerodha",
+    speakers: "Aditya Shukla & Aditya Muralidhar (Partners, Bain & Company India) & Dinesh Pai",
+    description: "A comprehensive breakdown of Bain's annual Indian VC report. We discuss changing LP sentiment toward India, the rise of domestic family offices, and emerging sector tailwinds defining the next decade.",
+    link: "https://www.youtube.com/watch?v=TbsWx16UFhM&t=4950s",
+    tags: ["Capital Markets", "LP Sentiment", "Venture Report"]
+  }
+];
 ---
 
 <BaseLayout>
-  <!-- Home Page Tabbed Interface -->
-  <HomeTabs client:load>
+  <div class="max-w-3xl mx-auto space-y-16 py-6 font-serif">
     
-    <!-- 02 / ABOUT ME TAB -->
-    <div slot="aboutContent" class="animate-fade-in">
-      <div class="flex flex-col-reverse md:flex-row gap-12 md:gap-16 items-start">
-        
-        <!-- Bio Text -->
-        <div class="flex-1 space-y-6">
-          <div class="font-serif text-stone-700 dark:text-stone-300 leading-relaxed text-base sm:text-lg space-y-6">
-            <p>
-              I grew up on the banks of River Seetha in <span class="font-bold text-stone-950 dark:text-stone-50 border-b border-dashed border-brand-light/35">Udupi</span>. Having watched everyone in the family build small businesses, I had decided early in life that I would always want to find my way towards capital markets. Once I graduated from engineering in 2014, I joined D.E Shaw India, a hedge fund. I was amazed at how much more there was to learn; so went and got my MBA in 2019 from the cleanest city on earth, Calgary, Canada.
-            </p>
-            <p>
-              From 2010 until 2020 was about learning everything in finance and investments. In the process, I was bitten by Venture Capital and how VC investing could potentially build the next notable technology or product. When I left for Canada in August 2017, I knew I would return to India to work for an Indian company. And it all came together in 2020 when I met the fantastic team at Zerodha. I had followed Zerodha for 6 years, and it was serendipitous and lucky that I met the Zerodha team for an opportunity to join them in their mission to help people do better with their money. 
-            </p>
-            <p>
-              I currently work at <a href="https://zerodha.com/" class="text-brand-light dark:text-brand-dark font-bold highlighter-hover transition-all">Zerodha</a>, where I help with investments in private markets through <a href="https://rainmatter.com/" class="text-brand-light dark:text-brand-dark font-bold highlighter-hover transition-all">Rainmatter</a>. I am also passionate about projects that can safeguard livelihoods most at risk via the <a href="https://rainmatter.org/" class="text-brand-light dark:text-brand-dark font-bold highlighter-hover transition-all">Rainmatter Foundation</a>.
-            </p>
-            <p class="text-stone-600 dark:text-stone-400 italic text-base border-l-2 border-dashed border-stone-200 dark:border-stone-800 pl-4 mt-6">
-              A lot of finance is just history repeating itself, and since I read a bunch of blogs and listen to a bunch of podcasts weekly, I felt summarizing some of the content and sharing my thoughts with everyone here would help me learn more and improve.
-            </p>
-          </div>
-        </div>
-
-        <!-- Right Column: Card Stacks -->
-        <div class="flex flex-col gap-10 shrink-0 items-center justify-center w-full md:w-auto">
-          <!-- Udupi Polaroid Flip Deck -->
-          <UdupiFlipDeck client:load />
-
-          <!-- Profile Photo (Bespoke Analog Polaroid Frame) -->
-          <div class="w-36 h-36 sm:w-44 sm:h-44 shrink-0 relative bg-stone-50 dark:bg-stone-900 p-2 border-2 border-stone-950/80 dark:border-stone-800/80 rounded-2xl analog-shadow transition-transform hover:scale-102">
-            <img 
-              src="/static/images/dinesh_new.jpg" 
-              alt="Dinesh Pai" 
-              class="w-full h-full object-cover rounded-xl"
-            />
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- 01 / NOTES & IDEAS TAB -->
-    <div slot="notesContent" class="space-y-16 sm:space-y-24 animate-fade-in">
-      
-      <!-- Weekly Signal Curation Section -->
-      <section class="animate-fade-in">
-        <div class="space-y-1 mb-8">
-          <span class="text-xs font-bold uppercase tracking-widest text-stone-400 dark:text-stone-500 font-mono">
-            Weekly Signal
-          </span>
-          <h2 class="font-mono text-xl sm:text-2xl font-bold text-stone-900 dark:text-stone-100 uppercase ink-bleed">
-            [ The Weekly Signal ]
-          </h2>
-          <p class="font-serif italic text-stone-500 dark:text-stone-400 text-xs sm:text-sm">
-            Every week, I share exactly 3 highly-curated links (articles, frameworks, or podcasts) with a 2-sentence "why it matters" takeaway for Indian founders and investors.
+    <!-- BIO SECTION -->
+    <section class="flex flex-col-reverse md:flex-row gap-8 md:gap-12 items-start">
+      <div class="flex-1 space-y-4">
+        <div class="text-stone-800 dark:text-stone-200 leading-relaxed text-base sm:text-lg space-y-4">
+          <p>
+            I grew up on the banks of River Seetha in <span class="font-bold text-stone-950 dark:text-stone-50">Udupi</span>. Having watched everyone in the family build small businesses, I had decided early in life that I would always want to find my way towards capital markets. Once I graduated from engineering in 2014, I joined D.E Shaw India, a hedge fund. I was amazed at how much more there was to learn; so went and got my MBA in 2019 from the cleanest city on earth, Calgary, Canada.
+          </p>
+          <p>
+            From 2010 until 2020 was about learning everything in finance and investments. In the process, I was bitten by Venture Capital and how VC investing could potentially build the next notable technology or product. When I left for Canada in August 2017, I knew I would return to India to work for an Indian company. And it all came together in 2020 when I met the fantastic team at Zerodha. I had followed Zerodha for 6 years, and it was serendipitous and lucky that I met the Zerodha team for an opportunity to join them in their mission to help people do better with their money. 
+          </p>
+          <p>
+            I currently work at <a href="https://zerodha.com/" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Zerodha</a>, where I help with investments in private markets through <a href="https://rainmatter.com/" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Rainmatter</a>. I am also passionate about projects that can safeguard livelihoods most at risk via the <a href="https://rainmatter.org/" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Rainmatter Foundation</a>.
+          </p>
+          <p class="text-stone-600 dark:text-stone-400 italic text-base border-l-2 border-dashed border-stone-200 dark:border-stone-800 pl-4 mt-6">
+            A lot of finance is just history repeating itself, and since I read a bunch of blogs and listen to a bunch of podcasts weekly, I felt summarizing some of the content and sharing my thoughts with everyone here would help me learn more and improve.
           </p>
         </div>
+      </div>
 
-        <div class="space-y-12">
-          {weeklySignals.map((signal, index) => (
-            <div class={`border-2 border-dashed border-stone-200/60 dark:border-stone-800/60 rounded-2xl p-5 sm:p-8 bg-white/40 dark:bg-stone-950/10 shadow-sm relative ${index === 0 ? 'border-brand-light/35 dark:border-brand-dark/35 ring-4 ring-brand-light/5 dark:ring-brand-dark/5' : ''}`}>
+      <!-- Simple Profile Photo -->
+      <div class="w-32 h-32 sm:w-40 sm:h-40 shrink-0 relative bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-lg overflow-hidden shadow-sm self-center md:self-start">
+        <img 
+          src="/static/images/dinesh_new.jpg" 
+          alt="Dinesh Pai" 
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </section>
 
-              {/* Latest Issue Badge */}
-              {index === 0 && (
-                <span class="absolute -top-3 left-6 bg-brand-light dark:bg-brand-dark text-stone-50 dark:text-stone-950 text-[10px] font-mono font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-sm font-sans">
-                  Latest Issue
-                </span>
+    <!-- ESSAYS / WRITING SECTION -->
+    <section class="space-y-4">
+      <h2 class="font-mono text-lg font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
+        Essays & Writing
+      </h2>
+      <ul class="space-y-3">
+        {sortedPosts.map((post) => (
+          <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4">
+            <span class="text-stone-400 dark:text-stone-500 font-mono text-xs sm:text-sm shrink-0 w-28">
+              {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}
+            </span>
+            <div class="flex-grow">
+              <a href={`/blog/${post.slug}`} class="text-stone-900 dark:text-stone-100 font-bold hover:text-brand-light dark:hover:text-brand-dark hover:underline">
+                {post.data.title}
+              </a>
+              {post.data.description && (
+                <p class="text-stone-500 dark:text-stone-400 text-xs sm:text-sm mt-0.5 max-w-2xl font-serif">
+                  {post.data.description}
+                </p>
               )}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
 
-              {/* Issue Header */}
-              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-dashed border-stone-200/60 dark:border-stone-800/60 pb-4 mb-6">
-                <h3 class="font-mono text-lg font-bold text-stone-950 dark:text-stone-50">
-                  {signal.week}
-                </h3>
-                {signal.description && (
-                  <p class="font-serif text-xs text-stone-500 dark:text-stone-400 italic max-w-md sm:text-right">
-                    {signal.description}
-                  </p>
-                )}
-              </div>
+    <!-- THE WEEKLY SIGNAL SECTION -->
+    <section class="space-y-4">
+      <div class="border-b border-stone-200 dark:border-stone-800 pb-1.5 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+        <h2 class="font-mono text-lg font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100">
+          The Weekly Signal
+        </h2>
+        <span class="text-xs text-stone-400 dark:text-stone-500 font-mono">
+          3 links &bull; Why they matter
+        </span>
+      </div>
+      <p class="font-serif italic text-stone-500 dark:text-stone-400 text-xs sm:text-sm leading-relaxed">
+        Every week, I share exactly 3 highly-curated links (articles, frameworks, or podcasts) with a 2-sentence "why it matters" takeaway for Indian founders and investors.
+      </p>
 
-              {/* Curation List */}
-              <div class="space-y-6">
-                {signal.items.map((item, itemIdx) => (
-                  <div class="flex flex-col gap-2 pb-6 last:pb-0 border-b last:border-b-0 border-stone-100/60 dark:border-stone-900/60">
-                    <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs">
-                      {/* Number Badge */}
-                      <span class="font-mono font-bold text-brand-light dark:text-brand-dark bg-brand-light/10 dark:bg-brand-dark/15 w-5 h-5 rounded-full flex items-center justify-center text-[10px]">
-                        0{itemIdx + 1}
-                      </span>
-                      
-                      {/* Category Badge */}
-                      <span class="font-mono font-bold uppercase tracking-wide text-[9px] bg-stone-100 dark:bg-stone-900 text-stone-500 dark:text-stone-400 px-2 py-0.5 rounded">
-                        {item.category}
-                      </span>
-
-                      <span class="text-stone-300 dark:text-stone-700 font-mono">&bull;</span>
-                      
-                      {/* Source */}
-                      <span class="font-mono text-stone-400 dark:text-stone-500 text-[10px]">
-                        {item.source}
-                      </span>
-                    </div>
-
-                    {/* Title & Link */}
-                    <h4 class="font-mono text-base font-bold text-stone-900 dark:text-stone-100 hover:text-brand-light dark:hover:text-brand-dark transition-colors duration-200">
-                      <a href={item.url} target="_blank" rel="noopener noreferrer" class="highlighter-hover inline-flex items-center gap-1.5 group/link">
-                        {item.title}
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="h-3.5 w-3.5 text-stone-400 dark:text-stone-500 group-hover/link:text-brand-light dark:group-hover/link:text-brand-dark transition-colors transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform">
-                          <line x1="7" y1="17" x2="17" y2="7"></line>
-                          <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                      </a>
-                    </h4>
-
-                    {/* Takeaway Box */}
-                    <div class="bg-stone-50/60 dark:bg-stone-900/10 border-l-2 border-brand-light/30 dark:border-brand-dark/30 pl-4 py-2 mt-1">
-                      <p class="font-serif text-xs text-stone-500 dark:text-stone-400 uppercase tracking-widest font-bold mb-1">
-                        Why this matters:
-                      </p>
-                      <p class="font-serif text-sm text-stone-700 dark:text-stone-300 leading-relaxed italic">
-                        {item.takeaway}
-                      </p>
-                    </div>
+      <div class="space-y-6 mt-4">
+        {weeklySignals.map((signal) => (
+          <div class="space-y-2">
+            <h3 class="font-mono text-sm font-bold text-stone-900 dark:text-stone-100 bg-stone-100 dark:bg-stone-900 px-2.5 py-1 rounded inline-block">
+              {signal.week}
+            </h3>
+            <ul class="space-y-4 pl-4 border-l-2 border-stone-200 dark:border-stone-800 mt-2">
+              {signal.items.map((item) => (
+                <li class="space-y-1.5">
+                  <div class="flex flex-wrap items-center gap-x-2 text-[10px] font-mono font-bold text-stone-400 dark:text-stone-500 uppercase tracking-wide">
+                    <span>{item.category}</span>
+                    <span>&bull;</span>
+                    <span>{item.source}</span>
                   </div>
-                ))}
-              </div>
-
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <!-- Featured Insights & Projects -->
-      <section class="border-t-2 border-dashed border-stone-200/40 dark:border-stone-800/40 pt-12 animate-fade-in-delayed">
-        <div class="space-y-1 mb-8">
-          <span class="text-xs font-bold uppercase tracking-widest text-stone-400 dark:text-stone-500 font-mono">
-            Curation
-          </span>
-          <h2 class="font-mono text-xl sm:text-2xl font-bold text-stone-900 dark:text-stone-100 uppercase ink-bleed">
-            [ Featured Ideas & Toolkits ]
-          </h2>
-        </div>
-
-        <div class="grid gap-6 md:grid-cols-2">
-          
-          <!-- Viral X Post Card (Storytelling) -->
-          <div class="flex flex-col border border-dashed border-brand-light/30 dark:border-brand-dark/30 bg-stone-50/40 dark:bg-stone-900/15 rounded-2xl p-5 sm:p-6 hover:border-brand-light dark:hover:border-brand-dark transition-all duration-300 relative group shadow-sm">
-            <div class="flex items-center gap-2 mb-4">
-              <!-- Small Twitter/X Logo SVG -->
-              <svg class="h-4 w-4 text-stone-400 dark:text-stone-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M18.244 2.25h3.308l-7.227 7.75 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.285L1.254 2.25h6.854l4.665 6.148 5.475-6.148zm-1.16 17.52h1.833L7.084 4.126H5.117L17.084 19.77z"/>
-              </svg>
-              <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-stone-400 dark:text-stone-500">
-                Communication & Strategy
-              </span>
-              <span class="absolute top-4 right-4 bg-brand-light/10 dark:bg-brand-dark/15 text-brand-light dark:text-brand-dark text-[9px] font-mono font-bold uppercase px-2 py-0.5 rounded">
-                Top Thread
-              </span>
-            </div>
-
-            <div class="space-y-3 flex-grow">
-              <h3 class="font-mono text-base sm:text-lg font-bold text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors duration-200">
-                <a href="https://x.com/dineshpaii/status/2075086708635521283" target="_blank" rel="noopener noreferrer" class="highlighter-hover">
-                  The Importance of Storytelling
-                </a>
-              </h3>
-              <p class="font-serif text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
-                "A startup can have the most advanced technology or product, but without a compelling narrative, it is nearly impossible to capture attention, align early teams, or raise capital. Storytelling is the ultimate leverage."
-              </p>
-            </div>
-
-            <div class="pt-4 border-t border-dashed border-stone-200/40 dark:border-stone-800/40 mt-6 flex items-center justify-between">
-              <span class="text-xs font-mono text-stone-400 dark:text-stone-500 font-bold group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors">
-                Read Thread on X &rarr;
-              </span>
-            </div>
+                  <div>
+                    <a href={item.url} target="_blank" rel="noopener noreferrer" class="font-serif font-bold text-stone-900 dark:text-stone-100 hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1 group">
+                      {item.title}
+                      <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+                    </a>
+                  </div>
+                  <p class="font-serif text-xs sm:text-sm text-stone-600 dark:text-stone-400 italic pl-3 border-l border-stone-200 dark:border-stone-800">
+                    <strong class="text-[10px] font-mono font-bold uppercase tracking-wider block text-stone-400 dark:text-stone-500 mb-0.5">Why this matters:</strong>
+                    {item.takeaway}
+                  </p>
+                </li>
+              ))}
+            </ul>
           </div>
+        ))}
+      </div>
+    </section>
 
-          <!-- Tech Projects Card -->
-          <div class="flex flex-col border border-dashed border-brand-light/30 dark:border-brand-dark/30 bg-stone-50/40 dark:bg-stone-900/15 rounded-2xl p-5 sm:p-6 hover:border-brand-light dark:hover:border-brand-dark transition-all duration-300 relative group shadow-sm">
-            <div class="flex items-center gap-2 mb-4">
-              <!-- GitHub Logo SVG -->
-              <svg class="h-4 w-4 text-stone-400 dark:text-stone-500" fill="currentColor" viewBox="0 0 24 24">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.59 1.087 3.222.83.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
-              </svg>
-              <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-stone-400 dark:text-stone-500">
-                Founder Toolkits
-              </span>
-              <span class="absolute top-4 right-4 bg-stone-100 dark:bg-stone-900 text-stone-500 dark:text-stone-400 text-[9px] font-mono font-bold uppercase px-2 py-0.5 rounded">
-                Open Source
-              </span>
+    <!-- PODCASTS SECTION -->
+    <section class="space-y-4">
+      <h2 class="font-mono text-lg font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
+        Podcasts & Video Discussions
+      </h2>
+      <ul class="space-y-6">
+        {dineshPodcasts.map((podcast) => (
+          <li class="space-y-1">
+            <div class="text-[10px] font-mono font-bold text-stone-400 dark:text-stone-500 uppercase tracking-wider">
+              {podcast.series} &bull; {podcast.speakers}
             </div>
+            <h3 class="text-base font-bold text-stone-900 dark:text-stone-100">
+              <a href={podcast.link} target="_blank" rel="noopener noreferrer" class="hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1 group">
+                {podcast.title}
+                <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+              </a>
+            </h3>
+            <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed font-serif">
+              {podcast.description}
+            </p>
+          </li>
+        ))}
+      </ul>
+    </section>
 
-            <div class="space-y-4 flex-grow">
-              <!-- onepager -->
-              <div class="space-y-1">
-                <h4 class="font-mono text-base font-bold text-stone-950 dark:text-stone-50 hover:text-brand-light dark:hover:text-brand-dark transition-colors duration-200">
-                  <a href="https://github.com/paidinesh7/onepager" target="_blank" rel="noopener noreferrer" class="highlighter-hover">
-                    onepager ↗
-                  </a>
-                </h4>
-                <p class="text-xs text-stone-600 dark:text-stone-400 font-serif leading-relaxed">
-                  An AI-powered financial analyzer that generates quick briefs (Altman Z-Score, Piotroski F-Score, DuPont Analysis) from statements in under 2 minutes.
-                </p>
-              </div>
+    <!-- PROJECTS SECTION -->
+    <section class="space-y-4">
+      <h2 class="font-mono text-lg font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
+        Featured Toolkits & Projects
+      </h2>
+      <ul class="space-y-4">
+        <li class="space-y-1">
+          <h3 class="text-base font-bold text-stone-900 dark:text-stone-100">
+            <a href="https://github.com/paidinesh7/onepager" target="_blank" rel="noopener noreferrer" class="hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1 group">
+              onepager
+              <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </a>
+          </h3>
+          <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed font-serif">
+            An AI-powered financial analyzer that generates quick briefs (Altman Z-Score, Piotroski F-Score, DuPont Analysis) from statements in under 2 minutes.
+          </p>
+        </li>
+        <li class="space-y-1">
+          <h3 class="text-base font-bold text-stone-900 dark:text-stone-100">
+            <a href="https://github.com/paidinesh7/LegalOS" target="_blank" rel="noopener noreferrer" class="hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1 group">
+              LegalOS
+              <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </a>
+          </h3>
+          <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed font-serif">
+            An AI legal document analyzer designed specifically for Indian startup founders navigating fundraising agreements like SHAs and SPAs.
+          </p>
+        </li>
+      </ul>
+    </section>
 
-              <!-- LegalOS -->
-              <div class="space-y-1">
-                <h4 class="font-mono text-base font-bold text-stone-950 dark:text-stone-50 hover:text-brand-light dark:hover:text-brand-dark transition-colors duration-200">
-                  <a href="https://github.com/paidinesh7/LegalOS" target="_blank" rel="noopener noreferrer" class="highlighter-hover">
-                    LegalOS ↗
-                  </a>
-                </h4>
-                <p class="text-xs text-stone-600 dark:text-stone-400 font-serif leading-relaxed">
-                  An AI legal document analyzer designed specifically for Indian startup founders navigating fundraising agreements like SHAs and SPAs.
-                </p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- CTA/Newsletter Box -->
-      <section class="bg-stone-100/30 dark:bg-stone-900/10 rounded-2xl border-2 border-dashed border-stone-200/60 dark:border-stone-800/60 p-6 sm:p-8 mt-16 sm:mt-24 text-center space-y-4 shadow-sm">
-        <h3 class="font-mono text-lg font-bold text-stone-900 dark:text-stone-100 uppercase ink-bleed">
-          [ Subscribe to the Feed ]
-        </h3>
-        <p class="text-sm text-stone-600 dark:text-stone-400 max-w-md mx-auto font-serif">
-          Prefer reading in your own RSS reader? Add the RSS feed to stay updated with notes on private markets, finance, and capital markets.
-        </p>
-        <div>
-          <a 
-            href="/index.xml" 
-            class="inline-flex items-center gap-2 bg-brand-light dark:bg-brand-dark hover:bg-stone-900 dark:hover:bg-stone-100 text-white dark:text-stone-950 font-mono text-xs font-bold uppercase tracking-wider px-4 py-2.5 rounded-lg transition-colors shadow-sm"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="h-4 w-4">
-              <path d="M4 11a9 9 0 0 1 9 9" />
-              <path d="M4 4a16 16 0 0 1 16 16" />
-              <circle cx="5" cy="19" r="1" />
-            </svg>
-            Subscribe via RSS
-          </a>
-        </div>
-      </section>
-
-    </div>
-  </HomeTabs>
+  </div>
 </BaseLayout>
-
-<style>
-  /* Elegant scroll reveal styles */
-  .animate-fade-in {
-    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  }
-  .animate-fade-in-delayed {
-    opacity: 0;
-    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(12px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-</style>

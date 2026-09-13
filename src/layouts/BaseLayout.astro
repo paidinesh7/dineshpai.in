@@ -60,55 +60,28 @@ const pageTitle = title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
     
     {showProgress && <ReadingProgressBar client:load />}
 
-    <!-- Sticky Header / Masthead -->
-    <header class="border-b border-stone-200/60 dark:border-stone-800/60 bg-[#ecf1ee]/85 dark:bg-[#0c120e]/85 backdrop-blur-md sticky top-0 z-40 transition-colors duration-300">
-      
-      <!-- Vintage Masthead Metadata Bar -->
-      <div class="max-w-4xl mx-auto px-6 pt-2 flex justify-between text-[9px] font-mono font-bold text-stone-400 dark:text-stone-500 uppercase tracking-widest border-b border-dashed border-stone-200/20 dark:border-stone-800/20 pb-1 mb-1 hidden sm:flex">
-        <span>[ Published in Bengaluru ]</span>
-        <span>[ Vol. III / No. XII ]</span>
-        <span>[ EST. 2023 ]</span>
-      </div>
-
-      <div class="max-w-4xl mx-auto px-4 xs:px-6 py-3.5 sm:py-4 flex flex-row items-center justify-between gap-2 xs:gap-4">
-        
-        <!-- Logo & Title (Bespoke Aligned Masthead) -->
-        <a href="/" class="group flex items-center gap-1.5 sm:gap-3">
-          <img src="/static/images/logo.svg" alt="Dinesh Pai" class="h-8 w-8 sm:h-10 sm:w-10 transition-transform group-hover:rotate-6 dark:invert" />
-          <div class="flex flex-col">
-            <span class="font-serif text-lg xs:text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors duration-200">
-              Dinesh Pai
-            </span>
-            <span class="text-[9px] sm:text-[10px] text-stone-500 dark:text-stone-400 font-mono tracking-wide hidden sm:inline uppercase font-bold mt-0.5">
-              Business & investments @ Zerodha
-            </span>
-          </div>
+    <!-- Minimal Header / Navigation -->
+    <header class="border-b border-stone-200/40 dark:border-stone-800/40 py-6 mb-8 transition-colors duration-300 bg-[#ecf1ee]/85 dark:bg-[#0c120e]/85 backdrop-blur-md sticky top-0 z-40">
+      <div class="max-w-4xl mx-auto px-6 flex flex-row items-center justify-between gap-4">
+        <a href="/" class="flex flex-col gap-0.5 group">
+          <span class="font-serif text-2xl sm:text-3xl font-black tracking-tight text-stone-900 dark:text-stone-100 hover:text-brand-light dark:hover:text-brand-dark transition-colors duration-200">
+            Dinesh Pai
+          </span>
+          <span class="text-[10px] text-stone-500 dark:text-stone-400 font-mono tracking-wider uppercase font-bold">
+            Business & investments @ Zerodha
+          </span>
         </a>
-
-        <!-- Navigation -->
-        <nav class="flex items-center gap-2.5 xs:gap-4 sm:gap-6 text-[10px] xs:text-xs sm:text-sm font-mono font-bold text-stone-600 dark:text-stone-400 uppercase tracking-wider">
-          <a href="/" class="hover:text-stone-900 dark:hover:text-stone-100 transition-colors">Home</a>
-          <a href="/blog" class="hover:text-stone-900 dark:hover:text-stone-100 transition-colors">Blog</a>
-          <a href="/podcasts" class="hover:text-stone-900 dark:hover:text-stone-100 transition-colors">Podcasts</a>
-          
-          <div class="h-4 w-px bg-stone-200 dark:bg-stone-800 hidden xs:block"></div>
-          
-          <!-- RSS Icon -->
-          <a href="/index.xml" title="Subscribe to RSS Feed" class="hover:text-stone-900 dark:hover:text-stone-100 transition-colors p-1">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rss h-4.5 w-4.5 text-brand-light dark:text-brand-dark">
+        <div class="flex items-center gap-4">
+          <a href="/index.xml" title="Subscribe to RSS Feed" class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors p-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rss h-4 w-4">
               <path d="M4 11a9 9 0 0 1 9 9" />
               <path d="M4 4a16 16 0 0 1 16 16" />
               <circle cx="5" cy="19" r="1" />
             </svg>
           </a>
-
-          <!-- Theme Toggle Button -->
           <ThemeToggle client:load />
-        </nav>
+        </div>
       </div>
-
-      <!-- Vintage Double Line separator under header -->
-      <div class="max-w-4xl mx-auto border-t-4 border-double border-stone-200/40 dark:border-stone-800/40 h-1"></div>
     </header>
 
     <!-- Main Content -->
@@ -117,16 +90,16 @@ const pageTitle = title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-stone-200/60 dark:border-stone-800/60 bg-[#ecf1ee]/45 dark:bg-[#0c120e]/45 py-8 transition-colors duration-300">
-      <div class="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 dark:text-stone-500">
+    <footer class="border-t border-stone-200/40 dark:border-stone-800/40 py-8 transition-colors duration-300">
+      <div class="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 dark:text-stone-500 font-sans">
         <div>
-          Dinesh Pai &copy; 2023 - 2026. Built with Astro, React & Tailwind CSS.
+          Dinesh Pai &copy; 2023 - 2026. Built with Astro & Tailwind CSS.
         </div>
-        <div class="flex gap-4">
-          <a href="https://twitter.com/dineshpaii" target="_blank" rel="noopener noreferrer" class="hover:text-brand-light dark:hover:text-brand-dark transition-colors">Twitter</a>
-          <a href="https://www.linkedin.com/in/paidinesh1/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-light dark:hover:text-brand-dark transition-colors">LinkedIn</a>
-          <a href="/llms.txt" class="hover:text-brand-light dark:hover:text-brand-dark transition-colors">llms.txt</a>
-          <a href="/index.xml" class="hover:text-brand-light dark:hover:text-brand-dark transition-colors">RSS Feed</a>
+        <div class="flex gap-4 font-mono text-[10px] uppercase tracking-wider">
+          <a href="https://twitter.com/dineshpaii" target="_blank" rel="noopener noreferrer" class="hover:underline text-stone-600 dark:text-stone-400">Twitter</a>
+          <a href="https://www.linkedin.com/in/paidinesh1/" target="_blank" rel="noopener noreferrer" class="hover:underline text-stone-600 dark:text-stone-400">LinkedIn</a>
+          <a href="/llms.txt" class="hover:underline text-stone-600 dark:text-stone-400">llms.txt</a>
+          <a href="/index.xml" class="hover:underline text-stone-600 dark:text-stone-400">RSS</a>
         </div>
       </div>
     </footer>
