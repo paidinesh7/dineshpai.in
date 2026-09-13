@@ -3,39 +3,39 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const portfolio = {
   Fintech: [
-    { name: "Assetplus", desc: "Digital mutual fund distribution platform for advisors." },
-    { name: "Capitalmind", desc: "Quantitative investment management & research platform." },
-    { name: "Indiadatahub", desc: "Comprehensive Indian macroeconomic & corporate data engine." },
-    { name: "M2P", desc: "Embedded API financial infrastructure & card issuance." },
-    { name: "Mprofit", desc: "Multi-asset portfolio management & accounting software." },
-    { name: "Financialist", desc: "Simplifying wealth advisory and financial planning." }
+    { name: "Assetplus", desc: "Digital mutual fund distribution platform for advisors.", logo: "/static/images/portfolio/assetplus.png" },
+    { name: "Capitalmind", desc: "Quantitative investment management & research platform.", logo: "/static/images/portfolio/capitalmind.png" },
+    { name: "Indiadatahub", desc: "Comprehensive Indian macroeconomic & corporate data engine.", logo: "/static/images/portfolio/indiadatahub.png" },
+    { name: "M2P", desc: "Embedded API financial infrastructure & card issuance.", logo: "/static/images/portfolio/m2p.png" },
+    { name: "Mprofit", desc: "Multi-asset portfolio management & accounting software.", logo: "/static/images/portfolio/mprofit.png" },
+    { name: "Financialist", desc: "Simplifying wealth advisory and financial planning.", logo: "/static/images/portfolio/financialist.png" }
   ],
   Climate: [
-    { name: "Akshayakalpa", desc: "Certified organic dairy farming & sustainable agriculture." },
-    { name: "Green Worms", desc: "Waste management & circular economy waste-to-resource loops." },
-    { name: "Krop AI", desc: "AI-powered precision farming & crop yield analytics." },
-    { name: "Matchlog", desc: "Optimizing container logistics & empty container repositioning." },
-    { name: "Naxatra Labs", desc: "Developing gearless high-torque electric motors." },
-    { name: "Neufin", desc: "SaaS platform aggregating climate finance & carbon offset capital." },
-    { name: "Ossus Bio", desc: "Generating clean green bio-hydrogen from industrial wastewater." },
-    { name: "Solarsquare", desc: "Residential rooftop solar installation & financing." },
-    { name: "Two Brothers Organic Farms", desc: "Regenerative, soil-first organic farming & consumer brand." },
-    { name: "Voltseal", desc: "Advanced cell-level thermal runaway barriers for EVs." },
-    { name: "Zerocircle", desc: "Seaweed-based biodegradable packaging alternative to plastic." }
+    { name: "Akshayakalpa", desc: "Certified organic dairy farming & sustainable agriculture.", logo: "/static/images/portfolio/akshayakalpa.png" },
+    { name: "Green Worms", desc: "Waste management & circular economy waste-to-resource loops.", logo: "/static/images/portfolio/greenworms.png" },
+    { name: "Krop AI", desc: "AI-powered precision farming & crop yield analytics.", logo: "/static/images/portfolio/kropai.png" },
+    { name: "Matchlog", desc: "Optimizing container logistics & empty container repositioning.", logo: "/static/images/portfolio/matchlog.png" },
+    { name: "Naxatra Labs", desc: "Developing gearless high-torque electric motors.", logo: "/static/images/portfolio/naxatralabs.png" },
+    { name: "Neufin", desc: "SaaS platform aggregating climate finance & carbon offset capital.", logo: "/static/images/portfolio/neufin.png" },
+    { name: "Ossus Bio", desc: "Generating clean green bio-hydrogen from industrial wastewater.", logo: "/static/images/portfolio/ossusbio.png" },
+    { name: "Solarsquare", desc: "Residential rooftop solar installation & financing.", logo: "/static/images/portfolio/solarsquare.png" },
+    { name: "Two Brothers Organic Farms", desc: "Regenerative, soil-first organic farming & consumer brand.", logo: "/static/images/portfolio/twobrothersorganicfarms.png" },
+    { name: "Voltseal", desc: "Advanced cell-level thermal runaway barriers for EVs.", logo: "/static/images/portfolio/voltseal.png" },
+    { name: "Zerocircle", desc: "Seaweed-based biodegradable packaging alternative to plastic.", logo: "/static/images/portfolio/zerocircle.png" }
   ],
   Health: [
-    { name: "Adsys", desc: "Diagnostic devices & medical imaging technology." },
-    { name: "Arboreal", desc: "Stevia-based natural sugar-reduction solutions." },
-    { name: "Blackfrog", desc: "Portable medical-grade active cooling for vaccine logistics." },
-    { name: "Emoha", desc: "Connected 360-degree senior citizen care ecosystem." },
-    { name: "Sukino", desc: "Out-of-hospital post-operative rehabilitative care." },
-    { name: "SuperYou", desc: "Accessible active-wear designed for diverse bodies." },
-    { name: "The Whole Truth", desc: "100% clean-label food & clean snacking brand." }
+    { name: "Adsys", desc: "Diagnostic devices & medical imaging technology.", logo: "/static/images/portfolio/adsys.png" },
+    { name: "Arboreal", desc: "Stevia-based natural sugar-reduction solutions.", logo: "/static/images/portfolio/arboreal.png" },
+    { name: "Blackfrog", desc: "Portable medical-grade active cooling for vaccine logistics.", logo: "/static/images/portfolio/blackfrog.png" },
+    { name: "Emoha", desc: "Connected 360-degree senior citizen care ecosystem.", logo: "/static/images/portfolio/emoha.png" },
+    { name: "Sukino", desc: "Out-of-hospital post-operative rehabilitative care.", logo: "/static/images/portfolio/sukino.png" },
+    { name: "SuperYou", desc: "Accessible active-wear designed for diverse bodies.", logo: "/static/images/portfolio/superyou.png" },
+    { name: "The Whole Truth", desc: "100% clean-label food & clean snacking brand.", logo: "/static/images/portfolio/thewholetruth.png" }
   ],
   Other: [
-    { name: "Galaxeye", desc: "Multi-sensor imaging satellite constellations (SAR + Optical)." },
-    { name: "Karban", desc: "Design-first home air purification & smart climate hardware." },
-    { name: "Spacefields", desc: "Custom solid-fuel rocket propulsion systems." }
+    { name: "Galaxeye", desc: "Multi-sensor imaging satellite constellations (SAR + Optical).", logo: "/static/images/portfolio/galaxeye.png" },
+    { name: "Karban", desc: "Design-first home air purification & smart climate hardware.", logo: "/static/images/portfolio/karban.png" },
+    { name: "Spacefields", desc: "Custom solid-fuel rocket propulsion systems.", logo: "/static/images/portfolio/spacefields.png" }
   ]
 };
 ---
@@ -53,7 +53,7 @@ const portfolio = {
     <!-- TITLE -->
     <header class="space-y-4">
       <h1 class="text-3xl sm:text-4xl font-black tracking-tight text-stone-900 dark:text-stone-100">
-        My Led Investments
+        My Investments
       </h1>
       <p class="font-serif italic text-stone-500 dark:text-stone-400 text-sm sm:text-base border-l-2 border-stone-200 dark:border-stone-800 pl-4">
         A simple, minimalist ledger of the companies, teams, and builders I have had the privilege to lead investments for at Rainmatter.
@@ -73,11 +73,33 @@ const portfolio = {
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {companies.map((company) => (
               <div class="group p-5 rounded-lg bg-stone-100/50 dark:bg-stone-900/30 border border-stone-200/40 dark:border-stone-800/40 hover:border-brand-light dark:hover:border-brand-dark transition-all duration-300 flex flex-col justify-between">
-                <div class="space-y-1.5">
-                  <h3 class="font-serif text-lg font-black text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors duration-200">
-                    {company.name}
-                  </h3>
-                  <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed font-serif">
+                <div class="space-y-3">
+                  
+                  <!-- LOGO & TITLE HEADER -->
+                  <div class="flex items-center gap-3.5">
+                    <div class="w-12 h-12 shrink-0 bg-white dark:bg-stone-950 rounded border border-stone-200/60 dark:border-stone-800/60 p-1.5 overflow-hidden flex items-center justify-center shadow-sm relative">
+                      
+                      <!-- Robust image rendering with Javascript Error Fallback -->
+                      <img 
+                        src={company.logo} 
+                        alt={`${company.name} logo`} 
+                        class="max-w-full max-h-full object-contain logo-img"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                      />
+                      
+                      <!-- Dynamic Styled Letter Fallback if Image is missing -->
+                      <div class="fallback-avatar hidden absolute inset-0 w-full h-full items-center justify-center font-mono text-base font-black bg-brand-light/10 text-brand-light dark:bg-brand-dark/20 dark:text-brand-dark uppercase rounded">
+                        {company.name[0]}
+                      </div>
+                      
+                    </div>
+                    
+                    <h3 class="font-serif text-lg font-black text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors duration-200 leading-tight">
+                      {company.name}
+                    </h3>
+                  </div>
+
+                  <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed font-serif pt-1">
                     {company.desc}
                   </p>
                 </div>
