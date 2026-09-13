@@ -11,12 +11,12 @@ interface Props {
 
 const {
   title = "Dinesh Pai's blog",
-  description = "Field notes on investments and capital markets",
+  description = "Dinesh Pai works at Zerodha, and manages their private investments at Rainmatter.",
   showProgress = false,
 } = Astro.props;
 
-const siteTitle = "Dinesh Pai's blog";
-const pageTitle = title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
+const siteTitle = "Dinesh Pai";
+const pageTitle = title === "Home" ? siteTitle : `${title} | ${siteTitle}`;
 ---
 
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ const pageTitle = title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
 
-    <!-- Open Graph (WhatsApp, Slack, LinkedIn Link Previews) -->
+    <!-- Open Graph (WhatsApp, Slack, LinkedIn, Telegram Link Previews in Any Chat Window) -->
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
