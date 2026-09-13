@@ -1,20 +1,22 @@
-# Dinesh Pai's blog
+# Dinesh Pai
 
 Field notes on business, investments, and capital markets.
 
 ## About
-Dinesh Pai leads startup and private market investments at Zerodha's Rainmatter fund, and supports climate and rural livelihood initiatives through the Rainmatter Foundation. He is an alumnus of D.E. Shaw and Calgary (MBA).
+Dinesh Pai leads startup and private market investments at Zerodha's Rainmatter fund, and supports climate and rural livelihood initiatives through the Rainmatter Foundation. He is the VP of Business Analysis & Investments at Zerodha. Alumnus of D.E. Shaw, Calgary (MBA), and RVCE (CS Engineering).
 
-## Main Sections
-- [Home Page](https://dineshpai.in/): Introduction, bio, sports allegiances (Manchester United, Scuderia Ferrari), and featured projects.
-- [Blog Archive](https://dineshpai.in/blog): Chronological list of field notes on capital markets.
-- [Podcasts](https://dineshpai.in/podcasts): Video discussions on Product-Market Fit, co-founder alignment, hiring, and risks.
+## Core Pages & Portals
+- [Home Page](https://dineshpai.in/): Introduction, bio, sports allegiances (Manchester United, Scuderia Ferrari), and his simplified, jargon-free "How I Invest" note.
+- [How I Work (Personal README)](https://dineshpai.in/how-i-work): Dinesh's operating manual on managing complexity, async defaults, peer kindness, and his 4-stage decision-making framework.
+- [Curated Reads](https://dineshpai.in/good-reads): An interactive, searchable, and tagged library of 20 books and essays on strategy (7 Powers), capital cycles, and behavioral finance.
+- [Notes from the Field](https://dineshpai.in/notes): Curated, high-signal business observations and deep-tech threads compiled from his socials (specifically on dredging, hardware economics, and F1 safety).
 
 ## Featured Projects & Toolkits
 - [onepager](https://github.com/paidinesh7/onepager): An AI financial statement analyzer yielding Altman Z-Scores, Piotroski F-Scores, and DuPont briefs in under 2 minutes.
 - [LegalOS](https://github.com/paidinesh7/LegalOS): AI legal assistant translating startup term sheets, SHAs, and SPAs for Indian founders.
 
 ## Essays & Musings
+- [I am a nobody](https://dineshpai.in/blog/i-am-a-nobody): A raw, personal reflection on imposter syndrome, communication, growing up near Udupi, and the power of luck.
 - [Bootstrapping in Vogue](https://dineshpai.in/blog/bootstrapping-in-vogue): On the discipline and leverage of self-funding startup paths.
 - [Indian Financial Services in Numbers](https://dineshpai.in/blog/indian-financial-service-in-numbers): Comprehensive data metrics outlining domestic banking and financial opportunities.
 - [Venture Capital for 2024 and Beyond](https://dineshpai.in/blog/venture-capital-for-2024-and-beyond): Shifting macro trends in private valuations, risk bets, and founder-investor alignment.
