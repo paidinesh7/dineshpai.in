@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Explicitly welcome AI Search Bots to scan your site, structured pages, and /llms.txt
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://dineshpai.in/sitemap-index.xml
