@@ -8,11 +8,60 @@ const sortedPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.get
 
 // Sort signals chronologically
 const sortedSignals = weeklySignals.sort((a, b) => b.id.localeCompare(a.id));
+
+const dineshPodcasts = [
+  {
+    title: "Nithin Kamath's Guide to How Startups Think of Risks & Moats",
+    series: "The Startup Blueprint — Special Episode",
+    speakers: "Nithin Kamath (Co-founder, Zerodha) & Dinesh Pai",
+    description: "An essential conversation with Nithin Kamath on how Zerodha built its moats over three distinct phases: low-cost referral pricing, technology-led, and ultimately credibility & brand trust. Nithin details his primary role as a risk manager, capital allocation frameworks, and the personal routines that sustain him.",
+    link: "https://www.youtube.com/watch?v=eZdrpChV0C4&t=38s",
+    tags: ["Risk Management", "Business Moats", "Capital Allocation"]
+  },
+  {
+    title: "How VCs Measure Product-Market Fit",
+    series: "How VCs Think — Episode 7",
+    speakers: "Sajith Pai (Blume Ventures) & Dinesh Pai (Rainmatter)",
+    description: "A deep dive breaking down Product-Market Fit (PMF) into Product-to-Problem Fit (PPF) and Motion-to-Market Fit (MMF). We discuss the GRUE (Growth, Retention, Unit Economics) framework and why common metrics like the Sean Ellis test can sometimes mislead founders.",
+    link: "https://www.youtube.com/watch?v=-TqOl7NjB7o",
+    tags: ["Product-Market Fit", "Metrics", "Frameworks"]
+  },
+  {
+    title: "What VCs Look For in the First Meeting",
+    series: "How VCs Think — Episode 1",
+    speakers: "Kushal Bhagia (All In Capital) & Dinesh Pai (Rainmatter)",
+    description: "Demystifying the initial meeting between founders and investors. We explore the 'Why You?' test, the value of 'earned insights' from operating in a market, and common early-stage red flags like unbalanced equity splits.",
+    link: "https://www.youtube.com/watch?v=dhuHgsGevks&t=96s",
+    tags: ["First Meeting", "Pitching", "Equity Splits"]
+  },
+  {
+    title: "How to Hire and Retain Early Employees",
+    series: "How VCs Think — Episode 4",
+    speakers: "Dinesh Pai (Rainmatter) & Portfolio Founders",
+    description: "Navigating the hardest hurdle in early-stage startups: talent acquisition. We discuss why early team crises often build resilience, how to align incentives, and how to build a shared sense of mission that outlasts monetary compensation.",
+    link: "https://www.youtube.com/watch?v=0fxTjJ9jVpg&t=14s",
+    tags: ["Hiring", "Company Culture", "Early Stage"]
+  },
+  {
+    title: "How to Find a Co-founder",
+    series: "The Startup Blueprint — Episode 1",
+    speakers: "Ashish Goel (Co-founder, Urban Ladder) & Dinesh Pai",
+    description: "An in-depth guide to finding and aligning with a co-founder. We detail the strategic hustle of value alignment, identifying complementary 'spiky' skill sets, and why a structured 3-month trial period is vital before formalizing partnerships.",
+    link: "https://www.youtube.com/watch?v=ORPVZgc2ScM",
+    tags: ["Co-founders", "Partnerships", "Team Building"]
+  },
+  {
+    title: "Decoding Bain's India Venture Capital Report",
+    series: "Subtext by Zerodha",
+    speakers: "Aditya Shukla & Aditya Muralidhar (Partners, Bain & Company India) & Dinesh Pai",
+    description: "A comprehensive breakdown of Bain's annual Indian VC report. We discuss changing LP sentiment toward India, the rise of domestic family offices, and emerging sector tailwinds defining the next decade.",
+    link: "https://www.youtube.com/watch?v=TbsWx16UFhM&t=4950s",
+    tags: ["Capital Markets", "LP Sentiment", "Venture Report"]
+  }
+];
 ---
 
-<BaseLayout title="Home" description="Field notes on business, investments, and capital markets.">
-  
-  <!-- SINGLE-COLUMN LAYOUT: RESTORED TO ORIGINAL CLEAN MAX-W-3RD WIDTH -->
+<BaseLayout>
   <div class="max-w-3xl mx-auto space-y-16 py-6 font-serif">
     
     <!-- BIO SECTION -->
@@ -160,7 +209,7 @@ const sortedSignals = weeklySignals.sort((a, b) => b.id.localeCompare(a.id));
                       {signal.week}
                     </h3>
                     <ul class="space-y-4 pl-4 border-l-2 border-stone-100 dark:border-stone-900 mt-2">
-                      {signal.items.map((item) => (
+                      {sortedSignals.slice(1) && signal.items.map((item) => (
                         <li class="space-y-1.5">
                           <div class="flex flex-wrap items-center gap-x-2 text-[10px] font-mono font-bold text-stone-400 dark:text-stone-500 uppercase tracking-wide">
                             <span>{item.category}</span>
@@ -187,6 +236,62 @@ const sortedSignals = weeklySignals.sort((a, b) => b.id.localeCompare(a.id));
           )}
         </div>
       )}
+    </section>
+
+    <!-- PODCASTS SECTION -->
+    <section class="space-y-4">
+      <h2 class="font-mono text-lg font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
+        Podcasts & Video Discussions
+      </h2>
+      <ul class="space-y-6">
+        {dineshPodcasts.map((podcast) => (
+          <li class="space-y-1">
+            <div class="text-[10px] font-mono font-bold text-stone-400 dark:text-stone-500 uppercase tracking-wider">
+              {podcast.series} &bull; {podcast.speakers}
+            </div>
+            <h3 class="text-base font-bold text-stone-900 dark:text-stone-100">
+              <a href={podcast.link} target="_blank" rel="noopener noreferrer" class="hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1 group">
+                {podcast.title}
+                <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+              </a>
+            </h3>
+            <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed font-serif">
+              {podcast.description}
+            </p>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="space-y-4">
+      <h2 class="font-mono text-lg font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
+        Featured Toolkits & Projects
+      </h2>
+      <ul class="space-y-4">
+        <li class="space-y-1">
+          <h3 class="text-base font-bold text-stone-900 dark:text-stone-100">
+            <a href="https://github.com/paidinesh7/onepager" target="_blank" rel="noopener noreferrer" class="hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1 group">
+              onepager
+              <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </a>
+          </h3>
+          <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed font-serif">
+            An AI-powered financial analyzer that generates quick briefs (Altman Z-Score, Piotroski F-Score, DuPont Analysis) from statements in under 2 minutes.
+          </p>
+        </li>
+        <li class="space-y-1">
+          <h3 class="text-base font-bold text-stone-900 dark:text-stone-100">
+            <a href="https://github.com/paidinesh7/LegalOS" target="_blank" rel="noopener noreferrer" class="hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1 group">
+              LegalOS
+              <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </a>
+          </h3>
+          <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed font-serif">
+            An AI legal document analyzer designed specifically for Indian startup founders navigating fundraising agreements like SHAs and SPAs.
+          </p>
+        </li>
+      </ul>
     </section>
 
   </div>
