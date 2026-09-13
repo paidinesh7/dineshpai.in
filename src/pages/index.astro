@@ -6,6 +6,11 @@ import { weeklySignals } from '../data/weeklySignals';
 const posts = await getCollection('blog');
 const sortedPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
+// Render newest signals first
+const sortedSignals = weeklySignals.sort((a, b) => {
+  return b.id.localeCompare(a.id);
+});
+
 const dineshPodcasts = [
   {
     title: "Nithin Kamath's Guide to How Startups Think of Risks & Moats",
@@ -159,14 +164,15 @@ const dineshPodcasts = [
         Every week, I share exactly 3 highly-curated links (articles, frameworks, or podcasts) with a 2-sentence "why it matters" takeaway for Indian founders and investors.
       </p>
 
-      <div class="space-y-6 mt-4">
-        {weeklySignals.map((signal) => (
+      {sortedSignals.length > 0 && (
+        <div class="space-y-6 mt-4">
+          <!-- LATEST SIGNAL -->
           <div class="space-y-2">
             <h3 class="font-mono text-sm font-bold text-stone-900 dark:text-stone-100 bg-stone-100 dark:bg-stone-900 px-2.5 py-1 rounded inline-block">
-              {signal.week}
+              {sortedSignals[0].week}
             </h3>
             <ul class="space-y-4 pl-4 border-l-2 border-stone-200 dark:border-stone-800 mt-2">
-              {signal.items.map((item) => (
+              {sortedSignals[0].items.map((item) => (
                 <li class="space-y-1.5">
                   <div class="flex flex-wrap items-center gap-x-2 text-[10px] font-mono font-bold text-stone-400 dark:text-stone-500 uppercase tracking-wide">
                     <span>{item.category}</span>
@@ -187,8 +193,51 @@ const dineshPodcasts = [
               ))}
             </ul>
           </div>
-        ))}
-      </div>
+
+          <!-- PAST SIGNALS TOGGLE -->
+          {sortedSignals.length > 1 && (
+            <div class="pt-4">
+              <button 
+                id="toggle-past-signals" 
+                class="font-mono text-xs font-bold text-stone-500 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1 cursor-pointer bg-none border-none p-0"
+              >
+                <span>&darr; Show Past Weekly Signals</span>
+              </button>
+              
+              <div id="past-signals-container" class="hidden space-y-6 mt-6 pt-4 border-t border-dashed border-stone-200 dark:border-stone-800">
+                {sortedSignals.slice(1).map((signal) => (
+                  <div class="space-y-2">
+                    <h3 class="font-mono text-sm font-bold text-stone-500 dark:text-stone-400 bg-stone-50 dark:bg-stone-950 px-2.5 py-1 rounded inline-block">
+                      {signal.week}
+                    </h3>
+                    <ul class="space-y-4 pl-4 border-l-2 border-stone-100 dark:border-stone-900 mt-2">
+                      {signal.items.map((item) => (
+                        <li class="space-y-1.5">
+                          <div class="flex flex-wrap items-center gap-x-2 text-[10px] font-mono font-bold text-stone-400 dark:text-stone-500 uppercase tracking-wide">
+                            <span>{item.category}</span>
+                            <span>&bull;</span>
+                            <span>{item.source}</span>
+                          </div>
+                          <div>
+                            <a href={item.url} target="_blank" rel="noopener noreferrer" class="font-serif font-bold text-stone-900 dark:text-stone-100 hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1 group">
+                              {item.title}
+                              <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+                            </a>
+                          </div>
+                          <p class="font-serif text-xs sm:text-sm text-stone-600 dark:text-stone-400 italic pl-3 border-l border-stone-200 dark:border-stone-800">
+                            <strong class="text-[10px] font-mono font-bold uppercase tracking-wider block text-stone-400 dark:text-stone-500 mb-0.5">Why this matters:</strong>
+                            {item.takeaway}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
     </section>
 
     <!-- PODCASTS SECTION -->
@@ -249,3 +298,21 @@ const dineshPodcasts = [
 
   </div>
 </BaseLayout>
+
+<script>
+  const toggleBtn = document.getElementById('toggle-past-signals');
+  const container = document.getElementById('past-signals-container');
+  
+  if (toggleBtn && container) {
+    toggleBtn.addEventListener('click', () => {
+      const isHidden = container.classList.contains('hidden');
+      if (isHidden) {
+        container.classList.remove('hidden');
+        toggleBtn.innerHTML = '<span>&uarr; Hide Past Weekly Signals</span>';
+      } else {
+        container.classList.add('hidden');
+        toggleBtn.innerHTML = '<span>&darr; Show Past Weekly Signals</span>';
+      }
+    });
+  }
+</script>
