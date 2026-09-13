@@ -28,10 +28,22 @@ const pageTitle = title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
 
-    <!-- Open Graph -->
+    <!-- Open Graph (WhatsApp, Slack, LinkedIn Link Previews) -->
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dineshpai.in" />
+    <meta property="og:image" content="https://dineshpai.in/static/images/dinesh_new.jpg" />
+    <meta property="og:image:secure_url" content="https://dineshpai.in/static/images/dinesh_new.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter / X Card Previews (Renders as a gorgeous, large image card) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://dineshpai.in/static/images/dinesh_new.jpg" />
     
     <!-- Favicon -->
     <link rel="shortcut icon" href="/static/images/favicon.png" />
