@@ -137,33 +137,6 @@ const dineshPodcasts = [
       </div>
     </section>
 
-    <!-- ESSAYS / WRITING SECTION -->
-    <section class="space-y-4">
-      <!-- Title size increased from text-lg to text-xl sm:text-2xl -->
-      <h2 class="font-mono text-xl sm:text-2xl font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
-        Essays & Writing
-      </h2>
-      <ul class="space-y-3">
-        {sortedPosts.map((post) => (
-          <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4">
-            <span class="text-stone-400 dark:text-stone-500 font-mono text-xs sm:text-sm shrink-0 w-28">
-              {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}
-            </span>
-            <div class="flex-grow">
-              <a href={`/blog/${post.slug}`} class="text-stone-900 dark:text-stone-100 font-bold hover:text-brand-light dark:hover:text-brand-dark hover:underline">
-                {post.data.title}
-              </a>
-              {post.data.description && (
-                <p class="text-stone-500 dark:text-stone-400 text-xs sm:text-sm mt-0.5 max-w-2xl font-serif">
-                  {post.data.description}
-                </p>
-              )}
-            </div>
-          </li>
-        ))}
-      </ul>
-    </section>
-
     <!-- THE WEEKLY SIGNAL SECTION -->
     <section class="space-y-4">
       <div class="border-b border-stone-200 dark:border-stone-800 pb-1.5 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
@@ -253,6 +226,33 @@ const dineshPodcasts = [
           )}
         </div>
       )}
+    </section>
+
+    <!-- ESSAYS / WRITING SECTION -->
+    <section class="space-y-4">
+      <!-- Title size increased from text-lg to text-xl sm:text-2xl -->
+      <h2 class="font-mono text-xl sm:text-2xl font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
+        Essays & Writing
+      </h2>
+      <ul class="space-y-3">
+        {sortedPosts.map((post) => (
+          <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4">
+            <span class="text-stone-400 dark:text-stone-500 font-mono text-xs sm:text-sm shrink-0 w-28">
+              {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}
+            </span>
+            <div class="flex-grow">
+              <a href={`/blog/${post.slug}`} class="text-stone-900 dark:text-stone-100 font-bold hover:text-brand-light dark:hover:text-brand-dark hover:underline">
+                {post.data.title}
+              </a>
+              {post.data.description && (
+                <p class="text-stone-500 dark:text-stone-400 text-xs sm:text-sm mt-0.5 max-w-2xl font-serif">
+                  {post.data.description}
+                </p>
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
     </section>
 
     <!-- PODCASTS SECTION -->

@@ -281,19 +281,5 @@ export const goodReads: ReadItem[] = [
       "The 3-Step Pacing Plan: Unilateral embedded evaluators (METR) given full employee-like access; government-mediated democratic coordination; and global speed limits paired with high-grade model weight cybersecurity.",
       "What We Can Learn: A masterclass in carving out a highly structured, operational 'middle path' (pacing) and transitioning from a chilling narrative (the swarm hack) directly into a rigorous technical blueprint."
     ]
-  },
-  {
-    id: "21",
-    title: "Ramp at $1 Billion",
-    author: "Packy McCormick (Not Boring)",
-    url: "https://www.notboring.co/p/ramp-at-1-billion",
-    category: "Fintech",
-    tags: ["fintech", "scaling", "business-models", "not-boring"],
-    summary: "A masterclass deep-dive tracking how corporate card startup Ramp crossed $1 billion in annualized gross revenue and $100 billion in TPV in record time. McCormick frames Ramp's success around the concept of 'The Time Company'—using strategic counterpositioning to save businesses money and time, systematically expanding into high-margin SaaS subscriptions, and utilizing small, elite engineering-led teams of 3–5 builders to out-ship legacy banking giants.",
-    takeaways: [
-      "The Multi-Product S-Curve (Card ➔ Bill Pay ➔ SaaS): Ramp successfully transitioned from a transactional interchange business (~2% card swipe fee) to a diversified software giant. AP/Bill Pay volume tripled YoY and surpassed Card volume, while 'Ramp Plus' (a paid $15/user SaaS tier) and 'Ramp Treasury' (surpassing $1.5B AUM in 9 months) now drive over 30% of contribution profits at software-like margins.",
-      "The Counter-Positioning Moat: Traditional banks make money when clients spend more. Ramp counter-positions by helping clients spend less (saving users $10B and 27.5M hours).",
-      "The 'Efficient Frontier' of Sourcing & Hype: While critics labeled Ramp's $22.5B valuation multiples 'crazy' in isolation, their aggressive execution pace consistently outran the hype, maintaining doubling YoY growth and generating positive operating cash flow."
-    ]
   }
 ];
