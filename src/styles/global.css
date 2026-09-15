@@ -99,4 +99,26 @@
   :global(.dark) .analog-shadow-small {
     box-shadow: 3px 3px 0px 0px rgba(98, 158, 122, 0.4);
   }
+
+  /* Magnetic animated underline hover effect */
+  .hover-underline-anim {
+    position: relative;
+    display: inline-block;
+  }
+  .hover-underline-anim::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: -1px;
+    left: 0;
+    background-color: currentColor;
+    transform-origin: bottom right;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .hover-underline-anim:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 }

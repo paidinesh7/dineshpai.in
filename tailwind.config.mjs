@@ -7,14 +7,19 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['Merriweather', 'Georgia', 'serif'],
+        serif: ['Newsreader', 'Merriweather', 'Georgia', 'serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['"Courier Prime"', 'Courier New', 'Courier', 'monospace'],
+        mono: ['"JetBrains Mono"', '"Courier Prime"', 'Courier New', 'monospace'],
+        display: ['"Playfair Display"', 'Merriweather', 'serif'],
       },
       colors: {
         brand: {
           light: '#2c4a3e', // Elegant forest green
           dark: '#629e7a',
+        },
+        accent: {
+          light: '#b34d2b', // Warm Terracotta / Rust
+          dark: '#e07a5f',
         },
         paper: {
           light: '#f5f2eb', // Warm physical paper
