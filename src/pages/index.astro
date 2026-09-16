@@ -66,8 +66,8 @@ const dineshPodcasts = [
     
     <!-- BIO SECTION -->
     <section class="block">
-      <!-- Content text size set to text-[17px] sm:text-[20px] for elegant readability -->
-      <div class="text-stone-800 dark:text-stone-200 leading-relaxed text-[17px] sm:text-[20px] space-y-4">
+      <!-- Content text size set to text-sm sm:text-base for elegant readability -->
+      <div class="text-stone-800 dark:text-stone-200 leading-relaxed text-sm sm:text-base space-y-4">
         <!-- Desktop/Tablet Floated Profile Photo -->
         <div class="w-32 h-32 sm:w-40 sm:h-40 float-right ml-6 mb-4 sm:ml-8 sm:mb-6 shrink-0 relative bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-lg overflow-hidden shadow-sm hidden sm:block">
           <img 
@@ -107,7 +107,7 @@ const dineshPodcasts = [
         <p>
           I currently work at <a href="https://zerodha.com/" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Zerodha</a>, where I help with investments in private markets through <a href="https://rainmatter.com/" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Rainmatter</a>. I am also passionate about projects that can safeguard livelihoods most at risk via the <a href="https://rainmatter.org/" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Rainmatter Foundation</a>.
         </p>
-        <p class="text-stone-600 dark:text-stone-400 italic text-[17px] sm:text-[20px] border-l-2 border-dashed border-stone-200 dark:border-stone-800 pl-4 mt-6">
+        <p class="text-stone-600 dark:text-stone-400 italic text-sm sm:text-base border-l-2 border-dashed border-stone-200 dark:border-stone-800 pl-4 mt-6">
           I believe the crux of business lies in simplicity, extreme cost-discipline, and doing right by your customers and employees.
         </p>
       </div>
@@ -119,8 +119,8 @@ const dineshPodcasts = [
       <h2 class="font-mono text-xl sm:text-2xl font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
         How I Invest
       </h2>
-      <!-- Content text size reduced from text-base sm:text-lg to text-[17px] sm:text-[20px] -->
-      <div class="text-stone-800 dark:text-stone-200 leading-relaxed text-[17px] sm:text-[20px] space-y-4">
+      <!-- Content text size reduced from text-base sm:text-lg to text-sm sm:text-base -->
+      <div class="text-stone-800 dark:text-stone-200 leading-relaxed text-sm sm:text-base space-y-4">
         <p>
           I help Zerodha manage private market investments through <a href="https://rainmatter.com/" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Rainmatter</a>.
         </p>
@@ -155,7 +155,7 @@ const dineshPodcasts = [
           3 links &bull; Why they matter
         </span>
       </div>
-      <p class="font-serif italic text-stone-500 dark:text-stone-400 text-[15px] sm:text-[17.5px] leading-relaxed">
+      <p class="font-serif italic text-stone-500 dark:text-stone-400 text-xs sm:text-sm leading-relaxed">
         Every week, I share exactly 3 highly-curated links (articles, frameworks, or podcasts) with a 2-sentence "why it matters" takeaway for Indian founders and investors.
       </p>
 
@@ -180,7 +180,7 @@ const dineshPodcasts = [
                       <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
                     </a>
                   </div>
-                  <p class="font-serif text-[15px] sm:text-[17.5px] text-stone-600 dark:text-stone-400 italic pl-3 border-l border-stone-200 dark:border-stone-800">
+                  <p class="font-serif text-xs sm:text-sm text-stone-600 dark:text-stone-400 italic pl-3 border-l border-stone-200 dark:border-stone-800">
                     <strong class="text-[10px] font-mono font-bold uppercase tracking-wider block text-stone-400 dark:text-stone-500 mb-0.5">Why this matters:</strong>
                     {item.takeaway}
                   </p>
@@ -219,7 +219,7 @@ const dineshPodcasts = [
                               <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
                             </a>
                           </div>
-                          <p class="font-serif text-[15px] sm:text-[17.5px] text-stone-600 dark:text-stone-400 italic pl-3 border-l border-stone-200 dark:border-stone-800">
+                          <p class="font-serif text-xs sm:text-sm text-stone-600 dark:text-stone-400 italic pl-3 border-l border-stone-200 dark:border-stone-800">
                             <strong class="text-[10px] font-mono font-bold uppercase tracking-wider block text-stone-400 dark:text-stone-500 mb-0.5">Why this matters:</strong>
                             {item.takeaway}
                           </p>
@@ -252,7 +252,7 @@ const dineshPodcasts = [
                 {post.data.title}
               </a>
               {post.data.description && (
-                <p class="text-stone-500 dark:text-stone-400 text-[15px] sm:text-[17.5px] mt-0.5 max-w-2xl font-serif leading-relaxed">
+                <p class="text-stone-500 dark:text-stone-400 text-xs sm:text-sm mt-0.5 max-w-2xl font-serif leading-relaxed">
                   {post.data.description}
                 </p>
               )}
@@ -280,7 +280,7 @@ const dineshPodcasts = [
                 <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
               </a>
             </h3>
-            <p class="text-stone-600 dark:text-stone-400 text-[15px] sm:text-[17.5px] leading-relaxed font-serif">
+            <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed font-serif">
               {podcast.description}
             </p>
           </li>
@@ -302,7 +302,7 @@ const dineshPodcasts = [
               <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
             </a>
           </h3>
-          <p class="text-stone-600 dark:text-stone-400 text-[15px] sm:text-[17.5px] leading-relaxed font-serif">
+          <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed font-serif">
             An AI-powered financial analyzer that generates quick briefs (Altman Z-Score, Piotroski F-Score, DuPont Analysis) from statements in under 2 minutes.
           </p>
         </li>
@@ -313,7 +313,7 @@ const dineshPodcasts = [
               <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
             </a>
           </h3>
-          <p class="text-stone-600 dark:text-stone-400 text-[15px] sm:text-[17.5px] leading-relaxed font-serif">
+          <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed font-serif">
             An AI legal document analyzer designed specifically for Indian startup founders navigating fundraising agreements like SHAs and SPAs.
           </p>
         </li>
