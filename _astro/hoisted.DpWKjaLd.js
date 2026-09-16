@@ -1,0 +1,1 @@
+import"./hoisted.BScVxmeO.js";const t=document.getElementById("notes-search-input"),o=document.querySelectorAll(".note-card");t&&t.addEventListener("input",n=>{const s=n.target.value.toLowerCase().trim();o.forEach(e=>{(e.getAttribute("data-search")||"").toLowerCase().includes(s)?e.classList.remove("hidden"):e.classList.add("hidden")})});
