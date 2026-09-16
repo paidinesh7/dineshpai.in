@@ -71,9 +71,9 @@ const allTags = Array.from(new Set(goodReads.flatMap(item => item.tags))).sort()
               <span>{read.author}</span>
             </div>
             
-            <h2 class="text-xl font-bold text-stone-900 dark:text-stone-100">
+            <h2 class="text-xl font-bold font-serif text-stone-900 dark:text-stone-100">
               {read.url ? (
-                <a href={read.url} target="_blank" rel="noopener noreferrer" class="hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1 group">
+                <a href={read.url} target="_blank" rel="noopener noreferrer" class="font-serif hover:text-accent-light dark:hover:text-accent-dark hover:underline inline-flex items-center gap-1 group">
                   {read.title}
                   <span class="text-stone-400 dark:text-stone-500 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
                 </a>
