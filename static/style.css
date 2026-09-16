@@ -11,12 +11,8 @@ html, body {
     padding: 0;
 }
 body {
-    background: #fff;
-    font-family: Inter, serif;
     font-weight: 350;
-    color: #333;
     line-height: 1.6em;
-    font-size: 18px;
 }
 
 a {
@@ -54,9 +50,7 @@ a {
             text-decoration-color: #000;
         }
 
-html,button,input,select,textarea {
-    color: #333;
-}
+/* Form controls and html colors inherited dynamically */
 
 ::-moz-selection {
     background: #000;
@@ -128,7 +122,6 @@ blockquote em {
 
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Ramaraja", Inter, sans-serif;
     font-weight: 600;
     line-height: 1.3em;
     margin: 45px 0 20px 0;
