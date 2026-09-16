@@ -18,13 +18,7 @@
     @apply bg-stone-400 dark:bg-stone-700;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: "Playfair Display", Merriweather, Georgia, serif;
-    font-weight: 700;
-  }
-
   body {
-    font-family: "Newsreader", "Merriweather", Georgia, serif;
     background-color: #ecf1ee;
     /* Dotted Leuchtturm journal grid */
     background-image: radial-gradient(rgba(44, 74, 62, 0.08) 1.2px, transparent 1.2px);

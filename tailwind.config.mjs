@@ -7,10 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['Newsreader', 'Merriweather', 'Georgia', 'serif'],
+        serif: ['Merriweather', 'Georgia', 'serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['"JetBrains Mono"', '"Courier Prime"', 'Courier New', 'monospace'],
-        display: ['"Playfair Display"', 'Merriweather', 'serif'],
+        mono: ['"Courier Prime"', 'Courier New', 'Courier', 'monospace'],
       },
       colors: {
         brand: {
