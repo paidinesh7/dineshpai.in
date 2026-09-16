@@ -20,12 +20,9 @@
 
   body {
     background-color: #ecf1ee;
-    background-image: 
-      /* Soft ambient vignette glow at top-center */
-      radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.7) 0%, transparent 60%),
-      /* Dotted Leuchtturm journal grid */
-      radial-gradient(rgba(44, 74, 62, 0.08) 1.2px, transparent 1.2px);
-    background-size: 100% 100%, 24px 24px;
+    /* Dotted Leuchtturm journal grid */
+    background-image: radial-gradient(rgba(44, 74, 62, 0.08) 1.2px, transparent 1.2px);
+    background-size: 24px 24px;
     position: relative;
   }
 
@@ -45,12 +42,9 @@
 
   :global(.dark) body {
     background-color: #0c120e;
-    background-image: 
-      /* Soft ambient vignette glow at top-center (subtle dark forest-emerald shine) */
-      radial-gradient(circle at 50% 0%, rgba(98, 158, 122, 0.08) 0%, transparent 50%),
-      /* Dotted Leuchtturm journal grid (dark mode) */
-      radial-gradient(rgba(98, 158, 122, 0.05) 1.2px, transparent 1.2px);
-    background-size: 100% 100%, 24px 24px;
+    /* Dotted Leuchtturm journal grid (dark mode) */
+    background-image: radial-gradient(rgba(98, 158, 122, 0.05) 1.2px, transparent 1.2px);
+    background-size: 24px 24px;
   }
 }
 
