@@ -11,7 +11,7 @@ html, body {
     padding: 0;
 }
 body {
-    font-family: Inter, serif;
+    font-family: Lora, Georgia, serif;
     font-weight: 350;
     line-height: 1.6em;
     font-size: 18px;
@@ -124,7 +124,7 @@ blockquote em {
 
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Ramaraja", Inter, sans-serif;
+    font-family: Lora, Georgia, serif;
     font-weight: 600;
     line-height: 1.3em;
     margin: 45px 0 20px 0;

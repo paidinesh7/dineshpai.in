@@ -7,9 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['Merriweather', 'Georgia', 'serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['"Courier Prime"', 'Courier New', 'Courier', 'monospace'],
+        serif: ['Lora', 'Georgia', 'serif'],
+        sans: ['"Instrument Sans"', 'system-ui', 'sans-serif'],
+        mono: ['"DM Mono"', 'Courier New', 'monospace'],
       },
       colors: {
         brand: {
