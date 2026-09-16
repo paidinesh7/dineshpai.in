@@ -125,3 +125,34 @@
     transform-origin: bottom left;
   }
 }
+
+/* Ensure clean text readability in Dark Mode by overriding public/static/style.css legacy rules */
+:global(.dark) {
+  color: #e3e1da;
+}
+:global(.dark) body,
+:global(.dark) html,
+:global(.dark) button,
+:global(.dark) input,
+:global(.dark) select,
+:global(.dark) textarea {
+  color: #e3e1da !important;
+}
+:global(.dark) h1,
+:global(.dark) h2,
+:global(.dark) h3,
+:global(.dark) h4,
+:global(.dark) h5,
+:global(.dark) h6 {
+  color: #f5f2eb !important;
+}
+:global(.dark) a {
+  color: var(--primary, #47a1d7);
+}
+:global(.dark) a:hover {
+  color: #fff !important;
+}
+:global(.dark) p,
+:global(.dark) li {
+  color: #e3e1da !important;
+}
