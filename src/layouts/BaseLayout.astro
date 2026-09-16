@@ -1,6 +1,7 @@
 ---
 import ThemeToggle from '../components/ThemeToggle';
 import ReadingProgressBar from '../components/ReadingProgressBar';
+import { ViewTransitions } from 'astro:transitions';
 import '../styles/global.css';
 
 interface Props {
@@ -92,16 +93,24 @@ const pageTitle = title === "Home" ? siteTitle : `${title} | ${siteTitle}`;
       }
     </script>
 
+    <!-- Native View Transitions -->
+    <ViewTransitions />
+
     <!-- Theme Initialization Script (Avoids flashing light theme) -->
     <script is:inline>
-      const getThemePreference = () => {
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-          return localStorage.getItem('theme');
-        }
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      const applyTheme = () => {
+        const getThemePreference = () => {
+          if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+            return localStorage.getItem('theme');
+          }
+          return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        };
+        const isDark = getThemePreference() === 'dark';
+        document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
       };
-      const isDark = getThemePreference() === 'dark';
-      document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
+      
+      applyTheme();
+      document.addEventListener('astro:after-swap', applyTheme);
     </script>
   </head>
   <body class="bg-[#ecf1ee] dark:bg-[#0c120e] text-stone-800 dark:text-stone-200 min-h-screen flex flex-col font-serif transition-colors duration-300 antialiased selection:bg-brand-light/10 dark:selection:bg-brand-dark/20">
