@@ -35,12 +35,12 @@ const formatDatePrecise = (date: Date) => {
 
     <!-- tags -->
     {post.data.tags && post.data.tags.length > 0 && (
-      <div class="tags">
-        <ul class="flat">
-          {post.data.tags.map((tag) => (
-            <li><a href={`/tags/${tag}`}>{tag}</a></li>
-          ))}
-        </ul>
+      <div class="flex flex-wrap gap-2 mt-8 pt-6 border-t border-dashed border-stone-200 dark:border-stone-800">
+        {post.data.tags.map((tag) => (
+          <span class="font-mono text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-900/60 text-stone-500 dark:text-stone-400 border border-stone-200/30 dark:border-stone-800/30">
+            #{tag}
+          </span>
+        ))}
       </div>
     )}
 

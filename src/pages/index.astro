@@ -6,14 +6,6 @@ import { weeklySignals } from '../data/weeklySignals';
 const posts = await getCollection('blog');
 const sortedPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
-// Filter featured and archive posts explicitly for high-signal editorial curation
-const featuredPosts = sortedPosts.filter(
-  (post) => post.slug === 'venture-capital-for-2024-and-beyond' || post.slug === 'indian-financial-service-in-numbers'
-);
-const archivePosts = sortedPosts.filter(
-  (post) => post.slug !== 'venture-capital-for-2024-and-beyond' && post.slug !== 'indian-financial-service-in-numbers'
-);
-
 // Sort signals chronologically
 const sortedSignals = weeklySignals.sort((a, b) => b.id.localeCompare(a.id));
 
@@ -250,64 +242,30 @@ const dineshPodcasts = [
     </section>
 
     <!-- ESSAYS / WRITING SECTION -->
-    <section class="space-y-6">
+    <section class="space-y-4">
       <!-- Title size increased from text-lg to text-xl sm:text-2xl -->
       <h2 class="font-mono text-xl sm:text-2xl font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100 border-b border-stone-200 dark:border-stone-800 pb-1.5">
         Essays & Writing
       </h2>
-
-      {featuredPosts.length > 0 && (
-        <div class="space-y-4">
-          <span class="font-mono text-[9px] uppercase font-bold tracking-widest text-stone-400 dark:text-stone-500 block mb-1">Editor's Picks</span>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {featuredPosts.map((post) => (
-              <div class="group p-5 rounded-lg bg-stone-100/40 dark:bg-stone-900/20 border border-stone-200/30 dark:border-stone-800/30 hover:border-accent-light dark:hover:border-accent-dark hover:-translate-y-1 hover:shadow-sm transition-all duration-300 flex flex-col justify-between">
-                <div class="space-y-2">
-                  <span class="font-mono text-[9px] uppercase font-bold tracking-wider text-accent-light dark:text-accent-dark block">Featured Essay</span>
-                  <h3 class="font-serif text-[16px] sm:text-[18px] font-black text-stone-900 dark:text-stone-100 leading-snug group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors duration-200">
-                    <a href={`/blog/${post.slug}`}>
-                      {post.data.title}
-                    </a>
-                  </h3>
-                  {post.data.description && (
-                    <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed font-serif pt-1">
-                      {post.data.description}
-                    </p>
-                  )}
-                </div>
-                <span class="font-mono text-[9px] uppercase tracking-wider text-stone-400 dark:text-stone-500 block mt-4">
-                  {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {archivePosts.length > 0 && (
-        <div class="space-y-4 pt-4">
-          <span class="font-mono text-[9px] uppercase font-bold tracking-widest text-stone-400 dark:text-stone-500 block">Archive Ledger</span>
-          <ul class="space-y-3">
-            {archivePosts.map((post) => (
-              <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4">
-                <span class="text-stone-400 dark:text-stone-500 font-mono text-xs sm:text-sm shrink-0 w-28">
-                  {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}
-                </span>
-                <div class="flex-grow">
-                  <a href={`/blog/${post.slug}`} class="font-serif font-bold text-stone-900 dark:text-stone-100 hover:text-accent-light dark:hover:text-accent-dark hover:underline">
-                    {post.data.title}
-                  </a>
-                  {post.data.description && (
-                    <p class="text-stone-500 dark:text-stone-400 text-xs sm:text-sm mt-0.5 max-w-2xl font-serif leading-relaxed">
-                      {post.data.description}
-                    </p>
-                  )}
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <ul class="space-y-3">
+        {sortedPosts.map((post) => (
+          <li class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4">
+            <span class="text-stone-400 dark:text-stone-500 font-mono text-xs sm:text-sm shrink-0 w-28">
+              {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}
+            </span>
+            <div class="flex-grow">
+              <a href={`/blog/${post.slug}`} class="font-serif font-bold text-stone-900 dark:text-stone-100 hover:text-accent-light dark:hover:text-accent-dark hover:underline">
+                {post.data.title}
+              </a>
+              {post.data.description && (
+                <p class="text-stone-500 dark:text-stone-400 text-xs sm:text-sm mt-0.5 max-w-2xl font-serif leading-relaxed">
+                  {post.data.description}
+                </p>
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
     </section>
 
     <!-- PODCASTS SECTION -->
