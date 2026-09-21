@@ -124,53 +124,55 @@ const allTags = Array.from(new Set(goodReads.flatMap(item => item.tags))).sort()
 </BaseLayout>
 
 <script>
-  const searchInput = document.getElementById('search-input') as HTMLInputElement;
-  const tagButtons = document.querySelectorAll('.tag-btn');
-  const readCards = document.querySelectorAll('.read-card');
-  
-  let currentTag = 'all';
-  let searchQuery = '';
+  document.addEventListener('astro:page-load', () => {
+    const searchInput = document.getElementById('search-input') as HTMLInputElement;
+    const tagButtons = document.querySelectorAll('.tag-btn');
+    const readCards = document.querySelectorAll('.read-card');
+    
+    let currentTag = 'all';
+    let searchQuery = '';
 
-  const filterLibrary = () => {
-    readCards.forEach((card) => {
-      const cardTags = (card.getAttribute('data-tags') || '').split(',');
-      const searchContent = card.getAttribute('data-search') || '';
-      
-      const matchesTag = currentTag === 'all' || cardTags.includes(currentTag);
-      const matchesSearch = searchContent.includes(searchQuery.toLowerCase());
-      
-      if (matchesTag && matchesSearch) {
-        card.classList.remove('hidden');
-      } else {
-        card.classList.add('hidden');
-      }
-    });
-  };
-
-  // Search Input Listener
-  if (searchInput) {
-    searchInput.addEventListener('input', (e) => {
-      searchQuery = (e.target as HTMLInputElement).value;
-      filterLibrary();
-    });
-  }
-
-  // Tag Button Listener
-  tagButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const selectedTag = btn.getAttribute('data-tag') || 'all';
-      currentTag = selectedTag;
-      
-      // Update UI classes
-      tagButtons.forEach((b) => {
-        b.classList.remove('bg-brand-light/10', 'dark:bg-brand-dark/20', 'text-brand-light', 'dark:text-brand-dark');
-        b.classList.add('bg-stone-200/60', 'dark:bg-stone-800/60', 'text-stone-600', 'dark:text-stone-400');
+    const filterLibrary = () => {
+      readCards.forEach((card) => {
+        const cardTags = (card.getAttribute('data-tags') || '').split(',');
+        const searchContent = card.getAttribute('data-search') || '';
+        
+        const matchesTag = currentTag === 'all' || cardTags.includes(currentTag);
+        const matchesSearch = searchContent.includes(searchQuery.toLowerCase());
+        
+        if (matchesTag && matchesSearch) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
       });
-      
-      btn.classList.remove('bg-stone-200/60', 'dark:bg-stone-800/60', 'text-stone-600', 'dark:text-stone-400');
-      btn.classList.add('bg-brand-light/10', 'dark:bg-brand-dark/20', 'text-brand-light', 'dark:text-brand-dark');
-      
-      filterLibrary();
+    };
+
+    // Search Input Listener
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = (e.target as HTMLInputElement).value;
+        filterLibrary();
+      });
+    }
+
+    // Tag Button Listener
+    tagButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const selectedTag = btn.getAttribute('data-tag') || 'all';
+        currentTag = selectedTag;
+        
+        // Update UI classes
+        tagButtons.forEach((b) => {
+          b.classList.remove('bg-brand-light/10', 'dark:bg-brand-dark/20', 'text-brand-light', 'dark:text-brand-dark');
+          b.classList.add('bg-stone-200/60', 'dark:bg-stone-800/60', 'text-stone-600', 'dark:text-stone-400');
+        });
+        
+        btn.classList.remove('bg-stone-200/60', 'dark:bg-stone-800/60', 'text-stone-600', 'dark:text-stone-400');
+        btn.classList.add('bg-brand-light/10', 'dark:bg-brand-dark/20', 'text-brand-light', 'dark:text-brand-dark');
+        
+        filterLibrary();
+      });
     });
   });
 </script>

@@ -155,23 +155,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <script>
-  const searchInput = document.getElementById('notes-search-input') as HTMLInputElement;
-  const noteCards = document.querySelectorAll('.note-card');
-  
-  if (searchInput) {
-    searchInput.addEventListener('input', (e) => {
-      const query = (e.target as HTMLInputElement).value.toLowerCase().trim();
-      
-      noteCards.forEach((card) => {
-        const searchContent = card.getAttribute('data-search') || '';
+  document.addEventListener('astro:page-load', () => {
+    const searchInput = document.getElementById('notes-search-input') as HTMLInputElement;
+    const noteCards = document.querySelectorAll('.note-card');
+    
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = (e.target as HTMLInputElement).value.toLowerCase().trim();
         
-        // Match query cleanly
-        if (searchContent.toLowerCase().includes(query)) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
+        noteCards.forEach((card) => {
+          const searchContent = card.getAttribute('data-search') || '';
+          
+          // Match query cleanly
+          if (searchContent.toLowerCase().includes(query)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
       });
-    });
-  }
+    }
+  });
 </script>

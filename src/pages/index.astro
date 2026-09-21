@@ -330,19 +330,21 @@ const dineshPodcasts = [
 </BaseLayout>
 
 <script>
-  const toggleBtn = document.getElementById('toggle-past-signals');
-  const container = document.getElementById('past-signals-container');
-  
-  if (toggleBtn && container) {
-    toggleBtn.addEventListener('click', () => {
-      const isHidden = container.classList.contains('hidden');
-      if (isHidden) {
-        container.classList.remove('hidden');
-        toggleBtn.innerHTML = '<span>&uarr; Hide Past Weekly Signals</span>';
-      } else {
-        container.classList.add('hidden');
-        toggleBtn.innerHTML = '<span>&darr; Show Past Weekly Signals</span>';
-      }
-    });
-  }
+  document.addEventListener('astro:page-load', () => {
+    const toggleBtn = document.getElementById('toggle-past-signals');
+    const container = document.getElementById('past-signals-container');
+    
+    if (toggleBtn && container) {
+      toggleBtn.addEventListener('click', () => {
+        const isHidden = container.classList.contains('hidden');
+        if (isHidden) {
+          container.classList.remove('hidden');
+          toggleBtn.innerHTML = '<span>&uarr; Hide Past Weekly Signals</span>';
+        } else {
+          container.classList.add('hidden');
+          toggleBtn.innerHTML = '<span>&darr; Show Past Weekly Signals</span>';
+        }
+      });
+    }
+  });
 </script>
