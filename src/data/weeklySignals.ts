@@ -15,6 +15,33 @@ export interface WeeklySignal {
 
 export const weeklySignals: WeeklySignal[] = [
   {
+    id: "week-40-2026",
+    week: "Week of October 5, 2026",
+    items: [
+      {
+        title: "Trust Is The Scarce Asset",
+        source: "Pivotal",
+        url: "https://pivotal.substack.com/p/trust-is-the-scarce-asset",
+        category: "AI Economics & Governance",
+        takeaway: "When AI commoditizes raw intelligence, economic surplus migrates to the complementary asset required to verify it: Trust. In an era of synthetic generation, defensible moats belong to vertical institutions built on costly signals, fiduciaries, and contractual accountability."
+      },
+      {
+        title: "The Stablecoin Inversion: OUSD & The Open Standard Coalition",
+        source: "Open Standard (Visa / Stripe)",
+        url: "https://openstandard.org",
+        category: "Fintech Rails & Moats",
+        takeaway: "Stripe, Visa, and Shopify's launch of Open USD inverts the Tether/Circle model by redistributing 100% of Treasury float yields and network equity to distribution partners—reviving Dee Hock's 1970s member-owned Visa consortium playbook for internet money."
+      },
+      {
+        title: "RIP, the Product Playbook",
+        source: "Build with AI (GrowthX)",
+        url: "https://buildwithai.to/p/rip-the-product-playbook",
+        category: "Product Strategy & PLG",
+        takeaway: "AI collapses user skill gaps by delivering prompt-to-output in under 60 seconds and predicts churn weeks before formal cancellation, making the human operator's strategic judgment the ultimate scarce bottleneck."
+      }
+    ]
+  },
+  {
     id: "week-37-2026",
     week: "Week of September 19, 2026",
     items: [
@@ -28,7 +55,7 @@ export const weeklySignals: WeeklySignal[] = [
       {
         title: "Nubank America & The AWS of Money",
         source: "fintechbrainfood.com",
-        url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash",
+        url: "https://www.fintechbrainfood.com/p/nubank-america-and-the-aws-of-money",
         category: "Fintech",
         takeaway: "Deconstructs Nubank's massive U.S. neobanking debut using Lead Bank as a sponsor shortcut, and how their stablecoin-powered 'Nu Global' remittance engine bridges retail banking with on-chain rails."
       },

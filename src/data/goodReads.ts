@@ -281,5 +281,47 @@ export const goodReads: ReadItem[] = [
       "The 3-Step Pacing Plan: Unilateral embedded evaluators (METR) given full employee-like access; government-mediated democratic coordination; and global speed limits paired with high-grade model weight cybersecurity.",
       "What We Can Learn: A masterclass in carving out a highly structured, operational 'middle path' (pacing) and transitioning from a chilling narrative (the swarm hack) directly into a rigorous technical blueprint."
     ]
+  },
+  {
+    id: "21",
+    title: "Trust Is The Scarce Asset",
+    author: "Abraham Thomas (Pivotal / Windkey)",
+    url: "https://pivotal.substack.com/p/trust-is-the-scarce-asset",
+    category: "AI & Economics",
+    tags: ["ai", "trust", "economics", "finance", "governance"],
+    summary: "Macro and economic analysis tracing the inevitable migration of scarcity in the AI era. When AI commoditizes raw intelligence, value accrues to the complementary asset required to verify and safely rely on it: Trust. Building verifiable trust-first institutions is the defining frontier for enterprise and finance.",
+    takeaways: [
+      "The Law of Scarcity Migration: Intelligence -> Compute / Power / Data -> Verification & Trust. Value accrues to whatever remains scarce.",
+      "The 5 Pillars of Rekindled Trust: Costly signals, independent third-party evaluations, enforceable penalties, accountable human fiduciaries, and repeated games.",
+      "Finance is Trust, Not Just Code: Financial institutions rationally lag AI adoption because LLMs elide trust. Moats belong to operators who provide statutory accountability and auditability."
+    ]
+  },
+  {
+    id: "22",
+    title: "The Stablecoin Inversion: OUSD & The Open Standard Coalition",
+    author: "Open Standard Consortium (Visa, Stripe, Shopify, Coinbase)",
+    url: "https://openstandard.org",
+    category: "Fintech",
+    tags: ["fintech", "stablecoins", "payment-rails", "counter-positioning", "business-models"],
+    summary: "An analysis of the structural business model inversion behind Open USD (OUSD). By redistributing reserve float yields and network company equity to the payment processors and merchants driving volume, Open Standard resurrects Dee Hock's 1970s member-owned Visa consortium playbook to challenge extractive float monopolies.",
+    takeaways: [
+      "The Float Inversion: Tether and Circle hoard 100% of US Treasury yields. Open Standard returns float economics and equity to distribution partners driving real transaction volume.",
+      "The 1970s Visa Playbook: Aligned member associations consistently disrupt isolated rent-seekers over long horizons.",
+      "Counter-Positioning Moat: Incumbent float monopolists cannot match this shared-equity distribution model without destroying their core margin profile."
+    ]
+  },
+  {
+    id: "23",
+    title: "RIP, the product playbook. The new ways to grow products in the AI age.",
+    author: "Abhishek (GrowthX / Build with AI)",
+    url: "https://buildwithai.to/p/rip-the-product-playbook",
+    category: "Product Strategy",
+    tags: ["product-growth", "ai", "activation", "retention", "plg"],
+    summary: "The traditional product-led growth (PLG) playbook is being rewritten by generative models. AI collapses user skill gaps by delivering prompt-to-output in under 60 seconds and predicts churn weeks before formal dropoff, leaving human strategic taste and judgment as the ultimate scarce bottleneck.",
+    takeaways: [
+      "Collapsing the Skill Gap: Prompt-to-output collapses user learning curves from days to seconds, resetting the baseline for product activation.",
+      "Leading Retention Signals: Behavioral drift (e.g. usage drops from 5x/wk to 1x/wk) can be detected 2-3 weeks ahead of cancellation for preemptive intervention.",
+      "The Human Moat: AI automates execution, copy variations, and behavioral clustering, but human operators must define what 'good' looks like and choose the metrics that matter."
+    ]
   }
 ];
