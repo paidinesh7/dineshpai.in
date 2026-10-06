@@ -1,5 +1,7 @@
 :root {
-    --primary: #47a1d7;
+    --primary: #2c4a3e;
+    --primary-dark: #629e7a;
+    --accent: #b34d2b;
     --grey: #666;
 }
 
@@ -18,11 +20,11 @@ body {
 }
 
 a {
-    color: var(--primary);
+    color: inherit;
     text-decoration: none;
 }
     a:hover {
-        color: #000;
+        color: var(--accent);
     }
     code {
         display: inline-block;
