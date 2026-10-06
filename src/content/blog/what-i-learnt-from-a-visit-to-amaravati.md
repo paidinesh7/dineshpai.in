@@ -6,11 +6,17 @@ author: dinesh
 description: Reflections from meeting entrepreneurs, incubators, and policymakers in Andhra Pradesh—and why early-stage investing is ultimately a bet on people and time.
 ---
 
+![Amaravati City Master Plan](/static/images/amaravati-cover.jpg)
+
 Saturday, October 3rd, 8:30 PM. I was boarding a flight from Vijayawada to Hyderabad, reflecting on a couple of days spent meeting entrepreneurs, incubators, and policymakers in Andhra Pradesh.
 
 Seeing is believing. You have to actually visit Amaravati to understand how serious the government is about building a city of the future.
 
+![Build the Next Frontier in Amaravati - Architectural Model](/static/images/amaravati-1.jpg)
+
 I listened to the Hon. Chief Minister, Chandrababu Naidu Garu, and Lokesh Nara Garu, the Minister for IT, outline their plans. They talked about regional clusters, innovation, and keeping 30–40% of the city green. The pace they were planning for, and the sense of extreme urgency, was palpable.
+
+![PanIIT Andhra Pradesh Summit delegation with Hon. CM Chandrababu Naidu and IT Minister Lokesh Nara](/static/images/amaravati-2.jpg)
 
 As I sat on the plane, it struck me that these plans are essentially a massive bet on the execution capability of regular people. And that made me think about how there are some takeaways for some of us who back ideas that seem outlandish, at least at first.
 
