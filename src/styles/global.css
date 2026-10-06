@@ -141,10 +141,10 @@
   color: #f5f2eb !important;
 }
 :global(.dark) a {
-  color: var(--primary, #47a1d7);
+  color: inherit;
 }
 :global(.dark) a:hover {
-  color: #fff !important;
+  color: #e07a5f;
 }
 :global(.dark) p,
 :global(.dark) li {

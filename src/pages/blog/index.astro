@@ -1,0 +1,208 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+const sortedPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+// Extract all unique tags
+const allTags = Array.from(
+  new Set(sortedPosts.flatMap((post) => post.data.tags || []))
+).sort();
+
+// Helper to calculate reading time
+const getReadingTime = (content: string) => {
+  const words = content.split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.ceil(words / 220));
+};
+---
+
+<BaseLayout 
+  title="Essays & Writing" 
+  description="A complete chronological archive of long-form essays, field notes, and reflections by Dinesh Pai on venture capital, operations, and market dynamics."
+>
+  <div class="max-w-3xl mx-auto space-y-12 py-6 font-serif">
+    
+    <!-- BACK TO HOME LINK -->
+    <div class="font-mono text-xs uppercase tracking-wider">
+      <a href="/" class="text-stone-500 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1">
+        &larr; Back to Home
+      </a>
+    </div>
+
+    <!-- TITLE -->
+    <header class="space-y-4">
+      <h1 class="text-3xl sm:text-4xl font-black tracking-tight text-stone-900 dark:text-stone-100">
+        Essays & Writing
+      </h1>
+      <p class="font-serif italic text-stone-500 dark:text-stone-400 text-sm sm:text-base border-l-2 border-stone-200 dark:border-stone-800 pl-4">
+        A chronological archive of {sortedPosts.length} long-form essays, field notes, and operating frameworks on venture capital, startups, and capital allocation.
+      </p>
+    </header>
+
+    <!-- SEARCH & FILTER INTERFACE -->
+    <div class="space-y-4 bg-stone-100 dark:bg-stone-900/40 p-5 rounded-lg border border-stone-200/40 dark:border-stone-800/40">
+      <div class="space-y-1.5">
+        <label for="blog-search-input" class="font-mono text-[10px] font-bold uppercase tracking-wider text-stone-400 dark:text-stone-500 block">
+          Search Essays
+        </label>
+        <input 
+          type="text" 
+          id="blog-search-input" 
+          placeholder="Search by title, topic, or keyword..." 
+          class="w-full px-3.5 py-2 rounded border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 font-serif text-sm focus:outline-none focus:border-brand-light dark:focus:border-brand-dark transition-colors duration-200"
+        />
+      </div>
+
+      <!-- TAG CLOUD -->
+      {allTags.length > 0 && (
+        <div class="space-y-2">
+          <span class="font-mono text-[10px] font-bold uppercase tracking-wider text-stone-400 dark:text-stone-500 block">
+            Filter by Tag
+          </span>
+          <div class="flex flex-wrap gap-2">
+            <button 
+              class="blog-tag-btn font-mono text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-brand-light/10 dark:bg-brand-dark/20 text-brand-light dark:text-brand-dark hover:bg-brand-light/20 dark:hover:bg-brand-dark/30 transition-colors" 
+              data-tag="all"
+            >
+              All
+            </button>
+            {allTags.map((tag) => (
+              <button 
+                class="blog-tag-btn font-mono text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-stone-200/60 dark:bg-stone-800/60 text-stone-600 dark:text-stone-400 hover:bg-stone-300 dark:hover:bg-stone-700 transition-colors" 
+                data-tag={tag}
+              >
+                #{tag}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+
+    <!-- ESSAYS LIST -->
+    <div id="blog-posts-list" class="space-y-10">
+      {sortedPosts.map((post) => {
+        const readingTime = getReadingTime(post.body);
+        const tags = post.data.tags || [];
+        const searchCorpus = `${post.data.title} ${post.data.description || ''} ${tags.join(' ')}`.toLowerCase();
+
+        return (
+          <article 
+            class="blog-card space-y-3 pb-8 border-b border-dashed border-stone-200 dark:border-stone-800 last:border-0 last:pb-0" 
+            data-tags={tags.join(',')} 
+            data-search={searchCorpus}
+          >
+            <!-- DATE & READING TIME -->
+            <div class="flex items-center gap-2 text-stone-400 dark:text-stone-500 font-mono text-xs">
+              <time datetime={post.data.date.toISOString()}>
+                {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+              </time>
+              <span>&bull;</span>
+              <span>{readingTime} min read</span>
+            </div>
+
+            <!-- TITLE -->
+            <h2 class="text-xl sm:text-2xl font-bold font-serif text-stone-900 dark:text-stone-100 hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200 leading-snug">
+              <a href={`/blog/${post.slug}`} class="hover:underline">
+                {post.data.title}
+              </a>
+            </h2>
+
+            <!-- DESCRIPTION -->
+            {post.data.description && (
+              <p class="text-stone-600 dark:text-stone-400 text-sm sm:text-base leading-relaxed font-serif">
+                {post.data.description}
+              </p>
+            )}
+
+            <!-- TAGS -->
+            {tags.length > 0 && (
+              <div class="flex flex-wrap gap-2 pt-1">
+                {tags.map((tag) => (
+                  <span class="font-mono text-[9px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-900 text-stone-500 dark:text-stone-400 border border-stone-200/40 dark:border-stone-800/40">
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+            )}
+          </article>
+        );
+      })}
+    </div>
+
+    <!-- EMPTY STATE -->
+    <div id="no-blog-results" class="hidden text-center py-12 text-stone-500 dark:text-stone-400 font-serif italic text-sm">
+      No essays match your search or filter criteria.
+    </div>
+
+    <!-- FOOTER DIVIDER -->
+    <div class="border-t border-stone-200 dark:border-stone-800 pt-6 font-mono text-xs uppercase tracking-wider">
+      <a href="/" class="text-stone-500 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark hover:underline">
+        &larr; Back to Home
+      </a>
+    </div>
+
+  </div>
+</BaseLayout>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const searchInput = document.getElementById('blog-search-input') as HTMLInputElement | null;
+    const tagButtons = document.querySelectorAll<HTMLButtonElement>('.blog-tag-btn');
+    const cards = document.querySelectorAll<HTMLElement>('.blog-card');
+    const noResults = document.getElementById('no-blog-results');
+
+    let currentTag = 'all';
+    let searchQuery = '';
+
+    function filterPosts() {
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        const searchCorpus = card.dataset.search || '';
+        const tags = (card.dataset.tags || '').split(',').filter(Boolean);
+
+        const matchesSearch = !searchQuery || searchCorpus.includes(searchQuery.toLowerCase());
+        const matchesTag = currentTag === 'all' || tags.includes(currentTag);
+
+        if (matchesSearch && matchesTag) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (noResults) {
+        if (visibleCount === 0) {
+          noResults.classList.remove('hidden');
+        } else {
+          noResults.classList.add('hidden');
+        }
+      }
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = (e.target as HTMLInputElement).value.trim();
+        filterPosts();
+      });
+    }
+
+    tagButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        tagButtons.forEach((b) => {
+          b.classList.remove('bg-brand-light/10', 'dark:bg-brand-dark/20', 'text-brand-light', 'dark:text-brand-dark');
+          b.classList.add('bg-stone-200/60', 'dark:bg-stone-800/60', 'text-stone-600', 'dark:text-stone-400');
+        });
+
+        btn.classList.add('bg-brand-light/10', 'dark:bg-brand-dark/20', 'text-brand-light', 'dark:text-brand-dark');
+        btn.classList.remove('bg-stone-200/60', 'dark:bg-stone-800/60', 'text-stone-600', 'dark:text-stone-400');
+
+        currentTag = btn.dataset.tag || 'all';
+        filterPosts();
+      });
+    });
+  });
+</script>
