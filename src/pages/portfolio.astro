@@ -2,47 +2,253 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import KellyWidget from '../components/KellyWidget';
 
-const portfolio = {
-  Fintech: [
-    { name: "Assetplus", desc: "Digital mutual fund distribution platform for advisors.", logo: "/static/images/portfolio/assetplus.png" },
-    { name: "Capitalmind", desc: "Quantitative investment management & research platform.", logo: "/static/images/portfolio/capitalmind.png" },
-    { name: "Indiadatahub", desc: "Comprehensive Indian macroeconomic & corporate data engine.", logo: "/static/images/portfolio/indiadatahub.png" },
-    { name: "M2P", desc: "Embedded API financial infrastructure & card issuance.", logo: "/static/images/portfolio/m2p.png" },
-    { name: "Mprofit", desc: "Multi-asset portfolio management & accounting software.", logo: "/static/images/portfolio/mprofit.png" },
-    { name: "Financialist", desc: "Simplifying wealth advisory and financial planning.", logo: "/static/images/portfolio/financialist.jpeg" }
-  ],
-  Climate: [
-    { name: "Akshayakalpa", desc: "Certified organic dairy farming & sustainable agriculture.", logo: "/static/images/portfolio/akshayakalpa.png" },
-    { name: "Green Worms", desc: "Waste management & circular economy waste-to-resource loops.", logo: "/static/images/portfolio/greenworms.png" },
-    { name: "Krop AI", desc: "AI-powered precision farming & crop yield analytics.", logo: "/static/images/portfolio/kropai.png" },
-    { name: "Matchlog", desc: "Optimizing container logistics & empty container repositioning.", logo: "/static/images/portfolio/matchlog.png" },
-    { name: "Naxatra Labs", desc: "Developing gearless high-torque electric motors.", logo: "/static/images/portfolio/naxatralabs.png" },
-    { name: "Neufin", desc: "SaaS platform aggregating climate finance & carbon offset capital.", logo: "/static/images/portfolio/neufin.png" },
-    { name: "Ossus Bio", desc: "Generating clean green bio-hydrogen from industrial wastewater.", logo: "/static/images/portfolio/ossusbio.png" },
-    { name: "Solarsquare", desc: "Residential rooftop solar installation & financing.", logo: "/static/images/portfolio/solarsquare.png" },
-    { name: "Two Brothers Organic Farms", desc: "Regenerative, soil-first organic farming & consumer brand.", logo: "/static/images/portfolio/twobrothersorganicfarms.png" },
-    { name: "Voltseal", desc: "Advanced cell-level thermal runaway barriers for EVs.", logo: "/static/images/portfolio/voltseal.png" },
-    { name: "Zerocircle", desc: "Seaweed-based biodegradable packaging alternative to plastic.", logo: "/static/images/portfolio/zerocircle.png" }
-  ],
-  Health: [
-    { name: "Adsys", desc: "Diagnostic devices & medical imaging technology.", logo: "/static/images/portfolio/adsys.png" },
-    { name: "Arboreal", desc: "Stevia-based natural sugar-reduction solutions.", logo: "/static/images/portfolio/arboreal.png" },
-    { name: "Blackfrog", desc: "Portable medical-grade active cooling for vaccine logistics.", logo: "/static/images/portfolio/blackfrog.png" },
-    { name: "Emoha", desc: "Connected 360-degree senior citizen care ecosystem.", logo: "/static/images/portfolio/emoha.png" },
-    { name: "Sukino", desc: "Out-of-hospital post-operative rehabilitative care.", logo: "/static/images/portfolio/sukino.png" },
-    { name: "SuperYou", desc: "Accessible active-wear designed for diverse bodies.", logo: "/static/images/portfolio/superyou.png" },
-    { name: "The Whole Truth", desc: "100% clean-label food & clean snacking brand.", logo: "/static/images/portfolio/thewholetruth.png" }
-  ],
-  Other: [
-    { name: "Galaxeye", desc: "Multi-sensor imaging satellite constellations (SAR + Optical).", logo: "/static/images/portfolio/galaxeye.png" },
-    { name: "Karban", desc: "Design-first home air purification & smart climate hardware.", logo: "/static/images/portfolio/karban.png" },
-    { name: "Spacefields", desc: "Custom solid-fuel rocket propulsion systems.", logo: "/static/images/portfolio/spacefields.png" }
-  ]
-};
+interface Company {
+  name: string;
+  category: 'Fintech' | 'Climate' | 'Health' | 'Deeptech';
+  assetType: 'atoms' | 'bytes';
+  desc: string;
+  thesis: string;
+  logo: string;
+}
+
+const companies: Company[] = [
+  // Fintech & Markets
+  {
+    name: "Assetplus",
+    category: "Fintech",
+    assetType: "bytes",
+    desc: "Digital mutual fund distribution platform for independent advisors.",
+    thesis: "Empowering independent financial advisors across Bharat with turnkey execution and compliance rails.",
+    logo: "/static/images/portfolio/assetplus.png"
+  },
+  {
+    name: "Capitalmind",
+    category: "Fintech",
+    assetType: "bytes",
+    desc: "Quantitative investment management & public market research platform.",
+    thesis: "Deep quantitative research, patient asset management, and radical public market transparency.",
+    logo: "/static/images/portfolio/capitalmind.png"
+  },
+  {
+    name: "Indiadatahub",
+    category: "Fintech",
+    assetType: "bytes",
+    desc: "Comprehensive Indian macroeconomic & corporate data engine.",
+    thesis: "Democratizing institutional-grade macroeconomic and corporate intelligence for analysts and founders.",
+    logo: "/static/images/portfolio/indiadatahub.png"
+  },
+  {
+    name: "M2P",
+    category: "Fintech",
+    assetType: "bytes",
+    desc: "Embedded API financial infrastructure & card issuance.",
+    thesis: "The core embedded banking and card issuance infrastructure powering Asia’s leading fintechs.",
+    logo: "/static/images/portfolio/m2p.png"
+  },
+  {
+    name: "Mprofit",
+    category: "Fintech",
+    assetType: "bytes",
+    desc: "Multi-asset portfolio management & accounting software.",
+    thesis: "Comprehensive, multi-asset portfolio accounting and tax compliance built for serious Indian investors.",
+    logo: "/static/images/portfolio/mprofit.png"
+  },
+  {
+    name: "Financialist",
+    category: "Fintech",
+    assetType: "bytes",
+    desc: "Simplifying wealth advisory and financial planning.",
+    thesis: "Transforming complex retirement and financial planning into intuitive, goal-oriented software.",
+    logo: "/static/images/portfolio/financialist.jpeg"
+  },
+
+  // Climate & Energy
+  {
+    name: "Akshayakalpa",
+    category: "Climate",
+    assetType: "atoms",
+    desc: "Certified organic dairy farming & sustainable agriculture.",
+    thesis: "Pioneering regenerative, soil-first organic dairy farming with fair-income farmer partnerships.",
+    logo: "/static/images/portfolio/akshayakalpa.png"
+  },
+  {
+    name: "Green Worms",
+    category: "Climate",
+    assetType: "atoms",
+    desc: "Waste management & circular economy waste-to-resource loops.",
+    thesis: "Decentralized coastal and rural waste recovery creating dignity and closed circular economic loops.",
+    logo: "/static/images/portfolio/greenworms.png"
+  },
+  {
+    name: "Krop AI",
+    category: "Climate",
+    assetType: "atoms",
+    desc: "AI-powered precision farming & crop yield analytics.",
+    thesis: "Computer vision and multispectral intelligence deployed directly at the farm gate to de-risk crop underwriting.",
+    logo: "/static/images/portfolio/kropai.png"
+  },
+  {
+    name: "Matchlog",
+    category: "Climate",
+    assetType: "atoms",
+    desc: "Optimizing container logistics & empty container repositioning.",
+    thesis: "Eliminating empty container repositioning trips across Indian ports to drastically cut logistics carbon.",
+    logo: "/static/images/portfolio/matchlog.png"
+  },
+  {
+    name: "Naxatra Labs",
+    category: "Climate",
+    assetType: "atoms",
+    desc: "Developing gearless high-torque electric motors.",
+    thesis: "First-principles axial-flux motor engineering to eliminate heavy gearboxes in commercial EVs.",
+    logo: "/static/images/portfolio/naxatralabs.png"
+  },
+  {
+    name: "Neufin",
+    category: "Climate",
+    assetType: "bytes",
+    desc: "SaaS platform aggregating climate finance & carbon offset capital.",
+    thesis: "Streamlining cross-border climate finance and green debt syndication for industrial decarbonization.",
+    logo: "/static/images/portfolio/neufin.png"
+  },
+  {
+    name: "Ossus Bio",
+    category: "Climate",
+    assetType: "atoms",
+    desc: "Generating clean green bio-hydrogen from industrial wastewater.",
+    thesis: "Self-sustaining bioreactors producing green bio-hydrogen on-site directly from industrial effluent.",
+    logo: "/static/images/portfolio/ossusbio.png"
+  },
+  {
+    name: "Solarsquare",
+    category: "Climate",
+    assetType: "atoms",
+    desc: "Residential rooftop solar installation & financing.",
+    thesis: "Building frictionless residential rooftop solar EPC and financing infrastructure across Indian homes.",
+    logo: "/static/images/portfolio/solarsquare.png"
+  },
+  {
+    name: "Two Brothers Organic Farms",
+    category: "Climate",
+    assetType: "atoms",
+    desc: "Regenerative, soil-first organic farming & consumer brand.",
+    thesis: "Indigenous biodiversity restoration, ancestral agroecology, and direct-to-consumer clean food.",
+    logo: "/static/images/portfolio/twobrothersorganicfarms.png"
+  },
+  {
+    name: "Voltseal",
+    category: "Climate",
+    assetType: "atoms",
+    desc: "Advanced cell-level thermal runaway barriers for EVs.",
+    thesis: "Critical aerogel and ceramic thermal runaway barriers protecting EV battery packs from catastrophic fire.",
+    logo: "/static/images/portfolio/voltseal.png"
+  },
+  {
+    name: "Zerocircle",
+    category: "Climate",
+    assetType: "atoms",
+    desc: "Seaweed-based biodegradable packaging alternative to plastic.",
+    thesis: "Harvesting ocean seaweed into biodegradable packaging to replace single-use petroleum plastics.",
+    logo: "/static/images/portfolio/zerocircle.png"
+  },
+
+  // Health & Nutrition
+  {
+    name: "Adsys",
+    category: "Health",
+    assetType: "atoms",
+    desc: "Diagnostic devices & medical imaging technology.",
+    thesis: "Affordable, ruggedized diagnostic imaging devices engineered for Tier 3 and rural clinical deployment.",
+    logo: "/static/images/portfolio/adsys.png"
+  },
+  {
+    name: "Arboreal",
+    category: "Health",
+    assetType: "atoms",
+    desc: "Stevia-based natural sugar-reduction solutions.",
+    thesis: "Vertical stevia cultivation and natural taste-modulation biotech to combat India’s metabolic crisis.",
+    logo: "/static/images/portfolio/arboreal.png"
+  },
+  {
+    name: "Blackfrog",
+    category: "Health",
+    assetType: "atoms",
+    desc: "Portable medical-grade active cooling for vaccine logistics.",
+    thesis: "Patented portable active cooling ensuring strict 2-8°C cold-chain integrity for remote immunization.",
+    logo: "/static/images/portfolio/blackfrog.png"
+  },
+  {
+    name: "Emoha",
+    category: "Health",
+    assetType: "atoms",
+    desc: "Connected 360-degree senior citizen care ecosystem.",
+    thesis: "Integrated healthcare telemetry, emergency dispatch, and community support for elders aging at home.",
+    logo: "/static/images/portfolio/emoha.png"
+  },
+  {
+    name: "Sukino",
+    category: "Health",
+    assetType: "atoms",
+    desc: "Out-of-hospital post-operative rehabilitative care.",
+    thesis: "Specialized post-acute transitional rehabilitation bridging ICU discharge and home recovery.",
+    logo: "/static/images/portfolio/sukino.png"
+  },
+  {
+    name: "SuperYou",
+    category: "Health",
+    assetType: "atoms",
+    desc: "Accessible active-wear designed for diverse bodies.",
+    thesis: "Inclusive, functional adaptive wear engineered with dignity for persons with physical disabilities.",
+    logo: "/static/images/portfolio/superyou.png"
+  },
+  {
+    name: "The Whole Truth",
+    category: "Health",
+    assetType: "atoms",
+    desc: "100% clean-label food & clean snacking brand.",
+    thesis: "100% clean-label food with radical ingredient transparency and zero chemical adulteration.",
+    logo: "/static/images/portfolio/thewholetruth.png"
+  },
+
+  // Deeptech & Space
+  {
+    name: "Galaxeye",
+    category: "Deeptech",
+    assetType: "atoms",
+    desc: "Multi-sensor imaging satellite constellations (SAR + Optical).",
+    thesis: "World-first hybrid SAR + optical earth-observation satellite constellations penetrating cloud cover 24/7.",
+    logo: "/static/images/portfolio/galaxeye.png"
+  },
+  {
+    name: "Karban",
+    category: "Deeptech",
+    assetType: "atoms",
+    desc: "Design-first home air purification & smart climate hardware.",
+    thesis: "Sleek architectural bladeless air-purification and smart HVAC hardware manufactured locally in India.",
+    logo: "/static/images/portfolio/karban.png"
+  },
+  {
+    name: "Spacefields",
+    category: "Deeptech",
+    assetType: "atoms",
+    desc: "Custom solid-fuel rocket propulsion systems.",
+    thesis: "Custom solid-rocket propulsion and aerospike motors built for dual-use aerospace and defense mobility.",
+    logo: "/static/images/portfolio/spacefields.png"
+  }
+];
+
+const totalCompanies = companies.length;
+const atomsCount = companies.filter(c => c.assetType === 'atoms').length;
+const bytesCount = companies.filter(c => c.assetType === 'bytes').length;
+const atomsPct = Math.round((atomsCount / totalCompanies) * 100);
+const bytesPct = Math.round((bytesCount / totalCompanies) * 100);
 ---
 
-<BaseLayout title="My Investments" description="A simple, clean index of early-stage startups and teams Dinesh Pai has led investments for at Rainmatter.">
-  <div class="max-w-3xl mx-auto space-y-16 py-6 font-serif">
+<BaseLayout 
+  title="My Investments" 
+  description="Early-stage startups and teams Dinesh Pai has backed at Rainmatter across Atoms & Joules (Climate, Deeptech, Health) and Bytes & Rails (Fintech)."
+>
+  <div class="max-w-3xl mx-auto space-y-14 py-6 font-serif">
     
     <!-- BACK TO HOME LINK -->
     <div class="font-mono text-xs uppercase tracking-wider">
@@ -51,14 +257,30 @@ const portfolio = {
       </a>
     </div>
 
-    <!-- TITLE -->
+    <!-- TITLE & OVERVIEW -->
     <header class="space-y-4">
       <h1 class="text-3xl sm:text-4xl font-black tracking-tight text-stone-900 dark:text-stone-100">
         My Investments
       </h1>
       <p class="font-serif italic text-stone-500 dark:text-stone-400 text-sm sm:text-base border-l-2 border-stone-200 dark:border-stone-800 pl-4">
-        investments I have led and learnt from.
+        Early-stage teams and enduring founders I have backed and learnt from at Rainmatter.
       </p>
+
+      <!-- ALLOCATION STRIP -->
+      <div class="grid grid-cols-3 gap-2 sm:gap-4 pt-4">
+        <div class="p-3 rounded bg-stone-100/70 dark:bg-stone-900/40 border border-stone-200/50 dark:border-stone-800/50 text-center">
+          <span class="block font-serif text-2xl font-black text-stone-900 dark:text-stone-100">{totalCompanies}</span>
+          <span class="font-mono text-[9px] uppercase tracking-wider font-bold text-stone-500 dark:text-stone-400">Total Backed</span>
+        </div>
+        <div class="p-3 rounded bg-stone-100/70 dark:bg-stone-900/40 border border-stone-200/50 dark:border-stone-800/50 text-center">
+          <span class="block font-serif text-2xl font-black text-brand-light dark:text-brand-dark">{atomsPct}%</span>
+          <span class="font-mono text-[9px] uppercase tracking-wider font-bold text-stone-500 dark:text-stone-400">Atoms & Joules ({atomsCount})</span>
+        </div>
+        <div class="p-3 rounded bg-stone-100/70 dark:bg-stone-900/40 border border-stone-200/50 dark:border-stone-800/50 text-center">
+          <span class="block font-serif text-2xl font-black text-accent-light dark:text-accent-dark">{bytesPct}%</span>
+          <span class="font-mono text-[9px] uppercase tracking-wider font-bold text-stone-500 dark:text-stone-400">Bytes & Rails ({bytesCount})</span>
+        </div>
+      </div>
     </header>
 
     <!-- POSITION SIZING PHILOSOPHY / KELLY SIMULATOR -->
@@ -72,57 +294,148 @@ const portfolio = {
       <KellyWidget client:load />
     </section>
 
-    <!-- PORTFOLIO CATEGORIES -->
-    <div class="space-y-16">
-      {Object.entries(portfolio).map(([category, companies]) => (
-        <section class="space-y-6">
-          
-          <!-- SUBTLY PROMINENT SERIF HEADER -->
-          <h2 class="font-serif text-xl sm:text-2xl font-black text-stone-900 dark:text-stone-100 border-b border-stone-200/80 dark:border-stone-800/80 pb-2 flex justify-between items-baseline">
-            <span>{category}</span>
-            <span class="font-mono text-[10px] font-bold uppercase tracking-wider text-stone-400 dark:text-stone-500">{companies.length} companies</span>
-          </h2>
-          
-          <!-- PORTFOLIO GRID -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {companies.map((company) => (
-              <div class="group p-5 rounded-lg bg-stone-100/50 dark:bg-stone-900/30 border border-stone-200/40 dark:border-stone-800/40 hover:border-accent-light dark:hover:border-accent-dark hover:-translate-y-1 hover:shadow-sm transition-all duration-300 flex flex-col justify-between">
-                <div class="space-y-3">
-                  
-                  <!-- LOGO & TITLE HEADER -->
-                  <div class="flex items-center gap-3.5">
-                    <div class="w-12 h-12 shrink-0 bg-white dark:bg-stone-950 rounded border border-stone-200/60 dark:border-stone-800/60 p-1.5 overflow-hidden flex items-center justify-center shadow-sm relative">
-                      
-                      <!-- Robust image rendering with Javascript Error Fallback -->
+    <!-- INTERACTIVE THESIS MATRIX & FILTERS -->
+    <section class="space-y-6">
+      <div class="border-b border-stone-200/80 dark:border-stone-800/80 pb-3 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+        <h2 class="font-serif text-xl sm:text-2xl font-black text-stone-900 dark:text-stone-100">
+          Portfolio Companies
+        </h2>
+        <span id="filtered-count" class="font-mono text-xs font-bold text-stone-400 dark:text-stone-500 uppercase tracking-wider">
+          Showing {totalCompanies} of {totalCompanies}
+        </span>
+      </div>
+
+      <!-- FILTER CONTROLS -->
+      <div class="space-y-4 bg-stone-100 dark:bg-stone-900/40 p-5 rounded-lg border border-stone-200/40 dark:border-stone-800/40">
+        
+        <!-- SEARCH -->
+        <div class="space-y-1.5">
+          <label for="company-search" class="font-mono text-[10px] font-bold uppercase tracking-wider text-stone-400 dark:text-stone-500 block">
+            Search Companies & Thesis
+          </label>
+          <input 
+            type="text" 
+            id="company-search" 
+            placeholder="Search by company name, sector, or thesis keyword..." 
+            class="w-full px-3.5 py-2 rounded border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 font-serif text-sm focus:outline-none focus:border-brand-light dark:focus:border-brand-dark transition-colors duration-200"
+          />
+        </div>
+
+        <!-- THESIS MATRIX: ATOMS VS BYTES TOGGLE -->
+        <div class="space-y-1.5">
+          <span class="font-mono text-[10px] font-bold uppercase tracking-wider text-stone-400 dark:text-stone-500 block">
+            Asset Class Thesis
+          </span>
+          <div class="flex flex-wrap gap-2">
+            <button 
+              class="asset-btn font-mono text-[10px] uppercase font-bold tracking-wider px-3 py-1 rounded bg-brand-light/10 dark:bg-brand-dark/20 text-brand-light dark:text-brand-dark hover:bg-brand-light/20 dark:hover:bg-brand-dark/30 transition-colors" 
+              data-asset="all"
+            >
+              All Asset Classes ({totalCompanies})
+            </button>
+            <button 
+              class="asset-btn font-mono text-[10px] uppercase font-bold tracking-wider px-3 py-1 rounded bg-stone-200/60 dark:bg-stone-800/60 text-stone-600 dark:text-stone-400 hover:bg-stone-300 dark:hover:bg-stone-700 transition-colors" 
+              data-asset="atoms"
+            >
+              ⚡ Atoms & Joules ({atomsCount})
+            </button>
+            <button 
+              class="asset-btn font-mono text-[10px] uppercase font-bold tracking-wider px-3 py-1 rounded bg-stone-200/60 dark:bg-stone-800/60 text-stone-600 dark:text-stone-400 hover:bg-stone-300 dark:hover:bg-stone-700 transition-colors" 
+              data-asset="bytes"
+            >
+              💾 Bytes & Rails ({bytesCount})
+            </button>
+          </div>
+        </div>
+
+        <!-- SECTOR FILTER PILLS -->
+        <div class="space-y-1.5">
+          <span class="font-mono text-[10px] font-bold uppercase tracking-wider text-stone-400 dark:text-stone-500 block">
+            Sector Focus
+          </span>
+          <div class="flex flex-wrap gap-2">
+            <button class="sector-btn stamp-badge stamp-green cursor-pointer" data-sector="all">All Sectors</button>
+            <button class="sector-btn stamp-badge stamp-neutral cursor-pointer" data-sector="Climate">Climate & Energy (11)</button>
+            <button class="sector-btn stamp-badge stamp-neutral cursor-pointer" data-sector="Fintech">Fintech & Markets (6)</button>
+            <button class="sector-btn stamp-badge stamp-neutral cursor-pointer" data-sector="Health">Health & Nutrition (7)</button>
+            <button class="sector-btn stamp-badge stamp-neutral cursor-pointer" data-sector="Deeptech">Deeptech & Space (3)</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PORTFOLIO GRID -->
+      <div id="companies-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {companies.map((company) => {
+          const searchCorpus = `${company.name} ${company.category} ${company.assetType} ${company.desc} ${company.thesis}`.toLowerCase();
+          const isAtoms = company.assetType === 'atoms';
+
+          return (
+            <div 
+              class="company-card group p-5 rounded-lg bg-stone-100/50 dark:bg-stone-900/30 border border-stone-200/40 dark:border-stone-800/40 hover:border-accent-light dark:hover:border-accent-dark hover:-translate-y-0.5 hover:shadow-sm transition-all duration-300 flex flex-col justify-between"
+              data-sector={company.category}
+              data-asset={company.assetType}
+              data-search={searchCorpus}
+            >
+              <div class="space-y-3">
+                
+                <!-- TOP ROW: LOGO & BADGES -->
+                <div class="flex items-start justify-between gap-3">
+                  <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 shrink-0 bg-white dark:bg-stone-950 rounded border border-stone-200/60 dark:border-stone-800/60 p-1.5 overflow-hidden flex items-center justify-center shadow-sm relative">
                       <img 
                         src={company.logo} 
                         alt={`${company.name} logo`} 
                         class="max-w-full max-h-full object-contain logo-img"
                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                       />
-                      
-                      <!-- Dynamic Styled Letter Fallback if Image is missing -->
                       <div class="fallback-avatar hidden absolute inset-0 w-full h-full items-center justify-center font-mono text-base font-black bg-accent-light/10 text-accent-light dark:bg-accent-dark/20 dark:text-accent-dark uppercase rounded">
                         {company.name[0]}
                       </div>
-                      
                     </div>
                     
-                    <h3 class="font-serif text-lg font-black text-stone-900 dark:text-stone-100 group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors duration-200 leading-tight">
-                      {company.name}
-                    </h3>
+                    <div>
+                      <h3 class="font-serif text-lg font-black text-stone-900 dark:text-stone-100 group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors duration-200 leading-tight">
+                        {company.name}
+                      </h3>
+                      <span class="font-mono text-[9px] uppercase tracking-wider text-stone-400 dark:text-stone-500 font-bold block pt-0.5">
+                        {company.category}
+                      </span>
+                    </div>
                   </div>
 
-                  <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed font-serif pt-1">
-                    {company.desc}
+                  <!-- ASSET STAMP -->
+                  <span class={`stamp-badge ${isAtoms ? 'stamp-rust' : 'stamp-green'}`}>
+                    {isAtoms ? 'Atoms' : 'Bytes'}
+                  </span>
+                </div>
+
+                <!-- DESCRIPTION -->
+                <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed font-serif">
+                  {company.desc}
+                </p>
+
+                <!-- WHY WE BACKED THEM (THESIS CALLOUT) -->
+                <div class="pt-2.5 border-t border-dashed border-stone-200/80 dark:border-stone-800/80 space-y-1">
+                  <span class="font-mono text-[9px] font-bold uppercase tracking-wider text-stone-400 dark:text-stone-500 block">
+                    Why We Backed Them
+                  </span>
+                  <p class="font-serif italic text-xs text-stone-700 dark:text-stone-300 leading-relaxed pl-2 border-l-2 border-stone-300 dark:border-stone-700">
+                    "{company.thesis}"
                   </p>
                 </div>
+
               </div>
-            ))}
-          </div>
-        </section>
-      ))}
-    </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <!-- NO RESULTS -->
+      <div id="no-company-results" class="hidden text-center py-12 text-stone-500 dark:text-stone-400 font-serif italic text-sm">
+        No companies match your search and filter combination.
+      </div>
+    </section>
 
     <!-- FOOTER DIVIDER -->
     <div class="border-t border-stone-200 dark:border-stone-800 pt-6 font-mono text-xs uppercase tracking-wider">
@@ -133,3 +446,89 @@ const portfolio = {
 
   </div>
 </BaseLayout>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const searchInput = document.getElementById('company-search') as HTMLInputElement | null;
+    const assetButtons = document.querySelectorAll<HTMLButtonElement>('.asset-btn');
+    const sectorButtons = document.querySelectorAll<HTMLButtonElement>('.sector-btn');
+    const cards = document.querySelectorAll<HTMLElement>('.company-card');
+    const countLabel = document.getElementById('filtered-count');
+    const noResults = document.getElementById('no-company-results');
+
+    let currentAsset = 'all';
+    let currentSector = 'all';
+    let searchQuery = '';
+    const totalCount = cards.length;
+
+    function filterGrid() {
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        const sector = card.dataset.sector || '';
+        const asset = card.dataset.asset || '';
+        const searchCorpus = card.dataset.search || '';
+
+        const matchesAsset = currentAsset === 'all' || asset === currentAsset;
+        const matchesSector = currentSector === 'all' || sector === currentSector;
+        const matchesSearch = !searchQuery || searchCorpus.includes(searchQuery.toLowerCase());
+
+        if (matchesAsset && matchesSector && matchesSearch) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (countLabel) {
+        countLabel.textContent = `Showing ${visibleCount} of ${totalCount}`;
+      }
+
+      if (noResults) {
+        if (visibleCount === 0) {
+          noResults.classList.remove('hidden');
+        } else {
+          noResults.classList.add('hidden');
+        }
+      }
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = (e.target as HTMLInputElement).value.trim();
+        filterGrid();
+      });
+    }
+
+    assetButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        assetButtons.forEach((b) => {
+          b.classList.remove('bg-brand-light/10', 'dark:bg-brand-dark/20', 'text-brand-light', 'dark:text-brand-dark');
+          b.classList.add('bg-stone-200/60', 'dark:bg-stone-800/60', 'text-stone-600', 'dark:text-stone-400');
+        });
+
+        btn.classList.add('bg-brand-light/10', 'dark:bg-brand-dark/20', 'text-brand-light', 'dark:text-brand-dark');
+        btn.classList.remove('bg-stone-200/60', 'dark:bg-stone-800/60', 'text-stone-600', 'dark:text-stone-400');
+
+        currentAsset = btn.dataset.asset || 'all';
+        filterGrid();
+      });
+    });
+
+    sectorButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        sectorButtons.forEach((b) => {
+          b.classList.remove('stamp-green');
+          b.classList.add('stamp-neutral');
+        });
+
+        btn.classList.remove('stamp-neutral');
+        btn.classList.add('stamp-green');
+
+        currentSector = btn.dataset.sector || 'all';
+        filterGrid();
+      });
+    });
+  });
+</script>

@@ -112,9 +112,44 @@ const pageTitle = title === "Home" ? siteTitle : `${title} | ${siteTitle}`;
       applyTheme();
       document.addEventListener('astro:after-swap', applyTheme);
     </script>
+
+    <!-- Ambient Dot-Grid Illumination Script -->
+    <script is:inline>
+      const initAmbientGrid = () => {
+        if (window.matchMedia('(hover: none)').matches) return;
+        const ambient = document.getElementById('ambient-dot-grid');
+        if (!ambient) return;
+
+        let ticking = false;
+        const onPointerMove = (e) => {
+          if (!ticking) {
+            window.requestAnimationFrame(() => {
+              ambient.style.setProperty('--mouse-x', `${e.clientX}px`);
+              ambient.style.setProperty('--mouse-y', `${e.clientY}px`);
+              ambient.style.opacity = '1';
+              ticking = false;
+            });
+            ticking = true;
+          }
+        };
+
+        const onPointerLeave = () => {
+          ambient.style.opacity = '0';
+        };
+
+        window.addEventListener('pointermove', onPointerMove, { passive: true });
+        document.documentElement.addEventListener('mouseleave', onPointerLeave, { passive: true });
+      };
+      
+      initAmbientGrid();
+      document.addEventListener('astro:after-swap', initAmbientGrid);
+    </script>
   </head>
-  <body class="bg-[#ecf1ee] dark:bg-[#0c120e] text-stone-800 dark:text-stone-200 min-h-screen flex flex-col font-serif transition-colors duration-300 antialiased selection:bg-brand-light/10 dark:selection:bg-brand-dark/20">
+  <body class="bg-[#ecf1ee] dark:bg-[#0c120e] text-stone-800 dark:text-stone-200 min-h-screen flex flex-col font-serif transition-colors duration-300 antialiased selection:bg-brand-light/10 dark:selection:bg-brand-dark/20 relative">
     
+    <!-- Ambient dot-grid bloom overlay -->
+    <div id="ambient-dot-grid" class="ambient-dot-grid" aria-hidden="true"></div>
+
     {showProgress && <ReadingProgressBar client:load />}
 
     <!-- Minimal Header / Navigation (Aligned to max-w-3xl to match the body grid exactly) -->
@@ -129,8 +164,12 @@ const pageTitle = title === "Home" ? siteTitle : `${title} | ${siteTitle}`;
           </span>
         </a>
         <div class="flex flex-col items-end gap-1.5 sm:flex-row sm:items-center sm:gap-6">
-          <div class="flex items-center gap-4">
-            <a href="/portfolio" class="font-mono text-sm font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:underline">
+          <div class="flex items-center gap-3 sm:gap-4">
+            <a href="/blog" class="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:underline">
+              Essays
+            </a>
+            <span class="text-stone-300 dark:text-stone-700 text-xs">&bull;</span>
+            <a href="/portfolio" class="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:underline">
               Investments
             </a>
             <div class="sm:hidden">
@@ -190,6 +229,7 @@ const pageTitle = title === "Home" ? siteTitle : `${title} | ${siteTitle}`;
           Dinesh Pai &copy; 2023 - 2026. Built with Astro & Tailwind CSS.
         </div>
         <div class="flex gap-4 font-mono text-[10px] uppercase tracking-wider">
+          <a href="/blog" class="hover:underline text-stone-600 dark:text-stone-400">Essays</a>
           <a href="/portfolio" class="hover:underline text-stone-600 dark:text-stone-400">Portfolio</a>
           <a href="/llms.txt" class="hover:underline text-stone-600 dark:text-stone-400">llms.txt</a>
           <a href="/index.xml" class="hover:underline text-stone-600 dark:text-stone-400">RSS</a>

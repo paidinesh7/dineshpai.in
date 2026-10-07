@@ -118,6 +118,131 @@
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+
+  /* Ambient cursor-following dot-grid illumination */
+  .ambient-dot-grid {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image: radial-gradient(rgba(44, 74, 62, 0.35) 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    mask-image: radial-gradient(circle 160px at var(--mouse-x, -999px) var(--mouse-y, -999px), black 0%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle 160px at var(--mouse-x, -999px) var(--mouse-y, -999px), black 0%, transparent 100%);
+  }
+
+  :global(.dark) .ambient-dot-grid {
+    background-image: radial-gradient(rgba(98, 158, 122, 0.45) 1.5px, transparent 1.5px);
+  }
+
+  @media (hover: none) {
+    .ambient-dot-grid {
+      display: none !important;
+    }
+  }
+
+  /* Authentic Editorial Rubber Stamps */
+  .stamp-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: var(--font-mono, "DM Mono", monospace);
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.45rem;
+    border-radius: 2px;
+    border: 1.2px solid currentColor;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.03);
+    user-select: none;
+    line-height: 1.2;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+  }
+  .stamp-badge:hover {
+    transform: scale(1.05) rotate(0deg) !important;
+  }
+
+  .stamp-green {
+    color: #2c4a3e;
+    background-color: rgba(44, 74, 62, 0.07);
+    border-color: rgba(44, 74, 62, 0.45);
+  }
+  :global(.dark) .stamp-green {
+    color: #629e7a;
+    background-color: rgba(98, 158, 122, 0.12);
+    border-color: rgba(98, 158, 122, 0.45);
+  }
+
+  .stamp-rust {
+    color: #b34d2b;
+    background-color: rgba(179, 77, 43, 0.07);
+    border-color: rgba(179, 77, 43, 0.45);
+  }
+  :global(.dark) .stamp-rust {
+    color: #e07a5f;
+    background-color: rgba(224, 122, 95, 0.14);
+    border-color: rgba(224, 122, 95, 0.45);
+  }
+
+  .stamp-neutral {
+    color: #57534e;
+    background-color: rgba(120, 113, 108, 0.07);
+    border-color: rgba(120, 113, 108, 0.35);
+  }
+  :global(.dark) .stamp-neutral {
+    color: #a8a29e;
+    background-color: rgba(168, 162, 158, 0.12);
+    border-color: rgba(168, 162, 158, 0.35);
+  }
+
+  /* Organic Fountain Pen Link Underline */
+  .ink-pen-link {
+    position: relative;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, rgba(44, 74, 62, 0.18) 0%, rgba(44, 74, 62, 0.3) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+    background-position: 0 94%;
+    transition: background-size 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-image 0.25s ease;
+  }
+  .ink-pen-link:hover {
+    background-size: 100% 2.5px;
+    background-image: linear-gradient(120deg, rgba(179, 77, 43, 0.75) 0%, rgba(179, 77, 43, 0.95) 100%);
+  }
+  :global(.dark) .ink-pen-link {
+    background-image: linear-gradient(120deg, rgba(98, 158, 122, 0.3) 0%, rgba(98, 158, 122, 0.45) 100%);
+  }
+  :global(.dark) .ink-pen-link:hover {
+    background-image: linear-gradient(120deg, rgba(224, 122, 95, 0.8) 0%, rgba(224, 122, 95, 1) 100%);
+  }
+
+  /* Tufte Sidenotes / Marginalia */
+  .sidenote {
+    font-size: 0.8rem;
+    line-height: 1.45;
+    font-family: var(--font-mono, monospace);
+    color: #78716c;
+    border-left: 2px solid rgba(44, 74, 62, 0.3);
+    padding-left: 0.75rem;
+    margin: 1.25rem 0;
+  }
+  :global(.dark) .sidenote {
+    color: #a8a29e;
+    border-left-color: rgba(98, 158, 122, 0.4);
+  }
+  @media (min-width: 1280px) {
+    .sidenote-right {
+      float: right;
+      clear: right;
+      margin-right: -240px;
+      width: 200px;
+      margin-top: 0.2rem;
+      margin-bottom: 1rem;
+    }
+  }
 }
 
 /* Ensure clean text readability in Dark Mode by overriding public/static/style.css legacy rules */
