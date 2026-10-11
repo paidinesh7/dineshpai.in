@@ -15,6 +15,33 @@ export interface WeeklySignal {
 
 export const weeklySignals: WeeklySignal[] = [
   {
+    id: "week-41-2026",
+    week: "Week of October 12, 2026",
+    items: [
+      {
+        title: "The Importance of Playing to Win",
+        source: "The Odin Times (Dan Gray)",
+        url: "https://blog.joinodin.com/p/the-importance-of-playing-to-win",
+        category: "Venture Capital & Allocator Mindset",
+        takeaway: "Why modern venture's obsession with 'winning deal access' is a low-agency trap for consensus syndicates. Gray deconstructs how competitive gaming’s 3-layer cognitive stack (reactivity, strategy, and team social mechanics) trains operators to embrace Darwinian feedback over polished pedigree."
+      },
+      {
+        title: "The Best Charity of the Next 50 Years Might Be a Company",
+        source: "Collaborative Fund (Craig Shapiro)",
+        url: "https://collabfund.com/blog/the-best-charity-of-the-next-50-years-might-be-a-company/",
+        category: "Business Models & Aligned Capital",
+        takeaway: "Inverts the century-old 'Two-Ledger System' where corporations extract profits in Ledger 1 and fund remedial foundations in Ledger 2. The most durable institutions of the next 50 years will collapse both ledgers into one—where unit economics only work if the underlying human condition improves."
+      },
+      {
+        title: "Why Doesn’t the Risk of AI Feel More Frightening?",
+        source: "Behavioural Investment (Joe Wiggins)",
+        url: "https://behaviouralinvestment.com/2026/09/28/why-doesnt-the-risk-of-ai-wiping-out-humanity-feel-more-frightening/",
+        category: "Behavioral Finance & Risk Perception",
+        takeaway: "Explores the affect heuristic—why humans viscerally fear nuclear accidents with emotive imagery, yet ignore high-probability statistical tail risks because spreadsheets lack emotional resonance until capital is already permanently destroyed."
+      }
+    ]
+  },
+  {
     id: "week-40-2026",
     week: "Week of October 5, 2026",
     items: [
