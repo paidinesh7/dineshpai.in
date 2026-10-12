@@ -3,6 +3,37 @@
 @tailwind utilities;
 
 @layer base {
+  /* Crisp Editorial Stationery Highlighter Selection */
+  *::selection,
+  ::selection {
+    background-color: #fde047 !important; /* Luminous warm yellow stationery highlighter */
+    color: #18181b !important;            /* Rich dark charcoal ink */
+    text-shadow: none !important;
+  }
+  *::-moz-selection,
+  ::-moz-selection {
+    background-color: #fde047 !important;
+    color: #18181b !important;
+    text-shadow: none !important;
+  }
+
+  :global(.dark) *::selection,
+  :global(.dark) ::selection,
+  .dark *::selection,
+  .dark ::selection {
+    background-color: rgba(234, 179, 8, 0.45) !important; /* Luminous warm amber highlighter in dark mode */
+    color: #fffbeb !important;                            /* Warm cream text */
+    text-shadow: none !important;
+  }
+  :global(.dark) *::-moz-selection,
+  :global(.dark) ::-moz-selection,
+  .dark *::-moz-selection,
+  .dark ::-moz-selection {
+    background-color: rgba(234, 179, 8, 0.45) !important;
+    color: #fffbeb !important;
+    text-shadow: none !important;
+  }
+
   /* Elegant custom scrollbar */
   ::-webkit-scrollbar {
     width: 6px;
