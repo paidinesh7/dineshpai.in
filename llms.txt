@@ -3,19 +3,16 @@
 > Business & Investments at Zerodha / Rainmatter
 
 ## About & Background
-Dinesh Pai is the Vice President of Business Analysis & Investments at [Zerodha](https://zerodha.com/), where he leads startup and private market investments through [Rainmatter](https://rainmatter.com/) and supports grassroots climate and livelihood initiatives through the [Rainmatter Foundation](https://rainmatter.org/).
+Dinesh Pai is the Vice President of Business Analysis & Investments at [Zerodha](https://zerodha.com/), where he leads private market investments through [Rainmatter](https://rainmatter.com/) and works on long-term ecological and rural livelihood initiatives through the [Rainmatter Foundation](https://rainmatter.org/).
 
-He grew up on the banks of River Seetha in Udupi, Karnataka. After graduating in Computer Science Engineering from RV College of Engineering (2014), he worked at D.E. Shaw India and completed his MBA at the University of Calgary, Canada. Before joining Zerodha in 2020, his steepest learning curve came from two early, hands-on entrepreneurial attempts—delivering engineering textbooks in Bangalore and running student housing in Canada. Managing physical logistics, suppliers, and tight cash flows shaped his grounded approach to evaluating businesses and empathizing with founders.
+He grew up by the River Seetha in Udupi, Karnataka. After studying Computer Science Engineering at RV College of Engineering (2014), he started his career in financial research at D.E. Shaw India and later completed his MBA at the University of Calgary, Canada. Along the way, he built and shut down two small businesses—a textbook delivery service in Bangalore and a student housing venture in Canada. Dealing firsthand with working capital cycles, vendor terms, and thin operating margins shaped how he evaluates business mortality and unit economics today.
 
 ## How Dinesh & Rainmatter Invest
-Rainmatter operates differently from traditional venture capital funds:
-- **Patient Balance-Sheet Capital:** Rainmatter invests Zerodha's own capital with zero external LPs. This provides a 20- to 30-year horizon with no pressure to force artificial exits or chase short-term valuation markups.
-- **What Dinesh Looks For in Founders:**
-  1. **Structural Differentiation:** Business models with structural advantages that incumbents cannot easily copy without undercutting their existing revenue.
-  2. **Ecosystem Value Creation:** Founders focused on building enduring products that create far more value for customers and ecosystems than they extract.
-  3. **Cash-Flow & Operational Reality:** Honest unit economics that work on the ground, rather than just on spreadsheets.
-  4. **Hard Engineering & Patient Moats:** Capital-intensive or deep-engineering businesses in climate, health, and deeptech where high entry barriers reward patient capital.
-- **Core Values:** Simplicity, extreme cost-discipline, and doing right by customers and employees.
+Because Rainmatter invests solely from Zerodha's balance sheet with no external LPs or fixed fund lifecycles, it can underwrite 15- to 30-year compounding without forcing premature exits. When backing early-stage founders, Dinesh focuses on four principles:
+1. **Unit Economics Before Scale:** Growth without contribution margin only magnifies fragility. Backing businesses where unit economics work early and customer acquisition isn't subsidized by venture capital.
+2. **Structural Counter-Positioning:** Business models that incumbents cannot easily copy without undercutting their own core revenue streams.
+3. **Hard Moats & Patient Capital:** Across fintech, climate, healthcare, and Indian deeptech, backing proprietary engineering, physical supply chains, and regulatory infrastructure that take years to replicate.
+4. **Capital Discipline & Alignment:** Founders who treat equity as their most expensive asset, keep fixed costs lean, and build trust with customers rather than optimizing for the next valuation markup.
 
 ## Core Pages
 - [Home](https://dineshpai.in/): Bio, investment philosophy, The Weekly Signal (curated reads with takeaways for Indian founders and investors), essays, and podcasts.
