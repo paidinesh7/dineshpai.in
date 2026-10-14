@@ -1,9 +1,9 @@
 ---
 date: '2025-12-03'
 title: "Timing and Capital - What your spreadsheets can't tell you"
-tags: [investments, VC]
+tags: [investing, vc, startups]
 author: dinesh
-description: Musings on venture capital and attributes to focus on
+description: Why market timing, patience, and founder endurance matter more than financial projections in early-stage investing.
 ---
 
 ## Two things about Venture Capital nobody talks about enough

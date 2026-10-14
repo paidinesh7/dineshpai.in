@@ -22,22 +22,22 @@ export const weeklySignals: WeeklySignal[] = [
         title: "The Importance of Playing to Win",
         source: "The Odin Times (Dan Gray)",
         url: "https://blog.joinodin.com/p/the-importance-of-playing-to-win",
-        category: "Venture Capital & Allocator Mindset",
-        takeaway: "Why modern venture's obsession with 'winning deal access' is a low-agency trap for consensus syndicates. Gray deconstructs how competitive gaming’s 3-layer cognitive stack (reactivity, strategy, and team social mechanics) trains operators to embrace Darwinian feedback over polished pedigree."
+        category: "Venture Capital",
+        takeaway: "In venture capital, chasing 'access' to hot, consensus deals is usually a trap. The best founders and investors learn faster from direct, real-world feedback than from polished credentials."
       },
       {
         title: "The Best Charity of the Next 50 Years Might Be a Company",
         source: "Collaborative Fund (Craig Shapiro)",
         url: "https://collabfund.com/blog/the-best-charity-of-the-next-50-years-might-be-a-company/",
-        category: "Business Models & Aligned Capital",
-        takeaway: "Inverts the century-old 'Two-Ledger System' where corporations extract profits in Ledger 1 and fund remedial foundations in Ledger 2. The most durable institutions of the next 50 years will collapse both ledgers into one—where unit economics only work if the underlying human condition improves."
+        category: "Business Models",
+        takeaway: "For a century, companies extracted profits first and gave back through charity later. The most enduring businesses of the next 50 years will build models where unit economics improve only when customer and community outcomes improve."
       },
       {
         title: "Why Doesn’t the Risk of AI Feel More Frightening?",
         source: "Behavioural Investment (Joe Wiggins)",
         url: "https://behaviouralinvestment.com/2026/09/28/why-doesnt-the-risk-of-ai-wiping-out-humanity-feel-more-frightening/",
-        category: "Behavioral Finance & Risk Perception",
-        takeaway: "Explores the affect heuristic—why humans viscerally fear nuclear accidents with emotive imagery, yet ignore high-probability statistical tail risks because spreadsheets lack emotional resonance until capital is already permanently destroyed."
+        category: "Behavioral Finance",
+        takeaway: "We are wired to react to vivid, emotional threats while ignoring slow-moving statistical risks. In markets as in technology, abstract risks on a spreadsheet rarely feel real until the damage is already done."
       }
     ]
   },
@@ -49,22 +49,22 @@ export const weeklySignals: WeeklySignal[] = [
         title: "Trust Is The Scarce Asset",
         source: "Pivotal",
         url: "https://pivotal.substack.com/p/trust-is-the-scarce-asset",
-        category: "AI Economics & Governance",
-        takeaway: "When AI commoditizes raw intelligence, economic surplus migrates to the complementary asset required to verify it: Trust. In an era of synthetic generation, defensible moats belong to vertical institutions built on costly signals, fiduciaries, and contractual accountability."
+        category: "Business Moats",
+        takeaway: "As AI makes generating code and content nearly free, value shifts to what cannot be automated: trust. Durable moats will belong to businesses built on skin in the game, reputation, and clear accountability."
       },
       {
         title: "The Stablecoin Inversion: OUSD & The Open Standard Coalition",
         source: "Open Standard (Visa / Stripe)",
         url: "https://openstandard.org",
-        category: "Fintech Rails & Moats",
-        takeaway: "Stripe, Visa, and Shopify's launch of Open USD inverts the Tether/Circle model by redistributing 100% of Treasury float yields and network equity to distribution partners—reviving Dee Hock's 1970s member-owned Visa consortium playbook for internet money."
+        category: "Fintech",
+        takeaway: "Instead of keeping interest income on reserves like Tether or Circle, Open USD shares 100% of yield and network ownership with the platforms distributing it—a modern take on how Visa was originally built as a member-owned network."
       },
       {
         title: "RIP, the Product Playbook",
         source: "Build with AI (GrowthX)",
         url: "https://buildwithai.to/p/rip-the-product-playbook",
-        category: "Product Strategy & PLG",
-        takeaway: "AI collapses user skill gaps by delivering prompt-to-output in under 60 seconds and predicts churn weeks before formal cancellation, making the human operator's strategic judgment the ultimate scarce bottleneck."
+        category: "Product Strategy",
+        takeaway: "When software can take a user from prompt to output in seconds, traditional onboarding funnels stop mattering. The real bottleneck shifts from building features to having clear product judgment."
       }
     ]
   },
@@ -77,21 +77,21 @@ export const weeklySignals: WeeklySignal[] = [
         source: "Moontower Meta",
         url: "https://moontower.substack.com/p/after-this-post-you-will-be-sizing",
         category: "Risk Management",
-        takeaway: "Option trader Kris Abdelmessih's masterclass on position sizing using the Kelly Criterion, balancing compounding and survival under uncertainty, and why over-betting is the ultimate cause of allocator failure."
+        takeaway: "Kris Abdelmessih breaks down position sizing under uncertainty—why even a great bet can ruin you if you size it too aggressively, and why survival always comes before maximizing returns."
       },
       {
         title: "Nubank America & The AWS of Money",
         source: "fintechbrainfood.com",
         url: "https://www.fintechbrainfood.com/p/nubank-america-and-the-aws-of-money",
         category: "Fintech",
-        takeaway: "Deconstructs Nubank's massive U.S. neobanking debut using Lead Bank as a sponsor shortcut, and how their stablecoin-powered 'Nu Global' remittance engine bridges retail banking with on-chain rails."
+        takeaway: "How Nubank is entering the U.S. market through partner banking rails and using low-cost cross-border settlement to connect everyday retail banking with global transfers."
       },
       {
         title: "Kenyans Did Homework for Years. Then A.I. Arrived.",
         source: "New York Times",
         url: "https://www.nytimes.com/2026/09/05/technology/kenya-college-essays-ai.html",
-        category: "Digital Livelihoods",
-        takeaway: "A sobering case study of how generative AI completely decimated a thriving 40,000-person essay-writing gig economy in Nairobi, warning us of the extreme fragility of transactional digital labor."
+        category: "Livelihoods & AI",
+        takeaway: "A sobering look at how generative AI wiped out a 40,000-person freelance writing economy in Nairobi almost overnight—and a reminder of how fragile purely transactional digital work has become."
       }
     ]
   },
@@ -103,22 +103,22 @@ export const weeklySignals: WeeklySignal[] = [
         title: "We Must Pace the Frontier",
         source: "darioamodei.com",
         url: "https://darioamodei.com/post/we-must-pace-the-frontier",
-        category: "AI Safety & Policy",
-        takeaway: "Anthropic CEO Dario Amodei outlines 'pacing'—a verifiable middle path to slow down frontier AI capability growth so safety audits can keep up, triggered by recursive self-improvement and swarm alignment failures."
+        category: "AI Policy",
+        takeaway: "Anthropic CEO Dario Amodei makes the case for tying frontier AI deployment speed to measurable safety benchmarks rather than racing blindly ahead."
       },
       {
         title: "The Dauphin Discount: Love the Founder",
         source: "Business Standard",
         url: "https://www.business-standard.com/opinion/columns/the-dauphin-discount-love-the-founder-126091101542_1.html",
-        category: "Corporate Governance",
-        takeaway: "A data-rich breakdown of why public markets apply a 15-25% valuation haircut once second-generation heirs take over, contrasting founder-led paranoia with entitled, consulting-heavy managerial decay."
+        category: "Governance",
+        takeaway: "Why public markets often price in a 15–25% discount when second-generation heirs take over from founders—and how hard it is to pass down founder-level urgency and cost discipline."
       },
       {
         title: "A Short History of Trend-Following and Momentum",
         source: "A Wealth of Common Sense",
         url: "https://awealthofcommonsense.com/2026/09/a-short-history-of-trend-following-and-momentum/",
         category: "Capital Markets",
-        takeaway: "An empirical look at why trend-following serves as an essential behavioral release valve during market drawdowns, and how cap-weighted index funds are inherently automated momentum engines."
+        takeaway: "A clear look at why momentum persists across centuries of market data, and how simple index funds quietly act as long-term trend-following machines."
       }
     ]
   },
@@ -130,22 +130,22 @@ export const weeklySignals: WeeklySignal[] = [
         title: "Do Things That Don't Scale",
         source: "paulgraham.com",
         url: "https://paulgraham.com/ds.html",
-        category: "Early-Stage Execution",
-        takeaway: "Paul Graham explains why startups don't take off on their own—urging founders to manually recruit users, delight them to extremes, and resist premature automation."
+        category: "Early Stage",
+        takeaway: "Paul Graham's classic reminder that startups don't take off on their own—in the beginning, you have to recruit users manually, solve their problems by hand, and resist automating too early."
       },
       {
         title: "An Ode to Counter-Positioning",
         source: "notboring.co",
         url: "https://www.notboring.co/p/an-ode-to-counter-positioning",
-        category: "Business Strategy",
-        takeaway: "Packy McCormick analyzes Helmer's ultimate business moat—how upstarts win by adopting business models that incumbents are structurally paralyzed from copying."
+        category: "Strategy",
+        takeaway: "How challengers win against giants by choosing a business model that incumbents cannot copy without hurting their own existing cash cow."
       },
       {
         title: "The Psychology of Money",
         source: "Morgan Housel",
         url: "https://dineshpai.in/blog/timing-and-capital---what-your-spreadsheets-cant-tell-you",
         category: "Behavioral Finance",
-        takeaway: "Exploring why financial success is driven by behavioral humility and survival margins over raw mathematical modeling—saving to feed your freedom, not just your ego."
+        takeaway: "Doing well with money has little to do with how smart you are and everything to do with how you behave—staying unbreakable so you can let compounding work uninterrupted."
       }
     ]
   }

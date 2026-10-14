@@ -1,10 +1,9 @@
 ---
 date: '2023-09-09'
 title: "Indian financial services in numbers"
-tags: [Economy, Financial services, Data]
+tags: [economics, finance, data]
 author: dinesh
-description: A summary of the financial services markets in India compared to global markets. 
-draft: true
+description: A data-driven summary of Indian banking, credit, insurance, and capital markets compared to global peers.
 ---
 
 Before I get to the meat of this piece, some nostalgia around Cricket, given it is India playing Pakistan in the Asia Cup match today. 

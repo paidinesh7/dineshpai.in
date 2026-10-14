@@ -1,9 +1,9 @@
 ---
 date: '2025-08-09'
 title: "Thank you, Mr. Trump"
-tags: [investments, economics]
+tags: [investing, economics]
 author: dinesh
-description: Musings on the long-term focus for India with infrastructure - digital and physical
+description: Why global trade friction is a wake-up call for India to double down on domestic digital and physical infrastructure.
 ---
 
 Thanks to the United States of America and the current economic dealings with the West, I think we have all had a sudden awakening to the criticality of sovereignty in trade, technology, and intellectual property, especially driven by tariffs. While this is not a brand-new concern, the Indian government has been communicating its importance for years. The difference now is urgency. Although we have some head start and momentum, we are still far from prepared for what lies ahead. Perhaps now is the time for us to work together as a nation to build something that will outlast all of us.

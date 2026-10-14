@@ -1,9 +1,9 @@
 ---
 date: '2023-10-05'
 title: "The cricket world cup is back in town"
-tags: [cricket]
+tags: [cricket, personal]
 author: dinesh
-description: Musings on the cricket world cup
+description: Memories of the 2011 World Cup in college and notes on how the business of Indian cricket has evolved.
 ---
 
 The last time the Cricket World Cup came to India was in 2011 - the first year of my engineering degree. Those memories are still vivid, and they all came rushing back a few weeks ago during a meeting attended by several IIT alumni. While they were reminiscing about their college days, my mind kept drifting back to how the CWC was one of the highlights of my college life. Here's an image of us watching a group stage match:

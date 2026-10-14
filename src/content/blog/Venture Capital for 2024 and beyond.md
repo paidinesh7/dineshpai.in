@@ -1,9 +1,9 @@
 ---
 date: '2024-01-22'
 title: "Venture Capital for 2024 and beyond"
-tags: [vc, startups]
+tags: [vc, startups, investing]
 author: dinesh
-description: Musings on the venture capital and India
+description: How private market valuations, capital discipline, and founder-investor alignment are resetting across India.
 ---
 
 ## TL;DR

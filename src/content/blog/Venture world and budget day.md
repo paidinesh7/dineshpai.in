@@ -1,9 +1,9 @@
 ---
 date: '2024-02-01'
 title: "Venture Capital demands from budget 2024"
-tags: [vc, startups]
+tags: [vc, startups, economics]
 author: dinesh
-description: Musings on the venture capital in India
+description: Key policy, tax, and regulatory asks from the Indian startup and venture ecosystem ahead of the Union Budget.
 ---
 
 ## TL;DR

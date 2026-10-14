@@ -1,9 +1,9 @@
 ---
 date: '2023-12-21'
 title: "Lessons, learnings and gratitude - 2023"
-tags: [personal]
+tags: [reflections, personal]
 author: dinesh
-description: Musings on 2023 - the year gone by
+description: Year-end reflections on operating, investing, and personal lessons from 2023.
 ---
 
 Back in January of this year, I promised myself to write as much as possible this year. Naturally, I clasped at every opportunity to write and share my thoughts on almost everything - personal and professional. And while we are wrapping up this year, it’s only fitting that I end the year with a blog. 

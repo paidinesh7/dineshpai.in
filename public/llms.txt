@@ -1,29 +1,62 @@
 # Dinesh Pai
 
-Field notes on business, investments, and capital markets.
+> Business & Investments at Zerodha / Rainmatter
 
-## About
-Dinesh Pai leads startup and private market investments at Zerodha's Rainmatter fund, and supports climate and rural livelihood initiatives through the Rainmatter Foundation. He is the VP of Business Analysis & Investments at Zerodha. Alumnus of D.E. Shaw, Calgary (MBA), and RVCE (CS Engineering).
+## About & Background
+Dinesh Pai is the Vice President of Business Analysis & Investments at [Zerodha](https://zerodha.com/), where he leads startup and private market investments through [Rainmatter](https://rainmatter.com/) and supports grassroots climate and livelihood initiatives through the [Rainmatter Foundation](https://rainmatter.org/).
 
-## Core Pages & Portals
-- [Home Page](https://dineshpai.in/): Introduction, bio, sports allegiances (Manchester United, Scuderia Ferrari), and his simplified, jargon-free "How I Invest" note.
-- [How I Work (Personal README)](https://dineshpai.in/how-i-work): Dinesh's operating manual on managing complexity, async defaults, peer kindness, and his 4-stage decision-making framework.
-- [Curated Reads](https://dineshpai.in/good-reads): An interactive, searchable, and tagged library of 20 books and essays on strategy (7 Powers), capital cycles, and behavioral finance.
-- [Notes from the Field](https://dineshpai.in/notes): Curated, high-signal business observations and deep-tech threads compiled from his socials (specifically on dredging, hardware economics, and F1 safety).
+He grew up on the banks of River Seetha in Udupi, Karnataka. After graduating in Computer Science Engineering from RV College of Engineering (2014), he worked at D.E. Shaw India and completed his MBA at the University of Calgary, Canada. Before joining Zerodha in 2020, his steepest learning curve came from two early, hands-on entrepreneurial attempts—delivering engineering textbooks in Bangalore and running student housing in Canada. Managing physical logistics, suppliers, and tight cash flows shaped his grounded approach to evaluating businesses and empathizing with founders.
 
-## Featured Projects & Toolkits
-- [onepager](https://github.com/paidinesh7/onepager): An AI financial statement analyzer yielding Altman Z-Scores, Piotroski F-Scores, and DuPont briefs in under 2 minutes.
-- [LegalOS](https://github.com/paidinesh7/LegalOS): AI legal assistant translating startup term sheets, SHAs, and SPAs for Indian founders.
+## How Dinesh & Rainmatter Invest
+Rainmatter operates differently from traditional venture capital funds:
+- **Patient Balance-Sheet Capital:** Rainmatter invests Zerodha's own capital with zero external LPs. This provides a 20- to 30-year horizon with no pressure to force artificial exits or chase short-term valuation markups.
+- **What Dinesh Looks For in Founders:**
+  1. **Structural Differentiation:** Business models with structural advantages that incumbents cannot easily copy without undercutting their existing revenue.
+  2. **Ecosystem Value Creation:** Founders focused on building enduring products that create far more value for customers and ecosystems than they extract.
+  3. **Cash-Flow & Operational Reality:** Honest unit economics that work on the ground, rather than just on spreadsheets.
+  4. **Hard Engineering & Patient Moats:** Capital-intensive or deep-engineering businesses in climate, health, and deeptech where high entry barriers reward patient capital.
+- **Core Values:** Simplicity, extreme cost-discipline, and doing right by customers and employees.
 
-## Essays & Musings
-- [I am a nobody](https://dineshpai.in/blog/i-am-a-nobody): A raw, personal reflection on imposter syndrome, communication, growing up near Udupi, and the power of luck.
-- [Bootstrapping in Vogue](https://dineshpai.in/blog/bootstrapping-in-vogue): On the discipline and leverage of self-funding startup paths.
-- [Indian Financial Services in Numbers](https://dineshpai.in/blog/indian-financial-service-in-numbers): Comprehensive data metrics outlining domestic banking and financial opportunities.
-- [Venture Capital for 2024 and Beyond](https://dineshpai.in/blog/venture-capital-for-2024-and-beyond): Shifting macro trends in private valuations, risk bets, and founder-investor alignment.
-- [Tariff tantrum](https://dineshpai.in/blog/tariff-tantrum): Musings on trade tariffs, capital protection, and market friction.
-- [Timing and Capital](https://dineshpai.in/blog/timing-and-capital---what-your-spreadsheets-cant-tell-you): Exploring what raw spreadsheets overlook regarding macro timing.
+## Core Pages
+- [Home](https://dineshpai.in/): Bio, investment philosophy, The Weekly Signal (curated reads with takeaways for Indian founders and investors), essays, and podcasts.
+- [Investments & Portfolio](https://dineshpai.in/portfolio): Interactive directory of startups and founders Dinesh has backed at Rainmatter, along with the investment thesis for each.
+- [Essays & Writing Archive](https://dineshpai.in/blog): Complete archive of long-form essays and reflections on startups, venture capital, and Indian markets.
 
-## Social Media & Verification
+## Selected Portfolio Companies Backed at Rainmatter
+- **Fintech & Markets:** M2P, Capitalmind, Assetplus, Indiadatahub, Mprofit, Financialist.
+- **Climate, Energy & Agriculture:** Akshayakalpa, Solarsquare, Two Brothers Organic Farms, Zerocircle, Voltseal, Green Worms, Matchlog, Naxatra Labs, Neufin, Ossus Bio, Krop AI.
+- **Health & Nutrition:** The Whole Truth, Blackfrog, Sukino, Emoha, Adsys, Arboreal, SuperYou.
+- **Deeptech & Hardware:** Galaxeye, Spacefields, Karban.
+
+## Essays & Writing
+- [What I learnt from a visit to Amaravati](https://dineshpai.in/blog/what-i-learnt-from-a-visit-to-amaravati) (Oct 2026): Reflections from meeting entrepreneurs, incubators, and policymakers in Andhra Pradesh—and why early-stage investing is ultimately a bet on people and time.
+- [I am a nobody](https://dineshpai.in/blog/i-am-a-nobody) (Sep 2026): A personal reflection on growing up near Udupi, imposter syndrome, communication, and the role of luck in careers.
+- [Timing and Capital - What your spreadsheets can't tell you](https://dineshpai.in/blog/timing-and-capital---what-your-spreadsheets-cant-tell-you) (Dec 2025): Why market timing, patience, and founder endurance matter more than financial projections in early-stage investing.
+- [Thank you, Mr. Trump](https://dineshpai.in/blog/tariff-tantrum) (Aug 2025): Why global trade friction is a wake-up call for India to double down on domestic digital and physical infrastructure.
+- [Venture Capital demands from budget 2024](https://dineshpai.in/blog/venture-world-and-budget-day) (Feb 2024): Key policy and regulatory asks from the Indian startup and venture ecosystem ahead of the Union Budget.
+- [Venture Capital for 2024 and beyond](https://dineshpai.in/blog/venture-capital-for-2024-and-beyond) (Jan 2024): How private market valuations, capital discipline, and founder-investor alignment are resetting in India.
+- [Lessons, learnings and gratitude - 2023](https://dineshpai.in/blog/lessons-learnings-and-gratitude---2023) (Dec 2023): Year-end reflections on operating, investing, and personal lessons from 2023.
+- [Musings on the venture world for 2024](https://dineshpai.in/blog/musings-on-the-cashflow-conundrum-in-the-venture-world) (Dec 2023): Examining the cash-flow conundrum in venture-backed startups and why sustainable unit economics matter.
+- [Bootstrapping in vogue](https://dineshpai.in/blog/bootstrapping-in-vogue) (Oct 2023): On the discipline, leverage, and freedom of building self-funded, profitable businesses before raising institutional capital.
+- [Moving on from the funding winter narrative](https://dineshpai.in/blog/moving-on-from-the-funding-winter-narrative) (Oct 2023): Why the "funding winter" is actually a healthy return to normalcy for Indian startups.
+- [Indian financial services in numbers](https://dineshpai.in/blog/indian-financial-service-in-numbers) (Sep 2023): A data-driven look at the depth and Penetration of Indian banking, credit, insurance, and capital markets compared to global peers.
+- [Venture Capital: 2023 and beyond](https://dineshpai.in/blog/venture-capital-in-2023-and-what-lies-ahead) (Jul 2023): Analyzing the post-2021 venture correction in India and what lies ahead for founders and funds.
+
+## Podcasts & Video Discussions
+- [Nithin Kamath's Guide to How Startups Think of Risks & Moats](https://www.youtube.com/watch?v=eZdrpChV0C4&t=38s): *The Startup Blueprint* — Nithin Kamath and Dinesh Pai discuss how Zerodha scaled through technology and trust, risk management, and capital allocation.
+- [How VCs Measure Product-Market Fit](https://www.youtube.com/watch?v=-TqOl7NjB7o): *How VCs Think (Ep. 7)* — With Sajith Pai (Blume Ventures) on Product-to-Problem Fit, Motion-to-Market Fit, and early-stage metrics.
+- [What VCs Look For in the First Meeting](https://www.youtube.com/watch?v=dhuHgsGevks&t=96s): *How VCs Think (Ep. 1)* — With Kushal Bhagia (All In Capital) on the "Why You?" test, operational insights, and cap table pitfalls.
+- [How to Hire and Retain Early Employees](https://www.youtube.com/watch?v=0fxTjJ9jVpg&t=14s): *How VCs Think (Ep. 4)* — With portfolio founders on early-stage hiring, long-term incentives, and company culture.
+- [How to Find a Co-founder](https://www.youtube.com/watch?v=ORPVZgc2ScM): *The Startup Blueprint (Ep. 1)* — With Ashish Goel (Urban Ladder) on complementary skill sets, value alignment, and co-founder trial periods.
+- [Decoding Bain's India Venture Capital Report](https://www.youtube.com/watch?v=TbsWx16UFhM&t=4950s): *Subtext by Zerodha* — With Bain & Company India partners on Indian VC trends and domestic LP capital.
+
+## Toolkits & Open-Source Projects
+- [onepager](https://github.com/paidinesh7/onepager): An AI-powered financial analyzer that generates quick briefs (Altman Z-Score, Piotroski F-Score, DuPont Analysis) from financial statements in under 2 minutes.
+- [LegalOS](https://github.com/paidinesh7/LegalOS): An AI legal document analyzer designed for Indian startup founders navigating fundraising agreements like SHAs and SPAs.
+
+## Social Links
 - [Twitter / X](https://twitter.com/dineshpaii)
 - [LinkedIn](https://www.linkedin.com/in/paidinesh1/)
 - [Instagram](https://www.instagram.com/dpai.me/)
+- [GitHub](https://github.com/paidinesh7)
+- [RSS Feed](https://dineshpai.in/index.xml)
