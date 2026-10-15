@@ -1,0 +1,518 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="10-Year Thesis (2026–2036)"
+  description="Dinesh Pai's 10-year investment thesis for India: betting on what becomes structurally scarce as household incomes mobilize, and backing sovereign industrial resilience across the grid, machinery, and metals."
+>
+  <div class="thesis-page space-y-14">
+
+    <!-- Hero / Title Block -->
+    <header class="border-b border-stone-800 dark:border-stone-200 pb-8">
+      <div class="flex flex-wrap items-baseline justify-between gap-2 font-mono text-[11px] uppercase tracking-widest text-stone-500 dark:text-stone-400 mb-4">
+        <span>Investment Memorandum · Ten-Year Horizon</span>
+        <time datetime="2026-10">2026 — 2036</time>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-serif font-bold tracking-tight text-stone-900 dark:text-stone-100 leading-[1.15] mb-5">
+        Investing in what becomes scarce, and the physical stack India must own.
+      </h1>
+      <p class="text-base sm:text-lg text-stone-700 dark:text-stone-300 font-serif leading-relaxed max-w-2xl">
+        Over the next decade, tens of millions of Indian households will cross into meaningful disposable income, while geopolitical friction forces India to localize critical industrial infrastructure. Digital distribution in India is now abundant. The durable returns over the next ten years will flow to the hard-to-scale supply bottlenecks underneath those two curves.
+      </p>
+
+      <!-- Section Jump Nav (Cambrian style) -->
+      <nav aria-label="Thesis sections" class="mt-7 pt-4 border-t border-stone-300/80 dark:border-stone-800 flex flex-wrap gap-x-6 gap-y-2 font-mono text-[11px] uppercase tracking-wider">
+        <a href="#premise" class="text-stone-600 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark no-underline">01 / Premise</a>
+        <a href="#income-scarcity" class="text-stone-600 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark no-underline">02 / Income & Scarcity</a>
+        <a href="#live-ip-hardware" class="text-stone-600 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark no-underline">03 / Live IP & Hardware</a>
+        <a href="#sovereign-stack" class="text-stone-600 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark no-underline">04 / Sovereign Stack</a>
+        <a href="#capital-horizon" class="text-stone-600 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark no-underline">05 / Capital Horizon</a>
+      </nav>
+    </header>
+
+    <!-- 01 / THE PREMISE -->
+    <section id="premise" class="scroll-mt-24 space-y-6">
+      <div class="section-rule">
+        <span>01 / The Premise</span>
+        <span class="section-sub">Abundance vs. Bottlenecks</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-7 space-y-4 text-[15.5px] leading-relaxed text-stone-700 dark:text-stone-300">
+          <p class="text-stone-900 dark:text-stone-100 font-medium text-base sm:text-[17px] leading-relaxed">
+            Most venture capital in India still chases the abundant layer of the economy—consumer apps, marketing-led D2C brands, and thin software wrappers where marginal supply is infinite.
+          </p>
+          <p>
+            When an economy compounds and software becomes easier to build with AI, value migrates away from digital interfaces and toward <strong>inputs that cannot be replicated overnight</strong>: physical capacity, specialized hardware, scarce IP, and metallurgical or industrial know-how.
+          </p>
+          <p>
+            My 10-year outlook rests on two convictions: first, that rising middle-class disposable income will create acute scarcity in physical experiences, housing, healthcare, and hardware; and second, that successive Indian governments will have no choice but to back domestic resilience in grid infrastructure, industrial machinery, and critical metals.
+          </p>
+        </div>
+
+        <!-- Mini Chart: Supply Elasticity across layers -->
+        <figure class="md:col-span-5 cambrian-card">
+          <figcaption class="chart-title">Time Required to Scale New Supply</figcaption>
+          <p class="text-[11px] font-mono text-stone-500 dark:text-stone-400 mb-4">Typical lead time to add meaningful domestic capacity</p>
+          <div class="space-y-3.5 font-mono text-xs">
+            <div>
+              <div class="flex justify-between text-stone-600 dark:text-stone-400 mb-1">
+                <span>Software / App Wrapper</span>
+                <span class="font-bold text-stone-800 dark:text-stone-200">3–6 mos</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill bg-stone-400 dark:bg-stone-600" style="width: 8%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-stone-600 dark:text-stone-400 mb-1">
+                <span>Contract-Manufactured D2C Brand</span>
+                <span class="font-bold text-stone-800 dark:text-stone-200">6–12 mos</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill bg-stone-400 dark:bg-stone-600" style="width: 15%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-stone-700 dark:text-stone-300 mb-1">
+                <span>Diagnostic / Cooling Hardware</span>
+                <span class="font-bold text-brand-light dark:text-brand-dark">3–5 yrs</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill bg-brand-light dark:bg-brand-dark" style="width: 58%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-stone-700 dark:text-stone-300 mb-1">
+                <span>Live Arenas, Sports IP & Venues</span>
+                <span class="font-bold text-brand-light dark:text-brand-dark">4–7 yrs</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill bg-brand-light dark:bg-brand-dark" style="width: 78%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-stone-700 dark:text-stone-300 mb-1">
+                <span>Grid Equipment, CNCs & Specialty Metals</span>
+                <span class="font-bold text-brand-light dark:text-brand-dark">5–8+ yrs</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill bg-brand-light dark:bg-brand-dark" style="width: 96%"></div></div>
+            </div>
+          </div>
+          <p class="chart-note">Longer gestation deters short-cycle capital, creating durable pricing power for early domestic builders.</p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 02 / THEME 1: INCOME MOBILIZATION & THE SCARCITY OF AFFLUENCE -->
+    <section id="income-scarcity" class="scroll-mt-24 space-y-6">
+      <div class="section-rule">
+        <span>02 / Income Mobilization & Scarcity</span>
+        <span class="section-sub">The $3,000 → $5,000+ Inflection</span>
+      </div>
+
+      <div class="space-y-4 text-[15.5px] leading-relaxed text-stone-700 dark:text-stone-300">
+        <p class="text-stone-900 dark:text-stone-100 font-medium text-base sm:text-[17px]">
+          When households cross the $3,000 to $5,000 per-capita income threshold, basic subsistence is already paid for. Incremental income flows disproportionately into housing quality, travel, live entertainment, preventive health, and financial assets.
+        </p>
+        <p>
+          While India's national per-capita GDP sits near $2,900, our top eight metropolitan corridors and over 60 million consuming households are already operating in the $5,000–$12,000+ band. We do not have to guess what happens next; we saw the exact same curve play out in Japan in the 1970s, South Korea in the late 1980s, and China between 2008 and 2018.
+        </p>
+      </div>
+
+      <!-- Historical Precedent Table -->
+      <figure class="cambrian-card overflow-x-auto">
+        <div class="flex flex-wrap items-baseline justify-between gap-2 mb-3">
+          <span class="chart-title !mb-0 !border-0 !pt-0">How Asian Consumption Shifted After Crossing $3,000–$5,000 / Capita</span>
+          <span class="font-mono text-[10px] uppercase tracking-wider text-stone-500 dark:text-stone-400">Historical Precedent</span>
+        </div>
+        <table class="cambrian-table">
+          <thead>
+            <tr>
+              <th>Economy</th>
+              <th>Inflection Window</th>
+              <th>GDP / Capita Shift</th>
+              <th>What Compounded Fastest Over the Next Decade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Japan</th>
+              <td class="font-mono">1972 – 1980</td>
+              <td class="font-mono">$2,900 → $9,400</td>
+              <td>Domestic rail leisure, pro baseball (NPB) attendance, stadium concerts, and home appliances (ACs/autos).</td>
+            </tr>
+            <tr>
+              <th scope="row">South Korea</th>
+              <td class="font-mono">1987 – 1996</td>
+              <td class="font-mono">$3,500 → $13,000</td>
+              <td>Post-1988 Olympics domestic sports leagues (KBO, K-League), arena infrastructure, outdoor recreation, and early cultural IP.</td>
+            </tr>
+            <tr>
+              <th scope="row">China</th>
+              <td class="font-mono">2008 – 2017</td>
+              <td class="font-mono">$3,400 → $8,800</td>
+              <td>Live box-office & arena attendance grew ~7x; marathons rose from 22 events (2011) to 1,800+ (2019); domestic sports brands (Anta, Li-Ning) scaled past $20B.</td>
+            </tr>
+            <tr class="highlight-row">
+              <th scope="row">India (Urban + Middle Cohort)</th>
+              <td class="font-mono">2025 – 2035E</td>
+              <td class="font-mono">$3,000 → $6,500+</td>
+              <td>Quality housing, experiential travel, live entertainment & non-cricket sports IP, clean nutrition, and out-of-hospital healthcare.</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <!-- What Becomes Scarce List -->
+      <ul class="cambrian-squares text-[15px] leading-relaxed text-stone-700 dark:text-stone-300">
+        <li>
+          <strong>Housing & Managed Communities:</strong> As nuclear families upgrade from basic shelter to well-designed, energy- and water-resilient communities, developable urban land and high-trust real estate execution remain severely supply-constrained.
+        </li>
+        <li>
+          <strong>Experiential Travel & Mid-Market Hospitality:</strong> Domestic air and highway connectivity have expanded faster than quality, standardized mid-market stays and destination infrastructure outside Tier-1 metros.
+        </li>
+        <li>
+          <strong>Clean, Traceable Nutrition:</strong> Rising incomes in India have come alongside a severe metabolic health crisis. Families are shifting from unbranded staples to high-protein, chemical-free, and clean-label food—where the bottleneck is not marketing, but farm-level traceability and cold-chain integrity (<a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Akshayakalpa</a>, <a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">The Whole Truth</a>, <a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Two Brothers</a>).
+        </li>
+        <li>
+          <strong>Unconflicted Household Finance:</strong> As household savings move from physical gold and fixed deposits into capital markets and credit, transparent, fee-only wealth and retirement infrastructure will compound steadily (<a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Capitalmind</a>, <a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Assetplus</a>, <a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Mprofit</a>).
+        </li>
+      </ul>
+    </section>
+
+    <!-- 03 / LIVE ENTERTAINMENT, SPORTS IP & HARDWARE SCARCITY -->
+    <section id="live-ip-hardware" class="scroll-mt-24 space-y-6">
+      <div class="section-rule">
+        <span>03 / Live IP, Arenas & Hardware</span>
+        <span class="section-sub">Physical Scarcity in an AI Era</span>
+      </div>
+
+      <div class="space-y-4 text-[15.5px] leading-relaxed text-stone-700 dark:text-stone-300">
+        <p class="text-stone-900 dark:text-stone-100 font-medium text-base sm:text-[17px]">
+          Generative AI and streaming push the marginal cost of digital entertainment toward zero. When screen content becomes infinitely abundant, two things become much more valuable: live, communal physical experiences and specialized hardware.
+        </p>
+      </div>
+
+      <!-- Two-Column Stat Comparison (Cambrian style el-grid) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Panel 1: Live Entertainment & Sports IP -->
+        <div class="cambrian-card flex flex-col justify-between">
+          <div>
+            <div class="font-mono text-[11px] uppercase tracking-wider text-brand-light dark:text-brand-dark font-bold">Live Venues & Sports IP</div>
+            <div class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 dark:text-stone-100 mt-1">&lt; 5 Arenas</div>
+            <p class="text-xs font-mono text-stone-500 dark:text-stone-400 mt-1 mb-4">
+              Purpose-built indoor arenas (&gt;15,000 capacity) in India vs. 60+ in China and 100+ in the US
+            </p>
+            <p class="text-sm text-stone-700 dark:text-stone-300 leading-relaxed mb-4">
+              Over 85% of Indian sports monetization today is concentrated in 60 days of cricket. Meanwhile, young urban Indians are spending heavily on concerts, marathons, badminton, pickleball/padel, and regional leagues—running straight into a shortage of venues, grassroot leagues, and event infrastructure.
+            </p>
+          </div>
+          <div class="border-t border-stone-200 dark:border-stone-800 pt-3 space-y-2 font-mono text-xs">
+            <div class="flex justify-between">
+              <span class="text-stone-500 dark:text-stone-400">Non-Cricket Sports IP Share</span>
+              <span class="font-bold text-stone-800 dark:text-stone-200">&lt; 15% today (poised to 3x)</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-stone-500 dark:text-stone-400">Participatory Sports & Fitness</span>
+              <span class="font-bold text-brand-light dark:text-brand-dark">Supply-starved in Tier 1 & 2</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: Consumer & Medical Hardware Scarcity -->
+        <div class="cambrian-card flex flex-col justify-between">
+          <div>
+            <div class="font-mono text-[11px] uppercase tracking-wider text-brand-light dark:text-brand-dark font-bold">Cooling & Diagnostic Hardware</div>
+            <div class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 dark:text-stone-100 mt-1">~9% → 45%+</div>
+            <p class="text-xs font-mono text-stone-500 dark:text-stone-400 mt-1 mb-4">
+              Indian household AC penetration today vs. expected trajectory over the next decade
+            </p>
+            <p class="text-sm text-stone-700 dark:text-stone-300 leading-relaxed mb-4">
+              As incomes rise in a warming climate, India will add 150M+ cooling units alongside medical and agricultural cold chains. At the same time, 150M+ Indians crossing age 60 will require out-of-hospital diagnostics and rehab hardware that Tier-2 clinics can actually afford.
+            </p>
+          </div>
+          <div class="border-t border-stone-200 dark:border-stone-800 pt-3 space-y-2 font-mono text-xs">
+            <div class="flex justify-between">
+              <span class="text-stone-500 dark:text-stone-400">Thermal & Airflow Hardware</span>
+              <span class="font-bold text-stone-800 dark:text-stone-200">BLDC motors, compressors, cold-chain</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-stone-500 dark:text-stone-400">Point-of-Care Medtech</span>
+              <span class="font-bold text-brand-light dark:text-brand-dark">Indigenous diagnostics & rehab rigs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 / THEME 2: SOVEREIGN INDUSTRIAL RESILIENCE -->
+    <section id="sovereign-stack" class="scroll-mt-24 space-y-6">
+      <div class="section-rule">
+        <span>04 / Sovereign Industrial Stack</span>
+        <span class="section-sub">Grid, Machinery & Critical Metals</span>
+      </div>
+
+      <div class="space-y-4 text-[15.5px] leading-relaxed text-stone-700 dark:text-stone-300">
+        <p class="text-stone-900 dark:text-stone-100 font-medium text-base sm:text-[17px]">
+          India cannot build a resilient industrial economy—or run AI data centers, EV fleets, and automated factories—while remaining import-dependent on the physical machinery, grid equipment, and refined metals underneath them.
+        </p>
+        <p>
+          Building resilience across these layers is a non-partisan priority that successive governments will continue to fund and protect over the next decade. Because these businesses require 4–6 years of metallurgical, electrical, or mechanical qualification, traditional software-focused funds overlook them—leaving massive operating leverage for patient capital.
+        </p>
+      </div>
+
+      <!-- Sovereign Bottlenecks Table -->
+      <figure class="cambrian-card overflow-x-auto">
+        <div class="flex flex-wrap items-baseline justify-between gap-2 mb-3">
+          <span class="chart-title !mb-0 !border-0 !pt-0">Where India's Industrial Bottlenecks Actually Sit</span>
+          <span class="font-mono text-[10px] uppercase tracking-wider text-stone-500 dark:text-stone-400">Import Exposure & Chokepoints</span>
+        </div>
+        <table class="cambrian-table">
+          <thead>
+            <tr>
+              <th>Industrial Layer</th>
+              <th>Current Chokepoint / Import Share</th>
+              <th>Why Demand Is Price-Inelastic</th>
+              <th>10-Year Domestic Opportunity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight-row">
+              <th scope="row">1. Power Grid & Transformers</th>
+              <td class="font-mono">20+ month lead times; 2,300+ GVA addition needed</td>
+              <td>Solar generation is cheap, but renewable plants and data centers cannot connect without transformers and switchgear.</td>
+              <td>High-voltage transformers, solid-state switchgear, grid-scale storage (BESS), and SiC power electronics.</td>
+            </tr>
+            <tr class="highlight-row">
+              <th scope="row">2. Critical Metals & Refining</th>
+              <td class="font-mono">~90% of CRGO electrical steel & rare-earth magnets imported</td>
+              <td>A missing magnetic core or rare-earth magnet halts an entire transformer or EV drivetrain line regardless of price.</td>
+              <td>Specialty electrical steel processing, copper foil, rare-earth-free motor topologies (<a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Naxatra</a>), and urban battery/metal recycling.</td>
+            </tr>
+            <tr>
+              <th scope="row">3. Industrial Machinery & Tooling</th>
+              <td class="font-mono">70–80% of precision CNCs, spindles & test rigs imported</td>
+              <td>Indian factories assembling electronics, aerospace, or auto components still rely on German, Japanese, and Chinese machine tools.</td>
+              <td>Indigenous multi-axis CNCs, precision actuators, automated optical inspection (AOI) rigs, and industrial robotics.</td>
+            </tr>
+            <tr>
+              <th scope="row">4. Sovereign Sensing & Propulsion</th>
+              <td class="font-mono">High reliance on foreign satellite tasking & energetics</td>
+              <td>Defense and strategic infrastructure require domestic intellectual property without foreign export-control kill switches.</td>
+              <td>All-weather SAR + optical satellites (<a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Galaxeye</a>), solid rocket propulsion (<a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Spacefields</a>), and secure RF comms.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="chart-note">Highlighted rows represent immediate physical choke points where domestic qualification unlocks multi-year order books.</p>
+      </figure>
+
+      <ul class="cambrian-squares text-[15px] leading-relaxed text-stone-700 dark:text-stone-300">
+        <li>
+          <strong>The Grid Is the Real Clean-Energy Bottleneck:</strong> Adding solar panels is no longer hard; evacuating intermittent power, managing thermal runaway (<a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Voltseal</a>), and upgrading distribution transformers and industrial energy markets (<a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Neufin</a>) is where the margin pool is shifting.
+        </li>
+        <li>
+          <strong>Metallurgy Underpins Sovereignty:</strong> Look one layer below India's transformer shortage and you find that nearly 90% of Cold-Rolled Grain-Oriented (CRGO) electrical steel is imported from four countries. Similar choke points exist in rare-earth magnets and battery-grade refining. Engineering around imported materials—or refining them domestically—is a foundational 10-year theme.
+        </li>
+        <li>
+          <strong>"The Machines That Make the Machines":</strong> True manufacturing depth comes when Indian companies stop merely assembling imported sub-components on imported machines and start building the precision capital goods, sensors, and factory tooling domestically.
+        </li>
+      </ul>
+    </section>
+
+    <!-- 05 / WHY PERMANENT CAPITAL WINS BOTH CURVES -->
+    <section id="capital-horizon" class="scroll-mt-24 space-y-6 pb-4">
+      <div class="section-rule">
+        <span>05 / Capital Horizon</span>
+        <span class="section-sub">Structure Dictates Strategy</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-7 space-y-4 text-[15.5px] leading-relaxed text-stone-700 dark:text-stone-300">
+          <p class="text-stone-900 dark:text-stone-100 font-medium text-base sm:text-[17px]">
+            You cannot back 10-year physical bottlenecks with 3-year markup expectations.
+          </p>
+          <p>
+            Whether a founder is building a network of step-down rehabilitation hospitals, a new sports league, a non-rare-earth electric motor, or precision industrial machinery, the first four years look slow on a spreadsheet. Qualifying hardware, earning consumer trust, and building physical capacity take time before operating leverage kicks in.
+          </p>
+          <p>
+            At <a href="https://rainmatter.com" target="_blank" rel="noopener noreferrer" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Rainmatter</a>, investing from a permanent balance sheet with zero external LPs and no forced exit timelines allows us to underwrite these exact curves—backing founders who prioritize unit-economic durability and engineering depth over premature blitzscaling.
+          </p>
+        </div>
+
+        <div class="md:col-span-5 cambrian-card space-y-3">
+          <div class="font-mono text-[11px] uppercase tracking-wider text-brand-light dark:text-brand-dark font-bold">Building in These Spaces?</div>
+          <p class="text-sm text-stone-700 dark:text-stone-300 leading-relaxed">
+            If you are working on a supply bottleneck in Indian consumer scarcity (live IP, venues, health, cooling/diagnostic hardware) or sovereign industrial capabilities (grid hardware, machinery, specialty metals), I would love to hear from you.
+          </p>
+          <div class="pt-2 flex flex-wrap gap-4 font-mono text-xs">
+            <a href="mailto:dinesh@rainmatter.com" class="text-brand-light dark:text-brand-dark font-bold hover:underline">dinesh@rainmatter.com →</a>
+            <a href="/portfolio" class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:underline">View Portfolio (27) →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .section-rule {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    padding-top: 14px;
+    border-top: 1.5px solid #1c1917;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #1c1917;
+  }
+  :global(.dark) .section-rule {
+    border-top-color: #e7e5e4;
+    color: #e7e5e4;
+  }
+  .section-sub {
+    font-size: 0.72rem;
+    color: #78716c;
+    font-weight: 400;
+  }
+  :global(.dark) .section-sub {
+    color: #a8a29e;
+  }
+
+  /* Cambrian-inspired square bullets */
+  ul.cambrian-squares {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  ul.cambrian-squares li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 0.85em;
+  }
+  ul.cambrian-squares li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.48em;
+    width: 9px;
+    height: 9px;
+    border-radius: 2px;
+    background-color: #15803d;
+  }
+  :global(.dark) ul.cambrian-squares li::before {
+    background-color: #34d399;
+  }
+
+  /* Native HTML Chart & Table Containers */
+  .cambrian-card {
+    background-color: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(168, 162, 158, 0.35);
+    border-radius: 8px;
+    padding: 18px 20px;
+  }
+  :global(.dark) .cambrian-card {
+    background-color: rgba(28, 25, 23, 0.45);
+    border-color: rgba(68, 64, 60, 0.6);
+  }
+
+  .chart-title {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #1c1917;
+    margin-bottom: 4px;
+  }
+  :global(.dark) .chart-title {
+    color: #f5f5f4;
+  }
+
+  .bar-track {
+    width: 100%;
+    height: 10px;
+    background-color: rgba(168, 162, 158, 0.22);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  :global(.dark) .bar-track {
+    background-color: rgba(87, 83, 78, 0.35);
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 2px;
+  }
+
+  .chart-note {
+    margin-top: 12px;
+    font-size: 0.75rem;
+    line-height: 1.45;
+    color: #78716c;
+    font-family: 'Instrument Sans', sans-serif;
+  }
+  :global(.dark) .chart-note {
+    color: #a8a29e;
+  }
+
+  /* Cambrian-inspired Data Tables */
+  .cambrian-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.84rem;
+    line-height: 1.45;
+    font-variant-numeric: tabular-nums;
+  }
+  .cambrian-table thead th {
+    padding: 0 12px 8px 0;
+    border-bottom: 1px solid #1c1917;
+    text-align: left;
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #57534e;
+  }
+  :global(.dark) .cambrian-table thead th {
+    border-bottom-color: #d6d3d1;
+    color: #a8a29e;
+  }
+  .cambrian-table tbody th {
+    padding: 10px 12px 10px 0;
+    border-bottom: 1px solid rgba(168, 162, 158, 0.3);
+    text-align: left;
+    font-weight: 600;
+    color: #1c1917;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+  :global(.dark) .cambrian-table tbody th {
+    border-bottom-color: rgba(68, 64, 60, 0.5);
+    color: #f5f5f4;
+  }
+  .cambrian-table tbody td {
+    padding: 10px 12px 10px 0;
+    border-bottom: 1px solid rgba(168, 162, 158, 0.3);
+    color: #44403c;
+    vertical-align: top;
+  }
+  :global(.dark) .cambrian-table tbody td {
+    border-bottom-color: rgba(68, 64, 60, 0.5);
+    color: #d6d3d1;
+  }
+  .cambrian-table tr.highlight-row th,
+  .cambrian-table tr.highlight-row td {
+    background-color: rgba(21, 128, 61, 0.06);
+  }
+  :global(.dark) .cambrian-table tr.highlight-row th,
+  :global(.dark) .cambrian-table tr.highlight-row td {
+    background-color: rgba(52, 211, 153, 0.07);
+  }
+  .cambrian-table tr.highlight-row th {
+    padding-left: 8px;
+    color: #15803d;
+  }
+  :global(.dark) .cambrian-table tr.highlight-row th {
+    color: #34d399;
+  }
+</style>
