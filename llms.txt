@@ -14,8 +14,14 @@ Because Rainmatter invests solely from Zerodha's balance sheet with no external 
 3. **Hard Moats & Patient Capital:** Across fintech, climate, healthcare, and Indian deeptech, backing proprietary engineering, physical supply chains, and regulatory infrastructure that take years to replicate.
 4. **Capital Discipline & Alignment:** Founders who treat equity as their most expensive asset, keep fixed costs lean, and build trust with customers rather than optimizing for the next valuation markup.
 
+## 10-Year Investment Thesis (2026–2036)
+Dinesh's 10-year thesis ([/thesis](https://dineshpai.in/thesis)) focuses on hard-to-scale supply bottlenecks across two structural curves in India:
+1. **Income Mobilization & What Becomes Scarce:** As 60M+ Indian households cross the $3,000 to $5,000+ per-capita income threshold (mirroring Japan 1972–80, South Korea 1987–96, and China 2008–17), spending shifts toward experiences, health, and upgrades where physical supply cannot scale quickly—specifically live entertainment & non-cricket sports IP, indoor arenas, experiential hospitality, quality housing, clean traceable food, and cooling/diagnostic hardware.
+2. **Sovereign Industrial Resilience:** Backing the physical stack India must localize over the next decade—specifically power grid infrastructure (transformers, switchgear, grid storage), critical metals and refining (such as CRGO electrical steel, where India imports ~90%, and rare-earth-free motor topologies), precision industrial machinery (CNCs, spindles, test rigs), and sovereign space/propulsion systems.
+
 ## Core Pages
 - [Home](https://dineshpai.in/): Bio, investment philosophy, The Weekly Signal (curated reads with takeaways for Indian founders and investors), essays, and podcasts.
+- [10-Year Thesis (2026–2036)](https://dineshpai.in/thesis): Detailed breakdown of Dinesh's 10-year predictions on consumer scarcity, live IP, hardware, and sovereign industrial bottlenecks.
 - [Investments & Portfolio](https://dineshpai.in/portfolio): Interactive directory of startups and founders Dinesh has backed at Rainmatter, along with the investment thesis for each.
 - [Essays & Writing Archive](https://dineshpai.in/blog): Complete archive of long-form essays and reflections on startups, venture capital, and Indian markets.
 
