@@ -5,64 +5,73 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout
   title="Thesis — Businesses, Investing & the Next 10 Years"
   description="How Dinesh Pai thinks about businesses from first principles, supply-demand dynamics, matching capital to impact, and where he sees 10-year opportunities in India across consumer scarcity and sovereign infrastructure."
+  maxWidth="max-w-5xl"
+  showProgress={true}
 >
-  <div class="thesis-page space-y-14">
+  <div class="space-y-14 py-4 font-serif">
 
-    <!-- Header -->
-    <header class="border-b border-stone-800 dark:border-stone-200 pb-8">
-      <div class="flex flex-wrap items-baseline justify-between gap-2 font-mono text-[11px] uppercase tracking-widest text-stone-500 dark:text-stone-400 mb-3">
-        <span>First Principles & Ten-Year Outlook</span>
-        <time datetime="2026-10">2026 — 2036</time>
-      </div>
-      <h1 class="text-3xl sm:text-4xl font-serif font-bold tracking-tight text-stone-900 dark:text-stone-100 leading-[1.18] mb-5">
+    <!-- BACK TO HOME LINK -->
+    <div class="font-mono text-xs uppercase tracking-wider">
+      <a href="/" class="text-stone-500 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1">
+        &larr; Back to Home
+      </a>
+    </div>
+
+    <!-- TITLE & OVERVIEW -->
+    <header class="space-y-4">
+      <h1 class="text-3xl sm:text-4xl font-black tracking-tight text-stone-900 dark:text-stone-100 !mt-0 !mb-2 leading-tight">
         How I think about businesses, investing, and the next ten years in India.
       </h1>
-      <p class="text-base sm:text-[17px] text-stone-700 dark:text-stone-300 leading-relaxed">
-        Before talking about specific sectors or 10-year projections, I want to lay out how I think about businesses from the ground up—why businesses exist, how supply and demand shape returns, what makes a company an actual investment opportunity, and where that lens points me in India over the next decade.
+      <p class="font-serif text-stone-800 dark:text-stone-200 text-sm sm:text-base leading-relaxed">
+        Before talking about specific sectors or 10-year projections, I want to lay out how I think about businesses from the ground up—why businesses exist, how supply and demand shape returns, what makes a company an actual investment opportunity, and where that lens points me in India over the next decade (2026–2036).
       </p>
 
       <!-- Section Jump Links -->
-      <nav aria-label="Thesis sections" class="mt-7 pt-4 border-t border-stone-300/80 dark:border-stone-800 flex flex-wrap gap-x-6 gap-y-2 font-mono text-[11px] uppercase tracking-wider">
-        <a href="#first-principles" class="text-stone-600 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark no-underline">01 / First Principles</a>
-        <a href="#income-slabs" class="text-stone-600 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark no-underline">02 / Income Slabs</a>
-        <a href="#tax-filings" class="text-stone-600 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark no-underline">03 / Tax Filings</a>
-        <a href="#what-gets-scarce" class="text-stone-600 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark no-underline">04 / Consumer Scarcity</a>
-        <a href="#sovereign-infra" class="text-stone-600 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark no-underline">05 / Grid, Machinery & Metals</a>
+      <nav aria-label="Thesis sections" class="pt-3 border-t border-stone-200 dark:border-stone-800 flex flex-wrap gap-x-6 gap-y-2 font-mono text-xs uppercase tracking-wider">
+        <a href="#first-principles" class="text-stone-500 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark hover:underline">01 / First Principles</a>
+        <a href="#income-slabs" class="text-stone-500 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark hover:underline">02 / Income Slabs</a>
+        <a href="#tax-filings" class="text-stone-500 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark hover:underline">03 / Tax Filings</a>
+        <a href="#what-gets-scarce" class="text-stone-500 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark hover:underline">04 / Consumer Scarcity</a>
+        <a href="#sovereign-infra" class="text-stone-500 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark hover:underline">05 / Grid, Machinery &amp; Metals</a>
       </nav>
     </header>
 
     <!-- 01 / FIRST PRINCIPLES: BUSINESSES, SUPPLY-DEMAND & INVESTING -->
-    <section id="first-principles" class="scroll-mt-24 space-y-6">
-      <div class="section-rule">
-        <span>01 / First Principles</span>
-        <span class="section-sub">Businesses, Niches & Matching Capital to Impact</span>
+    <section id="first-principles" class="scroll-mt-24 space-y-5">
+      <div class="border-b border-stone-200 dark:border-stone-800 pb-1.5 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+        <h2 class="font-mono text-xl sm:text-2xl font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100">
+          01 / First Principles
+        </h2>
+        <span class="text-xs text-stone-400 dark:text-stone-500 font-mono">
+          Businesses &bull; Supply-demand &bull; Matching capital to impact
+        </span>
       </div>
 
-      <div class="space-y-4 text-[15.5px] leading-relaxed text-stone-700 dark:text-stone-300">
-        <h2 class="font-serif text-xl font-bold text-stone-900 dark:text-stone-100 pt-1">
+      <div class="text-stone-800 dark:text-stone-200 leading-relaxed text-sm sm:text-base space-y-4">
+        <h3 class="font-serif text-lg sm:text-xl font-bold text-stone-950 dark:text-stone-50 pt-1">
           What is a business, and why does it exist?
-        </h2>
+        </h3>
         <p>
-          Stripped of all the startup jargon, a business exists for one basic reason: <strong>to solve a problem that a customer is willing to pay for</strong>, at a cost lower than what they pay you. Everything else—fundraising, team size, brand campaigns, valuations—is secondary to that basic exchange.
+          Stripped of all the startup jargon, a business exists for one basic reason: <strong class="text-stone-950 dark:text-stone-50">to solve a problem that a customer is willing to pay for</strong>, at a cost lower than what they pay you. Everything else—fundraising, team size, brand campaigns, valuations—is secondary to that basic exchange.
         </p>
         <p>
-          Once a business is up and running, its durability comes down to <strong>supply and demand</strong>. If you are selling something where ten other competitors can set up supply in six months—which is true for most thin software apps or marketing-led consumer brands using the same contract manufacturers—competition quickly eats away your margins. You end up spending all your energy and capital fighting for customer attention. On the other hand, when demand for a product or service is growing steadily while new supply is genuinely hard to add, a business gets the breathing room to earn healthy margins and compound over time.
+          Once a business is up and running, its durability comes down to <strong class="text-stone-950 dark:text-stone-50">supply and demand</strong>. If you are selling something where ten other competitors can set up supply in six months—which is true for most thin software apps or marketing-led consumer brands using the same contract manufacturers—competition quickly eats away your margins. You end up spending all your energy and capital fighting for customer attention. On the other hand, when demand for a product or service is growing steadily while new supply is genuinely hard to add, a business gets the breathing room to earn healthy margins and compound over time.
         </p>
         <p>
-          Broad macro narratives rarely tell you where those supply-demand imbalances sit. To find them, you have to pick <strong>one specific niche and go deep into the details</strong>—understanding why existing options fall short for the customer, how the underlying supply chain or technology actually works, and what stops a new entrant from copying it overnight.
+          Broad macro narratives rarely tell you where those supply-demand imbalances sit. To find them, you have to pick <strong class="text-stone-950 dark:text-stone-50">one specific niche and go deep into the details</strong>—understanding why existing options fall short for the customer, how the underlying supply chain or technology actually works, and what stops a new entrant from copying it overnight.
         </p>
 
-        <h2 class="font-serif text-xl font-bold text-stone-900 dark:text-stone-100 pt-3">
+        <h3 class="font-serif text-lg sm:text-xl font-bold text-stone-950 dark:text-stone-50 pt-2">
           How to think about an investment opportunity
-        </h2>
+        </h3>
         <p>
           A good business and a good investment opportunity are not always the same thing. Plenty of great businesses do not need outside equity at all; they can and should grow steadily out of their own customer cash flows.
         </p>
         <p>
-          An investment opportunity exists when <strong>matching capital to a specific business helps unlock real impact</strong> that would not happen otherwise. That impact can take different forms: helping a founder build factory capacity or supply-chain infrastructure, funding multi-year engineering and R&D before revenue kicks in, creating rural livelihoods, or helping Indians make better health, nutrition, and financial decisions.
+          An investment opportunity exists when <strong class="text-stone-950 dark:text-stone-50">matching capital to a specific business helps unlock real impact</strong> that would not happen otherwise. That impact can take different forms: helping a founder build factory capacity or supply-chain infrastructure, funding multi-year engineering and R&amp;D before revenue kicks in, creating rural livelihoods, or helping Indians make better health, nutrition, and financial decisions.
         </p>
         <p>
-          At <a href="https://rainmatter.com" target="_blank" rel="noopener noreferrer" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Rainmatter</a>, because we invest from a permanent balance sheet with no external LPs and no fixed fund deadlines, we do not have to force every company into a 3-year markup cycle. We can look at a niche, ask what kind of capital and time horizon the problem actually needs, and stay patient while the team builds supply.
+          At <a href="https://rainmatter.com/" target="_blank" rel="noopener noreferrer" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Rainmatter</a>, because we invest from Zerodha's balance sheet with no external LPs and no fixed fund deadlines, we do not have to force every company into a 3-year markup cycle. We can look at a niche, ask what kind of capital and time horizon the problem actually needs, and stay patient while the team builds supply.
         </p>
       </div>
 
@@ -70,10 +79,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <figure class="data-card">
         <div class="card-header">
           <div>
-            <h3 class="card-title">The Three Steps in How I Evaluate an Opportunity</h3>
+            <h3 class="card-title">The Three Questions I Start With</h3>
             <p class="card-subtitle">From basic customer utility to supply-demand mechanics and capital fit</p>
           </div>
-          <span class="card-badge">Mental Model</span>
+          <span class="card-badge">First Principles</span>
         </div>
 
         <div class="overflow-x-auto">
@@ -88,17 +97,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <tbody>
               <tr>
                 <th scope="row">1. The Business</th>
-                <td>Why does this business exist?</td>
+                <td class="font-medium text-stone-900 dark:text-stone-100">Why does this business exist?</td>
                 <td>A clear customer problem with real willingness to pay—without relying on perpetual venture subsidies.</td>
               </tr>
               <tr class="row-accent">
                 <th scope="row">2. The Niche</th>
-                <td>What is the supply-demand dynamic?</td>
+                <td class="font-medium text-stone-900 dark:text-stone-100">What is the supply-demand dynamic?</td>
                 <td>A specific niche where demand is structurally rising, but adding new supply takes years of engineering, trust, or physical capacity.</td>
               </tr>
               <tr>
                 <th scope="row">3. The Investment</th>
-                <td>What does capital unlock here?</td>
+                <td class="font-medium text-stone-900 dark:text-stone-100">What does capital unlock here?</td>
                 <td>Matching patient capital to a bottleneck where funding creates lasting economic, technological, or ecological impact.</td>
               </tr>
             </tbody>
@@ -108,18 +117,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </section>
 
     <!-- 02 / INDIAN HOUSEHOLD INCOME SLABS & GRADUATION -->
-    <section id="income-slabs" class="scroll-mt-24 space-y-6">
-      <div class="section-rule">
-        <span>02 / Household Income Graduation</span>
-        <span class="section-sub">Where New Demand Comes From (2021 → 2031E)</span>
+    <section id="income-slabs" class="scroll-mt-24 space-y-5">
+      <div class="border-b border-stone-200 dark:border-stone-800 pb-1.5 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+        <h2 class="font-mono text-xl sm:text-2xl font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100">
+          02 / Household Income Graduation
+        </h2>
+        <span class="text-xs text-stone-400 dark:text-stone-500 font-mono">
+          PRICE ICE 360&deg; Survey &bull; 2020–21 vs. 2030–31E
+        </span>
       </div>
 
-      <div class="space-y-4 text-[15.5px] leading-relaxed text-stone-700 dark:text-stone-300">
+      <div class="text-stone-800 dark:text-stone-200 leading-relaxed text-sm sm:text-base space-y-4">
         <p>
           When I apply that supply-and-demand lens to India over the next ten years (2026–2036), the starting point is understanding how household purchasing power is changing across income slabs.
         </p>
         <p>
-          According to the ICE 360° household surveys by PRICE (<em>People Research on India's Consumer Economy</em>), India had roughly 301 million households in 2020–21. At the start of this decade, two-thirds of the population lived in the lowest two brackets—earning under ₹5 lakh a year per household. Over the ten years to 2030–31, the bottom two slabs shrink in absolute numbers while <strong>74 million additional households graduate into the middle class (₹5–30 lakh)</strong> and <strong>24 million additional households enter the affluent bracket (&gt;₹30 lakh)</strong>.
+          According to the ICE 360&deg; household surveys by PRICE (<em>People Research on India's Consumer Economy</em>), India had roughly 301 million households in 2020–21. At the start of this decade, two-thirds of the population lived in the lowest two brackets—earning under ₹5 lakh a year per household. Over the ten years to 2030–31, the bottom two slabs shrink in absolute numbers while <strong class="text-stone-950 dark:text-stone-50">74 million additional households graduate into the middle class (₹5–30 lakh)</strong> and <strong class="text-stone-950 dark:text-stone-50">24 million additional households enter the affluent bracket (&gt;₹30 lakh)</strong>.
         </p>
       </div>
 
@@ -127,10 +140,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <figure class="data-card">
         <div class="card-header">
           <div>
-            <h2 class="card-title">Indian Households Across Annual Income Slabs (2020–21 vs. 2030–31E)</h2>
-            <p class="card-subtitle">Annual household income at constant 2020–21 prices · Source: PRICE ICE 360° Survey</p>
+            <h3 class="card-title">Indian Households Across Annual Income Slabs (2020–21 vs. 2030–31E)</h3>
+            <p class="card-subtitle">Annual household income at constant 2020–21 prices &bull; Source: PRICE ICE 360&deg; Survey</p>
           </div>
-          <span class="card-badge">301M → 358M HHs</span>
+          <span class="card-badge">301M &rarr; 358M Households</span>
         </div>
 
         <div class="overflow-x-auto">
@@ -139,10 +152,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <tr>
                 <th>Income Group</th>
                 <th>Annual Household Slab</th>
-                <th class="num">2020–21 HHs</th>
-                <th class="num">2030–31E HHs</th>
-                <th class="num">Pop. Share (21 → 31E)</th>
-                <th class="num">10-Yr Shift</th>
+                <th class="num">2020–21 Households</th>
+                <th class="num">2030–31E Households</th>
+                <th class="num">Population Share (2021 &rarr; 2031E)</th>
+                <th class="num">10-Year Change</th>
               </tr>
             </thead>
             <tbody>
@@ -151,7 +164,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <td class="mono">&lt; ₹1.25 Lakh</td>
                 <td class="num">45M</td>
                 <td class="num">20M</td>
-                <td class="num">14% → 5%</td>
+                <td class="num">14% &rarr; 5%</td>
                 <td class="num text-stone-500">-56%</td>
               </tr>
               <tr>
@@ -159,7 +172,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <td class="mono">₹1.25L – ₹5 Lakh</td>
                 <td class="num">154M</td>
                 <td class="num">138M</td>
-                <td class="num">52% → 37%</td>
+                <td class="num">52% &rarr; 37%</td>
                 <td class="num text-stone-500">-10%</td>
               </tr>
               <tr class="row-accent">
@@ -167,7 +180,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <td class="mono">₹5L – ₹30 Lakh</td>
                 <td class="num font-semibold">91M</td>
                 <td class="num font-semibold">165M</td>
-                <td class="num font-semibold">31% → 47%</td>
+                <td class="num font-semibold">31% &rarr; 47%</td>
                 <td class="num pos">+81%</td>
               </tr>
               <tr class="row-accent">
@@ -175,7 +188,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <td class="mono">&gt; ₹30 Lakh</td>
                 <td class="num font-semibold">11M</td>
                 <td class="num font-semibold">35M</td>
-                <td class="num font-semibold">4% → 11%</td>
+                <td class="num font-semibold">4% &rarr; 11%</td>
                 <td class="num pos">+218%</td>
               </tr>
             </tbody>
@@ -185,79 +198,87 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <td class="mono">All Households</td>
                 <td class="num">301M</td>
                 <td class="num">358M</td>
-                <td class="num">100%</td>
+                <td class="num">100% (1.42B &rarr; 1.53B)</td>
                 <td class="num">+19%</td>
               </tr>
             </tfoot>
           </table>
         </div>
 
-        <!-- Visual Comparison of Population Share by Income Slab -->
-        <div class="mt-6 pt-5 border-t border-stone-200/90 dark:border-stone-800">
-          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-            <span class="font-mono text-[11px] uppercase tracking-wider text-stone-600 dark:text-stone-400 font-medium">
-              Share of Indian Population by Household Income Slab
-            </span>
-            <div class="flex items-center gap-4 font-mono text-[11px] text-stone-500 dark:text-stone-400">
-              <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-[2px] bg-stone-400 dark:bg-stone-600 inline-block"></span>2020–21</span>
-              <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-[2px] bg-brand-light dark:bg-brand-dark inline-block"></span>2030–31E</span>
+        <!-- Side-by-Side Pyramid to Diamond Visual -->
+        <div class="mt-6 pt-5 border-t border-stone-200/90 dark:border-stone-800 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- 2020-21 Pyramid -->
+          <div class="p-4 rounded border border-stone-200/80 dark:border-stone-800 bg-white/40 dark:bg-stone-900/30 space-y-3">
+            <div class="flex items-baseline justify-between border-b border-stone-200/70 dark:border-stone-800 pb-2">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider text-stone-700 dark:text-stone-300">2020–21: Bottom-Heavy Pyramid</span>
+              <span class="font-mono text-[11px] text-stone-500">66% Below ₹5L</span>
+            </div>
+            <div class="space-y-2.5 font-mono text-xs">
+              <div class="grid grid-cols-[110px_1fr_52px] items-center gap-2">
+                <span class="text-stone-600 dark:text-stone-400">Rich (&gt;₹30L)</span>
+                <div class="h-3 bg-stone-200/70 dark:bg-stone-800 rounded-sm overflow-hidden">
+                  <div class="h-full bg-stone-500" style="width: 7%"></div>
+                </div>
+                <span class="text-right text-stone-600 dark:text-stone-400">4%</span>
+              </div>
+              <div class="grid grid-cols-[110px_1fr_52px] items-center gap-2">
+                <span class="text-stone-600 dark:text-stone-400">Middle (₹5–30L)</span>
+                <div class="h-3 bg-stone-200/70 dark:bg-stone-800 rounded-sm overflow-hidden">
+                  <div class="h-full bg-stone-500" style="width: 56%"></div>
+                </div>
+                <span class="text-right text-stone-600 dark:text-stone-400">31%</span>
+              </div>
+              <div class="grid grid-cols-[110px_1fr_52px] items-center gap-2">
+                <span class="text-stone-600 dark:text-stone-400">Aspirers (₹1.25–5L)</span>
+                <div class="h-3 bg-stone-200/70 dark:bg-stone-800 rounded-sm overflow-hidden">
+                  <div class="h-full bg-stone-400 dark:bg-stone-600" style="width: 95%"></div>
+                </div>
+                <span class="text-right text-stone-600 dark:text-stone-400">52%</span>
+              </div>
+              <div class="grid grid-cols-[110px_1fr_52px] items-center gap-2">
+                <span class="text-stone-600 dark:text-stone-400">Destitute (&lt;₹1.25L)</span>
+                <div class="h-3 bg-stone-200/70 dark:bg-stone-800 rounded-sm overflow-hidden">
+                  <div class="h-full bg-stone-400 dark:bg-stone-600" style="width: 26%"></div>
+                </div>
+                <span class="text-right text-stone-600 dark:text-stone-400">14%</span>
+              </div>
             </div>
           </div>
 
-          <div class="space-y-3 font-mono text-xs">
-            <div class="bar-compare-row">
-              <div class="bar-label">Rich (&gt;₹30L)</div>
-              <div class="bar-pair">
-                <div class="bar-line">
-                  <div class="bar-seg bg-stone-400 dark:bg-stone-600" style="width: 7.5%"></div>
-                  <span class="bar-val text-stone-500">4% (56M)</span>
-                </div>
-                <div class="bar-line">
-                  <div class="bar-seg bg-brand-light dark:bg-brand-dark" style="width: 21%"></div>
-                  <span class="bar-val font-semibold text-stone-900 dark:text-stone-100">11% (169M)</span>
-                </div>
-              </div>
+          <!-- 2030-31E Diamond -->
+          <div class="p-4 rounded border border-brand-light/30 dark:border-brand-dark/30 bg-brand-light/[0.03] dark:bg-brand-dark/[0.04] space-y-3">
+            <div class="flex items-baseline justify-between border-b border-stone-200/70 dark:border-stone-800 pb-2">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider text-brand-light dark:text-brand-dark">2030–31E: Middle-Class Diamond</span>
+              <span class="font-mono text-[11px] font-bold text-brand-light dark:text-brand-dark">58% Above ₹5L</span>
             </div>
-
-            <div class="bar-compare-row">
-              <div class="bar-label">Middle (₹5L–30L)</div>
-              <div class="bar-pair">
-                <div class="bar-line">
-                  <div class="bar-seg bg-stone-400 dark:bg-stone-600" style="width: 58%"></div>
-                  <span class="bar-val text-stone-500">31% (432M)</span>
+            <div class="space-y-2.5 font-mono text-xs">
+              <div class="grid grid-cols-[110px_1fr_52px] items-center gap-2">
+                <span class="font-semibold text-stone-900 dark:text-stone-100">Rich (&gt;₹30L)</span>
+                <div class="h-3 bg-stone-200/70 dark:bg-stone-800 rounded-sm overflow-hidden">
+                  <div class="h-full bg-brand-light dark:bg-brand-dark" style="width: 21%"></div>
                 </div>
-                <div class="bar-line">
-                  <div class="bar-seg bg-brand-light dark:bg-brand-dark" style="width: 88%"></div>
-                  <span class="bar-val font-semibold text-stone-900 dark:text-stone-100">47% (715M)</span>
-                </div>
+                <span class="text-right font-bold text-brand-light dark:text-brand-dark">11%</span>
               </div>
-            </div>
-
-            <div class="bar-compare-row">
-              <div class="bar-label">Aspirers (₹1.25L–5L)</div>
-              <div class="bar-pair">
-                <div class="bar-line">
-                  <div class="bar-seg bg-stone-400 dark:bg-stone-600" style="width: 96%"></div>
-                  <span class="bar-val text-stone-500">52% (732M)</span>
+              <div class="grid grid-cols-[110px_1fr_52px] items-center gap-2">
+                <span class="font-semibold text-stone-900 dark:text-stone-100">Middle (₹5–30L)</span>
+                <div class="h-3 bg-stone-200/70 dark:bg-stone-800 rounded-sm overflow-hidden">
+                  <div class="h-full bg-brand-light dark:bg-brand-dark" style="width: 88%"></div>
                 </div>
-                <div class="bar-line">
-                  <div class="bar-seg bg-stone-500/70 dark:bg-stone-500" style="width: 69%"></div>
-                  <span class="bar-val text-stone-600 dark:text-stone-400">37% (568M)</span>
-                </div>
+                <span class="text-right font-bold text-brand-light dark:text-brand-dark">47%</span>
               </div>
-            </div>
-
-            <div class="bar-compare-row">
-              <div class="bar-label">Destitute (&lt;₹1.25L)</div>
-              <div class="bar-pair">
-                <div class="bar-line">
-                  <div class="bar-seg bg-stone-400 dark:bg-stone-600" style="width: 26%"></div>
-                  <span class="bar-val text-stone-500">14% (196M)</span>
+              <div class="grid grid-cols-[110px_1fr_52px] items-center gap-2">
+                <span class="text-stone-600 dark:text-stone-400">Aspirers (₹1.25–5L)</span>
+                <div class="h-3 bg-stone-200/70 dark:bg-stone-800 rounded-sm overflow-hidden">
+                  <div class="h-full bg-stone-400 dark:bg-stone-600" style="width: 68%"></div>
                 </div>
-                <div class="bar-line">
-                  <div class="bar-seg bg-stone-500/70 dark:bg-stone-500" style="width: 9.5%"></div>
-                  <span class="bar-val text-stone-600 dark:text-stone-400">5% (79M)</span>
+                <span class="text-right text-stone-600 dark:text-stone-400">37%</span>
+              </div>
+              <div class="grid grid-cols-[110px_1fr_52px] items-center gap-2">
+                <span class="text-stone-600 dark:text-stone-400">Destitute (&lt;₹1.25L)</span>
+                <div class="h-3 bg-stone-200/70 dark:bg-stone-800 rounded-sm overflow-hidden">
+                  <div class="h-full bg-stone-400 dark:bg-stone-600" style="width: 10%"></div>
                 </div>
+                <span class="text-right text-stone-600 dark:text-stone-400">5%</span>
               </div>
             </div>
           </div>
@@ -266,18 +287,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </section>
 
     <!-- 03 / INCOME TAX FILINGS TREND (2021 vs 2025/26) -->
-    <section id="tax-filings" class="scroll-mt-24 space-y-6">
-      <div class="section-rule">
-        <span>03 / What Income Tax Filings Show</span>
-        <span class="section-sub">2021 vs. 2025–26 Slab Migration</span>
+    <section id="tax-filings" class="scroll-mt-24 space-y-5">
+      <div class="border-b border-stone-200 dark:border-stone-800 pb-1.5 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+        <h2 class="font-mono text-xl sm:text-2xl font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100">
+          03 / What Income Tax Filings Show
+        </h2>
+        <span class="text-xs text-stone-400 dark:text-stone-500 font-mono">
+          CBDT &amp; e-Filing Portal &bull; 2021 vs. 2025–26
+        </span>
       </div>
 
-      <div class="space-y-4 text-[15.5px] leading-relaxed text-stone-700 dark:text-stone-300">
+      <div class="text-stone-800 dark:text-stone-200 leading-relaxed text-sm sm:text-base space-y-4">
         <p>
           Survey projections can sometimes feel abstract, so it is useful to check them against actual tax filings from the Central Board of Direct Taxes (CBDT) and the Income Tax e-Filing portal.
         </p>
         <p>
-          Between Assessment Year 2021–22 (FY21) and FY 2025–26, the total number of individual tax returns grew by 29%, from <strong>6.37 crore to 8.22 crore</strong>. What matters is <em>where</em> that growth happened. Returns filed in the lowest slab (up to ₹5 lakh) fell by 20% as earners moved into higher brackets and tax-rebate thresholds rose. Meanwhile, filers in the <strong>₹5–10 lakh slab rose 81%</strong>, filers earning <strong>₹10–50 lakh more than doubled from 72 lakh to 1.50 crore</strong>, and individuals declaring <strong>over ₹1 crore grew 128%</strong>.
+          Between Assessment Year 2021–22 (FY21) and FY 2025–26, the total number of individual tax returns grew by 29%, from <strong class="text-stone-950 dark:text-stone-50">6.37 crore to 8.22 crore</strong>. What matters is <em>where</em> that growth happened. Returns filed in the lowest slab (up to ₹5 lakh) fell by 20% as earners moved into higher brackets and tax-rebate thresholds rose. Meanwhile, filers in the <strong class="text-stone-950 dark:text-stone-50">₹5–10 lakh slab rose 81%</strong>, filers earning <strong class="text-stone-950 dark:text-stone-50">₹10–50 lakh more than doubled from 72 lakh to 1.50 crore</strong>, and individuals declaring <strong class="text-stone-950 dark:text-stone-50">over ₹1 crore grew 128%</strong>.
         </p>
       </div>
 
@@ -285,10 +310,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <figure class="data-card">
         <div class="card-header">
           <div>
-            <h2 class="card-title">Individual Income Tax Filings by Gross Income Slab (2021 vs. 2025–26)</h2>
-            <p class="card-subtitle">Individual ITRs filed on the Income Tax Portal · Source: CBDT Time-Series & e-Filing Portal Statistics</p>
+            <h3 class="card-title">Individual Income Tax Filings by Gross Income Slab (2021 vs. 2025–26)</h3>
+            <p class="card-subtitle">Individual ITRs filed on the Income Tax Portal &bull; Source: CBDT Time-Series &amp; e-Filing Portal Statistics</p>
           </div>
-          <span class="card-badge">6.37 Cr → 8.22 Cr</span>
+          <span class="card-badge">6.37 Cr &rarr; 8.22 Cr Filers</span>
         </div>
 
         <div class="overflow-x-auto">
@@ -296,7 +321,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <thead>
               <tr>
                 <th>Gross Annual Income Slab</th>
-                <th class="num">2021 Filers (AY22)</th>
+                <th class="num">2021 Filers (AY 2021–22)</th>
                 <th class="num">2025–26 Filers</th>
                 <th class="num">Share of Filers (FY26)</th>
                 <th class="num">5-Year Change</th>
@@ -351,20 +376,61 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </table>
         </div>
 
+        <!-- Visual 5-Year ITR Slab Growth Bars -->
+        <div class="mt-6 pt-5 border-t border-stone-200/90 dark:border-stone-800 space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="font-mono text-xs font-bold uppercase tracking-wider text-stone-700 dark:text-stone-300">
+              5-Year Growth in Number of Tax Filers by Income Bracket (2021 &rarr; 2025–26)
+            </span>
+            <span class="font-mono text-[11px] text-stone-500">Filers earning &gt;₹10L: 77.8L &rarr; 1.62 Cr (+108%)</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-5 gap-3 pt-1 font-mono text-xs">
+            <div class="p-3 rounded border border-stone-200/80 dark:border-stone-800 bg-white/40 dark:bg-stone-900/30">
+              <div class="text-[11px] text-stone-500">Up to ₹5L</div>
+              <div class="text-lg font-bold text-stone-500 mt-0.5">-20%</div>
+              <div class="text-[11px] text-stone-400 mt-0.5">3.47Cr &rarr; 2.76Cr</div>
+            </div>
+            <div class="p-3 rounded border border-brand-light/25 dark:border-brand-dark/25 bg-brand-light/[0.03] dark:bg-brand-dark/[0.04]">
+              <div class="text-[11px] text-stone-600 dark:text-stone-400">₹5L – ₹10L</div>
+              <div class="text-lg font-bold text-brand-light dark:text-brand-dark mt-0.5">+81%</div>
+              <div class="text-[11px] text-stone-500 mt-0.5">2.12Cr &rarr; 3.84Cr</div>
+            </div>
+            <div class="p-3 rounded border border-brand-light/25 dark:border-brand-dark/25 bg-brand-light/[0.03] dark:bg-brand-dark/[0.04]">
+              <div class="text-[11px] text-stone-600 dark:text-stone-400">₹10L – ₹50L</div>
+              <div class="text-lg font-bold text-brand-light dark:text-brand-dark mt-0.5">+108%</div>
+              <div class="text-[11px] text-stone-500 mt-0.5">72.2L &rarr; 1.50Cr</div>
+            </div>
+            <div class="p-3 rounded border border-brand-light/25 dark:border-brand-dark/25 bg-brand-light/[0.03] dark:bg-brand-dark/[0.04]">
+              <div class="text-[11px] text-stone-600 dark:text-stone-400">₹50L – ₹1Cr</div>
+              <div class="text-lg font-bold text-brand-light dark:text-brand-dark mt-0.5">+93%</div>
+              <div class="text-[11px] text-stone-500 mt-0.5">3.95L &rarr; 7.64L</div>
+            </div>
+            <div class="p-3 rounded border border-brand-light/25 dark:border-brand-dark/25 bg-brand-light/[0.03] dark:bg-brand-dark/[0.04]">
+              <div class="text-[11px] text-stone-600 dark:text-stone-400">Above ₹1Cr</div>
+              <div class="text-lg font-bold text-brand-light dark:text-brand-dark mt-0.5">+128%</div>
+              <div class="text-[11px] text-stone-500 mt-0.5">1.69L &rarr; 3.86L</div>
+            </div>
+          </div>
+        </div>
+
         <p class="card-footnote">
-          Two things stand out in this table. First, the number of Indians formally declaring over ₹10 lakh a year has more than doubled in five years to ~1.62 crore individuals. Second, ~1.62 crore people is still only ~1.1% of India's total population—which shows both how fast formal disposable income is compounding and how early we still are in this cycle.
+          Two things stand out here. First, the number of Indians formally declaring over ₹10 lakh a year has more than doubled in five years to ~1.62 crore individuals. Second, ~1.62 crore people is still only ~1.1% of India's total population—which shows both how fast formal disposable income is compounding and how early we still are in this cycle.
         </p>
       </figure>
     </section>
 
     <!-- 04 / THEME 1: BETTING ON WHAT BECOMES SCARCE -->
-    <section id="what-gets-scarce" class="scroll-mt-24 space-y-6">
-      <div class="section-rule">
-        <span>04 / Theme 1: Consumer Scarcity</span>
-        <span class="section-sub">Where Disposable Income Meets Tight Supply</span>
+    <section id="what-gets-scarce" class="scroll-mt-24 space-y-5">
+      <div class="border-b border-stone-200 dark:border-stone-800 pb-1.5 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+        <h2 class="font-mono text-xl sm:text-2xl font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100">
+          04 / Theme 1: Consumer Scarcity
+        </h2>
+        <span class="text-xs text-stone-400 dark:text-stone-500 font-mono">
+          Where disposable income meets constrained supply
+        </span>
       </div>
 
-      <div class="space-y-4 text-[15.5px] leading-relaxed text-stone-700 dark:text-stone-300">
+      <div class="text-stone-800 dark:text-stone-200 leading-relaxed text-sm sm:text-base space-y-4">
         <p>
           When tens of millions of families cross ₹10 lakh in household income, basic necessities are already taken care of. Incremental income goes into upgrading how they live: better homes, holidays, dining and entertainment, preventive health, financial products, and household hardware.
         </p>
@@ -377,7 +443,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <figure class="data-card">
         <div class="card-header">
           <div>
-            <h2 class="card-title">Consumption Shifts After Crossing $3,000–$5,000 Per-Capita GDP</h2>
+            <h3 class="card-title">Consumption Shifts After Crossing $3,000–$5,000 Per-Capita GDP</h3>
             <p class="card-subtitle">Historical comparison across East Asian economies and India's current trajectory</p>
           </div>
           <span class="card-badge">Asian Precedent</span>
@@ -397,70 +463,73 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <tr>
                 <th scope="row">Japan</th>
                 <td class="mono">1972 – 1980</td>
-                <td class="num">$2,900 → $9,400</td>
+                <td class="num">$2,900 &rarr; $9,400</td>
                 <td>Urban housing, domestic rail travel, home appliances (ACs, refrigerators)</td>
               </tr>
               <tr>
                 <th scope="row">South Korea</th>
                 <td class="mono">1987 – 1996</td>
-                <td class="num">$3,500 → $13,000</td>
-                <td>Apartment complexes, leisure & hospitality, consumer electronics, automobiles</td>
+                <td class="num">$3,500 &rarr; $13,000</td>
+                <td>Apartment complexes, leisure &amp; hospitality, consumer electronics, automobiles</td>
               </tr>
               <tr>
                 <th scope="row">China</th>
                 <td class="mono">2008 – 2017</td>
-                <td class="num">$3,400 → $8,800</td>
-                <td>Domestic aviation & hotels, diagnostics, protein & dairy, cooling hardware</td>
+                <td class="num">$3,400 &rarr; $8,800</td>
+                <td>Domestic aviation &amp; hotels, diagnostics, protein &amp; dairy, cooling hardware</td>
               </tr>
               <tr class="row-accent">
                 <th scope="row">India</th>
                 <td class="mono">2025 – 2035E</td>
-                <td class="num font-semibold">$2,900 → $6,500+</td>
-                <td>Quality housing, travel & leisure, clean food, wealth management, cooling & medtech</td>
+                <td class="num font-semibold">$2,900 &rarr; $6,500+</td>
+                <td>Quality housing, travel &amp; leisure, clean food, wealth management, cooling &amp; medtech</td>
               </tr>
             </tbody>
           </table>
         </div>
       </figure>
 
-      <div class="space-y-4 text-[15.5px] leading-relaxed text-stone-700 dark:text-stone-300">
-        <p class="font-medium text-stone-900 dark:text-stone-100">
+      <div class="text-stone-800 dark:text-stone-200 leading-relaxed text-sm sm:text-base space-y-4">
+        <p>
           Over the next decade, I am most interested in five specific niches where rising middle-class spending runs into genuine physical or trust bottlenecks:
         </p>
+        <ul class="space-y-3 pl-5 list-disc mt-2">
+          <li>
+            <strong class="text-stone-950 dark:text-stone-50">Housing &amp; Well-Run Communities:</strong> As nuclear families upgrade from basic apartments, the shortage is not in luxury skyscrapers—it is in thoughtfully designed, energy- and water-resilient communities with reliable execution. Developable urban land with clean titles and credible developers remains scarce.
+          </li>
+          <li>
+            <strong class="text-stone-950 dark:text-stone-50">Travel, Hospitality &amp; Leisure Experiences:</strong> Airport capacity, Vande Bharat trains, and expressways have expanded much faster than good places to stay. Outside a handful of luxury chains, India has a massive shortage of clean, reliable mid-market hotels, homestays, and leisure destinations within a 3–4 hour drive of major cities.
+          </li>
+          <li>
+            <strong class="text-stone-950 dark:text-stone-50">Clean, Traceable Food &amp; Nutrition:</strong> Higher incomes in India have unfortunately come alongside rising diabetes and metabolic disease. Families are actively looking for chemical-free staples, high-protein foods, and clean labels. The bottleneck here is not branding or quick-commerce delivery; it is farm-level sourcing, soil health, and cold-chain logistics (<a href="/portfolio" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Akshayakalpa</a>, <a href="/portfolio" class="text-brand-light dark:text-brand-dark font-bold hover:underline">The Whole Truth</a>, <a href="/portfolio" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Two Brothers</a>).
+          </li>
+          <li>
+            <strong class="text-stone-950 dark:text-stone-50">Transparent Financial Services:</strong> As tens of millions of tax-filing earners move savings out of physical gold and bank deposits into mutual funds, equities, and insurance, they need unconflicted advice and software infrastructure to manage their money (<a href="/portfolio" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Capitalmind</a>, <a href="/portfolio" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Assetplus</a>, <a href="/portfolio" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Mprofit</a>).
+          </li>
+          <li>
+            <strong class="text-stone-950 dark:text-stone-50">Scarce Consumer &amp; Medical Hardware (Cooling &amp; Diagnostics):</strong> Only ~9% of Indian households own an air conditioner today, compared to over 60% in China. As incomes rise in a warming climate, India will add over 100 million room ACs, commercial chillers, and agricultural cold-chains—creating strong demand for efficient BLDC motors, airflow engineering (<a href="/portfolio" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Karban</a>), compressors, and thermal materials. On the healthcare side, as 150 million Indians cross age 60, we will need affordable point-of-care diagnostic devices and out-of-hospital rehabilitation centers (<a href="/portfolio" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Sukino</a>) across Tier-2 and Tier-3 towns.
+          </li>
+        </ul>
       </div>
-
-      <ul class="thesis-list text-[15px] leading-relaxed text-stone-700 dark:text-stone-300">
-        <li>
-          <strong>Housing & Well-Run Communities:</strong> As nuclear families upgrade from basic apartments, the shortage is not in luxury skyscrapers—it is in thoughtfully designed, energy- and water-resilient communities with reliable execution. Developable urban land with clean titles and credible developers remains scarce.
-        </li>
-        <li>
-          <strong>Travel, Hospitality & Leisure Experiences:</strong> Airport capacity, Vande Bharat trains, and expressways have expanded much faster than good places to stay. Outside a handful of luxury chains, India has a massive shortage of clean, reliable mid-market hotels, homestays, and leisure destinations within a 3–4 hour drive of major cities.
-        </li>
-        <li>
-          <strong>Clean, Traceable Food & Nutrition:</strong> Higher incomes in India have unfortunately come alongside rising diabetes and metabolic disease. Families are actively looking for chemical-free staples, high-protein foods, and clean labels. The bottleneck here is not branding or quick-commerce delivery; it is farm-level sourcing, soil health, and cold-chain logistics (<a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Akshayakalpa</a>, <a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">The Whole Truth</a>, <a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Two Brothers</a>).
-        </li>
-        <li>
-          <strong>Transparent Financial Services:</strong> As tens of millions of tax-filing earners move savings out of physical gold and bank deposits into mutual funds, equities, and insurance, they need unconflicted advice and software infrastructure to manage their money (<a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Capitalmind</a>, <a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Assetplus</a>, <a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Mprofit</a>).
-        </li>
-        <li>
-          <strong>Scarce Consumer & Medical Hardware (Cooling & Diagnostics):</strong> Only ~9% of Indian households own an air conditioner today, compared to over 60% in China. As incomes rise in a warming climate, India will add over 100 million room ACs, commercial chillers, and agricultural cold-chains—creating strong demand for efficient BLDC motors, compressors, and thermal materials. On the healthcare side, as 150 million Indians cross age 60, we will need affordable point-of-care diagnostic devices and out-of-hospital rehabilitation centers across Tier-2 and Tier-3 towns.
-        </li>
-      </ul>
     </section>
 
     <!-- 05 / THEME 2: SOVEREIGN TECHNOLOGIES & INDUSTRIAL RESILIENCE -->
-    <section id="sovereign-infra" class="scroll-mt-24 space-y-6 pb-4">
-      <div class="section-rule">
-        <span>05 / Theme 2: Sovereign Industrial Stack</span>
-        <span class="section-sub">Grid Infrastructure, Machinery & Metals</span>
+    <section id="sovereign-infra" class="scroll-mt-24 space-y-5">
+      <div class="border-b border-stone-200 dark:border-stone-800 pb-1.5 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+        <h2 class="font-mono text-xl sm:text-2xl font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100">
+          05 / Theme 2: Sovereign Industrial Stack
+        </h2>
+        <span class="text-xs text-stone-400 dark:text-stone-500 font-mono">
+          Grid infrastructure &bull; Industrial machinery &bull; Metals
+        </span>
       </div>
 
-      <div class="space-y-4 text-[15.5px] leading-relaxed text-stone-700 dark:text-stone-300">
+      <div class="text-stone-800 dark:text-stone-200 leading-relaxed text-sm sm:text-base space-y-4">
         <p>
           My second theme is sovereign technologies and industrial resilience. Over the last few years, export controls and supply-chain disruptions have made one thing obvious: a country of 1.4 billion people cannot rely on imports for its power grid, factory machinery, critical metals, communications, and defense.
         </p>
         <p>
-          Building domestic capability in these areas is not a short-term policy fad; it is something successive governments will have to support for the next twenty years. While space and defense get most of the headlines, I am equally interested in the industrial niches underneath them—<strong>grid infrastructure, industrial machinery, and specialty metals</strong>.
+          Building domestic capability in these areas is not a short-term policy fad; it is something successive governments will have to support for the next twenty years. While space and defense get most of the headlines, I am equally interested in the industrial niches underneath them—<strong class="text-stone-950 dark:text-stone-50">grid infrastructure, industrial machinery, and specialty metals</strong>.
         </p>
       </div>
 
@@ -468,7 +537,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <figure class="data-card">
         <div class="card-header">
           <div>
-            <h2 class="card-title">Key Physical Bottlenecks in India's Industrial Stack</h2>
+            <h3 class="card-title">Key Physical Bottlenecks in India's Industrial Stack</h3>
             <p class="card-subtitle">Where import dependence or capacity shortages create long-term domestic opportunities</p>
           </div>
           <span class="card-badge">Sovereign Resilience</span>
@@ -487,124 +556,75 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <tbody>
               <tr class="row-accent">
                 <th scope="row">Grid Infrastructure</th>
-                <td>HV Transformers & Switchgear</td>
+                <td>HV Transformers &amp; Switchgear</td>
                 <td class="num">20–30 mo lead times</td>
                 <td>Power transformers, BESS storage, solid-state protection, grid software</td>
               </tr>
               <tr class="row-accent">
                 <th scope="row">Critical Metals</th>
-                <td>CRGO Steel & Rare-Earth Magnets</td>
+                <td>CRGO Steel &amp; Rare-Earth Magnets</td>
                 <td class="num">~85–90% imported</td>
-                <td>Electrical steel, rare-earth-free motors (<a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Naxatra</a>), copper & battery recycling</td>
+                <td>Electrical steel, rare-earth-free motors (<a href="/portfolio" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Naxatra</a>), copper &amp; battery recycling</td>
               </tr>
               <tr>
                 <th scope="row">Industrial Machinery</th>
-                <td>Precision CNCs, Spindles & Test Rigs</td>
+                <td>Precision CNCs, Spindles &amp; Test Rigs</td>
                 <td class="num">70–80% imported</td>
                 <td>Multi-axis CNCs, actuators, optical inspection rigs, factory robotics</td>
               </tr>
               <tr>
                 <th scope="row">Sovereign Sensing</th>
-                <td>SAR Satellites, Comms & Propulsion</td>
+                <td>SAR Satellites, Comms &amp; Propulsion</td>
                 <td class="num">Strategic export controls</td>
-                <td>All-weather earth observation (<a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Galaxeye</a>), solid propulsion (<a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Spacefields</a>)</td>
+                <td>All-weather earth observation (<a href="/portfolio" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Galaxeye</a>), solid propulsion (<a href="/portfolio" class="text-brand-light dark:text-brand-dark underline-offset-4 font-bold hover:underline">Spacefields</a>)</td>
               </tr>
             </tbody>
           </table>
         </div>
       </figure>
 
-      <ul class="thesis-list text-[15px] leading-relaxed text-stone-700 dark:text-stone-300">
-        <li>
-          <strong>Grid Infrastructure & Power Electronics:</strong> Generating solar power is no longer the bottleneck in India; evacuating and storing it is. As electric vehicles, air conditioners, factories, and data centers come online, our transmission and distribution grid needs massive upgrades. I am keen on companies building grid-scale battery storage, transformer components, thermal fire-safety materials (<a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Voltseal</a>), and commercial clean-energy infrastructure (<a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Neufin</a>, <a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Solarsquare</a>).
-        </li>
-        <li>
-          <strong>Industrial Machinery ("The Machines That Make the Machines"):</strong> Walk through almost any Indian factory assembling electronics, auto parts, or aerospace components today, and the high-precision CNC machines, spindles, and automated testing rigs are still imported from Germany, Japan, Taiwan, or China. As Indian manufacturing scales, localizing precision machine tools, industrial sensors, and factory automation is a massive multi-decade opportunity.
-        </li>
-        <li>
-          <strong>Specialty Metals & Material Science:</strong> If you look one layer below India's transformer shortage, nearly 90% of Cold-Rolled Grain-Oriented (CRGO) electrical steel still has to be imported. Electric motors face a similar choke point with imported rare-earth magnets. I want to back founders who either engineer around imported materials—like <a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Naxatra</a> building high-efficiency axial-flux motors without rare-earth magnets—or build domestic refining, metallurgy, and critical mineral recycling.
-        </li>
-        <li>
-          <strong>Satellites, Communications & Defense:</strong> In strategic sectors, buying off-the-shelf from abroad always carries the risk of supply cutoffs when you need the hardware most. Backing Indian engineering teams building indigenous multi-sensor satellites (<a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Galaxeye</a>) and rocket propulsion (<a href="/portfolio" class="text-brand-light dark:text-brand-dark underline underline-offset-4">Spacefields</a>) fits squarely into this view.
-        </li>
-      </ul>
+      <div class="text-stone-800 dark:text-stone-200 leading-relaxed text-sm sm:text-base space-y-4">
+        <ul class="space-y-3 pl-5 list-disc mt-2">
+          <li>
+            <strong class="text-stone-950 dark:text-stone-50">Grid Infrastructure &amp; Power Electronics:</strong> Generating solar power is no longer the bottleneck in India; evacuating and storing it is. As electric vehicles, air conditioners, factories, and data centers come online, our transmission and distribution grid needs massive upgrades. I am keen on companies building grid-scale battery storage, transformer components, thermal fire-safety materials (<a href="/portfolio" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Voltseal</a>), and commercial clean-energy infrastructure (<a href="/portfolio" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Neufin</a>, <a href="/portfolio" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Solarsquare</a>).
+          </li>
+          <li>
+            <strong class="text-stone-950 dark:text-stone-50">Industrial Machinery ("The Machines That Make the Machines"):</strong> Walk through almost any Indian factory assembling electronics, auto parts, or aerospace components today, and the high-precision CNC machines, spindles, and automated testing rigs are still imported from Germany, Japan, Taiwan, or China. As Indian manufacturing scales, localizing precision machine tools, industrial sensors, and factory automation is a massive multi-decade opportunity.
+          </li>
+          <li>
+            <strong class="text-stone-950 dark:text-stone-50">Specialty Metals &amp; Material Science:</strong> If you look one layer below India's transformer shortage, nearly 90% of Cold-Rolled Grain-Oriented (CRGO) electrical steel still has to be imported. Electric motors face a similar choke point with imported rare-earth magnets. I want to back founders who either engineer around imported materials—like <a href="/portfolio" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Naxatra</a> building high-efficiency axial-flux motors without rare-earth magnets—or build domestic refining, metallurgy, and critical mineral recycling.
+          </li>
+          <li>
+            <strong class="text-stone-950 dark:text-stone-50">Satellites, Communications &amp; Defense:</strong> In strategic sectors, buying off-the-shelf from abroad always carries the risk of supply cutoffs when you need the hardware most. Backing Indian engineering teams building indigenous multi-sensor satellites (<a href="/portfolio" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Galaxeye</a>) and rocket propulsion (<a href="/portfolio" class="text-brand-light dark:text-brand-dark font-bold hover:underline">Spacefields</a>) fits squarely into this view.
+          </li>
+        </ul>
 
-      <div class="data-card flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-8">
-        <div class="space-y-1">
-          <div class="font-mono text-xs uppercase tracking-wider text-brand-light dark:text-brand-dark font-bold">Going deep into one of these niches?</div>
-          <p class="text-sm text-stone-700 dark:text-stone-300">
-            If you are building a business around consumer scarcity or sovereign industrial capabilities in India, I would love to chat.
-          </p>
-        </div>
-        <div class="flex flex-wrap items-center gap-4 font-mono text-xs shrink-0">
-          <a href="mailto:dinesh@rainmatter.com" class="text-brand-light dark:text-brand-dark font-bold hover:underline">dinesh@rainmatter.com →</a>
-          <a href="/portfolio" class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:underline">Portfolio (27) →</a>
-        </div>
+        <p class="pt-2">
+          If you are going deep into one of these niches—whether around consumer scarcity or sovereign industrial capabilities—<a href="mailto:dinesh@rainmatter.com" class="text-brand-light dark:text-brand-dark font-bold hover:underline">write to me</a> or reach out on <a href="https://www.linkedin.com/in/paidinesh1/" target="_blank" rel="noopener noreferrer" class="text-brand-light dark:text-brand-dark font-bold hover:underline">LinkedIn</a>.
+        </p>
       </div>
     </section>
+
+    <!-- FOOTER DIVIDER -->
+    <div class="border-t border-stone-200 dark:border-stone-800 pt-6 flex flex-wrap items-center justify-between gap-4 font-mono text-xs uppercase tracking-wider">
+      <a href="/" class="text-stone-500 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark hover:underline">
+        &larr; Back to Home
+      </a>
+      <a href="/portfolio" class="text-brand-light dark:text-brand-dark font-bold hover:underline">
+        Explore the Portfolio (27 Companies) &rarr;
+      </a>
+    </div>
 
   </div>
 </BaseLayout>
 
 <style>
-  .section-rule {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 16px;
-    padding-top: 14px;
-    border-top: 1.5px solid #1c1917;
-    font-family: 'DM Mono', monospace;
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #1c1917;
-  }
-  :global(.dark) .section-rule {
-    border-top-color: #e7e5e4;
-    color: #e7e5e4;
-  }
-  .section-sub {
-    font-size: 0.72rem;
-    color: #78716c;
-    font-weight: 400;
-  }
-  :global(.dark) .section-sub {
-    color: #a8a29e;
-  }
-
-  /* Square Bullets */
-  ul.thesis-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  ul.thesis-list li {
-    position: relative;
-    padding-left: 22px;
-    margin-bottom: 0.95em;
-  }
-  ul.thesis-list li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.52em;
-    width: 8px;
-    height: 8px;
-    border-radius: 1.5px;
-    background-color: #15803d;
-  }
-  :global(.dark) ul.thesis-list li::before {
-    background-color: #34d399;
-  }
-
   /* Full-width Data Cards */
   .data-card {
     background-color: rgba(255, 255, 255, 0.55);
     border: 1px solid rgba(168, 162, 158, 0.4);
     border-radius: 6px;
-    padding: 20px 22px;
+    padding: 20px 24px;
   }
   :global(.dark) .data-card {
     background-color: rgba(28, 25, 23, 0.5);
@@ -626,9 +646,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .card-title {
-    font-family: 'Newsreader', Georgia, serif;
     font-size: 1.05rem;
-    font-weight: 600;
+    font-weight: 700;
     color: #1c1917;
     margin: 0;
     line-height: 1.3;
@@ -639,7 +658,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .card-subtitle {
     font-family: 'DM Mono', monospace;
-    font-size: 0.68rem;
+    font-size: 0.7rem;
     color: #78716c;
     margin: 3px 0 0 0;
   }
@@ -649,7 +668,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .card-badge {
     font-family: 'DM Mono', monospace;
-    font-size: 0.68rem;
+    font-size: 0.7rem;
     font-weight: 500;
     letter-spacing: 0.04em;
     padding: 3px 8px;
@@ -667,8 +686,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-top: 14px;
     padding-top: 12px;
     border-top: 1px solid rgba(168, 162, 158, 0.25);
-    font-size: 0.82rem;
-    line-height: 1.55;
+    font-size: 0.85rem;
+    line-height: 1.6;
     color: #57534e;
   }
   :global(.dark) .card-footnote {
@@ -680,17 +699,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .data-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.85rem;
-    line-height: 1.4;
+    font-size: 0.9rem;
+    line-height: 1.45;
     font-variant-numeric: tabular-nums;
   }
   .data-table thead th {
-    padding: 6px 10px 8px 6px;
+    padding: 8px 12px 9px 8px;
     border-bottom: 1.5px solid #1c1917;
     text-align: left;
     font-family: 'DM Mono', monospace;
     font-weight: 500;
-    font-size: 0.68rem;
+    font-size: 0.7rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #57534e;
@@ -704,10 +723,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     text-align: right;
   }
   .data-table tbody th {
-    padding: 9px 10px 9px 6px;
+    padding: 10px 12px 10px 8px;
     border-bottom: 1px solid rgba(168, 162, 158, 0.28);
     text-align: left;
-    font-weight: 600;
+    font-weight: 700;
     color: #1c1917;
     white-space: nowrap;
     vertical-align: baseline;
@@ -717,18 +736,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     color: #f5f5f4;
   }
   .data-table tbody td {
-    padding: 9px 10px 9px 6px;
+    padding: 10px 12px 10px 8px;
     border-bottom: 1px solid rgba(168, 162, 158, 0.28);
-    color: #44403c;
+    color: #292524;
     vertical-align: baseline;
   }
   :global(.dark) .data-table tbody td {
     border-bottom-color: rgba(68, 64, 60, 0.5);
-    color: #d6d3d1;
+    color: #e7e5e4;
   }
   .data-table td.mono {
     font-family: 'DM Mono', monospace;
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     white-space: nowrap;
   }
   .data-table td.num,
@@ -736,7 +755,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .data-table tfoot td.num {
     text-align: right;
     font-family: 'DM Mono', monospace;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     white-space: nowrap;
   }
   .data-table td.pos {
@@ -758,55 +777,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .data-table tfoot th,
   .data-table tfoot td {
-    padding: 9px 10px 4px 6px;
+    padding: 10px 12px 4px 8px;
     border-top: 1.5px solid #1c1917;
-    font-weight: 600;
+    font-weight: 700;
     color: #1c1917;
   }
   :global(.dark) .data-table tfoot th,
   :global(.dark) .data-table tfoot td {
     border-top-color: #d6d3d1;
     color: #f5f5f4;
-  }
-
-  /* Horizontal Paired Bars for Pyramid -> Diamond */
-  .bar-compare-row {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    align-items: center;
-    gap: 12px;
-  }
-  @media (max-width: 500px) {
-    .bar-compare-row {
-      grid-template-columns: 1fr;
-      gap: 4px;
-    }
-  }
-  .bar-label {
-    color: #44403c;
-    font-weight: 500;
-    white-space: nowrap;
-  }
-  :global(.dark) .bar-label {
-    color: #d6d3d1;
-  }
-  .bar-pair {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-  .bar-line {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .bar-seg {
-    height: 8px;
-    border-radius: 2px;
-    min-width: 4px;
-  }
-  .bar-val {
-    font-size: 0.72rem;
-    white-space: nowrap;
   }
 </style>

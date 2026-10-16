@@ -8,14 +8,17 @@ interface Props {
   title?: string;
   description?: string;
   showProgress?: boolean;
+  maxWidth?: string;
 }
 
 const {
   title = "Dinesh Pai's blog",
   description = "Dinesh Pai works at Zerodha, and manages their private investments at Rainmatter.",
   showProgress = false,
+  maxWidth = "max-w-3xl",
 } = Astro.props;
 
+const currentPath = Astro.url.pathname;
 const siteTitle = "Dinesh Pai";
 const pageTitle = title === "Home" ? siteTitle : `${title} | ${siteTitle}`;
 ---
@@ -152,9 +155,9 @@ const pageTitle = title === "Home" ? siteTitle : `${title} | ${siteTitle}`;
 
     {showProgress && <ReadingProgressBar client:load />}
 
-    <!-- Minimal Header / Navigation (Aligned to max-w-3xl to match the body grid exactly) -->
+    <!-- Minimal Header / Navigation -->
     <header class="border-b border-stone-200/40 dark:border-stone-800/40 py-6 mb-8 transition-colors duration-300 bg-[#ecf1ee]/85 dark:bg-[#0c120e]/85 backdrop-blur-md sticky top-0 z-40">
-      <div class="max-w-3xl mx-auto px-6 flex flex-row items-center justify-between gap-4">
+      <div class={`${maxWidth} mx-auto px-6 flex flex-row items-center justify-between gap-4`}>
         <a href="/" class="flex flex-col gap-0.5 group">
           <span class="font-serif text-2xl sm:text-3xl font-black tracking-tight text-stone-900 dark:text-stone-100 hover:text-brand-light dark:hover:text-brand-dark transition-colors duration-200">
             Dinesh Pai
@@ -165,10 +168,26 @@ const pageTitle = title === "Home" ? siteTitle : `${title} | ${siteTitle}`;
         </a>
         <div class="flex flex-col items-end gap-1.5 sm:flex-row sm:items-center sm:gap-6">
           <div class="flex items-center gap-4 sm:gap-5">
-            <a href="/thesis" class="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:underline">
+            <a
+              href="/thesis"
+              class:list={[
+                "font-mono text-xs sm:text-sm font-bold uppercase tracking-wider hover:underline",
+                currentPath.startsWith('/thesis')
+                  ? "text-brand-light dark:text-brand-dark underline underline-offset-4"
+                  : "text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100"
+              ]}
+            >
               Thesis
             </a>
-            <a href="/portfolio" class="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:underline">
+            <a
+              href="/portfolio"
+              class:list={[
+                "font-mono text-xs sm:text-sm font-bold uppercase tracking-wider hover:underline",
+                currentPath.startsWith('/portfolio')
+                  ? "text-brand-light dark:text-brand-dark underline underline-offset-4"
+                  : "text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100"
+              ]}
+            >
               Investments
             </a>
             <div class="sm:hidden">
@@ -217,13 +236,13 @@ const pageTitle = title === "Home" ? siteTitle : `${title} | ${siteTitle}`;
     </header>
 
     <!-- Main Content (Tactile Stacked Paper Sheet) -->
-    <main class="flex-grow max-w-3xl mx-auto w-full px-6 py-8 sm:py-12 relative z-10 sm:my-6 sm:rounded-xl sm:bg-white/20 sm:dark:bg-stone-900/10 sm:border sm:border-stone-200/40 sm:dark:border-stone-800/20 sm:shadow-sm sm:backdrop-blur-[1px] transition-colors duration-300">
+    <main class={`flex-grow ${maxWidth} mx-auto w-full px-6 sm:px-10 py-8 sm:py-12 relative z-10 sm:my-6 sm:rounded-xl sm:bg-white/20 sm:dark:bg-stone-900/10 sm:border sm:border-stone-200/40 sm:dark:border-stone-800/20 sm:shadow-sm sm:backdrop-blur-[1px] transition-colors duration-300`}>
       <slot />
     </main>
 
-    <!-- Footer (Aligned to max-w-3xl to match the body grid exactly) -->
+    <!-- Footer -->
     <footer class="border-t border-stone-200/40 dark:border-stone-800/40 py-8 transition-colors duration-300">
-      <div class="max-w-3xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 dark:text-stone-500 font-sans">
+      <div class={`${maxWidth} mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 dark:text-stone-500 font-sans`}>
         <div>
           Dinesh Pai &copy; 2023 - 2026. Built with Astro & Tailwind CSS.
         </div>
