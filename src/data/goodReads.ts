@@ -323,5 +323,57 @@ export const goodReads: ReadItem[] = [
       "Leading Retention Signals: Behavioral drift (e.g. usage drops from 5x/wk to 1x/wk) can be detected 2-3 weeks ahead of cancellation for preemptive intervention.",
       "The Human Moat: AI automates execution, copy variations, and behavioral clustering, but human operators must define what 'good' looks like and choose the metrics that matter."
     ]
+  },
+  {
+    id: "24",
+    title: "The Importance of Playing to Win",
+    author: "Dan Gray (The Odin Times)",
+    url: "https://blog.joinodin.com/p/the-importance-of-playing-to-win",
+    category: "Venture Capital",
+    tags: ["vc", "investing", "diligence", "meritocracy"],
+    summary: "Critiques modern venture capital for turning into a credentialist 'access game' of chasing allocation in consensus rounds, contrasting it with operators who compound fast feedback loops from reality.",
+    takeaways: [
+      "Access vs. Selection: Chasing hot, consensus deals is usually a trap; real returns come from independent diligence and non-consensus conviction.",
+      "Reactivity & Strategy: The best founders and investors learn faster from direct, real-world feedback than from polished credentials."
+    ]
+  },
+  {
+    id: "25",
+    title: "The Best Charity of the Next 50 Years Might Be a Company",
+    author: "Craig Shapiro (Collaborative Fund)",
+    url: "https://collabfund.com/blog/the-best-charity-of-the-next-50-years-might-be-a-company/",
+    category: "Business Models",
+    tags: ["business-models", "incentives", "unit-economics"],
+    summary: "Argues that the most enduring institutions of the next 50 years will replace the old two-ledger model (extract profits first, donate to charity later) with business models where unit economics improve only when customer and community outcomes improve.",
+    takeaways: [
+      "Mission by Design: Aligning revenue directly with customer health, lower emissions, or long-term financial wellbeing.",
+      "Single-Ledger Compounding: Businesses whose unit economics improve alongside customer outcomes scale without relying on philanthropic subsidies."
+    ]
+  },
+  {
+    id: "26",
+    title: "Consequences of Cheap Electricity",
+    author: "Ajay Shah (Business Standard / The Leap Blog)",
+    url: "https://www.mayin.org/ajayshah/MEDIA/2026/clean_consequences.html",
+    category: "Energy & Industry",
+    tags: ["energy", "solar", "storage", "india", "manufacturing"],
+    summary: "Documents a historic shift in Indian industrial economics: for the first time since the Industrial Revolution, producing in India beats the United States on both labor costs and electricity prices.",
+    takeaways: [
+      "Daylight & Firm Power Parity: Daylight solar in India sits at ~₹2.50/kWh ($30/MWh) and 24x7 firm solar-plus-storage at ₹5.25/kWh—cheaper than both US power ($100/MWh) and new Indian coal.",
+      "Industrial Second-Order Effects: Cheap, reliable clean power turns energy from a binding constraint into an industrial advantage across storage, cooling, and electro-manufacturing."
+    ]
+  },
+  {
+    id: "27",
+    title: "AI 2027",
+    author: "Daniel Kokotajlo, Scott Alexander, Thomas Larsen, Eli Lifland & Romeo Dean",
+    url: "https://ai-2027.com/",
+    category: "AI Forecasting",
+    tags: ["ai", "forecasting", "compute", "governance"],
+    summary: "A detailed month-by-month scenario tracking how coding agents could evolve into autonomous AI researchers over 30 months, grounding frontier capability leaps in compute bottlenecks, power constraints, and everyday bureaucracy.",
+    takeaways: [
+      "From Coding Agents to Autonomous Research: Maps the transition from human-in-the-loop coding assistants to automated research loops.",
+      "Physical & Institutional Chokepoints: Highlights how energy, chip supply, security leaks, and government oversight shape deployment timelines."
+    ]
   }
 ];
