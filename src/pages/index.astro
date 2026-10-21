@@ -97,49 +97,38 @@ const dineshPodcasts = [
       </div>
     </section>
 
-    <!-- CORE PAGES CALLOUT (THESIS & PORTFOLIO) -->
-    <section class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <a
-        href="/thesis"
-        class="editorial-card p-5 sm:p-6 hover:border-stone-900 dark:hover:border-stone-300 transition-colors flex flex-col justify-between gap-4 group no-underline"
-      >
-        <div class="space-y-2">
-          <div class="flex items-center justify-between font-mono text-[11px] uppercase tracking-wider text-stone-500 dark:text-stone-400">
-            <span>01 &middot; Investment Thesis</span>
-            <span>2026–2036</span>
+    <!-- INTERACTIVE HOOK: MINT STREET CENTRAL BANK SIMULATOR -->
+    <section>
+      <div class="editorial-card p-5 sm:p-6 flex flex-col md:flex-row md:items-center justify-between gap-5">
+        <div class="space-y-2 max-w-2xl">
+          <div class="flex flex-wrap items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-brand-light dark:text-brand-dark font-semibold">
+            <span>Interactive Simulation</span>
+            <span class="text-stone-400">&middot;</span>
+            <span class="text-stone-500 dark:text-stone-400 font-normal">RBI // Mint Street</span>
           </div>
-          <h2 class="font-serif text-lg sm:text-xl font-bold text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors">
-            Notes on the next decade
+          <h2 class="font-serif text-lg sm:text-xl font-bold text-stone-900 dark:text-stone-100">
+            Can you run the RBI for five years without breaking the Rupee or inflation?
           </h2>
-          <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
-            How I look at businesses, why only some of them become good investment opportunities, and where supply bottlenecks are building in India.
+          <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed">
+            Step into the Governor's chair across 8 Indian macro eras—from the 1991 gold airlift and 2013 taper tantrum to a 2027 AI shock. Set repo rates, bank liquidity (CRR), and FX interventions across 10 turns while balancing inflation, GDP growth, and dollar reserves.
           </p>
         </div>
-        <span class="font-mono text-xs uppercase tracking-wider font-semibold text-brand-light dark:text-brand-dark inline-flex items-center gap-1">
-          Read notes <span class="group-hover:translate-x-0.5 transition-transform">&rarr;</span>
-        </span>
-      </a>
 
-      <a
-        href="/portfolio"
-        class="editorial-card p-5 sm:p-6 hover:border-stone-900 dark:hover:border-stone-300 transition-colors flex flex-col justify-between gap-4 group no-underline"
-      >
-        <div class="space-y-2">
-          <div class="flex items-center justify-between font-mono text-[11px] uppercase tracking-wider text-stone-500 dark:text-stone-400">
-            <span>02 &middot; Rainmatter Portfolio</span>
-            <span>27 Companies</span>
-          </div>
-          <h2 class="font-serif text-lg sm:text-xl font-bold text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors">
-            Investments
-          </h2>
-          <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
-            Early-stage founders and companies I have worked closely with across fintech, climate and energy, health, and Indian deeptech.
-          </p>
+        <div class="flex flex-wrap sm:flex-col gap-2.5 shrink-0">
+          <a
+            href="/mint-street/mint_street_simple.html"
+            class="px-4 py-2.5 bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900 font-mono text-xs uppercase tracking-wider font-semibold rounded-[4px] hover:opacity-90 transition-opacity text-center no-underline"
+          >
+            Play Simple Edition &rarr;
+          </a>
+          <a
+            href="/mint-street/index.html"
+            class="px-4 py-2 border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 font-mono text-[11px] uppercase tracking-wider rounded-[4px] hover:border-stone-900 dark:hover:border-stone-300 transition-colors text-center no-underline"
+          >
+            Full 5-Lever Terminal &rarr;
+          </a>
         </div>
-        <span class="font-mono text-xs uppercase tracking-wider font-semibold text-brand-light dark:text-brand-dark inline-flex items-center gap-1">
-          Explore directory <span class="group-hover:translate-x-0.5 transition-transform">&rarr;</span>
-        </span>
-      </a>
+      </div>
     </section>
 
     <!-- ESSAYS & WRITING -->
@@ -294,10 +283,40 @@ const dineshPodcasts = [
     <section class="space-y-4">
       <div class="section-rule">
         <h2 class="section-heading">Tools &amp; Side Projects</h2>
-        <span class="section-meta">Open source on GitHub</span>
+        <span class="section-meta">Public utilities &amp; open source</span>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <a
+          href="/before-you-invest/index.html"
+          class="editorial-card p-4 sm:p-5 hover:border-stone-900 dark:hover:border-stone-300 transition-colors group no-underline space-y-1.5"
+        >
+          <div class="flex items-center justify-between">
+            <h3 class="font-mono text-sm font-bold text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark">
+              Before You Invest &rarr;
+            </h3>
+            <span class="mono-pill">6 Languages</span>
+          </div>
+          <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed">
+            13 Indian financial products (stocks, mutual funds, FDs, SGBs, REITs, NPS, ULIPs) stripped down to what you actually own, post-tax returns, and the hidden catch—in English, Kannada, Hindi, Tamil, Telugu, and Marathi.
+          </p>
+        </a>
+
+        <a
+          href="/mint-street/index.html"
+          class="editorial-card p-4 sm:p-5 hover:border-stone-900 dark:hover:border-stone-300 transition-colors group no-underline space-y-1.5"
+        >
+          <div class="flex items-center justify-between">
+            <h3 class="font-mono text-sm font-bold text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark">
+              Mint Street // Central Bank Simulator &rarr;
+            </h3>
+            <span class="mono-pill">Macro Game</span>
+          </div>
+          <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed">
+            Interactive RBI policy simulator across 8 historical and future macro eras, testing how interest rates, CRR, and FX interventions play out under supply shocks and the Impossible Trinity.
+          </p>
+        </a>
+
         <a
           href="https://github.com/paidinesh7/onepager"
           target="_blank"

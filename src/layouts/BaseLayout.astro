@@ -153,17 +153,6 @@ const pageTitle = title === "Home" || title === siteTitle ? siteTitle : `${title
           >
             Investments
           </a>
-          <a
-            href="/blog"
-            class:list={[
-              "font-mono text-xs sm:text-[13px] uppercase tracking-wider transition-colors",
-              currentPath.startsWith('/blog')
-                ? "font-bold text-brand-light dark:text-brand-dark underline underline-offset-4"
-                : "text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100"
-            ]}
-          >
-            Essays
-          </a>
           <div class="pl-1 border-l border-stone-300 dark:border-stone-800 flex items-center">
             <ThemeToggle client:load />
           </div>
