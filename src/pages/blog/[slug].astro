@@ -31,8 +31,8 @@ const readingTime = Math.max(1, Math.ceil(words / 220));
 ---
 
 <BaseLayout title={post.data.title} description={post.data.description} showProgress={true}>
-  <article class="post single max-w-3xl mx-auto py-4 font-serif animate-fade-in">
-    
+  <article class="post single max-w-3xl mx-auto py-2 font-serif">
+
     <!-- TOP BACK LINK -->
     <div class="font-mono text-xs uppercase tracking-wider mb-6">
       <a href="/blog" class="text-stone-500 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1">
@@ -41,17 +41,17 @@ const readingTime = Math.max(1, Math.ceil(words / 220));
     </div>
 
     <!-- HEADER -->
-    <header class="post-header space-y-3 mb-8 pb-6 border-b border-stone-200 dark:border-stone-800">
-      <h1 class="text-2xl sm:text-4xl font-black tracking-tight text-stone-900 dark:text-stone-100 leading-tight !m-0">
+    <header class="post-header space-y-3 mb-8 pb-6 border-b border-stone-300/80 dark:border-stone-800">
+      <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-stone-900 dark:text-stone-100 leading-tight !m-0">
         {post.data.title}
       </h1>
-      <div class="flex flex-wrap items-center gap-2 text-stone-400 dark:text-stone-500 font-mono text-xs">
+      <div class="flex flex-wrap items-center gap-2 text-stone-500 dark:text-stone-400 font-mono text-xs">
         <time datetime={post.data.date.toISOString()}>{formatDatePrecise(post.data.date)}</time>
-        <span>&bull;</span>
+        <span>&middot;</span>
         <span>{readingTime} min read</span>
       </div>
     </header>
-    
+
     <!-- ARTICLE BODY -->
     <div class="body text-stone-800 dark:text-stone-200 text-base sm:text-[17px] leading-relaxed">
       <Content />
@@ -59,10 +59,10 @@ const readingTime = Math.max(1, Math.ceil(words / 220));
 
     <!-- TAGS -->
     {post.data.tags && post.data.tags.length > 0 && (
-      <div class="flex flex-wrap gap-2 mt-10 pt-6 border-t border-dashed border-stone-200 dark:border-stone-800">
+      <div class="flex flex-wrap gap-2 mt-10 pt-6 border-t border-stone-200 dark:border-stone-800">
         {post.data.tags.map((tag) => (
-          <span class="stamp-badge stamp-neutral">
-            #{tag.toLowerCase()}
+          <span class="mono-pill">
+            {tag.toLowerCase()}
           </span>
         ))}
       </div>
@@ -70,14 +70,14 @@ const readingTime = Math.max(1, Math.ceil(words / 220));
 
     <!-- NEXT / PREVIOUS ESSAY NAVIGATION -->
     {(newerPost || olderPost) && (
-      <nav class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 pt-6 border-t border-stone-200 dark:border-stone-800 font-serif">
+      <nav class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 pt-6 border-t border-stone-300/80 dark:border-stone-800 font-serif">
         <div>
           {olderPost && (
             <a href={`/blog/${olderPost.slug}`} class="group block space-y-1">
-              <span class="font-mono text-[10px] uppercase tracking-wider text-stone-400 dark:text-stone-500 block">
+              <span class="font-mono text-[10px] uppercase tracking-wider text-stone-500 dark:text-stone-400 block">
                 &larr; Previous Essay
               </span>
-              <span class="font-bold text-sm sm:text-base text-stone-800 dark:text-stone-200 group-hover:text-brand-light dark:group-hover:text-brand-dark group-hover:underline">
+              <span class="font-bold text-sm sm:text-base text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark group-hover:underline">
                 {olderPost.data.title}
               </span>
             </a>
@@ -86,10 +86,10 @@ const readingTime = Math.max(1, Math.ceil(words / 220));
         <div class="sm:text-right">
           {newerPost && (
             <a href={`/blog/${newerPost.slug}`} class="group block space-y-1">
-              <span class="font-mono text-[10px] uppercase tracking-wider text-stone-400 dark:text-stone-500 block">
+              <span class="font-mono text-[10px] uppercase tracking-wider text-stone-500 dark:text-stone-400 block">
                 Next Essay &rarr;
               </span>
-              <span class="font-bold text-sm sm:text-base text-stone-800 dark:text-stone-200 group-hover:text-brand-light dark:group-hover:text-brand-dark group-hover:underline">
+              <span class="font-bold text-sm sm:text-base text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark group-hover:underline">
                 {newerPost.data.title}
               </span>
             </a>
@@ -97,83 +97,92 @@ const readingTime = Math.max(1, Math.ceil(words / 220));
         </div>
       </nav>
     )}
-
-    <!-- BACK BUTTON -->
-    <div class="mt-8 pt-6 border-t border-dashed border-stone-200 dark:border-stone-800 font-mono text-xs uppercase tracking-wider flex justify-between items-center">
-      <a href="/blog" class="text-stone-500 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1">
-        &larr; All Essays
-      </a>
-      <a href="/" class="text-stone-500 dark:text-stone-400 hover:text-brand-light dark:hover:text-brand-dark hover:underline inline-flex items-center gap-1">
-        Home
-      </a>
-    </div>
   </article>
 </BaseLayout>
 
 <style>
-  .animate-fade-in {
-    animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  .body :global(a) {
+    color: #2c4a3e;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 500;
+  }
+  :global(.dark) .body :global(a) {
+    color: #629e7a;
+  }
+  .body :global(a:hover) {
+    color: #b34d2b;
+  }
+  :global(.dark) .body :global(a:hover) {
+    color: #e07a5f;
   }
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(8px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Keep images rounded and properly scaled inside article body */
   .body :global(img) {
-    border-radius: 8px;
+    border-radius: 6px;
     max-width: 100%;
     height: auto;
-    margin: 30px auto;
+    margin: 28px auto;
     display: block;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid rgba(168, 162, 158, 0.35);
   }
 
-  /* Spacing inside article paragraphs and lists */
+  .body :global(figure) {
+    margin: 28px 0;
+    text-align: center;
+  }
+
+  .body :global(figcaption) {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: #78716c;
+    margin-top: 8px;
+  }
+
   .body :global(p) {
     margin-bottom: 22px;
     line-height: 1.78em;
   }
 
-  .body :global(h2), .body :global(h3) {
-    font-family: Lora, Georgia, serif;
+  .body :global(h2),
+  .body :global(h3),
+  .body :global(h4) {
+    font-family: 'Lora', Georgia, serif;
     font-weight: 700;
     line-height: 1.3em;
-    margin: 40px 0 16px 0;
+    margin: 36px 0 14px 0;
+    color: #1c1917;
+  }
+  :global(.dark) .body :global(h2),
+  :global(.dark) .body :global(h3),
+  :global(.dark) .body :global(h4) {
+    color: #f5f5f4;
   }
 
   .body :global(h2) {
-    font-size: 1.55rem;
-    border-bottom: 1px solid rgba(120, 113, 108, 0.2);
-    padding-bottom: 8px;
+    font-size: 1.45rem;
+    border-bottom: 1px solid rgba(168, 162, 158, 0.35);
+    padding-bottom: 6px;
   }
 
   .body :global(h3) {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
   .body :global(blockquote) {
-    background: rgba(120, 113, 108, 0.08);
+    background: rgba(255, 255, 255, 0.55);
     font-style: italic;
-    border-left: 4px solid #2c4a3e;
+    border-left: 3px solid #2c4a3e;
     padding: 12px 20px;
-    margin: 28px 0;
-    border-radius: 0 6px 6px 0;
+    margin: 26px 0;
+    border-radius: 0 4px 4px 0;
   }
-
   :global(.dark) .body :global(blockquote) {
-    background: rgba(255, 255, 255, 0.04);
-    border-left-color: #6ee7b7;
+    background: rgba(28, 25, 23, 0.55);
+    border-left-color: #629e7a;
   }
 
-  .body :global(ul), .body :global(ol) {
+  .body :global(ul),
+  .body :global(ol) {
     padding-left: 24px;
     margin-bottom: 22px;
   }
@@ -189,5 +198,49 @@ const readingTime = Math.max(1, Math.ceil(words / 220));
   .body :global(li) {
     margin-bottom: 8px;
     line-height: 1.75em;
+  }
+
+  .body :global(code) {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85em;
+    background: rgba(168, 162, 158, 0.2);
+    padding: 2px 5px;
+    border-radius: 3px;
+  }
+
+  .body :global(pre) {
+    padding: 16px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 24px 0;
+    border: 1px solid rgba(168, 162, 158, 0.35);
+  }
+  .body :global(pre code) {
+    background: transparent;
+    padding: 0;
+  }
+
+  .body :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 0.9rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .body :global(th),
+  .body :global(td) {
+    text-align: left;
+    padding: 8px 12px;
+    border-bottom: 1px solid rgba(168, 162, 158, 0.3);
+  }
+  .body :global(th) {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1.5px solid #1c1917;
+  }
+  :global(.dark) .body :global(th) {
+    border-bottom-color: #d6d3d1;
   }
 </style>
