@@ -1,0 +1,1900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Before You Invest — Indian Financial Products</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Sans+Kannada:wght@400;500;600&family=Noto+Sans+Tamil:wght@400;500;600&family=Noto+Sans+Telugu:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #FAF9F5;
+      --surface: #F2EFE9;
+      --ink: #141413;
+      --muted: #5C5953;
+      --faint: #969188;
+      --line: #E4E0D7;
+      --line-dark: #141413;
+      --serif: 'Newsreader', 'Noto Sans Kannada', 'Noto Sans Devanagari', 'Noto Sans Telugu', 'Noto Sans Tamil', Georgia, serif;
+      --sans: 'Inter', 'Noto Sans Kannada', 'Noto Sans Devanagari', 'Noto Sans Telugu', 'Noto Sans Tamil', -apple-system, BlinkMacSystemFont, sans-serif;
+      --mono: 'JetBrains Mono', 'Noto Sans Kannada', 'Noto Sans Devanagari', 'Noto Sans Telugu', 'Noto Sans Tamil', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 56px 32px 96px;
+      font-size: 14.5px;
+      line-height: 1.55;
+    }
+
+    /* Two-column Editorial Layout: Sidebar Index + Main Spec Sheet */
+    .layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    /* Left Sidebar Index */
+    aside {
+      position: sticky;
+      top: 40px;
+    }
+
+    .brand-title {
+      font-family: var(--serif);
+      font-size: 23px;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .brand-sub {
+      font-size: 12.5px;
+      color: var(--muted);
+      line-height: 1.45;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 20px;
+    }
+
+    .nav-group {
+      margin-bottom: 20px;
+    }
+
+    .nav-group-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 6px;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .nav-item {
+      width: 100%;
+      text-align: left;
+      appearance: none;
+      background: none;
+      border: none;
+      font-family: var(--sans);
+      font-size: 13.5px;
+      color: var(--muted);
+      padding: 5px 0;
+      cursor: pointer;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      transition: color 0.12s ease;
+    }
+
+    .nav-item:hover {
+      color: var(--ink);
+    }
+
+    .nav-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--faint);
+      width: 18px;
+      flex-shrink: 0;
+    }
+
+    .nav-item.active {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .nav-item.active .nav-num {
+      color: var(--ink);
+    }
+
+    .sidebar-hint {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--faint);
+    }
+
+    .sidebar-byline {
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .sidebar-byline a,
+    .footer-meta a {
+      color: var(--muted);
+      text-decoration: underline;
+      text-decoration-color: var(--line);
+      text-underline-offset: 3px;
+      transition: color 0.12s ease, text-decoration-color 0.12s ease;
+    }
+
+    .sidebar-byline a:hover,
+    .footer-meta a:hover {
+      color: var(--ink);
+      text-decoration-color: var(--ink);
+    }
+
+    .byline-links {
+      display: block;
+      margin-top: 2px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--faint);
+    }
+
+    /* Right Spec Sheet */
+    main {
+      min-width: 0;
+    }
+
+    .sheet-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--line-dark);
+    }
+
+    .sheet-kicker {
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--faint);
+    }
+
+    .compare-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    .compare-select {
+      appearance: none;
+      background: transparent;
+      border: 1px solid var(--line);
+      padding: 4px 24px 4px 8px;
+      font-family: var(--sans);
+      font-size: 12.5px;
+      color: var(--ink);
+      cursor: pointer;
+      background-image: linear-gradient(45deg, transparent 50%, var(--ink) 50%),
+                        linear-gradient(135deg, var(--ink) 50%, transparent 50%);
+      background-position: calc(100% - 11px) center, calc(100% - 7px) center;
+      background-size: 4px 4px, 4px 4px;
+      background-repeat: no-repeat;
+    }
+
+    .compare-select:focus {
+      outline: none;
+      border-color: var(--ink);
+    }
+
+    /* Product Header Block */
+    .title-block {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .product-title {
+      font-family: var(--serif);
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 1.18;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+
+    .product-what {
+      font-family: var(--serif);
+      font-size: 18px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    /* 4-Cell Swiss Quick-Stat Grid */
+    .stat-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .stat-cell {
+      padding: 18px 16px 18px 0;
+      border-right: 1px solid var(--line);
+    }
+
+    .stat-cell:not(:first-child) {
+      padding-left: 18px;
+    }
+
+    .stat-cell:last-child {
+      border-right: none;
+      padding-right: 0;
+    }
+
+    .stat-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--faint);
+      margin-bottom: 6px;
+    }
+
+    .stat-val {
+      font-family: var(--serif);
+      font-size: 21px;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: 3px;
+    }
+
+    .stat-note {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    /* Structured Spec Sections */
+    .spec-section {
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head {
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--faint);
+      margin-bottom: 14px;
+    }
+
+    .kv-table {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .kv-row {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 24px;
+      padding: 10px 0;
+      border-top: 1px solid var(--line);
+      align-items: baseline;
+    }
+
+    .kv-row:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .kv-row:last-child {
+      padding-bottom: 0;
+    }
+
+    .kv-key {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .kv-val {
+      font-size: 14.5px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* Stark Editorial Block for "The Catch" */
+    .catch-box {
+      margin-top: 28px;
+      background: var(--surface);
+      border-top: 2px solid var(--line-dark);
+      padding: 24px 26px;
+    }
+
+    .catch-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .catch-lead {
+      font-family: var(--serif);
+      font-size: 21px;
+      line-height: 1.4;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .catch-body {
+      font-size: 14.5px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Language Switcher */
+    .lang-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 10px;
+      padding-bottom: 16px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .lang-btn {
+      appearance: none;
+      background: none;
+      border: none;
+      padding: 2px 0;
+      font-family: var(--sans);
+      font-size: 12px;
+      color: var(--faint);
+      cursor: pointer;
+      border-bottom: 1.5px solid transparent;
+      transition: color 0.12s ease, border-color 0.12s ease;
+    }
+
+    .lang-btn:hover {
+      color: var(--ink);
+    }
+
+    .lang-btn.active {
+      color: var(--ink);
+      font-weight: 600;
+      border-bottom-color: var(--ink);
+    }
+
+    /* Interactive "Check the Numbers" Calculator */
+    .calc-wrap {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+    }
+
+    .calc-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .rupee-tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .calc-inputs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .calc-field {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .calc-field label {
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+    }
+
+    .calc-input {
+      appearance: none;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 6px 9px;
+      font-family: var(--mono);
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--ink);
+      width: 100%;
+      transition: border-color 0.12s ease;
+    }
+
+    .calc-input:focus {
+      outline: none;
+      border-color: var(--ink);
+    }
+
+    .rupee-text {
+      font-size: 14px;
+      color: var(--ink);
+      line-height: 1.55;
+      background: var(--paper);
+      border-left: 2px solid var(--ink);
+      padding: 10px 14px;
+    }
+
+    /* Comparison View (2 Columns Side by Side) */
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .compare-col-title {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 6px;
+    }
+
+    .compare-stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      padding: 16px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      margin: 16px 0;
+    }
+
+    /* Sheet Footer */
+    .sheet-footer {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12.5px;
+      color: var(--faint);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .foot-links {
+      display: flex;
+      gap: 18px;
+    }
+
+    .text-btn {
+      appearance: none;
+      background: none;
+      border: none;
+      font-family: var(--sans);
+      font-size: 12.5px;
+      color: var(--muted);
+      cursor: pointer;
+      padding: 0;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .text-btn:hover {
+      color: var(--ink);
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--ink);
+      color: var(--paper);
+      font-size: 13px;
+      padding: 8px 16px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .toast.show {
+      opacity: 1;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 820px) {
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      aside {
+        position: static;
+        border-bottom: 2px solid var(--line-dark);
+        padding-bottom: 20px;
+      }
+      .nav-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px 16px;
+      }
+      .sidebar-hint {
+        display: none;
+      }
+      .stat-strip {
+        grid-template-columns: 1fr 1fr;
+      }
+      .stat-cell {
+        padding: 14px 12px 14px 0 !important;
+        border-bottom: 1px solid var(--line);
+      }
+      .stat-cell:nth-child(2n) {
+        border-right: none;
+        padding-left: 14px !important;
+      }
+      .kv-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+      .compare-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="layout">
+    <!-- Left Grouped Index -->
+    <aside>
+      <h1 class="brand-title" id="brandTitle">Before You Invest</h1>
+      <p class="brand-sub" id="brandSub" style="margin-bottom:12px;padding-bottom:14px;">13 Indian financial products stripped down to what you own, tax, and the catch.</p>
+      <div class="lang-bar" id="langBar" aria-label="Language selector"></div>
+      <div id="sidebarNav"></div>
+      <div class="sidebar-hint" id="kbHint">Use ↑ / ↓ keys to browse</div>
+      <div class="sidebar-byline">
+        <span id="bylinePrefix">A public utility by</span> <a href="https://dineshpai.in" target="_blank" rel="noopener">Dinesh Pai</a>
+        <span class="byline-links">
+          <a href="https://dineshpai.in" target="_blank" rel="noopener">dineshpai.in</a> · <a href="https://x.com/dineshpaii" target="_blank" rel="noopener">@dineshpaii</a>
+        </span>
+      </div>
+    </aside>
+
+    <!-- Right Swiss Spec Sheet -->
+    <main>
+      <div class="sheet-top">
+        <span class="sheet-kicker" id="sheetKicker">01 / 13 · SPECIFICATION SHEET</span>
+        <div class="compare-bar">
+          <span id="compareWithLabel">Compare with</span>
+          <select class="compare-select" id="compareSelect"></select>
+        </div>
+      </div>
+
+      <div id="sheetContent"></div>
+
+      <div class="sheet-footer">
+        <span class="footer-meta"><span id="footerMetaPrefix">FY 2025–26 Indian Tax Rules · By</span> <a href="https://dineshpai.in" target="_blank" rel="noopener">Dinesh Pai</a> (<a href="https://x.com/dineshpaii" target="_blank" rel="noopener">@dineshpaii</a>)</span>
+        <div class="foot-links">
+          <button type="button" class="text-btn" id="copyLinkBtn">Copy link</button>
+          <button type="button" class="text-btn" id="shareCardBtn">Download spec card (PNG) →</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="i18n.js"></script>
+  <script>
+    const PRODUCTS = [
+      {
+        id: "equity",
+        num: "01",
+        group: "Equity & Funds",
+        tab: "Direct Stocks",
+        name: "Direct Equity (Listed Shares)",
+        what: "Direct fractional ownership in a publicly listed Indian company traded on NSE or BSE.",
+        stats: [
+          { label: "Regulator", val: "SEBI", note: "Held in CDSL / NSDL" },
+          { label: "Short-Term Tax", val: "20%", note: "If sold within 12 months" },
+          { label: "Long-Term Tax", val: "12.5%", note: "After 12m (above ₹1.25L/yr)" },
+          { label: "Day-1 Friction", val: "0.1% STT", note: "Plus stamp duty & DP fee" }
+        ],
+        underlyingRows: [
+          ["What you own", "Electronic equity shares carrying voting and dividend rights in the company."],
+          ["Where it sits", "Directly inside your CDSL or NSDL Demat account—never on your stockbroker's balance sheet."],
+          ["If the platform fails", "If your broker shuts down, your shares remain untouched in CDSL/NSDL and can be moved to another broker."]
+        ],
+        taxRows: [
+          ["Short-Term (< 12 months)", "20% flat tax on profits (Section 111A)."],
+          ["Long-Term (> 12 months)", "12.5% on gains exceeding ₹1.25 Lakh per financial year (Section 112A)."],
+          ["Dividends", "Added to your taxable income and taxed at your full slab rate (up to 30% + surcharge)."],
+          ["Transaction costs", "0.1% Securities Transaction Tax (STT) on both buy and sell delivery, plus stamp duty and ₹15–₹25 DP charge on sell."]
+        ],
+        catchLead: "Outside India's top 100 companies, liquidity vanishes during market crashes—and dividends are taxed at up to 30% even if you never sell.",
+        catchBody: "Most individuals who pick mid- and small-cap stocks from tips underperform a simple Nifty 50 index fund after accounting for 20% short-term tax and STT on frequent churn.",
+        rupeeMath: "Buy & sell ₹1,00,000 of shares in 6 months at a 15% gain (₹15,000) → ~₹260 goes to STT, stamp duty & DP charges, and ₹3,000 goes to 20% STCG tax. You keep ₹11,740.",
+        useIf: "You can read balance sheets, hold through 30%–50% drawdowns for 5+ years, and beat a low-cost Nifty index fund after tax.",
+        avoidIf: "You buy stocks off Telegram or finfluencer tips or trade frequently—a Direct Nifty 50 Index Fund will likely leave you richer."
+      },
+      {
+        id: "equity-mf",
+        num: "02",
+        group: "Equity & Funds",
+        tab: "Equity Mutual Funds",
+        name: "Equity Mutual Funds",
+        what: "A pooled portfolio (index or active) that invests at least 65% of its assets into Indian stocks.",
+        stats: [
+          { label: "Regulator", val: "SEBI", note: "Independent Trustee & Custodian" },
+          { label: "Short-Term Tax", val: "20%", note: "Redeemed within 12 months" },
+          { label: "Long-Term Tax", val: "12.5%", note: "After 12m (above ₹1.25L/yr)" },
+          { label: "Annual Fee", val: "0.1%–2.2%", note: "Direct vs Regular TER" }
+        ],
+        underlyingRows: [
+          ["What you own", "Mutual fund units representing a proportional slice of a basket of 30–80 listed stocks."],
+          ["Where it sits", "Recorded with the Registrar (CAMS / KFintech) or in your Demat; underlying stocks sit with an independent SEBI Custodian."],
+          ["Internal rebalancing", "When the fund manager buys or sells stocks inside the scheme, it triggers 0% capital gains tax for you."]
+        ],
+        taxRows: [
+          ["Short-Term (< 12 months)", "20% flat tax on gains when you redeem units."],
+          ["Long-Term (> 12 months)", "12.5% on gains above ₹1.25 Lakh/yr (combined limit across all stocks and equity MFs)."],
+          ["Regular vs Direct Plan", "Regular plans deduct an extra 0.6% to 1.2% every year from your NAV to pay lifetime trailing commission to your bank or agent."],
+          ["Exit Load", "Typically 1% if redeemed within 12 months; 0% in most index funds after 15–30 days."]
+        ],
+        catchLead: "Buying a 'Regular' plan instead of a 'Direct' plan silently drains 18%–22% of your final wealth over 20 years.",
+        catchBody: "That 1% annual commission is deducted daily from your NAV whether the market goes up or down—and over 70% of active large-cap funds fail to beat a low-cost Nifty 50 Direct Index Fund.",
+        rupeeMath: "₹1,00,000 compounded at 12% for 20 years → Direct Plan (0.2% fee) grows to ₹9,30,500. Regular Plan (1.2% fee) grows to ₹7,68,600. You lose ₹1,61,900 to distributor commissions on every ₹1 Lakh invested.",
+        useIf: "You are investing for 5+ years and want diversified equity compounding—always pick a 'Direct' plan, starting with a low-cost Index Fund.",
+        avoidIf: "You need the money within 1–3 years, or your bank RM is pushing a 'Regular' plan or a trendy thematic/sectoral NFO."
+      },
+      {
+        id: "debt-mf",
+        num: "03",
+        group: "Equity & Funds",
+        tab: "Debt Mutual Funds",
+        name: "Debt Mutual Funds",
+        what: "A pooled fund that lends to the Government of India (G-Secs/T-Bills), banks, or corporates instead of buying stocks.",
+        stats: [
+          { label: "Regulator", val: "SEBI", note: "Mark-to-market daily NAV" },
+          { label: "Short-Term Tax", val: "Slab Rate", note: "Up to 30% + surcharge" },
+          { label: "Long-Term Tax", val: "Slab Rate", note: "Indexation removed (Apr 2023)" },
+          { label: "Tax Timing", val: "On Exit", note: "No annual accrual tax" }
+        ],
+        underlyingRows: [
+          ["What you own", "Units in a tradable basket of Treasury Bills, Government Bonds, Certificates of Deposit, and Corporate Bonds."],
+          ["How NAV moves", "Unlike a Bank FD, the portfolio is valued at live market prices every afternoon—NAV rises when interest rates fall, and drops when rates rise."],
+          ["Safety spectrum", "Overnight & Liquid funds hold 91-day paper (lowest risk); Credit Risk funds buy lower-rated AA/A corporate bonds for extra yield."]
+        ],
+        taxRows: [
+          ["Tax Rate (Post-Apr 2023)", "All gains on debt funds (<35% equity) are taxed at your full income tax slab rate, regardless of how many years you hold."],
+          ["Advantage over Bank FD", "In a Bank FD you pay tax every year on accrued interest; in a Debt MF you pay tax only in the year you redeem."],
+          ["TDS for Residents", "0% TDS on redemption for resident Indians (unlike the 10% annual TDS on Bank FDs)."],
+          ["Expense Ratio", "0.15% to 0.40% in Direct Liquid/Gilt funds; up to 1.2% in Regular corporate debt plans."]
+        ],
+        catchLead: "Debt funds are not Fixed Deposits—if a bond inside the fund defaults, your NAV takes an immediate haircut.",
+        catchSub: "",
+        catchBody: "When IL&FS, DHFL, and Franklin Templeton's credit schemes froze, investors chasing 1% extra return over Liquid/Gilt funds saw their principal locked or written down overnight.",
+        rupeeMath: "₹1,00,000 at 7% for 3 years (30% tax slab) → A Direct Liquid Fund defers tax until redemption (₹1,15,460 post-tax) with 0% annual TDS and 0% premature exit penalty—whereas a Credit Risk fund default can wipe out ₹8,000–₹15,000 in a single day.",
+        useIf: "You are in the 20%–30% tax bracket parking emergency cash or 1–3 year goals—stick strictly to Direct Overnight, Liquid, Money Market, or Gilt funds.",
+        avoidIf: "A debt scheme promises 9%+ yield by holding lower-rated AA/A corporate paper ('Credit Risk' funds)—never take equity risk with your safe money."
+      },
+      {
+        id: "etf",
+        num: "04",
+        group: "Equity & Funds",
+        tab: "ETFs (Equity & Gold)",
+        name: "ETFs (Exchange-Traded Funds)",
+        what: "An index fund (Nifty 50, Physical Gold, Silver, or Nasdaq 100) that trades live on NSE/BSE like a stock.",
+        stats: [
+          { label: "Regulator", val: "SEBI", note: "Requires Demat account" },
+          { label: "Equity ETF Tax", val: "20% / 12.5%", note: "<12m STCG · >12m LTCG" },
+          { label: "Gold ETF Tax", val: "Slab / 12.5%", note: "<12m Slab · >12m LTCG" },
+          { label: "Hidden Cost", val: "iNAV Gap", note: "Exchange bid-ask premium" }
+        ],
+        underlyingRows: [
+          ["What you own", "Exchange-traded units backed by actual index stocks or 99.5% pure physical gold bars vaulted by a SEBI custodian."],
+          ["How pricing works", "Every ETF has two prices: the real-time value of its underlying holdings (iNAV) and the price buyers/sellers quote on NSE/BSE."],
+          ["Gold ETF vs Digital Gold", "A Gold ETF has 0% upfront GST and ~0.5% annual expense, whereas Digital Gold charges 3% GST + 3% spread on Day 1."]
+        ],
+        taxRows: [
+          ["Domestic Equity ETFs", "20% STCG (< 12 months) · 12.5% LTCG above ₹1.25 Lakh (> 12 months)."],
+          ["Listed Gold & Silver ETFs", "Taxed at slab rate if sold within 12 months; taxed at 12.5% LTCG if held over 12 months (updated Budget 2024 rule)."],
+          ["International ETFs", "Taxed at slab rate (< 24 months) · 12.5% LTCG (> 24 months)."],
+          ["Trading friction", "Brokerage + exchange bid-ask spread + AMC expense ratio (0.05% to 0.60%)."]
+        ],
+        catchLead: "On Indian exchanges, an ETF's market price can trade 3% to 15% above the actual value of the assets inside it (iNAV).",
+        catchBody: "When RBI's $7B overseas limit paused new unit creation in International ETFs—or during festive rushes in Gold/Silver ETFs—retail buyers placing Market Orders overpaid by 8%–12% on Day 1. Always check live iNAV and place Limit Orders.",
+        rupeeMath: "Buy ₹1,00,000 of a Gold ETF vs Digital Gold → Gold ETF costs ~₹150 in entry friction and ~₹500/yr in expense ratio. Buying an illiquid ETF at an 8% iNAV premium, however, burns ₹8,000 on Day 1.",
+        useIf: "You have a Demat account, want the cheapest regulated exposure to Gold/Silver or Nifty 50, and always check live iNAV before placing a Limit Order.",
+        avoidIf: "You want hands-free automated monthly SIPs without checking exchange liquidity—use a Direct Index Mutual Fund instead."
+      },
+      {
+        id: "fd",
+        num: "05",
+        group: "Fixed Income & Retirement",
+        tab: "Bank Fixed Deposits",
+        name: "Bank Fixed Deposits (FDs)",
+        what: "A fixed-interest loan you give to a commercial or Small Finance Bank for a set tenure (7 days to 10 years).",
+        stats: [
+          { label: "Regulator", val: "RBI", note: "DICGC cover up to ₹5 Lakh" },
+          { label: "Tax Rate", val: "Slab Rate", note: "Up to 30% + surcharge" },
+          { label: "Tax Timing", val: "Every Year", note: "Taxed on accrual before maturity" },
+          { label: "Early Exit", val: "0.5%–1% Cut", note: "Premature breaking penalty" }
+        ],
+        underlyingRows: [
+          ["What you own", "An unsecured deposit claim on the bank's balance sheet."],
+          ["Deposit Insurance", "Insured by RBI's DICGC up to a combined ceiling of ₹5 Lakh (principal + interest) per depositor, per bank."],
+          ["Small Finance / Co-op Banks", "Covered by the same ₹5 Lakh DICGC limit, even when advertising 8.5%–9.25% rates."]
+        ],
+        taxRows: [
+          ["Interest Taxation", "100% taxed as 'Income from Other Sources' at your full income tax slab rate."],
+          ["The Accrual Trap", "Even in a 5-year Cumulative FD where you receive zero cash until year 5, tax is payable every single March on accrued interest."],
+          ["TDS Deduction", "Banks deduct 10% TDS once annual interest across branches exceeds ₹50,000 (₹1 Lakh for senior citizens)."],
+          ["Post-tax reality", "At the 30% tax slab, a 7.00% Bank FD yields just 4.82% net of tax."]
+        ],
+        catchLead: "At the 30% tax slab, a 7% FD nets 4.8% after tax—quietly losing purchasing power to inflation every year.",
+        catchBody: "And if you park ₹25 Lakh in a weak cooperative or small bank chasing 9% interest, ₹20 Lakh of your principal has zero DICGC insurance if the RBI places the bank under a moratorium.",
+        rupeeMath: "₹1,00,000 in a 7.0% FD (30% tax slab) → Earns ₹7,000 interest minus ₹2,184 tax = ₹1,04,816 at year-end. At 5.5% inflation, you need ₹1,05,500 just to stand still—losing ₹684 in real purchasing power.",
+        useIf: "You or your retired parents are in the 0%–10% income tax slab, or you are parking an emergency buffer (under ₹5 Lakh per bank) in a top-tier bank.",
+        avoidIf: "You are in the 30% tax bracket compounding 5–10 year money, or parking >₹5 Lakh in a cooperative or small bank for an extra 1.5% yield."
+      },
+      {
+        id: "bonds",
+        num: "06",
+        group: "Fixed Income & Retirement",
+        tab: "Corporate Bonds",
+        name: "Corporate Bonds & NCDs",
+        what: "Debt IOUs issued directly by NBFCs or private companies promising 9%–12% fixed interest.",
+        stats: [
+          { label: "Regulator", val: "SEBI (OBPP)", note: "No principal guarantee" },
+          { label: "Interest Tax", val: "Slab Rate", note: "10% TDS on all listed bonds" },
+          { label: "LTCG (Sale)", val: "12.5%", note: "Listed bonds held > 12m" },
+          { label: "Default Risk", val: "100% Loss", note: "If issuer NBFC fails" }
+        ],
+        underlyingRows: [
+          ["What you own", "Senior secured, subordinated, or unsecured Non-Convertible Debentures (NCDs) held in your Demat account."],
+          ["Who backs it", "Only the issuing company's cash flows and pledged receivables. SEBI regulates the online bond platform, not the borrower's solvency."],
+          ["Liquidity", "Secondary market volume for retail bond lots on NSE/BSE is extremely thin."]
+        ],
+        taxRows: [
+          ["Coupon / Interest", "Taxed at your full income tax slab rate; 10% TDS is deducted on all listed bond interest payouts."],
+          ["Selling Before Maturity", "Listed bonds held > 12 months: 12.5% LTCG; sold within 12 months: taxed at slab rate."],
+          ["Unlisted Bonds", "All gains taxed at slab rate regardless of holding period."],
+          ["Hidden platform spread", "Online bond portals typically buy wholesale lots and mark up the price by 0.5%–1.5% before selling to retail investors."]
+        ],
+        catchLead: "Capped upside, 100% downside: you take equity-like wipeout risk just to earn 2%–3% extra over a Bank FD.",
+        catchBody: "In a stock portfolio, one multi-bagger covers five losers. In high-yield BBB/A-rated NBFC bonds, your best-case upside is 11% taxed at 30%, while a single default wipes out 100% of your capital.",
+        rupeeMath: "₹1,00,000 in an 11% NBFC bond (30% tax slab) → Nets ₹7,568/yr after tax—only ₹2,752/yr more than a safe 7% SBI/HDFC FD—while risking all ₹1,00,000 if the NBFC defaults.",
+        useIf: "You restrict yourself to AAA-rated PSU/blue-chip bonds held till maturity and understand that you cannot easily exit early on the exchange.",
+        avoidIf: "An online bond portal pitches '11%–13% fixed returns' as a 'safe FD alternative'—high yield in fixed income always means high default risk."
+      },
+      {
+        id: "nps-epf",
+        num: "07",
+        group: "Fixed Income & Retirement",
+        tab: "NPS, EPF & PPF",
+        name: "NPS, EPF & PPF (Retirement Funds)",
+        what: "Statutory long-term retirement accounts offering tax deductions and sovereign or pension-regulated compounding.",
+        stats: [
+          { label: "Regulator", val: "PFRDA / EPFO", note: "Govt of India / Statutory" },
+          { label: "PPF Tax", val: "0% (EEE)", note: "Up to ₹1.5L/yr deposit" },
+          { label: "EPF Tax Cap", val: "₹2.5L / yr", note: "Interest above cap taxed" },
+          { label: "NPS Lock-in", val: "Till Age 60", note: "40% forced taxable annuity" }
+        ],
+        underlyingRows: [
+          ["PPF Underlying", "100% Sovereign-backed fixed rate (currently 7.1% p.a.), reset quarterly by the Ministry of Finance."],
+          ["EPF Underlying", "85% invested in Government & AAA bonds + 15% in Nifty/Sensex ETFs managed by EPFO."],
+          ["NPS Underlying", "Market-linked units across Equity (up to 75%), Corporate Bonds, and G-Secs managed by PFRDA pension funds."]
+        ],
+        taxRows: [
+          ["PPF", "Completely tax-free at contribution, accrual, and 15-year maturity (Exempt-Exempt-Exempt)."],
+          ["EPF", "Interest earned on employee contributions exceeding ₹2.5 Lakh per year is taxed at your slab rate."],
+          ["NPS Maturity (Age 60)", "60% of the corpus can be withdrawn tax-free; the remaining 40% must mandatorily purchase an insurance annuity."],
+          ["NPS Annuity Pension", "The monthly pension paid out by that mandatory 40% annuity is taxed at your full income tax slab rate."]
+        ],
+        catchLead: "NPS locks your money until age 60 and forces 40% of your life savings into a low-yield, fully taxable annuity.",
+        catchBody: "Indian annuity plans typically yield 5.5%–6.5% pre-tax with zero inflation protection. And for EPF, a minor employer record mismatch on the EPFO portal can delay withdrawals by months.",
+        rupeeMath: "Every ₹1,00,000 of final NPS corpus at age 60 → ₹60,000 is paid out tax-free, while ₹40,000 is locked forever into an insurance annuity paying ~₹200/month (fully taxable at your slab rate).",
+        useIf: "You want sovereign-guaranteed tax-free debt compounding (PPF/EPF up to ₹2.5L/yr) or Employer NPS tax deduction under Section 80CCD(2).",
+        avoidIf: "You plan to retire before 60, want full control over your retirement corpus, or dislike forced low-yield annuities."
+      },
+      {
+        id: "reits",
+        num: "08",
+        group: "Fixed Income & Retirement",
+        tab: "REITs & InvITs",
+        name: "REITs & InvITs",
+        what: "Exchange-listed trusts that own Grade-A office parks (REITs) or power grids/highways (InvITs) and must distribute 90%+ of net cash flow.",
+        stats: [
+          { label: "Regulator", val: "SEBI", note: "Listed on NSE / BSE" },
+          { label: "Interest Payout", val: "Slab Rate", note: "10% TDS deducted" },
+          { label: "Capital Gains", val: "20% / 12.5%", note: "<12m STCG · >12m LTCG" },
+          { label: "ITR Complexity", val: "3 Buckets", note: "Interest · Dividend · Debt" }
+        ],
+        underlyingRows: [
+          ["What you own", "Demat units in a SEBI-registered trust holding Special Purpose Vehicles (SPVs) that own leased office towers, transmission lines, or toll roads."],
+          ["Mandated payout", "By law, at least 90% of net distributable cash flow must be paid out to unitholders every quarter or half-year."],
+          ["Price sensitivity", "Unit prices behave like long-term bonds + commercial real estate: they fall when interest rates rise or office vacancies increase."]
+        ],
+        taxRows: [
+          ["Component 1: Interest", "Taxed at your full income tax slab rate (10% TDS deducted at source). Usually forms the largest chunk of the payout."],
+          ["Component 2: Dividend", "Tax-free only if the underlying SPV stayed in the old corporate tax regime; otherwise taxed at your slab rate."],
+          ["Component 3: Debt Amortisation", "Treated as return of capital—reduces your acquisition cost for future capital gains calculation."],
+          ["Selling Units on Exchange", "Held > 12 months: 12.5% LTCG above ₹1.25L · Sold within 12 months: 20% STCG."]
+        ],
+        catchLead: "Pitched as a 'tax-friendly 7–8% rental yield,' but most of the quarterly distribution is interest taxed at your 30% slab rate.",
+        catchBody: "In addition, every quarterly payout has to be manually split across three different tax schedules in your ITR based on the trust's annual tax breakdown certificate.",
+        rupeeMath: "₹1,00,000 paying a 7.5% distribution (₹7,500/yr) → If 70% of the payout is SPV interest, a 30%-slab investor loses ~₹1,640 to tax, netting ~₹5,860/yr (5.86%) plus exchange price fluctuations.",
+        useIf: "You want Grade-A commercial property cash flows in ₹500 Demat units instead of locking ₹2 Crore into an illiquid physical property.",
+        avoidIf: "You think it is a fixed-return instrument or don't want to reconcile 3 separate tax buckets (Interest, Dividend, Capital Reduction) in your ITR."
+      },
+      {
+        id: "gold",
+        num: "09",
+        group: "Gold",
+        tab: "Physical Gold & SGB",
+        name: "Physical Gold & Sovereign Gold Bonds",
+        what: "24K/22K bullion in your possession or RBI-issued Sovereign Gold Bonds (SGBs) linked to 999 purity gold.",
+        stats: [
+          { label: "Regulator", val: "RBI / BIS", note: "Sovereign (SGB) / Hallmarked" },
+          { label: "Physical Tax", val: "Slab / 12.5%", note: "<24m Slab · >24m LTCG" },
+          { label: "SGB Maturity", val: "0% Tax", note: "If held to 8-yr RBI maturity" },
+          { label: "Jewellery Cost", val: "15%–22%", note: "3% GST + making charges" }
+        ],
+        underlyingRows: [
+          ["Physical Bullion", "Coins, bars, or jewellery held personally; carries 3% GST on purchase plus making and melting deductions."],
+          ["Sovereign Gold Bonds", "Direct Government of India obligation denominated in grams of gold, paying 2.5% p.a. cash interest plus gold price appreciation."],
+          ["SGB New Issues", "The government has paused fresh SGB issuances because they became an expensive sovereign liability; only secondary-market units trade on NSE/BSE."]
+        ],
+        taxRows: [
+          ["Physical Gold (< 24 months)", "Gains added to income and taxed at your slab rate."],
+          ["Physical Gold (> 24 months)", "12.5% LTCG without indexation (reduced from 20% and 36-month period in Budget 2024)."],
+          ["SGB Redemption with RBI", "100% exempt from Capital Gains Tax on 8-year maturity (or RBI early redemption window after year 5)."],
+          ["SGB 2.5% Annual Interest", "Always taxed at your income tax slab rate."]
+        ],
+        catchLead: "Jewellery loses 15%–20% on Day 1 to making charges and GST—while secondary-market SGBs now trade at a steep premium above spot gold.",
+        catchBody: "Because no new SGBs are being issued, SGB series on the stock exchange frequently trade 5%–10% higher than actual gold value—wiping out much of the tax-free maturity benefit if you buy them at inflated prices.",
+        rupeeMath: "Spend ₹1,00,000 on gold jewellery → ~₹14,000 goes to making charges and ₹3,000 to GST. Walk back to the jeweller the same afternoon and your resale value is ~₹83,000.",
+        useIf: "You are buying jewellery purely to wear, or buying secondary-market SGBs only when their NSE price is close to RBI's reference gold price.",
+        avoidIf: "You are buying jewellery or bank gold coins as an 'investment'—use a SEBI-regulated Gold ETF and save 15%–20% in friction."
+      },
+      {
+        id: "digital-gold",
+        num: "10",
+        group: "Gold",
+        tab: "Digital Gold",
+        name: "Digital Gold (Payment & Fintech Apps)",
+        what: "Fractional 24K gold bought from ₹100 upward on consumer apps, backed by gold stored in a private dealer's vault.",
+        stats: [
+          { label: "Regulator", val: "None", note: "Neither SEBI nor RBI" },
+          { label: "Day-1 Loss", val: "~5.5%–6%", note: "3% GST + ~3% spread" },
+          { label: "Long-Term Tax", val: "12.5%", note: "Only after 24 months" },
+          { label: "Vault Tenure", val: "5 Years Max", note: "Forced delivery / fee after" }
+        ],
+        underlyingRows: [
+          ["What you own", "An unregulated bilateral contract with a private bullion company (MMTC-PAMP, SafeGold, or Augmont) for pooled vault gold."],
+          ["Regulatory status", "Zero SEBI or RBI oversight. SEBI explicitly prohibited stockbrokers from selling Digital Gold because it is not a regulated security."],
+          ["Custody risk", "While an independent trustee is appointed to oversee the vault, you have no statutory investor protection fund if a dispute arises."]
+        ],
+        taxRows: [
+          ["Upfront GST", "3% GST deducted immediately on every rupee you invest."],
+          ["Buy-Sell Spread", "Apps quote a 'Buy' price that is 2.5% to 3.5% higher than their simultaneous 'Sell' price."],
+          ["Capital Gains", "Taxed identical to physical gold: slab rate (< 24 months) · 12.5% LTCG (> 24 months)."],
+          ["Forced conversion", "After 5 years, most providers either charge recurring storage fees or force you to pay minting + shipping charges for physical coins."]
+        ],
+        catchLead: "You lose ~6% the moment you tap 'Buy' (3% GST + 3% spread) on an unregulated product.",
+        catchBody: "If you buy ₹1,00,000 of Digital Gold at 10:00 AM and sell it at 10:01 AM, you get back roughly ₹94,000. A SEBI-regulated Gold ETF gives you the exact same gold exposure without the 3% GST or 3% spread.",
+        rupeeMath: "Tap 'Buy ₹1,00,000' at 10:00 AM → ₹2,913 vanishes immediately to 3% GST and ~₹3,000 vanishes to the buy-sell spread. Tap 'Sell' at 10:01 AM and you get back ~₹94,100.",
+        useIf: "You are buying ₹100–₹500 as a token festival gift and do not have a Demat or Mutual Fund account.",
+        avoidIf: "You are investing meaningful money into gold—buy a Gold ETF or Gold Mutual Fund instead and keep your 6%."
+      },
+      {
+        id: "ulip",
+        num: "11",
+        group: "Bundled & Speculative",
+        tab: "ULIP & Endowment",
+        name: "ULIPs & Traditional Endowment Plans",
+        what: "Bundled insurance-cum-investment policies sold by banks and agents promising life cover plus 'guaranteed' or market payouts.",
+        stats: [
+          { label: "Regulator", val: "IRDAI", note: "Insurance contract" },
+          { label: "Actual Return", val: "4.5%–5.5%", note: "Typical Endowment XIRR" },
+          { label: "Lock-in", val: "5 Years", note: "Heavy surrender penalty" },
+          { label: "Tax Free Cap", val: "₹2.5L / ₹5L", note: "ULIP / Endowment annual cap" }
+        ],
+        underlyingRows: [
+          ["What you own", "A complex insurance policy where your premium first pays agent commissions, mortality charges, and policy admin fees before the balance is invested."],
+          ["Why banks push it", "First-year distributor commissions on traditional insurance plans can run from 15% to 35% of your premium—compared to 0% on a Direct Mutual Fund."],
+          ["Life cover reality", "The life cover is usually 10x annual premium—far too small to protect a family compared to a pure Term Insurance plan."]
+        ],
+        taxRows: [
+          ["ULIPs (Premium ≤ ₹2.5L/yr)", "Maturity proceeds are tax-free under Section 10(10D) after the mandatory 5-year lock-in."],
+          ["ULIPs (Premium > ₹2.5L/yr)", "Treated as capital gains and taxed at 12.5% LTCG (> 12 months)."],
+          ["Traditional Plans (Post-Apr 2023)", "Maturity payout is taxed at your full slab rate if aggregate annual premiums exceed ₹5 Lakh/year."],
+          ["Surrender Penalty", "Stopping a traditional policy in Year 2 or 3 typically forfeits 30% to 70% of premiums paid."]
+        ],
+        catchLead: "Traditional 'guaranteed / money-back' plans deliver an actual return (XIRR) of just 4.8% to 5.5%—lower than a Government Bond.",
+        catchBody: "Brochures hide this by quoting distant lump sums ('Pay ₹1L/yr for 10 years, get ₹22L in year 20' = 5.1% IRR). Mixing insurance and investment gives you terrible insurance and mediocre returns.",
+        rupeeMath: "Pay ₹1,00,000/yr for 10 years (₹10L total) for a 'Guaranteed ₹22L in Year 20' → Sounds like your money more than doubled, but 5.1% XIRR loses to inflation—whereas ₹1L/yr in a Nifty Index Fund at 12% grows to ~₹46 Lakh.",
+        useIf: "Almost never—keep your life insurance and your investments strictly separate.",
+        avoidIf: "A bank RM or family uncle pitches a 'tax-saving guaranteed child/retirement plan'—buy pure Term Insurance + a Direct Mutual Fund instead."
+      },
+      {
+        id: "fno",
+        num: "12",
+        group: "Bundled & Speculative",
+        tab: "Futures & Options",
+        name: "Futures & Options (Equity Derivatives)",
+        what: "Leveraged contracts betting on where an index (Nifty/Sensex) or stock will trade by a weekly or monthly expiry.",
+        stats: [
+          { label: "Regulator", val: "SEBI", note: "Margin & expiry settled" },
+          { label: "Tax Rate", val: "Slab Rate", note: "Business Income (ITR-3)" },
+          { label: "Retail Win Rate", val: "7%", note: "93% lose money (SEBI study)" },
+          { label: "Trade Cost", val: "High STT", note: "0.1% option sale STT + fees" }
+        ],
+        underlyingRows: [
+          ["What you own", "Zero ownership in any business—you hold a decaying time contract settled in cash (indices) or physical delivery (stocks)."],
+          ["Leverage & Time Decay", "Option buyers lose value every single hour to time decay (theta) if the index doesn't move fast enough; option sellers face uncapped tail-risk on gap openings."],
+          ["Zero-Sum Structure", "Every rupee won by one trader (primarily institutional high-frequency algorithms) comes directly from another trader's account, minus exchange fees and taxes."]
+        ],
+        taxRows: [
+          ["Tax Classification", "Taxed as Non-Speculative Business Income at your full slab rate—requires filing ITR-3."],
+          ["Tax Audit Trigger", "Declaring F&O losses or crossing turnover thresholds frequently requires a Chartered Accountant tax audit under Section 44AB."],
+          ["Transaction Taxes", "STT was hiked in Budget 2024 to 0.1% on option premium sale and 0.02% on futures, charged on every single trade even when you lose money over the year."],
+          ["Loss Set-Off", "F&O losses can only be set off against business/other income (never against salary income)."]
+        ],
+        catchLead: "SEBI's audit of 1+ crore Indian accounts proved that 93% of individual F&O traders lost money, averaging ₹2 Lakh in net losses.",
+        catchBody: "Across active retail traders, transaction charges and STT alone eat up 25% to 50% of deployed capital over a year.",
+        rupeeMath: "Put ₹1,00,000 into active weekly option trading → Statistically, 93 out of 100 retail traders lose principal, while paying ₹25,000–₹50,000 in cumulative STT, brokerage, and exchange fees over the year.",
+        useIf: "You are hedging an existing large equity portfolio or operating institutional-grade risk infrastructure.",
+        avoidIf: "You are buying weekly Nifty/BankNifty options hoping to generate 'monthly income' from a small capital base."
+      },
+      {
+        id: "crypto",
+        num: "13",
+        group: "Bundled & Speculative",
+        tab: "Crypto (VDAs)",
+        name: "Crypto (Virtual Digital Assets / VDAs)",
+        what: "Blockchain tokens (Bitcoin, Ethereum, stablecoins, altcoins) traded on crypto exchanges or held in self-custody wallets.",
+        stats: [
+          { label: "Regulator", val: "None", note: "FIU-IND is AML only" },
+          { label: "Tax Rate", val: "31.2% Flat", note: "30% + 4% cess (Sec 115BBH)" },
+          { label: "Loss Set-Off", val: "0% Allowed", note: "Cannot offset coin losses" },
+          { label: "Per-Trade TDS", val: "1% Gross", note: "Deducted on every sale" }
+        ],
+        underlyingRows: [
+          ["What you own", "Entries on a public blockchain—or, if kept on an Indian exchange, an unsecured IOU from that exchange."],
+          ["What 'FIU Registered' means", "Exchanges advertise 'FIU-IND Registered,' which only means they report transactions for anti-money-laundering. Neither SEBI nor RBI regulates or insures your custody."],
+          ["Platform Custody Risk", "Most Indian exchanges disable external crypto withdrawals; if the exchange is hacked, your funds are frozen inside platform restructuring."]
+        ],
+        taxRows: [
+          ["Flat 30% Tax (Sec 115BBH)", "30% tax + 4% cess (31.2%) on every profitable trade—whether held for 3 minutes or 5 years."],
+          ["Zero Loss Offset", "Losses on Coin A cannot be deducted against profits on Coin B, nor carried forward to next year."],
+          ["1% TDS (Sec 194S)", "1% of the entire sale value (not just profit) is locked as TDS on every sell order."],
+          ["No Expense Deduction", "Trading fees, gas fees, and platform charges cannot be deducted from your taxable gain."]
+        ],
+        catchLead: "If you make ₹1 Lakh on Bitcoin and lose ₹1 Lakh on Ethereum, your net profit is ₹0—but by Indian law you still owe ₹31,200 in tax.",
+        catchBody: "Combine punitive asymmetrical taxation with zero custody insurance on Indian exchanges (as seen in the $230M WazirX hack), and you bear 100% of the downside while sharing 31.2% of every winning trade with the taxman.",
+        rupeeMath: "Make ₹50,000 on Coin A and lose ₹50,000 on Coin B with ₹1,00,000 capital → Your net gain is ₹0, 1% TDS is locked on every sale, and you still owe ₹15,600 in tax under Section 115BBH.",
+        useIf: "You allocate 1%–5% of net worth as long-term risk capital and understand self-custody vs unsecured Indian exchange balances.",
+        avoidIf: "You trade across multiple altcoins—31.2% tax on wins with 0% deduction on losses mathematically wipes out active traders."
+      }
+    ];
+
+    const GROUPS = [
+      "Equity & Funds",
+      "Fixed Income & Retirement",
+      "Gold",
+      "Bundled & Speculative"
+    ];
+
+    const POPULAR_PAIRS = [
+      { label: "Preset: Gold ETF vs Digital Gold", a: "etf", b: "digital-gold" },
+      { label: "Preset: Equity MF vs ULIP / Endowment", a: "equity-mf", b: "ulip" },
+      { label: "Preset: Bank FD vs Debt MF", a: "fd", b: "debt-mf" },
+      { label: "Preset: Bank FD vs Corporate Bonds", a: "fd", b: "bonds" },
+      { label: "Preset: Direct Stocks vs F&O", a: "equity", b: "fno" }
+    ];
+
+    let primaryId = "equity";
+    let compareId = "";
+    let currentLang = localStorage.getItem("byi_lang") || "en";
+    if (!window.I18N || !window.I18N.ui[currentLang]) currentLang = "en";
+
+    // Per-product calculator state (persists while browsing/switching languages)
+    const calcState = {};
+
+    function getUI() {
+      return (window.I18N && window.I18N.ui[currentLang]) || window.I18N.ui.en;
+    }
+
+    function getCalcConfig(id) {
+      return window.I18N && window.I18N.calculators && window.I18N.calculators[id];
+    }
+
+    function getCalcValues(id) {
+      const cfg = getCalcConfig(id);
+      if (!cfg) return {};
+      if (!calcState[id]) {
+        calcState[id] = {};
+        cfg.inputs.forEach(inp => {
+          calcState[id][inp.key] = inp.defaultVal;
+        });
+      }
+      return calcState[id];
+    }
+
+    function computeLiveMath(id, lang) {
+      const cfg = getCalcConfig(id);
+      const base = PRODUCTS.find(p => p.id === id);
+      if (!cfg) return base ? base.rupeeMath : "";
+      return cfg.compute(getCalcValues(id), lang || currentLang);
+    }
+
+    function getById(id) {
+      const base = PRODUCTS.find(p => p.id === id);
+      if (!base) return null;
+      const ui = getUI();
+      const tr = (currentLang !== "en" && window.I18N && window.I18N.products[currentLang] && window.I18N.products[currentLang][id]) || null;
+      const merged = tr ? Object.assign({}, base, tr) : Object.assign({}, base);
+      merged.groupLabel = (ui.groups && ui.groups[base.group]) || base.group;
+      merged.liveRupeeMath = computeLiveMath(id, currentLang);
+      return merged;
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById("toast");
+      t.textContent = msg;
+      t.classList.add("show");
+      setTimeout(() => t.classList.remove("show"), 1800);
+    }
+
+    function syncFromHash() {
+      const raw = window.location.hash.replace(/^#/, "").trim();
+      if (!raw) return;
+      const parts = raw.split("?");
+      const route = parts[0];
+      if (parts[1]) {
+        const params = new URLSearchParams(parts[1]);
+        const l = params.get("lang");
+        if (l && window.I18N && window.I18N.ui[l]) {
+          currentLang = l;
+          localStorage.setItem("byi_lang", currentLang);
+        }
+      }
+      if (route.includes("-vs-")) {
+        const [a, b] = route.split("-vs-");
+        if (PRODUCTS.some(p => p.id === a)) primaryId = a;
+        if (PRODUCTS.some(p => p.id === b) && a !== b) compareId = b;
+      } else if (PRODUCTS.some(p => p.id === route)) {
+        primaryId = route;
+        compareId = "";
+      }
+    }
+
+    function updateHash() {
+      const base = compareId ? `${primaryId}-vs-${compareId}` : primaryId;
+      const langSuffix = currentLang !== "en" ? `?lang=${currentLang}` : "";
+      history.replaceState(null, "", `#${base}${langSuffix}`);
+    }
+
+    function renderLangBar() {
+      const bar = document.getElementById("langBar");
+      if (!bar || !window.I18N) return;
+      bar.innerHTML = window.I18N.langs.map(l => `
+        <button type="button" class="lang-btn ${l.code === currentLang ? 'active' : ''}" data-lang="${l.code}" title="${l.native}">
+          ${l.label}
+        </button>
+      `).join("");
+
+      bar.querySelectorAll(".lang-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          currentLang = btn.dataset.lang;
+          localStorage.setItem("byi_lang", currentLang);
+          document.documentElement.lang = currentLang;
+          updateHash();
+          render();
+        });
+      });
+    }
+
+    function renderSidebar(activeId) {
+      const ui = getUI();
+      const container = document.getElementById("sidebarNav");
+      container.innerHTML = GROUPS.map(g => {
+        const items = PRODUCTS.filter(p => p.group === g).map(p => getById(p.id));
+        const gLabel = (ui.groups && ui.groups[g]) || g;
+        return `
+          <div class="nav-group">
+            <div class="nav-group-label">${gLabel}</div>
+            <div class="nav-list">
+              ${items.map(p => `
+                <button type="button" class="nav-item ${p.id === activeId ? 'active' : ''}" data-id="${p.id}">
+                  <span class="nav-num">${p.num}</span>
+                  <span>${p.tab}</span>
+                </button>
+              `).join("")}
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      container.querySelectorAll(".nav-item").forEach(btn => {
+        btn.addEventListener("click", () => {
+          primaryId = btn.dataset.id;
+          if (compareId === primaryId) compareId = "";
+          updateHash();
+          render();
+        });
+      });
+    }
+
+    function renderCalculatorHtml(p, isCompact) {
+      const ui = getUI();
+      const cfg = getCalcConfig(p.id);
+      const vals = getCalcValues(p.id);
+      if (!cfg) {
+        return `
+          <div class="rupee-check">
+            <div class="rupee-tag">${ui.calcTitle}</div>
+            <div class="rupee-text">${p.liveRupeeMath}</div>
+          </div>
+        `;
+      }
+      return `
+        <div class="calc-wrap">
+          <div class="calc-top">
+            <div class="rupee-tag">${ui.calcTitle}</div>
+          </div>
+          <div class="calc-inputs" style="${isCompact ? 'grid-template-columns:1fr;gap:8px;' : ''}">
+            ${cfg.inputs.map(inp => {
+              const lbl = (inp.label && (inp.label[currentLang] || inp.label.en)) || inp.key;
+              const val = vals[inp.key];
+              return `
+                <label class="calc-field">
+                  <span>${lbl}</span>
+                  <input
+                    type="number"
+                    class="calc-input"
+                    data-pid="${p.id}"
+                    data-key="${inp.key}"
+                    min="${inp.min}"
+                    max="${inp.max}"
+                    step="${inp.step}"
+                    value="${val}"
+                  />
+                </label>
+              `;
+            }).join("")}
+          </div>
+          <div class="rupee-text" id="calcOut-${p.id}" style="${isCompact ? 'font-size:13px;' : ''}">${p.liveRupeeMath}</div>
+        </div>
+      `;
+    }
+
+    function bindCalculatorInputs(container) {
+      container.querySelectorAll(".calc-input").forEach(input => {
+        input.addEventListener("input", () => {
+          const pid = input.dataset.pid;
+          const key = input.dataset.key;
+          const raw = parseFloat(input.value);
+          if (!Number.isFinite(raw)) return;
+          const vals = getCalcValues(pid);
+          vals[key] = raw;
+          const outEl = container.querySelector(`#calcOut-${pid}`);
+          if (outEl) {
+            outEl.textContent = computeLiveMath(pid, currentLang);
+          }
+        });
+      });
+    }
+
+    function renderSingle(p) {
+      const ui = getUI();
+      return `
+        <div class="title-block">
+          <h2 class="product-title">${p.name}</h2>
+          <p class="product-what">${p.what}</p>
+        </div>
+
+        <div class="stat-strip">
+          ${p.stats.map(s => `
+            <div class="stat-cell">
+              <div class="stat-label">${s.label}</div>
+              <div class="stat-val">${s.val}</div>
+              <div class="stat-note">${s.note}</div>
+            </div>
+          `).join("")}
+        </div>
+
+        <section class="spec-section">
+          <div class="section-head">${ui.sec1}</div>
+          <div class="kv-table">
+            ${p.underlyingRows.map(([k, v]) => `
+              <div class="kv-row">
+                <div class="kv-key">${k}</div>
+                <div class="kv-val">${v}</div>
+              </div>
+            `).join("")}
+          </div>
+        </section>
+
+        <section class="spec-section">
+          <div class="section-head">${ui.sec2}</div>
+          <div class="kv-table">
+            ${p.taxRows.map(([k, v]) => `
+              <div class="kv-row">
+                <div class="kv-key">${k}</div>
+                <div class="kv-val">${v}</div>
+              </div>
+            `).join("")}
+          </div>
+        </section>
+
+        <section class="catch-box">
+          <div class="catch-label">${ui.sec3}</div>
+          <p class="catch-lead">${p.catchLead}</p>
+          <p class="catch-body">${p.catchBody}</p>
+          ${renderCalculatorHtml(p, false)}
+        </section>
+
+        <section class="spec-section" style="border-bottom:none;padding-bottom:6px;">
+          <div class="section-head">${ui.sec4}</div>
+          <div class="kv-table">
+            <div class="kv-row">
+              <div class="kv-key">${ui.useIfKey}</div>
+              <div class="kv-val">${p.useIf}</div>
+            </div>
+            <div class="kv-row">
+              <div class="kv-key">${ui.avoidIfKey}</div>
+              <div class="kv-val">${p.avoidIf}</div>
+            </div>
+          </div>
+        </section>
+      `;
+    }
+
+    function renderComparison(p1, p2) {
+      const ui = getUI();
+      function colHtml(p) {
+        return `
+          <div>
+            <h2 class="compare-col-title">${p.name}</h2>
+            <p class="product-what" style="font-size:15.5px;min-height:46px;">${p.what}</p>
+
+            <div class="compare-stat-grid">
+              ${p.stats.map(s => `
+                <div>
+                  <div class="stat-label">${s.label}</div>
+                  <div class="stat-val" style="font-size:18px;">${s.val}</div>
+                  <div class="stat-note">${s.note}</div>
+                </div>
+              `).join("")}
+            </div>
+
+            <div class="spec-section" style="padding:18px 0;">
+              <div class="section-head">${ui.sec1Short}</div>
+              <div class="kv-table">
+                ${p.underlyingRows.map(([k, v]) => `
+                  <div class="kv-row" style="grid-template-columns:1fr;gap:2px;padding:8px 0;">
+                    <div class="kv-key">${k}</div>
+                    <div class="kv-val" style="font-size:13.5px;">${v}</div>
+                  </div>
+                `).join("")}
+              </div>
+            </div>
+
+            <div class="spec-section" style="padding:18px 0;">
+              <div class="section-head">${ui.sec2Short}</div>
+              <div class="kv-table">
+                ${p.taxRows.map(([k, v]) => `
+                  <div class="kv-row" style="grid-template-columns:1fr;gap:2px;padding:8px 0;">
+                    <div class="kv-key">${k}</div>
+                    <div class="kv-val" style="font-size:13.5px;">${v}</div>
+                  </div>
+                `).join("")}
+              </div>
+            </div>
+
+            <div class="catch-box" style="margin-top:18px;padding:18px 20px;">
+              <div class="catch-label">${ui.sec3}</div>
+              <p class="catch-lead" style="font-size:17.5px;">${p.catchLead}</p>
+              <p class="catch-body" style="font-size:13.5px;">${p.catchBody}</p>
+              ${renderCalculatorHtml(p, true)}
+            </div>
+
+            <div class="spec-section" style="padding:18px 0 4px;border-bottom:none;">
+              <div class="section-head">${ui.sec4}</div>
+              <div class="kv-table">
+                <div class="kv-row" style="grid-template-columns:1fr;gap:2px;padding:8px 0;">
+                  <div class="kv-key">${ui.useIfKey}</div>
+                  <div class="kv-val" style="font-size:13.5px;">${p.useIf}</div>
+                </div>
+                <div class="kv-row" style="grid-template-columns:1fr;gap:2px;padding:8px 0;">
+                  <div class="kv-key">${ui.avoidIfKey}</div>
+                  <div class="kv-val" style="font-size:13.5px;">${p.avoidIf}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      return `
+        <div class="compare-grid" style="padding-top:20px;">
+          ${colHtml(p1)}
+          ${colHtml(p2)}
+        </div>
+      `;
+    }
+
+    function render() {
+      const ui = getUI();
+      document.documentElement.lang = currentLang;
+
+      // Update static UI labels
+      document.getElementById("brandTitle").textContent = ui.brandTitle;
+      document.getElementById("brandSub").textContent = ui.brandSub;
+      document.getElementById("kbHint").textContent = ui.kbHint;
+      document.getElementById("bylinePrefix").textContent = ui.bylinePrefix;
+      document.getElementById("compareWithLabel").textContent = ui.compareWith;
+      document.getElementById("footerMetaPrefix").textContent = ui.footerMeta;
+      document.getElementById("copyLinkBtn").textContent = ui.copyLink;
+      document.getElementById("shareCardBtn").textContent = ui.downloadPng;
+
+      renderLangBar();
+
+      const p1 = getById(primaryId) || getById(PRODUCTS[0].id);
+      const p2 = compareId && compareId !== primaryId ? getById(compareId) : null;
+
+      renderSidebar(p1.id);
+
+      document.getElementById("sheetKicker").textContent = p2
+        ? `${ui.sideBySide}  ·  ${p1.num} VS ${p2.num}`
+        : `${p1.num} / 13  ·  ${p1.groupLabel.toUpperCase()}`;
+
+      const select = document.getElementById("compareSelect");
+      select.innerHTML =
+        `<option value="">${ui.noneSingle}</option>` +
+        `<optgroup label="${ui.compareOptGroup}">` +
+        PRODUCTS.filter(p => p.id !== p1.id).map(rawP => {
+          const lp = getById(rawP.id);
+          return `<option value="${lp.id}" ${p2 && p2.id === lp.id ? 'selected' : ''}>${lp.num} · ${lp.tab}</option>`;
+        }).join("") +
+        `</optgroup>` +
+        `<optgroup label="${ui.commonConfusions}">` +
+        POPULAR_PAIRS.map(pair => {
+          const pa = getById(pair.a);
+          const pb = getById(pair.b);
+          const lbl = currentLang === "en" ? pair.label : `${pa.tab} vs ${pb.tab}`;
+          return `<option value="pair:${pair.a}:${pair.b}">${lbl}</option>`;
+        }).join("") +
+        `</optgroup>`;
+
+      const content = document.getElementById("sheetContent");
+      content.innerHTML = p2 ? renderComparison(p1, p2) : renderSingle(p1);
+      bindCalculatorInputs(content);
+    }
+
+    document.getElementById("compareSelect").addEventListener("change", (e) => {
+      const val = e.target.value;
+      if (val.startsWith("pair:")) {
+        const [, a, b] = val.split(":");
+        primaryId = a;
+        compareId = b;
+      } else {
+        compareId = val;
+      }
+      updateHash();
+      render();
+    });
+
+    // Keyboard navigation (Up/Down arrows to step through the 13 products)
+    window.addEventListener("keydown", (e) => {
+      if (["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement.tagName)) return;
+      const idx = PRODUCTS.findIndex(p => p.id === primaryId);
+      if (e.key === "ArrowDown" || e.key === "j") {
+        e.preventDefault();
+        const next = PRODUCTS[(idx + 1) % PRODUCTS.length];
+        primaryId = next.id;
+        if (compareId === primaryId) compareId = "";
+        updateHash();
+        render();
+      } else if (e.key === "ArrowUp" || e.key === "k") {
+        e.preventDefault();
+        const prev = PRODUCTS[(idx - 1 + PRODUCTS.length) % PRODUCTS.length];
+        primaryId = prev.id;
+        if (compareId === primaryId) compareId = "";
+        updateHash();
+        render();
+      }
+    });
+
+    document.getElementById("copyLinkBtn").addEventListener("click", async () => {
+      updateHash();
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        showToast(getUI().copiedToast);
+      } catch (_e) {}
+    });
+
+    // High-DPI Swiss Spec Card PNG Generator (Multilingual + Live Calculator Math)
+    function wrapText(ctx, text, maxWidth) {
+      const words = String(text || "").split(" ");
+      const lines = [];
+      let line = "";
+      for (const w of words) {
+        const test = line ? line + " " + w : w;
+        if (ctx.measureText(test).width > maxWidth && line) {
+          lines.push(line);
+          line = w;
+        } else {
+          line = test;
+        }
+      }
+      if (line) lines.push(line);
+      return lines;
+    }
+
+    document.getElementById("shareCardBtn").addEventListener("click", () => {
+      const ui = getUI();
+      const p1 = getById(primaryId) || getById(PRODUCTS[0].id);
+      const p2 = compareId && compareId !== primaryId ? getById(compareId) : null;
+
+      const fontSans = `"Inter", "Noto Sans Kannada", "Noto Sans Devanagari", "Noto Sans Telugu", "Noto Sans Tamil", sans-serif`;
+      const fontSerif = `"Newsreader", "Noto Sans Kannada", "Noto Sans Devanagari", "Noto Sans Telugu", "Noto Sans Tamil", Georgia, serif`;
+      const fontMono = `"JetBrains Mono", "Noto Sans Kannada", "Noto Sans Devanagari", "Noto Sans Telugu", "Noto Sans Tamil", monospace`;
+
+      const canvas = document.createElement("canvas");
+      const ctx = canvas.getContext("2d");
+
+      if (!p2) {
+        // Single Product Spec Card (1080 x 1560 — portrait for WhatsApp / X / Instagram)
+        const p = p1;
+        canvas.width = 1080;
+        canvas.height = 1560;
+
+        ctx.fillStyle = "#FAF9F5";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.strokeStyle = "#141413";
+        ctx.lineWidth = 2;
+        ctx.strokeRect(48, 48, canvas.width - 96, canvas.height - 96);
+
+        let y = 112;
+        ctx.fillStyle = "#969188";
+        ctx.font = `500 18px ${fontMono}`;
+        ctx.fillText(`${ui.brandTitle.toUpperCase()}  ·  ${p.num} / 13  ·  ${p.groupLabel.toUpperCase()}`, 88, y);
+
+        y += 52;
+        ctx.fillStyle = "#141413";
+        ctx.font = `500 40px ${fontSerif}`;
+        ctx.fillText(p.name, 88, y);
+
+        y += 36;
+        ctx.fillStyle = "#5C5953";
+        ctx.font = `italic 21px ${fontSerif}`;
+        for (const l of wrapText(ctx, p.what, 904)) {
+          ctx.fillText(l, 88, y);
+          y += 30;
+        }
+
+        y += 12;
+        ctx.strokeStyle = "#141413";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(88, y);
+        ctx.lineTo(992, y);
+        ctx.stroke();
+
+        // 4-Stat Strip
+        const statY = y + 32;
+        const colW = 904 / 4;
+        p.stats.forEach((s, i) => {
+          const x = 88 + i * colW + (i > 0 ? 12 : 0);
+          if (i > 0) {
+            ctx.strokeStyle = "#E4E0D7";
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(88 + i * colW, y);
+            ctx.lineTo(88 + i * colW, statY + 68);
+            ctx.stroke();
+          }
+          ctx.fillStyle = "#969188";
+          ctx.font = `500 13px ${fontMono}`;
+          ctx.fillText(s.label.toUpperCase(), x, statY);
+
+          ctx.fillStyle = "#141413";
+          ctx.font = `500 22px ${fontSerif}`;
+          ctx.fillText(s.val, x, statY + 30);
+
+          ctx.fillStyle = "#5C5953";
+          ctx.font = `400 14px ${fontSans}`;
+          ctx.fillText(s.note, x, statY + 54);
+        });
+
+        y = statY + 72;
+        ctx.strokeStyle = "#E4E0D7";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(88, y);
+        ctx.lineTo(992, y);
+        ctx.stroke();
+
+        // Section 01: What Sits Underneath
+        y += 32;
+        ctx.fillStyle = "#969188";
+        ctx.font = `500 15px ${fontMono}`;
+        ctx.fillText(ui.sec1.toUpperCase(), 88, y);
+        y += 26;
+
+        for (const [k, v] of p.underlyingRows) {
+          ctx.fillStyle = "#141413";
+          ctx.font = `600 17px ${fontSans}`;
+          ctx.fillText(k, 88, y);
+
+          ctx.fillStyle = "#5C5953";
+          ctx.font = `400 17px ${fontSans}`;
+          const lines = wrapText(ctx, v, 650);
+          lines.forEach((l, li) => {
+            ctx.fillText(l, 330, y + li * 24);
+          });
+          y += Math.max(1, lines.length) * 24 + 12;
+        }
+
+        ctx.strokeStyle = "#E4E0D7";
+        ctx.beginPath();
+        ctx.moveTo(88, y - 4);
+        ctx.lineTo(992, y - 4);
+        ctx.stroke();
+
+        // Section 02: Taxation & Costs
+        y += 28;
+        ctx.fillStyle = "#969188";
+        ctx.font = `500 15px ${fontMono}`;
+        ctx.fillText(ui.sec2.toUpperCase(), 88, y);
+        y += 26;
+
+        for (const [k, v] of p.taxRows) {
+          ctx.fillStyle = "#141413";
+          ctx.font = `600 17px ${fontSans}`;
+          ctx.fillText(k, 88, y);
+
+          ctx.fillStyle = "#5C5953";
+          ctx.font = `400 17px ${fontSans}`;
+          const lines = wrapText(ctx, v, 650);
+          lines.forEach((l, li) => {
+            ctx.fillText(l, 330, y + li * 24);
+          });
+          y += Math.max(1, lines.length) * 24 + 12;
+        }
+
+        // Section 03: The Catch Box + Interactive Calculator Math
+        y += 8;
+        ctx.font = `500 21px ${fontSerif}`;
+        const catchLeadLines = wrapText(ctx, p.catchLead, 848);
+        ctx.font = `400 16.5px ${fontSans}`;
+        const catchBodyLines = wrapText(ctx, p.catchBody, 848);
+        ctx.font = `400 16.5px ${fontSans}`;
+        const rupeeLines = wrapText(ctx, p.liveRupeeMath, 848);
+        const boxH = 122 + catchLeadLines.length * 29 + catchBodyLines.length * 24 + rupeeLines.length * 24;
+
+        ctx.fillStyle = "#F2EFE9";
+        ctx.fillRect(88, y, 904, boxH);
+        ctx.fillStyle = "#141413";
+        ctx.fillRect(88, y, 904, 3);
+
+        let cy = y + 32;
+        ctx.fillStyle = "#141413";
+        ctx.font = `600 14px ${fontMono}`;
+        ctx.fillText(ui.sec3.toUpperCase(), 116, cy);
+        cy += 30;
+
+        ctx.font = `500 21px ${fontSerif}`;
+        for (const l of catchLeadLines) {
+          ctx.fillText(l, 116, cy);
+          cy += 29;
+        }
+        cy += 4;
+        ctx.fillStyle = "#5C5953";
+        ctx.font = `400 16.5px ${fontSans}`;
+        for (const l of catchBodyLines) {
+          ctx.fillText(l, 116, cy);
+          cy += 24;
+        }
+
+        cy += 8;
+        ctx.strokeStyle = "#E4E0D7";
+        ctx.beginPath();
+        ctx.moveTo(116, cy);
+        ctx.lineTo(964, cy);
+        ctx.stroke();
+
+        cy += 24;
+        ctx.fillStyle = "#141413";
+        ctx.font = `600 13.5px ${fontMono}`;
+        ctx.fillText(ui.calcPngLabel, 116, cy);
+        cy += 24;
+        ctx.font = `400 16.5px ${fontSans}`;
+        rupeeLines.forEach((l, li) => {
+          ctx.fillText(l, 116, cy + li * 24);
+        });
+
+        y += boxH + 26;
+
+        // Section 04: The Verdict (Use if / Avoid if)
+        ctx.fillStyle = "#969188";
+        ctx.font = `500 15px ${fontMono}`;
+        ctx.fillText(ui.sec4.toUpperCase(), 88, y);
+        y += 26;
+
+        for (const [k, v] of [[ui.useIfKey, p.useIf], [ui.avoidIfKey, p.avoidIf]]) {
+          ctx.fillStyle = "#141413";
+          ctx.font = `600 17px ${fontSans}`;
+          ctx.fillText(k, 88, y);
+
+          ctx.fillStyle = "#5C5953";
+          ctx.font = `400 17px ${fontSans}`;
+          const lines = wrapText(ctx, v, 650);
+          lines.forEach((l, li) => {
+            ctx.fillText(l, 330, y + li * 24);
+          });
+          y += Math.max(1, lines.length) * 24 + 12;
+        }
+
+        ctx.fillStyle = "#969188";
+        ctx.font = `400 17px ${fontSerif}`;
+        ctx.fillText(`${ui.brandTitle}  ·  FY 2025–26 Indian Tax Reference`, 88, 1482);
+
+        ctx.textAlign = "right";
+        ctx.fillStyle = "#5C5953";
+        ctx.font = `500 15px ${fontMono}`;
+        ctx.fillText("By Dinesh Pai  ·  dineshpai.in  ·  @dineshpaii", 992, 1482);
+        ctx.textAlign = "left";
+      } else {
+        // Side-by-Side Comparison Card (1200 x 1420)
+        canvas.width = 1200;
+        canvas.height = 1420;
+
+        ctx.fillStyle = "#FAF9F5";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.strokeStyle = "#141413";
+        ctx.lineWidth = 2;
+        ctx.strokeRect(44, 44, canvas.width - 88, canvas.height - 88);
+
+        ctx.fillStyle = "#969188";
+        ctx.font = `500 18px ${fontMono}`;
+        ctx.fillText(`${ui.brandTitle.toUpperCase()}  ·  ${ui.sideBySide}`, 84, 108);
+
+        ctx.strokeStyle = "#141413";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(84, 128);
+        ctx.lineTo(1116, 128);
+        ctx.stroke();
+
+        // Center divider
+        ctx.strokeStyle = "#E4E0D7";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(600, 128);
+        ctx.lineTo(600, 1300);
+        ctx.stroke();
+
+        [p1, p2].forEach((p, idx) => {
+          const x = idx === 0 ? 84 : 628;
+          const maxW = 480;
+          let y = 178;
+
+          ctx.fillStyle = "#141413";
+          ctx.font = `500 30px ${fontSerif}`;
+          ctx.fillText(p.name, x, y);
+          y += 32;
+
+          ctx.fillStyle = "#5C5953";
+          ctx.font = `italic 17px ${fontSerif}`;
+          for (const l of wrapText(ctx, p.what, maxW).slice(0, 2)) {
+            ctx.fillText(l, x, y);
+            y += 24;
+          }
+
+          y += 18;
+          // 2x2 stats
+          p.stats.forEach((s, si) => {
+            const sx = x + (si % 2) * 244;
+            const sy = y + Math.floor(si / 2) * 74;
+            ctx.fillStyle = "#969188";
+            ctx.font = `500 12.5px ${fontMono}`;
+            ctx.fillText(s.label.toUpperCase(), sx, sy);
+            ctx.fillStyle = "#141413";
+            ctx.font = `500 20px ${fontSerif}`;
+            ctx.fillText(s.val, sx, sy + 26);
+            ctx.fillStyle = "#5C5953";
+            ctx.font = `400 13.5px ${fontSans}`;
+            ctx.fillText(s.note, sx, sy + 46);
+          });
+
+          y += 164;
+          ctx.fillStyle = "#969188";
+          ctx.font = `500 13.5px ${fontMono}`;
+          ctx.fillText(ui.sec1Short.toUpperCase(), x, y);
+          y += 22;
+          for (const [k, v] of p.underlyingRows.slice(0, 2)) {
+            ctx.fillStyle = "#141413";
+            ctx.font = `600 15.5px ${fontSans}`;
+            ctx.fillText(k, x, y);
+            y += 20;
+            ctx.fillStyle = "#5C5953";
+            ctx.font = `400 14.5px ${fontSans}`;
+            for (const l of wrapText(ctx, v, maxW).slice(0, 2)) {
+              ctx.fillText(l, x, y);
+              y += 20;
+            }
+            y += 8;
+          }
+
+          y += 8;
+          ctx.fillStyle = "#969188";
+          ctx.font = `500 13.5px ${fontMono}`;
+          ctx.fillText(ui.sec2Short.toUpperCase(), x, y);
+          y += 22;
+          for (const [k, v] of p.taxRows.slice(0, 3)) {
+            ctx.fillStyle = "#141413";
+            ctx.font = `600 15.5px ${fontSans}`;
+            ctx.fillText(k, x, y);
+            y += 20;
+            ctx.fillStyle = "#5C5953";
+            ctx.font = `400 14.5px ${fontSans}`;
+            for (const l of wrapText(ctx, v, maxW).slice(0, 2)) {
+              ctx.fillText(l, x, y);
+              y += 20;
+            }
+            y += 8;
+          }
+
+          // The Catch + Live Calculator Math
+          const cyStart = 815;
+          ctx.fillStyle = "#F2EFE9";
+          ctx.fillRect(x, cyStart, maxW, 300);
+          ctx.fillStyle = "#141413";
+          ctx.fillRect(x, cyStart, maxW, 3);
+
+          let cy = cyStart + 28;
+          ctx.fillStyle = "#141413";
+          ctx.font = `600 13px ${fontMono}`;
+          ctx.fillText(ui.sec3.toUpperCase(), x + 20, cy);
+          cy += 24;
+          ctx.font = `500 18px ${fontSerif}`;
+          for (const l of wrapText(ctx, p.catchLead, maxW - 40).slice(0, 3)) {
+            ctx.fillText(l, x + 20, cy);
+            cy += 24;
+          }
+          cy += 8;
+          ctx.strokeStyle = "#E4E0D7";
+          ctx.beginPath();
+          ctx.moveTo(x + 20, cy);
+          ctx.lineTo(x + maxW - 20, cy);
+          ctx.stroke();
+
+          cy += 22;
+          ctx.fillStyle = "#141413";
+          ctx.font = `600 12.5px ${fontMono}`;
+          ctx.fillText(ui.calcPngLabel, x + 20, cy);
+          cy += 20;
+          ctx.fillStyle = "#141413";
+          ctx.font = `400 14px ${fontSans}`;
+          for (const l of wrapText(ctx, p.liveRupeeMath, maxW - 40).slice(0, 4)) {
+            ctx.fillText(l, x + 20, cy);
+            cy += 20;
+          }
+
+          // 04 · The Verdict
+          let vy = 1146;
+          ctx.fillStyle = "#969188";
+          ctx.font = `500 13px ${fontMono}`;
+          ctx.fillText(ui.sec4.toUpperCase(), x, vy);
+          vy += 22;
+          for (const [k, v] of [[ui.useIfKey, p.useIf], [ui.avoidIfKey, p.avoidIf]]) {
+            ctx.fillStyle = "#141413";
+            ctx.font = `600 14.5px ${fontSans}`;
+            ctx.fillText(k, x, vy);
+            vy += 19;
+            ctx.fillStyle = "#5C5953";
+            ctx.font = `400 14px ${fontSans}`;
+            for (const l of wrapText(ctx, v, maxW).slice(0, 2)) {
+              ctx.fillText(l, x, vy);
+              vy += 19;
+            }
+            vy += 8;
+          }
+        });
+
+        ctx.fillStyle = "#969188";
+        ctx.font = `400 17px ${fontSerif}`;
+        ctx.fillText(`${ui.brandTitle}  ·  FY 2025–26 Indian Tax Reference`, 84, 1344);
+
+        ctx.textAlign = "right";
+        ctx.fillStyle = "#5C5953";
+        ctx.font = `500 15px ${fontMono}`;
+        ctx.fillText("By Dinesh Pai  ·  dineshpai.in  ·  @dineshpaii", 1116, 1344);
+        ctx.textAlign = "left";
+      }
+
+      // Immediately trigger PNG file download in the browser
+      const langSuffix = currentLang !== "en" ? `-${currentLang}` : "";
+      const filename = p2
+        ? `${p1.id}-vs-${p2.id}-before-you-invest${langSuffix}.png`
+        : `${p1.id}-before-you-invest${langSuffix}.png`;
+      const dataUrl = canvas.toDataURL("image/png");
+      const a = document.createElement("a");
+      a.href = dataUrl;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      showToast(`${ui.downloadedToast} ${filename}`);
+    });
+
+    window.addEventListener("hashchange", () => {
+      syncFromHash();
+      render();
+    });
+
+    syncFromHash();
+    render();
+  </script>
+</body>
+</html>

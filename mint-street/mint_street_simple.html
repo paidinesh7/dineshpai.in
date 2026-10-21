@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MINT STREET // Simple Edition — Central Bank Simulator</title>
+  <style>
+    :root, [data-theme="paper"] {
+      --bg: #F6F3EC;
+      --card: #FFFFFF;
+      --subtle: #EFECE4;
+      --text: #161614;
+      --text-sec: #4A4842;
+      --muted: #767268;
+      --border: #DCD6C8;
+      --border-strong: #181816;
+      --accent: #1E3A8A;
+      --accent-bg: #EFF6FF;
+      --green: #0F6E56;
+      --green-bg: #ECFDF5;
+      --red: #991B1B;
+      --red-bg: #FEF2F2;
+      --amber: #9A5B13;
+      --amber-bg: #FFFBEB;
+      --swan: #6B21A8;
+      --swan-bg: #FAF5FF;
+      --serif: 'Georgia', 'Charter', serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+      --mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+      --shadow: 0 2px 8px rgba(24, 24, 22, 0.05);
+    }
+
+    [data-theme="terminal"] {
+      --bg: #0D1017;
+      --card: #151A24;
+      --subtle: #1D2331;
+      --text: #F1F5F9;
+      --text-sec: #CBD5E1;
+      --muted: #8B9BB4;
+      --border: #2A3244;
+      --border-strong: #94A3B8;
+      --accent: #60A5FA;
+      --accent-bg: rgba(96, 165, 250, 0.14);
+      --green: #34D399;
+      --green-bg: rgba(52, 211, 153, 0.12);
+      --red: #F87171;
+      --red-bg: rgba(248, 113, 113, 0.12);
+      --amber: #FBBF24;
+      --amber-bg: rgba(251, 191, 36, 0.12);
+      --swan: #C084FC;
+      --swan-bg: rgba(192, 132, 252, 0.14);
+      --shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.5;
+      padding: 16px 14px 48px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    button, select {
+      font-family: inherit;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .app-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* =========================================================================
+       1. MINIMAL SINGLE-LINE TOOLBAR WITH SCENARIO DROPDOWN
+       ========================================================================= */
+    .toolbar {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-top: 3px double var(--border-strong);
+      border-radius: 6px;
+      padding: 10px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      box-shadow: var(--shadow);
+      margin-bottom: 10px;
+    }
+
+    .toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .brand-badge {
+      background: var(--border-strong);
+      color: var(--card);
+      font-family: var(--mono);
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      padding: 5px 9px;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+
+    .scenario-select-wrap {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .scenario-select {
+      background: var(--subtle);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 6px 10px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .scenario-select:focus {
+      border-color: var(--accent);
+    }
+
+    .toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 12px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .stat-pill {
+      background: var(--subtle);
+      border: 1px solid var(--border);
+      padding: 5px 9px;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+
+    .icon-btn {
+      background: var(--subtle);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 5px 9px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .icon-btn:hover {
+      border-color: var(--border-strong);
+    }
+
+    /* COMPACT 10-DOT PROGRESS BAR */
+    .progress-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      margin-bottom: 12px;
+      padding: 0 2px;
+    }
+
+    .progress-dots {
+      display: flex;
+      gap: 5px;
+      flex: 1;
+    }
+
+    .p-dot {
+      height: 7px;
+      flex: 1;
+      border-radius: 4px;
+      background: var(--border);
+      transition: all 0.2s;
+    }
+
+    .p-dot.active {
+      background: var(--accent);
+      transform: scaleY(1.25);
+    }
+
+    .p-dot.good { background: var(--green); }
+    .p-dot.mix { background: var(--amber); }
+    .p-dot.bad { background: var(--red); }
+
+    .era-Context-line {
+      font-size: 12px;
+      color: var(--muted);
+      font-family: var(--mono);
+      white-space: nowrap;
+    }
+
+    /* =========================================================================
+       2. ULTRA-CLEAN 4-METRIC SCOREBOARD STRIP
+       ========================================================================= */
+    .metrics-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .metric-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--border-strong);
+      border-radius: 5px;
+      padding: 10px 12px;
+      box-shadow: var(--shadow);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .metric-box.good { border-top-color: var(--green); }
+    .metric-box.warn { border-top-color: var(--amber); }
+    .metric-box.danger { border-top-color: var(--red); }
+
+    .m-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .m-val-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-top: 4px;
+      gap: 4px;
+    }
+
+    .m-val {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .m-delta {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
+
+    .d-good { color: var(--green); background: var(--green-bg); }
+    .d-bad { color: var(--red); background: var(--red-bg); }
+    .d-neutral { color: var(--muted); background: var(--subtle); }
+
+    .m-sub {
+      font-size: 10.5px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* =========================================================================
+       3. LAST TURN FEEDBACK BANNER (COMPACT & CLEAR)
+       ========================================================================= */
+    .turn-toast {
+      display: none;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 5px;
+      padding: 11px 14px;
+      margin-bottom: 14px;
+      font-size: 13px;
+      box-shadow: var(--shadow);
+    }
+
+    .turn-toast-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--mono);
+      font-size: 11.5px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    /* =========================================================================
+       4. FOCUSED EVENT CARD (WHAT'S HAPPENING NOW)
+       ========================================================================= */
+    .event-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 18px;
+      margin-bottom: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .event-card.swan-card {
+      border: 2px solid var(--swan);
+      background: var(--swan-bg);
+    }
+
+    .event-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .event-tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 3px;
+      background: var(--red-bg);
+      color: var(--red);
+    }
+
+    .event-tag.boom { background: var(--green-bg); color: var(--green); }
+    .event-tag.warn { background: var(--amber-bg); color: var(--amber); }
+    .event-tag.swan { background: var(--swan); color: #FFF; }
+
+    .event-date {
+      font-family: var(--mono);
+      font-size: 11.5px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .event-title {
+      font-family: var(--serif);
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .event-desc {
+      font-size: 14.5px;
+      color: var(--text-sec);
+      margin-bottom: 12px;
+    }
+
+    .pressure-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      background: var(--subtle);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 9px 11px;
+      font-size: 12px;
+      color: var(--text-sec);
+    }
+
+    .pressure-item strong {
+      color: var(--text);
+      display: block;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .extra-pills {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .mini-notice {
+      font-size: 12px;
+      padding: 7px 10px;
+      border-radius: 4px;
+      background: var(--amber-bg);
+      border: 1px solid var(--amber);
+      color: var(--text);
+    }
+
+    .mini-notice.lag {
+      background: var(--subtle);
+      border-color: var(--border);
+      color: var(--text-sec);
+    }
+
+    /* =========================================================================
+       5. SIMPLIFIED POLICY CONTROLS (1-CLICK PRESETS + 3 CORE LEVERS)
+       ========================================================================= */
+    .policy-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-head h2 {
+      font-family: var(--serif);
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .repo-pill {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      background: var(--accent-bg);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    /* QUICK PRESET STANCE BAR */
+    .preset-bar {
+      margin-bottom: 16px;
+    }
+
+    .preset-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .preset-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+    }
+
+    .preset-btn {
+      background: var(--subtle);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 7px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.12s;
+    }
+
+    .preset-btn:hover {
+      border-color: var(--accent);
+    }
+
+    .preset-btn.active {
+      background: var(--accent-bg);
+      border-color: var(--accent);
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* 3 CORE LEVERS */
+    .lever-row {
+      margin-bottom: 14px;
+    }
+
+    .lever-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 5px;
+    }
+
+    .lever-name {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .lever-hint {
+      font-size: 11.5px;
+      color: var(--muted);
+    }
+
+    .seg-grid-5 {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 5px;
+    }
+
+    .seg-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    .seg-btn {
+      background: var(--subtle);
+      border: 1.5px solid var(--border);
+      border-radius: 5px;
+      padding: 9px 6px;
+      cursor: pointer;
+      text-align: center;
+      color: var(--text);
+      transition: all 0.12s;
+      min-height: 46px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .seg-btn:hover {
+      border-color: var(--border-strong);
+    }
+
+    .seg-btn.active {
+      background: var(--border-strong);
+      border-color: var(--border-strong);
+      color: var(--card);
+    }
+
+    .seg-main {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      display: block;
+    }
+
+    .seg-sub {
+      font-size: 10px;
+      opacity: 0.8;
+      margin-top: 1px;
+      display: block;
+    }
+
+    /* SPECIAL ACTION PILLS */
+    .special-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    /* IMPACT BAR & SUBMIT BUTTON */
+    .action-dock {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .impact-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-family: var(--mono);
+      font-size: 11.5px;
+      color: var(--text-sec);
+      background: var(--subtle);
+      padding: 8px 11px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: var(--accent);
+      color: #FFFFFF;
+      border: none;
+      border-radius: 5px;
+      padding: 13px 16px;
+      font-family: var(--mono);
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+
+    .submit-btn:hover {
+      opacity: 0.93;
+    }
+
+    /* PRIMER MODAL */
+    .primer-box {
+      display: none;
+      background: var(--card);
+      border: 2px solid var(--border-strong);
+      border-radius: 6px;
+      padding: 16px;
+      margin-bottom: 14px;
+      font-size: 13px;
+      box-shadow: var(--shadow);
+    }
+
+    .primer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .primer-item {
+      background: var(--subtle);
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    /* =========================================================================
+       6. END-OF-TERM REPORT & COACHING SCREEN
+       ========================================================================= */
+    .report-wrap {
+      display: none;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-top: 4px double var(--border-strong);
+      border-radius: 6px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .rep-hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 14px;
+      flex-wrap: wrap;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 16px;
+    }
+
+    .rep-title {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 700;
+      margin: 4px 0 6px;
+    }
+
+    .rep-score-box {
+      background: var(--subtle);
+      border: 1.5px solid var(--border-strong);
+      border-radius: 5px;
+      padding: 10px 16px;
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .rep-score-num {
+      font-family: var(--serif);
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    .share-strip {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .share-btn {
+      flex: 1;
+      min-width: 160px;
+      padding: 10px 12px;
+      border-radius: 4px;
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid var(--border-strong);
+      background: var(--subtle);
+      color: var(--text);
+    }
+
+    .share-btn.primary {
+      background: var(--accent);
+      color: #FFF;
+      border-color: var(--accent);
+    }
+
+    .review-card {
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 12px;
+      margin-bottom: 10px;
+      background: var(--subtle);
+      font-size: 13px;
+    }
+
+    .review-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      margin-bottom: 6px;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .review-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 6px;
+      font-family: var(--mono);
+      font-size: 11.5px;
+    }
+
+    .rc-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 6px 8px;
+      border-radius: 4px;
+    }
+
+    .rc-box.ideal {
+      border-left: 3px solid var(--green);
+    }
+
+    .mode-switch-footer {
+      text-align: center;
+      margin-top: 16px;
+      font-family: var(--mono);
+      font-size: 11.5px;
+      color: var(--muted);
+    }
+
+    .mode-switch-footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 8px 8px 76px; }
+      .metrics-strip { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+      .m-val { font-size: 19px; }
+      .pressure-strip { grid-template-columns: 1fr; }
+      .preset-grid { grid-template-columns: repeat(2, 1fr); }
+      .special-list { grid-template-columns: 1fr; }
+      .primer-grid { grid-template-columns: 1fr; }
+      .review-compare { grid-template-columns: 1fr; }
+      .seg-grid-5 .seg-main { font-size: 10.5px; }
+      .seg-grid-5 .seg-sub { font-size: 9px; }
+      .action-dock {
+        position: sticky;
+        bottom: 0;
+        background: var(--card);
+        margin: 12px -18px -18px;
+        padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
+        border-top: 2px solid var(--border-strong);
+        box-shadow: 0 -4px 12px rgba(0,0,0,0.12);
+        z-index: 50;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-wrap">
+    <!-- 1. SIMPLE SINGLE-ROW TOOLBAR WITH DROPDOWN -->
+    <div class="toolbar">
+      <div class="toolbar-left">
+        <a href="/" class="icon-btn" style="text-decoration:none;" title="Back to dineshpai.in">&larr; dineshpai.in</a>
+        <span class="brand-badge">RBI // MINT STREET</span>
+        <div class="scenario-select-wrap">
+          <select id="scenarioDropdown" class="scenario-select" onchange="selectRegime(this.value)" aria-label="Select Scenario">
+            <option value="modern_2026">2026: Modern Growth (Standard)</option>
+            <option value="ai_shock_2027">2027: AI &amp; IT Shock</option>
+            <option value="climate_2028">2028: Greenflation &amp; El Niño</option>
+            <option value="taper_2013">2013: Fragile Five Taper</option>
+            <option value="gfc_2008">2008: Global Financial Crisis</option>
+            <option value="covid_2020">2020: Pandemic Lockdowns</option>
+            <option value="bop_1991">1991: Gold Airlift (Hard)</option>
+            <option value="stag_1974">1974: Oil &amp; Drought (Extreme)</option>
+          </select>
+          <button class="icon-btn" onclick="pickRandomRegime()" title="Random Scenario">🎲</button>
+        </div>
+      </div>
+      <div class="toolbar-right">
+        <span class="stat-pill" id="turnBadge">Turn 1/10</span>
+        <span class="stat-pill">Score: <span id="scoreBadge">0</span></span>
+        <button class="icon-btn" onclick="togglePrimer()" title="How to Play">?</button>
+        <button class="icon-btn" onclick="toggleTheme()" id="themeBtn" title="Switch Theme">☀️</button>
+      </div>
+    </div>
+
+    <!-- THIN 10-TURN PROGRESS DOTS -->
+    <div class="progress-row">
+      <div class="progress-dots" id="progressDots"></div>
+      <span class="era-Context-line" id="trustDisplay">Institutional Trust: 80/100</span>
+    </div>
+
+    <!-- QUICK PRIMER (HIDDEN BY DEFAULT) -->
+    <div class="primer-box" id="primerBox">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <strong style="font-family:var(--serif); font-size:15px;">Quick Cheat Sheet: How to Play RBI Governor</strong>
+        <button class="icon-btn" onclick="togglePrimer()">Close ✕</button>
+      </div>
+      <div class="primer-grid">
+        <div class="primer-item">
+          <strong>1. Demand vs. Supply</strong>
+          <p style="margin-top:4px; color:var(--text-sec);">If loan booms overheat the economy, <b>Hike Rates</b>. If bad weather or oil spikes cause inflation, don't crush GDP—use <b>FX Defense / Special Tools</b>.</p>
+        </div>
+        <div class="primer-item">
+          <strong>2. Impossible Trinity</strong>
+          <p style="margin-top:4px; color:var(--text-sec);">Never <b>Cut Rates</b> + <b>Sell FX</b> while keeping <b>Capital Open</b> during a currency panic—traders will drain your vault.</p>
+        </div>
+        <div class="primer-item">
+          <strong>3. Win Condition</strong>
+          <p style="margin-top:4px; color:var(--text-sec);">Survive 10 turns (5 years). Keep Inflation near <b>4%</b>, GDP near <b>6.5%</b>, and FX Reserves above <b>$160B</b>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. 4-METRIC SCOREBOARD STRIP -->
+    <div class="metrics-strip">
+      <div class="metric-box good" id="boxInf">
+        <div class="m-label"><span>CPI Inflation</span><span>Target 4%</span></div>
+        <div class="m-val-row">
+          <span class="m-val" id="valInf">4.8%</span>
+          <span class="m-delta d-neutral" id="delInf">0.0%</span>
+        </div>
+        <div class="m-sub">Safe band: 2% – 6%</div>
+      </div>
+
+      <div class="metric-box good" id="boxGdp">
+        <div class="m-label"><span>GDP Growth</span><span>Target 6.5%</span></div>
+        <div class="m-val-row">
+          <span class="m-val" id="valGdp">6.8%</span>
+          <span class="m-delta d-neutral" id="delGdp">0.0%</span>
+        </div>
+        <div class="m-sub">Real annual growth</div>
+      </div>
+
+      <div class="metric-box good" id="boxFx">
+        <div class="m-label"><span>Rupee (₹/$)</span><span> Stability</span></div>
+        <div class="m-val-row">
+          <span class="m-val" id="valFx">₹83.5</span>
+          <span class="m-delta d-neutral" id="delFx">0.0</span>
+        </div>
+        <div class="m-sub">Higher = Weaker ₹</div>
+      </div>
+
+      <div class="metric-box good" id="boxRes">
+        <div class="m-label"><span>FX Vault</span><span>Min $160B</span></div>
+        <div class="m-val-row">
+          <span class="m-val" id="valRes">$620B</span>
+          <span class="m-delta d-neutral" id="delRes">$0B</span>
+        </div>
+        <div class="m-sub">Dollar safety chest</div>
+      </div>
+    </div>
+
+    <!-- MAIN PLAY VIEW -->
+    <div id="playView">
+      <!-- LAST TURN TOAST -->
+      <div class="turn-toast" id="turnToast"></div>
+
+      <!-- 3. FOCUSED EVENT CARD -->
+      <div class="event-card" id="eventCard">
+        <div class="event-top">
+          <span class="event-tag" id="evTag">SHOCK</span>
+          <span class="event-date" id="evDate">Year 1 • H1</span>
+        </div>
+        <div class="event-title" id="evTitle">Loading...</div>
+        <div class="event-desc" id="evDesc"></div>
+
+        <div class="pressure-strip">
+          <div class="pressure-item">
+            <strong>🏛️ New Delhi (Govt)</strong>
+            <span id="evGov"></span>
+          </div>
+          <div class="pressure-item">
+            <strong>📈 Bond &amp; FX Desk</strong>
+            <span id="evMkt"></span>
+          </div>
+        </div>
+
+        <div class="extra-pills">
+          <div class="mini-notice" id="wildcardNotice" style="display:none;"></div>
+          <div class="mini-notice lag" id="lagNotice" style="display:none;"></div>
+        </div>
+      </div>
+
+      <!-- 4. SIMPLIFIED POLICY CONTROLS -->
+      <div class="policy-card" id="policyCard">
+        <div class="section-head">
+          <h2>Your Policy Response</h2>
+          <span class="repo-pill" id="repoDisplay">Repo Rate: 6.50%</span>
+        </div>
+
+        <!-- 1-CLICK QUICK PRESETS -->
+        <div class="preset-bar">
+          <span class="preset-label">Quick Stance (1-Tap Preset, or customize below):</span>
+          <div class="preset-grid" id="presetGrid">
+            <button class="preset-btn" onclick="applyPreset('hawk', this)">🦅 Fight Inflation</button>
+            <button class="preset-btn active" onclick="applyPreset('hold', this)">⚖️ Hold Steady</button>
+            <button class="preset-btn" onclick="applyPreset('dove', this)">🕊️ Boost Growth</button>
+            <button class="preset-btn" onclick="applyPreset('shield', this)">🛡️ Defend Rupee</button>
+          </div>
+        </div>
+
+        <!-- LEVER 1: INTEREST RATE -->
+        <div class="lever-row">
+          <div class="lever-top">
+            <span class="lever-name">1. Interest Rate (Repo Rate)</span>
+            <span class="lever-hint">Hikes cool inflation (with a 1-turn lag)</span>
+          </div>
+          <div class="seg-grid-5" id="grpRate">
+            <button class="seg-btn" data-val="-0.5" onclick="setChoice('rate', -0.5)">
+              <span class="seg-main">-50 bps</span>
+              <span class="seg-sub">Big Cut</span>
+            </button>
+            <button class="seg-btn" data-val="-0.25" onclick="setChoice('rate', -0.25)">
+              <span class="seg-main">-25 bps</span>
+              <span class="seg-sub">Cut</span>
+            </button>
+            <button class="seg-btn active" data-val="0" onclick="setChoice('rate', 0)">
+              <span class="seg-main">Hold</span>
+              <span class="seg-sub">Steady</span>
+            </button>
+            <button class="seg-btn" data-val="0.25" onclick="setChoice('rate', 0.25)">
+              <span class="seg-main">+25 bps</span>
+              <span class="seg-sub">Hike</span>
+            </button>
+            <button class="seg-btn" data-val="0.5" onclick="setChoice('rate', 0.5)">
+              <span class="seg-main">+50 bps</span>
+              <span class="seg-sub">Big Hike</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- LEVER 2: RUPEE & FX VAULT -->
+        <div class="lever-row">
+          <div class="lever-top">
+            <span class="lever-name">2. Currency &amp; FX Vault</span>
+            <span class="lever-hint" id="vaultHint">Vault: $620B</span>
+          </div>
+          <div class="seg-grid-3" id="grpFx">
+            <button class="seg-btn" data-val="buy25" onclick="setChoice('fx', 'buy25')">
+              <span class="seg-main">Buy $25B</span>
+              <span class="seg-sub">Build Vault</span>
+            </button>
+            <button class="seg-btn active" data-val="none" onclick="setChoice('fx', 'none')">
+              <span class="seg-main">Let ₹ Float</span>
+              <span class="seg-sub">$0 Action</span>
+            </button>
+            <button class="seg-btn" data-val="sell25" onclick="setChoice('fx', 'sell25')">
+              <span class="seg-main">Sell $25B</span>
+              <span class="seg-sub">Defend Rupee</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- LEVER 3: BANK LIQUIDITY & CAPITAL GUARDRAILS -->
+        <div class="lever-row">
+          <div class="lever-top">
+            <span class="lever-name">3. Banking &amp; Capital Rules</span>
+            <span class="lever-hint">Credit &amp; cross-border guardrails</span>
+          </div>
+          <div class="seg-grid-3" id="grpRules">
+            <button class="seg-btn" data-val="ease" onclick="setChoice('rules', 'ease')">
+              <span class="seg-main">Ease Credit</span>
+              <span class="seg-sub">Inject Cash</span>
+            </button>
+            <button class="seg-btn active" data-val="neutral" onclick="setChoice('rules', 'neutral')">
+              <span class="seg-main">Standard</span>
+              <span class="seg-sub">Neutral Rules</span>
+            </button>
+            <button class="seg-btn" data-val="tight" onclick="setChoice('rules', 'tight')">
+              <span class="seg-main">Tighten Rules</span>
+              <span class="seg-sub">Curb Bubble/Flight</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- LEVER 4: CONTEXTUAL SPECIAL DIRECTIVE -->
+        <div class="lever-row" style="margin-bottom:0;">
+          <div class="lever-top">
+            <span class="lever-name">4. Special Governor Action (Optional)</span>
+            <span class="lever-hint">Tailored to this shock</span>
+          </div>
+          <div class="special-list" id="grpSpecial"></div>
+        </div>
+
+        <!-- STICKY IMPACT PREVIEW & SUBMIT -->
+        <div class="action-dock">
+          <div class="impact-line" id="impactPreview"></div>
+          <button class="submit-btn" onclick="commitTurn()">
+            Apply Policy &amp; Advance 6 Months →
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. END-OF-TERM REPORT CARD -->
+    <div class="report-wrap" id="reportView">
+      <div class="rep-hero">
+        <div style="max-width:460px;">
+          <div style="font-family:var(--mono); font-size:11px; font-weight:700; color:var(--accent);" id="repLabel">5-YEAR TERM COMPLETE</div>
+          <div class="rep-title" id="repArchetype">The Steady Institutionalist</div>
+          <div style="font-size:13.5px; color:var(--text-sec);" id="repSummary"></div>
+        </div>
+        <div class="rep-score-box">
+          <div style="font-family:var(--mono); font-size:10.5px; color:var(--muted);">GOVERNOR SCORE</div>
+          <div class="rep-score-num" id="repScore">850 / 1000</div>
+          <div style="font-family:var(--mono); font-size:12px; font-weight:700; color:var(--green);" id="repGrade">GRADE A</div>
+        </div>
+      </div>
+
+      <div class="share-strip">
+        <button class="share-btn primary" onclick="shareScorecard()" id="btnShare">📲 Share Scorecard (WhatsApp / X)</button>
+        <button class="share-btn" onclick="downloadPng()">🖼️ Download Scorecard PNG</button>
+        <button class="share-btn" onclick="resetGame()">↻ Play Again</button>
+      </div>
+
+      <div class="section-head">
+        <h2>Turn-by-Turn Coaching Review (What You Chose vs. Ideal)</h2>
+      </div>
+      <div id="reviewList"></div>
+    </div>
+
+    <div class="mode-switch-footer">
+      Playing <strong>Simple Edition</strong> • Want the 5-lever full terminal with sparklines? <a href="mint_street_central_bank_game.html">Switch to Full Desk Edition →</a>
+    </div>
+  </div>
+
+  <canvas id="scoreCanvas" width="1200" height="630" style="display:none;"></canvas>
+
+  <script>
+    const REGIMES = {
+      modern_2026: { name: "2026: Modern Growth", inflation: 4.8, gdpGrowth: 6.8, fxRate: 83.5, fxReserves: 620, repoRate: 6.50, trust: 80 },
+      ai_shock_2027: { name: "2027: AI & IT Shock", inflation: 4.4, gdpGrowth: 5.8, fxRate: 86.2, fxReserves: 640, repoRate: 6.25, trust: 78 },
+      climate_2028: { name: "2028: Greenflation", inflation: 6.3, gdpGrowth: 6.1, fxRate: 85.8, fxReserves: 590, repoRate: 6.50, trust: 74 },
+      taper_2013: { name: "2013: Fragile Five", inflation: 7.4, gdpGrowth: 5.5, fxRate: 61.0, fxReserves: 295, repoRate: 7.25, trust: 62 },
+      gfc_2008: { name: "2008: Global Crisis", inflation: 6.8, gdpGrowth: 4.9, fxRate: 48.5, fxReserves: 280, repoRate: 7.50, trust: 68 },
+      covid_2020: { name: "2020: Lockdowns", inflation: 5.6, gdpGrowth: 2.2, fxRate: 75.5, fxReserves: 485, repoRate: 5.15, trust: 75 },
+      bop_1991: { name: "1991: Gold Airlift", inflation: 9.2, gdpGrowth: 3.8, fxRate: 21.0, fxReserves: 240, repoRate: 9.00, trust: 52 },
+      stag_1974: { name: "1974: Oil & Drought", inflation: 10.4, gdpGrowth: 3.2, fxRate: 8.1, fxReserves: 255, repoRate: 8.50, trust: 55 }
+    };
+
+    const SPECIAL_TOOLS = {
+      supply_food: [
+        { id: "none", label: "No Extra Action", sub: "Standard policy" },
+        { id: "surgical", label: "✓ Duty-Free Food Imports", sub: "-0.7% Inf, -$6B Vault" },
+        { id: "trap", label: "⚠️ Export Ban", sub: "Hurts farm GDP" }
+      ],
+      oil_shock: [
+        { id: "none", label: "No Extra Action", sub: "Standard policy" },
+        { id: "surgical", label: "✓ Oil PSU Dollar Swap", sub: "Steadies ₹, -0.5% Inf" },
+        { id: "trap", label: "⚠️ Fuel Price Freeze", sub: "Sparks fiscal inflation" }
+      ],
+      capital_flight: [
+        { id: "none", label: "No Extra Action", sub: "Standard policy" },
+        { id: "surgical", label: "✓ NRI Deposit Drive", sub: "+$35B Vault, steadies ₹" },
+        { id: "trap", label: "⚠️ Freeze Foreign Exits", sub: "Panics investors" }
+      ],
+      credit_boom: [
+        { id: "none", label: "No Extra Action", sub: "Standard policy" },
+        { id: "surgical", label: "✓ Hike App Loan Risk Weights", sub: "Cools bubble (-0.7% Inf)" },
+        { id: "trap", label: "⚠️ Ignore Unsecured Boom", sub: "Bubble grows (+0.6% Inf)" }
+      ],
+      fiscal_populism: [
+        { id: "none", label: "No Extra Action", sub: "Standard policy" },
+        { id: "surgical", label: "✓ Public Inflation Warning", sub: "Anchors expectations" },
+        { id: "trap", label: "⚠️ Print Cash for Govt", sub: "Inflation +1.3% jump" }
+      ],
+      capital_surge: [
+        { id: "none", label: "No Extra Action", sub: "Standard policy" },
+        { id: "surgical", label: "✓ Issue Sterilization Bonds", sub: "Soaks up excess cash" },
+        { id: "trap", label: "⚠️ Let Hot Money Flood", sub: "Fuels credit bubble" }
+      ],
+      banking_stress: [
+        { id: "none", label: "No Extra Action", sub: "Standard policy" },
+        { id: "surgical", label: "✓ Targeted Repo Lifeline", sub: "Calms banks (+0.7% GDP)" },
+        { id: "trap", label: "⚠️ Blanket Bailout", sub: "Sparks moral hazard" }
+      ],
+      global_slowdown: [
+        { id: "none", label: "No Extra Action", sub: "Standard policy" },
+        { id: "surgical", label: "✓ Export Credit Refinance", sub: "Cushions factory jobs" },
+        { id: "trap", label: "⚠️ Deliberate ₹ Devaluation", sub: "Triggers capital flight" }
+      ],
+      productivity_boom: [
+        { id: "none", label: "No Extra Action", sub: "Standard policy" },
+        { id: "surgical", label: "✓ Build Gold & FX Buffer", sub: "+$20B Vault" },
+        { id: "trap", label: "⚠️ Loosen Bank Checks", sub: "Sparks bad loans" }
+      ]
+    };
+
+    const EVENTS = [
+      { id: "e1", tag: "🌾 SUPPLY SHOCK", type: "warn", shockType: "supply_food", title: "Monsoon Deficit Spikes Vegetable Prices", desc: "A dry August hurt onion and pulse harvests. Food inflation is jumping even though factory demand is normal.", gov: "Don't hike rates because of bad weather!", mkt: "Keep inflation expectations anchored.", inf: 1.3, gdp: -0.3, fx: 0.7, res: -8 },
+      { id: "e2", tag: "🛢️ OIL SHOCK", type: "danger", shockType: "oil_shock", title: "Middle East Conflict Sends Brent Crude to $108", desc: "India imports 85% of its oil. Higher fuel bills are pushing up transport costs and widening the trade deficit.", gov: "Keep borrowing costs affordable for industry.", mkt: "Open a dollar swap line for oil importers or ₹ will slide.", inf: 1.4, gdp: -0.5, fx: 2.3, res: -24 },
+      { id: "e3", tag: "🦅 GLOBAL FLIGHT", type: "danger", shockType: "capital_flight", title: "US Fed Hikes 75 bps; Foreign Funds Pull $22B", desc: "Surging US bond yields are pulling foreign money out of emerging markets, putting heavy pressure on the Rupee.", gov: "Don't let the Rupee crash in headlines.", mkt: "Defend the currency without burning the whole FX vault.", inf: 0.6, gdp: -0.4, fx: 2.8, res: -28 },
+      { id: "e4", tag: "🔥 CREDIT FEVER", type: "warn", shockType: "credit_boom", title: "Unsecured App Loans & Property Prices Surge", desc: "Zero-paperwork personal loans are growing at 32% a year. Core inflation is heating up across cities.", gov: "Young consumers are driving 7%+ GDP growth!", mkt: "Tighten lending rules and hike rates before defaults spike.", inf: 1.2, gdp: 0.8, fx: 0.4, res: 5 },
+      { id: "e5", tag: "🗳️ FISCAL SPENDING", type: "warn", shockType: "fiscal_populism", title: "Pre-Election Cash Transfers & Farm Waivers", desc: "New Delhi announced ₹2.2 Lakh Crore in rural cash handouts, boosting consumption and government borrowing.", gov: "Buy government bonds and keep rates low.", mkt: "Printing money for fiscal handouts will unleash inflation.", inf: 1.3, gdp: 0.6, fx: 1.2, res: -10 },
+      { id: "e6", tag: "🌊 HOT MONEY SURGE", type: "boom", shockType: "capital_surge", title: "$40B Foreign Inflow Floods Indian Markets", desc: "Global funds are pouring money into India. Buying dollars builds your vault but injects excess Rupees into banks.", gov: "Don't let a strong Rupee hurt our exporters.", mkt: "Buy dollars for the vault, but soak up the excess Rupee cash.", inf: 0.6, gdp: 0.7, fx: -2.2, res: 35 },
+      { id: "e7", tag: "🏦 NBFC FREEZE", type: "danger", shockType: "banking_stress", title: "Top Shadow Bank Defaults; Credit Markets Freeze", desc: "Mutual funds stopped lending to finance companies after a sudden default. Small businesses face a cash crunch.", gov: "Step in with liquidity before auto and housing sales stall!", mkt: "Provide a targeted lifeline so solvent lenders don't fail.", inf: -0.4, gdp: -1.3, fx: 1.4, res: -14 },
+      { id: "e8", tag: "📉 TRADE SLUMP", type: "warn", shockType: "global_slowdown", title: "Global Tariff War Hits Indian Factory Orders", desc: "New import tariffs in the US and Europe slowed global trade. Export orders fell 14%, though oil prices cooled.", gov: "Inflation is low—cut interest rates to support jobs.", mkt: "You have room to ease credit while inflation is calm.", inf: -0.6, gdp: -1.2, fx: 1.1, res: -12 },
+      { id: "e9", tag: "☀️ BUMPER HARVEST", type: "boom", shockType: "productivity_boom", title: "Record Harvest & Freight Corridors Cut Costs", desc: "Full reservoirs and faster rail freight lowered food and logistics costs across the country.", gov: "A golden window to build reserves and support growth.", mkt: "Fortify the FX reserve chest while inflation is naturally low.", inf: -0.9, gdp: 0.8, fx: -0.8, res: 18 },
+      { id: "e10", tag: "🤖 AI EXPORT SHOCK", type: "danger", shockType: "global_slowdown", title: "AI Coding Agents Cut IT Outsourcing Billings 18%", desc: "Global clients automated routine software work, slowing India's $200B IT export engine and tech hiring.", gov: "Support domestic credit while tech hubs adjust.", mkt: "Watch the service trade surplus and cushion the Rupee.", inf: -0.4, gdp: -1.1, fx: 1.9, res: -18 },
+      { id: "s1", tag: "🦢 BLACK SWAN", type: "swan", isBlackSwan: true, shockType: "oil_shock", title: "Strait of Hormuz Blockade: Crude Hits $135/bbl", desc: "A sudden naval blockade halted 20% of global oil tankers. Freight insurance tripled and dollar demand spiked.", gov: "Use emergency swap windows so fuel stations don't run dry!", mkt: "Do not cut rates into an oil shock! Cushion ₹ and use PSU swaps.", inf: 1.9, gdp: -0.9, fx: 3.1, res: -30 },
+      { id: "s2", tag: "🦢 BLACK SWAN", type: "swan", isBlackSwan: true, shockType: "banking_stress", title: " Sovereign Cyberattack Freezes Payment Grid 48h", desc: "A coordinated cyber strike disrupted interbank settlement for two days, sparking precautionary cash hoarding.", gov: "Flood banks with emergency liquidity immediately!", mkt: "Provide a targeted repo lifeline to restore calm.", inf: -0.3, gdp: -1.3, fx: 1.7, res: -16 },
+      { id: "s3", tag: "🦢 BLACK SWAN", type: "swan", isBlackSwan: true, shockType: "capital_flight", title: "$1.2T Global Yen Carry-Trade Unwind Panic", desc: "A surprise Bank of Japan hike forced global hedge funds to dump emerging market bonds overnight.", gov: "Insulate our domestic bond market from foreign panic.", mkt: "Deploy FX reserves, curb hot outflows, and launch an NRI deposit drive.", inf: 0.6, gdp: -0.6, fx: 3.2, res: -34 }
+    ];
+
+    const WILDCARDS = [
+      { title: "🎲 Bonus: Record GST Collections", desc: "Lower government borrowing helps cool inflation (-0.2% Inf).", inf: -0.2, gdp: 0.2, fx: -0.2, res: 4 },
+      { title: "🎲 Setback: Red Sea Shipping Detours", desc: "Longer shipping routes add +0.3% to import inflation.", inf: 0.3, gdp: -0.1, fx: 0.4, res: -4 },
+      { title: "🎲 Bonus: Sovereign Bond Index Inclusion", desc: "Passive global bond funds bring in +$14B of reserves.", inf: 0.0, gdp: 0.2, fx: -0.6, res: 14 },
+      { title: "🎲 Setback: Heatwave Hits Wheat Crop", desc: "Unseasonal heat adds +0.4% to food inflation.", inf: 0.4, gdp: -0.2, fx: 0.2, res: 0 }
+    ];
+
+    let currentRegimeId = "modern_2026";
+    let state = {};
+    let shareText = "";
+
+    function initState() {
+      const r = REGIMES[currentRegimeId];
+      state = {
+        turn: 1,
+        maxTurns: 10,
+        score: 0,
+        inflation: r.inflation,
+        gdp: r.gdpGrowth,
+        fx: r.fxRate,
+        reserves: r.fxReserves,
+        repo: r.repoRate,
+        trust: r.trust,
+        lagInf: 0,
+        lagGdp: 0,
+        usedIds: [],
+        currentEvent: null,
+        currentWildcard: null,
+        choice: { rate: 0, fx: "none", rules: "neutral", special: "none" },
+        history: [],
+        gameOverReason: null
+      };
+      pickEvent();
+    }
+
+    function pickEvent() {
+      const avail = EVENTS.filter(e => !state.usedIds.includes(e.id));
+      const pool = avail.length > 0 ? avail : EVENTS;
+      const ev = pool[Math.floor(Math.random() * pool.length)];
+      state.currentEvent = ev;
+      state.usedIds.push(ev.id);
+      state.currentWildcard = (state.turn > 1 && Math.random() < 0.45)
+        ? WILDCARDS[Math.floor(Math.random() * WILDCARDS.length)]
+        : null;
+    }
+
+    function selectRegime(id) {
+      currentRegimeId = id;
+      document.getElementById("scenarioDropdown").value = id;
+      resetGame();
+    }
+
+    function pickRandomRegime() {
+      const keys = Object.keys(REGIMES);
+      const next = keys[Math.floor(Math.random() * keys.length)];
+      selectRegime(next);
+    }
+
+    function togglePrimer() {
+      const el = document.getElementById("primerBox");
+      el.style.display = el.style.display === "block" ? "none" : "block";
+    }
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute("data-theme") === "terminal" ? "paper" : "terminal";
+      html.setAttribute("data-theme", next);
+      document.getElementById("themeBtn").textContent = next === "paper" ? "☀️" : "🌙";
+    }
+
+    function applyPreset(type, btnEl) {
+      document.querySelectorAll("#presetGrid .preset-btn").forEach(b => b.classList.remove("active"));
+      if (btnEl) btnEl.classList.add("active");
+
+      if (type === "hawk") {
+        setChoice("rate", 0.25, true);
+        setChoice("fx", "none", true);
+        setChoice("rules", "tight", true);
+      } else if (type === "hold") {
+        setChoice("rate", 0, true);
+        setChoice("fx", "none", true);
+        setChoice("rules", "neutral", true);
+      } else if (type === "dove") {
+        setChoice("rate", -0.25, true);
+        setChoice("fx", "none", true);
+        setChoice("rules", "ease", true);
+      } else if (type === "shield") {
+        setChoice("rate", 0.25, true);
+        setChoice("fx", "sell25", true);
+        setChoice("rules", "tight", true);
+      }
+      updatePreview();
+    }
+
+    function setChoice(group, val, keepPreset) {
+      state.choice[group] = val;
+      if (!keepPreset && group !== "special") {
+        document.querySelectorAll("#presetGrid .preset-btn").forEach(b => b.classList.remove("active"));
+      }
+      const map = { rate: "grpRate", fx: "grpFx", rules: "grpRules", special: "grpSpecial" };
+      const wrap = document.getElementById(map[group]);
+      if (wrap) {
+        wrap.querySelectorAll(".seg-btn").forEach(btn => {
+          const bVal = group === "rate" ? parseFloat(btn.getAttribute("data-val")) : btn.getAttribute("data-val");
+          btn.classList.toggle("active", bVal === val);
+        });
+      }
+      updatePreview();
+    }
+
+    function calcEffects(ch, ev) {
+      let inf = 0, gdp = 0, fx = 0, res = 0, nextLagInf = 0, nextLagGdp = 0, warn = "";
+
+      if (ch.rate !== 0) {
+        const steps = ch.rate / 0.25;
+        inf += steps * -0.28;
+        gdp += steps * -0.24;
+        fx += steps * -0.35;
+        nextLagInf = +(steps * -0.42).toFixed(2);
+        nextLagGdp = +(steps * -0.30).toFixed(2);
+      }
+
+      if (ch.fx === "buy25") {
+        res += 25; fx += 0.9; inf += 0.25;
+      } else if (ch.fx === "sell25") {
+        res -= 25; fx -= 1.5; inf -= 0.2;
+      }
+
+      if (ch.rules === "ease") {
+        gdp += 0.45; inf += 0.35; fx += 0.3;
+      } else if (ch.rules === "tight") {
+        gdp -= 0.25; inf -= 0.4; fx -= 0.6;
+      }
+
+      if (ch.fx === "buy25" && ch.rules === "tight") {
+        inf -= 0.25; // Sterilized intervention bonus
+      }
+
+      if (ch.rate < 0 && ch.fx === "sell25" && ch.rules !== "tight") {
+        fx += 2.2; res -= 15;
+        warn = "⚠️ Trilemma Trap: Cutting rates while selling FX sparks speculative outflows!";
+      }
+
+      const st = ev.shockType;
+      if (ch.special === "surgical") {
+        if (st === "supply_food") { inf -= 0.7; res -= 6; gdp += 0.2; }
+        else if (st === "oil_shock") { inf -= 0.5; fx -= 1.3; res += 6; }
+        else if (st === "capital_flight") { res += 35; fx -= 1.6; }
+        else if (st === "credit_boom") { inf -= 0.7; gdp -= 0.15; }
+        else if (st === "fiscal_populism") { inf -= 0.6; }
+        else if (st === "capital_surge") { inf -= 0.5; }
+        else if (st === "banking_stress") { gdp += 0.75; }
+        else if (st === "global_slowdown") { gdp += 0.65; }
+        else if (st === "productivity_boom") { res += 20; }
+      } else if (ch.special === "trap") {
+        inf += 0.8; gdp -= 0.5; res -= 10;
+      }
+
+      return { inf, gdp, fx, res, nextLagInf, nextLagGdp, warn };
+    }
+
+    function updatePreview() {
+      const eff = calcEffects(state.choice, state.currentEvent);
+      const el = document.getElementById("impactPreview");
+      const iStr = `${eff.inf >= 0 ? "+" : ""}${eff.inf.toFixed(1)}%`;
+      const gStr = `${eff.gdp >= 0 ? "+" : ""}${eff.gdp.toFixed(1)}%`;
+      const rStr = `${eff.res >= 0 ? "+$" : "-$"}${Math.abs(eff.res)}B`;
+      el.innerHTML = `
+        <span><strong>Your Policy Impact:</strong> Inflation ${iStr} • GDP ${gStr} • Vault ${rStr}</span>
+        <span style="color:var(--red); font-weight:700;">${eff.warn}</span>
+      `;
+    }
+
+    function scoreTurn(ev, ch, eff) {
+      let pts = 60;
+      const st = ev.shockType;
+      let ideal = "";
+      let why = "";
+
+      if (st === "supply_food") {
+        ideal = "Hold Rate + Sell $25B (or Float) + Duty-Free Food Imports";
+        why = "Rate hikes cannot make rain fall. Duty-free food imports cool vegetable prices without hurting factory jobs.";
+        if (ch.rate <= 0.25 && ch.rate >= 0) pts += 12;
+        if (ch.rate === 0.5) pts -= 12;
+      } else if (st === "oil_shock") {
+        ideal = "Hold/+25 bps Rate + Sell $25B FX + Oil PSU Dollar Swap";
+        why = "Taking oil company dollar demand off the spot market prevents a Rupee spiral without crushing GDP.";
+        if (ch.fx === "sell25" || ch.rules === "tight") pts += 12;
+        if (ch.rate < 0) pts -= 15;
+      } else if (st === "capital_flight") {
+        ideal = "Hike +25 bps + Sell $25B FX + Tighten Rules + NRI Deposit Drive";
+        why = "Defending the currency during global outflows requires tighter liquidity and fresh dollar inflows.";
+        if (ch.rate >= 0 && (ch.fx === "sell25" || ch.rules === "tight")) pts += 14;
+      } else if (st === "credit_boom") {
+        ideal = "Hike +25/+50 bps + Tighten Rules + Hike App Loan Risk Weights";
+        why = "Curbing reckless personal loan growth and raising rates cools demand fever before bad loans pile up.";
+        if (ch.rate > 0 && ch.rules === "tight") pts += 15;
+        else if (ch.rate < 0 || ch.rules === "ease") pts -= 16;
+      } else if (st === "fiscal_populism") {
+        ideal = "Hike +25 bps + Tighten Rules + Public Inflation Warning";
+        why = "Central banks must lean against pre-election cash handouts rather than printing money to fund them.";
+        if (ch.rate >= 0.25 || ch.rules === "tight") pts += 14;
+      } else if (st === "capital_surge") {
+        ideal = "Buy $25B FX + Tighten Rules + Issue Sterilization Bonds";
+        why = "Buy dollars to build the FX vault, and soak up excess Rupees so hot money doesn't spark inflation.";
+        if (ch.fx === "buy25") pts += 14;
+      } else if (st === "banking_stress") {
+        ideal = "Cut -25 bps + Ease Credit + Targeted Repo Lifeline";
+        why = "In a credit freeze, the central bank must act as Lender of Last Resort so solvent businesses don't fail.";
+        if (ch.rate <= 0 && ch.rules === "ease") pts += 15;
+      } else if (st === "global_slowdown") {
+        ideal = "Cut -25 bps + Ease Credit + Export Credit Refinance";
+        why = "When global trade slumps and inflation is low, easing domestic credit cushions factory jobs.";
+        if (ch.rate < 0 || ch.rules === "ease") pts += 14;
+      } else {
+        ideal = "Hold Rate + Buy $25B FX + Build Gold & FX Buffer";
+        why = "Good harvest years are the best time to quietly build your FX reserve chest.";
+        if (ch.fx === "buy25") pts += 14;
+      }
+
+      if (ch.special === "surgical") pts += 14;
+      else if (ch.special === "trap") pts -= 22;
+
+      if (state.inflation >= 2.5 && state.inflation <= 5.8) pts += 12;
+      else if (state.inflation > 7.5) pts -= 10;
+
+      if (state.gdp >= 5.8) pts += 6;
+      if (eff.warn) pts -= 18;
+
+      const finalPts = Math.max(15, Math.min(100, Math.round(pts)));
+      const verdict = finalPts >= 78 ? "Optimal Call" : finalPts >= 58 ? "Mixed Tradeoff" : "Policy Mistake";
+      return { pts: finalPts, verdict, ideal, why };
+    }
+
+    function commitTurn() {
+      const ev = state.currentEvent;
+      const wc = state.currentWildcard;
+      const ch = { ...state.choice };
+      const eff = calcEffects(ch, ev);
+
+      const pInf = state.inflation, pGdp = state.gdp, pFx = state.fx, pRes = state.reserves;
+
+      state.repo = +(Math.max(2.5, Math.min(12.5, state.repo + ch.rate))).toFixed(2);
+      const revInf = (4.5 - state.inflation) * 0.18;
+      const revGdp = (6.5 - state.gdp) * 0.22;
+
+      state.inflation = +(Math.max(0.5, state.inflation + ev.inf + eff.inf + state.lagInf + revInf + (wc ? wc.inf : 0))).toFixed(1);
+      state.gdp = +(Math.max(-2.5, Math.min(11.0, state.gdp + ev.gdp + eff.gdp + state.lagGdp + revGdp + (wc ? wc.gdp : 0)))).toFixed(1);
+      state.fx = +(Math.max(5.0, state.fx + ev.fx + eff.fx + (wc ? wc.fx : 0))).toFixed(1);
+      state.reserves = Math.max(0, Math.round(state.reserves + ev.res + eff.res + (wc ? wc.res : 0)));
+
+      const scored = scoreTurn(ev, ch, eff);
+      state.score += scored.pts;
+
+      if (scored.verdict === "Optimal Call") state.trust = Math.min(100, state.trust + 4);
+      else if (scored.verdict === "Policy Mistake") state.trust = Math.max(0, state.trust - 8);
+
+      const tools = SPECIAL_TOOLS[ev.shockType] || SPECIAL_TOOLS.credit_boom;
+      const specLabel = (tools.find(t => t.id === ch.special) || tools[0]).label;
+      const moveText = `Rate ${ch.rate === 0 ? "Hold" : (ch.rate > 0 ? "+" : "") + Math.round(ch.rate * 100) + " bps"} • FX: ${ch.fx === "buy25" ? "Buy $25B" : ch.fx === "sell25" ? "Sell $25B" : "Float"} • Rules: ${ch.rules} • ${specLabel}`;
+
+      state.history.push({
+        turn: state.turn,
+        title: ev.title,
+        isBlackSwan: !!ev.isBlackSwan,
+        move: moveText,
+        ideal: scored.ideal,
+        why: scored.why,
+        pts: scored.pts,
+        verdict: scored.verdict,
+        inf: state.inflation,
+        gdp: state.gdp,
+        fx: state.fx,
+        res: state.reserves
+      });
+
+      state.lagInf = eff.nextLagInf;
+      state.lagGdp = eff.nextLagGdp;
+
+      renderMetrics(pInf, pGdp, pFx, pRes);
+
+      const toast = document.getElementById("turnToast");
+      toast.style.display = "block";
+      const vColor = scored.verdict === "Optimal Call" ? "var(--green)" : scored.verdict === "Mixed Tradeoff" ? "var(--amber)" : "var(--red)";
+      toast.innerHTML = `
+        <div class="turn-toast-top">
+          <span>TURN ${state.turn} RESULT: ${ev.title}</span>
+          <span style="color:${vColor};">+${scored.pts}/100 PTS (${scored.verdict.toUpperCase()})</span>
+        </div>
+        <div style="color:var(--text-sec);">💡 ${scored.why}</div>
+      `;
+
+      const maxInf = Math.max(13.5, REGIMES[currentRegimeId].inflation + 3.8);
+      if (state.reserves < 160) {
+        state.gameOverReason = "FX Reserves dropped below the $160B import-cover floor, forcing an emergency IMF bailout.";
+        showReport();
+        return;
+      }
+      if (state.inflation >= maxInf) {
+        state.gameOverReason = `CPI Inflation crossed ${maxInf.toFixed(1)}%, triggering a cost-of-living crisis.`;
+        showReport();
+        return;
+      }
+
+      if (state.turn >= state.maxTurns) {
+        showReport();
+      } else {
+        state.turn += 1;
+        pickEvent();
+        state.choice = { rate: 0, fx: "none", rules: "neutral", special: "none" };
+        applyPreset("hold", document.querySelectorAll("#presetGrid .preset-btn")[1]);
+        renderTurn();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
+
+    function renderMetrics(pInf, pGdp, pFx, pRes) {
+      document.getElementById("valInf").textContent = `${state.inflation.toFixed(1)}%`;
+      setDelta("delInf", state.inflation - pInf, "%", true);
+      document.getElementById("boxInf").className = "metric-box " + (state.inflation >= 2 && state.inflation <= 6 ? "good" : state.inflation <= 7.2 ? "warn" : "danger");
+
+      document.getElementById("valGdp").textContent = `${state.gdp.toFixed(1)}%`;
+      setDelta("delGdp", state.gdp - pGdp, "%", false);
+      document.getElementById("boxGdp").className = "metric-box " + (state.gdp >= 6 ? "good" : state.gdp >= 4.2 ? "warn" : "danger");
+
+      document.getElementById("valFx").textContent = `₹${state.fx.toFixed(1)}`;
+      setDelta("delFx", state.fx - pFx, "", true);
+
+      document.getElementById("valRes").textContent = `$${state.reserves}B`;
+      setDelta("delRes", state.reserves - pRes, "B", false);
+      document.getElementById("boxRes").className = "metric-box " + (state.reserves >= 350 ? "good" : state.reserves >= 210 ? "warn" : "danger");
+    }
+
+    function setDelta(id, diff, unit, higherBad) {
+      const el = document.getElementById(id);
+      if (Math.abs(diff) < 0.05) {
+        el.textContent = "0.0" + unit;
+        el.className = "m-delta d-neutral";
+        return;
+      }
+      const sign = diff > 0 ? "+" : "";
+      el.textContent = `${sign}${diff.toFixed(1)}${unit}`;
+      const isGood = higherBad ? diff < 0 : diff > 0;
+      el.className = "m-delta " + (isGood ? "d-good" : "d-bad");
+    }
+
+    function renderTurn() {
+      const ev = state.currentEvent;
+      document.getElementById("turnBadge").textContent = `Turn ${state.turn}/${state.maxTurns}`;
+      document.getElementById("scoreBadge").textContent = state.score;
+      document.getElementById("trustDisplay").textContent = `Institutional Trust: ${state.trust}/100`;
+      document.getElementById("repoDisplay").textContent = `Repo Rate: ${state.repo.toFixed(2)}%`;
+      document.getElementById("vaultHint").textContent = `Vault: $${state.reserves}B`;
+
+      // Progress Dots
+      let dots = "";
+      for (let i = 1; i <= state.maxTurns; i++) {
+        const h = state.history.find(x => x.turn === i);
+        if (h) {
+          const c = h.verdict === "Optimal Call" ? "good" : h.verdict === "Mixed Tradeoff" ? "mix" : "bad";
+          dots += `<div class="p-dot ${c}"></div>`;
+        } else if (i === state.turn) {
+          dots += `<div class="p-dot active"></div>`;
+        } else {
+          dots += `<div class="p-dot"></div>`;
+        }
+      }
+      document.getElementById("progressDots").innerHTML = dots;
+
+      // Event Card
+      const card = document.getElementById("eventCard");
+      card.className = "event-card" + (ev.isBlackSwan ? " swan-card" : "");
+      const tag = document.getElementById("evTag");
+      tag.textContent = ev.tag;
+      tag.className = "event-tag " + (ev.type || "");
+
+      const yr = Math.ceil(state.turn / 2);
+      const half = state.turn % 2 === 1 ? "H1" : "H2";
+      document.getElementById("evDate").textContent = `Year ${yr} • ${half}`;
+      document.getElementById("evTitle").textContent = ev.title;
+      document.getElementById("evDesc").textContent = ev.desc;
+      document.getElementById("evGov").textContent = ev.gov;
+      document.getElementById("evMkt").textContent = ev.mkt;
+
+      const wcEl = document.getElementById("wildcardNotice");
+      if (state.currentWildcard) {
+        wcEl.style.display = "block";
+        wcEl.innerHTML = `<strong>${state.currentWildcard.title}:</strong> ${state.currentWildcard.desc}`;
+      } else {
+        wcEl.style.display = "none";
+      }
+
+      const lagEl = document.getElementById("lagNotice");
+      if (Math.abs(state.lagInf) > 0.01) {
+        lagEl.style.display = "block";
+        lagEl.innerHTML = `⏳ <strong>Prior Rate Move Lag Hitting Now:</strong> Inflation ${state.lagInf > 0 ? "+" : ""}${state.lagInf.toFixed(1)}%, GDP ${state.lagGdp > 0 ? "+" : ""}${state.lagGdp.toFixed(1)}%`;
+      } else {
+        lagEl.style.display = "none";
+      }
+
+      // Special Tools
+      const tools = SPECIAL_TOOLS[ev.shockType] || SPECIAL_TOOLS.credit_boom;
+      document.getElementById("grpSpecial").innerHTML = tools
+        .map(t => `
+          <button class="seg-btn ${state.choice.special === t.id ? "active" : ""}" data-val="${t.id}" onclick="setChoice('special', '${t.id}')">
+            <span class="seg-main">${t.label}</span>
+            <span class="seg-sub">${t.sub}</span>
+          </button>
+        `)
+        .join("");
+
+      updatePreview();
+    }
+
+    function showReport() {
+      document.getElementById("playView").style.display = "none";
+      const rep = document.getElementById("reportView");
+      rep.style.display = "block";
+
+      const r = REGIMES[currentRegimeId];
+      const finalScore = state.gameOverReason ? Math.min(state.score, 420) : state.score;
+      const grade = state.gameOverReason ? "F" : finalScore >= 850 ? "S" : finalScore >= 720 ? "A" : finalScore >= 580 ? "B" : "C";
+      const arch = state.gameOverReason ? "Crisis Casualty" : finalScore >= 850 ? "Master of Mint Street" : finalScore >= 720 ? "Steady Institutional Hand" : "Reactive Firefighter";
+
+      document.getElementById("repLabel").textContent = state.gameOverReason ? `EARLY TERMINATION // ${r.name.toUpperCase()}` : `5-YEAR TERM AUDIT // ${r.name.toUpperCase()}`;
+      document.getElementById("repArchetype").textContent = arch;
+      document.getElementById("repSummary").textContent = state.gameOverReason || `You finished with CPI Inflation at ${state.inflation}% (started ${r.inflation}%), GDP Growth at ${state.gdp}%, Rupee at ₹${state.fx}/$, and $${state.reserves}B in FX Reserves.`;
+      document.getElementById("repScore").textContent = `${finalScore} / 1000`;
+      document.getElementById("repGrade").textContent = `GRADE ${grade}`;
+
+      const emojis = state.history.map(h => h.isBlackSwan ? "🦢" : h.verdict === "Optimal Call" ? "🟢" : h.verdict === "Mixed Tradeoff" ? "🟡" : "🔴").join("");
+      shareText = `🏛️ MINT STREET (Simple Edition)\nScenario: ${r.name}\nScore: ${finalScore}/1,000 (Grade ${grade} — ${arch})\nRecord: ${emojis}\nFinal: CPI ${state.inflation}% | GDP ${state.gdp}% | ₹${state.fx}/$ | Vault $${state.reserves}B`;
+
+      document.getElementById("reviewList").innerHTML = state.history
+        .map(h => `
+          <div class="review-card">
+            <div class="review-top">
+              <span>Turn ${h.turn}: ${h.isBlackSwan ? "🦢 " : ""}${h.title}</span>
+              <span style="font-family:var(--mono); color:${h.verdict === "Optimal Call" ? "var(--green)" : h.verdict === "Mixed Tradeoff" ? "var(--amber)" : "var(--red)"};">${h.pts}/100 (${h.verdict})</span>
+            </div>
+            <div class="review-compare">
+              <div class="rc-box"><strong>You Chose:</strong> ${h.move}</div>
+              <div class="rc-box ideal"><strong>Ideal Play:</strong> ${h.ideal}</div>
+            </div>
+            <div style="color:var(--text-sec);">💡 ${h.why}</div>
+          </div>
+        `)
+        .join("");
+
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function shareScorecard() {
+      if (navigator.share && shareText) {
+        navigator.share({ title: "Mint Street Governor Score", text: shareText }).catch(() => {});
+      } else if (navigator.clipboard && shareText) {
+        navigator.clipboard.writeText(shareText).then(() => {
+          const btn = document.getElementById("btnShare");
+          btn.textContent = "✓ Copied Scorecard to Clipboard!";
+          setTimeout(() => { btn.textContent = "📲 Share Scorecard (WhatsApp / X)"; }, 2400);
+        });
+      }
+    }
+
+    function downloadPng() {
+      const c = document.getElementById("scoreCanvas");
+      const ctx = c.getContext("2d");
+      const r = REGIMES[currentRegimeId];
+      const finalScore = state.gameOverReason ? Math.min(state.score, 420) : state.score;
+
+      ctx.fillStyle = "#F6F3EC";
+      ctx.fillRect(0, 0, 1200, 630);
+      ctx.fillStyle = "#FFFFFF";
+      ctx.fillRect(50, 45, 1100, 540);
+      ctx.strokeStyle = "#181816";
+      ctx.lineWidth = 3;
+      ctx.strokeRect(50, 45, 1100, 540);
+
+      ctx.fillStyle = "#181816";
+      ctx.font = "bold 18px monospace";
+      ctx.fillText(`RBI // MINT STREET • ${r.name.toUpperCase()}`, 90, 105);
+
+      ctx.font = "bold 46px Georgia, serif";
+      ctx.fillText(document.getElementById("repArchetype").textContent, 90, 170);
+
+      ctx.font = "bold 52px Georgia, serif";
+      ctx.fillText(`${finalScore} / 1000`, 840, 165);
+
+      ctx.font = "22px sans-serif";
+      ctx.fillStyle = "#4A4842";
+      ctx.fillText(`Final CPI: ${state.inflation}%  •  GDP Growth: ${state.gdp}%  •  Rupee: ₹${state.fx}/$  •  FX Vault: $${state.reserves}B`, 90, 260);
+
+      state.history.forEach((h, i) => {
+        const x = 90 + i * 102;
+        ctx.fillStyle = h.verdict === "Optimal Call" ? "#DCFCE7" : h.verdict === "Mixed Tradeoff" ? "#FEF3C7" : "#FEE2E2";
+        ctx.fillRect(x, 340, 92, 70);
+        ctx.strokeStyle = "#181816";
+        ctx.lineWidth = 1.5;
+        ctx.strokeRect(x, 340, 92, 70);
+        ctx.fillStyle = "#161614";
+        ctx.font = "bold 14px monospace";
+        ctx.fillText(`T${h.turn}`, x + 32, 368);
+        ctx.fillText(`${h.pts}p`, x + 28, 395);
+      });
+
+      const a = document.createElement("a");
+      a.download = `mint-street-simple-${finalScore}pts.png`;
+      a.href = c.toDataURL("image/png");
+      a.click();
+    }
+
+    function resetGame() {
+      initState();
+      const r = REGIMES[currentRegimeId];
+      document.getElementById("reportView").style.display = "none";
+      document.getElementById("playView").style.display = "block";
+      document.getElementById("turnToast").style.display = "none";
+      renderMetrics(r.inflation, r.gdpGrowth, r.fxRate, r.fxReserves);
+      applyPreset("hold", document.querySelectorAll("#presetGrid .preset-btn")[1]);
+      renderTurn();
+    }
+
+    selectRegime("modern_2026");
+  </script>
+</body>
+</html>
