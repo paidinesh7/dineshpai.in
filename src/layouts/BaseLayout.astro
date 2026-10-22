@@ -120,54 +120,59 @@ const pageTitle = title === "Home" || title === siteTitle ? siteTitle : `${title
 
     <!-- Editorial Header / Navigation -->
     <header class="border-b border-stone-300/80 dark:border-stone-800 bg-[#f7f5f0]/90 dark:bg-[#121210]/90 backdrop-blur-sm sticky top-0 z-40">
-      <div class={`${maxWidth} mx-auto px-6 py-5 flex flex-wrap items-center justify-between gap-4`}>
-        <a href="/" class="flex flex-col gap-0.5 group no-underline">
-          <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors">
-            Dinesh Pai
-          </span>
-          <span class="text-[11px] text-stone-500 dark:text-stone-400 font-mono tracking-wider uppercase">
-            Business &amp; investments @ Zerodha
-          </span>
-        </a>
+      <div class={`${maxWidth} mx-auto px-4 sm:px-6 py-3.5 sm:py-5`}>
+        <div class="flex items-center justify-between gap-3">
+          <a href="/" class="flex flex-col gap-0.5 group no-underline">
+            <span class="font-serif text-lg sm:text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 group-hover:text-brand-light dark:group-hover:text-brand-dark transition-colors leading-tight">
+              Dinesh Pai
+            </span>
+            <span class="hidden sm:block text-[11px] text-stone-500 dark:text-stone-400 font-mono tracking-wider uppercase">
+              Business &amp; investments @ Zerodha
+            </span>
+          </a>
 
-        <nav aria-label="Primary navigation" class="flex items-center gap-5 sm:gap-7">
-          <a
-            href="/thesis"
-            class:list={[
-              "font-mono text-xs sm:text-[13px] uppercase tracking-wider transition-colors",
-              currentPath.startsWith('/thesis')
-                ? "font-bold text-brand-light dark:text-brand-dark underline underline-offset-4"
-                : "text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100"
-            ]}
-          >
-            Thesis
-          </a>
-          <a
-            href="/portfolio"
-            class:list={[
-              "font-mono text-xs sm:text-[13px] uppercase tracking-wider transition-colors",
-              currentPath.startsWith('/portfolio')
-                ? "font-bold text-brand-light dark:text-brand-dark underline underline-offset-4"
-                : "text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100"
-            ]}
-          >
-            Investments
-          </a>
-          <div class="pl-1 border-l border-stone-300 dark:border-stone-800 flex items-center">
-            <ThemeToggle client:load />
-          </div>
-        </nav>
+          <nav aria-label="Primary navigation" class="flex items-center gap-4 sm:gap-7 shrink-0">
+            <a
+              href="/thesis"
+              class:list={[
+                "font-mono text-xs sm:text-[13px] uppercase tracking-wider transition-colors",
+                currentPath.startsWith('/thesis')
+                  ? "font-bold text-brand-light dark:text-brand-dark underline underline-offset-4"
+                  : "text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100"
+              ]}
+            >
+              Thesis
+            </a>
+            <a
+              href="/portfolio"
+              class:list={[
+                "font-mono text-xs sm:text-[13px] uppercase tracking-wider transition-colors",
+                currentPath.startsWith('/portfolio')
+                  ? "font-bold text-brand-light dark:text-brand-dark underline underline-offset-4"
+                  : "text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100"
+              ]}
+            >
+              Investments
+            </a>
+            <div class="pl-1 border-l border-stone-300 dark:border-stone-800 flex items-center">
+              <ThemeToggle client:load />
+            </div>
+          </nav>
+        </div>
+        <div class="sm:hidden text-[10px] text-stone-500 dark:text-stone-400 font-mono tracking-wider uppercase mt-0.5">
+          Business &amp; investments @ Zerodha
+        </div>
       </div>
     </header>
 
     <!-- Main Content -->
-    <main class={`flex-grow ${maxWidth} mx-auto w-full px-6 py-8 sm:py-12`}>
+    <main class={`flex-grow ${maxWidth} mx-auto w-full px-4 sm:px-6 py-6 sm:py-12`}>
       <slot />
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-stone-300/80 dark:border-stone-800 py-8 mt-8">
-      <div class={`${maxWidth} mx-auto px-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 font-mono text-xs text-stone-500 dark:text-stone-400`}>
+    <footer class="border-t border-stone-300/80 dark:border-stone-800 py-6 sm:py-8 mt-6 sm:mt-8">
+      <div class={`${maxWidth} mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 font-mono text-xs text-stone-500 dark:text-stone-400`}>
         <div>
           Dinesh Pai &middot; <a href="mailto:dinesh@zerodha.com" class="hover:text-stone-900 dark:hover:text-stone-100 hover:underline">dinesh@zerodha.com</a>
         </div>

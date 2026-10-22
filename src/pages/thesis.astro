@@ -8,7 +8,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   maxWidth="max-w-5xl"
   showProgress={true}
 >
-  <div class="space-y-16 py-2 font-serif">
+  <div class="space-y-12 sm:space-y-16 py-2 font-serif">
 
     <!-- TITLE & OVERVIEW -->
     <header class="space-y-4">
@@ -20,35 +20,35 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </p>
 
       <!-- Prominent Section Index -->
-      <nav aria-label="Thesis sections" class="mt-6 p-4 sm:p-5 rounded-md border border-stone-300/90 dark:border-stone-700 bg-white/60 dark:bg-stone-900/50 space-y-3">
+      <nav aria-label="Thesis sections" class="mt-5 p-3.5 sm:p-5 rounded-md border border-stone-300/90 dark:border-stone-700 bg-white/60 dark:bg-stone-900/50 space-y-2.5 sm:space-y-3">
         <div class="flex items-center justify-between border-b border-stone-200/90 dark:border-stone-800 pb-2 font-mono text-xs uppercase tracking-wider">
           <span class="font-bold text-stone-900 dark:text-stone-100">On This Page</span>
           <span class="text-stone-500 dark:text-stone-400">01 to 06</span>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 font-mono text-xs">
-          <a href="#first-principles" class="group flex items-baseline gap-2.5 p-2.5 rounded border border-stone-200/80 dark:border-stone-800 bg-white/70 dark:bg-stone-900/60 hover:border-brand-light dark:hover:border-brand-dark transition-colors">
-            <span class="font-bold text-brand-light dark:text-brand-dark">01</span>
-            <span class="font-medium text-stone-800 dark:text-stone-200 group-hover:text-brand-light dark:group-hover:text-brand-dark">First Principles</span>
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-2.5 font-mono text-[11px] sm:text-xs">
+          <a href="#first-principles" class="group flex items-baseline gap-2 p-2 sm:p-2.5 rounded border border-stone-200/80 dark:border-stone-800 bg-white/70 dark:bg-stone-900/60 hover:border-brand-light dark:hover:border-brand-dark transition-colors">
+            <span class="font-bold text-brand-light dark:text-brand-dark shrink-0">01</span>
+            <span class="font-medium text-stone-800 dark:text-stone-200 group-hover:text-brand-light dark:group-hover:text-brand-dark leading-tight">First Principles</span>
           </a>
-          <a href="#income-slabs" class="group flex items-baseline gap-2.5 p-2.5 rounded border border-stone-200/80 dark:border-stone-800 bg-white/70 dark:bg-stone-900/60 hover:border-brand-light dark:hover:border-brand-dark transition-colors">
-            <span class="font-bold text-brand-light dark:text-brand-dark">02</span>
-            <span class="font-medium text-stone-800 dark:text-stone-200 group-hover:text-brand-light dark:group-hover:text-brand-dark">Household Incomes</span>
+          <a href="#income-slabs" class="group flex items-baseline gap-2 p-2 sm:p-2.5 rounded border border-stone-200/80 dark:border-stone-800 bg-white/70 dark:bg-stone-900/60 hover:border-brand-light dark:hover:border-brand-dark transition-colors">
+            <span class="font-bold text-brand-light dark:text-brand-dark shrink-0">02</span>
+            <span class="font-medium text-stone-800 dark:text-stone-200 group-hover:text-brand-light dark:group-hover:text-brand-dark leading-tight">Household Incomes</span>
           </a>
-          <a href="#tax-filings" class="group flex items-baseline gap-2.5 p-2.5 rounded border border-stone-200/80 dark:border-stone-800 bg-white/70 dark:bg-stone-900/60 hover:border-brand-light dark:hover:border-brand-dark transition-colors">
-            <span class="font-bold text-brand-light dark:text-brand-dark">03</span>
-            <span class="font-medium text-stone-800 dark:text-stone-200 group-hover:text-brand-light dark:group-hover:text-brand-dark">Tax Filings</span>
+          <a href="#tax-filings" class="group flex items-baseline gap-2 p-2 sm:p-2.5 rounded border border-stone-200/80 dark:border-stone-800 bg-white/70 dark:bg-stone-900/60 hover:border-brand-light dark:hover:border-brand-dark transition-colors">
+            <span class="font-bold text-brand-light dark:text-brand-dark shrink-0">03</span>
+            <span class="font-medium text-stone-800 dark:text-stone-200 group-hover:text-brand-light dark:group-hover:text-brand-dark leading-tight">Tax Filings</span>
           </a>
-          <a href="#what-gets-scarce" class="group flex items-baseline gap-2.5 p-2.5 rounded border border-stone-200/80 dark:border-stone-800 bg-white/70 dark:bg-stone-900/60 hover:border-brand-light dark:hover:border-brand-dark transition-colors">
-            <span class="font-bold text-brand-light dark:text-brand-dark">04</span>
-            <span class="font-medium text-stone-800 dark:text-stone-200 group-hover:text-brand-light dark:group-hover:text-brand-dark">Consumer Scarcity</span>
+          <a href="#what-gets-scarce" class="group flex items-baseline gap-2 p-2 sm:p-2.5 rounded border border-stone-200/80 dark:border-stone-800 bg-white/70 dark:bg-stone-900/60 hover:border-brand-light dark:hover:border-brand-dark transition-colors">
+            <span class="font-bold text-brand-light dark:text-brand-dark shrink-0">04</span>
+            <span class="font-medium text-stone-800 dark:text-stone-200 group-hover:text-brand-light dark:group-hover:text-brand-dark leading-tight">Consumer Scarcity</span>
           </a>
-          <a href="#import-dependence" class="group flex items-baseline gap-2.5 p-2.5 rounded border border-stone-200/80 dark:border-stone-800 bg-white/70 dark:bg-stone-900/60 hover:border-brand-light dark:hover:border-brand-dark transition-colors">
-            <span class="font-bold text-brand-light dark:text-brand-dark">05</span>
-            <span class="font-medium text-stone-800 dark:text-stone-200 group-hover:text-brand-light dark:group-hover:text-brand-dark">What India Imports Today</span>
+          <a href="#import-dependence" class="group flex items-baseline gap-2 p-2 sm:p-2.5 rounded border border-stone-200/80 dark:border-stone-800 bg-white/70 dark:bg-stone-900/60 hover:border-brand-light dark:hover:border-brand-dark transition-colors">
+            <span class="font-bold text-brand-light dark:text-brand-dark shrink-0">05</span>
+            <span class="font-medium text-stone-800 dark:text-stone-200 group-hover:text-brand-light dark:group-hover:text-brand-dark leading-tight">What India Imports</span>
           </a>
-          <a href="#sovereign-infra" class="group flex items-baseline gap-2.5 p-2.5 rounded border border-stone-200/80 dark:border-stone-800 bg-white/70 dark:bg-stone-900/60 hover:border-brand-light dark:hover:border-brand-dark transition-colors">
-            <span class="font-bold text-brand-light dark:text-brand-dark">06</span>
-            <span class="font-medium text-stone-800 dark:text-stone-200 group-hover:text-brand-light dark:group-hover:text-brand-dark">Industrial &amp; Sovereign Tech</span>
+          <a href="#sovereign-infra" class="group flex items-baseline gap-2 p-2 sm:p-2.5 rounded border border-stone-200/80 dark:border-stone-800 bg-white/70 dark:bg-stone-900/60 hover:border-brand-light dark:hover:border-brand-dark transition-colors">
+            <span class="font-bold text-brand-light dark:text-brand-dark shrink-0">06</span>
+            <span class="font-medium text-stone-800 dark:text-stone-200 group-hover:text-brand-light dark:group-hover:text-brand-dark leading-tight">Industrial Tech</span>
           </a>
         </div>
       </nav>
@@ -946,7 +946,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   name="name"
                   type="text"
                   placeholder="Your name"
-                  class="w-full rounded border border-stone-300 dark:border-stone-700 bg-white/80 dark:bg-stone-900/70 px-3 py-2 text-sm text-stone-900 dark:text-stone-100 placeholder:text-stone-400 focus:outline-none focus:border-brand-light dark:focus:border-brand-dark"
+                  class="w-full rounded border border-stone-300 dark:border-stone-700 bg-white/80 dark:bg-stone-900/70 px-3 py-2 text-base sm:text-sm text-stone-900 dark:text-stone-100 placeholder:text-stone-400 focus:outline-none focus:border-brand-light dark:focus:border-brand-dark"
                 />
               </div>
               <div>
@@ -958,7 +958,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   name="contact"
                   type="text"
                   placeholder="you@example.com"
-                  class="w-full rounded border border-stone-300 dark:border-stone-700 bg-white/80 dark:bg-stone-900/70 px-3 py-2 text-sm text-stone-900 dark:text-stone-100 placeholder:text-stone-400 focus:outline-none focus:border-brand-light dark:focus:border-brand-dark"
+                  class="w-full rounded border border-stone-300 dark:border-stone-700 bg-white/80 dark:bg-stone-900/70 px-3 py-2 text-base sm:text-sm text-stone-900 dark:text-stone-100 placeholder:text-stone-400 focus:outline-none focus:border-brand-light dark:focus:border-brand-dark"
                 />
               </div>
             </div>
@@ -973,7 +973,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 rows="3"
                 required
                 placeholder="Share a thought, a disagreement, or what you're building..."
-                class="w-full rounded border border-stone-300 dark:border-stone-700 bg-white/80 dark:bg-stone-900/70 px-3 py-2 text-sm text-stone-900 dark:text-stone-100 placeholder:text-stone-400 focus:outline-none focus:border-brand-light dark:focus:border-brand-dark"
+                class="w-full rounded border border-stone-300 dark:border-stone-700 bg-white/80 dark:bg-stone-900/70 px-3 py-2 text-base sm:text-sm text-stone-900 dark:text-stone-100 placeholder:text-stone-400 focus:outline-none focus:border-brand-light dark:focus:border-brand-dark"
               ></textarea>
             </div>
 
@@ -1079,18 +1079,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   /* Cambrian-inspired heavy top rule for each section */
   .section-rule {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
     justify-content: space-between;
-    gap: 4px;
+    gap: 4px 12px;
     padding-top: 14px;
     border-top: 1.5px solid #1c1917;
-  }
-  @media (min-width: 640px) {
-    .section-rule {
-      flex-direction: row;
-      align-items: baseline;
-      gap: 16px;
-    }
   }
   :global(.dark) .section-rule {
     border-top-color: #d6d3d1;
@@ -1098,7 +1093,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .section-heading {
     font-family: 'DM Mono', monospace;
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -1225,7 +1220,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     position: relative;
     display: grid;
     gap: 11px;
-    padding-right: 78px;
+    padding-right: 96px;
   }
   .bar-name {
     display: block;
@@ -1629,5 +1624,42 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   :global(.dark) .data-table tfoot td {
     border-top-color: #d6d3d1;
     color: #f5f5f4;
+  }
+
+  /* Mobile viewport refinements (<= 640px) */
+  @media (max-width: 640px) {
+    .minichart-card,
+    .data-card {
+      padding: 14px;
+    }
+    .bars {
+      padding-right: 92px;
+    }
+    .val {
+      font-size: 0.68rem;
+      left: calc(var(--v) / var(--max) * 100% + 6px);
+    }
+    .wealth-body {
+      gap: 14px;
+    }
+    .wealth-body > div:last-child {
+      flex: 1 1 135px;
+    }
+    .data-table {
+      font-size: 0.82rem;
+      min-width: 480px;
+    }
+    .data-table th,
+    .data-table td {
+      padding: 8px 10px;
+    }
+    .data-table th:first-child,
+    .data-table td:first-child {
+      padding-left: 4px;
+    }
+    .data-table th:last-child,
+    .data-table td:last-child {
+      padding-right: 4px;
+    }
   }
 </style>

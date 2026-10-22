@@ -221,11 +221,20 @@ const readingTime = Math.max(1, Math.ceil(words / 220));
   }
 
   .body :global(table) {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     width: 100%;
     border-collapse: collapse;
     margin: 24px 0;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-variant-numeric: tabular-nums;
+  }
+  @media (min-width: 640px) {
+    .body :global(table) {
+      display: table;
+      font-size: 0.9rem;
+    }
   }
   .body :global(th),
   .body :global(td) {

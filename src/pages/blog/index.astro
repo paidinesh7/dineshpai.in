@@ -57,13 +57,13 @@ const years = Object.keys(postsByYear)
               {yearPosts.map((post) => {
                 const readingTime = getReadingTime(post.body);
                 return (
-                  <article class="py-4 grid grid-cols-1 sm:grid-cols-[110px_1fr_80px] gap-1 sm:gap-6 items-baseline">
-                    <time
-                      datetime={post.data.date.toISOString()}
-                      class="font-mono text-xs text-stone-500 dark:text-stone-400 tabular-nums"
-                    >
-                      {post.data.date.toLocaleDateString('en-US', { month: 'short', day: '2-digit' })}
-                    </time>
+                  <article class="py-3.5 sm:py-4 grid grid-cols-1 sm:grid-cols-[110px_1fr_80px] gap-1 sm:gap-6 items-baseline">
+                    <div class="flex items-center gap-2 font-mono text-xs text-stone-500 dark:text-stone-400 tabular-nums">
+                      <time datetime={post.data.date.toISOString()}>
+                        {post.data.date.toLocaleDateString('en-US', { month: 'short', day: '2-digit' })}
+                      </time>
+                      <span class="sm:hidden text-stone-400 dark:text-stone-500">&middot; {readingTime} min</span>
+                    </div>
 
                     <div>
                       <h3 class="text-base sm:text-lg font-bold text-stone-900 dark:text-stone-100 leading-snug">
@@ -81,7 +81,7 @@ const years = Object.keys(postsByYear)
                       )}
                     </div>
 
-                    <span class="font-mono text-[11px] text-stone-400 dark:text-stone-500 sm:text-right tabular-nums">
+                    <span class="hidden sm:inline font-mono text-[11px] text-stone-400 dark:text-stone-500 sm:text-right tabular-nums">
                       {readingTime} min
                     </span>
                   </article>

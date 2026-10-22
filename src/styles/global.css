@@ -45,6 +45,7 @@
   body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
   }
 
   body {
@@ -80,16 +81,17 @@
   /* Heavy top rule for editorial sections (shared across Home, Thesis, Portfolio, Essays) */
   .section-rule {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
     justify-content: space-between;
-    gap: 4px;
-    padding-top: 14px;
+    gap: 4px 12px;
+    padding-top: 12px;
     border-top: 1.5px solid #1c1917;
   }
   @media (min-width: 640px) {
     .section-rule {
-      flex-direction: row;
-      align-items: baseline;
+      padding-top: 14px;
       gap: 16px;
     }
   }
@@ -99,9 +101,9 @@
 
   .section-heading {
     font-family: 'DM Mono', monospace;
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 700;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #1c1917;
     margin: 0;
@@ -109,6 +111,7 @@
   @media (min-width: 640px) {
     .section-heading {
       font-size: 1.15rem;
+      letter-spacing: 0.06em;
     }
   }
   .dark .section-heading {
