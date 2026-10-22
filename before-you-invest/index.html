@@ -559,17 +559,17 @@
     @media (max-width: 820px) {
       .layout {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 28px;
       }
       aside {
         position: static;
         border-bottom: 2px solid var(--line-dark);
-        padding-bottom: 20px;
+        padding-bottom: 18px;
       }
       .nav-list {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 6px 16px;
+        gap: 6px 14px;
       }
       .sidebar-hint {
         display: none;
@@ -591,6 +591,32 @@
       }
       .compare-grid {
         grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 24px 16px 64px;
+      }
+      .product-title {
+        font-size: 24px;
+      }
+      .product-what {
+        font-size: 15.5px;
+      }
+      .stat-val {
+        font-size: 18px;
+      }
+      .catch-box {
+        padding: 18px;
+        margin-top: 22px;
+      }
+      .catch-lead {
+        font-size: 18px;
+      }
+      .calc-input,
+      .compare-select {
+        font-size: 16px;
       }
     }
   </style>
