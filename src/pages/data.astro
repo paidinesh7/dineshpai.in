@@ -1,0 +1,663 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const decks = [
+  {
+    slug: 'fii-dii-ownership',
+    title: 'Who Owns the Indian Stock Market (2000 to 2026)',
+    subtitle: 'How domestic institutions and households overtook foreign investors for the first time in 25 years—and why monthly SIP inflows changed how the market absorbs global sell-offs.',
+    category: 'Markets & Flows',
+    date: 'October 2026',
+    slides: 5,
+    source: 'NSE Ownership Tracker · AMFI · SEBI',
+    metrics: [
+      { label: 'DII + Retail Share', value: '27.4%' },
+      { label: 'FII Share (15Y Low)', value: '16.5%' },
+      { label: 'Monthly SIP Inflow', value: '₹26,400 Cr' }
+    ]
+  },
+  {
+    slug: 'foreign-bank-nbfc-deals',
+    title: 'Why Foreign Investors Put ₹1.81 Lakh Cr Into Indian Banks & NBFCs',
+    subtitle: 'Nine landmark deals across private banks and NBFCs in 2025–2026—from SMBC (Yes Bank), Emirates NBD (RBL), and MUFG (Shriram) to the IDBI Bank privatisation process.',
+    category: 'Banking & Credit',
+    date: 'October 2026',
+    slides: 5,
+    source: 'RBI · SEBI Filings · Exchange Disclosures',
+    metrics: [
+      { label: 'Total Foreign Capital', value: '₹1.81L Cr' },
+      { label: 'Deals in 14 Months', value: '9 Deals' },
+      { label: 'System Gross NPA', value: '2.4% (15Y Low)' }
+    ]
+  },
+  {
+    slug: 'yes-bank-at1-bonds',
+    title: 'Yes Bank’s ₹8,415 Cr AT1 Bond Case — And What Changed',
+    subtitle: 'What Additional Tier-1 bonds are, why ₹8,415 Cr was written down to zero before equity in March 2020, the April 2026 Supreme Court ruling, and how SEBI closed the retail mis-selling loop.',
+    category: 'Banking & Credit',
+    date: 'October 2026',
+    slides: 5,
+    source: 'Supreme Court Judgment · RBI Basel III · SEBI',
+    metrics: [
+      { label: 'AT1 Written Down', value: '₹8,415 Cr' },
+      { label: 'Min Ticket Size Now', value: '₹1 Crore' },
+      { label: 'Equity Kept Alive', value: '₹10,000 Cr' }
+    ]
+  },
+  {
+    slug: 'nifty-corrections',
+    title: '25 Years of Nifty Corrections & What Leads Recoveries (2000 to 2026)',
+    subtitle: 'Every major Nifty 50 drawdown since 2000—separating systemic solvency crashes from slow valuation resets, P/E floors (~18.5x), and why new sectors lead every recovery.',
+    category: 'Markets & Flows',
+    date: 'October 2026',
+    slides: 5,
+    source: 'NSE Historical Index Archive · RBI',
+    metrics: [
+      { label: 'Valuation Reset Floor', value: '18x–19x P/E' },
+      { label: 'Median 1Y Rebound', value: '+30.2%' },
+      { label: 'Median 3Y CAGR', value: '+20.2% / yr' }
+    ]
+  },
+  {
+    slug: 'capital-gains-stt',
+    title: '20 Years of Stock Market Taxes in India — Capital Gains & STT',
+    subtitle: 'How India went from replacing LTCG with STT in October 2004 (0% LTCG) to collecting ₹63,670 Cr in yearly STT alongside 12.5% LTCG and 20% STCG across 13.5 Crore investors.',
+    category: 'Policy & Tax',
+    date: 'October 2026',
+    slides: 8,
+    source: 'Union Budget Receipt Docs · NSE Market Pulse',
+    metrics: [
+      { label: 'Yearly STT (FY26 RE)', value: '₹63,670 Cr' },
+      { label: 'Unique NSE Investors', value: '13.52 Cr' },
+      { label: 'LTCG Rate (2004 → 26)', value: '0% → 12.5%' }
+    ]
+  },
+  {
+    slug: 'jio-platforms-drhp',
+    title: 'Inside the Jio Platforms IPO — SEBI DRHP Breakdown',
+    subtitle: 'Key numbers from Jio Platforms’ June 2026 SEBI DRHP: ₹30,049 Cr FY26 net profit, 100% fresh issue (~₹37,700 Cr with zero OFS from Meta, Google, or PE funds), and ₹27,500 Cr telecom debt paydown.',
+    category: 'IPOs & Corporate',
+    date: 'September 2026',
+    slides: 7,
+    source: 'Jio Platforms SEBI DRHP · Telecom Filings',
+    metrics: [
+      { label: 'FY26 Net Profit', value: '₹30,049 Cr' },
+      { label: 'Offer For Sale (OFS)', value: 'Zero (100% Fresh)' },
+      { label: 'Debt Repayment', value: '₹27,500 Cr' }
+    ]
+  }
+];
+
+const categories = ['All', 'Markets & Flows', 'Banking & Credit', 'Policy & Tax', 'IPOs & Corporate'];
+---
+
+<BaseLayout
+  title="Data & Visual Briefs — Dinesh Pai"
+  description="Visual data decks on Indian capital markets, FII/DII ownership, banking & NBFC deals, market corrections, taxation, and corporate filings."
+>
+  <section class="data-hero">
+    <div class="eyebrow">DATA &amp; VISUAL BRIEFS</div>
+    <h1 class="page-title">Markets, Policy &amp; Capital Flows in Numbers</h1>
+    <p class="page-lead">
+      Short, self-contained slide decks built from primary filings—NSE ownership trackers, RBI monetary archives, SEBI DRHPs, Supreme Court judgments, and Union Budget receipt documents. Flip through each deck below or open full-screen.
+    </p>
+
+    <div class="filter-bar" role="tablist" aria-label="Filter data decks by topic">
+      {categories.map((cat, idx) => (
+        <button
+          type="button"
+          class={`filter-pill ${idx === 0 ? 'active' : ''}`}
+          data-filter={cat}
+        >
+          {cat}
+          {cat === 'All' ? ` (${decks.length})` : ''}
+        </button>
+      ))}
+    </div>
+  </section>
+
+  <section class="decks-list">
+    {decks.map((deck, idx) => (
+      <article class="deck-card" id={deck.slug} data-category={deck.category}>
+        <div class="deck-card-top">
+          <div class="deck-meta-row">
+            <span class="deck-cat-badge">{deck.category}</span>
+            <span class="deck-meta-sep">&middot;</span>
+            <span class="deck-meta-item">{deck.slides} Slides</span>
+            <span class="deck-meta-sep">&middot;</span>
+            <span class="deck-meta-item">{deck.date}</span>
+            <span class="deck-meta-sep hide-mobile">&middot;</span>
+            <span class="deck-meta-source hide-mobile">Source: {deck.source}</span>
+          </div>
+
+          <div class="deck-title-row">
+            <div>
+              <h2 class="deck-title">
+                <a href={`/data-decks/${deck.slug}.html`}>{deck.title}</a>
+              </h2>
+              <p class="deck-subtitle">{deck.subtitle}</p>
+            </div>
+          </div>
+
+          <div class="deck-metrics-strip">
+            {deck.metrics.map((m) => (
+              <div class="deck-metric-box">
+                <span class="deck-metric-label">{m.label}</span>
+                <span class="deck-metric-val">{m.value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="deck-viewer-shell">
+          <div class="deck-iframe-wrap">
+            <iframe
+              src={`/data-decks/${deck.slug}.html?embed=1`}
+              title={deck.title}
+              loading={idx === 0 ? 'eager' : 'lazy'}
+              data-deck-iframe={deck.slug}
+            ></iframe>
+          </div>
+
+          <div class="deck-controls-bar" data-controls-for={deck.slug} data-total={deck.slides}>
+            <div class="deck-step-group">
+              <button
+                type="button"
+                class="deck-ctrl-btn"
+                data-action="prev"
+                data-target={deck.slug}
+                disabled
+                aria-label="Previous slide"
+              >
+                &larr; Prev
+              </button>
+              <span class="deck-slide-status" data-status-for={deck.slug}>
+                01 / {String(deck.slides).padStart(2, '0')}
+              </span>
+              <button
+                type="button"
+                class="deck-ctrl-btn"
+                data-action="next"
+                data-target={deck.slug}
+                aria-label="Next slide"
+              >
+                Next &rarr;
+              </button>
+            </div>
+
+            <div class="deck-pills-group" data-pills-for={deck.slug}>
+              {Array.from({ length: deck.slides }).map((_, sIdx) => (
+                <button
+                  type="button"
+                  class={`deck-slide-pill ${sIdx === 0 ? 'active' : ''}`}
+                  data-action="goto"
+                  data-target={deck.slug}
+                  data-index={sIdx}
+                  aria-label={`Slide ${sIdx + 1}`}
+                >
+                  {sIdx + 1}
+                </button>
+              ))}
+            </div>
+
+            <div class="deck-external-group">
+              <a
+                href={`/data-decks/${deck.slug}.html?mode=scroll`}
+                class="deck-ext-link"
+                title="View all slides vertically or print to PDF"
+              >
+                Scroll All / PDF
+              </a>
+              <a
+                href={`/data-decks/${deck.slug}.html`}
+                class="deck-ext-link primary"
+                title="Open full-screen interactive deck"
+              >
+                Full Screen &nearr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+    ))}
+  </section>
+
+  <script is:inline>
+    (function() {
+      // Category filtering
+      const filterBtns = Array.from(document.querySelectorAll('.filter-pill'));
+      const cards = Array.from(document.querySelectorAll('.deck-card'));
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const cat = btn.getAttribute('data-filter');
+          filterBtns.forEach((b) => b.classList.toggle('active', b === btn));
+          cards.forEach((card) => {
+            const cardCat = card.getAttribute('data-category');
+            if (cat === 'All' || cardCat === cat) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Send commands to embedded deck iframes
+      function sendCommand(slug, payload) {
+        const iframe = document.querySelector('iframe[data-deck-iframe="' + slug + '"]');
+        if (iframe && iframe.contentWindow) {
+          iframe.contentWindow.postMessage(Object.assign({ slug: slug }, payload), '*');
+        }
+      }
+
+      document.querySelectorAll('[data-action="prev"]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          sendCommand(btn.getAttribute('data-target'), { action: 'prev' });
+        });
+      });
+
+      document.querySelectorAll('[data-action="next"]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          sendCommand(btn.getAttribute('data-target'), { action: 'next' });
+        });
+      });
+
+      document.querySelectorAll('[data-action="goto"]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const slug = btn.getAttribute('data-target');
+          const idx = parseInt(btn.getAttribute('data-index'), 10);
+          sendCommand(slug, { action: 'goto', index: idx });
+        });
+      });
+
+      // Listen for state updates from embedded iframes
+      window.addEventListener('message', (e) => {
+        const data = e.data || {};
+        if (data.type !== 'deck-state' || !data.slug) return;
+
+        const slug = data.slug;
+        const current = data.currentSlide;
+        const total = data.totalSlides;
+
+        const bar = document.querySelector('[data-controls-for="' + slug + '"]');
+        if (!bar) return;
+
+        const prevBtn = bar.querySelector('[data-action="prev"]');
+        const nextBtn = bar.querySelector('[data-action="next"]');
+        const statusEl = bar.querySelector('[data-status-for="' + slug + '"]');
+        const pillsWrap = bar.querySelector('[data-pills-for="' + slug + '"]');
+
+        if (prevBtn) prevBtn.disabled = current <= 0;
+        if (nextBtn) nextBtn.disabled = current >= total - 1;
+        if (statusEl) {
+          const c = String(current + 1).padStart(2, '0');
+          const t = String(total).padStart(2, '0');
+          statusEl.textContent = c + ' / ' + t;
+        }
+        if (pillsWrap) {
+          Array.from(pillsWrap.children).forEach((pill, idx) => {
+            pill.classList.toggle('active', idx === current);
+          });
+        }
+      });
+    })();
+  </script>
+</BaseLayout>
+
+<style>
+  .data-hero {
+    padding: 1.5rem 0 2rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2.25rem;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.6rem;
+  }
+
+  .page-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 0.75rem;
+  }
+
+  .page-lead {
+    font-size: 1.02rem;
+    line-height: 1.65;
+    color: var(--muted);
+    max-width: 66ch;
+    margin-bottom: 1.5rem;
+  }
+
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .filter-pill {
+    background: var(--surface);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 0.42rem 0.85rem;
+    border-radius: 999px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .filter-pill:hover {
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+
+  .filter-pill.active {
+    background: var(--ink);
+    color: var(--bg);
+    border-color: var(--ink);
+    font-weight: 500;
+  }
+
+  .decks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.75rem;
+  }
+
+  .deck-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  }
+
+  .deck-card-top {
+    padding: 1.5rem 1.75rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .deck-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: var(--font-mono);
+    font-size: 0.73rem;
+    color: var(--muted);
+    margin-bottom: 0.65rem;
+  }
+
+  .deck-cat-badge {
+    background: var(--bg);
+    color: var(--ink);
+    border: 1px solid var(--border);
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.68rem;
+  }
+
+  .deck-meta-sep {
+    color: var(--border);
+  }
+
+  .deck-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 0.45rem;
+  }
+
+  .deck-title a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .deck-title a:hover {
+    color: var(--accent);
+  }
+
+  .deck-subtitle {
+    font-size: 0.94rem;
+    line-height: 1.55;
+    color: var(--muted);
+    max-width: 72ch;
+    margin-bottom: 1.1rem;
+  }
+
+  .deck-metrics-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    padding-top: 0.9rem;
+    border-top: 1px dashed var(--border);
+  }
+
+  .deck-metric-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .deck-metric-label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+
+  .deck-metric-val {
+    font-family: var(--font-mono);
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .deck-viewer-shell {
+    background: #141413;
+  }
+
+  .deck-iframe-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #FFFFFF;
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+  }
+
+  .deck-iframe-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+
+  .deck-controls-bar {
+    background: #181816;
+    color: #E5E5E0;
+    padding: 0.65rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+  }
+
+  .deck-step-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .deck-ctrl-btn {
+    background: #272724;
+    color: #F5F5F0;
+    border: 1px solid #3A3A36;
+    border-radius: 4px;
+    padding: 0.38rem 0.75rem;
+    font-family: inherit;
+    font-size: 0.74rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+
+  .deck-ctrl-btn:hover:not(:disabled) {
+    background: #353531;
+  }
+
+  .deck-ctrl-btn:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+
+  .deck-slide-status {
+    min-width: 3.4rem;
+    text-align: center;
+    color: #A8A8A0;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .deck-pills-group {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .deck-slide-pill {
+    width: 1.65rem;
+    height: 1.65rem;
+    border-radius: 4px;
+    background: #242421;
+    color: #9E9E96;
+    border: 1px solid #33332F;
+    font-family: inherit;
+    font-size: 0.7rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .deck-slide-pill:hover {
+    color: #F5F5F0;
+    border-color: #55554F;
+  }
+
+  .deck-slide-pill.active {
+    background: #F5F5F0;
+    color: #111111;
+    border-color: #F5F5F0;
+    font-weight: 600;
+  }
+
+  .deck-external-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .deck-ext-link {
+    color: #D4D4CE;
+    text-decoration: none;
+    padding: 0.38rem 0.68rem;
+    border-radius: 4px;
+    border: 1px solid #3A3A36;
+    background: #232320;
+    font-size: 0.72rem;
+    white-space: nowrap;
+  }
+
+  .deck-ext-link:hover {
+    background: #32322E;
+    color: #FFFFFF;
+  }
+
+  .deck-ext-link.primary {
+    background: #F5F5F0;
+    color: #111111;
+    border-color: #F5F5F0;
+    font-weight: 600;
+  }
+
+  .deck-ext-link.primary:hover {
+    background: #FFFFFF;
+  }
+
+  @media (max-width: 680px) {
+    .hide-mobile {
+      display: none;
+    }
+
+    .deck-card-top {
+      padding: 1.15rem 1.1rem 1rem;
+    }
+
+    .deck-metrics-strip {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+
+    .deck-metric-box {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .deck-controls-bar {
+      padding: 0.6rem 0.85rem;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.55rem;
+    }
+
+    .deck-step-group {
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .deck-ctrl-btn {
+      flex: 1;
+      padding: 0.5rem 0.75rem;
+      text-align: center;
+    }
+
+    .deck-pills-group {
+      display: none;
+    }
+
+    .deck-external-group {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .deck-ext-link {
+      flex: 1;
+      text-align: center;
+      padding: 0.48rem 0.5rem;
+    }
+  }
+</style>

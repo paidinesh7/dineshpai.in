@@ -1099,7 +1099,11 @@
         else if (data.action === 'goto' && typeof data.index === 'number') window.goToSlide(data.index);
       });
 
-      updateScale();
+      if (params.get('mode') === 'scroll') {
+        window.setDeckMode('scroll');
+      } else {
+        updateScale();
+      }
       renderState();
     })();
   </script>

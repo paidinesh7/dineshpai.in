@@ -581,36 +581,15 @@
             <line x1="324" y1="44" x2="324" y2="260" stroke="#DDDDDD" stroke-width="1" stroke-dasharray="3,3" />
             <line x1="510" y1="44" x2="510" y2="260" stroke="#000000" stroke-width="1" stroke-dasharray="3,3" />
 
-            <!-- FII Line (Dashed):
-                 2001: 10.8% (y=152)
-                 2008: 16.5% (y=95)
-                 2015: 20.7% (y=53)
-                 2020: 19.8% (y=62)
-                 2025: 16.7% (y=93)
-                 2026: 16.1% (y=99)
-            -->
+            <!-- FII Line (Dashed) -->
             <polyline fill="none" stroke="#555555" stroke-width="2.5" stroke-dasharray="6,4"
               points="50,152 187,95 324,53 422,62 510,93 545,99" />
 
-            <!-- Mutual Funds Line (Thin Grey):
-                 2001: 1.4% (y=246)
-                 2008: 3.1% (y=229)
-                 2015: 3.6% (y=224)
-                 2020: 7.4% (y=186)
-                 2025: 10.9% (y=151)
-                 2026: 11.5% (y=145)
-            -->
+            <!-- Mutual Funds Line (Thin Grey) -->
             <polyline fill="none" stroke="#888888" stroke-width="2"
               points="50,246 187,229 324,224 422,186 510,151 545,145" />
 
-            <!-- DII Total Line (Solid Black):
-                 2001: 11.2% (y=148)
-                 2008: 10.6% (y=154)
-                 2015: 10.4% (y=156)
-                 2020: 13.9% (y=121)
-                 2025: 18.3% (y=77)
-                 2026: 19.2% (y=68)
-            -->
+            <!-- DII Total Line (Solid Black) -->
             <polyline fill="none" stroke="#000000" stroke-width="3.2"
               points="50,148 187,154 324,156 422,121 510,77 545,68" />
 
@@ -752,11 +731,6 @@
     </header>
 
     <div class="slide-body" style="justify-content: space-between;">
-      <!-- Top Visual SVG Diverging Bar Chart -->
-      <!-- Scale: Zero line at y=148.
-           Max positive: +7.88 L Cr -> height 118px (15px per 1 L Cr) -> y=30
-           Max negative: -3.06 L Cr -> height 46px (15px per 1 L Cr) -> y=194
-      -->
       <div style="border: 1px solid var(--line); padding: 14px 20px 10px 20px;">
         <svg viewBox="0 0 1080 222" width="100%" height="218" style="overflow: visible;">
           <!-- Horizontal Grid Lines -->
@@ -771,61 +745,61 @@
           <text x="46" y="152" text-anchor="end" font-family="JetBrains Mono" font-size="10.5" font-weight="600" fill="#000">0</text>
           <text x="46" y="197" text-anchor="end" font-family="JetBrains Mono" font-size="10.5" fill="#666">-3L Cr</text>
 
-          <!-- 1. 2001-03 (x=105): FII +0.06 (h=2), DII +0.02 (h=1) -->
+          <!-- 1. 2001-03 -->
           <rect x="83" y="145" width="22" height="3" fill="#B0B0B0" stroke="#555" stroke-width="0.8" />
           <rect x="107" y="146" width="22" height="2" fill="#000000" />
           <text x="106" y="138" text-anchor="middle" font-family="JetBrains Mono" font-size="9.5" fill="#555">+0.06 / +0.02</text>
           <text x="106" y="214" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#222">2001–03</text>
 
-          <!-- 2. 2008 GFC (x=218): FII -1.02 (h=15.3), DII +0.73 (h=11) -->
+          <!-- 2. 2008 GFC -->
           <rect x="196" y="148" width="22" height="15.3" fill="#B0B0B0" stroke="#555" stroke-width="0.8" />
           <rect x="220" y="137" width="22" height="11" fill="#000000" />
           <text x="207" y="176" text-anchor="middle" font-family="JetBrains Mono" font-size="9.5" fill="#444">-1.02</text>
           <text x="231" y="131" text-anchor="middle" font-family="JetBrains Mono" font-size="9.5" font-weight="600" fill="#000">+0.73</text>
           <text x="219" y="214" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#000">2008</text>
 
-          <!-- 3. 2013 Taper Tantrum (x=331): FII +1.13 (h=17), DII -0.74 (h=11.1) -->
+          <!-- 3. 2013 Taper Tantrum -->
           <rect x="309" y="131" width="22" height="17" fill="#B0B0B0" stroke="#555" stroke-width="0.8" />
           <rect x="333" y="148" width="22" height="11.1" fill="#000000" />
           <text x="320" y="125" text-anchor="middle" font-family="JetBrains Mono" font-size="9.5" fill="#444">+1.13</text>
           <text x="344" y="172" text-anchor="middle" font-family="JetBrains Mono" font-size="9.5" fill="#000">-0.74</text>
           <text x="332" y="214" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#222">2013</text>
 
-          <!-- 4. 2016 Demonetization (x=444): FII +0.21 (h=3.2), DII +0.36 (h=5.4) -->
+          <!-- 4. 2016 Demonetization -->
           <rect x="422" y="144.8" width="22" height="3.2" fill="#B0B0B0" stroke="#555" stroke-width="0.8" />
           <rect x="446" y="142.6" width="22" height="5.4" fill="#000000" />
           <text x="445" y="136" text-anchor="middle" font-family="JetBrains Mono" font-size="9.5" fill="#444">+0.21 / +0.36</text>
           <text x="445" y="214" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#222">2016</text>
 
-          <!-- 5. 2020 COVID (x=557): FII +0.65 (h=9.8), DII -0.36 (h=5.4) -->
+          <!-- 5. 2020 COVID -->
           <rect x="535" y="138.2" width="22" height="9.8" fill="#B0B0B0" stroke="#555" stroke-width="0.8" />
           <rect x="559" y="148" width="22" height="5.4" fill="#000000" />
           <text x="546" y="132" text-anchor="middle" font-family="JetBrains Mono" font-size="9.5" fill="#444">+0.65</text>
           <text x="570" y="166" text-anchor="middle" font-family="JetBrains Mono" font-size="9.5" fill="#000">-0.36</text>
           <text x="558" y="214" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#222">2020</text>
 
-          <!-- 6. 2022 Rate Hikes (x=670): FII -2.78 (h=41.7), DII +2.76 (h=41.4) -->
+          <!-- 6. 2022 Rate Hikes -->
           <rect x="648" y="148" width="22" height="41.7" fill="#B0B0B0" stroke="#555" stroke-width="0.8" />
           <rect x="672" y="106.6" width="22" height="41.4" fill="#000000" />
           <text x="659" y="201" text-anchor="middle" font-family="JetBrains Mono" font-size="9.5" fill="#444">-2.78</text>
           <text x="683" y="100" text-anchor="middle" font-family="JetBrains Mono" font-size="9.5" font-weight="600" fill="#000">+2.76</text>
           <text x="671" y="214" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#000">2022</text>
 
-          <!-- 7. 2024 Record FII Exit (x=783): FII -3.04 (h=45.6), DII +5.27 (h=79) -->
+          <!-- 7. 2024 Record FII Exit -->
           <rect x="761" y="148" width="22" height="45.6" fill="#B0B0B0" stroke="#555" stroke-width="0.8" />
           <rect x="785" y="69" width="22" height="79" fill="#000000" />
           <text x="772" y="204" text-anchor="middle" font-family="JetBrains Mono" font-size="9.5" fill="#444">-3.04</text>
           <text x="796" y="63" text-anchor="middle" font-family="JetBrains Mono" font-size="9.5" font-weight="600" fill="#000">+5.27</text>
           <text x="784" y="214" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#222">2024</text>
 
-          <!-- 8. 2025 Ownership Flip (x=896): FII -3.06 (h=45.9), DII +7.88 (h=118.2) -->
+          <!-- 8. 2025 Ownership Flip -->
           <rect x="874" y="148" width="22" height="45.9" fill="#B0B0B0" stroke="#555" stroke-width="0.8" />
           <rect x="898" y="29.8" width="22" height="118.2" fill="#000000" />
           <text x="885" y="204" text-anchor="middle" font-family="JetBrains Mono" font-size="9.5" fill="#444">-3.06</text>
           <text x="909" y="23" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="#000">+7.88</text>
           <text x="897" y="214" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="#000">2025</text>
 
-          <!-- 9. 2026 YTD (x=1009): FII -2.10 (h=31.5), DII +4.65 (h=69.8) -->
+          <!-- 9. 2026 YTD -->
           <rect x="987" y="148" width="22" height="31.5" fill="#B0B0B0" stroke="#555" stroke-width="0.8" />
           <rect x="1011" y="78.2" width="22" height="69.8" fill="#000000" />
           <text x="998" y="191" text-anchor="middle" font-family="JetBrains Mono" font-size="9.5" fill="#444">-2.10</text>
@@ -1182,7 +1156,14 @@
         else if (data.action === 'goto' && typeof data.index === 'number') window.goToSlide(data.index);
       });
 
-      updateScale();
+      if (params.get('mode') === 'scroll') {
+        window.setDeckMode('scroll');
+      }
+      if (params.get('mode') === 'scroll') {
+        window.setDeckMode('scroll');
+      } else {
+        updateScale();
+      }
       renderState();
     })();
   </script>
