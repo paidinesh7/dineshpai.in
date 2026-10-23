@@ -131,7 +131,7 @@ const pageTitle = title === "Home" || title === siteTitle ? siteTitle : `${title
             </span>
           </a>
 
-          <nav aria-label="Primary navigation" class="flex items-center gap-4 sm:gap-7 shrink-0">
+          <nav aria-label="Primary navigation" class="flex items-center gap-3.5 sm:gap-7 shrink-0">
             <a
               href="/thesis"
               class:list={[
@@ -142,6 +142,17 @@ const pageTitle = title === "Home" || title === siteTitle ? siteTitle : `${title
               ]}
             >
               Thesis
+            </a>
+            <a
+              href="/data"
+              class:list={[
+                "font-mono text-xs sm:text-[13px] uppercase tracking-wider transition-colors",
+                currentPath.startsWith('/data')
+                  ? "font-bold text-brand-light dark:text-brand-dark underline underline-offset-4"
+                  : "text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100"
+              ]}
+            >
+              Data
             </a>
             <a
               href="/portfolio"
