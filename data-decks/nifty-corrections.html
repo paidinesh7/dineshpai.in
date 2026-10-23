@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nifty Corrections & What Leads Recoveries (2000 to 2026)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-canvas: #111111;
+      --bg-slide: #FFFFFF;
+      --bg-subtle: #F7F7F7;
+      --ink: #000000;
+      --ink-body: #222222;
+      --ink-muted: #555555;
+      --line: #E0E0E0;
+      --line-strong: #000000;
+
+      --font-serif: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      font-family: var(--font-sans);
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 0;
+      gap: 40px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: var(--bg-slide);
+      position: relative;
+      overflow: hidden;
+      padding: 52px 80px 42px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+      break-after: page;
+    }
+
+    @page {
+      size: 1280px 720px;
+      margin: 0;
+    }
+
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+        gap: 0;
+      }
+      .slide {
+        page-break-after: always;
+        break-after: page;
+      }
+    }
+
+    .slide-header {
+      margin-bottom: 12px;
+    }
+
+    .slide-title {
+      font-family: var(--font-serif);
+      font-size: 44px;
+      font-weight: 400;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .slide-context {
+      font-family: var(--font-sans);
+      font-size: 16.5px;
+      font-weight: 400;
+      color: var(--ink-muted);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    .slide-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .slide-footer {
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--ink-muted);
+    }
+
+    .num {
+      font-family: var(--font-mono);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Clean Table */
+    table.clean-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-top: 2px solid var(--line-strong);
+      border-bottom: 2px solid var(--line-strong);
+    }
+
+    table.clean-table th {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink-muted);
+      padding: 10px 10px;
+      border-bottom: 1px solid var(--line-strong);
+      text-align: left;
+    }
+
+    table.clean-table td {
+      padding: 10.5px 10px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14.5px;
+      color: var(--ink-body);
+      vertical-align: middle;
+    }
+
+    table.clean-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    table.clean-table tr.highlight-row td {
+      background-color: var(--bg-subtle);
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    /* Two-column split */
+    .split-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      width: 100%;
+    }
+
+    .box-card {
+      border: 1.5px solid var(--line-strong);
+      padding: 26px 28px;
+      background: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .box-card.subtle {
+      background: var(--bg-subtle);
+      border: 1.5px solid var(--line);
+    }
+
+    .box-tag {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      margin-bottom: 6px;
+    }
+
+    .box-heading {
+      font-family: var(--font-serif);
+      font-size: 30px;
+      color: var(--ink);
+      margin-bottom: 10px;
+      line-height: 1.15;
+    }
+
+    .stat-row-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 14px 0;
+      margin: 14px 0;
+    }
+
+    .stat-cell-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 4px;
+    }
+
+    .stat-cell-val {
+      font-family: var(--font-mono);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .bullet-clean {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .bullet-clean li {
+      font-size: 15px;
+      line-height: 1.45;
+      color: var(--ink-body);
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .bullet-clean li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .note-strip {
+      margin-top: 16px;
+      padding: 13px 18px;
+      background-color: var(--bg-subtle);
+      border-left: 3px solid var(--ink);
+      font-size: 14.5px;
+      line-height: 1.45;
+      color: var(--ink-body);
+    }
+
+    /* 4-Row Takeaways */
+    .takeaway-list {
+      display: flex;
+      flex-direction: column;
+      border-top: 2px solid var(--line-strong);
+    }
+
+    .takeaway-item {
+      display: grid;
+      grid-template-columns: 64px 310px 1fr;
+      gap: 24px;
+      align-items: baseline;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .takeaway-num {
+      font-family: var(--font-mono);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .takeaway-head {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+
+    .takeaway-desc {
+      font-size: 15.5px;
+      color: var(--ink-body);
+      line-height: 1.5;
+    }
+  </style>
+
+<style id="responsive-deck-engine">
+  :root {
+    --native-w: 1280px;
+    --native-h: 720px;
+    --scale: 1;
+  }
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    min-height: 100vh !important;
+    background: #141413 !important;
+    color: #111111;
+    overflow-x: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+  }
+
+  body[data-mode="flipbook"] {
+    height: 100vh !important;
+    height: 100dvh !important;
+    overflow: hidden !important;
+  }
+
+  body[data-mode="scroll"] {
+    height: auto !important;
+    overflow-y: auto !important;
+  }
+
+  body[data-embed="true"] {
+    background: #FFFFFF !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+  }
+
+  /* Top Chrome Bar */
+  .deck-topbar {
+    height: 48px;
+    background: #1C1C1A;
+    border-bottom: 1px solid #2E2E2B;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 12px;
+    color: #D4D4CE;
+    flex-shrink: 0;
+    z-index: 50;
+  }
+
+  body[data-embed="true"] .deck-topbar,
+  body[data-embed="true"] .deck-bottombar {
+    display: none !important;
+  }
+
+  .deck-back {
+    color: #F5F5F0;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background: #292926;
+    border: 1px solid #3A3A36;
+  }
+  .deck-back:hover {
+    background: #33332F;
+  }
+
+  .deck-top-title {
+    font-weight: 500;
+    color: #A8A8A0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+    text-align: center;
+  }
+
+  .deck-top-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .deck-action-btn {
+    background: #292926;
+    color: #E5E5E0;
+    border: 1px solid #3A3A36;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-family: inherit;
+    font-size: 11.5px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .deck-action-btn:hover {
+    background: #33332F;
+  }
+  .deck-action-btn.active {
+    background: #F5F5F0;
+    color: #111111;
+    border-color: #F5F5F0;
+    font-weight: 600;
+  }
+
+  /* Stage Area */
+  .deck-stage {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    position: relative;
+    min-height: 0;
+    width: 100%;
+  }
+
+  body[data-mode="scroll"] .deck-stage {
+    justify-content: flex-start;
+    padding: 24px 12px 64px 12px;
+    gap: 24px;
+  }
+
+  body[data-embed="true"] .deck-stage {
+    padding: 0 !important;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .slide-slot {
+    width: calc(var(--native-w) * var(--scale));
+    height: calc(var(--native-h) * var(--scale));
+    position: relative;
+    overflow: hidden;
+    background: #FFFFFF;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+    flex-shrink: 0;
+  }
+
+  body[data-mode="flipbook"] .slide-slot {
+    display: none;
+  }
+  body[data-mode="flipbook"] .slide-slot.active {
+    display: block;
+  }
+
+  body[data-mode="scroll"] .slide-slot {
+    display: block;
+  }
+
+  body[data-embed="true"] .slide-slot {
+    box-shadow: none !important;
+  }
+
+  .slide-scaler {
+    width: var(--native-w);
+    height: var(--native-h);
+    transform-origin: top left;
+    transform: scale(var(--scale));
+    position: relative;
+  }
+
+  .slide {
+    position: relative !important;
+    inset: auto !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    width: var(--native-w) !important;
+    height: var(--native-h) !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Bottom Bar for Flipbook Mode */
+  .deck-bottombar {
+    height: 52px;
+    background: #1C1C1A;
+    border-top: 1px solid #2E2E2B;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 12px;
+    color: #D4D4CE;
+    flex-shrink: 0;
+    z-index: 50;
+  }
+
+  body[data-mode="scroll"] .deck-bottombar {
+    display: none !important;
+  }
+
+  .deck-nav-btn {
+    background: #292926;
+    color: #F5F5F0;
+    border: 1px solid #3A3A36;
+    border-radius: 4px;
+    padding: 7px 14px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    min-width: 78px;
+  }
+  .deck-nav-btn:hover:not(:disabled) {
+    background: #33332F;
+  }
+  .deck-nav-btn:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+
+  .deck-dots {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .deck-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #44443F;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .deck-dot.active {
+    background: #F5F5F0;
+    transform: scale(1.25);
+  }
+
+  .deck-counter {
+    font-variant-numeric: tabular-nums;
+    color: #A8A8A0;
+    min-width: 54px;
+    text-align: center;
+  }
+
+  @media (max-width: 640px) {
+    .deck-top-title {
+      display: none;
+    }
+    .deck-stage {
+      padding: 8px;
+    }
+    .deck-dots {
+      display: none;
+    }
+  }
+
+  @media print {
+    @page {
+      size: 1280px 720px;
+      margin: 0;
+    }
+    html, body {
+      background: #FFFFFF !important;
+      height: auto !important;
+      overflow: visible !important;
+      display: block !important;
+    }
+    .deck-topbar, .deck-bottombar {
+      display: none !important;
+    }
+    .deck-stage {
+      padding: 0 !important;
+      display: block !important;
+    }
+    .slide-slot {
+      display: block !important;
+      width: 1280px !important;
+      height: 720px !important;
+      box-shadow: none !important;
+      page-break-after: always !important;
+      break-after: page !important;
+    }
+    .slide-scaler {
+      transform: none !important;
+    }
+  }
+</style>
+</head>
+<body data-mode="flipbook" data-embed="false">
+
+  <header class="deck-topbar">
+    <a href="/data" class="deck-back">&larr; dineshpai.in/data</a>
+    <div class="deck-top-title">25 Years of Nifty Corrections & What Leads Recoveries (2000–2026)</div>
+    <div class="deck-top-actions">
+      <button class="deck-action-btn active" id="btnFlipbook" onclick="setDeckMode('flipbook')">Slide View</button>
+      <button class="deck-action-btn" id="btnScroll" onclick="setDeckMode('scroll')">Scroll All (5)</button>
+      <button class="deck-action-btn" onclick="window.print()">Print / PDF</button>
+    </div>
+  </header>
+
+  <main class="deck-stage" id="deckStage">
+    <div class="slide-slot active" data-index="0"><div class="slide-scaler"><section class="slide">
+    <div class="slide-header">
+      <h1 class="slide-title">25 Years of Nifty Corrections &amp; What Followed</h1>
+      <p class="slide-context">Every major Nifty 50 drop since 2000, how much valuations cooled down, and how the index performed over the next 1 and 3 years.</p>
+    </div>
+
+    <div class="slide-body">
+      <table class="clean-table">
+        <thead>
+          <tr>
+            <th style="width: 19%;">Period &amp; Trigger</th>
+            <th style="width: 14%;">Correction Type</th>
+            <th style="width: 15%;">Peak &rarr; Low</th>
+            <th style="text-align: right; width: 11%;">Max Fall</th>
+            <th style="text-align: right; width: 11%;">Duration</th>
+            <th style="text-align: right; width: 13%;">P/E Reset</th>
+            <th style="text-align: right; width: 8.5%;">Next 1Y</th>
+            <th style="text-align: right; width: 8.5%;">3Y CAGR</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>2000–01</strong> (Dot-Com Bubble)</td>
+            <td>Systemic Crash</td>
+            <td class="num">1,818 &rarr; 854</td>
+            <td class="num" style="font-weight: 700;">-53.0%</td>
+            <td class="num">~600 days</td>
+            <td class="num">28.2x &rarr; 11.8x</td>
+            <td class="num">+22.4%</td>
+            <td class="num" style="font-weight: 600;">+28.0%</td>
+          </tr>
+          <tr>
+            <td><strong>May 2006</strong> (Metals Unwind)</td>
+            <td>Valuation Reset</td>
+            <td class="num">3,754 &rarr; 2,596</td>
+            <td class="num" style="font-weight: 700;">-30.8%</td>
+            <td class="num">34 days</td>
+            <td class="num">21.5x &rarr; 15.3x</td>
+            <td class="num">+65.1%</td>
+            <td class="num" style="font-weight: 600;">+18.2%</td>
+          </tr>
+          <tr>
+            <td><strong>2008</strong> (Global Financial Crisis)</td>
+            <td>Systemic Crash</td>
+            <td class="num">6,357 &rarr; 2,252</td>
+            <td class="num" style="font-weight: 700;">-64.6%</td>
+            <td class="num">293 days</td>
+            <td class="num">28.3x &rarr; 10.7x</td>
+            <td class="num">+108.7%</td>
+            <td class="num" style="font-weight: 600;">+30.9%</td>
+          </tr>
+          <tr>
+            <td><strong>2010–11</strong> (High Inflation / 13 Hikes)</td>
+            <td>Valuation Reset</td>
+            <td class="num">6,338 &rarr; 4,531</td>
+            <td class="num" style="font-weight: 700;">-28.5%</td>
+            <td class="num">410 days</td>
+            <td class="num">24.5x &rarr; 15.2x</td>
+            <td class="num">+30.3%</td>
+            <td class="num" style="font-weight: 600;">+22.3%</td>
+          </tr>
+          <tr>
+            <td><strong>2015–16</strong> (China Deval / Bank NPAs)</td>
+            <td>Valuation Reset</td>
+            <td class="num">9,119 &rarr; 6,825</td>
+            <td class="num" style="font-weight: 700;">-25.2%</td>
+            <td class="num">363 days</td>
+            <td class="num">23.8x &rarr; 18.5x</td>
+            <td class="num">+30.1%</td>
+            <td class="num" style="font-weight: 600;">+16.5%</td>
+          </tr>
+          <tr>
+            <td><strong>2018</strong> (IL&amp;FS NBFC Freeze)</td>
+            <td>Credit Squeeze</td>
+            <td class="num">11,760 &rarr; 10,004</td>
+            <td class="num" style="font-weight: 700;">-14.9%</td>
+            <td class="num">60 days</td>
+            <td class="num">26.4x &rarr; 22.8x</td>
+            <td class="num">+16.8%</td>
+            <td class="num" style="font-weight: 600;">+13.3%</td>
+          </tr>
+          <tr>
+            <td><strong>2020</strong> (COVID Lockdown)</td>
+            <td>Exogenous Shock</td>
+            <td class="num">12,430 &rarr; 7,511</td>
+            <td class="num" style="font-weight: 700;">-39.6%</td>
+            <td class="num">63 days</td>
+            <td class="num">28.6x &rarr; 17.1x</td>
+            <td class="num">+93.1%</td>
+            <td class="num" style="font-weight: 600;">+31.6%</td>
+          </tr>
+          <tr>
+            <td><strong>2021–22</strong> (US Rate Hikes / FII Exit)</td>
+            <td>Valuation Reset</td>
+            <td class="num">18,604 &rarr; 15,183</td>
+            <td class="num" style="font-weight: 700;">-18.4%</td>
+            <td class="num">241 days</td>
+            <td class="num">28.1x &rarr; 19.3x</td>
+            <td class="num">+23.9%</td>
+            <td class="num" style="font-weight: 600;">+17.3%</td>
+          </tr>
+          <tr class="highlight-row">
+            <td><strong>2026*</strong> (Earnings &amp; IT Reset)</td>
+            <td>Valuation Reset</td>
+            <td class="num">26,329 &rarr; 22,232</td>
+            <td class="num" style="font-weight: 700;">-15.6%</td>
+            <td class="num">280 days</td>
+            <td class="num">25.2x &rarr; 18.8x</td>
+            <td class="num">In prog.</td>
+            <td class="num">In prog.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note-strip">
+        <strong>The Base Rate:</strong> Across every major correction in the last 25 years, buying near the trough delivered positive 1-year and 3-year returns <strong>100% of the time</strong>—with a median 1-year rebound of <strong>+30.2%</strong> and a median 3-year compounding rate of <strong>+20.2% per year</strong>.
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <span>SOURCE: NSE HISTORICAL INDEX DATA (2000–2026) • TRAILING P/E ON CONSOLIDATED EARNINGS</span>
+      <span>1 / 5</span>
+    </div>
+  </section></div></div>
+<div class="slide-slot" data-index="1"><div class="slide-scaler"><section class="slide">
+    <div class="slide-header">
+      <h1 class="slide-title">Two Very Different Types of Market Corrections</h1>
+      <p class="slide-context">Not every market fall is 2008. Historically, Indian corrections fall into two distinct buckets—with very different depths and timelines.</p>
+    </div>
+
+    <div class="slide-body">
+      <div class="split-2">
+        <!-- Left Card: Systemic Crashes -->
+        <div class="box-card">
+          <div>
+            <div class="box-tag">TYPE 1 • 2000, 2008, 2020</div>
+            <h2 class="box-heading">Panic &amp; Solvency Crashes</h2>
+            <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.45;">
+              Something big breaks in the global financial system or economy—credit freezes, banks fail, or lockdowns halt business overnight.
+            </p>
+
+            <div class="stat-row-3">
+              <div>
+                <div class="stat-cell-label">Typical Fall</div>
+                <div class="stat-cell-val">-40% to -65%</div>
+              </div>
+              <div>
+                <div class="stat-cell-label">Trough P/E</div>
+                <div class="stat-cell-val">11x – 17x</div>
+              </div>
+              <div>
+                <div class="stat-cell-label">Next 1Y Rebound</div>
+                <div class="stat-cell-val">+93% to +109%</div>
+              </div>
+            </div>
+
+            <ul class="bullet-clean">
+              <li><strong>Everything is sold together:</strong> Good companies fall just as hard as bad ones because leveraged funds face forced margin calls.</li>
+              <li><strong>Sharp, V-shaped bounce:</strong> Once central banks cut rates and flood the system with liquidity, the market rebounds violently within months.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Card: Valuation Resets -->
+        <div class="box-card subtle">
+          <div>
+            <div class="box-tag">TYPE 2 • 2010–11, 2015–16, 2021–22, 2026</div>
+            <h2 class="box-heading">Slow Valuation Resets</h2>
+            <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.45;">
+              Nothing systemic breaks. The economy keeps growing, but stocks got too expensive (25x–28x P/E) while earnings growth slowed down.
+            </p>
+
+            <div class="stat-row-3">
+              <div>
+                <div class="stat-cell-label">Typical Fall</div>
+                <div class="stat-cell-val">-15% to -28%</div>
+              </div>
+              <div>
+                <div class="stat-cell-label">Trough P/E</div>
+                <div class="stat-cell-val">18x – 19x</div>
+              </div>
+              <div>
+                <div class="stat-cell-label">Typical Grind</div>
+                <div class="stat-cell-val">8 to 13 Mos</div>
+              </div>
+            </div>
+
+            <ul class="bullet-clean">
+              <li><strong>Time hurts more than price:</strong> Instead of a sudden crash, the index grinds sideways-to-down for 240 to 400 days while corporate earnings catch up.</li>
+              <li><strong>Stops near ~18.5x P/E:</strong> Historically, once Nifty trailing P/E compresses back to its 15-year average (~18.5x–19x), the index stops falling.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="note-strip">
+        <strong>Where 2026 Fits:</strong> With banks clean and domestic GDP growing, 2026 has behaved like a classic <strong>Type 2 Valuation Reset</strong>—lasting ~9 months so far while Nifty P/E cooled from <strong>25.2x to 18.8x</strong>.
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <span>SOURCE: NSE NIFTY 50 HISTORICAL VALUATION &amp; DRAWDOWN ARCHIVE</span>
+      <span>2 / 5</span>
+    </div>
+  </section></div></div>
+<div class="slide-slot" data-index="2"><div class="slide-scaler"><section class="slide">
+    <div class="slide-header">
+      <h1 class="slide-title">What Actually Sparked the Recovery Each Time?</h1>
+      <p class="slide-context">Markets never wait for all the bad news to clear. Here is what broke the market in each cycle—and the exact catalyst that turned it around.</p>
+    </div>
+
+    <div class="slide-body">
+      <table class="clean-table">
+        <thead>
+          <tr>
+            <th style="width: 15%;">Cycle &amp; Fall</th>
+            <th style="width: 34%;">What Caused the Fall</th>
+            <th style="width: 39%;">What Triggered the Recovery</th>
+            <th style="text-align: right; width: 12%;">3Y Return</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>2000–01</strong><br><span class="num" style="font-size: 12.5px; color: var(--ink-muted);">-53.0%</span></td>
+            <td>Dot-com bubble burst globally + Ketan Parekh circular trading scam froze local brokers.</td>
+            <td>Interest rates fell from 12% to 6%, Golden Quadrilateral infra spend kicked in, and corporate ROE doubled.</td>
+            <td class="num" style="font-weight: 700;">+28.0% / yr</td>
+          </tr>
+          <tr>
+            <td><strong>2008 GFC</strong><br><span class="num" style="font-size: 12.5px; color: var(--ink-muted);">-64.6%</span></td>
+            <td>Lehman Brothers collapse froze global dollar credit; FIIs pulled out ₹52,000 Cr in months.</td>
+            <td>RBI cut rates aggressively, government cut excise duties + 6th Pay Commission boosted rural/urban demand.</td>
+            <td class="num" style="font-weight: 700;">+30.9% / yr</td>
+          </tr>
+          <tr>
+            <td><strong>2010–11</strong><br><span class="num" style="font-size: 12.5px; color: var(--ink-muted);">-28.5%</span></td>
+            <td>Double-digit inflation forced 13 straight RBI rate hikes; policy paralysis stalled big projects.</td>
+            <td>RBI paused rate hikes in early 2012, crude oil cooled off, and Sept 2012 fiscal &amp; FDI reforms restored FII flows.</td>
+            <td class="num" style="font-weight: 700;">+22.3% / yr</td>
+          </tr>
+          <tr>
+            <td><strong>2015–16</strong><br><span class="num" style="font-size: 12.5px; color: var(--ink-muted);">-25.2%</span></td>
+            <td>China devalued the Yuan; RBI forced Indian banks to recognize hidden bad loans (NPA cleanup).</td>
+            <td>Passage of the IBC bankruptcy law (2016), bank recapitalization, and steady monthly mutual fund SIP inflows.</td>
+            <td class="num" style="font-weight: 700;">+16.5% / yr</td>
+          </tr>
+          <tr>
+            <td><strong>2020 COVID</strong><br><span class="num" style="font-size: 12.5px; color: var(--ink-muted);">-39.6%</span></td>
+            <td>Global pandemic lockdowns brought economic activity to a sudden halt in March 2020.</td>
+            <td>Zero global interest rates, corporate tax cut (25%), clean corporate balance sheets, and 10 Cr+ new retail investors.</td>
+            <td class="num" style="font-weight: 700;">+31.6% / yr</td>
+          </tr>
+          <tr>
+            <td><strong>2021–22</strong><br><span class="num" style="font-size: 12.5px; color: var(--ink-muted);">-18.4%</span></td>
+            <td>Russia-Ukraine war spiked oil above $110; US Fed hiked rates fastest in 40 years ($32B FII exit).</td>
+            <td>Domestic SIPs absorbed every rupee of FII selling; government capex and cleaned-up PSU banks drove earnings.</td>
+            <td class="num" style="font-weight: 700;">+17.3% / yr</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note-strip">
+        <strong>The Common Thread:</strong> Every recovery started with one of three sparks—<strong>central banks stopping rate hikes</strong>, <strong>balance-sheet cleanup finishing</strong>, or <strong>valuations getting cheap enough (~18x P/E)</strong> that domestic buyers stepped in.
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <span>SOURCE: RBI MONETARY POLICY ARCHIVES &amp; NSE HISTORICAL CYCLES</span>
+      <span>3 / 5</span>
+    </div>
+  </section></div></div>
+<div class="slide-slot" data-index="3"><div class="slide-scaler"><section class="slide">
+    <div class="slide-header">
+      <h1 class="slide-title">After Every Correction, New Sectors Lead the Recovery</h1>
+      <p class="slide-context">Investors instinctively buy the winners of the previous bull run. Historically, almost every recovery in India was led by a new set of sectors.</p>
+    </div>
+
+    <div class="slide-body">
+      <table class="clean-table">
+        <thead>
+          <tr>
+            <th style="width: 16%;">Recovery Cycle</th>
+            <th style="width: 38%;">Previous Cycle Darlings (What Lagged After)</th>
+            <th style="width: 46%;">New Recovery Leaders (What Led the Next 3–5 Years)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Post-2001</strong><br><span class="num" style="font-size: 12.5px; color: var(--ink-muted);">2002 – 2007 Run</span></td>
+            <td><strong>1999 Tech &amp; Media Stocks:</strong> Many speculative software names fell 80–90% and took 6+ years to reclaim their 2000 highs.</td>
+            <td><strong>Capital Goods, Banks &amp; Telecom:</strong> L&amp;T, BHEL, SBI, ICICI Bank, and Bharti Airtel rode India's infrastructure and credit boom.</td>
+          </tr>
+          <tr>
+            <td><strong>Post-2008</strong><br><span class="num" style="font-size: 12.5px; color: var(--ink-muted);">2009 – 2014 Run</span></td>
+            <td><strong>Leveraged Infra &amp; Real Estate:</strong> Debt-heavy builders and power utilities (DLF, Unitech, Suzlon, Rel Power) never reclaimed 2008 peaks.</td>
+            <td><strong>Private Banks, FMCG &amp; Pharma:</strong> Clean, cash-generating compounders (HDFC Bank, ITC, Asian Paints, Sun Pharma, TCS) led the market.</td>
+          </tr>
+          <tr>
+            <td><strong>Post-2016</strong><br><span class="num" style="font-size: 12.5px; color: var(--ink-muted);">2016 – 2020 Run</span></td>
+            <td><strong>PSU Banks &amp; Corporate Lenders:</strong> Spent 5 years provisioning for old bad loans from the 2008–12 corporate lending boom.</td>
+            <td><strong>Retail Lenders, NBFCs &amp; Specialty Chemicals:</strong> Bajaj Finance, retail-focused private banks, and China+1 chemical exporters multiplied.</td>
+          </tr>
+          <tr>
+            <td><strong>Post-2022</strong><br><span class="num" style="font-size: 12.5px; color: var(--ink-muted);">2022 – 2025 Run</span></td>
+            <td><strong>Expensive Consumer &amp; IT Giants:</strong> Stocks trading at 60x–80x P/E (Paints, FMCG, IT services) went sideways for 3 years as growth slowed.</td>
+            <td><strong>PSU Banks, Defense, Power &amp; Industrials:</strong> Cleaned-up state banks (SBI, BoB), defense manufacturers, and power equipment led earnings.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note-strip">
+        <strong>Why Leadership Rotates:</strong> The sector that led the previous bull market usually enters the correction with the highest valuations and most crowded ownership. The next recovery is led by sectors coming out of multi-year balance-sheet cleanups with fresh earnings growth.
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <span>SOURCE: NSE SECTORAL INDICES PERFORMANCE ACROSS MARKET CYCLES (2000–2025)</span>
+      <span>4 / 5</span>
+    </div>
+  </section></div></div>
+<div class="slide-slot" data-index="4"><div class="slide-scaler"><section class="slide">
+    <div class="slide-header">
+      <h1 class="slide-title">Four Things History Says About Market Corrections</h1>
+      <p class="slide-context">What 25 years of Nifty data tells us about how corrections end and what matters on the other side.</p>
+    </div>
+
+    <div class="slide-body">
+      <div class="takeaway-list">
+        <div class="takeaway-item">
+          <div class="takeaway-num">01</div>
+          <div class="takeaway-head">Normal resets wear you out with time, not depth</div>
+          <div class="takeaway-desc">
+            Outside of global panics like 2008 and 2020, Nifty rarely crashes 40%. Instead, it drops 15%–25% and spends <strong>9 to 12 months moving sideways</strong> while corporate earnings catch up with stock prices.
+          </div>
+        </div>
+
+        <div class="takeaway-item">
+          <div class="takeaway-num">02</div>
+          <div class="takeaway-head">18x–19x P/E has historically been the floor</div>
+          <div class="takeaway-desc">
+            Every valuation correction in the last two decades (2011, 2016, 2022) stopped falling once Nifty's trailing P/E cooled from 25x+ down to the <strong>18x–19x zone</strong>. At that level, long-term buyers historically stepped in.
+          </div>
+        </div>
+
+        <div class="takeaway-item">
+          <div class="takeaway-num">03</div>
+          <div class="takeaway-head">Recoveries start while headlines still look terrible</div>
+          <div class="takeaway-desc">
+            In October 2008, February 2016, March 2020, and June 2022, economic news was at its bleakest in the exact week the market bottomed. Waiting for "clarity" usually meant missing the first 25% of the recovery.
+          </div>
+        </div>
+
+        <div class="takeaway-item">
+          <div class="takeaway-num">04</div>
+          <div class="takeaway-head">Separate narrative stocks from earnings compounders</div>
+          <div class="takeaway-desc">
+            When the market recovers, stocks that went up purely on stories or low float rarely reclaim their old highs. Businesses with real cash flows and clean balance sheets are the ones that lead the next 3-year cycle.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <span>DATA SUMMARY • FOR EDUCATIONAL CONTEXT ONLY, NOT INVESTMENT ADVICE</span>
+      <span>5 / 5</span>
+    </div>
+  </section></div></div>
+  </main>
+
+  <footer class="deck-bottombar">
+    <button class="deck-nav-btn" id="prevSlideBtn" onclick="stepSlide(-1)">&larr; Prev</button>
+    <div class="deck-dots" id="deckDots"></div>
+    <div class="deck-counter" id="deckCounter">01 / 05</div>
+    <button class="deck-nav-btn" id="nextSlideBtn" onclick="stepSlide(1)">Next &rarr;</button>
+  </footer>
+
+  <script>
+    (function() {
+      const NATIVE_W = 1280;
+      const NATIVE_H = 720;
+      const TOTAL = 5;
+      const SLUG = "nifty-corrections";
+
+      const params = new URLSearchParams(window.location.search);
+      const isEmbed = params.get('embed') === '1';
+      if (isEmbed) {
+        document.body.setAttribute('data-embed', 'true');
+      }
+
+      let currentSlide = 0;
+      let mode = 'flipbook';
+      const slots = Array.from(document.querySelectorAll('.slide-slot'));
+      const dotsWrap = document.getElementById('deckDots');
+      const counterEl = document.getElementById('deckCounter');
+      const prevBtn = document.getElementById('prevSlideBtn');
+      const nextBtn = document.getElementById('nextSlideBtn');
+      const btnFlip = document.getElementById('btnFlipbook');
+      const btnScroll = document.getElementById('btnScroll');
+
+      if (dotsWrap) {
+        slots.forEach((_, idx) => {
+          const dot = document.createElement('button');
+          dot.className = 'deck-dot' + (idx === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', 'Go to slide ' + (idx + 1));
+          dot.onclick = () => goToSlide(idx);
+          dotsWrap.appendChild(dot);
+        });
+      }
+
+      function notifyParent() {
+        if (window.parent && window.parent !== window) {
+          window.parent.postMessage({
+            type: 'deck-state',
+            slug: SLUG,
+            currentSlide: currentSlide,
+            totalSlides: TOTAL
+          }, '*');
+        }
+      }
+
+      function renderState() {
+        slots.forEach((slot, idx) => {
+          slot.classList.toggle('active', idx === currentSlide);
+        });
+        if (dotsWrap) {
+          Array.from(dotsWrap.children).forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === currentSlide);
+          });
+        }
+        if (counterEl) {
+          const c = String(currentSlide + 1).padStart(2, '0');
+          const t = String(TOTAL).padStart(2, '0');
+          counterEl.textContent = c + ' / ' + t;
+        }
+        if (prevBtn) prevBtn.disabled = currentSlide === 0;
+        if (nextBtn) nextBtn.disabled = currentSlide === TOTAL - 1;
+        notifyParent();
+      }
+
+      window.stepSlide = function(delta) {
+        const next = currentSlide + delta;
+        if (next >= 0 && next < TOTAL) {
+          currentSlide = next;
+          renderState();
+        }
+      };
+
+      window.goToSlide = function(idx) {
+        if (idx >= 0 && idx < TOTAL) {
+          currentSlide = idx;
+          renderState();
+        }
+      };
+
+      window.setDeckMode = function(newMode) {
+        mode = newMode;
+        document.body.setAttribute('data-mode', newMode);
+        if (btnFlip) btnFlip.classList.toggle('active', newMode === 'flipbook');
+        if (btnScroll) btnScroll.classList.toggle('active', newMode === 'scroll');
+        updateScale();
+      };
+
+      function updateScale() {
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+        let scale = 1;
+
+        if (isEmbed) {
+          scale = vw / NATIVE_W;
+        } else if (mode === 'flipbook') {
+          const padX = vw < 640 ? 16 : 36;
+          const padY = 100 + (vw < 640 ? 16 : 32);
+          const availW = Math.max(200, vw - padX);
+          const availH = Math.max(150, vh - padY);
+          scale = Math.min(1.15, availW / NATIVE_W, availH / NATIVE_H);
+        } else {
+          const padX = vw < 640 ? 20 : 48;
+          const availW = Math.max(200, vw - padX);
+          scale = Math.min(1, availW / NATIVE_W);
+        }
+
+        document.documentElement.style.setProperty('--scale', String(scale));
+      }
+
+      window.addEventListener('resize', updateScale);
+
+      // Keyboard navigation
+      window.addEventListener('keydown', (e) => {
+        if (mode !== 'flipbook') return;
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+          e.preventDefault();
+          window.stepSlide(1);
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+          e.preventDefault();
+          window.stepSlide(-1);
+        }
+      });
+
+      // Touch swipe navigation on mobile
+      let touchStartX = null;
+      let touchStartY = null;
+      window.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+        }
+      }, { passive: true });
+
+      window.addEventListener('touchend', (e) => {
+        if (mode !== 'flipbook' || touchStartX === null || e.changedTouches.length === 0) return;
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        const dy = e.changedTouches[0].clientY - touchStartY;
+        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.3) {
+          if (dx < 0) window.stepSlide(1);
+          else window.stepSlide(-1);
+        }
+        touchStartX = null;
+        touchStartY = null;
+      }, { passive: true });
+
+      // Listen for parent commands when embedded
+      window.addEventListener('message', (e) => {
+        const data = e.data || {};
+        if (data.slug && data.slug !== SLUG) return;
+        if (data.action === 'prev') window.stepSlide(-1);
+        else if (data.action === 'next') window.stepSlide(1);
+        else if (data.action === 'goto' && typeof data.index === 'number') window.goToSlide(data.index);
+      });
+
+      updateScale();
+      renderState();
+    })();
+  </script>
+</body>
+</html>

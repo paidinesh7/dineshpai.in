@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>20 Years of Stock Market Taxes in India (v3)</title>
+<style>
+  :root {
+    --bg-app: #EFEFED;
+    --bg-slide: #FFFFFF;
+    --bg-subtle: #F6F6F3;
+    --ink: #111111;
+    --ink-body: #2C2C2C;
+    --ink-muted: #6E6E6A;
+    --ink-faint: #94948E;
+    --line: #E4E4DF;
+    --line-strong: #111111;
+    --font-serif: 'Charter', 'Iowan Old Style', 'Georgia', serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', 'DejaVu Sans Mono', Menlo, Consolas, monospace;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    background: var(--bg-app);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+  }
+
+  .app-shell {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px 56px 24px;
+  }
+
+  .deck-viewport {
+    position: relative;
+    width: 1120px;
+    height: 630px;
+    background: var(--bg-slide);
+    border: 1px solid #D5D5D0;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transform-origin: center center;
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    width: 1120px;
+    height: 630px;
+    padding: 60px 88px 44px 88px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--bg-slide);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 150ms ease;
+  }
+
+  .slide.active {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
+  }
+
+  .slide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .slide-title {
+    font-family: var(--font-serif);
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+
+  .slide-context {
+    font-family: var(--font-sans);
+    font-size: 15px;
+    color: var(--ink-muted);
+    margin-top: 8px;
+  }
+
+  .slide-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 0;
+  }
+
+  .slide-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--ink-faint);
+  }
+
+  .num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Navigation bar */
+  .nav-bar {
+    position: fixed;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #FFFFFF;
+    border: 1px solid #D5D5D0;
+    padding: 6px 14px;
+    border-radius: 999px;
+    z-index: 100;
+  }
+
+  .nav-btn {
+    background: transparent;
+    border: none;
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    padding: 4px 10px;
+    cursor: pointer;
+  }
+
+  .nav-btn:disabled {
+    color: #CCCCCC;
+    cursor: default;
+  }
+
+  .nav-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .nav-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #D5D5D0;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav-dot.active {
+    background: var(--ink);
+    transform: scale(1.25);
+  }
+
+  @media print {
+    @page {
+      size: 1120px 630px;
+      margin: 0;
+    }
+    html, body {
+      width: 1120px;
+      height: auto;
+      background: #FFFFFF;
+      overflow: visible !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .app-shell {
+      padding: 0;
+      display: block;
+      width: 1120px;
+      height: auto;
+    }
+    .deck-viewport {
+      width: 1120px;
+      height: auto;
+      border: none;
+      box-shadow: none;
+      overflow: visible;
+      transform: none !important;
+    }
+    .slide {
+      position: relative !important;
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      page-break-after: always;
+      break-after: page;
+      width: 1120px;
+      height: 630px;
+    }
+    .nav-bar {
+      display: none !important;
+    }
+  }
+</style>
+
+<style id="responsive-deck-engine">
+  :root {
+    --native-w: 1120px;
+    --native-h: 630px;
+    --scale: 1;
+  }
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    min-height: 100vh !important;
+    background: #141413 !important;
+    color: #111111;
+    overflow-x: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+  }
+
+  body[data-mode="flipbook"] {
+    height: 100vh !important;
+    height: 100dvh !important;
+    overflow: hidden !important;
+  }
+
+  body[data-mode="scroll"] {
+    height: auto !important;
+    overflow-y: auto !important;
+  }
+
+  body[data-embed="true"] {
+    background: #FFFFFF !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+  }
+
+  /* Top Chrome Bar */
+  .deck-topbar {
+    height: 48px;
+    background: #1C1C1A;
+    border-bottom: 1px solid #2E2E2B;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 12px;
+    color: #D4D4CE;
+    flex-shrink: 0;
+    z-index: 50;
+  }
+
+  body[data-embed="true"] .deck-topbar,
+  body[data-embed="true"] .deck-bottombar {
+    display: none !important;
+  }
+
+  .deck-back {
+    color: #F5F5F0;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background: #292926;
+    border: 1px solid #3A3A36;
+  }
+  .deck-back:hover {
+    background: #33332F;
+  }
+
+  .deck-top-title {
+    font-weight: 500;
+    color: #A8A8A0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+    text-align: center;
+  }
+
+  .deck-top-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .deck-action-btn {
+    background: #292926;
+    color: #E5E5E0;
+    border: 1px solid #3A3A36;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-family: inherit;
+    font-size: 11.5px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .deck-action-btn:hover {
+    background: #33332F;
+  }
+  .deck-action-btn.active {
+    background: #F5F5F0;
+    color: #111111;
+    border-color: #F5F5F0;
+    font-weight: 600;
+  }
+
+  /* Stage Area */
+  .deck-stage {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    position: relative;
+    min-height: 0;
+    width: 100%;
+  }
+
+  body[data-mode="scroll"] .deck-stage {
+    justify-content: flex-start;
+    padding: 24px 12px 64px 12px;
+    gap: 24px;
+  }
+
+  body[data-embed="true"] .deck-stage {
+    padding: 0 !important;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .slide-slot {
+    width: calc(var(--native-w) * var(--scale));
+    height: calc(var(--native-h) * var(--scale));
+    position: relative;
+    overflow: hidden;
+    background: #FFFFFF;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+    flex-shrink: 0;
+  }
+
+  body[data-mode="flipbook"] .slide-slot {
+    display: none;
+  }
+  body[data-mode="flipbook"] .slide-slot.active {
+    display: block;
+  }
+
+  body[data-mode="scroll"] .slide-slot {
+    display: block;
+  }
+
+  body[data-embed="true"] .slide-slot {
+    box-shadow: none !important;
+  }
+
+  .slide-scaler {
+    width: var(--native-w);
+    height: var(--native-h);
+    transform-origin: top left;
+    transform: scale(var(--scale));
+    position: relative;
+  }
+
+  .slide {
+    position: relative !important;
+    inset: auto !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    width: var(--native-w) !important;
+    height: var(--native-h) !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Bottom Bar for Flipbook Mode */
+  .deck-bottombar {
+    height: 52px;
+    background: #1C1C1A;
+    border-top: 1px solid #2E2E2B;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 12px;
+    color: #D4D4CE;
+    flex-shrink: 0;
+    z-index: 50;
+  }
+
+  body[data-mode="scroll"] .deck-bottombar {
+    display: none !important;
+  }
+
+  .deck-nav-btn {
+    background: #292926;
+    color: #F5F5F0;
+    border: 1px solid #3A3A36;
+    border-radius: 4px;
+    padding: 7px 14px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    min-width: 78px;
+  }
+  .deck-nav-btn:hover:not(:disabled) {
+    background: #33332F;
+  }
+  .deck-nav-btn:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+
+  .deck-dots {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .deck-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #44443F;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .deck-dot.active {
+    background: #F5F5F0;
+    transform: scale(1.25);
+  }
+
+  .deck-counter {
+    font-variant-numeric: tabular-nums;
+    color: #A8A8A0;
+    min-width: 54px;
+    text-align: center;
+  }
+
+  @media (max-width: 640px) {
+    .deck-top-title {
+      display: none;
+    }
+    .deck-stage {
+      padding: 8px;
+    }
+    .deck-dots {
+      display: none;
+    }
+  }
+
+  @media print {
+    @page {
+      size: 1120px 630px;
+      margin: 0;
+    }
+    html, body {
+      background: #FFFFFF !important;
+      height: auto !important;
+      overflow: visible !important;
+      display: block !important;
+    }
+    .deck-topbar, .deck-bottombar {
+      display: none !important;
+    }
+    .deck-stage {
+      padding: 0 !important;
+      display: block !important;
+    }
+    .slide-slot {
+      display: block !important;
+      width: 1120px !important;
+      height: 630px !important;
+      box-shadow: none !important;
+      page-break-after: always !important;
+      break-after: page !important;
+    }
+    .slide-scaler {
+      transform: none !important;
+    }
+  }
+</style>
+</head>
+<body data-mode="flipbook" data-embed="false">
+
+  <header class="deck-topbar">
+    <a href="/data" class="deck-back">&larr; dineshpai.in/data</a>
+    <div class="deck-top-title">20 Years of Stock Market Taxes in India (2004–2026)</div>
+    <div class="deck-top-actions">
+      <button class="deck-action-btn active" id="btnFlipbook" onclick="setDeckMode('flipbook')">Slide View</button>
+      <button class="deck-action-btn" id="btnScroll" onclick="setDeckMode('scroll')">Scroll All (8)</button>
+      <button class="deck-action-btn" onclick="window.print()">Print / PDF</button>
+    </div>
+  </header>
+
+  <main class="deck-stage" id="deckStage">
+    <div class="slide-slot active" data-index="0"><div class="slide-scaler"><section class="slide" data-slide="1">
+      <header class="slide-header">
+        <div>
+          <h1 class="slide-title">20 Years of Stock Market Taxes in India</h1>
+          <div class="slide-context">How retail participation, transaction taxes, and capital gains rates changed from 2004 to 2026</div>
+        </div>
+      </header>
+
+      <div class="slide-body">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 56px; align-items: start;">
+
+          <div style="border-top: 3px solid #111111; padding-top: 28px;">
+            <div style="font-size: 15px; font-weight: 500; color: var(--ink-muted);">Unique Investors (NSE)</div>
+            <div style="font-family: var(--font-serif); font-size: 54px; font-weight: 500; letter-spacing: -0.03em; margin-top: 16px; line-height: 1; white-space: nowrap;">13.5 Cr</div>
+            <div class="num" style="font-size: 13px; color: var(--ink-muted); margin-top: 20px; white-space: nowrap;">1.8 Cr (FY15) → 13.52 Cr (Aug 2026)</div>
+          </div>
+
+          <div style="border-top: 3px solid #111111; padding-top: 28px;">
+            <div style="font-size: 15px; font-weight: 500; color: var(--ink-muted);">Yearly STT Collected</div>
+            <div style="font-family: var(--font-serif); font-size: 54px; font-weight: 500; letter-spacing: -0.03em; margin-top: 16px; line-height: 1; white-space: nowrap;"><span style="line-height: 0;">₹</span>63,670 Cr</div>
+            <div class="num" style="font-size: 13px; color: var(--ink-muted); margin-top: 20px; white-space: nowrap;"><span style="line-height: 0;">₹</span>1,500 Cr (FY05) → <span style="line-height: 0;">₹</span>63,670 Cr (FY26 RE)</div>
+          </div>
+
+          <div style="border-top: 3px solid #111111; padding-top: 28px;">
+            <div style="font-size: 15px; font-weight: 500; color: var(--ink-muted);">Long-Term Tax Rate</div>
+            <div style="font-family: var(--font-serif); font-size: 54px; font-weight: 500; letter-spacing: -0.03em; margin-top: 16px; line-height: 1; white-space: nowrap;">12.5%</div>
+            <div class="num" style="font-size: 13px; color: var(--ink-muted); margin-top: 20px; white-space: nowrap;">0% (2004) → 12.5% (2026)</div>
+          </div>
+
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <span>Sources: NSE Market Pulse (Sep 2026) · Union Budget Receipt Documents (Major Head 0034)</span>
+        <span>01 / 08</span>
+      </footer>
+    </section></div></div>
+<div class="slide-slot" data-index="1"><div class="slide-scaler"><section class="slide" data-slide="2">
+      <header class="slide-header">
+        <div>
+          <h1 class="slide-title">13.5 Crore Indians Now Invest in Stocks</h1>
+          <div class="slide-context">Unique PAN-registered investors on the National Stock Exchange (in Crores)</div>
+        </div>
+      </header>
+
+      <div class="slide-body">
+        <svg viewBox="0 0 944 330" style="width: 100%; height: 330px;">
+          <line x1="20" y1="280" x2="924" y2="280" stroke="#111111" stroke-width="1.5"/>
+
+          <!-- 7 verified bars: 1 Cr = 16.5px -->
+          <!-- FY15: 1.8 Cr (h=30, y=250) -->
+          <rect x="44" y="250" width="76" height="30" fill="#D5D5D0"/>
+          <text x="82" y="236" text-anchor="middle" class="num" font-size="13" fill="#555555">1.8</text>
+          <text x="82" y="308" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13" fill="#666666">FY15</text>
+
+          <!-- FY18: 2.5 Cr (h=41, y=239) -->
+          <rect x="174" y="239" width="76" height="41" fill="#C4C4BE"/>
+          <text x="212" y="225" text-anchor="middle" class="num" font-size="13" fill="#555555">2.5</text>
+          <text x="212" y="308" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13" fill="#666666">FY18</text>
+
+          <!-- FY20: 3.1 Cr (h=51, y=229) -->
+          <rect x="304" y="229" width="76" height="51" fill="#A8A8A2"/>
+          <text x="342" y="215" text-anchor="middle" class="num" font-size="13" fill="#333333">3.1</text>
+          <text x="342" y="308" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13" fill="#666666">FY20</text>
+
+          <!-- FY22: 5.9 Cr (h=97, y=183) -->
+          <rect x="434" y="183" width="76" height="97" fill="#85857F"/>
+          <text x="472" y="169" text-anchor="middle" class="num" font-size="13" fill="#222222">5.9</text>
+          <text x="472" y="308" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13" fill="#666666">FY22</text>
+
+          <!-- FY24: 9.2 Cr (h=152, y=128) -->
+          <rect x="564" y="128" width="76" height="152" fill="#5C5C57"/>
+          <text x="602" y="114" text-anchor="middle" class="num" font-size="13" fill="#111111">9.2</text>
+          <text x="602" y="308" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13" fill="#666666">FY24</text>
+
+          <!-- FY25: 11.3 Cr (h=186, y=94) -->
+          <rect x="694" y="94" width="76" height="186" fill="#383834"/>
+          <text x="732" y="80" text-anchor="middle" class="num" font-size="13" fill="#111111">11.3</text>
+          <text x="732" y="308" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13" fill="#666666">FY25</text>
+
+          <!-- Aug 2026: 13.52 Cr (h=223, y=57) -->
+          <rect x="820" y="57" width="84" height="223" fill="#111111"/>
+          <text x="862" y="41" text-anchor="middle" class="num" font-size="15" font-weight="700" fill="#111111">13.52 Cr</text>
+          <text x="862" y="308" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13" font-weight="600" fill="#111111">Aug 2026</text>
+        </svg>
+      </div>
+
+      <footer class="slide-footer">
+        <span>Source: NSE Market Pulse, September 2026 (Table 69 — Unique Registered Investors by PAN)</span>
+        <span>02 / 08</span>
+      </footer>
+    </section></div></div>
+<div class="slide-slot" data-index="2"><div class="slide-scaler"><section class="slide" data-slide="3">
+      <header class="slide-header">
+        <div>
+          <h1 class="slide-title">STT Collections Have Grown 42× Since 2005</h1>
+          <div class="slide-context">Annual Securities Transaction Tax collected by the government (₹ Crore)</div>
+        </div>
+      </header>
+
+      <div class="slide-body">
+        <svg viewBox="0 0 944 330" style="width: 100%; height: 330px;">
+          <line x1="20" y1="280" x2="924" y2="280" stroke="#111111" stroke-width="1.5"/>
+
+          <!-- 7 verified bars: 10,000 Cr = 30px -->
+          <!-- FY05: 1,500 (h=5, y=275) -->
+          <rect x="44" y="275" width="76" height="5" fill="#CCCCCC"/>
+          <text x="82" y="261" text-anchor="middle" class="num" font-size="12.5" fill="#666666">₹1,500</text>
+          <text x="82" y="308" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13" fill="#666666">FY05</text>
+
+          <!-- FY15: 7,398 (h=22, y=258) -->
+          <rect x="174" y="258" width="76" height="22" fill="#BDBDB7"/>
+          <text x="212" y="244" text-anchor="middle" class="num" font-size="12.5" fill="#555555">₹7,398</text>
+          <text x="212" y="308" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13" fill="#666666">FY15</text>
+
+          <!-- FY20: 11,437 (h=34, y=246) -->
+          <rect x="304" y="246" width="76" height="34" fill="#9E9E98"/>
+          <text x="342" y="232" text-anchor="middle" class="num" font-size="12.5" fill="#333333">₹11,437</text>
+          <text x="342" y="308" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13" fill="#666666">FY20</text>
+
+          <!-- FY22: 23,191 (h=70, y=210) -->
+          <rect x="434" y="210" width="76" height="70" fill="#787872"/>
+          <text x="472" y="196" text-anchor="middle" class="num" font-size="12.5" fill="#222222">₹23,191</text>
+          <text x="472" y="308" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13" fill="#666666">FY22</text>
+
+          <!-- FY24: 33,778 (h=101, y=179) -->
+          <rect x="564" y="179" width="76" height="101" fill="#52524E"/>
+          <text x="602" y="165" text-anchor="middle" class="num" font-size="12.5" fill="#111111">₹33,778</text>
+          <text x="602" y="308" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13" fill="#666666">FY24</text>
+
+          <!-- FY25 Actual: 52,197 (h=157, y=123) -->
+          <rect x="694" y="123" width="76" height="157" fill="#222222"/>
+          <text x="732" y="108" text-anchor="middle" class="num" font-size="13" font-weight="600" fill="#111111">₹52,197</text>
+          <text x="732" y="308" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13" font-weight="600" fill="#111111">FY25</text>
+
+          <!-- FY26 RE: 63,670 (h=191, y=89) -->
+          <rect x="820" y="89" width="84" height="191" fill="#111111"/>
+          <text x="862" y="73" text-anchor="middle" class="num" font-size="14" font-weight="700" fill="#111111">₹63,670</text>
+          <text x="862" y="308" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13" font-weight="600" fill="#111111">FY26 RE</text>
+        </svg>
+      </div>
+
+      <footer class="slide-footer">
+        <span>Source: Union Budget Receipt Documents (Actuals up to FY25; Revised Estimate for FY26; FY27 BE is ₹73,700 Cr)</span>
+        <span>03 / 08</span>
+      </footer>
+    </section></div></div>
+<div class="slide-slot" data-index="3"><div class="slide-scaler"><section class="slide" data-slide="4">
+      <header class="slide-header">
+        <div>
+          <h1 class="slide-title">2004 vs. Today: From One Tax to Two</h1>
+          <div class="slide-context">When STT was introduced in October 2004, long-term capital gains tax was reduced to zero</div>
+        </div>
+      </header>
+
+      <div class="slide-body">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: stretch;">
+
+          <!-- 2004 -->
+          <div style="border: 1px solid var(--line); padding: 36px 40px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="num" style="font-size: 13px; color: var(--ink-muted); letter-spacing: 0.04em;">OCTOBER 2004</div>
+
+            <div style="margin: 28px 0;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 20px; border-bottom: 1px solid var(--line);">
+                <span style="font-size: 17px; color: var(--ink-body);">Delivery STT (each side)</span>
+                <span class="num" style="font-size: 24px; font-weight: 600;">0.075%</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; padding-top: 20px;">
+                <span style="font-size: 17px; color: var(--ink-body);">Long-Term Capital Gains Tax</span>
+                <span class="num" style="font-size: 42px; font-weight: 700; color: var(--ink);">0%</span>
+              </div>
+            </div>
+
+            <div style="font-size: 15px; color: var(--ink-muted);">
+              STT was introduced as a clean replacement for long-term capital gains tax.
+            </div>
+          </div>
+
+          <!-- 2026 -->
+          <div style="border: 2px solid var(--ink); background: var(--bg-subtle); padding: 36px 40px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="num" style="font-size: 13px; color: var(--ink); font-weight: 600; letter-spacing: 0.04em;">TODAY (2026)</div>
+
+            <div style="margin: 28px 0;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 20px; border-bottom: 1px solid #CCCCCC;">
+                <span style="font-size: 17px; color: var(--ink-body);">Delivery STT (each side)</span>
+                <span class="num" style="font-size: 24px; font-weight: 600;">0.10%</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; padding-top: 20px;">
+                <span style="font-size: 17px; color: var(--ink-body);">Long-Term Capital Gains Tax</span>
+                <span class="num" style="font-size: 42px; font-weight: 700; color: var(--ink);">12.5%</span>
+              </div>
+            </div>
+
+            <div style="font-size: 15px; color: var(--ink); font-weight: 500;">
+              Investors now pay both taxes at higher rates on the same investment.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <span>Source: Finance (No. 2) Act, 2004 &amp; Finance (No. 2) Act, 2024 · Delivery STT applies to both buy and sell</span>
+        <span>04 / 08</span>
+      </footer>
+    </section></div></div>
+<div class="slide-slot" data-index="4"><div class="slide-scaler"><section class="slide" data-slide="5">
+      <header class="slide-header">
+        <div>
+          <h1 class="slide-title">How Stock Market Tax Rates Changed</h1>
+          <div class="slide-context">Tax rates on listed equity shares in India from 2000 to 2026</div>
+        </div>
+      </header>
+
+      <div class="slide-body">
+        <div style="display: grid; grid-template-columns: 1.6fr repeat(5, 1fr); border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink);">
+
+          <!-- Header Row -->
+          <div style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 13px; color: var(--ink-muted);"></div>
+          <div class="num" style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 15px; font-weight: 600;">2000</div>
+          <div class="num" style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 15px; font-weight: 600;">Oct 2004</div>
+          <div class="num" style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 15px; font-weight: 600;">2008</div>
+          <div class="num" style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 15px; font-weight: 600;">2018</div>
+          <div class="num" style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 15px; font-weight: 700; background: var(--bg-subtle);">2024–26</div>
+
+          <!-- Row 1: LTCG -->
+          <div style="padding: 28px 16px; border-bottom: 1px solid var(--line); font-size: 16px; font-weight: 500;">Long-Term Tax (&gt;1 yr)</div>
+          <div class="num" style="padding: 28px 16px; border-bottom: 1px solid var(--line); font-size: 26px; color: var(--ink-muted);">10%*</div>
+          <div class="num" style="padding: 28px 16px; border-bottom: 1px solid var(--line); font-size: 26px; color: var(--ink-muted);">0%</div>
+          <div class="num" style="padding: 28px 16px; border-bottom: 1px solid var(--line); font-size: 26px; color: var(--ink-muted);">0%</div>
+          <div class="num" style="padding: 28px 16px; border-bottom: 1px solid var(--line); font-size: 26px;">10%</div>
+          <div class="num" style="padding: 28px 16px; border-bottom: 1px solid var(--line); font-size: 26px; font-weight: 700; background: var(--bg-subtle);">12.5%</div>
+
+          <!-- Row 2: STCG -->
+          <div style="padding: 28px 16px; border-bottom: 1px solid var(--line); font-size: 16px; font-weight: 500;">Short-Term Tax (&lt;1 yr)</div>
+          <div class="num" style="padding: 28px 16px; border-bottom: 1px solid var(--line); font-size: 24px; color: var(--ink-muted);">30%*</div>
+          <div class="num" style="padding: 28px 16px; border-bottom: 1px solid var(--line); font-size: 24px; color: var(--ink-muted);">10%</div>
+          <div class="num" style="padding: 28px 16px; border-bottom: 1px solid var(--line); font-size: 24px;">15%</div>
+          <div class="num" style="padding: 28px 16px; border-bottom: 1px solid var(--line); font-size: 24px;">15%</div>
+          <div class="num" style="padding: 28px 16px; border-bottom: 1px solid var(--line); font-size: 24px; font-weight: 700; background: var(--bg-subtle);">20%</div>
+
+          <!-- Row 3: Delivery STT -->
+          <div style="padding: 28px 16px; font-size: 16px; font-weight: 500;">Delivery STT (each side)</div>
+          <div class="num" style="padding: 28px 16px; font-size: 20px; color: var(--ink-muted);">0%</div>
+          <div class="num" style="padding: 28px 16px; font-size: 20px; color: var(--ink-muted);">0.075%</div>
+          <div class="num" style="padding: 28px 16px; font-size: 20px; color: var(--ink-muted);">0.125%</div>
+          <div class="num" style="padding: 28px 16px; font-size: 20px; color: var(--ink-muted);">0.10%</div>
+          <div class="num" style="padding: 28px 16px; font-size: 20px; font-weight: 600; background: var(--bg-subtle);">0.10%</div>
+
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <span>*In 2000, LTCG was 10% flat (or 20% with indexation) and STCG was taxed at income tax slab rates (up to 30%).</span>
+        <span>05 / 08</span>
+      </footer>
+    </section></div></div>
+<div class="slide-slot" data-index="5"><div class="slide-scaler"><section class="slide" data-slide="6">
+      <header class="slide-header">
+        <div>
+          <h1 class="slide-title">Capital Gains Tax Across Investments Today</h1>
+          <div class="slide-context">How different investments are taxed after the 2024–2026 rules simplified holding periods</div>
+        </div>
+      </header>
+
+      <div class="slide-body">
+        <div style="display: grid; grid-template-columns: 1.9fr 1fr 1fr 1fr; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink);">
+
+          <!-- Header Row -->
+          <div style="padding: 16px 16px; border-bottom: 1px solid var(--line); font-size: 13px; font-weight: 600; color: var(--ink-muted);">Investment</div>
+          <div style="padding: 16px 16px; border-bottom: 1px solid var(--line); font-size: 13px; font-weight: 600; color: var(--ink-muted);">Long-Term Period</div>
+          <div style="padding: 16px 16px; border-bottom: 1px solid var(--line); font-size: 13px; font-weight: 600; color: var(--ink);">Long-Term Tax</div>
+          <div style="padding: 16px 16px; border-bottom: 1px solid var(--line); font-size: 13px; font-weight: 600; color: var(--ink-muted);">Short-Term Tax</div>
+
+          <!-- Row 1: Stocks & Equity MFs -->
+          <div style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 15px; font-weight: 600; background: var(--bg-subtle);">Stocks &amp; Equity Mutual Funds</div>
+          <div class="num" style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--ink-body); background: var(--bg-subtle);">&gt; 1 year</div>
+          <div class="num" style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 22px; font-weight: 700; color: var(--ink); background: var(--bg-subtle);">12.5%</div>
+          <div class="num" style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 20px; font-weight: 600; color: var(--ink-body); background: var(--bg-subtle);">20%</div>
+
+          <!-- Row 2: Listed Gold & Silver ETFs -->
+          <div style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 15px; font-weight: 500;">Listed Gold &amp; Silver ETFs</div>
+          <div class="num" style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--ink-muted);">&gt; 1 year</div>
+          <div class="num" style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 22px; font-weight: 600;">12.5%</div>
+          <div class="num" style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 16px; color: var(--ink-muted);">Slab rate</div>
+
+          <!-- Row 3: Physical Gold & Real Estate -->
+          <div style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 15px; font-weight: 500;">Physical Gold &amp; Real Estate*</div>
+          <div class="num" style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--ink-muted);">&gt; 2 years</div>
+          <div class="num" style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 22px; font-weight: 600;">12.5%</div>
+          <div class="num" style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 16px; color: var(--ink-muted);">Slab rate</div>
+
+          <!-- Row 4: Unlisted Shares -->
+          <div style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 15px; font-weight: 500;">Unlisted Shares &amp; Gold FoFs</div>
+          <div class="num" style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--ink-muted);">&gt; 2 years</div>
+          <div class="num" style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 22px; font-weight: 600;">12.5%</div>
+          <div class="num" style="padding: 20px 16px; border-bottom: 1px solid var(--line); font-size: 16px; color: var(--ink-muted);">Slab rate</div>
+
+          <!-- Row 5: FDs & Debt MFs -->
+          <div style="padding: 20px 16px; font-size: 15px; font-weight: 500;">FDs &amp; Debt Mutual Funds</div>
+          <div class="num" style="padding: 20px 16px; font-size: 15px; color: var(--ink-muted);">Any period</div>
+          <div class="num" style="padding: 20px 16px; font-size: 16px; color: var(--ink-muted);">Slab rate</div>
+          <div class="num" style="padding: 20px 16px; font-size: 16px; color: var(--ink-muted);">Slab rate</div>
+
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <span>*For property bought before July 23, 2024, resident individuals can choose 12.5% without indexation or 20% with indexation.</span>
+        <span>06 / 08</span>
+      </footer>
+    </section></div></div>
+<div class="slide-slot" data-index="6"><div class="slide-scaler"><section class="slide" data-slide="7">
+      <header class="slide-header">
+        <div>
+          <h1 class="slide-title">Three Rules Every Investor Should Know</h1>
+          <div class="slide-context">How exemptions, transaction taxes, and losses work on your investments</div>
+        </div>
+      </header>
+
+      <div class="slide-body">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 56px;">
+
+          <div style="border-top: 3px solid #111111; padding-top: 28px;">
+            <div class="num" style="font-size: 36px; font-weight: 700; color: var(--ink); line-height: 1;"><span style="line-height: 0;">₹</span>1.25 Lakh</div>
+            <div style="font-size: 17px; font-weight: 600; margin-top: 16px;">
+              Tax-free profit every year
+            </div>
+            <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.55; margin-top: 12px;">
+              Your first ₹1.25 Lakh of long-term profit in stocks and equity mutual funds each financial year is completely tax-free.
+            </p>
+          </div>
+
+          <div style="border-top: 3px solid #111111; padding-top: 28px;">
+            <div class="num" style="font-size: 36px; font-weight: 700; color: var(--ink); line-height: 1;">Paid on Loss</div>
+            <div style="font-size: 17px; font-weight: 600; margin-top: 16px;">
+              STT is not deductible
+            </div>
+            <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.55; margin-top: 12px;">
+              STT (0.1% on buy + 0.1% on sell) is charged on the full trade value even when you sell at a loss, and cannot be deducted from your taxable profit.
+            </p>
+          </div>
+
+          <div style="border-top: 3px solid #111111; padding-top: 28px;">
+            <div class="num" style="font-size: 36px; font-weight: 700; color: var(--ink); line-height: 1;">8 Years</div>
+            <div style="font-size: 17px; font-weight: 600; margin-top: 16px;">
+              Carry forward your losses
+            </div>
+            <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.55; margin-top: 12px;">
+              Short-term losses reduce both short-term and long-term gains. Unused losses can be carried forward for 8 years if you file your ITR on time.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <span>Source: Income Tax Act — Sections 112A, 48 &amp; 74</span>
+        <span>07 / 08</span>
+      </footer>
+    </section></div></div>
+<div class="slide-slot" data-index="7"><div class="slide-scaler"><section class="slide" data-slide="8">
+      <header class="slide-header">
+        <div>
+          <h1 class="slide-title">Some Suggestions</h1>
+          <div class="slide-context">Three ways to make stock market taxation fairer for long-term savers</div>
+        </div>
+      </header>
+
+      <div class="slide-body">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 56px;">
+
+          <div style="border-top: 3px solid #111111; padding-top: 28px;">
+            <div class="num" style="font-size: 14px; color: var(--ink-muted);">01</div>
+            <div style="font-family: var(--font-serif); font-size: 30px; margin-top: 12px; line-height: 1.2;">
+              Credit STT against LTCG
+            </div>
+            <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.55; margin-top: 16px;">
+              Let investors deduct the STT already paid on their trades from their long-term capital gains tax bill.
+            </p>
+          </div>
+
+          <div style="border-top: 3px solid #111111; padding-top: 28px;">
+            <div class="num" style="font-size: 14px; color: var(--ink-muted);">02</div>
+            <div style="font-family: var(--font-serif); font-size: 30px; margin-top: 12px; line-height: 1.2;">
+              0% tax after 5 years
+            </div>
+            <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.55; margin-top: 16px;">
+              Reward patient capital by making equity holdings held for more than 5 years completely tax-free.
+            </p>
+          </div>
+
+          <div style="border-top: 3px solid #111111; padding-top: 28px;">
+            <div class="num" style="font-size: 14px; color: var(--ink-muted);">03</div>
+            <div style="font-family: var(--font-serif); font-size: 30px; margin-top: 12px; line-height: 1.2;">
+              Adjust gains for inflation
+            </div>
+            <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.55; margin-top: 16px;">
+              Bring back indexation so investors pay tax only on real gains above the Cost Inflation Index.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <span>20 Years of Stock Market Taxes in India (2004–2026)</span>
+        <span>08 / 08</span>
+      </footer>
+    </section></div></div>
+  </main>
+
+  <footer class="deck-bottombar">
+    <button class="deck-nav-btn" id="prevSlideBtn" onclick="stepSlide(-1)">&larr; Prev</button>
+    <div class="deck-dots" id="deckDots"></div>
+    <div class="deck-counter" id="deckCounter">01 / 08</div>
+    <button class="deck-nav-btn" id="nextSlideBtn" onclick="stepSlide(1)">Next &rarr;</button>
+  </footer>
+
+  <script>
+    (function() {
+      const NATIVE_W = 1120;
+      const NATIVE_H = 630;
+      const TOTAL = 8;
+      const SLUG = "capital-gains-stt";
+
+      const params = new URLSearchParams(window.location.search);
+      const isEmbed = params.get('embed') === '1';
+      if (isEmbed) {
+        document.body.setAttribute('data-embed', 'true');
+      }
+
+      let currentSlide = 0;
+      let mode = 'flipbook';
+      const slots = Array.from(document.querySelectorAll('.slide-slot'));
+      const dotsWrap = document.getElementById('deckDots');
+      const counterEl = document.getElementById('deckCounter');
+      const prevBtn = document.getElementById('prevSlideBtn');
+      const nextBtn = document.getElementById('nextSlideBtn');
+      const btnFlip = document.getElementById('btnFlipbook');
+      const btnScroll = document.getElementById('btnScroll');
+
+      if (dotsWrap) {
+        slots.forEach((_, idx) => {
+          const dot = document.createElement('button');
+          dot.className = 'deck-dot' + (idx === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', 'Go to slide ' + (idx + 1));
+          dot.onclick = () => goToSlide(idx);
+          dotsWrap.appendChild(dot);
+        });
+      }
+
+      function notifyParent() {
+        if (window.parent && window.parent !== window) {
+          window.parent.postMessage({
+            type: 'deck-state',
+            slug: SLUG,
+            currentSlide: currentSlide,
+            totalSlides: TOTAL
+          }, '*');
+        }
+      }
+
+      function renderState() {
+        slots.forEach((slot, idx) => {
+          slot.classList.toggle('active', idx === currentSlide);
+        });
+        if (dotsWrap) {
+          Array.from(dotsWrap.children).forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === currentSlide);
+          });
+        }
+        if (counterEl) {
+          const c = String(currentSlide + 1).padStart(2, '0');
+          const t = String(TOTAL).padStart(2, '0');
+          counterEl.textContent = c + ' / ' + t;
+        }
+        if (prevBtn) prevBtn.disabled = currentSlide === 0;
+        if (nextBtn) nextBtn.disabled = currentSlide === TOTAL - 1;
+        notifyParent();
+      }
+
+      window.stepSlide = function(delta) {
+        const next = currentSlide + delta;
+        if (next >= 0 && next < TOTAL) {
+          currentSlide = next;
+          renderState();
+        }
+      };
+
+      window.goToSlide = function(idx) {
+        if (idx >= 0 && idx < TOTAL) {
+          currentSlide = idx;
+          renderState();
+        }
+      };
+
+      window.setDeckMode = function(newMode) {
+        mode = newMode;
+        document.body.setAttribute('data-mode', newMode);
+        if (btnFlip) btnFlip.classList.toggle('active', newMode === 'flipbook');
+        if (btnScroll) btnScroll.classList.toggle('active', newMode === 'scroll');
+        updateScale();
+      };
+
+      function updateScale() {
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+        let scale = 1;
+
+        if (isEmbed) {
+          scale = vw / NATIVE_W;
+        } else if (mode === 'flipbook') {
+          const padX = vw < 640 ? 16 : 36;
+          const padY = 100 + (vw < 640 ? 16 : 32);
+          const availW = Math.max(200, vw - padX);
+          const availH = Math.max(150, vh - padY);
+          scale = Math.min(1.15, availW / NATIVE_W, availH / NATIVE_H);
+        } else {
+          const padX = vw < 640 ? 20 : 48;
+          const availW = Math.max(200, vw - padX);
+          scale = Math.min(1, availW / NATIVE_W);
+        }
+
+        document.documentElement.style.setProperty('--scale', String(scale));
+      }
+
+      window.addEventListener('resize', updateScale);
+
+      // Keyboard navigation
+      window.addEventListener('keydown', (e) => {
+        if (mode !== 'flipbook') return;
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+          e.preventDefault();
+          window.stepSlide(1);
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+          e.preventDefault();
+          window.stepSlide(-1);
+        }
+      });
+
+      // Touch swipe navigation on mobile
+      let touchStartX = null;
+      let touchStartY = null;
+      window.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+        }
+      }, { passive: true });
+
+      window.addEventListener('touchend', (e) => {
+        if (mode !== 'flipbook' || touchStartX === null || e.changedTouches.length === 0) return;
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        const dy = e.changedTouches[0].clientY - touchStartY;
+        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.3) {
+          if (dx < 0) window.stepSlide(1);
+          else window.stepSlide(-1);
+        }
+        touchStartX = null;
+        touchStartY = null;
+      }, { passive: true });
+
+      // Listen for parent commands when embedded
+      window.addEventListener('message', (e) => {
+        const data = e.data || {};
+        if (data.slug && data.slug !== SLUG) return;
+        if (data.action === 'prev') window.stepSlide(-1);
+        else if (data.action === 'next') window.stepSlide(1);
+        else if (data.action === 'goto' && typeof data.index === 'number') window.goToSlide(data.index);
+      });
+
+      updateScale();
+      renderState();
+    })();
+  </script>
+</body>
+</html>

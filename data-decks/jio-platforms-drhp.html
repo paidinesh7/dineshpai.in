@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inside the Jio Platforms IPO (DRHP Breakdown)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap');
+
+    :root {
+      --bg: #FFFFFF;
+      --bg-subtle: #F6F6F3;
+      --ink: #111111;
+      --ink-body: #2C2C2C;
+      --ink-muted: #6E6E6A;
+      --line: #E2E2DC;
+      --line-strong: #111111;
+
+      --font-serif: 'Newsreader', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'IBM Plex Mono', monospace;
+
+      --slide-w: 1120px;
+      --slide-h: 630px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #E6E6E1;
+      color: var(--ink);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px 80px;
+      gap: 36px;
+    }
+
+    /* Minimal Top Utility Bar (Screen Only) */
+    .utility-bar {
+      width: var(--slide-w);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: #555;
+      padding-bottom: 4px;
+    }
+
+    .utility-btn {
+      background: #111;
+      color: #FFF;
+      border: none;
+      padding: 7px 14px;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      cursor: pointer;
+    }
+
+    .utility-btn:hover {
+      background: #333;
+    }
+
+    .deck {
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+    }
+
+    /* 16:9 Slide Canvas */
+    .slide {
+      width: var(--slide-w);
+      height: var(--slide-h);
+      background: var(--bg);
+      padding: 64px 88px 52px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+    }
+
+    /* Slide Header */
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 32px;
+    }
+
+    .slide-title {
+      font-family: var(--font-serif);
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .slide-context {
+      font-family: var(--font-sans);
+      font-size: 16.5px;
+      color: var(--ink-muted);
+      margin-top: 8px;
+      font-weight: 400;
+    }
+
+    /* Slide Body */
+    .slide-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Slide Footer */
+    .slide-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--ink-muted);
+    }
+
+    /* Clean Tables */
+    table.clean-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table.clean-table th {
+      text-align: left;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink-muted);
+      font-weight: 500;
+      padding: 0 20px 14px 0;
+      border-bottom: 1.5px solid var(--line-strong);
+    }
+
+    table.clean-table td {
+      padding: 18px 20px 18px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 17px;
+      color: var(--ink-body);
+      vertical-align: baseline;
+    }
+
+    table.clean-table tr:last-child td {
+      border-bottom: 1.5px solid var(--line-strong);
+    }
+
+    table.clean-table td:last-child,
+    table.clean-table th:last-child {
+      padding-right: 0;
+    }
+
+    .num {
+      font-family: var(--font-mono);
+      font-variant-numeric: tabular-nums;
+      color: var(--ink);
+    }
+
+    @page {
+      size: 1120px 630px;
+      margin: 0;
+    }
+
+    @media print {
+      body {
+        background: #FFFFFF;
+        padding: 0;
+        gap: 0;
+      }
+      .utility-bar {
+        display: none !important;
+      }
+      .deck {
+        gap: 0;
+      }
+      .slide {
+        box-shadow: none;
+        page-break-after: always;
+        break-after: page;
+      }
+    }
+  </style>
+
+<style id="responsive-deck-engine">
+  :root {
+    --native-w: 1120px;
+    --native-h: 630px;
+    --scale: 1;
+  }
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    min-height: 100vh !important;
+    background: #141413 !important;
+    color: #111111;
+    overflow-x: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+  }
+
+  body[data-mode="flipbook"] {
+    height: 100vh !important;
+    height: 100dvh !important;
+    overflow: hidden !important;
+  }
+
+  body[data-mode="scroll"] {
+    height: auto !important;
+    overflow-y: auto !important;
+  }
+
+  body[data-embed="true"] {
+    background: #FFFFFF !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+  }
+
+  /* Top Chrome Bar */
+  .deck-topbar {
+    height: 48px;
+    background: #1C1C1A;
+    border-bottom: 1px solid #2E2E2B;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 12px;
+    color: #D4D4CE;
+    flex-shrink: 0;
+    z-index: 50;
+  }
+
+  body[data-embed="true"] .deck-topbar,
+  body[data-embed="true"] .deck-bottombar {
+    display: none !important;
+  }
+
+  .deck-back {
+    color: #F5F5F0;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background: #292926;
+    border: 1px solid #3A3A36;
+  }
+  .deck-back:hover {
+    background: #33332F;
+  }
+
+  .deck-top-title {
+    font-weight: 500;
+    color: #A8A8A0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+    text-align: center;
+  }
+
+  .deck-top-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .deck-action-btn {
+    background: #292926;
+    color: #E5E5E0;
+    border: 1px solid #3A3A36;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-family: inherit;
+    font-size: 11.5px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .deck-action-btn:hover {
+    background: #33332F;
+  }
+  .deck-action-btn.active {
+    background: #F5F5F0;
+    color: #111111;
+    border-color: #F5F5F0;
+    font-weight: 600;
+  }
+
+  /* Stage Area */
+  .deck-stage {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    position: relative;
+    min-height: 0;
+    width: 100%;
+  }
+
+  body[data-mode="scroll"] .deck-stage {
+    justify-content: flex-start;
+    padding: 24px 12px 64px 12px;
+    gap: 24px;
+  }
+
+  body[data-embed="true"] .deck-stage {
+    padding: 0 !important;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .slide-slot {
+    width: calc(var(--native-w) * var(--scale));
+    height: calc(var(--native-h) * var(--scale));
+    position: relative;
+    overflow: hidden;
+    background: #FFFFFF;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+    flex-shrink: 0;
+  }
+
+  body[data-mode="flipbook"] .slide-slot {
+    display: none;
+  }
+  body[data-mode="flipbook"] .slide-slot.active {
+    display: block;
+  }
+
+  body[data-mode="scroll"] .slide-slot {
+    display: block;
+  }
+
+  body[data-embed="true"] .slide-slot {
+    box-shadow: none !important;
+  }
+
+  .slide-scaler {
+    width: var(--native-w);
+    height: var(--native-h);
+    transform-origin: top left;
+    transform: scale(var(--scale));
+    position: relative;
+  }
+
+  .slide {
+    position: relative !important;
+    inset: auto !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    width: var(--native-w) !important;
+    height: var(--native-h) !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Bottom Bar for Flipbook Mode */
+  .deck-bottombar {
+    height: 52px;
+    background: #1C1C1A;
+    border-top: 1px solid #2E2E2B;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 12px;
+    color: #D4D4CE;
+    flex-shrink: 0;
+    z-index: 50;
+  }
+
+  body[data-mode="scroll"] .deck-bottombar {
+    display: none !important;
+  }
+
+  .deck-nav-btn {
+    background: #292926;
+    color: #F5F5F0;
+    border: 1px solid #3A3A36;
+    border-radius: 4px;
+    padding: 7px 14px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    min-width: 78px;
+  }
+  .deck-nav-btn:hover:not(:disabled) {
+    background: #33332F;
+  }
+  .deck-nav-btn:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+
+  .deck-dots {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .deck-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #44443F;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .deck-dot.active {
+    background: #F5F5F0;
+    transform: scale(1.25);
+  }
+
+  .deck-counter {
+    font-variant-numeric: tabular-nums;
+    color: #A8A8A0;
+    min-width: 54px;
+    text-align: center;
+  }
+
+  @media (max-width: 640px) {
+    .deck-top-title {
+      display: none;
+    }
+    .deck-stage {
+      padding: 8px;
+    }
+    .deck-dots {
+      display: none;
+    }
+  }
+
+  @media print {
+    @page {
+      size: 1120px 630px;
+      margin: 0;
+    }
+    html, body {
+      background: #FFFFFF !important;
+      height: auto !important;
+      overflow: visible !important;
+      display: block !important;
+    }
+    .deck-topbar, .deck-bottombar {
+      display: none !important;
+    }
+    .deck-stage {
+      padding: 0 !important;
+      display: block !important;
+    }
+    .slide-slot {
+      display: block !important;
+      width: 1120px !important;
+      height: 630px !important;
+      box-shadow: none !important;
+      page-break-after: always !important;
+      break-after: page !important;
+    }
+    .slide-scaler {
+      transform: none !important;
+    }
+  }
+</style>
+</head>
+<body data-mode="flipbook" data-embed="false">
+
+  <header class="deck-topbar">
+    <a href="/data" class="deck-back">&larr; dineshpai.in/data</a>
+    <div class="deck-top-title">Inside the Jio Platforms IPO (DRHP Breakdown)</div>
+    <div class="deck-top-actions">
+      <button class="deck-action-btn active" id="btnFlipbook" onclick="setDeckMode('flipbook')">Slide View</button>
+      <button class="deck-action-btn" id="btnScroll" onclick="setDeckMode('scroll')">Scroll All (7)</button>
+      <button class="deck-action-btn" onclick="window.print()">Print / PDF</button>
+    </div>
+  </header>
+
+  <main class="deck-stage" id="deckStage">
+    <div class="slide-slot active" data-index="0"><div class="slide-scaler"><section class="slide" data-slide="1">
+      <header class="slide-header">
+        <div>
+          <h1 class="slide-title">Inside the Jio Platforms DRHP</h1>
+          <div class="slide-context">Key numbers from the Draft Red Herring Prospectus filed with SEBI on June 19, 2026</div>
+        </div>
+      </header>
+
+      <div class="slide-body">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 56px; border-top: 2px solid var(--ink); padding-top: 40px;">
+          <div>
+            <div class="num" style="font-size: 46px; font-weight: 600; letter-spacing: -0.03em; line-height: 1; white-space: nowrap;">27.0 Cr</div>
+            <div style="font-size: 18px; font-weight: 600; margin-top: 18px;">Fresh Equity Shares Only</div>
+            <div style="font-size: 15px; color: var(--ink-muted); margin-top: 8px; line-height: 1.55;">
+              100% Fresh Issue (~2.9% dilution) with <strong>Zero Offer for Sale (OFS)</strong>. Existing investors are selling 0 shares.
+            </div>
+          </div>
+
+          <div>
+            <div class="num" style="font-size: 46px; font-weight: 600; letter-spacing: -0.03em; line-height: 1; white-space: nowrap;"><span style="line-height: 0;">₹</span>30,049 Cr</div>
+            <div style="font-size: 18px; font-weight: 600; margin-top: 18px;">FY26 Net Profit</div>
+            <div style="font-size: 15px; color: var(--ink-muted); margin-top: 8px; line-height: 1.55;">
+              Earned on ₹1,46,885 Cr operating revenue and ₹76,255 Cr EBITDA (51.9% margin) across 52.44 Cr subscribers.
+            </div>
+          </div>
+
+          <div>
+            <div class="num" style="font-size: 46px; font-weight: 600; letter-spacing: -0.03em; line-height: 1; white-space: nowrap;"><span style="line-height: 0;">₹</span>27,500 Cr</div>
+            <div style="font-size: 18px; font-weight: 600; margin-top: 18px;">To Repay Telecom Debt</div>
+            <div style="font-size: 15px; color: var(--ink-muted); margin-top: 8px; line-height: 1.55;">
+              Out of the expected ~₹37,700 Cr issue, ₹27,500 Cr will pay down debt at Reliance Jio Infocomm.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <span>Source: Jio Platforms Limited SEBI DRHP (Filed June 19, 2026; SEBI Approval Aug 28, 2026)</span>
+        <span>01 / 07</span>
+      </footer>
+    </section></div></div>
+<div class="slide-slot" data-index="1"><div class="slide-scaler"><section class="slide" data-slide="2">
+      <header class="slide-header">
+        <div>
+          <h1 class="slide-title">Jio's Net Profit Has Grown 5.4× Since FY20</h1>
+          <div class="slide-context">Restated consolidated Profit After Tax (PAT in ₹ Crore) after the 4G and 5G rollout phase</div>
+        </div>
+      </header>
+
+      <div class="slide-body">
+        <svg viewBox="0 0 944 330" style="width: 100%; height: 330px;">
+          <line x1="20" y1="280" x2="924" y2="280" stroke="#111111" stroke-width="1.5"/>
+
+          <!-- 5 verified bars: ₹1,000 Cr = 7.2px -->
+          <!-- FY20: ₹5,562 Cr (h=40, y=240) -->
+          <rect x="68" y="240" width="104" height="40" fill="#CCCCCC"/>
+          <text x="120" y="224" text-anchor="middle" class="num" font-size="13.5" fill="#555555">₹5,562</text>
+          <text x="120" y="308" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13.5" fill="#666666">FY20</text>
+
+          <!-- FY22: ₹15,487 Cr (h=112, y=168) -->
+          <rect x="254" y="168" width="104" height="112" fill="#A0A09A"/>
+          <text x="306" y="152" text-anchor="middle" class="num" font-size="13.5" fill="#333333">₹15,487</text>
+          <text x="306" y="308" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13.5" fill="#666666">FY22</text>
+
+          <!-- FY24: ₹21,423 Cr (h=154, y=126) -->
+          <rect x="440" y="126" width="104" height="154" fill="#6E6E68"/>
+          <text x="492" y="110" text-anchor="middle" class="num" font-size="13.5" fill="#111111">₹21,423</text>
+          <text x="492" y="308" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13.5" fill="#666666">FY24</text>
+
+          <!-- FY25: ₹26,109 Cr (h=188, y=92) -->
+          <rect x="626" y="92" width="104" height="188" fill="#3B3B37"/>
+          <text x="678" y="76" text-anchor="middle" class="num" font-size="13.5" font-weight="600" fill="#111111">₹26,109</text>
+          <text x="678" y="308" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13.5" fill="#666666">FY25</text>
+
+          <!-- FY26: ₹30,049 Cr (h=216, y=64) -->
+          <rect x="812" y="64" width="104" height="216" fill="#111111"/>
+          <text x="864" y="47" text-anchor="middle" class="num" font-size="15" font-weight="700" fill="#111111">₹30,049 Cr</text>
+          <text x="864" y="308" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13.5" font-weight="600" fill="#111111">FY26</text>
+        </svg>
+      </div>
+
+      <footer class="slide-footer">
+        <span>Source: Jio Platforms DRHP · FY26 Scale: 52.44 Cr Subscribers · 26.8 Cr 5G Users · 2.71 Cr Broadband Homes · 42.3 GB/User/Mo</span>
+        <span>02 / 07</span>
+      </footer>
+    </section></div></div>
+<div class="slide-slot" data-index="2"><div class="slide-scaler"><section class="slide" data-slide="3">
+      <header class="slide-header">
+        <div>
+          <h1 class="slide-title">India's Largest IPOs—And Why Jio's Is Different</h1>
+          <div class="slide-context">India's biggest past IPOs were mostly existing owners cashing out (OFS). Jio is 100% Fresh Issue.</div>
+        </div>
+      </header>
+
+      <div class="slide-body">
+        <svg viewBox="0 0 944 330" style="width: 100%; height: 330px;">
+          <line x1="20" y1="268" x2="924" y2="268" stroke="#111111" stroke-width="1.5"/>
+
+          <!-- Scale: ₹1,000 Cr = 5.4px -->
+          <!-- Coal India (2010): ₹15,199 Cr (h=82, y=186) -->
+          <rect x="58" y="186" width="112" height="82" fill="#D0D0CA"/>
+          <text x="114" y="170" text-anchor="middle" class="num" font-size="13" fill="#555555">₹15,199 Cr</text>
+          <text x="114" y="294" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13" font-weight="500" fill="#333333">Coal India</text>
+          <text x="114" y="313" text-anchor="middle" class="num" font-size="11.5" fill="#777777">100% OFS (2010)</text>
+
+          <!-- Paytm (2021): ₹18,300 Cr (h=99, y=169) -->
+          <rect x="242" y="169" width="112" height="99" fill="#B0B0AA"/>
+          <text x="298" y="153" text-anchor="middle" class="num" font-size="13" fill="#333333">₹18,300 Cr</text>
+          <text x="298" y="294" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13" font-weight="500" fill="#333333">Paytm</text>
+          <text x="298" y="313" text-anchor="middle" class="num" font-size="11.5" fill="#777777">55% OFS (2021)</text>
+
+          <!-- LIC (2022): ₹20,557 Cr (h=111, y=157) -->
+          <rect x="426" y="157" width="112" height="111" fill="#888882"/>
+          <text x="482" y="141" text-anchor="middle" class="num" font-size="13" fill="#222222">₹20,557 Cr</text>
+          <text x="482" y="294" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13" font-weight="500" fill="#333333">LIC of India</text>
+          <text x="482" y="313" text-anchor="middle" class="num" font-size="11.5" fill="#777777">100% OFS (2022)</text>
+
+          <!-- Hyundai India (2024): ₹27,859 Cr (h=150, y=118) -->
+          <rect x="610" y="118" width="112" height="150" fill="#555550"/>
+          <text x="666" y="102" text-anchor="middle" class="num" font-size="13.5" font-weight="600" fill="#111111">₹27,859 Cr</text>
+          <text x="666" y="294" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13" font-weight="500" fill="#333333">Hyundai India</text>
+          <text x="666" y="313" text-anchor="middle" class="num" font-size="11.5" fill="#777777">100% OFS (2024)</text>
+
+          <!-- Jio Platforms (DRHP 2026): ~₹37,700 Cr (h=204, y=64) -->
+          <rect x="794" y="64" width="112" height="204" fill="#111111"/>
+          <text x="850" y="46" text-anchor="middle" class="num" font-size="14.5" font-weight="700" fill="#111111">~₹37,700 Cr</text>
+          <text x="850" y="294" text-anchor="middle" style="font-family: var(--font-sans);" font-size="13" font-weight="700" fill="#111111">Jio Platforms</text>
+          <text x="850" y="313" text-anchor="middle" class="num" font-size="11.5" font-weight="700" fill="#111111">100% Fresh Issue</text>
+        </svg>
+      </div>
+
+      <footer class="slide-footer">
+        <span>Source: SEBI Filings · In an OFS, proceeds go to selling shareholders; in a Fresh Issue, 100% goes to the company</span>
+        <span>03 / 07</span>
+      </footer>
+    </section></div></div>
+<div class="slide-slot" data-index="3"><div class="slide-scaler"><section class="slide" data-slide="4">
+      <header class="slide-header">
+        <div>
+          <h1 class="slide-title">Who Owns Jio—And Who Is Selling?</h1>
+          <div class="slide-context">Despite raising ₹1,52,056 Cr in 2020, not a single existing investor is selling in the DRHP</div>
+        </div>
+      </header>
+
+      <div class="slide-body">
+        <table class="clean-table">
+          <thead>
+            <tr>
+              <th style="width: 35%;">Shareholder Group (Per DRHP)</th>
+              <th style="width: 24%;">Entry Cost / 2020 Capital</th>
+              <th style="width: 17%;">Pre-IPO Stake</th>
+              <th style="width: 24%;">Shares Sold in IPO (OFS)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="white-space: nowrap;"><strong>Reliance Industries Ltd (Promoter)</strong></td>
+              <td class="num" style="white-space: nowrap;">₹89.58 / sh (WACA)</td>
+              <td class="num" style="font-weight: 600; white-space: nowrap;">66.43%</td>
+              <td class="num" style="font-weight: 600; white-space: nowrap;">0 Shares (Nil)</td>
+            </tr>
+            <tr>
+              <td style="white-space: nowrap;"><strong>Meta Platforms (Jaadhu Holdings)</strong></td>
+              <td class="num" style="white-space: nowrap;">₹43,574 Cr (2020)</td>
+              <td class="num" style="font-weight: 600; white-space: nowrap;">9.98%</td>
+              <td class="num" style="font-weight: 600; white-space: nowrap;">0 Shares (Nil)</td>
+            </tr>
+            <tr>
+              <td style="white-space: nowrap;"><strong>Google International (Alphabet)</strong></td>
+              <td class="num" style="white-space: nowrap;">₹33,737 Cr (2020)</td>
+              <td class="num" style="font-weight: 600; white-space: nowrap;">7.73%</td>
+              <td class="num" style="font-weight: 600; white-space: nowrap;">0 Shares (Nil)</td>
+            </tr>
+            <tr>
+              <td style="white-space: nowrap;"><strong>11 Global PE &amp; Sovereign Funds</strong></td>
+              <td class="num" style="white-space: nowrap;">₹74,745 Cr (2020)</td>
+              <td class="num" style="font-weight: 600; white-space: nowrap;">15.86%</td>
+              <td class="num" style="font-weight: 600; white-space: nowrap;">0 Shares (Nil)</td>
+            </tr>
+            <tr style="background: var(--bg-subtle);">
+              <td style="padding-left: 12px; white-space: nowrap;"><strong>Total Pre-IPO Equity (893.8 Cr Sh)</strong></td>
+              <td class="num" style="white-space: nowrap;"><strong>₹4.91L Cr Val. (2020)</strong></td>
+              <td class="num" style="font-weight: 700; white-space: nowrap;">100.00%</td>
+              <td class="num" style="font-weight: 700; white-space: nowrap;">Zero OFS (27 Cr Fresh)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <footer class="slide-footer">
+        <span>Source: Jio Platforms DRHP · PE &amp; Sovereign funds include Silver Lake, Vista, KKR, PIF, Mubadala, ADIA &amp; General Atlantic</span>
+        <span>04 / 07</span>
+      </footer>
+    </section></div></div>
+<div class="slide-slot" data-index="4"><div class="slide-scaler"><section class="slide" data-slide="5">
+      <header class="slide-header">
+        <div>
+          <h1 class="slide-title">Where Will the IPO Money Go?</h1>
+          <div class="slide-context">Because there are no selling shareholders, 100% of net proceeds go to strengthen Jio's balance sheet</div>
+        </div>
+      </header>
+
+      <div class="slide-body">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: stretch;">
+
+          <!-- Left Card: Debt Profile in DRHP -->
+          <div style="border: 1px solid var(--line); padding: 36px 40px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="num" style="font-size: 13px; color: var(--ink-muted); letter-spacing: 0.04em; line-height: 1;">DEBT PROFILE IN DRHP (MAR 2026)</div>
+
+            <div style="margin: 28px 0;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 20px; border-bottom: 1px solid var(--line);">
+                <span style="font-size: 16px; color: var(--ink-body); white-space: nowrap;">Total Gross Borrowings</span>
+                <span class="num" style="font-size: 26px; font-weight: 600; white-space: nowrap;"><span style="line-height: 0;">₹</span>71,529 Cr</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; padding-top: 20px;">
+                <span style="font-size: 16px; color: var(--ink-body); white-space: nowrap;">Net Debt (0.36x EBITDA)</span>
+                <span class="num" style="font-size: 26px; font-weight: 600; color: var(--ink-muted); white-space: nowrap;"><span style="line-height: 0;">₹</span>27,580 Cr</span>
+              </div>
+            </div>
+
+            <div style="font-size: 15px; color: var(--ink-muted); line-height: 1.5;">
+              External commercial borrowings and bank debt taken by subsidiary Reliance Jio Infocomm for 5G rollout.
+            </div>
+          </div>
+
+          <!-- Right Card: Objects of the Issue -->
+          <div style="border: 2px solid var(--ink); background: var(--bg-subtle); padding: 36px 40px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="num" style="font-size: 13px; color: var(--ink); font-weight: 600; letter-spacing: 0.04em; line-height: 1;">OBJECTS OF THE ISSUE (FRESH ISSUE)</div>
+
+            <div style="margin: 28px 0;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 20px; border-bottom: 1px solid #CCCCCC;">
+                <span style="font-size: 16px; color: var(--ink-body); white-space: nowrap;">1. Debt Repayment (RJIL)</span>
+                <span class="num" style="font-size: 26px; font-weight: 700; white-space: nowrap;"><span style="line-height: 0;">₹</span>27,500 Cr</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; padding-top: 20px;">
+                <span style="font-size: 16px; color: var(--ink-body); white-space: nowrap;">2. General Corporate</span>
+                <span class="num" style="font-size: 26px; font-weight: 700; color: var(--ink); white-space: nowrap;">~<span style="line-height: 0;">₹</span>10,200 Cr</span>
+              </div>
+            </div>
+
+            <div style="font-size: 15px; color: var(--ink); font-weight: 500; line-height: 1.5;">
+              Paying off ₹27,500 Cr cuts gross debt by 38%, directly lowering interest costs and boosting net profit.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <span>Source: Jio Platforms Limited DRHP ("Objects of the Issue" &amp; Consolidated Financial Statements as of March 31, 2026)</span>
+        <span>05 / 07</span>
+      </footer>
+    </section></div></div>
+<div class="slide-slot" data-index="5"><div class="slide-scaler"><section class="slide" data-slide="6">
+      <header class="slide-header">
+        <div>
+          <h1 class="slide-title">Jio vs. Bharti Airtel Today (FY26)</h1>
+          <div class="slide-context">Jio leads in Indian subscriber scale; Airtel earns higher revenue per user (ARPU)</div>
+        </div>
+      </header>
+
+      <div class="slide-body">
+        <table class="clean-table">
+          <thead>
+            <tr>
+              <th style="width: 34%;">Metric (FY26 Consolidated)</th>
+              <th style="width: 33%;">Jio Platforms (DRHP)</th>
+              <th style="width: 33%;">Bharti Airtel</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Mobile Subscribers</strong></td>
+              <td class="num" style="font-weight: 600;">52.44 Crore</td>
+              <td class="num">38.7 Crore (India)*</td>
+            </tr>
+            <tr>
+              <td><strong>Monthly Revenue Per User (ARPU)</strong></td>
+              <td class="num">₹214</td>
+              <td class="num" style="font-weight: 600;">₹257</td>
+            </tr>
+            <tr>
+              <td><strong>Operating Revenue</strong></td>
+              <td class="num">₹1,46,885 Cr</td>
+              <td class="num" style="font-weight: 600;">₹2,10,973 Cr*</td>
+            </tr>
+            <tr>
+              <td><strong>EBITDA Margin</strong></td>
+              <td class="num">51.9% (₹76,255 Cr)</td>
+              <td class="num" style="font-weight: 600;">57.0% (₹1,20,386 Cr)</td>
+            </tr>
+            <tr>
+              <td><strong>Net Profit (PAT)</strong></td>
+              <td class="num">₹30,049 Cr</td>
+              <td class="num" style="font-weight: 600;">₹33,556 Cr</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <footer class="slide-footer">
+        <span>*Note: Airtel has 38.7 Cr India mobile users and 66.6 Cr global users including 14 African countries (India revenue ~₹1.54L Cr)</span>
+        <span>06 / 07</span>
+      </footer>
+    </section></div></div>
+<div class="slide-slot" data-index="6"><div class="slide-scaler"><section class="slide" data-slide="7">
+      <header class="slide-header">
+        <div>
+          <h1 class="slide-title">Three Things Retail Investors Should Know</h1>
+          <div class="slide-context">What the Jio DRHP means for existing Reliance shareholders and IPO applicants</div>
+        </div>
+      </header>
+
+      <div class="slide-body">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 56px;">
+
+          <div style="border-top: 3px solid #111111; padding-top: 28px;">
+            <div class="num" style="font-size: 28px; font-weight: 700; color: var(--ink); line-height: 1; white-space: nowrap;">100% Fresh Issue</div>
+            <div style="font-size: 17px; font-weight: 600; margin-top: 16px;">
+              No early investors are exiting
+            </div>
+            <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.55; margin-top: 12px;">
+              Unlike most mega-IPOs where PE funds cash out via an Offer for Sale, Meta, Google, and PE funds are selling zero shares. Every rupee raised goes to Jio to pay down debt.
+            </p>
+          </div>
+
+          <div style="border-top: 3px solid #111111; padding-top: 28px;">
+            <div class="num" style="font-size: 28px; font-weight: 700; color: var(--ink); line-height: 1; white-space: nowrap;">RIL Quota</div>
+            <div style="font-size: 17px; font-weight: 600; margin-top: 16px;">
+              Reserved quota, not free shares
+            </div>
+            <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.55; margin-top: 12px;">
+              Because this is an IPO and not a demerger (unlike Jio Financial in 2023), RIL shareholders won't get free shares—but the DRHP reserves a special RIL Shareholder Quota to bid.
+            </p>
+          </div>
+
+          <div style="border-top: 3px solid #111111; padding-top: 28px;">
+            <div class="num" style="font-size: 28px; font-weight: 700; color: var(--ink); line-height: 1; white-space: nowrap;">2.9% Dilution</div>
+            <div style="font-size: 17px; font-weight: 600; margin-top: 16px;">
+              Why SEBI's 2.5% rule mattered
+            </div>
+            <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.55; margin-top: 12px;">
+              SEBI's new mega-IPO rule (cutting minimum float from 5% to 2.5% for &gt;₹5L Cr companies) lets Jio list by issuing just 27 Cr fresh shares (~2.9% stake) without flooding the market.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <span>Inside the Jio Platforms DRHP — Key Facts &amp; Investor Takeaways</span>
+        <span>07 / 07</span>
+      </footer>
+    </section></div></div>
+  </main>
+
+  <footer class="deck-bottombar">
+    <button class="deck-nav-btn" id="prevSlideBtn" onclick="stepSlide(-1)">&larr; Prev</button>
+    <div class="deck-dots" id="deckDots"></div>
+    <div class="deck-counter" id="deckCounter">01 / 07</div>
+    <button class="deck-nav-btn" id="nextSlideBtn" onclick="stepSlide(1)">Next &rarr;</button>
+  </footer>
+
+  <script>
+    (function() {
+      const NATIVE_W = 1120;
+      const NATIVE_H = 630;
+      const TOTAL = 7;
+      const SLUG = "jio-platforms-drhp";
+
+      const params = new URLSearchParams(window.location.search);
+      const isEmbed = params.get('embed') === '1';
+      if (isEmbed) {
+        document.body.setAttribute('data-embed', 'true');
+      }
+
+      let currentSlide = 0;
+      let mode = 'flipbook';
+      const slots = Array.from(document.querySelectorAll('.slide-slot'));
+      const dotsWrap = document.getElementById('deckDots');
+      const counterEl = document.getElementById('deckCounter');
+      const prevBtn = document.getElementById('prevSlideBtn');
+      const nextBtn = document.getElementById('nextSlideBtn');
+      const btnFlip = document.getElementById('btnFlipbook');
+      const btnScroll = document.getElementById('btnScroll');
+
+      if (dotsWrap) {
+        slots.forEach((_, idx) => {
+          const dot = document.createElement('button');
+          dot.className = 'deck-dot' + (idx === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', 'Go to slide ' + (idx + 1));
+          dot.onclick = () => goToSlide(idx);
+          dotsWrap.appendChild(dot);
+        });
+      }
+
+      function notifyParent() {
+        if (window.parent && window.parent !== window) {
+          window.parent.postMessage({
+            type: 'deck-state',
+            slug: SLUG,
+            currentSlide: currentSlide,
+            totalSlides: TOTAL
+          }, '*');
+        }
+      }
+
+      function renderState() {
+        slots.forEach((slot, idx) => {
+          slot.classList.toggle('active', idx === currentSlide);
+        });
+        if (dotsWrap) {
+          Array.from(dotsWrap.children).forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === currentSlide);
+          });
+        }
+        if (counterEl) {
+          const c = String(currentSlide + 1).padStart(2, '0');
+          const t = String(TOTAL).padStart(2, '0');
+          counterEl.textContent = c + ' / ' + t;
+        }
+        if (prevBtn) prevBtn.disabled = currentSlide === 0;
+        if (nextBtn) nextBtn.disabled = currentSlide === TOTAL - 1;
+        notifyParent();
+      }
+
+      window.stepSlide = function(delta) {
+        const next = currentSlide + delta;
+        if (next >= 0 && next < TOTAL) {
+          currentSlide = next;
+          renderState();
+        }
+      };
+
+      window.goToSlide = function(idx) {
+        if (idx >= 0 && idx < TOTAL) {
+          currentSlide = idx;
+          renderState();
+        }
+      };
+
+      window.setDeckMode = function(newMode) {
+        mode = newMode;
+        document.body.setAttribute('data-mode', newMode);
+        if (btnFlip) btnFlip.classList.toggle('active', newMode === 'flipbook');
+        if (btnScroll) btnScroll.classList.toggle('active', newMode === 'scroll');
+        updateScale();
+      };
+
+      function updateScale() {
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+        let scale = 1;
+
+        if (isEmbed) {
+          scale = vw / NATIVE_W;
+        } else if (mode === 'flipbook') {
+          const padX = vw < 640 ? 16 : 36;
+          const padY = 100 + (vw < 640 ? 16 : 32);
+          const availW = Math.max(200, vw - padX);
+          const availH = Math.max(150, vh - padY);
+          scale = Math.min(1.15, availW / NATIVE_W, availH / NATIVE_H);
+        } else {
+          const padX = vw < 640 ? 20 : 48;
+          const availW = Math.max(200, vw - padX);
+          scale = Math.min(1, availW / NATIVE_W);
+        }
+
+        document.documentElement.style.setProperty('--scale', String(scale));
+      }
+
+      window.addEventListener('resize', updateScale);
+
+      // Keyboard navigation
+      window.addEventListener('keydown', (e) => {
+        if (mode !== 'flipbook') return;
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+          e.preventDefault();
+          window.stepSlide(1);
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+          e.preventDefault();
+          window.stepSlide(-1);
+        }
+      });
+
+      // Touch swipe navigation on mobile
+      let touchStartX = null;
+      let touchStartY = null;
+      window.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+        }
+      }, { passive: true });
+
+      window.addEventListener('touchend', (e) => {
+        if (mode !== 'flipbook' || touchStartX === null || e.changedTouches.length === 0) return;
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        const dy = e.changedTouches[0].clientY - touchStartY;
+        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.3) {
+          if (dx < 0) window.stepSlide(1);
+          else window.stepSlide(-1);
+        }
+        touchStartX = null;
+        touchStartY = null;
+      }, { passive: true });
+
+      // Listen for parent commands when embedded
+      window.addEventListener('message', (e) => {
+        const data = e.data || {};
+        if (data.slug && data.slug !== SLUG) return;
+        if (data.action === 'prev') window.stepSlide(-1);
+        else if (data.action === 'next') window.stepSlide(1);
+        else if (data.action === 'goto' && typeof data.index === 'number') window.goToSlide(data.index);
+      });
+
+      updateScale();
+      renderState();
+    })();
+  </script>
+</body>
+</html>
