@@ -7,6 +7,7 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
   showProgress?: boolean;
   maxWidth?: string;
 }
@@ -14,6 +15,7 @@ interface Props {
 const {
   title = "Dinesh Pai",
   description = "Dinesh Pai works at Zerodha, and manages their private investments at Rainmatter.",
+  image = "/static/images/dinesh_new.jpg",
   showProgress = false,
   maxWidth = "max-w-5xl",
 } = Astro.props;
@@ -21,6 +23,9 @@ const {
 const currentPath = Astro.url.pathname;
 const siteTitle = "Dinesh Pai";
 const pageTitle = title === "Home" || title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
+const canonicalUrl = new URL(currentPath, "https://dineshpai.in").toString();
+const ogImageUrl = image.startsWith("http") ? image : new URL(image, "https://dineshpai.in").toString();
+const ogImageType = ogImageUrl.endsWith(".png") ? "image/png" : "image/jpeg";
 ---
 
 <!DOCTYPE html>
@@ -36,10 +41,10 @@ const pageTitle = title === "Home" || title === siteTitle ? siteTitle : `${title
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://dineshpai.in" />
-    <meta property="og:image" content="https://dineshpai.in/static/images/dinesh_new.jpg" />
-    <meta property="og:image:secure_url" content="https://dineshpai.in/static/images/dinesh_new.jpg" />
-    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:secure_url" content={ogImageUrl} />
+    <meta property="og:image:type" content={ogImageType} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
@@ -47,7 +52,7 @@ const pageTitle = title === "Home" || title === siteTitle ? siteTitle : `${title
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="https://dineshpai.in/static/images/dinesh_new.jpg" />
+    <meta name="twitter:image" content={ogImageUrl} />
 
     <!-- Favicon & LLMs.txt -->
     <link rel="shortcut icon" href="/static/images/favicon.png" />

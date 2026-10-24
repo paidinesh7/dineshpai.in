@@ -30,7 +30,7 @@ const words = post.body.split(/\s+/).filter(Boolean).length;
 const readingTime = Math.max(1, Math.ceil(words / 220));
 ---
 
-<BaseLayout title={post.data.title} description={post.data.description} showProgress={true}>
+<BaseLayout title={post.data.title} description={post.data.description} image={post.data.image} showProgress={true}>
   <article class="post single max-w-3xl mx-auto py-2 font-serif">
 
     <!-- TOP BACK LINK -->

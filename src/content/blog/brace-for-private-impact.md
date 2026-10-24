@@ -4,6 +4,7 @@ title: "Brace for (Private) Impact"
 tags: [founders, investing, startups, venture-capital]
 author: dinesh
 description: "Why easy money isn't coming back, why venture capital is expensive in a market without depth, and what founders need to do next."
+image: "/static/images/brace-for-private-impact-og.png"
 ---
 
 As it happens often, we are yet again staring at a few years where easy money will be non-existent. We will see fewer winners with just marketing moats and spending power. A tough lesson is coming for all of us: growth in the venture ecosystem only works when we remember that equity capital is expensive and has to be returned. When an ecosystem fails to return capital, everyone suffers.
