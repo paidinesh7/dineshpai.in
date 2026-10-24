@@ -9,10 +9,17 @@ image: "/static/images/brace-for-private-impact-og.png"
 
 <div class="blog-tldr">
   <div class="blog-tldr-label">TL;DR</div>
-  <p>As it happens often, we are yet again staring at a few years where easy money will be non-existent. We will see fewer winners built on marketing moats, and a tough lesson for all of us: venture is not just about individual companies failing. It is about an entire ecosystem forgetting that equity capital has to be returned, and that it is very expensive in a market without depth.</p>
+  <ul>
+    <li><strong>Easy money is gone for a while:</strong> Higher global interest rates, rupee depreciation, higher capital gains taxes, and shallow market depth in India mean $10B to $12B (not $38B) is our normal annual VC baseline.</li>
+    <li><strong>Equity is your most expensive loan:</strong> Raising dollar VC at high valuations locks you into needing 4x to 5x rupee returns. Fewer than 6% of seed startups raise a $20M+ Series B or C, PE funds only buy profitable businesses, and nearly 60% of Indian exits require an IPO.</li>
+    <li><strong>Marketing isn't a moat:</strong> Capital will flow to businesses with real cost, distribution, or engineering advantages, not startups burning money on ads for the same 1.6 crore consumers.</li>
+    <li><strong>What to do now:</strong> Get profitable on the cash you already have, clean up your audits and diligence early, and once your core business pays the bills, use those cashflows to take moonshots from inside.</li>
+  </ul>
 </div>
 
-Over the past few years, I kept waiting for the hangover of 2021 and 2022 to wear off. It hasn't. In a lot of my conversations with founders, there is still an unspoken assumption that the next funding round is just around the corner, even though our market lacks depth in both what consumers can pay and how investors can exit.
+As it happens often, we are yet again staring at a few years where easy money will be non-existent. We will see fewer winners built on marketing moats, and a tough lesson for all of us: venture is not just about individual companies failing. It is about an entire ecosystem forgetting that equity capital has to be returned, and that it is very expensive in a market without depth.
+
+The pain in private markets today is not coming from a single event. It comes from several factors hitting at the same time: higher taxes on capital gains, shallow market depth in India, steady rupee depreciation, and the cost of capital going up globally. Yet in a lot of my conversations with founders, there is still an unspoken assumption that the next funding round is just around the corner.
 
 That mindset is why we still see ten startups copying the same idea or building small tweaks on existing products. And when a startup raises ₹500 crore, spends it on ads and discounts, and shuts down, people often shrug and say that is the VC's problem. It isn't. When startups fail to return cash to funds, the university endowments, pension funds, and family offices behind those VCs pull back from India. Domestic family offices move their money back into public stocks, real estate, or gold. Treating equity like free money makes it harder for the next ten years of serious founders to raise capital.
 
@@ -67,13 +74,13 @@ Founders need to remember a simple truth: **fundraising is borrowing money, and 
 
 With a bank loan, an EMI goes out every month, so you treat debt carefully. With equity, nobody sends a monthly bill. That makes it easy to treat a fundraise like a prize rather than a liability.
 
-In a market with limited depth in how much consumers can pay and how many large acquirers exist, raising too much money at a high valuation becomes a trap. Investors need returns that justify their risk. When a fund invests in dollars, steady rupee depreciation of around 3.5% a year means your company has to grow 4x to 5x in rupees just to return 3x in dollars. While bank debt costs 10% a year and public market investors expect 12% to 14%, a dollar VC fund needs 24% to 28% annual compounding in rupee terms.
+In a market with limited depth in how much consumers can pay and how many large acquirers exist, raising too much money at a high valuation becomes a trap. Investors need returns that justify their risk. When a fund invests in dollars, steady rupee depreciation of around 3.5% a year means your company has to grow 4x to 5x in rupees just to return 3x in dollars.
 
-During 2021 and 2022, founders got used to large global funds writing quick $30M to $100M checks. Since 2023, those funds have cut their India activity by nearly 90%. That has created a tight bottleneck at Series B and beyond:
+During 2021 and 2022, founders got used to large global funds writing quick $30M to $100M checks. Since 2023, those funds have pulled back sharply from India, creating a tight bottleneck at Series B and beyond:
 
-* **Growth rounds are hard to come by:** Over 1,000 startups raise Seed rounds in India every year, but fewer than 100 companies raise a $20M+ Series B or C check. If your business plan needs three more funding rounds before you turn a profit, the odds are stacked against you.
-* **PE funds buy profits, not burn:** Many founders assume Private Equity or late-stage funds will buy them out later. While PE makes up about 70% of the $38B invested in Indian private markets each year ($26.5B in PE vs. $11.5B in VC), almost all of that money goes into buying control of profitable businesses like hospitals, factories, financial services, and energy assets. PE funds do not bail out loss-making startups.
-* **Exits in India need IPO-ready profits:** In the US, a loss-making startup can still get bought by a big tech company for $300M. In India, big corporate buyouts are rare and make up only 16% of exits. Nearly 60% of all exits happen through public market IPOs and block trades, where investors look for real profits (PAT), cash flows, and clean governance, not GMV or adjusted numbers.
+* **Growth rounds are hard to come by:** Over a thousand startups raise Seed rounds in India every year, but fewer than a hundred raise a $20M+ Series B or C check. If your business plan needs three more funding rounds before you turn a profit, the odds are stacked against you.
+* **PE funds buy profits, not burn:** Many founders assume Private Equity or late-stage funds will buy them out later. While PE makes up roughly 70% of all private market investing in India, almost all of that money goes into buying control of profitable businesses like hospitals, factories, financial services, and energy assets. PE funds do not bail out loss-making startups.
+* **Exits in India need IPO-ready profits:** In the US, a loss-making startup can still get bought by a big tech company for $300M. In India, large corporate buyouts are rare. Nearly 60% of all exits happen through public market IPOs and block trades, where investors look for real profits (PAT), cash flows, and clean governance, not GMV or adjusted numbers.
 
 <div class="blog-chart">
   <div class="blog-chart-title">Out of 100 Seed Startups in India</div>
@@ -139,7 +146,9 @@ In a consumer business, only four things really separate you from the pack:
 3. **Reach and distribution:** Building your own offline or direct channels instead of paying a 30% to 40% toll on every order.
 4. **Unit economics:** Making money on every order early on, rather than hoping scale will fix a loss-making product.
 
-Outside of consumer, the lesson is the same. Tough markets separate serious builders from tourists. If you are taking on expensive venture capital where you are competing for global dollars, don't waste it on thin software wrappers or importing hardware to assemble here. Use that capital to solve hard engineering, manufacturing, or IP problems that take years for anyone else to copy.
+In B2B, software, and deeptech, the lesson is the same. Tough markets separate serious builders from tourists. For years, plenty of startups raised money by building thin software wrappers, copying Western SaaS tools for the Indian market, or importing hardware components to assemble here under a local brand. Neither creates a lasting advantage when software becomes cheap to write and enterprises tighten their software budgets.
+
+If you are taking on expensive venture capital where you are competing for global dollars, use that money to solve hard engineering, manufacturing, or IP problems that take years for anyone else to copy.
 
 ## For existing companies: get profitable on the cash you have
 
@@ -172,12 +181,10 @@ Every business has a few messy areas. What matters is being able to explain them
 
 > "We are heading to a world in which humanity can thrive by empowering most people to fail most of the time."
 
-This last point is for the most serious entrepreneurs. Once your core business is profitable and your books are clean, don't just play defence. Take moonshots inside your existing company.
+Everything above about getting profitable and cleaning up your books can sound like playing defence. It isn't. Getting your core business to pay for itself is how you earn the freedom to go on offence without needing an investor's permission.
 
-When you already have paying customers, distribution, and steady cashflows, you are in the best position to set up a small team inside the company to try bold new ideas. Because your main business pays the bills, most of those experiments can fail without hurting the company, while the one bet that works can open up a whole new path. This is also a good time to step back and decide what problems you really want to spend the next decade solving.
+This last point is for the most serious entrepreneurs. Once your core business is generating cash and your house is in order, take moonshots inside your existing company.
 
-## Facing reality without illusions
+When you already have paying customers, distribution, and steady cashflows, you are in the best position to set up a small team inside the company to try bold new ideas. Because your main business pays the bills, most of those experiments can fail without hurting the company, while the one bet that works can open up a whole new path.
 
-The pain in private markets today is not coming from a single event. It comes from several factors hitting at the same time: higher taxes on capital gains, shallow market depth in India, steady rupee depreciation, and the cost of capital going up globally.
-
-All of this forces us, both founders and investors, to take stock, honestly understand our challenges, and stay prepared rather than living under the illusion that everything is okay.
+This is a good time for all of us, both founders and investors, to take stock, honestly understand our challenges, and stay prepared rather than living under the illusion that everything is okay. It is also the best time to step back and ask what hard problems are truly worth spending the next decade of your life solving.

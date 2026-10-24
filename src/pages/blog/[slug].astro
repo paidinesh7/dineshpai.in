@@ -315,8 +315,21 @@ const readingTime = Math.max(1, Math.ceil(words / 220));
   }
   .body :global(.blog-tldr p) {
     margin: 0 !important;
-    font-size: 0.96rem;
-    line-height: 1.68em;
+    font-size: 0.95rem;
+    line-height: 1.65em;
+  }
+  .body :global(.blog-tldr ul) {
+    margin: 0 !important;
+    padding-left: 18px !important;
+    list-style-type: disc;
+  }
+  .body :global(.blog-tldr li) {
+    font-size: 0.94rem;
+    line-height: 1.62em;
+    margin-bottom: 6px !important;
+  }
+  .body :global(.blog-tldr li:last-child) {
+    margin-bottom: 0 !important;
   }
 
   /* Inline Editorial Bar Charts inside Blog Posts */
