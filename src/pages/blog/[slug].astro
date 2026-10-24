@@ -226,30 +226,169 @@ const readingTime = Math.max(1, Math.ceil(words / 220));
     -webkit-overflow-scrolling: touch;
     width: 100%;
     border-collapse: collapse;
-    margin: 24px 0;
-    font-size: 0.85rem;
+    margin: 28px 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
     font-variant-numeric: tabular-nums;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(168, 162, 158, 0.45);
+    border-radius: 6px;
+  }
+  :global(.dark) .body :global(table) {
+    background: rgba(28, 25, 23, 0.7);
+    border-color: rgba(68, 64, 60, 0.8);
   }
   @media (min-width: 640px) {
     .body :global(table) {
       display: table;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
     }
   }
   .body :global(th),
   .body :global(td) {
     text-align: left;
-    padding: 8px 12px;
-    border-bottom: 1px solid rgba(168, 162, 158, 0.3);
+    padding: 14px 18px;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(168, 162, 158, 0.28);
+    border-right: 1px solid rgba(168, 162, 158, 0.22);
   }
-  .body :global(th) {
+  :global(.dark) .body :global(th),
+  :global(.dark) .body :global(td) {
+    border-bottom-color: rgba(68, 64, 60, 0.55);
+    border-right-color: rgba(68, 64, 60, 0.4);
+  }
+  .body :global(th:last-child),
+  .body :global(td:last-child) {
+    border-right: none;
+  }
+  .body :global(tbody tr:last-child td),
+  .body :global(tbody tr:last-child th) {
+    border-bottom: none;
+  }
+  .body :global(tbody tr:nth-child(even)) {
+    background: rgba(21, 128, 61, 0.04);
+  }
+  :global(.dark) .body :global(tbody tr:nth-child(even)) {
+    background: rgba(52, 211, 153, 0.05);
+  }
+  .body :global(thead th) {
     font-family: 'DM Mono', monospace;
     font-size: 0.72rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    background: rgba(247, 245, 240, 0.9);
     border-bottom: 1.5px solid #1c1917;
+    color: #1c1917;
   }
-  :global(.dark) .body :global(th) {
+  :global(.dark) .body :global(thead th) {
+    background: rgba(28, 25, 23, 0.95);
     border-bottom-color: #d6d3d1;
+    color: #f5f5f4;
+  }
+
+  /* Inline Editorial Bar Charts inside Blog Posts */
+  .body :global(.blog-chart) {
+    margin: 28px 0;
+    padding: 18px 22px;
+    border-radius: 6px;
+    border: 1px solid rgba(168, 162, 158, 0.45);
+    background: rgba(255, 255, 255, 0.65);
+    text-align: left;
+  }
+  :global(.dark) .body :global(.blog-chart) {
+    background: rgba(28, 25, 23, 0.65);
+    border-color: rgba(68, 64, 60, 0.8);
+  }
+  .body :global(.blog-chart-title) {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #1c1917;
+    margin: 0 0 2px 0;
+  }
+  :global(.dark) .body :global(.blog-chart-title) {
+    color: #f5f5f4;
+  }
+  .body :global(.blog-chart-sub) {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: #78716c;
+    margin: 0 0 14px 0 !important;
+    line-height: 1.4 !important;
+  }
+  .body :global(.blog-bars) {
+    position: relative;
+    padding: 2px 115px 4px 0;
+  }
+  .body :global(.blog-bar-row) {
+    margin-bottom: 10px;
+  }
+  .body :global(.blog-bar-row:last-child) {
+    margin-bottom: 0;
+  }
+  .body :global(.blog-bar-label) {
+    display: block;
+    font-size: 0.82rem;
+    line-height: 1.35;
+    margin-bottom: 4px;
+  }
+  .body :global(.blog-bar-track) {
+    position: relative;
+    height: 12px;
+    background: rgba(168, 162, 158, 0.2);
+    border-radius: 2px;
+  }
+  :global(.dark) .body :global(.blog-bar-track) {
+    background: rgba(68, 64, 60, 0.4);
+  }
+  .body :global(.blog-bar-fill) {
+    display: block;
+    height: 100%;
+    border-radius: 2px;
+    background: #78716c;
+  }
+  .body :global(.blog-bar-fill.green) {
+    background: #15803d;
+  }
+  :global(.dark) .body :global(.blog-bar-fill.green) {
+    background: #34d399;
+  }
+  .body :global(.blog-bar-fill.amber) {
+    background: #b45309;
+  }
+  :global(.dark) .body :global(.blog-bar-fill.amber) {
+    background: #fbbf24;
+  }
+  .body :global(.blog-bar-fill.red) {
+    background: #991b1b;
+  }
+  :global(.dark) .body :global(.blog-bar-fill.red) {
+    background: #f87171;
+  }
+  .body :global(.blog-bar-val) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.74rem;
+    font-weight: 600;
+    white-space: nowrap;
+    color: #1c1917;
+  }
+  :global(.dark) .body :global(.blog-bar-val) {
+    color: #f5f5f4;
+  }
+  .body :global(.blog-chart-note) {
+    margin: 12px 0 0 0 !important;
+    padding-top: 10px;
+    border-top: 1px solid rgba(168, 162, 158, 0.28);
+    font-size: 0.82rem !important;
+    line-height: 1.5 !important;
+    color: #57534e;
+  }
+  :global(.dark) .body :global(.blog-chart-note) {
+    border-top-color: rgba(68, 64, 60, 0.55);
+    color: #a8a29e;
   }
 </style>
