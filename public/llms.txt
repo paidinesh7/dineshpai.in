@@ -33,7 +33,7 @@ On his `/thesis` page ([/thesis](https://dineshpai.in/thesis)), Dinesh lays out 
 - **Deeptech & Hardware:** Galaxeye, Spacefields, Karban.
 
 ## Essays & Writing
-- [Brace for (Private) Impact](https://dineshpai.in/blog/brace-for-private-impact) (Oct 2026): Why easy money isn't coming back, why venture capital is expensive in a market without depth, and what founders need to do next across unit economics, statutory audits (CARO), and internal moonshots.
+- [Brace for (Private) Impact](https://dineshpai.in/blog/brace-for-private-impact) (Oct 2026): Why easy money isn't coming back, why venture capital is expensive in a market without depth, and what founders need to do next across unit economics, statutory audits, and internal moonshots.
 - [What I learnt from a visit to Amaravati](https://dineshpai.in/blog/what-i-learnt-from-a-visit-to-amaravati) (Oct 2026): Reflections from meeting entrepreneurs, incubators, and policymakers in Andhra Pradesh—and why early-stage investing is ultimately a bet on people and time.
 - [I am a nobody](https://dineshpai.in/blog/i-am-a-nobody) (Sep 2026): A personal reflection on growing up near Udupi, imposter syndrome, communication, and the role of luck in careers.
 - [Timing and Capital - What your spreadsheets can't tell you](https://dineshpai.in/blog/timing-and-capital---what-your-spreadsheets-cant-tell-you) (Dec 2025): Why market timing, patience, and founder endurance matter more than financial projections in early-stage investing.

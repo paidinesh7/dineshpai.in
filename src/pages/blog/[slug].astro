@@ -287,6 +287,38 @@ const readingTime = Math.max(1, Math.ceil(words / 220));
     color: #f5f5f4;
   }
 
+  /* TL;DR Summary Box inside Blog Posts */
+  .body :global(.blog-tldr) {
+    margin: 0 0 28px 0;
+    padding: 16px 20px;
+    border-radius: 6px;
+    border: 1px solid rgba(168, 162, 158, 0.45);
+    border-left: 3.5px solid #2c4a3e;
+    background: rgba(255, 255, 255, 0.65);
+  }
+  :global(.dark) .body :global(.blog-tldr) {
+    background: rgba(28, 25, 23, 0.65);
+    border-color: rgba(68, 64, 60, 0.8);
+    border-left-color: #629e7a;
+  }
+  .body :global(.blog-tldr-label) {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #2c4a3e;
+    margin-bottom: 6px;
+  }
+  :global(.dark) .body :global(.blog-tldr-label) {
+    color: #629e7a;
+  }
+  .body :global(.blog-tldr p) {
+    margin: 0 !important;
+    font-size: 0.96rem;
+    line-height: 1.68em;
+  }
+
   /* Inline Editorial Bar Charts inside Blog Posts */
   .body :global(.blog-chart) {
     margin: 28px 0;

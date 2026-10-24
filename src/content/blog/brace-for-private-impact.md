@@ -7,13 +7,16 @@ description: "Why easy money isn't coming back, why venture capital is expensive
 image: "/static/images/brace-for-private-impact-og.png"
 ---
 
-As it happens often, we are yet again staring at a few years where easy money will be non-existent. We will see fewer winners with just marketing moats and spending power. A tough lesson is coming for all of us: growth in the venture ecosystem only works when we remember that equity capital is expensive and has to be returned. When an ecosystem fails to return capital, everyone suffers.
+<div class="blog-tldr">
+  <div class="blog-tldr-label">TL;DR</div>
+  <p>As it happens often, we are yet again staring at a few years where easy money will be non-existent. We will see fewer winners built on marketing moats, and a tough lesson for all of us: venture is not just about individual companies failing. It is about an entire ecosystem forgetting that equity capital has to be returned, and that it is very expensive in a market without depth.</p>
+</div>
 
-Many founders think that if a startup raises ₹500 crore, spends it on ads and discounts, and shuts down, that is only the VC's problem. It isn't. When startups fail to return cash to funds, the university endowments, pension funds, and family offices behind those VCs pull back from India. Domestic family offices move their money back into public stocks, real estate, or gold. Treating equity like free money makes it harder for the next ten years of serious founders to raise capital.
+Over the past few years, I kept waiting for the hangover of 2021 and 2022 to wear off. It hasn't. In a lot of my conversations with founders, there is still an unspoken assumption that the next funding round is just around the corner, even though our market lacks depth in both what consumers can pay and how investors can exit.
 
-I believe the past few years still carried the hangover of 2021 and 2022. We kept assuming capital would flow even though our market lacks depth in both consumer spending and exits.
+That mindset is why we still see ten startups copying the same idea or building small tweaks on existing products. And when a startup raises ₹500 crore, spends it on ads and discounts, and shuts down, people often shrug and say that is the VC's problem. It isn't. When startups fail to return cash to funds, the university endowments, pension funds, and family offices behind those VCs pull back from India. Domestic family offices move their money back into public stocks, real estate, or gold. Treating equity like free money makes it harder for the next ten years of serious founders to raise capital.
 
-That hangover is why we still see so many startups copying each other or building small tweaks on existing products. We need to move past that. Going forward, VCs and PE funds will look for companies that are genuinely different, change customer behaviour, and have real advantages in cost and execution, not just bigger marketing budgets.
+Going forward, VCs and PE funds will look for companies that are genuinely different, change customer habits, and have real advantages in cost and execution, not just bigger marketing budgets.
 
 <div class="blog-chart">
   <div class="blog-chart-title">Indian VC Funding: Outlier vs. Normalcy</div>
@@ -51,14 +54,14 @@ That hangover is why we still see so many startups copying each other or buildin
       <span class="blog-bar-label">2025–26 Run-rate</span>
       <div class="blog-bar-track">
         <span class="blog-bar-fill green" style="width: 27.5%;"></span>
-        <span class="blog-bar-val" style="left: calc(27.5% + 8px);">~$11.5B</span>
+        <span class="blog-bar-val" style="left: calc(27.5% + 8px);">$11.5B</span>
       </div>
     </div>
   </div>
   <p class="blog-chart-note">2021 and 2022 were outliers. A $10B to $12B annual market is the normal baseline for India.</p>
 </div>
 
-## Equity Is the Most Expensive Loan You Will Take
+## Equity is the most expensive loan you will take
 
 Founders need to remember a simple truth: **fundraising is borrowing money, and equity is the most expensive loan you can take.**
 
@@ -68,9 +71,9 @@ In a market with limited depth in how much consumers can pay and how many large 
 
 During 2021 and 2022, founders got used to large global funds writing quick $30M to $100M checks. Since 2023, those funds have cut their India activity by nearly 90%. That has created a tight bottleneck at Series B and beyond:
 
-* **Few companies raise growth rounds:** Over 1,000 startups raise Seed rounds in India every year. Only about 15% of them make it to Series A within three years, and fewer than 80 to 100 companies a year across the country (about 6%) raise a Series B or C check of $20M+. If your plan needs three more funding rounds before you make money, the odds are against you.
-* **PE funds buy profits, not burn:** Many founders assume Private Equity or late-stage funds will buy them out later. Out of the ~$38B of private capital invested in India each year, traditional PE makes up about 70% (~$26.5B) and VC is only 30% (~$11.5B). Most PE money goes into buying control of profitable businesses like hospitals, factories, financial services, and energy assets. PE funds do not bail out loss-making startups.
-* **Most Indian exits need IPO-ready profits:** In the US, a startup losing money might still get bought by a big tech company for $300M. In India, corporate M&A is small and makes up only about 16% of exit value. Nearly 60% of all PE and VC exits in India happen through public market IPOs and block trades. Public market investors do not care about GMV or adjusted EBITDA. They look for audited profits (PAT), real cash flows, and clean governance.
+* **Growth rounds are hard to come by:** Over 1,000 startups raise Seed rounds in India every year, but fewer than 100 companies raise a $20M+ Series B or C check. If your business plan needs three more funding rounds before you turn a profit, the odds are stacked against you.
+* **PE funds buy profits, not burn:** Many founders assume Private Equity or late-stage funds will buy them out later. While PE makes up about 70% of the $38B invested in Indian private markets each year ($26.5B in PE vs. $11.5B in VC), almost all of that money goes into buying control of profitable businesses like hospitals, factories, financial services, and energy assets. PE funds do not bail out loss-making startups.
+* **Exits in India need IPO-ready profits:** In the US, a loss-making startup can still get bought by a big tech company for $300M. In India, big corporate buyouts are rare and make up only 16% of exits. Nearly 60% of all exits happen through public market IPOs and block trades, where investors look for real profits (PAT), cash flows, and clean governance, not GMV or adjusted numbers.
 
 <div class="blog-chart">
   <div class="blog-chart-title">Out of 100 Seed Startups in India</div>
@@ -87,21 +90,21 @@ During 2021 and 2022, founders got used to large global funds writing quick $30M
       <span class="blog-bar-label">Reach Series A (within 3 years)</span>
       <div class="blog-bar-track">
         <span class="blog-bar-fill amber" style="width: 15%;"></span>
-        <span class="blog-bar-val" style="left: calc(15% + 8px);">~15 startups</span>
+        <span class="blog-bar-val" style="left: calc(15% + 8px);">15 startups</span>
       </div>
     </div>
     <div class="blog-bar-row">
       <span class="blog-bar-label">Reach Series B / C ($20M+)</span>
       <div class="blog-bar-track">
         <span class="blog-bar-fill red" style="width: 6%;"></span>
-        <span class="blog-bar-val" style="left: calc(6% + 8px);">~6 startups</span>
+        <span class="blog-bar-val" style="left: calc(6% + 8px);">6 startups</span>
       </div>
     </div>
     <div class="blog-bar-row">
       <span class="blog-bar-label">Reach IPO or Profitable PE Buyout</span>
       <div class="blog-bar-track">
         <span class="blog-bar-fill green" style="width: 2%;"></span>
-        <span class="blog-bar-val" style="left: calc(2% + 8px);">~1.5 startups</span>
+        <span class="blog-bar-val" style="left: calc(2% + 8px);">1–2 startups</span>
       </div>
     </div>
   </div>
@@ -110,14 +113,14 @@ During 2021 and 2022, founders got used to large global funds writing quick $30M
 
 Before raising at a high price, it helps to do the simple math on what that valuation requires you to build over the next seven or eight years:
 
-| Entry Valuation | Stage | 4x–5x INR Exit (~3x USD) | Annual PAT Needed (at 25x P/E) | Revenue Needed (at 15% PAT) |
+| Entry Valuation | Stage | 4x–5x INR Exit (3x USD) | Annual PAT Needed (at 25x P/E) | Revenue Needed (at 15% PAT) |
 | :--- | :--- | :--- | :--- | :--- |
 | **₹50 Cr** | Seed | ₹200 – 250 Cr | **₹8 – 10 Cr** | ₹55 – 70 Cr |
 | **₹150 Cr** | Series A | ₹600 – 750 Cr | **₹25 – 30 Cr** | ₹170 – 200 Cr |
 | **₹500 Cr** | Series B | ₹2,000 – 2,500 Cr | **₹80 – 100 Cr** | ₹550 – 670 Cr |
 | **₹1,200 Cr** | Growth | ₹5,000 – 6,000 Cr | **₹200 – 240 Cr** | ₹1,350 – 1,600 Cr |
 
-## What Separates Real Businesses from Marketing Plays
+## What separates real businesses from marketing plays
 
 If equity is this expensive and exits require real profits, what kind of companies will actually win?
 
@@ -138,7 +141,7 @@ In a consumer business, only four things really separate you from the pack:
 
 Outside of consumer, the lesson is the same. Tough markets separate serious builders from tourists. If you are taking on expensive venture capital where you are competing for global dollars, don't waste it on thin software wrappers or importing hardware to assemble here. Use that capital to solve hard engineering, manufacturing, or IP problems that take years for anyone else to copy.
 
-## For Existing Companies: Get Profitable on the Cash You Have
+## For existing companies: get profitable on the cash you have
 
 If you are already running a company today, be strict with your cashflows and assume the next growth round will not come easily.
 
@@ -146,16 +149,14 @@ Ask yourself a simple question: **if your expenses stay flat and your revenue gr
 
 If the answer is no, your survival depends on an outside investor writing a check in the hardest growth market in five years. When markets turn, founders usually take one of two paths:
 
-* **12 months of denial:** Cutting 10% here and there, hoping the funding market improves next quarter, and burning through ₹15 to ₹20 crore of cash before being forced into a desperate bridge round.
-* **A 30-day reset:** Facing reality early, shutting down lines of business that do not make money, reaching break-even, and using the remaining bank balance from a position of strength. Nobody ever regretted getting profitable too early.
+* **Confusion and inaction:** Cutting 10% here and there, hoping the funding market improves next quarter, and burning through cash before being forced into a desperate bridge round.
+* **Practical and proactive:** Facing reality early, shutting down lines of business that do not make money, reaching break-even, and using the remaining bank balance from a position of strength. Nobody ever regretted getting profitable too early.
 
 If you do need to raise money after a high 2021 or 2022 valuation, avoid structured bridge rounds just to protect a headline valuation. Taking a round with 2x liquidation preferences or guaranteed 18% return ratchets lets you keep your valuation for the news article, but it wipes out your own and your team's common shares. A clean round at a lower, honest valuation is always better than a messy term sheet at a fake high valuation.
 
-## Do Your Audits Early and Explain the Tricky Parts Upfront
+## Do your audits early and explain the tricky parts upfront
 
 As companies grow, things get messy: revenue recognition, hidden costs, or delayed filings. Do your statutory audits, financial due diligence (FDD), and legal due diligence (LDD) early so your house is in order.
-
-Pay special attention to **CARO (Companies Auditor's Report Order)**. It is the mandatory checklist attached to your annual audit report where your auditor must legally flag governance and solvency lapses, such as delayed tax or PF payments, inventory mismatches, or loans to related parties. Experienced investors read the CARO annexure first.
 
 Every business has a few messy areas. What matters is being able to explain them clearly and keeping the paperwork ready so an investor can check it before formal diligence even begins. Sharing a problem upfront builds trust. Letting an auditor find it three weeks into diligence kills the deal.
 
@@ -163,11 +164,11 @@ Every business has a few messy areas. What matters is being able to explain them
 | :--- | :--- | :--- |
 | **Revenue & Cash (FDD)** | Pitch deck MIS, audited P&L, GST filings, and bank inflows don't match; unpaid bills (>180 days) sit as revenue. | 1-page sheet tying MIS to P&L, GST, and bank inflows; >180-day dues written off. |
 | **Unit Economics (FDD)** | Hiding shipping, gateway fees, cloud bills, or commissions inside "Other Expenses". | All direct variable costs deducted cleanly above contribution margin. |
-| **CARO & Statutory Audit** | Delaying PF, TDS, or GST >6 months; >10% inventory mismatch; related-party loans; MSME dues >45 days. | Zero arrears or red flags in the CARO report; monthly dues paid on time; quarterly stock checks. |
+| **Statutory Audit** | Delaying PF, TDS, or GST >6 months; >10% inventory mismatch; related-party loans; MSME dues >45 days. | Zero arrears or red flags in the audit report; monthly dues paid on time; quarterly stock checks. |
 | **Legal & IP (LDD)** | Missing board minutes, unfiled RoC forms, verbal ESOP promises, or IP held in a founder's name. | Updated cap table, signed board minutes and ESOP letters, and clean IP assignments in one folder. |
 | **The "Tricky Parts" Note** | Hoping investors won't notice an old write-off, bad batch, or dispute until deep into diligence. | A 2-page note explaining what went wrong and how you fixed it, shared before diligence starts. |
 
-## Take Moonshots Inside Your Existing Company
+## Taking moonshots
 
 > "We are heading to a world in which humanity can thrive by empowering most people to fail most of the time."
 
@@ -175,7 +176,7 @@ This last point is for the most serious entrepreneurs. Once your core business i
 
 When you already have paying customers, distribution, and steady cashflows, you are in the best position to set up a small team inside the company to try bold new ideas. Because your main business pays the bills, most of those experiments can fail without hurting the company, while the one bet that works can open up a whole new path. This is also a good time to step back and decide what problems you really want to spend the next decade solving.
 
-## Facing Reality Without Illusions
+## Facing reality without illusions
 
 The pain in private markets today is not coming from a single event. It comes from several factors hitting at the same time: higher taxes on capital gains, shallow market depth in India, steady rupee depreciation, and the cost of capital going up globally.
 
