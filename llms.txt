@@ -23,7 +23,7 @@ On his `/thesis` page ([/thesis](https://dineshpai.in/thesis)), Dinesh lays out 
 ## Core Pages
 - [Home](https://dineshpai.in/): Bio, core pages, Essays & Writing, Data & Visual Briefs, The Weekly Signal, Podcasts, and Open-Source Tools.
 - [Notes on the next decade](https://dineshpai.in/thesis): Data-backed notes on Indian household income graduation, ITR filing trends, consumer scarcity, and sovereign industrial bottlenecks.
-- [Data & Visual Briefs](https://dineshpai.in/data): Six interactive 16:9 slide decks covering Indian equity ownership (FII vs. DII), foreign bank/NBFC deal flows, the Yes Bank AT1 bond case, 25 years of Nifty corrections, 20 years of capital gains/STT taxes, and the Jio Platforms SEBI DRHP breakdown.
+- [Data & Visual Briefs](https://dineshpai.in/data): Seven interactive 16:9 slide decks covering India's Top 6 IT companies' FY26 revenue sources and geographic concentration, Indian equity ownership (FII vs. DII), foreign bank/NBFC deal flows, the Yes Bank AT1 bond case, 25 years of Nifty corrections, 20 years of capital gains/STT taxes, and the Jio Platforms SEBI DRHP breakdown.
 - [Investments & Portfolio](https://dineshpai.in/portfolio): Directory of 27 startups and founders Dinesh has backed at Rainmatter, along with the investment thesis for each.
 - [Essays & Writing Archive](https://dineshpai.in/blog): Complete archive of long-form essays and reflections on startups, venture capital, and Indian markets.
 
