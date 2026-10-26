@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Where Do India’s Top IT Companies Get Their Revenue? (FY26)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-canvas: #111111;
+      --bg-slide: #FFFFFF;
+      --bg-subtle: #F7F7F7;
+      --ink: #000000;
+      --ink-body: #222222;
+      --ink-muted: #555555;
+      --line: #E0E0E0;
+      --line-strong: #000000;
+
+      --font-serif: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      font-family: var(--font-sans);
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 0;
+      gap: 40px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background-color: var(--bg-slide);
+      position: relative;
+      overflow: hidden;
+      padding: 56px 80px 44px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+      break-after: page;
+    }
+
+    @page {
+      size: 1280px 720px;
+      margin: 0;
+    }
+
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+        gap: 0;
+      }
+      .slide {
+        page-break-after: always;
+        break-after: page;
+      }
+    }
+
+    .slide-header {
+      margin-bottom: 8px;
+    }
+
+    .slide-title {
+      font-family: var(--font-serif);
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .slide-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .slide-footer {
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--ink-muted);
+    }
+
+    .num {
+      font-family: var(--font-mono);
+      font-variant-numeric: tabular-nums;
+    }
+
+    table.clean-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-top: 2px solid var(--line-strong);
+      border-bottom: 2px solid var(--line-strong);
+    }
+
+    table.clean-table th {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink-muted);
+      padding: 15px 12px;
+      border-bottom: 1.5px solid var(--line-strong);
+      text-align: left;
+    }
+
+    table.clean-table td {
+      padding: 18px 12px;
+      border-bottom: 1px solid var(--line);
+      font-size: 16px;
+      color: var(--ink-body);
+      vertical-align: middle;
+    }
+
+    table.clean-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    table.clean-table tr.highlight-row td {
+      background-color: var(--bg-subtle);
+      font-weight: 600;
+      color: var(--ink);
+      border-top: 1.5px solid var(--line-strong);
+      border-bottom: 1.5px solid var(--line-strong);
+    }
+
+    .takeaway-line {
+      margin-top: 24px;
+      padding: 16px 22px;
+      background: var(--bg-subtle);
+      border-left: 3px solid var(--line-strong);
+      font-size: 15.5px;
+      line-height: 1.45;
+      color: var(--ink-body);
+    }
+  </style>
+
+  <style id="responsive-deck-engine">
+    :root {
+      --native-w: 1280px;
+      --native-h: 720px;
+      --scale: 1;
+    }
+
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      min-height: 100vh !important;
+      background: #141413 !important;
+      color: #111111;
+      overflow-x: hidden !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 0 !important;
+    }
+
+    body[data-mode="flipbook"] {
+      height: 100vh !important;
+      height: 100dvh !important;
+      overflow: hidden !important;
+    }
+
+    body[data-mode="scroll"] {
+      height: auto !important;
+      overflow-y: auto !important;
+    }
+
+    body[data-embed="true"] {
+      background: #FFFFFF !important;
+      height: 100vh !important;
+      overflow: hidden !important;
+    }
+
+    .deck-topbar {
+      height: 48px;
+      background: #1C1C1A;
+      border-bottom: 1px solid #2E2E2B;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-family: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 12px;
+      color: #D4D4CE;
+      flex-shrink: 0;
+      z-index: 50;
+    }
+
+    body[data-embed="true"] .deck-topbar,
+    body[data-embed="true"] .deck-bottombar {
+      display: none !important;
+    }
+
+    .deck-back {
+      color: #F5F5F0;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      padding: 6px 10px;
+      border-radius: 4px;
+      background: #292926;
+      border: 1px solid #3A3A36;
+    }
+    .deck-back:hover {
+      background: #33332F;
+    }
+
+    .deck-top-title {
+      font-weight: 500;
+      color: #A8A8A0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex: 1;
+      text-align: center;
+    }
+
+    .deck-top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .deck-action-btn {
+      background: #292926;
+      color: #E5E5E0;
+      border: 1px solid #3A3A36;
+      border-radius: 4px;
+      padding: 6px 10px;
+      font-family: inherit;
+      font-size: 11.5px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .deck-action-btn:hover {
+      background: #33332F;
+    }
+    .deck-action-btn.active {
+      background: #F5F5F0;
+      color: #111111;
+      border-color: #F5F5F0;
+      font-weight: 600;
+    }
+
+    .deck-stage {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      position: relative;
+      min-height: 0;
+      width: 100%;
+    }
+
+    body[data-mode="scroll"] .deck-stage {
+      justify-content: flex-start;
+      padding: 24px 12px 64px 12px;
+      gap: 24px;
+    }
+
+    body[data-embed="true"] .deck-stage {
+      padding: 0 !important;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .slide-slot {
+      width: calc(var(--native-w) * var(--scale));
+      height: calc(var(--native-h) * var(--scale));
+      position: relative;
+      overflow: hidden;
+      background: #FFFFFF;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+      flex-shrink: 0;
+    }
+
+    body[data-mode="flipbook"] .slide-slot {
+      display: none;
+    }
+    body[data-mode="flipbook"] .slide-slot.active {
+      display: block;
+    }
+
+    body[data-mode="scroll"] .slide-slot {
+      display: block;
+    }
+
+    body[data-embed="true"] .slide-slot {
+      box-shadow: none !important;
+    }
+
+    .slide-scaler {
+      width: var(--native-w);
+      height: var(--native-h);
+      transform-origin: top left;
+      transform: scale(var(--scale));
+      position: relative;
+    }
+
+    .slide {
+      position: relative !important;
+      inset: auto !important;
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      width: var(--native-w) !important;
+      height: var(--native-h) !important;
+      margin: 0 !important;
+      box-shadow: none !important;
+    }
+
+    .deck-bottombar {
+      height: 52px;
+      background: #1C1C1A;
+      border-top: 1px solid #2E2E2B;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      font-family: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 12px;
+      color: #D4D4CE;
+      flex-shrink: 0;
+      z-index: 50;
+    }
+
+    body[data-mode="scroll"] .deck-bottombar {
+      display: none !important;
+    }
+
+    .deck-nav-btn {
+      background: #292926;
+      color: #F5F5F0;
+      border: 1px solid #3A3A36;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      min-width: 78px;
+    }
+    .deck-nav-btn:hover:not(:disabled) {
+      background: #33332F;
+    }
+    .deck-nav-btn:disabled {
+      opacity: 0.35;
+      cursor: default;
+    }
+
+    .deck-dots {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .deck-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #44443F;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .deck-dot.active {
+      background: #F5F5F0;
+      transform: scale(1.25);
+    }
+
+    .deck-counter {
+      font-variant-numeric: tabular-nums;
+      color: #A8A8A0;
+      min-width: 54px;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .deck-top-title {
+        display: none;
+      }
+      .deck-stage {
+        padding: 8px;
+      }
+      .deck-dots {
+        display: none;
+      }
+    }
+
+    @media print {
+      @page {
+        size: 1280px 720px;
+        margin: 0;
+      }
+      html, body {
+        background: #FFFFFF !important;
+        height: auto !important;
+        overflow: visible !important;
+        display: block !important;
+      }
+      .deck-topbar, .deck-bottombar {
+        display: none !important;
+      }
+      .deck-stage {
+        padding: 0 !important;
+        display: block !important;
+      }
+      .slide-slot {
+        display: block !important;
+        width: 1280px !important;
+        height: 720px !important;
+        box-shadow: none !important;
+        page-break-after: always !important;
+        break-after: page !important;
+      }
+      .slide-scaler {
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body data-mode="flipbook" data-embed="false">
+
+  <header class="deck-topbar">
+    <a href="/data" class="deck-back">&larr; dineshpai.in/data</a>
+    <div class="deck-top-title">Where Do India’s Top IT Companies Get Their Revenue? (FY26)</div>
+    <div class="deck-top-actions">
+      <button class="deck-action-btn active" id="btnFlipbook" onclick="setDeckMode('flipbook')">Slide View</button>
+      <button class="deck-action-btn" id="btnScroll" onclick="setDeckMode('scroll')">Scroll All (2)</button>
+      <button class="deck-action-btn" onclick="window.print()">Print / PDF</button>
+    </div>
+  </header>
+
+  <main class="deck-stage" id="deckStage">
+    <!-- SLIDE 1: REVENUE BY INDUSTRY -->
+    <div class="slide-slot active" data-index="0"><div class="slide-scaler"><section class="slide">
+      <div class="slide-header">
+        <h1 class="slide-title">Where Do India’s Top 6 IT Companies Get Their Revenue?</h1>
+      </div>
+
+      <div class="slide-body">
+        <table class="clean-table">
+          <thead>
+            <tr>
+              <th style="width: 18%;">Company</th>
+              <th style="width: 15%; text-align: right;">FY26 Revenue</th>
+              <th style="width: 13%; text-align: right;">BFSI (Banking)</th>
+              <th style="width: 13%; text-align: right;">Telecom &amp; Media</th>
+              <th style="width: 13%; text-align: right;">Mfg &amp; ER&amp;D</th>
+              <th style="width: 12%; text-align: right;">Retail &amp; CPG</th>
+              <th style="width: 16%; text-align: right;">Health, Tech &amp; Others</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>TCS</strong></td>
+              <td class="num" style="text-align: right;"><span style="line-height:0;">₹</span>2,67,021 Cr</td>
+              <td class="num" style="text-align: right;"><strong>32.0%</strong></td>
+              <td class="num" style="text-align: right;">5.8%</td>
+              <td class="num" style="text-align: right;">8.8%</td>
+              <td class="num" style="text-align: right;">15.5%</td>
+              <td class="num" style="text-align: right;">37.9%</td>
+            </tr>
+            <tr>
+              <td><strong>Infosys</strong></td>
+              <td class="num" style="text-align: right;"><span style="line-height:0;">₹</span>1,78,650 Cr</td>
+              <td class="num" style="text-align: right;"><strong>27.7%</strong></td>
+              <td class="num" style="text-align: right;">11.8%</td>
+              <td class="num" style="text-align: right;">15.5%</td>
+              <td class="num" style="text-align: right;">13.0%</td>
+              <td class="num" style="text-align: right;">32.0%</td>
+            </tr>
+            <tr>
+              <td><strong>HCLTech</strong></td>
+              <td class="num" style="text-align: right;"><span style="line-height:0;">₹</span>1,30,144 Cr</td>
+              <td class="num" style="text-align: right;">21.5%</td>
+              <td class="num" style="text-align: right;">12.6%</td>
+              <td class="num" style="text-align: right;"><strong>18.6%</strong></td>
+              <td class="num" style="text-align: right;">9.7%</td>
+              <td class="num" style="text-align: right;"><strong>37.6%</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Wipro</strong></td>
+              <td class="num" style="text-align: right;"><span style="line-height:0;">₹</span>92,624 Cr</td>
+              <td class="num" style="text-align: right;"><strong>34.2%</strong></td>
+              <td class="num" style="text-align: right;">15.8%</td>
+              <td class="num" style="text-align: right;">16.8%</td>
+              <td class="num" style="text-align: right;"><strong>18.5%</strong></td>
+              <td class="num" style="text-align: right;">14.7%</td>
+            </tr>
+            <tr class="highlight-row">
+              <td><strong>Tech Mahindra</strong></td>
+              <td class="num" style="text-align: right;"><span style="line-height:0;">₹</span>56,815 Cr</td>
+              <td class="num" style="text-align: right;">16.6%</td>
+              <td class="num" style="text-align: right;"><strong>33.4%</strong></td>
+              <td class="num" style="text-align: right;">18.1%</td>
+              <td class="num" style="text-align: right;">8.2%</td>
+              <td class="num" style="text-align: right;">23.7%</td>
+            </tr>
+            <tr>
+              <td><strong>LTIMindtree</strong></td>
+              <td class="num" style="text-align: right;"><span style="line-height:0;">₹</span>42,308 Cr</td>
+              <td class="num" style="text-align: right;"><strong>35.2%</strong></td>
+              <td class="num" style="text-align: right;">22.2%</td>
+              <td class="num" style="text-align: right;"><strong>20.0%</strong></td>
+              <td class="num" style="text-align: right;">15.6%</td>
+              <td class="num" style="text-align: right;">7.0%</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="takeaway-line">
+          While Banking (28%–35%) is the main revenue engine for most large IT firms, Tech Mahindra gets a third of its revenue from Telecom (33.4%) and only 16.6% from Banking.
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span>SOURCE: COMPANY FY26 ANNUAL &amp; SEGMENT DISCLOSURES</span>
+        <span>SLIDE 1 OF 2</span>
+      </div>
+    </section></div></div>
+
+    <!-- SLIDE 2: REVENUE BY GEOGRAPHY -->
+    <div class="slide-slot" data-index="1"><div class="slide-scaler"><section class="slide">
+      <div class="slide-header">
+        <h1 class="slide-title">How Dependent Is Each IT Firm on the US vs. Europe &amp; RoW?</h1>
+      </div>
+
+      <div class="slide-body">
+        <table class="clean-table">
+          <thead>
+            <tr>
+              <th style="width: 22%;">Company</th>
+              <th style="width: 20%; text-align: right;">FY26 Revenue</th>
+              <th style="width: 20%; text-align: right;">Americas</th>
+              <th style="width: 19%; text-align: right;">Europe</th>
+              <th style="width: 19%; text-align: right;">India &amp; Rest of World</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>TCS</strong></td>
+              <td class="num" style="text-align: right;"><span style="line-height:0;">₹</span>2,67,021 Cr</td>
+              <td class="num" style="text-align: right;">48.6%</td>
+              <td class="num" style="text-align: right;"><strong>32.8%</strong></td>
+              <td class="num" style="text-align: right;">18.6%</td>
+            </tr>
+            <tr>
+              <td><strong>Infosys</strong></td>
+              <td class="num" style="text-align: right;"><span style="line-height:0;">₹</span>1,78,650 Cr</td>
+              <td class="num" style="text-align: right;">57.0%</td>
+              <td class="num" style="text-align: right;"><strong>31.5%</strong></td>
+              <td class="num" style="text-align: right;">11.5%</td>
+            </tr>
+            <tr>
+              <td><strong>HCLTech</strong></td>
+              <td class="num" style="text-align: right;"><span style="line-height:0;">₹</span>1,30,144 Cr</td>
+              <td class="num" style="text-align: right;">56.3%</td>
+              <td class="num" style="text-align: right;">27.8%</td>
+              <td class="num" style="text-align: right;">15.9%</td>
+            </tr>
+            <tr>
+              <td><strong>Wipro</strong></td>
+              <td class="num" style="text-align: right;"><span style="line-height:0;">₹</span>92,624 Cr</td>
+              <td class="num" style="text-align: right;"><strong>62.0%</strong></td>
+              <td class="num" style="text-align: right;">27.5%</td>
+              <td class="num" style="text-align: right;">10.5%</td>
+            </tr>
+            <tr class="highlight-row">
+              <td><strong>Tech Mahindra</strong></td>
+              <td class="num" style="text-align: right;"><span style="line-height:0;">₹</span>56,815 Cr</td>
+              <td class="num" style="text-align: right;">49.7%</td>
+              <td class="num" style="text-align: right;">26.0%</td>
+              <td class="num" style="text-align: right;"><strong>24.3%</strong></td>
+            </tr>
+            <tr>
+              <td><strong>LTIMindtree</strong></td>
+              <td class="num" style="text-align: right;"><span style="line-height:0;">₹</span>42,308 Cr</td>
+              <td class="num" style="text-align: right;"><strong>72.5%</strong></td>
+              <td class="num" style="text-align: right;">15.1%</td>
+              <td class="num" style="text-align: right;">12.4%</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="takeaway-line">
+          LTIMindtree (72.5%) and Wipro (62.0%) are the most reliant on the US, while Tech Mahindra gets nearly a quarter of its revenue (24.3%) from India and Rest-of-World markets.
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span>SOURCE: COMPANY FY26 GEOGRAPHIC SEGMENT DISCLOSURES</span>
+        <span>SLIDE 2 OF 2</span>
+      </div>
+    </section></div></div>
+  </main>
+
+  <footer class="deck-bottombar">
+    <button class="deck-nav-btn" id="prevSlideBtn" onclick="stepSlide(-1)">&larr; Prev</button>
+    <div class="deck-dots" id="deckDots"></div>
+    <div class="deck-counter" id="deckCounter">01 / 02</div>
+    <button class="deck-nav-btn" id="nextSlideBtn" onclick="stepSlide(1)">Next &rarr;</button>
+  </footer>
+
+  <script>
+    (function() {
+      const NATIVE_W = 1280;
+      const NATIVE_H = 720;
+      const TOTAL = 2;
+      const SLUG = "indian-it-revenue";
+
+      const params = new URLSearchParams(window.location.search);
+      const isEmbed = params.get('embed') === '1';
+      if (isEmbed) {
+        document.body.setAttribute('data-embed', 'true');
+      }
+
+      let currentSlide = 0;
+      let mode = 'flipbook';
+      const slots = Array.from(document.querySelectorAll('.slide-slot'));
+      const dotsWrap = document.getElementById('deckDots');
+      const counterEl = document.getElementById('deckCounter');
+      const prevBtn = document.getElementById('prevSlideBtn');
+      const nextBtn = document.getElementById('nextSlideBtn');
+      const btnFlip = document.getElementById('btnFlipbook');
+      const btnScroll = document.getElementById('btnScroll');
+
+      if (dotsWrap) {
+        slots.forEach((_, idx) => {
+          const dot = document.createElement('button');
+          dot.className = 'deck-dot' + (idx === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', 'Go to slide ' + (idx + 1));
+          dot.onclick = () => goToSlide(idx);
+          dotsWrap.appendChild(dot);
+        });
+      }
+
+      function notifyParent() {
+        if (window.parent && window.parent !== window) {
+          window.parent.postMessage({
+            type: 'deck-state',
+            slug: SLUG,
+            currentSlide: currentSlide,
+            totalSlides: TOTAL
+          }, '*');
+        }
+      }
+
+      function renderState() {
+        slots.forEach((slot, idx) => {
+          slot.classList.toggle('active', idx === currentSlide);
+        });
+        if (dotsWrap) {
+          Array.from(dotsWrap.children).forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === currentSlide);
+          });
+        }
+        if (counterEl) {
+          const c = String(currentSlide + 1).padStart(2, '0');
+          const t = String(TOTAL).padStart(2, '0');
+          counterEl.textContent = c + ' / ' + t;
+        }
+        if (prevBtn) prevBtn.disabled = currentSlide === 0;
+        if (nextBtn) nextBtn.disabled = currentSlide === TOTAL - 1;
+        notifyParent();
+      }
+
+      window.stepSlide = function(delta) {
+        const next = currentSlide + delta;
+        if (next >= 0 && next < TOTAL) {
+          currentSlide = next;
+          renderState();
+        }
+      };
+
+      window.goToSlide = function(idx) {
+        if (idx >= 0 && idx < TOTAL) {
+          currentSlide = idx;
+          renderState();
+        }
+      };
+
+      window.setDeckMode = function(newMode) {
+        mode = newMode;
+        document.body.setAttribute('data-mode', newMode);
+        if (btnFlip) btnFlip.classList.toggle('active', newMode === 'flipbook');
+        if (btnScroll) btnScroll.classList.toggle('active', newMode === 'scroll');
+        updateScale();
+      };
+
+      function updateScale() {
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+        let scale = 1;
+
+        if (isEmbed) {
+          scale = vw / NATIVE_W;
+        } else if (mode === 'flipbook') {
+          const padX = vw < 640 ? 16 : 36;
+          const padY = 100 + (vw < 640 ? 16 : 32);
+          const availW = Math.max(200, vw - padX);
+          const availH = Math.max(150, vh - padY);
+          scale = Math.min(1.15, availW / NATIVE_W, availH / NATIVE_H);
+        } else {
+          const padX = vw < 640 ? 20 : 48;
+          const availW = Math.max(200, vw - padX);
+          scale = Math.min(1, availW / NATIVE_W);
+        }
+
+        document.documentElement.style.setProperty('--scale', String(scale));
+      }
+
+      window.addEventListener('resize', updateScale);
+
+      window.addEventListener('keydown', (e) => {
+        if (mode !== 'flipbook') return;
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+          e.preventDefault();
+          window.stepSlide(1);
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+          e.preventDefault();
+          window.stepSlide(-1);
+        }
+      });
+
+      let touchStartX = null;
+      let touchStartY = null;
+      window.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+        }
+      }, { passive: true });
+
+      window.addEventListener('touchend', (e) => {
+        if (mode !== 'flipbook' || touchStartX === null || e.changedTouches.length === 0) return;
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        const dy = e.changedTouches[0].clientY - touchStartY;
+        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.3) {
+          if (dx < 0) window.stepSlide(1);
+          else window.stepSlide(-1);
+        }
+        touchStartX = null;
+        touchStartY = null;
+      }, { passive: true });
+
+      window.addEventListener('message', (e) => {
+        const data = e.data || {};
+        if (data.slug && data.slug !== SLUG) return;
+        if (data.action === 'prev') window.stepSlide(-1);
+        else if (data.action === 'next') window.stepSlide(1);
+        else if (data.action === 'goto' && typeof data.index === 'number') window.goToSlide(data.index);
+      });
+
+      if (params.get('mode') === 'scroll') {
+        window.setDeckMode('scroll');
+      } else {
+        updateScale();
+      }
+      renderState();
+    })();
+  </script>
+</body>
+</html>
