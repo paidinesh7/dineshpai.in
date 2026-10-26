@@ -11,15 +11,15 @@ Personal website, essays, investment thesis, portfolio directory, and interactiv
   - Bio & single-line contact strip (`dinesh@zerodha.com · X (@dineshpaii) · LinkedIn`)
   - 2-column overview cards (**Notes on the next decade** → `/thesis`, **Investments** → `/portfolio`)
   - Featured interactive hook for **Governor for a Term** (`/mint-street/mint_street_simple.html` & `/mint-street/`)
-  - **Recent Writing** (latest 5 essays from `src/content/blog/`)
-  - **Projects & Experiments** (**Governor for a Term**, **Before You Invest**, **Curated Reads**, **Notes from the Field**)
-  - **The Weekly Signal** (`weeklySignals` array in `src/pages/index.astro`)
-  - **Podcasts & Discussions** (`podcasts` array in `src/pages/index.astro`)
+  - **Recent Writing** (latest 6 essays from `src/content/blog/`)
+  - **Data & Visual Briefs** (preview of the 6 interactive slide decks on `/data`)
+  - **The Weekly Signal** (`weeklySignals` array in `src/data/weeklySignals.ts`)
+  - **Podcasts & Discussions** (`dineshPodcasts` array in `src/pages/index.astro`)
+  - **Tools & Side Projects** (**Before You Invest**, **Governor for a Term**, **onepager**, **LegalOS**)
 - **[`src/pages/thesis.astro`](src/pages/thesis.astro)**: *Notes on the next decade* — 6-section interactive briefing with CSS bar charts, 100-household dot grids, strictly left-aligned financial tables, and the **Leave a note** form at the bottom.
 - **[`src/pages/portfolio.astro`](src/pages/portfolio.astro)**: Filterable directory of 27 Rainmatter portfolio companies across Fintech, Climate, Health, and Deeptech.
 - **[`src/pages/data.astro`](src/pages/data.astro)** & **[`public/data-decks/`](public/data-decks/)**: Interactive **Data & Visual Briefs** hub showcasing 6 verified 16:9 slide decks (`fii-dii-ownership.html`, `foreign-bank-nbfc-deals.html`, `yes-bank-at1-bonds.html`, `nifty-corrections.html`, `capital-gains-stt.html`, `jio-platforms-drhp.html`) with category filter pills, embedded responsive slide viewers (`?embed=1`), native parent-level slide controls, full-screen flipbook mode, and vertical scroll/PDF mode (`?mode=scroll`).
 - **[`src/pages/blog/index.astro`](src/pages/blog/index.astro)** & **[`src/pages/blog/[slug].astro`](src/pages/blog/[slug].astro)**: Chronological essay archive and individual essay template.
-- **[`src/pages/good-reads.astro`](src/pages/good-reads.astro)** & **[`src/pages/notes.astro`](src/pages/notes.astro)**: Searchable curated library (`src/data/goodReads.ts`) and field notes.
 
 ---
 
