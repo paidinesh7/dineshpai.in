@@ -3,6 +3,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const decks = [
   {
+    slug: 'global-imports-india',
+    title: 'The World’s Top 10 Imports Total $7.28 Trillion; 55% Are Built in Factories',
+    subtitle: 'Ranked #1 to #10 by annual global merchandise import value, separating the $4.03T factory-built pool (microchips, cars, medicines, auto parts, phones, computers) from $3.25T in mined and pumped commodities, alongside India’s 1.5% factory export share.',
+    category: 'Trade & Industry',
+    date: 'November 2026',
+    slides: 1,
+    source: 'UN Comtrade · WTO · DGCIS India',
+    metrics: [
+      { label: 'Top 10 Global Imports', value: '$7.28 Trillion' },
+      { label: 'Factory-Built Pool (6/10)', value: '$4.03T (55.3%)' },
+      { label: 'India Factory Share', value: '1.5% ($61.3B)' }
+    ]
+  },
+  {
     slug: 'indian-it-revenue',
     title: 'Where Do India’s Top 6 IT Companies Get Their Revenue? (FY26)',
     subtitle: 'Industry and geographic revenue concentration across TCS, Infosys, HCLTech, Wipro, Tech Mahindra, and LTIMindtree—comparing BFSI vs. Telecom & ER&D exposure and US vs. Europe & RoW dependence.',
@@ -102,7 +116,7 @@ const decks = [
   }
 ];
 
-const categories = ['All', 'Markets & Flows', 'Banking & Credit', 'Policy & Tax', 'IPOs & Corporate'];
+const categories = ['All', 'Trade & Industry', 'Markets & Flows', 'Banking & Credit', 'Policy & Tax', 'IPOs & Corporate'];
 ---
 
 <BaseLayout
@@ -137,7 +151,7 @@ const categories = ['All', 'Markets & Flows', 'Banking & Credit', 'Policy & Tax'
           <div class="deck-meta-row">
             <span class="deck-cat-badge">{deck.category}</span>
             <span class="deck-meta-sep">&middot;</span>
-            <span class="deck-meta-item">{deck.slides} Slides</span>
+            <span class="deck-meta-item">{deck.slides === 1 ? '1 Chart' : `${deck.slides} Slides`}</span>
             <span class="deck-meta-sep">&middot;</span>
             <span class="deck-meta-item">{deck.date}</span>
             <span class="deck-meta-sep hide-mobile">&middot;</span>
@@ -174,58 +188,68 @@ const categories = ['All', 'Markets & Flows', 'Banking & Credit', 'Policy & Tax'
           </div>
 
           <div class="deck-controls-bar" data-controls-for={deck.slug} data-total={deck.slides}>
-            <div class="deck-step-group">
-              <button
-                type="button"
-                class="deck-ctrl-btn"
-                data-action="prev"
-                data-target={deck.slug}
-                disabled
-                aria-label="Previous slide"
-              >
-                &larr; Prev
-              </button>
-              <span class="deck-slide-status" data-status-for={deck.slug}>
-                01 / {String(deck.slides).padStart(2, '0')}
-              </span>
-              <button
-                type="button"
-                class="deck-ctrl-btn"
-                data-action="next"
-                data-target={deck.slug}
-                aria-label="Next slide"
-              >
-                Next &rarr;
-              </button>
-            </div>
+            {deck.slides > 1 ? (
+              <>
+                <div class="deck-step-group">
+                  <button
+                    type="button"
+                    class="deck-ctrl-btn"
+                    data-action="prev"
+                    data-target={deck.slug}
+                    disabled
+                    aria-label="Previous slide"
+                  >
+                    &larr; Prev
+                  </button>
+                  <span class="deck-slide-status" data-status-for={deck.slug}>
+                    01 / {String(deck.slides).padStart(2, '0')}
+                  </span>
+                  <button
+                    type="button"
+                    class="deck-ctrl-btn"
+                    data-action="next"
+                    data-target={deck.slug}
+                    aria-label="Next slide"
+                  >
+                    Next &rarr;
+                  </button>
+                </div>
 
-            <div class="deck-pills-group" data-pills-for={deck.slug}>
-              {Array.from({ length: deck.slides }).map((_, sIdx) => (
-                <button
-                  type="button"
-                  class={`deck-slide-pill ${sIdx === 0 ? 'active' : ''}`}
-                  data-action="goto"
-                  data-target={deck.slug}
-                  data-index={sIdx}
-                  aria-label={`Slide ${sIdx + 1}`}
-                >
-                  {sIdx + 1}
-                </button>
-              ))}
-            </div>
+                <div class="deck-pills-group" data-pills-for={deck.slug}>
+                  {Array.from({ length: deck.slides }).map((_, sIdx) => (
+                    <button
+                      type="button"
+                      class={`deck-slide-pill ${sIdx === 0 ? 'active' : ''}`}
+                      data-action="goto"
+                      data-target={deck.slug}
+                      data-index={sIdx}
+                      aria-label={`Slide ${sIdx + 1}`}
+                    >
+                      {sIdx + 1}
+                    </button>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <div class="deck-step-group">
+                <span class="deck-slide-status" style="min-width: auto; text-align: left;">
+                  Single-Chart Exhibit &middot; 16:9 Archival Print
+                </span>
+              </div>
+            )}
 
             <div class="deck-external-group">
               <a
                 href={`/data-decks/${deck.slug}.html?mode=scroll`}
                 class="deck-ext-link"
-                title="View all slides vertically or print to PDF"
+                title={deck.slides === 1 ? 'Open print-ready view' : 'View all slides vertically or print to PDF'}
               >
-                Scroll All / PDF
+                {deck.slides === 1 ? 'Print / PDF' : 'Scroll All / PDF'}
               </a>
               <a
                 href={`/data-decks/${deck.slug}.html`}
                 class="deck-ext-link primary"
-                title="Open full-screen interactive deck"
+                title="Open full-screen view"
               >
                 Full Screen &nearr;
               </a>

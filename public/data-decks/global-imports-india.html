@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The World’s Top 10 Imports ($7.28 Trillion) &amp; India’s Export Share</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: 1280px 720px;
+      margin: 0;
+    }
+
+    :root {
+      --paper: #FAF8F3;
+      --ink: #111111;
+      --charcoal: #333333;
+      --muted: #666666;
+      --rule-light: #E2DFD7;
+      --rule-med: #A8A29E;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      background: #141413;
+      color: var(--ink);
+      font-family: 'Libre Baskerville', Georgia, serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background: var(--paper);
+      padding: 34px 60px 28px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Berkshire Top Header */
+    .top-block {
+      border-top: 3px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      padding: 10px 0 10px 0;
+    }
+
+    .kicker-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      margin-bottom: 5px;
+    }
+
+    .headline {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 24.5px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+
+    .sub-and-legend {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1.5px solid var(--ink);
+    }
+
+    .subtitle {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-style: italic;
+      font-size: 13px;
+      color: var(--charcoal);
+    }
+
+    .legend-bar {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Berkshire Table + Bar Matrix */
+    .matrix-wrap {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    table.berkshire-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-variant-numeric: tabular-nums;
+    }
+
+    table.berkshire-table thead th {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      padding: 6px 8px 7px 8px;
+      border-bottom: 1.2px solid var(--ink);
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    table.berkshire-table tbody td {
+      padding: 5.5px 8px;
+      border-bottom: 1px solid var(--rule-light);
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    .col-rank {
+      width: 42px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      text-align: right;
+      padding-right: 12px !important;
+    }
+
+    .col-name {
+      width: 285px;
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 13.5px;
+      color: var(--ink);
+    }
+
+    .col-name.factory {
+      font-weight: 700;
+    }
+
+    .col-name.resource {
+      font-weight: 400;
+      color: var(--charcoal);
+    }
+
+    .col-type {
+      width: 96px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .col-bar {
+      width: 455px;
+      padding-left: 12px !important;
+      padding-right: 12px !important;
+    }
+
+    .col-num {
+      width: 96px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      text-align: right;
+    }
+
+    .col-india-exp {
+      width: 92px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12.5px;
+      text-align: right;
+    }
+
+    .col-india-shr {
+      width: 94px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      text-align: right;
+    }
+
+    /* Summary Accounting Rows */
+    tr.subtotal-row td {
+      padding-top: 7px;
+      padding-bottom: 6px;
+      border-top: 1.5px solid var(--ink);
+      border-bottom: 1px solid var(--rule-med);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12.5px;
+      background: #F1EEE6;
+    }
+
+    tr.subtotal-row2 td {
+      padding-top: 6px;
+      padding-bottom: 6px;
+      border-bottom: 1.5px solid var(--ink);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12.5px;
+    }
+
+    tr.total-row td {
+      padding-top: 7px;
+      padding-bottom: 7px;
+      border-bottom: 3px double var(--ink);
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 13.5px;
+      font-weight: 700;
+    }
+
+    /* Bottom Note & Source */
+    .footer {
+      padding-top: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11.5px;
+      color: var(--charcoal);
+    }
+
+    .footer-note {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-style: italic;
+      font-size: 11.5px;
+      color: var(--ink);
+    }
+  </style>
+
+  <style id="responsive-deck-engine">
+    :root {
+      --native-w: 1280px;
+      --native-h: 720px;
+      --scale: 1;
+    }
+
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      min-height: 100vh !important;
+      background: #141413 !important;
+      color: #111111;
+      overflow-x: hidden !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 0 !important;
+    }
+
+    body[data-mode="flipbook"] {
+      height: 100vh !important;
+      height: 100dvh !important;
+      overflow: hidden !important;
+    }
+
+    body[data-mode="scroll"] {
+      height: auto !important;
+      overflow-y: auto !important;
+    }
+
+    body[data-embed="true"] {
+      background: #FAF8F3 !important;
+      height: 100vh !important;
+      overflow: hidden !important;
+    }
+
+    .deck-topbar {
+      height: 48px;
+      background: #1C1C1A;
+      border-bottom: 1px solid #2E2E2B;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-family: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 12px;
+      color: #D4D4CE;
+      flex-shrink: 0;
+      z-index: 50;
+    }
+
+    body[data-embed="true"] .deck-topbar {
+      display: none !important;
+    }
+
+    .deck-back {
+      color: #F5F5F0;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      padding: 6px 10px;
+      border-radius: 4px;
+      background: #292926;
+      border: 1px solid #3A3A36;
+    }
+    .deck-back:hover {
+      background: #33332F;
+    }
+
+    .deck-top-title {
+      font-weight: 500;
+      color: #A8A8A0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex: 1;
+      text-align: center;
+    }
+
+    .deck-top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .deck-action-btn {
+      background: #292926;
+      color: #E5E5E0;
+      border: 1px solid #3A3A36;
+      border-radius: 4px;
+      padding: 6px 10px;
+      font-family: inherit;
+      font-size: 11.5px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .deck-action-btn:hover {
+      background: #33332F;
+    }
+
+    .deck-stage {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      position: relative;
+      min-height: 0;
+      width: 100%;
+    }
+
+    body[data-mode="scroll"] .deck-stage {
+      justify-content: flex-start;
+      padding: 24px 12px 64px 12px;
+      gap: 24px;
+    }
+
+    body[data-embed="true"] .deck-stage {
+      padding: 0 !important;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .slide-slot {
+      width: calc(var(--native-w) * var(--scale));
+      height: calc(var(--native-h) * var(--scale));
+      position: relative;
+      overflow: hidden;
+      background: #FAF8F3;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+      flex-shrink: 0;
+      display: block;
+    }
+
+    body[data-embed="true"] .slide-slot {
+      box-shadow: none !important;
+    }
+
+    .slide-scaler {
+      width: var(--native-w);
+      height: var(--native-h);
+      transform-origin: top left;
+      transform: scale(var(--scale));
+      position: relative;
+    }
+
+    .slide {
+      position: relative !important;
+      inset: auto !important;
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      width: var(--native-w) !important;
+      height: var(--native-h) !important;
+      margin: 0 !important;
+      box-shadow: none !important;
+    }
+
+    @media (max-width: 640px) {
+      .deck-top-title {
+        display: none;
+      }
+      .deck-stage {
+        padding: 8px;
+      }
+    }
+
+    @media print {
+      @page {
+        size: 1280px 720px;
+        margin: 0;
+      }
+      html, body {
+        background: #FAF8F3 !important;
+        height: auto !important;
+        overflow: visible !important;
+        display: block !important;
+      }
+      .deck-topbar {
+        display: none !important;
+      }
+      .deck-stage {
+        padding: 0 !important;
+        display: block !important;
+      }
+      .slide-slot {
+        display: block !important;
+        width: 1280px !important;
+        height: 720px !important;
+        box-shadow: none !important;
+        page-break-after: always !important;
+        break-after: page !important;
+      }
+      .slide-scaler {
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body data-mode="flipbook" data-embed="false">
+
+  <!-- Shared SVG Hatch Pattern -->
+  <svg width="0" height="0" style="position: absolute;">
+    <defs>
+      <pattern id="diagonalHatch" width="6" height="6" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+        <rect width="6" height="6" fill="#EFECE6"/>
+        <line x1="0" y1="0" x2="0" y2="6" stroke="#78716C" stroke-width="1.6"/>
+      </pattern>
+    </defs>
+  </svg>
+
+  <header class="deck-topbar">
+    <a href="/data" class="deck-back">&larr; dineshpai.in/data</a>
+    <div class="deck-top-title">The World’s Top 10 Imports Total $7.28 Trillion; 55% Are Built in Factories</div>
+    <div class="deck-top-actions">
+      <button class="deck-action-btn" onclick="window.print()">Print / PDF</button>
+    </div>
+  </header>
+
+  <main class="deck-stage" id="deckStage">
+    <div class="slide-slot active" data-index="0">
+      <div class="slide-scaler">
+        <section class="slide">
+          <div>
+            <div class="top-block">
+              <div class="kicker-line">
+                <span>EXHIBIT 1 • THE STRUCTURE OF GLOBAL MERCHANDISE DEMAND</span>
+                <span>ANNUAL GLOBAL IMPORTS ($ BILLIONS)</span>
+              </div>
+              <h1 class="headline">The World’s Top 10 Imports Total $7.28 Trillion; 55% Are Built in Factories, Not Dug from the Earth</h1>
+            </div>
+
+            <div class="sub-and-legend">
+              <div class="subtitle">Ranked #1 to #10 by annual global import value, alongside India’s export share</div>
+              <div class="legend-bar">
+                <div class="legend-item">
+                  <svg width="16" height="14"><rect x="0" y="1" width="16" height="12" fill="#111111"/></svg>
+                  <span>Factory-Built Goods ($4,026B • 55.3%)</span>
+                </div>
+                <div class="legend-item">
+                  <svg width="16" height="14"><rect x="0.5" y="1.5" width="15" height="11" fill="url(#diagonalHatch)" stroke="#44403C" stroke-width="1"/></svg>
+                  <span>Mined &amp; Pumped Commodities ($3,254B • 44.7%)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="matrix-wrap">
+            <table class="berkshire-table">
+              <thead>
+                <tr>
+                  <th class="col-rank">#</th>
+                  <th class="col-name">Global Import Category</th>
+                  <th class="col-type">Origin</th>
+                  <th class="col-bar">
+                    <svg width="425" height="14" style="display: block;">
+                      <text x="0" y="11" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="#555" text-anchor="start">$0B</text>
+                      <text x="140" y="11" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="#555" text-anchor="middle">$500B</text>
+                      <text x="280" y="11" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="#555" text-anchor="middle">$1,000B</text>
+                      <text x="420" y="11" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="#555" text-anchor="end">$1,500B</text>
+                    </svg>
+                  </th>
+                  <th class="col-num">World Pool</th>
+                  <th class="col-india-exp" style="border-left: 1px solid #A8A29E;">India Exp.</th>
+                  <th class="col-india-shr">India Share</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- 1. Crude Oil ($1,420B -> 397.6px) -->
+                <tr>
+                  <td class="col-rank">1.</td>
+                  <td class="col-name resource">Crude Petroleum Oil</td>
+                  <td class="col-type" style="color: #666;">Extracted</td>
+                  <td class="col-bar">
+                    <svg width="425" height="18">
+                      <rect x="0" y="2" width="420" height="14" fill="#F2EFE8"/>
+                      <line x1="140" y1="0" x2="140" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="280" y1="0" x2="280" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="420" y1="0" x2="420" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <rect x="0.5" y="2" width="398" height="14" fill="url(#diagonalHatch)" stroke="#57534E" stroke-width="1"/>
+                    </svg>
+                  </td>
+                  <td class="col-num" style="color: #444;">$1,420B</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #D6D3CD; color: #777;">—</td>
+                  <td class="col-india-shr" style="color: #777;">Net Importer</td>
+                </tr>
+
+                <!-- 2. Microchips ($1,021B -> 285.9px) -->
+                <tr>
+                  <td class="col-rank">2.</td>
+                  <td class="col-name factory">Microchips &amp; Integrated Circuits</td>
+                  <td class="col-type" style="color: #111; font-weight: 700;">Factory</td>
+                  <td class="col-bar">
+                    <svg width="425" height="18">
+                      <rect x="0" y="2" width="420" height="14" fill="#F2EFE8"/>
+                      <line x1="140" y1="0" x2="140" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="280" y1="0" x2="280" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="420" y1="0" x2="420" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <rect x="0" y="2" width="286" height="14" fill="#111111"/>
+                    </svg>
+                  </td>
+                  <td class="col-num" style="font-weight: 700; color: #111;">$1,021B</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #D6D3CD; font-weight: 600;">$1.2B</td>
+                  <td class="col-india-shr" style="font-weight: 700;">0.1%</td>
+                </tr>
+
+                <!-- 3. Cars & Trucks ($999B -> 279.7px) -->
+                <tr>
+                  <td class="col-rank">3.</td>
+                  <td class="col-name factory">Cars &amp; Commercial Vehicles</td>
+                  <td class="col-type" style="color: #111; font-weight: 700;">Factory</td>
+                  <td class="col-bar">
+                    <svg width="425" height="18">
+                      <rect x="0" y="2" width="420" height="14" fill="#F2EFE8"/>
+                      <line x1="140" y1="0" x2="140" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="280" y1="0" x2="280" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="420" y1="0" x2="420" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <rect x="0" y="2" width="280" height="14" fill="#111111"/>
+                    </svg>
+                  </td>
+                  <td class="col-num" style="font-weight: 700; color: #111;">$999B</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #D6D3CD; font-weight: 600;">$14.5B</td>
+                  <td class="col-india-shr" style="font-weight: 700;">1.5%</td>
+                </tr>
+
+                <!-- 4. Refined Fuels ($891B -> 249.5px) -->
+                <tr>
+                  <td class="col-rank">4.</td>
+                  <td class="col-name resource">Refined Petroleum Fuels</td>
+                  <td class="col-type" style="color: #666;">Refined</td>
+                  <td class="col-bar">
+                    <svg width="425" height="18">
+                      <rect x="0" y="2" width="420" height="14" fill="#F2EFE8"/>
+                      <line x1="140" y1="0" x2="140" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="280" y1="0" x2="280" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="420" y1="0" x2="420" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <rect x="0.5" y="2" width="250" height="14" fill="url(#diagonalHatch)" stroke="#57534E" stroke-width="1"/>
+                    </svg>
+                  </td>
+                  <td class="col-num" style="color: #444;">$891B</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #D6D3CD; color: #444;">$86.0B</td>
+                  <td class="col-india-shr" style="color: #444;">9.7%*</td>
+                </tr>
+
+                <!-- 5. Packaged Medicines ($693B -> 194.0px) -->
+                <tr>
+                  <td class="col-rank">5.</td>
+                  <td class="col-name factory">Packaged Medicines &amp; Biologics</td>
+                  <td class="col-type" style="color: #111; font-weight: 700;">Factory</td>
+                  <td class="col-bar">
+                    <svg width="425" height="18">
+                      <rect x="0" y="2" width="420" height="14" fill="#F2EFE8"/>
+                      <line x1="140" y1="0" x2="140" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="280" y1="0" x2="280" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="420" y1="0" x2="420" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <rect x="0" y="2" width="194" height="14" fill="#111111"/>
+                    </svg>
+                  </td>
+                  <td class="col-num" style="font-weight: 700; color: #111;">$693B</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #D6D3CD; font-weight: 600;">$22.0B</td>
+                  <td class="col-india-shr" style="font-weight: 700;">3.2%</td>
+                </tr>
+
+                <!-- 6. Gold ($488B -> 136.6px) -->
+                <tr>
+                  <td class="col-rank">6.</td>
+                  <td class="col-name resource">Gold (Bullion &amp; Unwrought)</td>
+                  <td class="col-type" style="color: #666;">Extracted</td>
+                  <td class="col-bar">
+                    <svg width="425" height="18">
+                      <rect x="0" y="2" width="420" height="14" fill="#F2EFE8"/>
+                      <line x1="140" y1="0" x2="140" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="280" y1="0" x2="280" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="420" y1="0" x2="420" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <rect x="0.5" y="2" width="137" height="14" fill="url(#diagonalHatch)" stroke="#57534E" stroke-width="1"/>
+                    </svg>
+                  </td>
+                  <td class="col-num" style="color: #444;">$488B</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #D6D3CD; color: #777;">—</td>
+                  <td class="col-india-shr" style="color: #777;">Net Importer</td>
+                </tr>
+
+                <!-- 7. Auto Parts ($456B -> 127.7px) -->
+                <tr>
+                  <td class="col-rank">7.</td>
+                  <td class="col-name factory">Motor Vehicle Parts &amp; Systems</td>
+                  <td class="col-type" style="color: #111; font-weight: 700;">Factory</td>
+                  <td class="col-bar">
+                    <svg width="425" height="18">
+                      <rect x="0" y="2" width="420" height="14" fill="#F2EFE8"/>
+                      <line x1="140" y1="0" x2="140" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="280" y1="0" x2="280" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="420" y1="0" x2="420" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <rect x="0" y="2" width="128" height="14" fill="#111111"/>
+                    </svg>
+                  </td>
+                  <td class="col-num" style="font-weight: 700; color: #111;">$456B</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #D6D3CD; font-weight: 600;">$7.2B</td>
+                  <td class="col-india-shr" style="font-weight: 700;">1.6%</td>
+                </tr>
+
+                <!-- 8. Natural Gas & LNG ($455B -> 127.4px) -->
+                <tr>
+                  <td class="col-rank">8.</td>
+                  <td class="col-name resource">Natural Gas &amp; LNG</td>
+                  <td class="col-type" style="color: #666;">Extracted</td>
+                  <td class="col-bar">
+                    <svg width="425" height="18">
+                      <rect x="0" y="2" width="420" height="14" fill="#F2EFE8"/>
+                      <line x1="140" y1="0" x2="140" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="280" y1="0" x2="280" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="420" y1="0" x2="420" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <rect x="0.5" y="2" width="127" height="14" fill="url(#diagonalHatch)" stroke="#57534E" stroke-width="1"/>
+                    </svg>
+                  </td>
+                  <td class="col-num" style="color: #444;">$455B</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #D6D3CD; color: #777;">—</td>
+                  <td class="col-india-shr" style="color: #777;">Net Importer</td>
+                </tr>
+
+                <!-- 9. Phones & Telecom ($445B -> 124.6px) -->
+                <tr>
+                  <td class="col-rank">9.</td>
+                  <td class="col-name factory">Smartphones &amp; Telecom Gear</td>
+                  <td class="col-type" style="color: #111; font-weight: 700;">Factory</td>
+                  <td class="col-bar">
+                    <svg width="425" height="18">
+                      <rect x="0" y="2" width="420" height="14" fill="#F2EFE8"/>
+                      <line x1="140" y1="0" x2="140" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="280" y1="0" x2="280" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="420" y1="0" x2="420" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <rect x="0" y="2" width="125" height="14" fill="#111111"/>
+                    </svg>
+                  </td>
+                  <td class="col-num" style="font-weight: 700; color: #111;">$445B</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #D6D3CD; font-weight: 600;">$15.6B</td>
+                  <td class="col-india-shr" style="font-weight: 700;">3.5%</td>
+                </tr>
+
+                <!-- 10. Computers & Servers ($412B -> 115.4px) -->
+                <tr>
+                  <td class="col-rank">10.</td>
+                  <td class="col-name factory">Computers, Servers &amp; Storage</td>
+                  <td class="col-type" style="color: #111; font-weight: 700;">Factory</td>
+                  <td class="col-bar">
+                    <svg width="425" height="18">
+                      <rect x="0" y="2" width="420" height="14" fill="#F2EFE8"/>
+                      <line x1="140" y1="0" x2="140" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="280" y1="0" x2="280" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="420" y1="0" x2="420" y2="18" stroke="#D6D3CD" stroke-width="1" stroke-dasharray="2,2"/>
+                      <rect x="0" y="2" width="115" height="14" fill="#111111"/>
+                    </svg>
+                  </td>
+                  <td class="col-num" style="font-weight: 700; color: #111;">$412B</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #D6D3CD; font-weight: 600;">$0.8B</td>
+                  <td class="col-india-shr" style="font-weight: 700;">0.2%</td>
+                </tr>
+
+                <!-- Berkshire Accounting Subtotals -->
+                <tr class="subtotal-row">
+                  <td class="col-rank"></td>
+                  <td colspan="2" style="font-weight: 700; color: #111;">Subtotal: 6 Factory-Built Categories (55.3% of Top 10)</td>
+                  <td class="col-bar" style="font-size: 12px; color: #222; font-weight: 600;">Driven by engineering, R&amp;D &amp; industrial scale</td>
+                  <td class="col-num" style="font-weight: 700; color: #111;">$4,026B</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #A8A29E; font-weight: 700; color: #111;">$61.3B</td>
+                  <td class="col-india-shr" style="font-weight: 700; color: #111;">1.5%</td>
+                </tr>
+
+                <tr class="subtotal-row2">
+                  <td class="col-rank"></td>
+                  <td colspan="2" style="font-weight: 600; color: #444;">Subtotal: 4 Extracted &amp; Refined Commodities (44.7%)</td>
+                  <td class="col-bar" style="font-size: 12px; color: #555;">Driven by natural resource geology &amp; crude refining</td>
+                  <td class="col-num" style="font-weight: 600; color: #444;">$3,254B</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #D6D3CD; color: #555;">$86.0B*</td>
+                  <td class="col-india-shr" style="color: #555;">Net Importer</td>
+                </tr>
+
+                <tr class="total-row">
+                  <td class="col-rank"></td>
+                  <td colspan="2">Total Top 10 Global Merchandise Imports</td>
+                  <td class="col-bar" style="font-family: 'Libre Baskerville', serif; font-style: italic; font-weight: 400; font-size: 12px;">~30% of all world merchandise trade ($24.5 Trillion total)</td>
+                  <td class="col-num" style="font-size: 14px; font-weight: 700;">$7,280B</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #A8A29E;">$147.3B</td>
+                  <td class="col-india-shr">2.0%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="footer">
+            <div class="footer-note">*Note: India imports ~$140B of crude oil and re-exports $86B as refined fuels. India’s next decade hinges on lifting its 1.5% share in the $4.03T factory pool.</div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px;">Source: UN Comtrade, WTO &amp; DGCIS India</div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    (function() {
+      const NATIVE_W = 1280;
+      const NATIVE_H = 720;
+      const params = new URLSearchParams(window.location.search);
+      const isEmbed = params.get('embed') === '1';
+      if (isEmbed) {
+        document.body.setAttribute('data-embed', 'true');
+      }
+      if (params.get('mode') === 'scroll') {
+        document.body.setAttribute('data-mode', 'scroll');
+      }
+
+      function updateScale() {
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+        let scale = 1;
+
+        if (isEmbed) {
+          scale = vw / NATIVE_W;
+        } else if (document.body.getAttribute('data-mode') === 'scroll') {
+          const padX = vw < 640 ? 20 : 48;
+          const availW = Math.max(200, vw - padX);
+          scale = Math.min(1, availW / NATIVE_W);
+        } else {
+          const padX = vw < 640 ? 16 : 36;
+          const padY = 56 + (vw < 640 ? 16 : 32);
+          const availW = Math.max(200, vw - padX);
+          const availH = Math.max(150, vh - padY);
+          scale = Math.min(1.15, availW / NATIVE_W, availH / NATIVE_H);
+        }
+
+        document.documentElement.style.setProperty('--scale', String(scale));
+      }
+
+      window.addEventListener('resize', updateScale);
+      updateScale();
+    })();
+  </script>
+</body>
+</html>
