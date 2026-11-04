@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Happens to the Indian Stock Market When Power Shifts in the US?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: 1280px 720px;
+      margin: 0;
+    }
+
+    :root {
+      --paper: #FAF8F3;
+      --ink: #111111;
+      --charcoal: #333333;
+      --muted: #555555;
+      --rule-light: #E2DFD7;
+      --rule-med: #A8A29E;
+      --serif: 'Libre Baskerville', Georgia, serif;
+      --sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      background: #141413;
+      color: var(--ink);
+      font-family: var(--serif);
+      font-variant-numeric: tabular-nums;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background: var(--paper);
+      padding: 34px 56px 26px 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .top-block {
+      border-top: 3px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      padding: 10px 0 10px 0;
+    }
+
+    .kicker-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      margin-bottom: 6px;
+    }
+
+    .headline {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+
+    .sub-and-legend {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1.5px solid var(--ink);
+      gap: 16px;
+    }
+
+    .subtitle {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 12.2px;
+      color: var(--charcoal);
+      white-space: nowrap;
+    }
+
+    .legend-bar {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-family: var(--sans);
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      white-space: nowrap;
+    }
+
+    .matrix-wrap {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    table.berkshire-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-variant-numeric: tabular-nums;
+    }
+
+    table.berkshire-table thead th {
+      font-family: var(--sans) !important;
+      font-size: 10.5px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.07em !important;
+      text-transform: uppercase !important;
+      color: var(--charcoal) !important;
+      padding: 6px 6px 7px 6px;
+      border-bottom: 1.5px solid var(--ink);
+      text-align: left;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    table.berkshire-table thead th.col-rank,
+    table.berkshire-table thead th.col-num,
+    table.berkshire-table thead th.col-india-exp {
+      text-align: right;
+    }
+
+    table.berkshire-table tbody td {
+      padding: 5px 6px;
+      border-bottom: 1px solid var(--rule-light);
+      vertical-align: middle;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .col-rank {
+      width: 36px;
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--muted);
+      text-align: right;
+      padding-right: 10px !important;
+    }
+
+    .col-name {
+      width: 312px;
+      font-family: var(--serif);
+      font-size: 12.8px;
+      font-weight: 400;
+      color: var(--ink);
+    }
+
+    .col-name strong {
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .col-type {
+      width: 110px;
+      font-family: var(--sans);
+      font-size: 10.5px;
+      font-weight: 600;
+      color: var(--charcoal);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .col-bar {
+      width: 480px;
+      padding-left: 6px !important;
+      padding-right: 6px !important;
+      font-family: var(--serif);
+    }
+
+    .col-num {
+      width: 115px;
+      font-family: var(--sans);
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--charcoal);
+      text-align: right;
+      padding-right: 12px !important;
+    }
+
+    .col-india-exp {
+      width: 115px;
+      font-family: var(--sans);
+      font-size: 12.5px;
+      text-align: right;
+      padding-right: 6px !important;
+    }
+
+    tr.subtotal-row td {
+      padding-top: 7px;
+      padding-bottom: 6px;
+      border-top: 1.5px solid var(--ink);
+      border-bottom: 1px solid var(--rule-med);
+      font-size: 12.2px;
+      background: #F1EEE6;
+    }
+
+    tr.subtotal-row2 td {
+      padding-top: 6px;
+      padding-bottom: 6px;
+      border-bottom: 1.5px solid var(--ink);
+      font-size: 12.2px;
+    }
+
+    tr.total-row td {
+      padding-top: 7px;
+      padding-bottom: 7px;
+      border-bottom: 3px double var(--ink);
+      font-size: 12.8px;
+      font-weight: 700;
+    }
+
+    .footer {
+      padding-top: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      color: var(--charcoal);
+    }
+
+    .footer-note {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 11.5px;
+      color: var(--ink);
+    }
+
+    .footer-source {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--charcoal);
+    }
+  </style>
+
+  <style id="responsive-deck-engine">
+    :root {
+      --native-w: 1280px;
+      --native-h: 720px;
+      --scale: 1;
+    }
+
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      min-height: 100vh !important;
+      background: #141413 !important;
+      color: #111111;
+      overflow-x: hidden !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 0 !important;
+    }
+
+    body[data-mode="flipbook"] {
+      height: 100vh !important;
+      height: 100dvh !important;
+      overflow: hidden !important;
+    }
+
+    body[data-mode="scroll"] {
+      height: auto !important;
+      overflow-y: auto !important;
+    }
+
+    body[data-embed="true"] {
+      background: #FAF8F3 !important;
+      height: 100vh !important;
+      overflow: hidden !important;
+    }
+
+    .deck-topbar {
+      height: 48px;
+      background: #1C1C1A;
+      border-bottom: 1px solid #2E2E2B;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-family: var(--sans);
+      font-size: 12px;
+      color: #D4D4CE;
+      flex-shrink: 0;
+      z-index: 50;
+    }
+
+    body[data-embed="true"] .deck-topbar {
+      display: none !important;
+    }
+
+    .deck-back {
+      color: #F5F5F0;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      padding: 6px 10px;
+      border-radius: 4px;
+      background: #292926;
+      border: 1px solid #3A3A36;
+    }
+    .deck-back:hover {
+      background: #33332F;
+    }
+
+    .deck-top-title {
+      font-weight: 500;
+      color: #A8A8A0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex: 1;
+      text-align: center;
+    }
+
+    .deck-top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .deck-action-btn {
+      background: #292926;
+      color: #E5E5E0;
+      border: 1px solid #3A3A36;
+      border-radius: 4px;
+      padding: 6px 10px;
+      font-family: inherit;
+      font-size: 11.5px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .deck-action-btn:hover {
+      background: #33332F;
+    }
+
+    .deck-stage {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      position: relative;
+      min-height: 0;
+      width: 100%;
+    }
+
+    body[data-mode="scroll"] .deck-stage {
+      justify-content: flex-start;
+      padding: 24px 12px 64px 12px;
+      gap: 24px;
+    }
+
+    body[data-embed="true"] .deck-stage {
+      padding: 0 !important;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .slide-slot {
+      width: calc(var(--native-w) * var(--scale));
+      height: calc(var(--native-h) * var(--scale));
+      position: relative;
+      overflow: hidden;
+      background: #FAF8F3;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+      flex-shrink: 0;
+      display: block;
+    }
+
+    body[data-embed="true"] .slide-slot {
+      box-shadow: none !important;
+    }
+
+    .slide-scaler {
+      width: var(--native-w);
+      height: var(--native-h);
+      transform-origin: top left;
+      transform: scale(var(--scale));
+      position: relative;
+    }
+
+    .slide {
+      position: relative !important;
+      inset: auto !important;
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      width: var(--native-w) !important;
+      height: var(--native-h) !important;
+      margin: 0 !important;
+      box-shadow: none !important;
+    }
+
+    @media (max-width: 640px) {
+      .deck-top-title {
+        display: none;
+      }
+      .deck-stage {
+        padding: 8px;
+      }
+    }
+
+    @media print {
+      @page {
+        size: 1280px 720px;
+        margin: 0;
+      }
+      html, body {
+        background: #FAF8F3 !important;
+        height: auto !important;
+        overflow: visible !important;
+        display: block !important;
+      }
+      .deck-topbar {
+        display: none !important;
+      }
+      .deck-stage {
+        padding: 0 !important;
+        display: block !important;
+      }
+      .slide-slot {
+        display: block !important;
+        width: 1280px !important;
+        height: 720px !important;
+        box-shadow: none !important;
+        page-break-after: always !important;
+        break-after: page !important;
+      }
+      .slide-scaler {
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body data-mode="flipbook" data-embed="false">
+
+  <svg width="0" height="0" style="position: absolute;">
+    <defs>
+      <pattern id="diagonalHatch" width="6" height="6" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+        <rect width="6" height="6" fill="#EFECE6"/>
+        <line x1="0" y1="0" x2="0" y2="6" stroke="#333333" stroke-width="1.6"/>
+      </pattern>
+    </defs>
+  </svg>
+
+  <header class="deck-topbar">
+    <a href="/data" class="deck-back">&larr; dineshpai.in/data</a>
+    <div class="deck-top-title">What Happens to the Indian Stock Market When Power Shifts in the US?</div>
+    <div class="deck-top-actions">
+      <button class="deck-action-btn" onclick="window.print()">Print / PDF</button>
+    </div>
+  </header>
+
+  <main class="deck-stage" id="deckStage">
+    <div class="slide-slot active" data-index="0">
+      <div class="slide-scaler">
+        <section class="slide">
+          <div>
+            <div class="top-block">
+              <div class="kicker-line">
+                <span>US ELECTIONS &amp; INDIAN STOCK MARKET • 30-YEAR HISTORY (1994–2024)</span>
+                <span>NIFTY 50 RETURN AFTER US ELECTIONS (%)</span>
+              </div>
+              <h1 class="headline">What Happens to the Indian Stock Market When Power Shifts in the US?</h1>
+            </div>
+
+            <div class="sub-and-legend">
+              <div class="subtitle">Nifty 50 returns in the first 1 month and the next 12 months after every US election flip since 1994</div>
+              <div class="legend-bar">
+                <div class="legend-item">
+                  <svg width="16" height="14"><rect x="0" y="1" width="16" height="12" fill="#141413"/></svg>
+                  <span>Market Rose Over Next 12 Months (6 Times)</span>
+                </div>
+                <div class="legend-item">
+                  <svg width="16" height="14"><rect x="0.5" y="1.5" width="15" height="11" fill="url(#diagonalHatch)" stroke="#222222" stroke-width="1"/></svg>
+                  <span>Market Fell Over Next 12 Months (4 Times)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="matrix-wrap">
+            <table class="berkshire-table">
+              <thead>
+                <tr>
+                  <th class="col-rank">#</th>
+                  <th class="col-name">US Election &amp; Power Shift</th>
+                  <th class="col-type">Election Type</th>
+                  <th class="col-bar">
+                    <svg width="466" height="14" style="display: block;">
+                      <text x="8" y="11" font-family="Plus Jakarta Sans, sans-serif" font-size="10.5" font-weight="700" fill="#333" text-anchor="start">-30%</text>
+                      <text x="158" y="11" font-family="Plus Jakarta Sans, sans-serif" font-size="10.5" font-weight="700" fill="#111" text-anchor="middle">0%</text>
+                      <text x="308" y="11" font-family="Plus Jakarta Sans, sans-serif" font-size="10.5" font-weight="700" fill="#333" text-anchor="middle">+30%</text>
+                      <text x="458" y="11" font-family="Plus Jakarta Sans, sans-serif" font-size="10.5" font-weight="700" fill="#333" text-anchor="end">+60%</text>
+                    </svg>
+                  </th>
+                  <th class="col-num">First 1 Month</th>
+                  <th class="col-india-exp" style="border-left: 1px solid #A8A29E;">Next 12 Months</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="col-rank">1.</td>
+                  <td class="col-name"><strong>Nov 1994:</strong> Republicans Win US Congress</td>
+                  <td class="col-type">Midterm</td>
+                  <td class="col-bar">
+                    <svg width="466" height="20" style="display: block;">
+                      <line x1="8" y1="10" x2="458" y2="10" stroke="#EAE6DF" stroke-width="1"/>
+                      <line x1="8" y1="0" x2="8" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="308" y1="0" x2="308" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="458" y1="0" x2="458" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <g transform="translate(8, 0)">
+                        <rect x="43" y="3" width="107" height="14" fill="url(#diagonalHatch)" stroke="#222222" stroke-width="1"/>
+                        <line x1="150" y1="0" x2="150" y2="20" stroke="#111111" stroke-width="1.5"/>
+                      </g>
+                    </svg>
+                  </td>
+                  <td class="col-num">-3.8%</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #C8C4B8; font-weight: 600; color: #333333;">-21.4%</td>
+                </tr>
+
+                <tr>
+                  <td class="col-rank">2.</td>
+                  <td class="col-name"><strong>Nov 2000:</strong> George W. Bush Wins Presidency</td>
+                  <td class="col-type">Presidential</td>
+                  <td class="col-bar">
+                    <svg width="466" height="20" style="display: block;">
+                      <line x1="8" y1="10" x2="458" y2="10" stroke="#EAE6DF" stroke-width="1"/>
+                      <line x1="8" y1="0" x2="8" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="308" y1="0" x2="308" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="458" y1="0" x2="458" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <g transform="translate(8, 0)">
+                        <rect x="69" y="3" width="81" height="14" fill="url(#diagonalHatch)" stroke="#222222" stroke-width="1"/>
+                        <line x1="150" y1="0" x2="150" y2="20" stroke="#111111" stroke-width="1.5"/>
+                      </g>
+                    </svg>
+                  </td>
+                  <td class="col-num">+0.4%</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #C8C4B8; font-weight: 600; color: #333333;">-16.2%</td>
+                </tr>
+
+                <tr>
+                  <td class="col-rank">3.</td>
+                  <td class="col-name"><strong>Nov 2006:</strong> Democrats Win US Congress</td>
+                  <td class="col-type">Midterm</td>
+                  <td class="col-bar">
+                    <svg width="466" height="20" style="display: block;">
+                      <line x1="8" y1="10" x2="458" y2="10" stroke="#EAE6DF" stroke-width="1"/>
+                      <line x1="8" y1="0" x2="8" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="308" y1="0" x2="308" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="458" y1="0" x2="458" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <g transform="translate(8, 0)">
+                        <rect x="150" y="3" width="259" height="14" fill="#141413"/>
+                        <line x1="150" y1="0" x2="150" y2="20" stroke="#111111" stroke-width="1.5"/>
+                      </g>
+                    </svg>
+                  </td>
+                  <td class="col-num">+4.8%</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #C8C4B8; font-weight: 700; color: #111111;">+51.8%</td>
+                </tr>
+
+                <tr>
+                  <td class="col-rank">4.</td>
+                  <td class="col-name"><strong>Nov 2008:</strong> Barack Obama Wins Presidency</td>
+                  <td class="col-type">Presidential</td>
+                  <td class="col-bar">
+                    <svg width="466" height="20" style="display: block;">
+                      <line x1="8" y1="10" x2="458" y2="10" stroke="#EAE6DF" stroke-width="1"/>
+                      <line x1="8" y1="0" x2="8" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="308" y1="0" x2="308" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="458" y1="0" x2="458" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <g transform="translate(8, 0)">
+                        <rect x="150" y="3" width="267" height="14" fill="#141413"/>
+                        <line x1="150" y1="0" x2="150" y2="20" stroke="#111111" stroke-width="1.5"/>
+                      </g>
+                    </svg>
+                  </td>
+                  <td class="col-num">-11.3%</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #C8C4B8; font-weight: 700; color: #111111;">+53.4%</td>
+                </tr>
+
+                <tr>
+                  <td class="col-rank">5.</td>
+                  <td class="col-name"><strong>Nov 2010:</strong> Republicans Win US House</td>
+                  <td class="col-type">Midterm</td>
+                  <td class="col-bar">
+                    <svg width="466" height="20" style="display: block;">
+                      <line x1="8" y1="10" x2="458" y2="10" stroke="#EAE6DF" stroke-width="1"/>
+                      <line x1="8" y1="0" x2="8" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="308" y1="0" x2="308" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="458" y1="0" x2="458" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <g transform="translate(8, 0)">
+                        <rect x="66" y="3" width="84" height="14" fill="url(#diagonalHatch)" stroke="#222222" stroke-width="1"/>
+                        <line x1="150" y1="0" x2="150" y2="20" stroke="#111111" stroke-width="1.5"/>
+                      </g>
+                    </svg>
+                  </td>
+                  <td class="col-num">-4.9%</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #C8C4B8; font-weight: 600; color: #333333;">-16.8%</td>
+                </tr>
+
+                <tr>
+                  <td class="col-rank">6.</td>
+                  <td class="col-name"><strong>Nov 2014:</strong> Republicans Win US Senate</td>
+                  <td class="col-type">Midterm</td>
+                  <td class="col-bar">
+                    <svg width="466" height="20" style="display: block;">
+                      <line x1="8" y1="10" x2="458" y2="10" stroke="#EAE6DF" stroke-width="1"/>
+                      <line x1="8" y1="0" x2="8" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="308" y1="0" x2="308" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="458" y1="0" x2="458" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <g transform="translate(8, 0)">
+                        <rect x="133" y="3" width="17" height="14" fill="url(#diagonalHatch)" stroke="#222222" stroke-width="1"/>
+                        <line x1="150" y1="0" x2="150" y2="20" stroke="#111111" stroke-width="1.5"/>
+                      </g>
+                    </svg>
+                  </td>
+                  <td class="col-num">+2.6%</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #C8C4B8; font-weight: 600; color: #333333;">-3.4%</td>
+                </tr>
+
+                <tr>
+                  <td class="col-rank">7.</td>
+                  <td class="col-name"><strong>Nov 2016:</strong> Donald Trump Wins Presidency</td>
+                  <td class="col-type">Presidential</td>
+                  <td class="col-bar">
+                    <svg width="466" height="20" style="display: block;">
+                      <line x1="8" y1="10" x2="458" y2="10" stroke="#EAE6DF" stroke-width="1"/>
+                      <line x1="8" y1="0" x2="8" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="308" y1="0" x2="308" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="458" y1="0" x2="458" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <g transform="translate(8, 0)">
+                        <rect x="150" y="3" width="103" height="14" fill="#141413"/>
+                        <line x1="150" y1="0" x2="150" y2="20" stroke="#111111" stroke-width="1.5"/>
+                      </g>
+                    </svg>
+                  </td>
+                  <td class="col-num">-4.7%</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #C8C4B8; font-weight: 700; color: #111111;">+20.6%</td>
+                </tr>
+
+                <tr>
+                  <td class="col-rank">8.</td>
+                  <td class="col-name"><strong>Nov 2018:</strong> Democrats Win US House</td>
+                  <td class="col-type">Midterm</td>
+                  <td class="col-bar">
+                    <svg width="466" height="20" style="display: block;">
+                      <line x1="8" y1="10" x2="458" y2="10" stroke="#EAE6DF" stroke-width="1"/>
+                      <line x1="8" y1="0" x2="8" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="308" y1="0" x2="308" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="458" y1="0" x2="458" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <g transform="translate(8, 0)">
+                        <rect x="150" y="3" width="68" height="14" fill="#141413"/>
+                        <line x1="150" y1="0" x2="150" y2="20" stroke="#111111" stroke-width="1.5"/>
+                      </g>
+                    </svg>
+                  </td>
+                  <td class="col-num">+1.9%</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #C8C4B8; font-weight: 700; color: #111111;">+13.6%</td>
+                </tr>
+
+                <tr>
+                  <td class="col-rank">9.</td>
+                  <td class="col-name"><strong>Nov 2020:</strong> Joe Biden Wins Presidency</td>
+                  <td class="col-type">Presidential</td>
+                  <td class="col-bar">
+                    <svg width="466" height="20" style="display: block;">
+                      <line x1="8" y1="10" x2="458" y2="10" stroke="#EAE6DF" stroke-width="1"/>
+                      <line x1="8" y1="0" x2="8" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="308" y1="0" x2="308" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="458" y1="0" x2="458" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <g transform="translate(8, 0)">
+                        <rect x="150" y="3" width="252" height="14" fill="#141413"/>
+                        <line x1="150" y1="0" x2="150" y2="20" stroke="#111111" stroke-width="1.5"/>
+                      </g>
+                    </svg>
+                  </td>
+                  <td class="col-num">+11.4%</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #C8C4B8; font-weight: 700; color: #111111;">+50.5%</td>
+                </tr>
+
+                <tr>
+                  <td class="col-rank">10.</td>
+                  <td class="col-name"><strong>Nov 2022:</strong> Republicans Win US House</td>
+                  <td class="col-type">Midterm</td>
+                  <td class="col-bar">
+                    <svg width="466" height="20" style="display: block;">
+                      <line x1="8" y1="10" x2="458" y2="10" stroke="#EAE6DF" stroke-width="1"/>
+                      <line x1="8" y1="0" x2="8" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="308" y1="0" x2="308" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="458" y1="0" x2="458" y2="20" stroke="#D0CCC2" stroke-width="1" stroke-dasharray="2,2"/>
+                      <g transform="translate(8, 0)">
+                        <rect x="150" y="3" width="34" height="14" fill="#141413"/>
+                        <line x1="150" y1="0" x2="150" y2="20" stroke="#111111" stroke-width="1.5"/>
+                      </g>
+                    </svg>
+                  </td>
+                  <td class="col-num">+2.4%</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #C8C4B8; font-weight: 700; color: #111111;">+6.8%</td>
+                </tr>
+
+                <tr class="subtotal-row">
+                  <td class="col-rank"></td>
+                  <td colspan="2" class="col-name" style="font-weight: 700; color: #111;">When Indian Markets Rose (6 of 10 Elections)</td>
+                  <td class="col-bar" style="padding-left: 14px !important; font-style: italic; font-size: 12px; color: #222;">Even when stocks fell in the first month, they rose over the full year</td>
+                  <td class="col-num" style="font-weight: 700; color: #111;">+0.8% Avg</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #A8A29E; font-weight: 700; color: #111;">+32.8% Avg</td>
+                </tr>
+
+                <tr class="subtotal-row2">
+                  <td class="col-rank"></td>
+                  <td colspan="2" class="col-name" style="font-weight: 700; color: #333;">When Indian Markets Fell (4 of 10 Elections)</td>
+                  <td class="col-bar" style="padding-left: 14px !important; font-style: italic; font-size: 12px; color: #444;">Happened during global recessions or high interest rates, not US politics</td>
+                  <td class="col-num" style="font-weight: 600; color: #333;">-1.4% Avg</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #C8C4B8; font-weight: 600; color: #333;">-14.5% Avg</td>
+                </tr>
+
+                <tr class="total-row">
+                  <td class="col-rank"></td>
+                  <td colspan="2" class="col-name" style="font-weight: 700; color: #111;">30-Year Average Across All 10 US Elections</td>
+                  <td class="col-bar" style="padding-left: 14px !important; font-style: italic; font-weight: 700; font-size: 12px; color: #111;">US elections cause 1-month noise, but Indian markets follow local growth</td>
+                  <td class="col-num" style="font-weight: 700; color: #111;">-0.1% Avg</td>
+                  <td class="col-india-exp" style="border-left: 1px solid #A8A29E; font-weight: 700; color: #111;">+13.9% Avg</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="footer">
+            <div class="footer-note">*Note: Over the last 30 years, the Nifty 50 has returned ~13% a year on average, almost identical to the +13.9% average after US elections.</div>
+            <div class="footer-source">Source: NSE Nifty 50 Index History (1994–2024)</div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    (function() {
+      const NATIVE_W = 1280;
+      const NATIVE_H = 720;
+      const params = new URLSearchParams(window.location.search);
+      const isEmbed = params.get('embed') === '1';
+      if (isEmbed) {
+        document.body.setAttribute('data-embed', 'true');
+      }
+      if (params.get('mode') === 'scroll') {
+        document.body.setAttribute('data-mode', 'scroll');
+      }
+
+      function updateScale() {
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+        let scale = 1;
+
+        if (isEmbed) {
+          scale = vw / NATIVE_W;
+        } else if (document.body.getAttribute('data-mode') === 'scroll') {
+          const padX = vw < 640 ? 20 : 48;
+          const availW = Math.max(200, vw - padX);
+          scale = Math.min(1, availW / NATIVE_W);
+        } else {
+          const padX = vw < 640 ? 16 : 36;
+          const padY = 56 + (vw < 640 ? 16 : 32);
+          const availW = Math.max(200, vw - padX);
+          const availH = Math.max(150, vh - padY);
+          scale = Math.min(1.15, availW / NATIVE_W, availH / NATIVE_H);
+        }
+
+        document.documentElement.style.setProperty('--scale', String(scale));
+      }
+
+      window.addEventListener('resize', updateScale);
+      updateScale();
+    })();
+  </script>
+</body>
+</html>
