@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The ₹500 Cr Venture Fund vs. Your Only Company — Dinesh Pai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #FFFFFF;
+      --bg-canvas: #141413;
+      --bg-subtle: #F9F9F8;
+      --ink: #111111;
+      --ink-body: #262626;
+      --ink-muted: #666660;
+      --line: #E5E5DF;
+      --line-strong: #111111;
+
+      --font-serif: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      background: var(--bg-canvas);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-variant-numeric: tabular-nums;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background: var(--paper);
+      padding: 50px 88px 44px 88px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @page {
+      size: 1280px 720px;
+      margin: 0;
+    }
+
+    /* Header */
+    .header-title {
+      font-family: var(--font-serif);
+      font-size: 42px;
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .header-subtitle {
+      font-size: 15px;
+      color: var(--ink-muted);
+      margin-top: 6px;
+    }
+
+    /* Scoreboard */
+    .scoreboard {
+      border-top: 3px double var(--line-strong);
+      border-bottom: 3px double var(--line-strong);
+      margin: 18px 0 14px 0;
+    }
+
+    .scoreboard-header {
+      display: grid;
+      grid-template-columns: 220px 1fr 1fr;
+      background: var(--bg-subtle);
+      border-bottom: 1.5px solid var(--line-strong);
+      padding: 12px 24px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .scoreboard-row {
+      display: grid;
+      grid-template-columns: 220px 1fr 1fr;
+      border-bottom: 1px solid var(--line);
+      padding: 16px 24px;
+      align-items: center;
+    }
+
+    .scoreboard-row:last-child {
+      border-bottom: none;
+    }
+
+    .col-dim {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      padding-right: 18px;
+    }
+
+    .col-cell {
+      padding-right: 28px;
+    }
+
+    .col-cell:last-child {
+      padding-right: 0;
+      padding-left: 20px;
+      border-left: 1px solid var(--line);
+    }
+
+    .metric-value {
+      font-family: var(--font-serif);
+      font-size: 38px;
+      line-height: 1.05;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+
+    .metric-sub {
+      font-size: 13px;
+      color: #555550;
+      margin-top: 3px;
+      line-height: 1.35;
+    }
+
+    /* Bottom Observation Bar */
+    .observation-bar {
+      padding: 12px 24px;
+      background: var(--bg-subtle);
+      border-left: 3px solid var(--line-strong);
+      font-size: 13.5px;
+      color: var(--ink-body);
+      line-height: 1.4;
+    }
+
+    .observation-bar strong {
+      color: var(--ink);
+    }
+  </style>
+
+  <!-- Presentation & Scaling Engine -->
+  <style id="responsive-deck-engine">
+    :root {
+      --native-w: 1280px;
+      --native-h: 720px;
+      --scale: 1;
+    }
+
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      min-height: 100vh !important;
+      background: #141413 !important;
+      color: #111111;
+      overflow-x: hidden !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 0 !important;
+    }
+
+    body[data-mode="flipbook"] {
+      height: 100vh !important;
+      height: 100dvh !important;
+      overflow: hidden !important;
+    }
+
+    body[data-embed="true"] {
+      background: #FFFFFF !important;
+      height: 100vh !important;
+      overflow: hidden !important;
+    }
+
+    body[data-embed="true"] .deck-topbar {
+      display: none !important;
+    }
+
+    .deck-topbar {
+      height: 48px;
+      background: #1C1C1A;
+      border-bottom: 1px solid #2E2E2B;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: #D4D4CE;
+      flex-shrink: 0;
+      z-index: 50;
+    }
+
+    .deck-back {
+      color: #F5F5F0;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 4px;
+      background: #292926;
+      border: 1px solid #3A3A36;
+    }
+    .deck-back:hover {
+      background: #33332F;
+    }
+
+    .deck-top-title {
+      font-weight: 500;
+      color: #A8A8A0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex: 1;
+      text-align: center;
+    }
+
+    .deck-action-btn {
+      background: #292926;
+      color: #E5E5E0;
+      border: 1px solid #3A3A36;
+      border-radius: 4px;
+      padding: 6px 10px;
+      font-family: inherit;
+      font-size: 11.5px;
+      cursor: pointer;
+    }
+    .deck-action-btn:hover {
+      background: #33332F;
+    }
+
+    .deck-stage {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      position: relative;
+      min-height: 0;
+      width: 100%;
+    }
+
+    body[data-embed="true"] .deck-stage {
+      padding: 0 !important;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .slide-slot {
+      width: calc(var(--native-w) * var(--scale));
+      height: calc(var(--native-h) * var(--scale));
+      position: relative;
+      overflow: hidden;
+      background: var(--paper);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+      flex-shrink: 0;
+    }
+
+    body[data-embed="true"] .slide-slot {
+      box-shadow: none !important;
+    }
+
+    .slide-scaler {
+      width: var(--native-w);
+      height: var(--native-h);
+      transform-origin: top left;
+      transform: scale(var(--scale));
+      position: relative;
+    }
+
+    .slide {
+      position: relative !important;
+      inset: auto !important;
+      width: var(--native-w) !important;
+      height: var(--native-h) !important;
+      margin: 0 !important;
+    }
+
+    @media print {
+      .deck-topbar {
+        display: none !important;
+      }
+      .deck-stage {
+        padding: 0 !important;
+        background: none !important;
+      }
+      .slide-slot {
+        box-shadow: none !important;
+        width: 1280px !important;
+        height: 720px !important;
+      }
+      .slide-scaler {
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body data-mode="flipbook">
+
+  <header class="deck-topbar">
+    <a href="/data" class="deck-back">&larr; Back to Data Decks</a>
+    <div class="deck-top-title">The ₹500 Cr Venture Fund vs. Your Only Company</div>
+    <div class="deck-top-actions">
+      <button class="deck-action-btn" onclick="window.print()">Print / PDF</button>
+    </div>
+  </header>
+
+  <main class="deck-stage" id="deckStage">
+    <div class="slide-slot active">
+      <div class="slide-scaler">
+        <section class="slide">
+          <div>
+            <h1 class="header-title">The ₹500 Cr Venture Fund vs. Your Only Company</h1>
+            <div class="header-subtitle">Why VCs push for high burn, and who actually pays for the downside</div>
+          </div>
+
+          <div class="scoreboard">
+            <div class="scoreboard-header">
+              <div>Dimension</div>
+              <div>The ₹500 Cr Indian VC Fund</div>
+              <div style="padding-left: 20px; border-left: 1px solid var(--line);">The Indian Founder</div>
+            </div>
+
+            <!-- Row 1: Number of Bets -->
+            <div class="scoreboard-row">
+              <div class="col-dim">Number of Bets</div>
+              <div class="col-cell">
+                <div class="metric-value">30 Bets</div>
+                <div class="metric-sub">25 can fail without penalty</div>
+              </div>
+              <div class="col-cell">
+                <div class="metric-value">1 Company</div>
+                <div class="metric-sub">100% of your career and net worth</div>
+              </div>
+            </div>
+
+            <!-- Row 2: Guaranteed Paycheck -->
+            <div class="scoreboard-row">
+              <div class="col-dim">Management Salary</div>
+              <div class="col-cell">
+                <div class="metric-value">₹10 Cr / Year</div>
+                <div class="metric-sub">2% fee during deployment (~₹65 Cr total across fund)</div>
+              </div>
+              <div class="col-cell">
+                <div class="metric-value">₹0</div>
+                <div class="metric-sub">No profit = Zero personal earnings</div>
+              </div>
+            </div>
+
+            <!-- Row 3: A ₹25 Cr Profit Business -->
+            <div class="scoreboard-row">
+              <div class="col-dim">A ₹25 Cr Profit Business</div>
+              <div class="col-cell">
+                <div class="metric-value">"A Failure"</div>
+                <div class="metric-sub">Too small to return a fund. Pushed to burn on ads.</div>
+              </div>
+              <div class="col-cell">
+                <div class="metric-value">25x Earnings</div>
+                <div class="metric-sub">Public market multiple = ₹625 Cr valuation. Wealth for life.</div>
+              </div>
+            </div>
+
+            <!-- Row 4: Who Gets Paid if It Fails? -->
+            <div class="scoreboard-row">
+              <div class="col-dim">If It Goes Wrong</div>
+              <div class="col-cell">
+                <div class="metric-value">Paid First</div>
+                <div class="metric-sub">Contract takes remaining cash before founders get ₹1</div>
+              </div>
+              <div class="col-cell">
+                <div class="metric-value">Paid Last</div>
+                <div class="metric-sub">Founders completely wiped out in distress sales</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="observation-bar">
+            <strong>The Core Reality:</strong> They have 30 bets and guaranteed management fees. You have one company.
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function checkEmbed() {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('embed') === '1' || window.self !== window.top) {
+        document.body.setAttribute('data-embed', 'true');
+      }
+    }
+
+    function autoScale() {
+      const stage = document.getElementById('deckStage');
+      if (!stage) return;
+      const stageW = stage.clientWidth;
+      const stageH = stage.clientHeight;
+      const isEmbed = document.body.getAttribute('data-embed') === 'true';
+
+      const availableW = isEmbed ? stageW : (stageW - 32);
+      const availableH = isEmbed ? stageH : (stageH - 32);
+
+      const scaleW = availableW / 1280;
+      const scaleH = availableH / 720;
+      let scale = Math.min(scaleW, scaleH);
+
+      if (isEmbed) {
+        scale = scaleW;
+      } else {
+        if (scale > 1.25) scale = 1.25;
+        if (scale < 0.25) scale = 0.25;
+      }
+
+      document.documentElement.style.setProperty('--scale', scale);
+    }
+
+    checkEmbed();
+    window.addEventListener('resize', autoScale);
+    autoScale();
+  </script>
+</body>
+</html>

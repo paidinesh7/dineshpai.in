@@ -3,6 +3,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const decks = [
   {
+    slug: 'vc-fund-asymmetry',
+    title: 'The ₹500 Cr Venture Fund vs. Your Only Company',
+    subtitle: 'Why venture capital funds push founders for high burn, how guaranteed management fees cushion the fund, and why a business making ₹25 Cr in real profit is worth 25x earnings in public markets.',
+    category: 'Venture & Startups',
+    date: 'November 2026',
+    slides: 1,
+    source: 'Venture Capital Fund LPAs · Public Market Multiples',
+    metrics: [
+      { label: 'VC Portfolio Bets', value: '30 Bets (25 Can Fail)' },
+      { label: 'VC Fee Cushion', value: '₹10 Cr/Yr (~₹65 Cr Total)' },
+      { label: 'Public Market Multiple', value: '25x Real Earnings' }
+    ]
+  },
+  {
     slug: 'us-elections-india-markets',
     title: 'What Happens to the Indian Stock Market When Power Shifts in the US?',
     subtitle: 'Nifty 50 returns in the first 1 month and the next 12 months after every US election flip since 1994 (Presidential and Midterm shifts), showing why US elections cause 1-month noise while Indian markets follow local growth.',
@@ -130,7 +144,7 @@ const decks = [
   }
 ];
 
-const categories = ['All', 'Trade & Industry', 'Markets & Flows', 'Banking & Credit', 'Policy & Tax', 'IPOs & Corporate'];
+const categories = ['All', 'Venture & Startups', 'Trade & Industry', 'Markets & Flows', 'Banking & Credit', 'Policy & Tax', 'IPOs & Corporate'];
 ---
 
 <BaseLayout
