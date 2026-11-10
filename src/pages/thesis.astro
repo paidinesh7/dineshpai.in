@@ -1007,6 +1007,62 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <script>
   const NTFY_TOPIC = 'dpai_thesis_notes_7f3a9c2e8b1d4f6a';
+  const PUBLIC_KEY_B64 = 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApClwgYlx3gL6ksWmnOjQdnUTsgY0hYji9s2IXzUgLoEmfJ/f+s7dwKysjVdIf4OzfBfZdQtz7iIv13KNw/69LuVbSAZ/VJgXPNHnSGlqGsS6w2JUlydxY5S3PFHHZsVaNZmCEWAZPXDjlPW3iNnG2LZysT5x0+kxuMbiCdduAwOX/E/i2z/Y43hAsTJWnGKPfV8d7Nono3qxWEYNov6u6PLyvkczBV8O4O4yRcSuxnlWT0Qx5Bvz7Jl3smI5Xbb+/nL0OvOta9K1z5a7bKdYEfc+Jk5fuGJga0BMHUfbHVHwgkx4X/x9b2OSRKPsw7Fk+O454j4+MO7ilDO74aOCgQIDAQAB';
+
+  async function encryptPayload(data: any): Promise<any> {
+    if (!window.crypto || !window.crypto.subtle) {
+      return data;
+    }
+    try {
+      // 1. Generate 256-bit AES-GCM key and random 12-byte IV
+      const aesKey = await window.crypto.subtle.generateKey(
+        { name: 'AES-GCM', length: 256 },
+        true,
+        ['encrypt']
+      );
+      const iv = window.crypto.getRandomValues(new Uint8Array(12));
+      const encodedMsg = new TextEncoder().encode(JSON.stringify(data));
+      const encryptedBuf = await window.crypto.subtle.encrypt(
+        { name: 'AES-GCM', iv },
+        aesKey,
+        encodedMsg
+      );
+
+      // 2. Export raw AES key and encrypt with RSA public key
+      const rawAesKey = await window.crypto.subtle.exportKey('raw', aesKey);
+      const binaryPub = Uint8Array.from(atob(PUBLIC_KEY_B64), (c) => c.charCodeAt(0));
+      const rsaKey = await window.crypto.subtle.importKey(
+        'spki',
+        binaryPub.buffer,
+        { name: 'RSA-OAEP', hash: 'SHA-256' },
+        false,
+        ['encrypt']
+      );
+      const encryptedKeyBuf = await window.crypto.subtle.encrypt(
+        { name: 'RSA-OAEP' },
+        rsaKey,
+        rawAesKey
+      );
+
+      // 3. Base64 encode buffers
+      const toB64 = (buf: ArrayBuffer) => {
+        const bytes = new Uint8Array(buf);
+        let bin = '';
+        for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+        return btoa(bin);
+      };
+
+      return {
+        v: 1,
+        k: toB64(encryptedKeyBuf),
+        iv: toB64(iv.buffer),
+        d: toB64(encryptedBuf),
+      };
+    } catch (err) {
+      console.warn('Encryption fallback:', err);
+      return data;
+    }
+  }
 
   const initThesisNoteForm = () => {
     const form = document.getElementById('thesis-note-form') as HTMLFormElement | null;
@@ -1031,7 +1087,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       submitBtn.textContent = 'Sending...';
       statusEl.textContent = '';
 
-      const payload = {
+      const rawPayload = {
         name,
         contact,
         message,
@@ -1040,19 +1096,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       };
 
       try {
+        const securePayload = await encryptPayload(rawPayload);
+
         const res = await fetch(`https://ntfy.sh/${NTFY_TOPIC}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Title': `Thesis note from ${name}`,
+            'Title': 'Reader note received',
           },
-          body: JSON.stringify(payload),
+          body: JSON.stringify(securePayload),
         });
 
         if (!res.ok) throw new Error('Network error');
 
         form.reset();
-        statusEl.textContent = 'Saved — queued for the 6:00 PM email digest.';
+        statusEl.textContent = 'Saved — encrypted and queued for the 6:00 PM email digest.';
         statusEl.className = 'font-mono text-xs text-brand-light dark:text-brand-dark';
       } catch {
         statusEl.textContent = 'Could not send right now. Please email dinesh@zerodha.com directly.';

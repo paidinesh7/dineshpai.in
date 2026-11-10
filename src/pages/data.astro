@@ -313,7 +313,8 @@ const categories = ['All', 'Venture & Startups', 'Trade & Industry', 'Markets & 
       function sendCommand(slug, payload) {
         const iframe = document.querySelector('iframe[data-deck-iframe="' + slug + '"]');
         if (iframe && iframe.contentWindow) {
-          iframe.contentWindow.postMessage(Object.assign({ slug: slug }, payload), '*');
+          const targetOrigin = (window.location.origin && window.location.origin !== 'null') ? window.location.origin : '*';
+          iframe.contentWindow.postMessage(Object.assign({ slug: slug }, payload), targetOrigin);
         }
       }
 
@@ -339,6 +340,9 @@ const categories = ['All', 'Venture & Startups', 'Trade & Industry', 'Markets & 
 
       // Listen for state updates from embedded iframes
       window.addEventListener('message', (e) => {
+        if (window.location.origin && window.location.origin !== 'null' && e.origin !== window.location.origin) {
+          return;
+        }
         const data = e.data || {};
         if (data.type !== 'deck-state' || !data.slug) return;
 
