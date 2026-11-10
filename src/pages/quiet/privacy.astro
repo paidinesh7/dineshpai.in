@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const effectiveDate = "November 10, 2026";
+---
+
+<BaseLayout
+  title="Quiet — Privacy Policy"
+  description="Official Privacy Policy for Quiet: a 100% local-first, zero-telemetry personal finance utility."
+  maxWidth="max-w-3xl"
+>
+  <main class="py-12 md:py-16 px-4">
+    <div class="border-b-2 border-slate-900 pb-6 mb-8">
+      <p class="font-mono text-xs uppercase tracking-widest text-slate-500 mb-2">LEGAL &bull; SOVEREIGN PRIVACY POLICY</p>
+      <h1 class="font-serif text-3xl md:text-4xl text-slate-900">Privacy Policy for Quiet</h1>
+      <p class="text-sm text-slate-500 mt-2">Effective Date: {effectiveDate} &bull; Open Source (MIT)</p>
+    </div>
+
+    <article class="prose prose-slate max-w-none text-slate-800 leading-relaxed space-y-6 text-sm md:text-base">
+      
+      <div class="bg-[#f9f9f8] border border-slate-200 p-5 rounded-none border-l-4 border-l-slate-900">
+        <p class="font-serif text-lg text-slate-900 font-normal m-0">
+          <strong>The Sovereign Guarantee:</strong> Quiet is built on an anti-engagement, local-first philosophy. We collect zero personal data, track zero analytics, display zero advertisements, and operate zero remote databases. All calculations and documents remain exclusively on your device.
+        </p>
+      </div>
+
+      <h2 class="font-serif text-2xl text-slate-900 mt-8 mb-3">1. Information Collection and Storage</h2>
+      <p>
+        Quiet does not require user registration, account creation, email addresses, or phone numbers. When you use Quiet:
+      </p>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong>On-Device Storage:</strong> All financial entries (liquid buffers, expenses, recurring leaks, tax checklist statuses, and notes) are stored locally in your device's native sandboxed storage (<code>AsyncStorage</code>).</li>
+        <li><strong>Zero Data Exfiltration:</strong> No financial data, transaction numbers, or personal identifying information is ever transmitted to any external server or third-party cloud.</li>
+        <li><strong>Local Statement Parsing:</strong> If you scan or paste bank statement text, all regex matching and categorization is processed in volatile device memory (RAM) and immediately discarded.</li>
+      </ul>
+
+      <h2 class="font-serif text-2xl text-slate-900 mt-8 mb-3">2. Google Play Data Safety Compliance</h2>
+      <p>In accordance with the Google Play Developer Policy and Data Safety requirements:</p>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong>Data Collected:</strong> None. Quiet collects 0 bytes of user data.</li>
+        <li><strong>Data Shared:</strong> None. We do not sell, rent, or share user data with any third parties or advertisers.</li>
+        <li><strong>Third-Party SDKs:</strong> Quiet contains zero tracking libraries, zero social media SDKs, and zero behavioral advertising frameworks.</li>
+      </ul>
+
+      <h2 class="font-serif text-2xl text-slate-900 mt-8 mb-3">3. Device Permissions & Biometrics</h2>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong>Biometric Authentication (Fingerprint / Face Unlock):</strong> Quiet offers an optional native app lock. Authentication is performed directly by your device's secure hardware enclave (Android BiometricPrompt). Quiet never accesses, reads, or stores your biometric data.</li>
+        <li><strong>Storage & File Access:</strong> Used solely to import statements or export your encrypted CA dossier locally on your device upon your explicit request.</li>
+      </ul>
+
+      <h2 class="font-serif text-2xl text-slate-900 mt-8 mb-3">4. Security & Data Retention</h2>
+      <p>
+        Because your data is stored exclusively on your device, you maintain complete sovereignty over your information:
+      </p>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>You may reset your data at any time via the <strong>About &gt; Reset Data</strong> button inside the app.</li>
+        <li>Uninstalling the app permanently purges all stored data from your device's sandbox.</li>
+      </ul>
+
+      <h2 class="font-serif text-2xl text-slate-900 mt-8 mb-3">5. Open Source Transparency</h2>
+      <p>
+        Quiet is licensed under the permissive MIT License. The complete source code is public and open for independent security auditing to verify our zero-telemetry claims.
+      </p>
+
+      <h2 class="font-serif text-2xl text-slate-900 mt-8 mb-3">6. Developer Contact</h2>
+      <p>
+        If you have any questions regarding this Privacy Policy or Quiet's architecture, contact:
+      </p>
+      <p class="font-mono text-sm bg-slate-100 p-4 border border-slate-200">
+        Developer: Dinesh Pai<br />
+        Website: <a href="https://dineshpai.in" class="text-blue-600 underline">https://dineshpai.in</a><br />
+        Email: dinesh [at] zerodha.com<br />
+        Bengaluru, India
+      </p>
+    </article>
+  </main>
+</BaseLayout>
