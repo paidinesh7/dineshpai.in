@@ -15,6 +15,60 @@ export interface WeeklySignal {
 
 export const weeklySignals: WeeklySignal[] = [
   {
+    id: "week-46-2026",
+    week: "Week of November 16, 2026",
+    items: [
+      {
+        title: "The Soft Enemy Problem",
+        source: "The Odin Times (Dan Gray)",
+        url: "https://blog.joinodin.com/p/the-soft-enemy-problem",
+        category: "Venture Capital",
+        takeaway: "After decades of fighting weak insurgents, militaries started optimising for tactics that looked good on camera rather than what works against a real adversary. Venture capital fell into the same trap during the easy-money years, nudging smart founders toward quick 18-month valuation markups instead of hard 5-year engineering and industrial problems."
+      },
+      {
+        title: "What Comes After Selling Work",
+        source: "Digital Native (Rex Woodbury & Jared Newman)",
+        url: "https://www.digitalnative.tech/p/what-comes-after-selling-work",
+        category: "Business Models",
+        takeaway: "As open-weight and frontier AI models drive the cost of routine cognitive work toward zero, charging for automated bookkeeping, legal work, or compliance will face rapid price wars. The durable model is giving the work away for free to capture the underlying network of transactions, working capital, and risk underwriting."
+      },
+      {
+        title: "What's in a Round?",
+        source: "Capital Gains / The Diff (Byrne Hobart)",
+        url: "https://capitalgains.thediff.co/p/tranched-rounds",
+        category: "Venture Mechanics",
+        takeaway: "Why US venture rounds are splitting into multi-price tranches where funds supplying scarce GPU compute or brand signaling buy in cheap and bring in pure-cash funds days later at 2x to 5x the price. A candid look at how funds manufacture quick paper markups to game their next LP fundraise."
+      }
+    ]
+  },
+  {
+    id: "week-44-2026",
+    week: "Week of November 2, 2026",
+    items: [
+      {
+        title: "Why Being Right Can Make You a Worse Investor",
+        source: "Morningstar (Allan Roth)",
+        url: "https://www.morningstar.com/financial-advisors/why-being-right-can-make-you-worse-investor",
+        category: "Behavioral Finance",
+        takeaway: "Even if an epidemiologist had told you in December 2019 with 100% certainty that a pandemic would shut down the global economy in 2020, selling your stocks for T-bills would have lost you money. Being right about the world rarely beats the market when consensus truths are already priced in."
+      },
+      {
+        title: "5 Myths and Misunderstandings About Investing in the Stock Market",
+        source: "TKer (Sam Ro)",
+        url: "https://www.tker.co/p/stock-market-investing-myths-and-misunderstandings",
+        category: "Market Data",
+        takeaway: "Hard data dismantling five common market beliefs: why P/E multiples do not revert to a fixed historical average, why only 19% of S&P 500 stocks beat the index average, and why even the top 20 stock market winners of the last 40 years suffered a median drawdown of 72% along the way."
+      },
+      {
+        title: "The Case for Global Investing",
+        source: "Nonmaterial (VSG)",
+        url: "https://nonmaterial.substack.com/p/the-case-for-global-investing",
+        category: "Asset Allocation",
+        takeaway: "Almost all of US stocks' outperformance over international markets since 1969 came after 2009. A good reminder that single-country exceptionalism moves in multi-decade cycles, and how a globally diversified portfolio protected Japanese savers even at the peak of the 1989 Nikkei bubble."
+      }
+    ]
+  },
+  {
     id: "week-42-2026",
     week: "Week of October 19, 2026",
     items: [
